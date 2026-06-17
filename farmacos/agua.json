@@ -1,0 +1,45 @@
+{
+ "drug_id": "agua",
+ "presentacion": "AGUA DEL CARMEN SOLUCIÓN ORAL",
+ "nregistro": "27454",
+ "fuente": "Ficha técnica AEMPS/CIMA",
+ "fecha_consulta": "2026-06-17",
+ "secciones": [
+  {
+   "id": "4.2",
+   "titulo": "Posología y forma de administración",
+   "html": "[{\"seccion\":\"4.2\",\"titulo\":\"Posolog\\u00EDa y forma de administraci\\u00F3n\",\"orden\":3},{\"seccion\":\"4.2.1\",\"titulo\":\"Posolog\\u00EDa\",\"contenido\":\"<div>\\r\\n    <p style=\\\"margin:0pt\\\"><span style=\\\"font-family:Times New Roman; font-size:11pt\\\">Administrar de 2 a 3 cucharaditas (cada cucharadita contiene 5 ml) diluidas en una infusi&#243;n (tila, manzanilla, etc.) o en agua azucarada, 3 &#243; 4 veces al d&#237;a.</span></p>\\r\\n  </div>\",\"orden\":4},{\"seccion\":\"4.2.2\",\"titulo\":\"Forma de administraci\\u00F3n\",\"contenido\":\"<div>\\r\\n    <p style=\\\"margin:0pt\\\"><span style=\\\"font-family:Times New Roman; font-size:11pt\\\">AGUA DEL CARMEN puede administrase a&#241;adida en una infusi&#243;n, o con agua azucarada; tambi&#233;n, a&#241;adiendo directamente unas gotas del producto en un terr&#243;n de az&#250;car.</span></p>\\r\\n  </div>\",\"orden\":5}]",
+   "vacia": false
+  },
+  {
+   "id": "4.3",
+   "titulo": "Contraindicaciones",
+   "html": "<div>\r\n    <p style=\"margin:0pt\"><span style=\"font-family:TimesNewRoman; font-size:11pt\">-     </span> <span style=\"font-family:TimesNewRoman; font-size:11pt\">             </span> <span style=\"font-family:Times New Roman; font-size:11pt\">Hipersensibilidad a los principios</span> <span style=\"font-family:Times New Roman; font-size:11pt\">activos o a alguno de los excipientes.</span></p>\r\n  </div>",
+   "vacia": false
+  },
+  {
+   "id": "4.5",
+   "titulo": "Interacción con otros medicamentos y otras formas de interacción",
+   "html": "[{\"seccion\":\"4.5\",\"titulo\":\"Interacci\\u00F3n con otros medicamentos y otras formas de interacci\\u00F3n\",\"contenido\":\"<div>\\r\\n    <p style=\\\"margin:0pt\\\"><span style=\\\"font-family:Times New Roman; font-size:11pt\\\">La cantidad de alcohol en este medicamento puede alterar los efectos de otros medicamentos (ver secci&#243;n 4.5).</span></p>\\r\\n  </div>\",\"orden\":9}]",
+   "vacia": false
+  },
+  {
+   "id": "4.6",
+   "titulo": "Fertilidad, embarazo y lactancia",
+   "html": "[{\"seccion\":\"4.6\",\"titulo\":\"Fertilidad, embarazo y lactancia\",\"contenido\":\"<div>\\r\\n    <p style=\\\"margin:0pt\\\"><span style=\\\"font-family:Times New Roman; font-size:11pt\\\">Como medida de precauci&#243;n, no debe administrarse AGUA DEL CARMEN durante el embarazo y la lactancia.</span></p>\\r\\n\\r\\n    <p style=\\\"margin:0pt\\\"><span style=\\\"font-family:Times New Roman; font-size:11pt\\\">&#xa0;</span></p>\\r\\n\\r\\n    <p style=\\\"margin:0pt\\\"><span style=\\\"font-family:Times New Roman; font-size:11pt\\\">El contenido en alcohol debe tenerse en cuenta en el caso de mujeres embarazadas o en periodo de lactancia (ver</span> <span style=\\\"font-family:Times New Roman; font-size:11pt\\\">secci&#243;n 4.5).</span></p>\\r\\n  </div>\",\"orden\":11}]",
+   "vacia": false
+  },
+  {
+   "id": "4.8",
+   "titulo": "Reacciones adversas",
+   "html": "<div>\r\n    <p style=\"margin:0pt\"><span style=\"font-family:Times New Roman; font-size:11pt\">Si se sobrepasan las dosis indicadas y en tratamientos continuados, pueden producirse los siguientes efectos adversos cuya frecuencia no se ha podido establecer con exactitud:</span></p>\r\n\r\n    <ul type=\"disc\" style=\"margin:0pt; padding-left:0pt\">\r\n      <li style=\"margin:0pt 0pt 0pt 8.66pt; text-indent:0pt; widows:0; orphans:0; padding-left:19.69pt; font-family:serif; font-size:11pt\"><em><span style=\"font-family:Times New Roman; font-size:11pt;\">Trastornos del sismtema nervioso:</span></em> <span style=\"font-family:Times New Roman; font-size:11pt\">dependencia o hábito.</span></li>\r\n    </ul>\r\n\r\n    <p style=\"margin:0pt; line-height:115%; font-size:11pt\"><span style=\"font-family:Times New Roman; font-size:11pt\"> </span></p>\r\n  </div>",
+   "vacia": false
+  },
+  {
+   "id": "4.9",
+   "titulo": "Sobredosis",
+   "html": "<div>\r\n    <p style=\"margin:0pt\"><span style=\"font-family:Times New Roman; font-size:11pt\">En caso de sobredosis, por un mal uso o ingestión accidental del AGUA DEL CARMEN se tomarán las medidas correspondientes a una intoxicación etílica.</span></p>\r\n  </div>",
+   "vacia": false
+  }
+ ]
+}
