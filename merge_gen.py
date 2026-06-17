@@ -43,6 +43,8 @@ for fp in sorted(glob.glob('wikem-gen-out/*.json')):
     wt = d.get('wikem_titulo')
     if wt:
         entry['wikem_titulo'] = wt
+    if d.get('biblio'):
+        entry['biblio'] = d['biblio']
     patch[real] = entry
 
 # escribir topics-extra.js
@@ -82,6 +84,7 @@ js.append('''  T.forEach(function (t) {
       if (p.ddx && p.ddx.length) t.ddx = p.ddx;
       if (p.plan && p.plan.length) t.plan = p.plan;
       if (p.wikem_titulo) t.wikem_titulo = p.wikem_titulo;
+      if (p.biblio && p.biblio.length) t.biblio_extra = p.biblio;
     }
     // cablear HEART a dolor torácico / SCA
     if (t.slug === "sindrome_coronario_agudo" || t.slug === "dolor_toracico_agudo") {

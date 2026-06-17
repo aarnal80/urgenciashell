@@ -1,5 +1,5 @@
 /* Service worker — cache-first del shell para uso offline. */
-var CACHE = "vital-assist-v30";
+var CACHE = "vital-assist-v32";
 var ASSETS = [
   "./", "./index.html", "./styles.css", "./app.js", "./topics-data.js", "./scales-data.js", "./drugs-index.js",
   "./drug-aliases.js", "./scales-extra.js", "./topics-extra.js", "./ddx-demo.js",
@@ -7,7 +7,12 @@ var ASSETS = [
 ];
 
 self.addEventListener("install", function (e) {
-  e.waitUntil(caches.open(CACHE).then(function (c) { return c.addAll(ASSETS); }).then(function () { return self.skipWaiting(); }));
+  e.waitUntil(caches.open(CACHE).then(function (c) {
+    // precargar siempre desde la red (sin caché HTTP) para no guardar versiones viejas
+    return Promise.all(ASSETS.map(function (u) {
+      return fetch(u, { cache: "no-store" }).then(function (r) { if (r && r.ok) return c.put(u, r); }).catch(function () {});
+    }));
+  }).then(function () { return self.skipWaiting(); }));
 });
 
 self.addEventListener("activate", function (e) {
@@ -20,7 +25,7 @@ self.addEventListener("activate", function (e) {
 self.addEventListener("fetch", function (e) {
   if (e.request.method !== "GET") return;
   e.respondWith(
-    fetch(e.request).then(function (res) {
+    fetch(e.request.url, { cache: "no-store" }).then(function (res) {
       var copy = res.clone();
       caches.open(CACHE).then(function (c) { c.put(e.request, copy); });
       return res;

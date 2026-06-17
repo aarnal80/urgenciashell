@@ -1,0 +1,36 @@
+{
+ "ddx": [],
+ "biblio": [
+  "European Resuscitation Council (ERC). Guidelines 2021. Consejo Español de RCP (CERCP)."
+ ],
+ "plan": [
+  {
+   "paso": "Garantiza la seguridad y comprueba la respuesta",
+   "detalle": "Asegúrate de que es seguro. Sacude los hombros y pregunta «¿se encuentra bien?»."
+  },
+  {
+   "paso": "Abre la vía aérea y comprueba la respiración",
+   "detalle": "Maniobra frente-mentón; mira, oye y siente ≤10 s. La respiración agónica (boqueo) NO es normal: actúa como en parada."
+  },
+  {
+   "paso": "Pide ayuda y consigue un DEA",
+   "detalle": "Activa el 112 (manos libres) y envía a alguien a por un desfibrilador externo automático."
+  },
+  {
+   "paso": "Inicia compresiones torácicas",
+   "detalle": "Centro del tórax, 100-120/min, profundidad 5-6 cm, permite la reexpansión completa y minimiza las interrupciones."
+  },
+  {
+   "paso": "Combina 30 compresiones : 2 ventilaciones",
+   "detalle": "Si estás entrenado y dispuesto: 2 insuflaciones (1 s, que eleven el tórax) cada 30 compresiones. Si no, compresiones continuas ininterrumpidas."
+  },
+  {
+   "paso": "Usa el DEA en cuanto llegue",
+   "detalle": "Enciéndelo y sigue sus instrucciones; coloca los parches. Si indica descarga, comprueba que nadie toca a la víctima, descarga y reanuda RCP de inmediato (2 min)."
+  },
+  {
+   "paso": "Continúa la RCP",
+   "detalle": "Hasta que llegue ayuda avanzada, la víctima despierte/respire con normalidad o estés exhausto. Relévate cada 2 min."
+  }
+ ]
+}

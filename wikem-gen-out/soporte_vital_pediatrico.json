@@ -1,0 +1,45 @@
+{
+ "ddx": [],
+ "biblio": [
+  "European Resuscitation Council (ERC). Guidelines 2021. Consejo Español de RCP (CERCP)."
+ ],
+ "plan": [
+  {
+   "paso": "Seguridad, estimula y comprueba la respuesta",
+   "detalle": "Estímulo táctil y verbal. Si no responde, pide ayuda sin abandonar al niño."
+  },
+  {
+   "paso": "Vía aérea y 5 ventilaciones de rescate",
+   "detalle": "Abre la vía aérea (posición neutra en lactante, frente-mentón en niño). Si no respira con normalidad, da 5 ventilaciones de rescate iniciales."
+  },
+  {
+   "paso": "Comprueba signos de vida / pulso (≤10 s)",
+   "detalle": "Pulso braquial (lactante) o carotídeo/femoral (niño). Inicia RCP si no hay signos de vida o si FC <60 lpm con mala perfusión."
+  },
+  {
+   "paso": "RCP pediátrica",
+   "detalle": "15:2 con 2 reanimadores (30:2 si reanimador único lego). Comprime 1/3 del diámetro AP (≈4 cm lactante, ≈5 cm niño), 100-120/min."
+  },
+  {
+   "paso": "Tras 1 minuto, activa emergencias y consigue el DEA",
+   "detalle": "Llama al 112 y trae el desfibrilador; usa parches/atenuador pediátrico si <8 años o <25 kg."
+  },
+  {
+   "paso": "Soporte vital avanzado",
+   "sub": [
+    {
+     "nivel": "critico",
+     "t": "Desfibrilable (FV/TVSP) → descarga 4 J/kg; tras la 3.ª, amiodarona 5 mg/kg. Adrenalina 10 µg/kg IV/IO cada 3-5 min."
+    },
+    {
+     "nivel": "emergente",
+     "t": "No desfibrilable (AESP/asistolia) → adrenalina 10 µg/kg IV/IO lo antes posible y cada 3-5 min."
+    }
+   ]
+  },
+  {
+   "paso": "Causas reversibles y cuidados posparada",
+   "detalle": "4H/4T (incluye hipoglucemia). Tras RVCE: oxigenación/ventilación adecuadas, control de temperatura y glucemia, y tratar la causa."
+  }
+ ]
+}

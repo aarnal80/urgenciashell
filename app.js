@@ -325,6 +325,7 @@
     var bib = [
       "Jiménez Murillo L, Montero Pérez FJ. <em>Medicina de Urgencias y Emergencias. Guía diagnóstica y protocolos de actuación</em>. Elsevier."
     ];
+    (t.biblio_extra || []).forEach(function (b) { bib.push(esc(b)); });
     if (t.wikem_titulo)
       bib.push("WikEM. <em>" + esc(t.wikem_titulo) + "</em>. www.wikem.org");
     var hasDrugs = (t.tratamiento || []).some(function (x) { return drugFichaId(x); });

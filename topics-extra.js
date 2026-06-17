@@ -10248,6 +10248,128 @@
   ],
   "wikem_titulo": "Meningitis"
  },
+ "soporte_vital_avanzado_en_adultos": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "RCP 30:2 de alta calidad y monitoriza el ritmo",
+    "detalle": "Compresiones ininterrumpidas; coloca parches/palas y conecta el monitor-desfibrilador. Oxígeno y acceso IV/IO."
+   },
+   {
+    "paso": "Evalúa el ritmo y decide la rama",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Desfibrilable (FV/TV sin pulso) → 1 descarga (150 J bifásico) y reanuda RCP 2 min sin comprobar pulso. Tras la 3.ª descarga: adrenalina 1 mg IV + amiodarona 300 mg IV; adrenalina 1 mg cada 3-5 min."
+     },
+     {
+      "nivel": "emergente",
+      "t": "No desfibrilable (AESP/asistolia) → adrenalina 1 mg IV/IO lo antes posible y cada 3-5 min; RCP 2 min y reevalúa el ritmo."
+     }
+    ]
+   },
+   {
+    "paso": "Optimiza la RCP y la vía aérea",
+    "detalle": "Relevo del compresor cada 2 min; vía aérea avanzada con capnografía (ETCO2). Con vía aérea avanzada: compresiones continuas + 10 ventilaciones/min."
+   },
+   {
+    "paso": "Trata las causas reversibles (4H/4T)",
+    "detalle": "4H: hipoxia, hipovolemia, hipo/hiperpotasemia y alt. metabólicas, hipotermia. 4T: trombosis (coronaria/pulmonar), taponamiento cardíaco, neumotórax a tensión, tóxicos."
+   },
+   {
+    "paso": "Considera medidas adicionales",
+    "detalle": "Ecografía a pie de cama, compresiones mecánicas para el traslado, RCP extracorpórea (ECPR) en casos seleccionados."
+   },
+   {
+    "paso": "Cuidados posresucitación (tras RVCE)",
+    "detalle": "ABCDE; SpO2 94-98% y normocapnia; ECG de 12 derivaciones y coronariografía urgente si SCACEST; control de temperatura; tratar la causa precipitante."
+   }
+  ],
+  "biblio": [
+   "European Resuscitation Council (ERC). Guidelines 2021. Consejo Español de RCP (CERCP)."
+  ]
+ },
+ "soporte_vital_basico_en_adultos": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Garantiza la seguridad y comprueba la respuesta",
+    "detalle": "Asegúrate de que es seguro. Sacude los hombros y pregunta «¿se encuentra bien?»."
+   },
+   {
+    "paso": "Abre la vía aérea y comprueba la respiración",
+    "detalle": "Maniobra frente-mentón; mira, oye y siente ≤10 s. La respiración agónica (boqueo) NO es normal: actúa como en parada."
+   },
+   {
+    "paso": "Pide ayuda y consigue un DEA",
+    "detalle": "Activa el 112 (manos libres) y envía a alguien a por un desfibrilador externo automático."
+   },
+   {
+    "paso": "Inicia compresiones torácicas",
+    "detalle": "Centro del tórax, 100-120/min, profundidad 5-6 cm, permite la reexpansión completa y minimiza las interrupciones."
+   },
+   {
+    "paso": "Combina 30 compresiones : 2 ventilaciones",
+    "detalle": "Si estás entrenado y dispuesto: 2 insuflaciones (1 s, que eleven el tórax) cada 30 compresiones. Si no, compresiones continuas ininterrumpidas."
+   },
+   {
+    "paso": "Usa el DEA en cuanto llegue",
+    "detalle": "Enciéndelo y sigue sus instrucciones; coloca los parches. Si indica descarga, comprueba que nadie toca a la víctima, descarga y reanuda RCP de inmediato (2 min)."
+   },
+   {
+    "paso": "Continúa la RCP",
+    "detalle": "Hasta que llegue ayuda avanzada, la víctima despierte/respire con normalidad o estés exhausto. Relévate cada 2 min."
+   }
+  ],
+  "biblio": [
+   "European Resuscitation Council (ERC). Guidelines 2021. Consejo Español de RCP (CERCP)."
+  ]
+ },
+ "soporte_vital_pediatrico": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Seguridad, estimula y comprueba la respuesta",
+    "detalle": "Estímulo táctil y verbal. Si no responde, pide ayuda sin abandonar al niño."
+   },
+   {
+    "paso": "Vía aérea y 5 ventilaciones de rescate",
+    "detalle": "Abre la vía aérea (posición neutra en lactante, frente-mentón en niño). Si no respira con normalidad, da 5 ventilaciones de rescate iniciales."
+   },
+   {
+    "paso": "Comprueba signos de vida / pulso (≤10 s)",
+    "detalle": "Pulso braquial (lactante) o carotídeo/femoral (niño). Inicia RCP si no hay signos de vida o si FC <60 lpm con mala perfusión."
+   },
+   {
+    "paso": "RCP pediátrica",
+    "detalle": "15:2 con 2 reanimadores (30:2 si reanimador único lego). Comprime 1/3 del diámetro AP (≈4 cm lactante, ≈5 cm niño), 100-120/min."
+   },
+   {
+    "paso": "Tras 1 minuto, activa emergencias y consigue el DEA",
+    "detalle": "Llama al 112 y trae el desfibrilador; usa parches/atenuador pediátrico si <8 años o <25 kg."
+   },
+   {
+    "paso": "Soporte vital avanzado",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Desfibrilable (FV/TVSP) → descarga 4 J/kg; tras la 3.ª, amiodarona 5 mg/kg. Adrenalina 10 µg/kg IV/IO cada 3-5 min."
+     },
+     {
+      "nivel": "emergente",
+      "t": "No desfibrilable (AESP/asistolia) → adrenalina 10 µg/kg IV/IO lo antes posible y cada 3-5 min."
+     }
+    ]
+   },
+   {
+    "paso": "Causas reversibles y cuidados posparada",
+    "detalle": "4H/4T (incluye hipoglucemia). Tras RVCE: oxigenación/ventilación adecuadas, control de temperatura y glucemia, y tratar la causa."
+   }
+  ],
+  "biblio": [
+   "European Resuscitation Council (ERC). Guidelines 2021. Consejo Español de RCP (CERCP)."
+  ]
+ },
  "taponamiento_cardiaco": {
   "ddx": [
    {
@@ -10845,6 +10967,7 @@
       if (p.ddx && p.ddx.length) t.ddx = p.ddx;
       if (p.plan && p.plan.length) t.plan = p.plan;
       if (p.wikem_titulo) t.wikem_titulo = p.wikem_titulo;
+      if (p.biblio && p.biblio.length) t.biblio_extra = p.biblio;
     }
     // cablear HEART a dolor torácico / SCA
     if (t.slug === "sindrome_coronario_agudo" || t.slug === "dolor_toracico_agudo") {
