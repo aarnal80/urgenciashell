@@ -1,0 +1,45 @@
+{
+  "drug_id": "nitroglicerina",
+  "presentacion": "NITROFIX 10 mg PARCHES TRANSDERMICOS EFG",
+  "nregistro": "71210",
+  "fuente": "Ficha técnica AEMPS/CIMA",
+  "fecha_consulta": "2026-06-16",
+  "secciones": [
+    {
+      "id": "4.2",
+      "titulo": "Posología y forma de administración",
+      "html": "",
+      "vacia": true
+    },
+    {
+      "id": "4.3",
+      "titulo": "Contraindicaciones",
+      "html": "",
+      "vacia": true
+    },
+    {
+      "id": "4.5",
+      "titulo": "Interacciones",
+      "html": "",
+      "vacia": true
+    },
+    {
+      "id": "4.6",
+      "titulo": "Embarazo y lactancia",
+      "html": "",
+      "vacia": true
+    },
+    {
+      "id": "4.8",
+      "titulo": "Reacciones adversas",
+      "html": "",
+      "vacia": true
+    },
+    {
+      "id": "4.9",
+      "titulo": "Sobredosis",
+      "html": "",
+      "vacia": true
+    }
+  ]
+}

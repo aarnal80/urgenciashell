@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f766e" />
+  <title>Manual de Urgencias in HELL</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header id="topbar">
+    <button id="menu-btn" aria-label="Abrir temas"></button>
+    <span id="topbar-title">Manual de Urgencias</span>
+    <span class="topbar-spacer"></span>
+  </header>
+  <div id="scrim"></div>
+
+  <div id="app">
+    <aside id="sidebar">
+      <a class="brand" href="#">
+        <div class="brand-mark">MU</div>
+        <div class="brand-text">
+          <strong>Manual de Urgencias <em>in HELL</em></strong>
+          <span>Guía de consulta rápida</span>
+        </div>
+      </a>
+      <div class="search-wrap">
+        <input id="search" type="search" placeholder="Buscar tema, fármaco, síntoma…" autocomplete="off" />
+      </div>
+      <nav id="topic-list" aria-label="Temas"></nav>
+      <footer class="side-foot">
+        <a href="#/about" class="about-link">Acerca de</a>
+        <span id="count"></span>
+      </footer>
+    </aside>
+
+    <main id="main">
+      <article id="topic" hidden></article>
+      <section id="empty" class="empty">
+        <div class="empty-inner">
+          <div class="empty-mark">＋</div>
+          <h1>Manual de Urgencias <em>in HELL</em></h1>
+          <p>Guía de consulta rápida · Dr. Antonio J. Arnal Meinhardt</p>
+          <p class="hint">Resumen rápido · tratamiento con dosis · signos de alarma · criterios de ingreso · temas conectados.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="modal-root"></div>
+
+  <script src="topics-data.js"></script>
+  <script src="scales-data.js"></script>
+  <script src="drugs-index.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
