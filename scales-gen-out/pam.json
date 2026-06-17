@@ -1,0 +1,39 @@
+{
+ "id": "pam",
+ "nombre": "PAM (presión arterial media)",
+ "nombre_largo": "Presión arterial media",
+ "para": "Estima la presión de perfusión (objetivo en shock).",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "sbp",
+   "label": "TA sistólica",
+   "tipo": "numero",
+   "unidad": "mmHg"
+  },
+  {
+   "id": "dbp",
+   "label": "TA diastólica",
+   "tipo": "numero",
+   "unidad": "mmHg"
+  }
+ ],
+ "formula": "dbp + (sbp-dbp)/3",
+ "unidad_resultado": "mmHg",
+ "decimales": 0,
+ "interpretacion": [
+  {
+   "min": 65,
+   "max": null,
+   "label": "≥ 65: adecuada",
+   "detalle": "Objetivo de perfusión habitual alcanzado."
+  },
+  {
+   "min": -50,
+   "max": 64.999,
+   "label": "< 65: hipoperfusión",
+   "detalle": "Objetivo en shock/sepsis: PAM ≥ 65 mmHg."
+  }
+ ],
+ "nota": "Fuente: MDCalc."
+}

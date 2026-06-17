@@ -1,0 +1,51 @@
+{
+ "id": "fena",
+ "nombre": "FENa",
+ "nombre_largo": "Fracción de excreción de sodio",
+ "para": "Diferencia fracaso renal prerrenal de necrosis tubular aguda.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "una",
+   "label": "Na⁺ en orina",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "pcr",
+   "label": "Creatinina plasmática",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  },
+  {
+   "id": "pna",
+   "label": "Na⁺ plasmático",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "ucr",
+   "label": "Creatinina en orina",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  }
+ ],
+ "formula": "(una*pcr)/(pna*ucr)*100",
+ "unidad_resultado": "%",
+ "decimales": 1,
+ "interpretacion": [
+  {
+   "min": -50,
+   "max": 1,
+   "label": "Prerrenal",
+   "detalle": "FENa < 1% sugiere causa prerrenal."
+  },
+  {
+   "min": 1.0001,
+   "max": null,
+   "label": "Renal / NTA",
+   "detalle": "FENa > 1-2% sugiere necrosis tubular aguda u otra causa renal."
+  }
+ ],
+ "nota": "No válida si diuréticos (usar FEUrea). Fuente: MDCalc."
+}

@@ -1,0 +1,57 @@
+{
+ "id": "ttkg",
+ "nombre": "TTKG",
+ "nombre_largo": "Gradiente transtubular de potasio",
+ "para": "Valora la respuesta renal en las alteraciones del potasio.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "uk",
+   "label": "K⁺ en orina",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "pk",
+   "label": "K⁺ plasmático",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "uosm",
+   "label": "Osmolaridad urinaria",
+   "tipo": "numero",
+   "unidad": "mOsm/kg"
+  },
+  {
+   "id": "posm",
+   "label": "Osmolaridad plasmática",
+   "tipo": "numero",
+   "unidad": "mOsm/kg"
+  }
+ ],
+ "formula": "(uk/pk)/(uosm/posm)",
+ "unidad_resultado": "",
+ "decimales": 1,
+ "interpretacion": [
+  {
+   "min": -50,
+   "max": 4,
+   "label": "Bajo (<4)",
+   "detalle": "En hiperpotasemia sugiere hipoaldosteronismo; en hipopotasemia, pérdida extrarrenal (adecuado)."
+  },
+  {
+   "min": 4.0001,
+   "max": 7,
+   "label": "4-7",
+   "detalle": "Rango intermedio."
+  },
+  {
+   "min": 7.0001,
+   "max": null,
+   "label": "Alto (>7)",
+   "detalle": "En hipopotasemia sugiere pérdida renal / exceso mineralocorticoide."
+  }
+ ],
+ "nota": "Requiere Uosm > plasma y Na urinario > 25. Fuente: MDCalc."
+}

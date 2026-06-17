@@ -1,0 +1,179 @@
+{
+  "id": "nihss",
+  "nombre": "NIHSS",
+  "nombre_largo": "Escala de Ictus del National Institutes of Health",
+  "para": "Gravedad del ictus (déficit neurológico).",
+  "tipo": "suma",
+  "items": [
+    {
+      "id": "1a",
+      "label": "1a. Nivel de consciencia",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "Alerta", "puntos": 0 },
+        { "label": "Somnoliento (despierta con estímulos menores)", "puntos": 1 },
+        { "label": "Obnubilado (requiere estímulos repetidos o dolorosos)", "puntos": 2 },
+        { "label": "Coma (sin respuesta o solo reflejos)", "puntos": 3 }
+      ]
+    },
+    {
+      "id": "1b",
+      "label": "1b. Preguntas (mes y edad)",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "Responde ambas correctamente", "puntos": 0 },
+        { "label": "Responde una correctamente", "puntos": 1 },
+        { "label": "No responde ninguna correctamente", "puntos": 2 }
+      ]
+    },
+    {
+      "id": "1c",
+      "label": "1c. Órdenes (abrir/cerrar ojos y mano)",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "Realiza ambas órdenes correctamente", "puntos": 0 },
+        { "label": "Realiza una orden correctamente", "puntos": 1 },
+        { "label": "No realiza ninguna orden", "puntos": 2 }
+      ]
+    },
+    {
+      "id": "2",
+      "label": "2. Mirada conjugada",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "Normal", "puntos": 0 },
+        { "label": "Paresia parcial de la mirada", "puntos": 1 },
+        { "label": "Desviación forzada o paresia total de la mirada", "puntos": 2 }
+      ]
+    },
+    {
+      "id": "3",
+      "label": "3. Campos visuales",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "Sin déficit campimétrico", "puntos": 0 },
+        { "label": "Hemianopsia parcial", "puntos": 1 },
+        { "label": "Hemianopsia completa", "puntos": 2 },
+        { "label": "Hemianopsia bilateral (ceguera cortical)", "puntos": 3 }
+      ]
+    },
+    {
+      "id": "4",
+      "label": "4. Paresia facial",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "Movimientos normales y simétricos", "puntos": 0 },
+        { "label": "Paresia leve (borramiento surco nasogeniano)", "puntos": 1 },
+        { "label": "Parálisis parcial (zona inferior de la cara)", "puntos": 2 },
+        { "label": "Parálisis completa (zonas superior e inferior)", "puntos": 3 }
+      ]
+    },
+    {
+      "id": "5a",
+      "label": "5a. Motor brazo izquierdo",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "No claudica (mantiene 10 s)", "puntos": 0 },
+        { "label": "Claudica antes de 10 s sin tocar la cama", "puntos": 1 },
+        { "label": "Cierto esfuerzo contra gravedad, cae a la cama", "puntos": 2 },
+        { "label": "No vence la gravedad, cae inmediatamente", "puntos": 3 },
+        { "label": "Ningún movimiento", "puntos": 4 }
+      ]
+    },
+    {
+      "id": "5b",
+      "label": "5b. Motor brazo derecho",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "No claudica (mantiene 10 s)", "puntos": 0 },
+        { "label": "Claudica antes de 10 s sin tocar la cama", "puntos": 1 },
+        { "label": "Cierto esfuerzo contra gravedad, cae a la cama", "puntos": 2 },
+        { "label": "No vence la gravedad, cae inmediatamente", "puntos": 3 },
+        { "label": "Ningún movimiento", "puntos": 4 }
+      ]
+    },
+    {
+      "id": "6a",
+      "label": "6a. Motor pierna izquierda",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "No claudica (mantiene 5 s)", "puntos": 0 },
+        { "label": "Claudica antes de 5 s sin tocar la cama", "puntos": 1 },
+        { "label": "Cierto esfuerzo contra gravedad, cae a la cama", "puntos": 2 },
+        { "label": "No vence la gravedad, cae inmediatamente", "puntos": 3 },
+        { "label": "Ningún movimiento", "puntos": 4 }
+      ]
+    },
+    {
+      "id": "6b",
+      "label": "6b. Motor pierna derecha",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "No claudica (mantiene 5 s)", "puntos": 0 },
+        { "label": "Claudica antes de 5 s sin tocar la cama", "puntos": 1 },
+        { "label": "Cierto esfuerzo contra gravedad, cae a la cama", "puntos": 2 },
+        { "label": "No vence la gravedad, cae inmediatamente", "puntos": 3 },
+        { "label": "Ningún movimiento", "puntos": 4 }
+      ]
+    },
+    {
+      "id": "7",
+      "label": "7. Ataxia de miembros",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "Ausente", "puntos": 0 },
+        { "label": "Presente en una extremidad", "puntos": 1 },
+        { "label": "Presente en dos extremidades", "puntos": 2 }
+      ]
+    },
+    {
+      "id": "8",
+      "label": "8. Sensibilidad",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "Normal", "puntos": 0 },
+        { "label": "Hipoestesia leve-moderada", "puntos": 1 },
+        { "label": "Anestesia grave o total", "puntos": 2 }
+      ]
+    },
+    {
+      "id": "9",
+      "label": "9. Lenguaje",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "Normal, sin afasia", "puntos": 0 },
+        { "label": "Afasia leve-moderada", "puntos": 1 },
+        { "label": "Afasia grave", "puntos": 2 },
+        { "label": "Mutismo o afasia global", "puntos": 3 }
+      ]
+    },
+    {
+      "id": "10",
+      "label": "10. Disartria",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "Articulación normal", "puntos": 0 },
+        { "label": "Disartria leve-moderada", "puntos": 1 },
+        { "label": "Disartria grave (ininteligible) o mutismo", "puntos": 2 }
+      ]
+    },
+    {
+      "id": "11",
+      "label": "11. Extinción / inatención",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "Sin anomalías", "puntos": 0 },
+        { "label": "Inatención a una modalidad sensorial", "puntos": 1 },
+        { "label": "Hemi-inatención grave o a más de una modalidad", "puntos": 2 }
+      ]
+    }
+  ],
+  "interpretacion": [
+    { "min": 0, "max": 0, "label": "Sin déficit", "detalle": "Sin déficit neurológico detectable." },
+    { "min": 1, "max": 4, "label": "Ictus leve", "detalle": "Déficit neurológico leve." },
+    { "min": 5, "max": 15, "label": "Ictus moderado", "detalle": "Déficit neurológico moderado." },
+    { "min": 16, "max": 20, "label": "Ictus moderado-grave", "detalle": "Déficit neurológico moderado a grave." },
+    { "min": 21, "max": null, "label": "Ictus grave", "detalle": "Déficit neurológico grave (máximo 42)." }
+  ],
+  "nota": "Escala oficial del NIH de 15 ítems. Rango total 0-42; a mayor puntuación, mayor gravedad del déficit neurológico."
+}

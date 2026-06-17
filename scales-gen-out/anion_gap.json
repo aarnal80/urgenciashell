@@ -1,0 +1,45 @@
+{
+ "id": "anion_gap",
+ "nombre": "Anion gap",
+ "nombre_largo": "Anion gap (hiato aniónico)",
+ "para": "Cribado de acidosis metabólica con anion gap elevado.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "na",
+   "label": "Sodio (Na⁺)",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "cl",
+   "label": "Cloro (Cl⁻)",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "hco3",
+   "label": "Bicarbonato (HCO₃⁻)",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  }
+ ],
+ "formula": "na-(cl+hco3)",
+ "unidad_resultado": "mEq/L",
+ "decimales": 0,
+ "interpretacion": [
+  {
+   "min": -50,
+   "max": 12,
+   "label": "Normal",
+   "detalle": "Anion gap normal (8-12 mEq/L). Si acidosis: acidosis sin anion gap (hiperclorémica)."
+  },
+  {
+   "min": 12.0001,
+   "max": null,
+   "label": "Elevado",
+   "detalle": "Acidosis metabólica con anion gap aumentado (cetoacidosis, láctico, tóxicos, urémica). Calcular delta-delta."
+  }
+ ],
+ "nota": "Corregir por albúmina: sumar 2,5 mEq/L por cada 1 g/dL de albúmina < 4. Fuente: MDCalc."
+}

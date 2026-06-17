@@ -1,0 +1,82 @@
+{
+  "id": "geneva",
+  "nombre": "Ginebra revisada",
+  "nombre_largo": "Escala de Ginebra revisada para probabilidad clínica de tromboembolia pulmonar",
+  "para": "Probabilidad clínica de TEP (alternativa a Wells).",
+  "tipo": "suma",
+  "items": [
+    {
+      "id": "edad_mayor_65",
+      "label": "Edad mayor de 65 años",
+      "tipo": "binario",
+      "puntos": 1
+    },
+    {
+      "id": "tvp_tep_previa",
+      "label": "TVP o TEP previa",
+      "tipo": "binario",
+      "puntos": 3
+    },
+    {
+      "id": "cirugia_fractura",
+      "label": "Cirugía o fractura en el último mes",
+      "tipo": "binario",
+      "puntos": 2
+    },
+    {
+      "id": "cancer_activo",
+      "label": "Cáncer activo",
+      "tipo": "binario",
+      "puntos": 2
+    },
+    {
+      "id": "dolor_unilateral_ei",
+      "label": "Dolor unilateral en extremidad inferior",
+      "tipo": "binario",
+      "puntos": 3
+    },
+    {
+      "id": "hemoptisis",
+      "label": "Hemoptisis",
+      "tipo": "binario",
+      "puntos": 2
+    },
+    {
+      "id": "frecuencia_cardiaca",
+      "label": "Frecuencia cardíaca",
+      "tipo": "opciones",
+      "opciones": [
+        { "label": "Menor de 75 lpm", "puntos": 0 },
+        { "label": "75-94 lpm", "puntos": 3 },
+        { "label": "95 lpm o más", "puntos": 5 }
+      ]
+    },
+    {
+      "id": "dolor_palpacion_edema",
+      "label": "Dolor a la palpación venosa profunda y edema unilateral",
+      "tipo": "binario",
+      "puntos": 4
+    }
+  ],
+  "interpretacion": [
+    {
+      "min": 0,
+      "max": 3,
+      "label": "Probabilidad baja",
+      "detalle": "Baja probabilidad clínica de tromboembolia pulmonar."
+    },
+    {
+      "min": 4,
+      "max": 10,
+      "label": "Probabilidad intermedia",
+      "detalle": "Probabilidad clínica intermedia de tromboembolia pulmonar."
+    },
+    {
+      "min": 11,
+      "max": null,
+      "label": "Probabilidad alta",
+      "detalle": "Alta probabilidad clínica de tromboembolia pulmonar."
+    }
+  ],
+  "nota": "Puntuación máxima teórica: 22 puntos."
+}

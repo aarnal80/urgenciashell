@@ -1,0 +1,51 @@
+{
+ "id": "feurea",
+ "nombre": "FEUrea",
+ "nombre_largo": "Fracción de excreción de urea",
+ "para": "Diferencia prerrenal de NTA cuando el paciente toma diuréticos.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "uurea",
+   "label": "Urea en orina",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  },
+  {
+   "id": "pcr",
+   "label": "Creatinina plasmática",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  },
+  {
+   "id": "purea",
+   "label": "Urea plasmática",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  },
+  {
+   "id": "ucr",
+   "label": "Creatinina en orina",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  }
+ ],
+ "formula": "(uurea*pcr)/(purea*ucr)*100",
+ "unidad_resultado": "%",
+ "decimales": 1,
+ "interpretacion": [
+  {
+   "min": -50,
+   "max": 35,
+   "label": "Prerrenal",
+   "detalle": "FEUrea < 35% sugiere causa prerrenal."
+  },
+  {
+   "min": 35.0001,
+   "max": null,
+   "label": "Renal / NTA",
+   "detalle": "FEUrea > 50% sugiere causa renal."
+  }
+ ],
+ "nota": "Útil con diuréticos. Fuente: MDCalc."
+}

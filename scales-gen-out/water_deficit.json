@@ -1,0 +1,58 @@
+{
+ "id": "water_deficit",
+ "nombre": "Déficit de agua",
+ "nombre_largo": "Déficit de agua libre (hipernatremia)",
+ "para": "Estima el agua a reponer en la hipernatremia.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "peso",
+   "label": "Peso",
+   "tipo": "numero",
+   "unidad": "kg"
+  },
+  {
+   "id": "na",
+   "label": "Sodio actual",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "factor",
+   "label": "Agua corporal total",
+   "tipo": "opciones",
+   "opciones": [
+    {
+     "label": "Varón (0,6)",
+     "valor": 0.6
+    },
+    {
+     "label": "Mujer / varón anciano (0,5)",
+     "valor": 0.5
+    },
+    {
+     "label": "Mujer anciana (0,45)",
+     "valor": 0.45
+    }
+   ]
+  }
+ ],
+ "formula": "peso*factor*((na/140)-1)",
+ "unidad_resultado": "L",
+ "decimales": 1,
+ "interpretacion": [
+  {
+   "min": -50,
+   "max": 0,
+   "label": "Sin déficit",
+   "detalle": "Na ≤ 140; no hay déficit de agua libre por este cálculo."
+  },
+  {
+   "min": 0.0001,
+   "max": null,
+   "label": "Déficit de agua libre",
+   "detalle": "Reponer en 48-72 h; no descender el Na más de 10-12 mEq/L/día."
+  }
+ ],
+ "nota": "Objetivo de Na 140. Fuente: MDCalc."
+}

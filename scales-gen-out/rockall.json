@@ -1,0 +1,45 @@
+{
+ "id": "rockall",
+ "nombre": "Rockall",
+ "nombre_largo": "Escala de Rockall clínica (pre-endoscopia)",
+ "para": "Riesgo de resangrado y mortalidad tras hemorragia digestiva alta.",
+ "tipo": "suma",
+ "items": [
+  {
+   "id": "edad",
+   "label": "Edad",
+   "tipo": "opciones",
+   "opciones": [
+    { "label": "Menor de 60 años", "puntos": 0 },
+    { "label": "60-79 años", "puntos": 1 },
+    { "label": "80 años o más", "puntos": 2 }
+   ]
+  },
+  {
+   "id": "shock",
+   "label": "Shock",
+   "tipo": "opciones",
+   "opciones": [
+    { "label": "Sin shock", "puntos": 0 },
+    { "label": "Taquicardia (FC ≥ 100, TAS ≥ 100)", "puntos": 1 },
+    { "label": "Hipotensión (TAS < 100)", "puntos": 2 }
+   ]
+  },
+  {
+   "id": "comorbilidad",
+   "label": "Comorbilidad",
+   "tipo": "opciones",
+   "opciones": [
+    { "label": "Ninguna", "puntos": 0 },
+    { "label": "Cardiopatía isquémica, insuficiencia cardiaca u otra comorbilidad mayor", "puntos": 2 },
+    { "label": "Insuficiencia renal o hepática, o cáncer diseminado", "puntos": 3 }
+   ]
+  }
+ ],
+ "interpretacion": [
+  { "min": 0, "max": 2, "label": "Bajo riesgo", "detalle": "Riesgo bajo de resangrado y mortalidad." },
+  { "min": 3, "max": 5, "label": "Riesgo intermedio", "detalle": "Riesgo intermedio de resangrado y mortalidad." },
+  { "min": 6, "max": null, "label": "Alto riesgo", "detalle": "Riesgo alto de resangrado y mortalidad." }
+ ],
+ "nota": "Versión clínica pre-endoscopia (3 ítems: edad, shock y comorbilidad). El Rockall completo añade el diagnóstico endoscópico y los estigmas de hemorragia reciente."
+}

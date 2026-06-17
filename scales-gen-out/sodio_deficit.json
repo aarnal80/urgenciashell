@@ -1,0 +1,54 @@
+{
+ "id": "sodio_deficit",
+ "nombre": "Déficit de Na⁺",
+ "nombre_largo": "Déficit de sodio (hiponatremia)",
+ "para": "Estima el sodio a reponer en la hiponatremia.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "peso",
+   "label": "Peso",
+   "tipo": "numero",
+   "unidad": "kg"
+  },
+  {
+   "id": "na",
+   "label": "Sodio actual",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "objetivo",
+   "label": "Na⁺ objetivo",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "factor",
+   "label": "Agua corporal total",
+   "tipo": "opciones",
+   "opciones": [
+    {
+     "label": "Varón (0,6)",
+     "valor": 0.6
+    },
+    {
+     "label": "Mujer / anciano (0,5)",
+     "valor": 0.5
+    }
+   ]
+  }
+ ],
+ "formula": "peso*factor*(objetivo-na)",
+ "unidad_resultado": "mEq",
+ "decimales": 0,
+ "interpretacion": [
+  {
+   "min": 0,
+   "max": null,
+   "label": "Déficit de Na⁺ a reponer",
+   "detalle": "No corregir > 8-10 mEq/L en 24 h (riesgo de mielinólisis pontina)."
+  }
+ ],
+ "nota": "Objetivo prudente; reevaluar natremia con frecuencia. Fuente: MDCalc."
+}

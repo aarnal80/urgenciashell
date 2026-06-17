@@ -1,0 +1,45 @@
+{
+ "id": "na_corr_glu",
+ "nombre": "Na⁺ corregido (glucosa)",
+ "nombre_largo": "Sodio corregido por hiperglucemia",
+ "para": "Corrige el sodio según la glucemia.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "na",
+   "label": "Sodio medido (Na⁺)",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "glu",
+   "label": "Glucosa",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  }
+ ],
+ "formula": "na + 1.6*((glu-100)/100)",
+ "unidad_resultado": "mEq/L",
+ "decimales": 1,
+ "interpretacion": [
+  {
+   "min": 135,
+   "max": 145,
+   "label": "Normal",
+   "detalle": "Na corregido normal (135-145)."
+  },
+  {
+   "min": 145.0001,
+   "max": null,
+   "label": "Hipernatremia",
+   "detalle": "Na corregido elevado."
+  },
+  {
+   "min": -50,
+   "max": 134.999,
+   "label": "Hiponatremia",
+   "detalle": "Na corregido bajo (hiponatremia verdadera)."
+  }
+ ],
+ "nota": "Factor 1,6 mEq/L por cada 100 mg/dL de glucosa > 100. Fuente: MDCalc."
+}

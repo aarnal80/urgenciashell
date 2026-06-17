@@ -1,0 +1,51 @@
+{
+ "id": "delta_delta",
+ "nombre": "Delta-delta",
+ "nombre_largo": "Cociente delta-delta",
+ "para": "Detecta trastornos ácido-base mixtos en acidosis con anion gap elevado.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "na",
+   "label": "Sodio (Na⁺)",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "cl",
+   "label": "Cloro (Cl⁻)",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "hco3",
+   "label": "Bicarbonato (HCO₃⁻)",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  }
+ ],
+ "formula": "((na-(cl+hco3))-12)/(24-hco3)",
+ "unidad_resultado": "",
+ "decimales": 1,
+ "interpretacion": [
+  {
+   "min": -50,
+   "max": 0.4,
+   "label": "< 0,4",
+   "detalle": "Acidosis metabólica sin anion gap (hiperclorémica) concomitante."
+  },
+  {
+   "min": 0.4001,
+   "max": 2,
+   "label": "0,4 - 2",
+   "detalle": "Acidosis metabólica con anion gap pura."
+  },
+  {
+   "min": 2.0001,
+   "max": null,
+   "label": "> 2",
+   "detalle": "Alcalosis metabólica o acidosis respiratoria crónica concomitante."
+  }
+ ],
+ "nota": "Fuente: MDCalc."
+}

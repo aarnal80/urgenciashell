@@ -1,0 +1,45 @@
+{
+ "id": "ca_corr",
+ "nombre": "Calcio corregido",
+ "nombre_largo": "Calcio corregido por albúmina",
+ "para": "Corrige el calcio total según la albúmina.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "ca",
+   "label": "Calcio total",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  },
+  {
+   "id": "alb",
+   "label": "Albúmina",
+   "tipo": "numero",
+   "unidad": "g/dL"
+  }
+ ],
+ "formula": "ca + 0.8*(4-alb)",
+ "unidad_resultado": "mg/dL",
+ "decimales": 1,
+ "interpretacion": [
+  {
+   "min": 8.5,
+   "max": 10.5,
+   "label": "Normal",
+   "detalle": "8,5-10,5 mg/dL."
+  },
+  {
+   "min": 10.5001,
+   "max": null,
+   "label": "Hipercalcemia",
+   "detalle": "Calcio corregido elevado."
+  },
+  {
+   "min": -50,
+   "max": 8.499,
+   "label": "Hipocalcemia",
+   "detalle": "Calcio corregido bajo."
+  }
+ ],
+ "nota": "Fuente: MDCalc."
+}

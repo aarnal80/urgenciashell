@@ -1,0 +1,57 @@
+{
+ "id": "meld",
+ "nombre": "MELD",
+ "nombre_largo": "MELD (hepatopatía crónica)",
+ "para": "Gravedad de la hepatopatía crónica.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "bili",
+   "label": "Bilirrubina",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  },
+  {
+   "id": "inr",
+   "label": "INR",
+   "tipo": "numero",
+   "unidad": ""
+  },
+  {
+   "id": "cr",
+   "label": "Creatinina",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  }
+ ],
+ "formula": "Math.round(3.78*Math.log(Math.max(bili,1))+11.2*Math.log(Math.max(inr,1))+9.57*Math.log(Math.max(cr,1))+6.43)",
+ "unidad_resultado": "",
+ "decimales": 0,
+ "interpretacion": [
+  {
+   "min": -50,
+   "max": 9,
+   "label": "≤ 9",
+   "detalle": "Mortalidad a 3 meses ~1,9%."
+  },
+  {
+   "min": 10,
+   "max": 19,
+   "label": "10-19",
+   "detalle": "Mortalidad ~6-20%."
+  },
+  {
+   "min": 20,
+   "max": 29,
+   "label": "20-29",
+   "detalle": "Mortalidad ~20-50%."
+  },
+  {
+   "min": 30,
+   "max": null,
+   "label": "≥ 30",
+   "detalle": "Mortalidad > 50%."
+  }
+ ],
+ "nota": "Valores mínimos de 1 para bili/INR/Cr; Cr máx 4. Fuente: MDCalc."
+}

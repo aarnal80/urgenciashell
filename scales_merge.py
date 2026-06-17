@@ -38,6 +38,9 @@ for fp in sorted(glob.glob('scales-gen-out/*.json')):
     elif tipo == 'clasificacion':
         if not d.get('clases'):
             warns.append('%s: clasificacion sin clases' % sid); continue
+    elif tipo == 'formula':
+        if not d.get('items') or not d.get('formula'):
+            warns.append('%s: formula sin items/formula' % sid); continue
     else:
         warns.append('%s: tipo desconocido %r' % (sid, tipo)); continue
     scales[sid] = d

@@ -1,0 +1,33 @@
+{
+ "id": "parkland",
+ "nombre": "Parkland",
+ "nombre_largo": "Fórmula de Parkland (quemados)",
+ "para": "Estima la fluidoterapia en las primeras 24 h del quemado.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "peso",
+   "label": "Peso",
+   "tipo": "numero",
+   "unidad": "kg"
+  },
+  {
+   "id": "tbsa",
+   "label": "Superficie quemada",
+   "tipo": "numero",
+   "unidad": "%"
+  }
+ ],
+ "formula": "4*peso*tbsa",
+ "unidad_resultado": "mL/24h",
+ "decimales": 0,
+ "interpretacion": [
+  {
+   "min": 0,
+   "max": null,
+   "label": "Cristaloides en 24 h",
+   "detalle": "Administrar el 50% en las primeras 8 h desde la quemadura y el 50% en las 16 h siguientes (Ringer lactato)."
+  }
+ ],
+ "nota": "Ajustar a diuresis 0,5-1 mL/kg/h. Solo % de 2.º-3.er grado. Fuente: MDCalc."
+}

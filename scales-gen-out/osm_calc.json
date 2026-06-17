@@ -1,0 +1,51 @@
+{
+ "id": "osm_calc",
+ "nombre": "Osmolaridad calculada",
+ "nombre_largo": "Osmolaridad plasmática calculada",
+ "para": "Estima la osmolaridad plasmática.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "na",
+   "label": "Sodio (Na⁺)",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "glu",
+   "label": "Glucosa",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  },
+  {
+   "id": "bun",
+   "label": "BUN (urea/2,14)",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  }
+ ],
+ "formula": "2*na + glu/18 + bun/2.8",
+ "unidad_resultado": "mOsm/kg",
+ "decimales": 0,
+ "interpretacion": [
+  {
+   "min": 275,
+   "max": 295,
+   "label": "Normal",
+   "detalle": "275-295 mOsm/kg."
+  },
+  {
+   "min": 295.0001,
+   "max": null,
+   "label": "Elevada",
+   "detalle": "Hiperosmolaridad (hiperglucemia, hipernatremia, tóxicos)."
+  },
+  {
+   "min": -50,
+   "max": 274.999,
+   "label": "Baja",
+   "detalle": "Hipoosmolaridad (hiponatremia hipotónica)."
+  }
+ ],
+ "nota": "BUN = urea(mg/dL)/2,14. Fuente: MDCalc."
+}

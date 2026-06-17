@@ -1,0 +1,45 @@
+{
+ "id": "qtc",
+ "nombre": "QTc (Bazett)",
+ "nombre_largo": "QT corregido (Bazett)",
+ "para": "Corrige el QT por la frecuencia cardiaca.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "qt",
+   "label": "Intervalo QT",
+   "tipo": "numero",
+   "unidad": "ms"
+  },
+  {
+   "id": "fc",
+   "label": "Frecuencia cardiaca",
+   "tipo": "numero",
+   "unidad": "lpm"
+  }
+ ],
+ "formula": "qt/Math.sqrt(60/fc)",
+ "unidad_resultado": "ms",
+ "decimales": 0,
+ "interpretacion": [
+  {
+   "min": -50,
+   "max": 440,
+   "label": "Normal",
+   "detalle": "≤ 440 ms (varón) / ≤ 460 ms (mujer)."
+  },
+  {
+   "min": 440.0001,
+   "max": 500,
+   "label": "Prolongado",
+   "detalle": "Riesgo aumentado; revisar fármacos e iones."
+  },
+  {
+   "min": 500.0001,
+   "max": null,
+   "label": "Muy prolongado",
+   "detalle": "Alto riesgo de torsade de pointes."
+  }
+ ],
+ "nota": "Bazett: QTc = QT/√(RR). Fuente: MDCalc."
+}

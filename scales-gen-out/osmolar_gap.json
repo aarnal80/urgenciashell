@@ -1,0 +1,51 @@
+{
+ "id": "osmolar_gap",
+ "nombre": "Gap osmolar",
+ "nombre_largo": "Hiato osmolar",
+ "para": "Detecta tóxicos osmóticamente activos (alcoholes).",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "osm_med",
+   "label": "Osmolaridad medida",
+   "tipo": "numero",
+   "unidad": "mOsm/kg"
+  },
+  {
+   "id": "na",
+   "label": "Sodio (Na⁺)",
+   "tipo": "numero",
+   "unidad": "mEq/L"
+  },
+  {
+   "id": "glu",
+   "label": "Glucosa",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  },
+  {
+   "id": "bun",
+   "label": "BUN",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  }
+ ],
+ "formula": "osm_med - (2*na + glu/18 + bun/2.8)",
+ "unidad_resultado": "mOsm/kg",
+ "decimales": 0,
+ "interpretacion": [
+  {
+   "min": -50,
+   "max": 10,
+   "label": "Normal",
+   "detalle": "< 10 mOsm/kg."
+  },
+  {
+   "min": 10.0001,
+   "max": null,
+   "label": "Elevado",
+   "detalle": "Sospecha de intoxicación por metanol, etilenglicol, isopropanol o etanol."
+  }
+ ],
+ "nota": "Fuente: MDCalc."
+}

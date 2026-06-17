@@ -1,0 +1,65 @@
+{
+ "id": "childpugh",
+ "nombre": "Child-Pugh",
+ "nombre_largo": "Clasificación de Child-Pugh",
+ "para": "Gravedad de la cirrosis hepática.",
+ "tipo": "suma",
+ "items": [
+  {
+   "id": "bilirrubina",
+   "label": "Bilirrubina (mg/dL)",
+   "tipo": "opciones",
+   "opciones": [
+    { "label": "< 2", "puntos": 1 },
+    { "label": "2-3", "puntos": 2 },
+    { "label": "> 3", "puntos": 3 }
+   ]
+  },
+  {
+   "id": "albumina",
+   "label": "Albúmina (g/dL)",
+   "tipo": "opciones",
+   "opciones": [
+    { "label": "> 3,5", "puntos": 1 },
+    { "label": "2,8-3,5", "puntos": 2 },
+    { "label": "< 2,8", "puntos": 3 }
+   ]
+  },
+  {
+   "id": "inr",
+   "label": "INR",
+   "tipo": "opciones",
+   "opciones": [
+    { "label": "< 1,7", "puntos": 1 },
+    { "label": "1,7-2,3", "puntos": 2 },
+    { "label": "> 2,3", "puntos": 3 }
+   ]
+  },
+  {
+   "id": "ascitis",
+   "label": "Ascitis",
+   "tipo": "opciones",
+   "opciones": [
+    { "label": "Ausente", "puntos": 1 },
+    { "label": "Leve/controlada", "puntos": 2 },
+    { "label": "A tensión/refractaria", "puntos": 3 }
+   ]
+  },
+  {
+   "id": "encefalopatia",
+   "label": "Encefalopatía",
+   "tipo": "opciones",
+   "opciones": [
+    { "label": "Ausente", "puntos": 1 },
+    { "label": "Grado I-II", "puntos": 2 },
+    { "label": "Grado III-IV", "puntos": 3 }
+   ]
+  }
+ ],
+ "interpretacion": [
+  { "min": 5, "max": 6, "label": "Clase A (bien compensada)", "detalle": "Cirrosis bien compensada." },
+  { "min": 7, "max": 9, "label": "Clase B", "detalle": "Compromiso funcional significativo." },
+  { "min": 10, "max": null, "label": "Clase C (descompensada)", "detalle": "Cirrosis descompensada." }
+ ],
+ "nota": "5 ítems puntuados de 1 a 3. Total 5-15."
+}

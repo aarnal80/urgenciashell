@@ -1,0 +1,78 @@
+{
+ "id": "cockcroft",
+ "nombre": "Cockcroft-Gault",
+ "nombre_largo": "Aclaramiento de creatinina (Cockcroft-Gault)",
+ "para": "Estima el aclaramiento de creatinina para ajuste de fármacos.",
+ "tipo": "formula",
+ "items": [
+  {
+   "id": "edad",
+   "label": "Edad",
+   "tipo": "numero",
+   "unidad": "años"
+  },
+  {
+   "id": "peso",
+   "label": "Peso",
+   "tipo": "numero",
+   "unidad": "kg"
+  },
+  {
+   "id": "scr",
+   "label": "Creatinina sérica",
+   "tipo": "numero",
+   "unidad": "mg/dL"
+  },
+  {
+   "id": "sexo",
+   "label": "Sexo",
+   "tipo": "opciones",
+   "opciones": [
+    {
+     "label": "Varón",
+     "valor": 1.0
+    },
+    {
+     "label": "Mujer",
+     "valor": 0.85
+    }
+   ]
+  }
+ ],
+ "formula": "((140-edad)*peso*sexo)/(72*scr)",
+ "unidad_resultado": "mL/min",
+ "decimales": 0,
+ "interpretacion": [
+  {
+   "min": 90,
+   "max": null,
+   "label": "Normal (≥90)",
+   "detalle": "Función renal normal."
+  },
+  {
+   "min": 60,
+   "max": 89.999,
+   "label": "Leve ↓ (60-89)",
+   "detalle": "Descenso leve."
+  },
+  {
+   "min": 30,
+   "max": 59.999,
+   "label": "Moderado ↓ (30-59)",
+   "detalle": "Ajustar fármacos de eliminación renal."
+  },
+  {
+   "min": 15,
+   "max": 29.999,
+   "label": "Grave ↓ (15-29)",
+   "detalle": "Insuficiencia renal grave."
+  },
+  {
+   "min": -50,
+   "max": 14.999,
+   "label": "Fallo renal (<15)",
+   "detalle": "Valorar diálisis / ajuste estricto."
+  }
+ ],
+ "nota": "Usar peso ajustado si obesidad. Fuente: MDCalc."
+}

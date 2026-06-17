@@ -4,6 +4,129 @@
   var T = window.TOPICS || [];
   var S = window.SCALES = window.SCALES || {};
   var DEF = {
+ "alvarado": {
+  "id": "alvarado",
+  "nombre": "Alvarado",
+  "nombre_largo": "Escala de Alvarado para apendicitis aguda",
+  "para": "Probabilidad de apendicitis aguda.",
+  "tipo": "suma",
+  "items": [
+   {
+    "id": "dolor_migratorio",
+    "label": "Dolor migratorio a fosa ilíaca derecha",
+    "tipo": "binario",
+    "puntos": 1
+   },
+   {
+    "id": "anorexia",
+    "label": "Anorexia",
+    "tipo": "binario",
+    "puntos": 1
+   },
+   {
+    "id": "nauseas_vomitos",
+    "label": "Náuseas o vómitos",
+    "tipo": "binario",
+    "puntos": 1
+   },
+   {
+    "id": "dolor_palpacion_fid",
+    "label": "Dolor a la palpación en fosa ilíaca derecha",
+    "tipo": "binario",
+    "puntos": 2
+   },
+   {
+    "id": "blumberg",
+    "label": "Blumberg (dolor de rebote)",
+    "tipo": "binario",
+    "puntos": 1
+   },
+   {
+    "id": "fiebre",
+    "label": "Temperatura > 37,3 ºC",
+    "tipo": "binario",
+    "puntos": 1
+   },
+   {
+    "id": "leucocitosis",
+    "label": "Leucocitosis > 10.000",
+    "tipo": "binario",
+    "puntos": 2
+   },
+   {
+    "id": "desviacion_izquierda",
+    "label": "Desviación izquierda (neutrofilia > 75%)",
+    "tipo": "binario",
+    "puntos": 1
+   }
+  ],
+  "interpretacion": [
+   {
+    "min": 0,
+    "max": 4,
+    "label": "Baja probabilidad",
+    "detalle": "Baja probabilidad de apendicitis aguda."
+   },
+   {
+    "min": 5,
+    "max": 6,
+    "label": "Probable (observación)",
+    "detalle": "Apendicitis probable; se recomienda observación."
+   },
+   {
+    "min": 7,
+    "max": null,
+    "label": "Alta probabilidad (valorar cirugía)",
+    "detalle": "Alta probabilidad de apendicitis aguda; valorar cirugía."
+   }
+  ],
+  "nota": "Puntuación total de 0 a 10 puntos."
+ },
+ "anion_gap": {
+  "id": "anion_gap",
+  "nombre": "Anion gap",
+  "nombre_largo": "Anion gap (hiato aniónico)",
+  "para": "Cribado de acidosis metabólica con anion gap elevado.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "na",
+    "label": "Sodio (Na⁺)",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "cl",
+    "label": "Cloro (Cl⁻)",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "hco3",
+    "label": "Bicarbonato (HCO₃⁻)",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   }
+  ],
+  "formula": "na-(cl+hco3)",
+  "unidad_resultado": "mEq/L",
+  "decimales": 0,
+  "interpretacion": [
+   {
+    "min": -50,
+    "max": 12,
+    "label": "Normal",
+    "detalle": "Anion gap normal (8-12 mEq/L). Si acidosis: acidosis sin anion gap (hiperclorémica)."
+   },
+   {
+    "min": 12.0001,
+    "max": null,
+    "label": "Elevado",
+    "detalle": "Acidosis metabólica con anion gap aumentado (cetoacidosis, láctico, tóxicos, urémica). Calcular delta-delta."
+   }
+  ],
+  "nota": "Corregir por albúmina: sumar 2,5 mEq/L por cada 1 g/dL de albúmina < 4. Fuente: MDCalc."
+ },
  "blatchford": {
   "id": "blatchford",
   "nombre": "Glasgow-Blatchford",
@@ -136,6 +259,51 @@
    }
   ],
   "nota": "El ítem de hemoglobina está simplificado a un único parámetro con umbrales ≥13=0, 12-13=1, 10-12=3, <10=6."
+ },
+ "ca_corr": {
+  "id": "ca_corr",
+  "nombre": "Calcio corregido",
+  "nombre_largo": "Calcio corregido por albúmina",
+  "para": "Corrige el calcio total según la albúmina.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "ca",
+    "label": "Calcio total",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   },
+   {
+    "id": "alb",
+    "label": "Albúmina",
+    "tipo": "numero",
+    "unidad": "g/dL"
+   }
+  ],
+  "formula": "ca + 0.8*(4-alb)",
+  "unidad_resultado": "mg/dL",
+  "decimales": 1,
+  "interpretacion": [
+   {
+    "min": 8.5,
+    "max": 10.5,
+    "label": "Normal",
+    "detalle": "8,5-10,5 mg/dL."
+   },
+   {
+    "min": 10.5001,
+    "max": null,
+    "label": "Hipercalcemia",
+    "detalle": "Calcio corregido elevado."
+   },
+   {
+    "min": -50,
+    "max": 8.499,
+    "label": "Hipocalcemia",
+    "detalle": "Calcio corregido bajo."
+   }
+  ],
+  "nota": "Fuente: MDCalc."
  },
  "centor": {
   "id": "centor",
@@ -301,6 +469,209 @@
   ],
   "nota": "El punto por sexo femenino solo cuenta en presencia de otro factor de riesgo. Puntuación máxima 9."
  },
+ "childpugh": {
+  "id": "childpugh",
+  "nombre": "Child-Pugh",
+  "nombre_largo": "Clasificación de Child-Pugh",
+  "para": "Gravedad de la cirrosis hepática.",
+  "tipo": "suma",
+  "items": [
+   {
+    "id": "bilirrubina",
+    "label": "Bilirrubina (mg/dL)",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "< 2",
+      "puntos": 1
+     },
+     {
+      "label": "2-3",
+      "puntos": 2
+     },
+     {
+      "label": "> 3",
+      "puntos": 3
+     }
+    ]
+   },
+   {
+    "id": "albumina",
+    "label": "Albúmina (g/dL)",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "> 3,5",
+      "puntos": 1
+     },
+     {
+      "label": "2,8-3,5",
+      "puntos": 2
+     },
+     {
+      "label": "< 2,8",
+      "puntos": 3
+     }
+    ]
+   },
+   {
+    "id": "inr",
+    "label": "INR",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "< 1,7",
+      "puntos": 1
+     },
+     {
+      "label": "1,7-2,3",
+      "puntos": 2
+     },
+     {
+      "label": "> 2,3",
+      "puntos": 3
+     }
+    ]
+   },
+   {
+    "id": "ascitis",
+    "label": "Ascitis",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Ausente",
+      "puntos": 1
+     },
+     {
+      "label": "Leve/controlada",
+      "puntos": 2
+     },
+     {
+      "label": "A tensión/refractaria",
+      "puntos": 3
+     }
+    ]
+   },
+   {
+    "id": "encefalopatia",
+    "label": "Encefalopatía",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Ausente",
+      "puntos": 1
+     },
+     {
+      "label": "Grado I-II",
+      "puntos": 2
+     },
+     {
+      "label": "Grado III-IV",
+      "puntos": 3
+     }
+    ]
+   }
+  ],
+  "interpretacion": [
+   {
+    "min": 5,
+    "max": 6,
+    "label": "Clase A (bien compensada)",
+    "detalle": "Cirrosis bien compensada."
+   },
+   {
+    "min": 7,
+    "max": 9,
+    "label": "Clase B",
+    "detalle": "Compromiso funcional significativo."
+   },
+   {
+    "min": 10,
+    "max": null,
+    "label": "Clase C (descompensada)",
+    "detalle": "Cirrosis descompensada."
+   }
+  ],
+  "nota": "5 ítems puntuados de 1 a 3. Total 5-15."
+ },
+ "cockcroft": {
+  "id": "cockcroft",
+  "nombre": "Cockcroft-Gault",
+  "nombre_largo": "Aclaramiento de creatinina (Cockcroft-Gault)",
+  "para": "Estima el aclaramiento de creatinina para ajuste de fármacos.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "edad",
+    "label": "Edad",
+    "tipo": "numero",
+    "unidad": "años"
+   },
+   {
+    "id": "peso",
+    "label": "Peso",
+    "tipo": "numero",
+    "unidad": "kg"
+   },
+   {
+    "id": "scr",
+    "label": "Creatinina sérica",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   },
+   {
+    "id": "sexo",
+    "label": "Sexo",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Varón",
+      "valor": 1.0
+     },
+     {
+      "label": "Mujer",
+      "valor": 0.85
+     }
+    ]
+   }
+  ],
+  "formula": "((140-edad)*peso*sexo)/(72*scr)",
+  "unidad_resultado": "mL/min",
+  "decimales": 0,
+  "interpretacion": [
+   {
+    "min": 90,
+    "max": null,
+    "label": "Normal (≥90)",
+    "detalle": "Función renal normal."
+   },
+   {
+    "min": 60,
+    "max": 89.999,
+    "label": "Leve ↓ (60-89)",
+    "detalle": "Descenso leve."
+   },
+   {
+    "min": 30,
+    "max": 59.999,
+    "label": "Moderado ↓ (30-59)",
+    "detalle": "Ajustar fármacos de eliminación renal."
+   },
+   {
+    "min": 15,
+    "max": 29.999,
+    "label": "Grave ↓ (15-29)",
+    "detalle": "Insuficiencia renal grave."
+   },
+   {
+    "min": -50,
+    "max": 14.999,
+    "label": "Fallo renal (<15)",
+    "detalle": "Valorar diálisis / ajuste estricto."
+   }
+  ],
+  "nota": "Usar peso ajustado si obesidad. Fuente: MDCalc."
+ },
  "curb65": {
   "id": "curb65",
   "nombre": "CURB-65",
@@ -360,6 +731,159 @@
    }
   ],
   "nota": "Cada ítem suma 1 punto; puntuación total 0-5."
+ },
+ "delta_delta": {
+  "id": "delta_delta",
+  "nombre": "Delta-delta",
+  "nombre_largo": "Cociente delta-delta",
+  "para": "Detecta trastornos ácido-base mixtos en acidosis con anion gap elevado.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "na",
+    "label": "Sodio (Na⁺)",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "cl",
+    "label": "Cloro (Cl⁻)",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "hco3",
+    "label": "Bicarbonato (HCO₃⁻)",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   }
+  ],
+  "formula": "((na-(cl+hco3))-12)/(24-hco3)",
+  "unidad_resultado": "",
+  "decimales": 1,
+  "interpretacion": [
+   {
+    "min": -50,
+    "max": 0.4,
+    "label": "< 0,4",
+    "detalle": "Acidosis metabólica sin anion gap (hiperclorémica) concomitante."
+   },
+   {
+    "min": 0.4001,
+    "max": 2,
+    "label": "0,4 - 2",
+    "detalle": "Acidosis metabólica con anion gap pura."
+   },
+   {
+    "min": 2.0001,
+    "max": null,
+    "label": "> 2",
+    "detalle": "Alcalosis metabólica o acidosis respiratoria crónica concomitante."
+   }
+  ],
+  "nota": "Fuente: MDCalc."
+ },
+ "fena": {
+  "id": "fena",
+  "nombre": "FENa",
+  "nombre_largo": "Fracción de excreción de sodio",
+  "para": "Diferencia fracaso renal prerrenal de necrosis tubular aguda.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "una",
+    "label": "Na⁺ en orina",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "pcr",
+    "label": "Creatinina plasmática",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   },
+   {
+    "id": "pna",
+    "label": "Na⁺ plasmático",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "ucr",
+    "label": "Creatinina en orina",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   }
+  ],
+  "formula": "(una*pcr)/(pna*ucr)*100",
+  "unidad_resultado": "%",
+  "decimales": 1,
+  "interpretacion": [
+   {
+    "min": -50,
+    "max": 1,
+    "label": "Prerrenal",
+    "detalle": "FENa < 1% sugiere causa prerrenal."
+   },
+   {
+    "min": 1.0001,
+    "max": null,
+    "label": "Renal / NTA",
+    "detalle": "FENa > 1-2% sugiere necrosis tubular aguda u otra causa renal."
+   }
+  ],
+  "nota": "No válida si diuréticos (usar FEUrea). Fuente: MDCalc."
+ },
+ "feurea": {
+  "id": "feurea",
+  "nombre": "FEUrea",
+  "nombre_largo": "Fracción de excreción de urea",
+  "para": "Diferencia prerrenal de NTA cuando el paciente toma diuréticos.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "uurea",
+    "label": "Urea en orina",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   },
+   {
+    "id": "pcr",
+    "label": "Creatinina plasmática",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   },
+   {
+    "id": "purea",
+    "label": "Urea plasmática",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   },
+   {
+    "id": "ucr",
+    "label": "Creatinina en orina",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   }
+  ],
+  "formula": "(uurea*pcr)/(purea*ucr)*100",
+  "unidad_resultado": "%",
+  "decimales": 1,
+  "interpretacion": [
+   {
+    "min": -50,
+    "max": 35,
+    "label": "Prerrenal",
+    "detalle": "FEUrea < 35% sugiere causa prerrenal."
+   },
+   {
+    "min": 35.0001,
+    "max": null,
+    "label": "Renal / NTA",
+    "detalle": "FEUrea > 50% sugiere causa renal."
+   }
+  ],
+  "nota": "Útil con diuréticos. Fuente: MDCalc."
  },
  "fisher": {
   "id": "fisher",
@@ -507,6 +1031,97 @@
   ],
   "nota": "Puntuación total de 3 a 15; una puntuación más alta indica mejor nivel de consciencia."
  },
+ "geneva": {
+  "id": "geneva",
+  "nombre": "Ginebra revisada",
+  "nombre_largo": "Escala de Ginebra revisada para probabilidad clínica de tromboembolia pulmonar",
+  "para": "Probabilidad clínica de TEP (alternativa a Wells).",
+  "tipo": "suma",
+  "items": [
+   {
+    "id": "edad_mayor_65",
+    "label": "Edad mayor de 65 años",
+    "tipo": "binario",
+    "puntos": 1
+   },
+   {
+    "id": "tvp_tep_previa",
+    "label": "TVP o TEP previa",
+    "tipo": "binario",
+    "puntos": 3
+   },
+   {
+    "id": "cirugia_fractura",
+    "label": "Cirugía o fractura en el último mes",
+    "tipo": "binario",
+    "puntos": 2
+   },
+   {
+    "id": "cancer_activo",
+    "label": "Cáncer activo",
+    "tipo": "binario",
+    "puntos": 2
+   },
+   {
+    "id": "dolor_unilateral_ei",
+    "label": "Dolor unilateral en extremidad inferior",
+    "tipo": "binario",
+    "puntos": 3
+   },
+   {
+    "id": "hemoptisis",
+    "label": "Hemoptisis",
+    "tipo": "binario",
+    "puntos": 2
+   },
+   {
+    "id": "frecuencia_cardiaca",
+    "label": "Frecuencia cardíaca",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Menor de 75 lpm",
+      "puntos": 0
+     },
+     {
+      "label": "75-94 lpm",
+      "puntos": 3
+     },
+     {
+      "label": "95 lpm o más",
+      "puntos": 5
+     }
+    ]
+   },
+   {
+    "id": "dolor_palpacion_edema",
+    "label": "Dolor a la palpación venosa profunda y edema unilateral",
+    "tipo": "binario",
+    "puntos": 4
+   }
+  ],
+  "interpretacion": [
+   {
+    "min": 0,
+    "max": 3,
+    "label": "Probabilidad baja",
+    "detalle": "Baja probabilidad clínica de tromboembolia pulmonar."
+   },
+   {
+    "min": 4,
+    "max": 10,
+    "label": "Probabilidad intermedia",
+    "detalle": "Probabilidad clínica intermedia de tromboembolia pulmonar."
+   },
+   {
+    "min": 11,
+    "max": null,
+    "label": "Probabilidad alta",
+    "detalle": "Alta probabilidad clínica de tromboembolia pulmonar."
+   }
+  ],
+  "nota": "Puntuación máxima teórica: 22 puntos."
+ },
  "hasbled": {
   "id": "hasbled",
   "nombre": "HAS-BLED",
@@ -619,6 +1234,657 @@
    }
   ],
   "nota": "Clasifica la gravedad clínica de la HSA; a mayor grado, mayor mortalidad."
+ },
+ "meld": {
+  "id": "meld",
+  "nombre": "MELD",
+  "nombre_largo": "MELD (hepatopatía crónica)",
+  "para": "Gravedad de la hepatopatía crónica.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "bili",
+    "label": "Bilirrubina",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   },
+   {
+    "id": "inr",
+    "label": "INR",
+    "tipo": "numero",
+    "unidad": ""
+   },
+   {
+    "id": "cr",
+    "label": "Creatinina",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   }
+  ],
+  "formula": "Math.round(3.78*Math.log(Math.max(bili,1))+11.2*Math.log(Math.max(inr,1))+9.57*Math.log(Math.max(cr,1))+6.43)",
+  "unidad_resultado": "",
+  "decimales": 0,
+  "interpretacion": [
+   {
+    "min": -50,
+    "max": 9,
+    "label": "≤ 9",
+    "detalle": "Mortalidad a 3 meses ~1,9%."
+   },
+   {
+    "min": 10,
+    "max": 19,
+    "label": "10-19",
+    "detalle": "Mortalidad ~6-20%."
+   },
+   {
+    "min": 20,
+    "max": 29,
+    "label": "20-29",
+    "detalle": "Mortalidad ~20-50%."
+   },
+   {
+    "min": 30,
+    "max": null,
+    "label": "≥ 30",
+    "detalle": "Mortalidad > 50%."
+   }
+  ],
+  "nota": "Valores mínimos de 1 para bili/INR/Cr; Cr máx 4. Fuente: MDCalc."
+ },
+ "na_corr_glu": {
+  "id": "na_corr_glu",
+  "nombre": "Na⁺ corregido (glucosa)",
+  "nombre_largo": "Sodio corregido por hiperglucemia",
+  "para": "Corrige el sodio según la glucemia.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "na",
+    "label": "Sodio medido (Na⁺)",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "glu",
+    "label": "Glucosa",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   }
+  ],
+  "formula": "na + 1.6*((glu-100)/100)",
+  "unidad_resultado": "mEq/L",
+  "decimales": 1,
+  "interpretacion": [
+   {
+    "min": 135,
+    "max": 145,
+    "label": "Normal",
+    "detalle": "Na corregido normal (135-145)."
+   },
+   {
+    "min": 145.0001,
+    "max": null,
+    "label": "Hipernatremia",
+    "detalle": "Na corregido elevado."
+   },
+   {
+    "min": -50,
+    "max": 134.999,
+    "label": "Hiponatremia",
+    "detalle": "Na corregido bajo (hiponatremia verdadera)."
+   }
+  ],
+  "nota": "Factor 1,6 mEq/L por cada 100 mg/dL de glucosa > 100. Fuente: MDCalc."
+ },
+ "nihss": {
+  "id": "nihss",
+  "nombre": "NIHSS",
+  "nombre_largo": "Escala de Ictus del National Institutes of Health",
+  "para": "Gravedad del ictus (déficit neurológico).",
+  "tipo": "suma",
+  "items": [
+   {
+    "id": "1a",
+    "label": "1a. Nivel de consciencia",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Alerta",
+      "puntos": 0
+     },
+     {
+      "label": "Somnoliento (despierta con estímulos menores)",
+      "puntos": 1
+     },
+     {
+      "label": "Obnubilado (requiere estímulos repetidos o dolorosos)",
+      "puntos": 2
+     },
+     {
+      "label": "Coma (sin respuesta o solo reflejos)",
+      "puntos": 3
+     }
+    ]
+   },
+   {
+    "id": "1b",
+    "label": "1b. Preguntas (mes y edad)",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Responde ambas correctamente",
+      "puntos": 0
+     },
+     {
+      "label": "Responde una correctamente",
+      "puntos": 1
+     },
+     {
+      "label": "No responde ninguna correctamente",
+      "puntos": 2
+     }
+    ]
+   },
+   {
+    "id": "1c",
+    "label": "1c. Órdenes (abrir/cerrar ojos y mano)",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Realiza ambas órdenes correctamente",
+      "puntos": 0
+     },
+     {
+      "label": "Realiza una orden correctamente",
+      "puntos": 1
+     },
+     {
+      "label": "No realiza ninguna orden",
+      "puntos": 2
+     }
+    ]
+   },
+   {
+    "id": "2",
+    "label": "2. Mirada conjugada",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Normal",
+      "puntos": 0
+     },
+     {
+      "label": "Paresia parcial de la mirada",
+      "puntos": 1
+     },
+     {
+      "label": "Desviación forzada o paresia total de la mirada",
+      "puntos": 2
+     }
+    ]
+   },
+   {
+    "id": "3",
+    "label": "3. Campos visuales",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Sin déficit campimétrico",
+      "puntos": 0
+     },
+     {
+      "label": "Hemianopsia parcial",
+      "puntos": 1
+     },
+     {
+      "label": "Hemianopsia completa",
+      "puntos": 2
+     },
+     {
+      "label": "Hemianopsia bilateral (ceguera cortical)",
+      "puntos": 3
+     }
+    ]
+   },
+   {
+    "id": "4",
+    "label": "4. Paresia facial",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Movimientos normales y simétricos",
+      "puntos": 0
+     },
+     {
+      "label": "Paresia leve (borramiento surco nasogeniano)",
+      "puntos": 1
+     },
+     {
+      "label": "Parálisis parcial (zona inferior de la cara)",
+      "puntos": 2
+     },
+     {
+      "label": "Parálisis completa (zonas superior e inferior)",
+      "puntos": 3
+     }
+    ]
+   },
+   {
+    "id": "5a",
+    "label": "5a. Motor brazo izquierdo",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "No claudica (mantiene 10 s)",
+      "puntos": 0
+     },
+     {
+      "label": "Claudica antes de 10 s sin tocar la cama",
+      "puntos": 1
+     },
+     {
+      "label": "Cierto esfuerzo contra gravedad, cae a la cama",
+      "puntos": 2
+     },
+     {
+      "label": "No vence la gravedad, cae inmediatamente",
+      "puntos": 3
+     },
+     {
+      "label": "Ningún movimiento",
+      "puntos": 4
+     }
+    ]
+   },
+   {
+    "id": "5b",
+    "label": "5b. Motor brazo derecho",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "No claudica (mantiene 10 s)",
+      "puntos": 0
+     },
+     {
+      "label": "Claudica antes de 10 s sin tocar la cama",
+      "puntos": 1
+     },
+     {
+      "label": "Cierto esfuerzo contra gravedad, cae a la cama",
+      "puntos": 2
+     },
+     {
+      "label": "No vence la gravedad, cae inmediatamente",
+      "puntos": 3
+     },
+     {
+      "label": "Ningún movimiento",
+      "puntos": 4
+     }
+    ]
+   },
+   {
+    "id": "6a",
+    "label": "6a. Motor pierna izquierda",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "No claudica (mantiene 5 s)",
+      "puntos": 0
+     },
+     {
+      "label": "Claudica antes de 5 s sin tocar la cama",
+      "puntos": 1
+     },
+     {
+      "label": "Cierto esfuerzo contra gravedad, cae a la cama",
+      "puntos": 2
+     },
+     {
+      "label": "No vence la gravedad, cae inmediatamente",
+      "puntos": 3
+     },
+     {
+      "label": "Ningún movimiento",
+      "puntos": 4
+     }
+    ]
+   },
+   {
+    "id": "6b",
+    "label": "6b. Motor pierna derecha",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "No claudica (mantiene 5 s)",
+      "puntos": 0
+     },
+     {
+      "label": "Claudica antes de 5 s sin tocar la cama",
+      "puntos": 1
+     },
+     {
+      "label": "Cierto esfuerzo contra gravedad, cae a la cama",
+      "puntos": 2
+     },
+     {
+      "label": "No vence la gravedad, cae inmediatamente",
+      "puntos": 3
+     },
+     {
+      "label": "Ningún movimiento",
+      "puntos": 4
+     }
+    ]
+   },
+   {
+    "id": "7",
+    "label": "7. Ataxia de miembros",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Ausente",
+      "puntos": 0
+     },
+     {
+      "label": "Presente en una extremidad",
+      "puntos": 1
+     },
+     {
+      "label": "Presente en dos extremidades",
+      "puntos": 2
+     }
+    ]
+   },
+   {
+    "id": "8",
+    "label": "8. Sensibilidad",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Normal",
+      "puntos": 0
+     },
+     {
+      "label": "Hipoestesia leve-moderada",
+      "puntos": 1
+     },
+     {
+      "label": "Anestesia grave o total",
+      "puntos": 2
+     }
+    ]
+   },
+   {
+    "id": "9",
+    "label": "9. Lenguaje",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Normal, sin afasia",
+      "puntos": 0
+     },
+     {
+      "label": "Afasia leve-moderada",
+      "puntos": 1
+     },
+     {
+      "label": "Afasia grave",
+      "puntos": 2
+     },
+     {
+      "label": "Mutismo o afasia global",
+      "puntos": 3
+     }
+    ]
+   },
+   {
+    "id": "10",
+    "label": "10. Disartria",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Articulación normal",
+      "puntos": 0
+     },
+     {
+      "label": "Disartria leve-moderada",
+      "puntos": 1
+     },
+     {
+      "label": "Disartria grave (ininteligible) o mutismo",
+      "puntos": 2
+     }
+    ]
+   },
+   {
+    "id": "11",
+    "label": "11. Extinción / inatención",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Sin anomalías",
+      "puntos": 0
+     },
+     {
+      "label": "Inatención a una modalidad sensorial",
+      "puntos": 1
+     },
+     {
+      "label": "Hemi-inatención grave o a más de una modalidad",
+      "puntos": 2
+     }
+    ]
+   }
+  ],
+  "interpretacion": [
+   {
+    "min": 0,
+    "max": 0,
+    "label": "Sin déficit",
+    "detalle": "Sin déficit neurológico detectable."
+   },
+   {
+    "min": 1,
+    "max": 4,
+    "label": "Ictus leve",
+    "detalle": "Déficit neurológico leve."
+   },
+   {
+    "min": 5,
+    "max": 15,
+    "label": "Ictus moderado",
+    "detalle": "Déficit neurológico moderado."
+   },
+   {
+    "min": 16,
+    "max": 20,
+    "label": "Ictus moderado-grave",
+    "detalle": "Déficit neurológico moderado a grave."
+   },
+   {
+    "min": 21,
+    "max": null,
+    "label": "Ictus grave",
+    "detalle": "Déficit neurológico grave (máximo 42)."
+   }
+  ],
+  "nota": "Escala oficial del NIH de 15 ítems. Rango total 0-42; a mayor puntuación, mayor gravedad del déficit neurológico."
+ },
+ "osm_calc": {
+  "id": "osm_calc",
+  "nombre": "Osmolaridad calculada",
+  "nombre_largo": "Osmolaridad plasmática calculada",
+  "para": "Estima la osmolaridad plasmática.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "na",
+    "label": "Sodio (Na⁺)",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "glu",
+    "label": "Glucosa",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   },
+   {
+    "id": "bun",
+    "label": "BUN (urea/2,14)",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   }
+  ],
+  "formula": "2*na + glu/18 + bun/2.8",
+  "unidad_resultado": "mOsm/kg",
+  "decimales": 0,
+  "interpretacion": [
+   {
+    "min": 275,
+    "max": 295,
+    "label": "Normal",
+    "detalle": "275-295 mOsm/kg."
+   },
+   {
+    "min": 295.0001,
+    "max": null,
+    "label": "Elevada",
+    "detalle": "Hiperosmolaridad (hiperglucemia, hipernatremia, tóxicos)."
+   },
+   {
+    "min": -50,
+    "max": 274.999,
+    "label": "Baja",
+    "detalle": "Hipoosmolaridad (hiponatremia hipotónica)."
+   }
+  ],
+  "nota": "BUN = urea(mg/dL)/2,14. Fuente: MDCalc."
+ },
+ "osmolar_gap": {
+  "id": "osmolar_gap",
+  "nombre": "Gap osmolar",
+  "nombre_largo": "Hiato osmolar",
+  "para": "Detecta tóxicos osmóticamente activos (alcoholes).",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "osm_med",
+    "label": "Osmolaridad medida",
+    "tipo": "numero",
+    "unidad": "mOsm/kg"
+   },
+   {
+    "id": "na",
+    "label": "Sodio (Na⁺)",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "glu",
+    "label": "Glucosa",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   },
+   {
+    "id": "bun",
+    "label": "BUN",
+    "tipo": "numero",
+    "unidad": "mg/dL"
+   }
+  ],
+  "formula": "osm_med - (2*na + glu/18 + bun/2.8)",
+  "unidad_resultado": "mOsm/kg",
+  "decimales": 0,
+  "interpretacion": [
+   {
+    "min": -50,
+    "max": 10,
+    "label": "Normal",
+    "detalle": "< 10 mOsm/kg."
+   },
+   {
+    "min": 10.0001,
+    "max": null,
+    "label": "Elevado",
+    "detalle": "Sospecha de intoxicación por metanol, etilenglicol, isopropanol o etanol."
+   }
+  ],
+  "nota": "Fuente: MDCalc."
+ },
+ "pam": {
+  "id": "pam",
+  "nombre": "PAM (presión arterial media)",
+  "nombre_largo": "Presión arterial media",
+  "para": "Estima la presión de perfusión (objetivo en shock).",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "sbp",
+    "label": "TA sistólica",
+    "tipo": "numero",
+    "unidad": "mmHg"
+   },
+   {
+    "id": "dbp",
+    "label": "TA diastólica",
+    "tipo": "numero",
+    "unidad": "mmHg"
+   }
+  ],
+  "formula": "dbp + (sbp-dbp)/3",
+  "unidad_resultado": "mmHg",
+  "decimales": 0,
+  "interpretacion": [
+   {
+    "min": 65,
+    "max": null,
+    "label": "≥ 65: adecuada",
+    "detalle": "Objetivo de perfusión habitual alcanzado."
+   },
+   {
+    "min": -50,
+    "max": 64.999,
+    "label": "< 65: hipoperfusión",
+    "detalle": "Objetivo en shock/sepsis: PAM ≥ 65 mmHg."
+   }
+  ],
+  "nota": "Fuente: MDCalc."
+ },
+ "parkland": {
+  "id": "parkland",
+  "nombre": "Parkland",
+  "nombre_largo": "Fórmula de Parkland (quemados)",
+  "para": "Estima la fluidoterapia en las primeras 24 h del quemado.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "peso",
+    "label": "Peso",
+    "tipo": "numero",
+    "unidad": "kg"
+   },
+   {
+    "id": "tbsa",
+    "label": "Superficie quemada",
+    "tipo": "numero",
+    "unidad": "%"
+   }
+  ],
+  "formula": "4*peso*tbsa",
+  "unidad_resultado": "mL/24h",
+  "decimales": 0,
+  "interpretacion": [
+   {
+    "min": 0,
+    "max": null,
+    "label": "Cristaloides en 24 h",
+    "detalle": "Administrar el 50% en las primeras 8 h desde la quemadura y el 50% en las 16 h siguientes (Ringer lactato)."
+   }
+  ],
+  "nota": "Ajustar a diuresis 0,5-1 mL/kg/h. Solo % de 2.º-3.er grado. Fuente: MDCalc."
  },
  "perc": {
   "id": "perc",
@@ -734,6 +2000,51 @@
   ],
   "nota": "Cada ítem suma 1 punto; puntuación total 0-3."
  },
+ "qtc": {
+  "id": "qtc",
+  "nombre": "QTc (Bazett)",
+  "nombre_largo": "QT corregido (Bazett)",
+  "para": "Corrige el QT por la frecuencia cardiaca.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "qt",
+    "label": "Intervalo QT",
+    "tipo": "numero",
+    "unidad": "ms"
+   },
+   {
+    "id": "fc",
+    "label": "Frecuencia cardiaca",
+    "tipo": "numero",
+    "unidad": "lpm"
+   }
+  ],
+  "formula": "qt/Math.sqrt(60/fc)",
+  "unidad_resultado": "ms",
+  "decimales": 0,
+  "interpretacion": [
+   {
+    "min": -50,
+    "max": 440,
+    "label": "Normal",
+    "detalle": "≤ 440 ms (varón) / ≤ 460 ms (mujer)."
+   },
+   {
+    "min": 440.0001,
+    "max": 500,
+    "label": "Prolongado",
+    "detalle": "Riesgo aumentado; revisar fármacos e iones."
+   },
+   {
+    "min": 500.0001,
+    "max": null,
+    "label": "Muy prolongado",
+    "detalle": "Alto riesgo de torsade de pointes."
+   }
+  ],
+  "nota": "Bazett: QTc = QT/√(RR). Fuente: MDCalc."
+ },
  "ranson": {
   "id": "ranson",
   "nombre": "Ranson",
@@ -836,6 +2147,153 @@
   ],
   "nota": "Criterios de Ranson para pancreatitis aguda no biliar. Rango 0-11."
  },
+ "rass": {
+  "id": "rass",
+  "nombre": "RASS",
+  "nombre_largo": "Escala de Agitación-Sedación de Richmond (Richmond Agitation-Sedation Scale)",
+  "para": "Nivel de sedación-agitación (Richmond).",
+  "tipo": "clasificacion",
+  "clases": [
+   {
+    "label": "+4 Combativo",
+    "descripcion": "Combativo",
+    "detalle": "Abiertamente combativo o violento; peligro inmediato para el personal."
+   },
+   {
+    "label": "+3 Muy agitado",
+    "descripcion": "Muy agitado",
+    "detalle": "Tira o se arranca tubos y catéteres; agresivo con el personal."
+   },
+   {
+    "label": "+2 Agitado",
+    "descripcion": "Agitado",
+    "detalle": "Movimientos frecuentes sin propósito; lucha con el ventilador."
+   },
+   {
+    "label": "+1 Inquieto",
+    "descripcion": "Inquieto",
+    "detalle": "Ansioso o intranquilo, pero sin movimientos agresivos ni vigorosos."
+   },
+   {
+    "label": "0 Alerta y tranquilo",
+    "descripcion": "Alerta y tranquilo",
+    "detalle": "Despierto, tranquilo y sin signos de agitación."
+   },
+   {
+    "label": "-1 Somnoliento",
+    "descripcion": "Somnoliento",
+    "detalle": "No está plenamente alerta, pero despierta de forma sostenida (más de 10 s) a la voz, con contacto ocular."
+   },
+   {
+    "label": "-2 Sedación leve",
+    "descripcion": "Sedación leve",
+    "detalle": "Despierta brevemente (menos de 10 s) a la voz, con contacto ocular."
+   },
+   {
+    "label": "-3 Sedación moderada",
+    "descripcion": "Sedación moderada",
+    "detalle": "Movimiento o apertura ocular a la voz, pero sin contacto ocular."
+   },
+   {
+    "label": "-4 Sedación profunda",
+    "descripcion": "Sedación profunda",
+    "detalle": "No responde a la voz; responde solo con movimiento o apertura ocular al estímulo físico."
+   },
+   {
+    "label": "-5 No despertable",
+    "descripcion": "No despertable",
+    "detalle": "No responde ni a la voz ni al estímulo físico."
+   }
+  ],
+  "nota": "Evaluar primero observando si el paciente está alerta, inquieto o agitado (puntuaciones de 0 a +4). Si no, llamarle por su nombre y pedirle que abra los ojos y mire al explorador (puntuaciones de -1 a -3). Si no responde a la voz, estimularle físicamente, por ejemplo agitando el hombro o frotando el esternón (puntuaciones de -4 a -5)."
+ },
+ "rockall": {
+  "id": "rockall",
+  "nombre": "Rockall",
+  "nombre_largo": "Escala de Rockall clínica (pre-endoscopia)",
+  "para": "Riesgo de resangrado y mortalidad tras hemorragia digestiva alta.",
+  "tipo": "suma",
+  "items": [
+   {
+    "id": "edad",
+    "label": "Edad",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Menor de 60 años",
+      "puntos": 0
+     },
+     {
+      "label": "60-79 años",
+      "puntos": 1
+     },
+     {
+      "label": "80 años o más",
+      "puntos": 2
+     }
+    ]
+   },
+   {
+    "id": "shock",
+    "label": "Shock",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Sin shock",
+      "puntos": 0
+     },
+     {
+      "label": "Taquicardia (FC ≥ 100, TAS ≥ 100)",
+      "puntos": 1
+     },
+     {
+      "label": "Hipotensión (TAS < 100)",
+      "puntos": 2
+     }
+    ]
+   },
+   {
+    "id": "comorbilidad",
+    "label": "Comorbilidad",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Ninguna",
+      "puntos": 0
+     },
+     {
+      "label": "Cardiopatía isquémica, insuficiencia cardiaca u otra comorbilidad mayor",
+      "puntos": 2
+     },
+     {
+      "label": "Insuficiencia renal o hepática, o cáncer diseminado",
+      "puntos": 3
+     }
+    ]
+   }
+  ],
+  "interpretacion": [
+   {
+    "min": 0,
+    "max": 2,
+    "label": "Bajo riesgo",
+    "detalle": "Riesgo bajo de resangrado y mortalidad."
+   },
+   {
+    "min": 3,
+    "max": 5,
+    "label": "Riesgo intermedio",
+    "detalle": "Riesgo intermedio de resangrado y mortalidad."
+   },
+   {
+    "min": 6,
+    "max": null,
+    "label": "Alto riesgo",
+    "detalle": "Riesgo alto de resangrado y mortalidad."
+   }
+  ],
+  "nota": "Versión clínica pre-endoscopia (3 ítems: edad, shock y comorbilidad). El Rockall completo añade el diagnóstico endoscópico y los estigmas de hemorragia reciente."
+ },
  "rutherford": {
   "id": "rutherford",
   "nombre": "Rutherford",
@@ -914,6 +2372,60 @@
   ],
   "nota": "El SIRS requiere ≥ 2 de los 4 criterios. La presencia de SIRS no implica infección; debe interpretarse en el contexto clínico."
  },
+ "sodio_deficit": {
+  "id": "sodio_deficit",
+  "nombre": "Déficit de Na⁺",
+  "nombre_largo": "Déficit de sodio (hiponatremia)",
+  "para": "Estima el sodio a reponer en la hiponatremia.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "peso",
+    "label": "Peso",
+    "tipo": "numero",
+    "unidad": "kg"
+   },
+   {
+    "id": "na",
+    "label": "Sodio actual",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "objetivo",
+    "label": "Na⁺ objetivo",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "factor",
+    "label": "Agua corporal total",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Varón (0,6)",
+      "valor": 0.6
+     },
+     {
+      "label": "Mujer / anciano (0,5)",
+      "valor": 0.5
+     }
+    ]
+   }
+  ],
+  "formula": "peso*factor*(objetivo-na)",
+  "unidad_resultado": "mEq",
+  "decimales": 0,
+  "interpretacion": [
+   {
+    "min": 0,
+    "max": null,
+    "label": "Déficit de Na⁺ a reponer",
+    "detalle": "No corregir > 8-10 mEq/L en 24 h (riesgo de mielinólisis pontina)."
+   }
+  ],
+  "nota": "Objetivo prudente; reevaluar natremia con frecuencia. Fuente: MDCalc."
+ },
  "timi": {
   "id": "timi",
   "nombre": "TIMI (SCASEST)",
@@ -991,6 +2503,121 @@
    }
   ],
   "nota": "7 ítems, 1 punto cada uno; puntuación total de 0 a 7."
+ },
+ "ttkg": {
+  "id": "ttkg",
+  "nombre": "TTKG",
+  "nombre_largo": "Gradiente transtubular de potasio",
+  "para": "Valora la respuesta renal en las alteraciones del potasio.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "uk",
+    "label": "K⁺ en orina",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "pk",
+    "label": "K⁺ plasmático",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "uosm",
+    "label": "Osmolaridad urinaria",
+    "tipo": "numero",
+    "unidad": "mOsm/kg"
+   },
+   {
+    "id": "posm",
+    "label": "Osmolaridad plasmática",
+    "tipo": "numero",
+    "unidad": "mOsm/kg"
+   }
+  ],
+  "formula": "(uk/pk)/(uosm/posm)",
+  "unidad_resultado": "",
+  "decimales": 1,
+  "interpretacion": [
+   {
+    "min": -50,
+    "max": 4,
+    "label": "Bajo (<4)",
+    "detalle": "En hiperpotasemia sugiere hipoaldosteronismo; en hipopotasemia, pérdida extrarrenal (adecuado)."
+   },
+   {
+    "min": 4.0001,
+    "max": 7,
+    "label": "4-7",
+    "detalle": "Rango intermedio."
+   },
+   {
+    "min": 7.0001,
+    "max": null,
+    "label": "Alto (>7)",
+    "detalle": "En hipopotasemia sugiere pérdida renal / exceso mineralocorticoide."
+   }
+  ],
+  "nota": "Requiere Uosm > plasma y Na urinario > 25. Fuente: MDCalc."
+ },
+ "water_deficit": {
+  "id": "water_deficit",
+  "nombre": "Déficit de agua",
+  "nombre_largo": "Déficit de agua libre (hipernatremia)",
+  "para": "Estima el agua a reponer en la hipernatremia.",
+  "tipo": "formula",
+  "items": [
+   {
+    "id": "peso",
+    "label": "Peso",
+    "tipo": "numero",
+    "unidad": "kg"
+   },
+   {
+    "id": "na",
+    "label": "Sodio actual",
+    "tipo": "numero",
+    "unidad": "mEq/L"
+   },
+   {
+    "id": "factor",
+    "label": "Agua corporal total",
+    "tipo": "opciones",
+    "opciones": [
+     {
+      "label": "Varón (0,6)",
+      "valor": 0.6
+     },
+     {
+      "label": "Mujer / varón anciano (0,5)",
+      "valor": 0.5
+     },
+     {
+      "label": "Mujer anciana (0,45)",
+      "valor": 0.45
+     }
+    ]
+   }
+  ],
+  "formula": "peso*factor*((na/140)-1)",
+  "unidad_resultado": "L",
+  "decimales": 1,
+  "interpretacion": [
+   {
+    "min": -50,
+    "max": 0,
+    "label": "Sin déficit",
+    "detalle": "Na ≤ 140; no hay déficit de agua libre por este cálculo."
+   },
+   {
+    "min": 0.0001,
+    "max": null,
+    "label": "Déficit de agua libre",
+    "detalle": "Reponer en 48-72 h; no descender el Na más de 10-12 mEq/L/día."
+   }
+  ],
+  "nota": "Objetivo de Na 140. Fuente: MDCalc."
  },
  "wells_tvp": {
   "id": "wells_tvp",
@@ -1118,8 +2745,19 @@
 };
   Object.keys(DEF).forEach(function (k) { if (!S[k]) S[k] = DEF[k]; });
   var WIRE = {
+ "alvarado": [
+  "dolor_abdominal_agudo"
+ ],
+ "anion_gap": [
+  "alteraciones_del_equilibrio_acidobasico",
+  "cetoacidosis_diabetica"
+ ],
  "blatchford": [
   "hemorragia_digestiva_alta"
+ ],
+ "ca_corr": [
+  "hipocalcemia",
+  "hipercalcemia"
  ],
  "centor": [
   "dolor_faringeo_agudo"
@@ -1127,9 +2765,26 @@
  "cha2ds2vasc": [
   "fibrilacion_y_fluter_auriculares_arritmias_auriculoventricul"
  ],
+ "childpugh": [
+  "encefalopatia_hepatica_aguda",
+  "ascitis"
+ ],
+ "cockcroft": [
+  "lesion_renal_aguda",
+  "enfermedad_renal_cronica"
+ ],
  "curb65": [
   "neumonia_adquirida_en_la_comunidad",
   "neumonia_nosocomial"
+ ],
+ "delta_delta": [
+  "alteraciones_del_equilibrio_acidobasico"
+ ],
+ "fena": [
+  "lesion_renal_aguda"
+ ],
+ "feurea": [
+  "lesion_renal_aguda"
  ],
  "fisher": [
   "hemorragia_subaracnoidea_espontanea"
@@ -1138,11 +2793,41 @@
   "coma",
   "traumatismo_craneoencefalico"
  ],
+ "geneva": [
+  "tromboembolia_pulmonar"
+ ],
  "hasbled": [
   "fibrilacion_y_fluter_auriculares_arritmias_auriculoventricul"
  ],
  "hunthess": [
   "hemorragia_subaracnoidea_espontanea"
+ ],
+ "meld": [
+  "encefalopatia_hepatica_aguda",
+  "ascitis"
+ ],
+ "na_corr_glu": [
+  "descompensacion_hiperglucemica_hiperosmolar_no_cetosica",
+  "cetoacidosis_diabetica",
+  "hiponatremia"
+ ],
+ "nihss": [
+  "ictus"
+ ],
+ "osm_calc": [
+  "hipernatremia",
+  "descompensacion_hiperglucemica_hiperosmolar_no_cetosica"
+ ],
+ "osmolar_gap": [
+  "intoxicaciones_agudas_actitud_diagnostica_y_tratamiento_gene"
+ ],
+ "pam": [
+  "shock_acetaldehidico_y_otras_reacciones_similares",
+  "sepsis",
+  "emergencia_hipertensiva"
+ ],
+ "parkland": [
+  "quemaduras_termicas"
  ],
  "perc": [
   "tromboembolia_pulmonar"
@@ -1150,8 +2835,18 @@
  "qsofa": [
   "sepsis"
  ],
+ "qtc": [
+  "intoxicacion_aguda_por_antidepresivos_ciclicos",
+  "arritmias_por_alteracion_en_la_conduccion_del_impulso_enferm"
+ ],
  "ranson": [
   "pancreatitis_aguda"
+ ],
+ "rass": [
+  "analgesia_sedacion_y_relajacion_muscular_en_urgencias_secuenc"
+ ],
+ "rockall": [
+  "hemorragia_digestiva_alta"
  ],
  "rutherford": [
   "isquemia_arterial_aguda_de_las_extremidades"
@@ -1159,9 +2854,19 @@
  "sirs": [
   "sepsis"
  ],
+ "sodio_deficit": [
+  "hiponatremia"
+ ],
  "timi": [
   "dolor_toracico_agudo",
   "sindrome_coronario_agudo"
+ ],
+ "ttkg": [
+  "hiperpotasemia",
+  "hipopotasemia"
+ ],
+ "water_deficit": [
+  "hipernatremia"
  ],
  "wells_tvp": [
   "enfermedad_tromboembolica_venosa"

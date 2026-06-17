@@ -1,0 +1,78 @@
+{
+  "id": "alvarado",
+  "nombre": "Alvarado",
+  "nombre_largo": "Escala de Alvarado para apendicitis aguda",
+  "para": "Probabilidad de apendicitis aguda.",
+  "tipo": "suma",
+  "items": [
+    {
+      "id": "dolor_migratorio",
+      "label": "Dolor migratorio a fosa ilíaca derecha",
+      "tipo": "binario",
+      "puntos": 1
+    },
+    {
+      "id": "anorexia",
+      "label": "Anorexia",
+      "tipo": "binario",
+      "puntos": 1
+    },
+    {
+      "id": "nauseas_vomitos",
+      "label": "Náuseas o vómitos",
+      "tipo": "binario",
+      "puntos": 1
+    },
+    {
+      "id": "dolor_palpacion_fid",
+      "label": "Dolor a la palpación en fosa ilíaca derecha",
+      "tipo": "binario",
+      "puntos": 2
+    },
+    {
+      "id": "blumberg",
+      "label": "Blumberg (dolor de rebote)",
+      "tipo": "binario",
+      "puntos": 1
+    },
+    {
+      "id": "fiebre",
+      "label": "Temperatura > 37,3 ºC",
+      "tipo": "binario",
+      "puntos": 1
+    },
+    {
+      "id": "leucocitosis",
+      "label": "Leucocitosis > 10.000",
+      "tipo": "binario",
+      "puntos": 2
+    },
+    {
+      "id": "desviacion_izquierda",
+      "label": "Desviación izquierda (neutrofilia > 75%)",
+      "tipo": "binario",
+      "puntos": 1
+    }
+  ],
+  "interpretacion": [
+    {
+      "min": 0,
+      "max": 4,
+      "label": "Baja probabilidad",
+      "detalle": "Baja probabilidad de apendicitis aguda."
+    },
+    {
+      "min": 5,
+      "max": 6,
+      "label": "Probable (observación)",
+      "detalle": "Apendicitis probable; se recomienda observación."
+    },
+    {
+      "min": 7,
+      "max": null,
+      "label": "Alta probabilidad (valorar cirugía)",
+      "detalle": "Alta probabilidad de apendicitis aguda; valorar cirugía."
+    }
+  ],
+  "nota": "Puntuación total de 0 a 10 puntos."
+}

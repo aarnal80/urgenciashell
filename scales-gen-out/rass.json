@@ -1,0 +1,60 @@
+{
+  "id": "rass",
+  "nombre": "RASS",
+  "nombre_largo": "Escala de Agitación-Sedación de Richmond (Richmond Agitation-Sedation Scale)",
+  "para": "Nivel de sedación-agitación (Richmond).",
+  "tipo": "clasificacion",
+  "clases": [
+    {
+      "label": "+4 Combativo",
+      "descripcion": "Combativo",
+      "detalle": "Abiertamente combativo o violento; peligro inmediato para el personal."
+    },
+    {
+      "label": "+3 Muy agitado",
+      "descripcion": "Muy agitado",
+      "detalle": "Tira o se arranca tubos y catéteres; agresivo con el personal."
+    },
+    {
+      "label": "+2 Agitado",
+      "descripcion": "Agitado",
+      "detalle": "Movimientos frecuentes sin propósito; lucha con el ventilador."
+    },
+    {
+      "label": "+1 Inquieto",
+      "descripcion": "Inquieto",
+      "detalle": "Ansioso o intranquilo, pero sin movimientos agresivos ni vigorosos."
+    },
+    {
+      "label": "0 Alerta y tranquilo",
+      "descripcion": "Alerta y tranquilo",
+      "detalle": "Despierto, tranquilo y sin signos de agitación."
+    },
+    {
+      "label": "-1 Somnoliento",
+      "descripcion": "Somnoliento",
+      "detalle": "No está plenamente alerta, pero despierta de forma sostenida (más de 10 s) a la voz, con contacto ocular."
+    },
+    {
+      "label": "-2 Sedación leve",
+      "descripcion": "Sedación leve",
+      "detalle": "Despierta brevemente (menos de 10 s) a la voz, con contacto ocular."
+    },
+    {
+      "label": "-3 Sedación moderada",
+      "descripcion": "Sedación moderada",
+      "detalle": "Movimiento o apertura ocular a la voz, pero sin contacto ocular."
+    },
+    {
+      "label": "-4 Sedación profunda",
+      "descripcion": "Sedación profunda",
+      "detalle": "No responde a la voz; responde solo con movimiento o apertura ocular al estímulo físico."
+    },
+    {
+      "label": "-5 No despertable",
+      "descripcion": "No despertable",
+      "detalle": "No responde ni a la voz ni al estímulo físico."
+    }
+  ],
+  "nota": "Evaluar primero observando si el paciente está alerta, inquieto o agitado (puntuaciones de 0 a +4). Si no, llamarle por su nombre y pedirle que abra los ojos y mire al explorador (puntuaciones de -1 a -3). Si no responde a la voz, estimularle físicamente, por ejemplo agitando el hombro o frotando el esternón (puntuaciones de -4 a -5)."
+}
