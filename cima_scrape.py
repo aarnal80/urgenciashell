@@ -53,19 +53,35 @@ def fetch(url, tries=3):
             if i == tries - 1: raise
             time.sleep(0.6)
 
-def find_med(drug_id):
-    """Busca un medicamento cuyo nombre empiece por el principio activo COMPLETO.
-    Match estricto por frase completa (sin caer a la primera palabra: evita cazar
-    sales equivocadas, p. ej. 'sulfato ferroso' -> 'SULFATO DE BARIO')."""
-    phrase = drug_id.replace("_", " ")
-    url = "https://cima.aemps.es/cima/rest/medicamentos?nombre=" + urllib.parse.quote(phrase) + "&pagina=1"
+# Sales/aniones/genéricos que NO sirven como primera palabra para identificar el principio activo
+SALT_GENERIC = set("sulfato acetato cloruro fosfato citrato gluconato lactato bicarbonato hidroxido "
+                   "oxido carbonato bromuro yoduro ioduro nitrato tartrato maleato succinato mesilato "
+                   "besilato clorhidrato hidrocloruro pidolato acido alcohol agua aceite suero solucion "
+                   "complejo concentrado extracto gas oxigeno asociacion".split())
+
+def _search_startswith(prefix):
+    url = "https://cima.aemps.es/cima/rest/medicamentos?nombre=" + urllib.parse.quote(prefix) + "&pagina=1"
     try:
         d = json.loads(fetch(url))
     except Exception:
         return None
     for r in d.get("resultados", []):
-        if simple_norm(r.get("nombre", "")).startswith(phrase):
+        if simple_norm(r.get("nombre", "")).startswith(prefix):
             return r
+    return None
+
+def find_med(drug_id):
+    """1) Match estricto por frase completa del principio activo.
+    2) Si falla, fallback a la PRIMERA palabra solo si es un principio activo
+       específico (>=6 letras y no una sal/genérico) -> recupera variantes de sal
+       (p. ej. 'metamizol magnesico') sin cazar sales equivocadas ('sulfato ...')."""
+    phrase = drug_id.replace("_", " ")
+    r = _search_startswith(phrase)
+    if r:
+        return r
+    w0 = drug_id.split("_")[0]
+    if len(w0) >= 6 and w0 not in SALT_GENERIC and w0 != phrase:
+        return _search_startswith(w0)
     return None
 
 def clean_html(h):

@@ -1,0 +1,45 @@
+{
+ "drug_id": "clotrimazol_ovulo_vaginal",
+ "presentacion": "CLOTRIMAZOL CANESMED 10 mg/g CREMA EFG",
+ "nregistro": "62221",
+ "fuente": "Ficha técnica AEMPS/CIMA",
+ "fecha_consulta": "2026-06-17",
+ "secciones": [
+  {
+   "id": "4.2",
+   "titulo": "Posología y forma de administración",
+   "html": "<div>\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\">&#xa0;</span></p>\r\n  </div>",
+   "vacia": true
+  },
+  {
+   "id": "4.3",
+   "titulo": "Contraindicaciones",
+   "html": "<div>\r\n    <p style=\"margin:0pt; line-height:115%; font-size:11pt\"><span style=\"font-family:Times New Roman; font-size:11pt\">Hipersensibilidad al clotrimazol, a cualquier otro antimicótico del grupo de los imidazoles o a alguno de los excipientes, incluídos en la sección 6.1.</span></p>\r\n  </div>",
+   "vacia": false
+  },
+  {
+   "id": "4.5",
+   "titulo": "Interacción con otros medicamentos y otras formas de interacción",
+   "html": "<div>\r\n    <p style=\"margin:0pt; line-height:115%; font-size:11pt\"><span style=\"font-family:Times New Roman; font-size:11pt\">No se han descrito.</span></p>\r\n  </div>",
+   "vacia": false
+  },
+  {
+   "id": "4.6",
+   "titulo": "Fertilidad, embarazo y lactancia",
+   "html": "<div>\r\n    <p style=\"margin:0pt; line-height:115%; font-size:11pt\"><span style=\"font-family:Times New Roman; font-size:11pt\">&#xa0;</span></p>\r\n  </div>",
+   "vacia": true
+  },
+  {
+   "id": "4.8",
+   "titulo": "Reacciones adversas",
+   "html": "<div>\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\">Las siguientes reacciones adversas han sido identificadas durante el uso posterior a la aprobación de clotrimazol. Debido a que estas reacciones son reportados voluntariamente por una población de tamaño incierto, no puede estimarse su frecuencia a partir de los datos disponibles.</span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\"> </span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><em><span style=\"font-family:Times New Roman; font-size:11pt;\">Trastornos del sistema inmunológico:</span></em></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\">Angioedema, reacción anafiláctica, hipersensibilidad.</span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\"> </span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><em><span style=\"font-family:Times New Roman; font-size:11pt;\">Trastornos vasculares:</span></em></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\">Síncope, hipotensión.</span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\"> </span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><em><span style=\"font-family:Times New Roman; font-size:11pt;\">Trastornos del sistema respiratorio, torácico y mediastínico:</span></em></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\">Disnea.</span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\"> </span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><em><span style=\"font-family:Times New Roman; font-size:11pt;\">Trastornos de la piel y del tejido subcutáneo:</span></em></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\">Ampollas, dermatitis de contacto, eritema, parestesia, prurito, urticaria, sensación de quemazón/picazón cutánea, exfoliación y erupción cutánea.</span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\"> </span></p>\r\n\r\n    <p style=\"margin:0.05pt 6.5pt 0pt 0pt; widows:0; orphans:0\"><em><span style=\"font-family:Times New Roman; font-size:11pt;\">Trastornos generales y en el lugar de la aplicación:</span></em></p>\r\n\r\n    <p style=\"margin:0.05pt 6.5pt 0pt 0pt; widows:0; orphans:0\"><span style=\"font-family:Times New Roman; font-size:11pt\">Irritación del lugar de aplicación, reacción en el lugar de aplicación, edema, dolor.</span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\"> </span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\">Estos síntomas no suelen determinar la supresión del tratamiento y son más frecuentes durante los primeros días del mismo.</span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\"> </span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify; line-height:11pt\"><strong><span style=\"font-family:Times New Roman; font-size:11pt;\">Notificación de sospechas de reacciones adversas:</span></strong></p>\r\n\r\n    <p style=\"margin:0pt; line-height:115%; font-size:11pt\"><span style=\"font-family:Times New Roman; font-size:11pt\">Es importante notificar sospechas de reacciones adversas al medicamento tras su autorización. Ello permite una supervisión continuada de la relación beneficio/riesgo del medicamento. Se invita a los profesionales sanitarios a notificar las sospechas de reacciones adversas a través del Sistema Español de Farmacovigilancia de Medicamentos de Uso Humano:</span> <a href=\"https://www.notificaram.es\"><u><span style=\"font-family:Times New Roman; font-size:11pt; color:#0000ff\">https://www.notificaram.es</span></u></a></p>\r\n  </div>",
+   "vacia": false
+  },
+  {
+   "id": "4.9",
+   "titulo": "Sobredosis",
+   "html": "<div>\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\">No se prev&#233; riesgo de intoxicaci&#243;n aguda ya que es improbable que se produzca una sobredosis tras una sola aplicaci&#243;n t&#243;pica (aplicaci&#243;n sobre una gran superficie en condiciones favorables para la absorci&#243;n) o tras la ingesti&#243;n oral inadvertida. No existe un ant&#237;doto espec&#237;fico.</span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\">&#xa0;</span></p>\r\n\r\n    <p style=\"margin:0pt; text-align:justify\"><span style=\"font-family:Times New Roman; font-size:11pt\">Una ingesti&#243;n accidental puede provocar molestias gastrointestinales y/o v&#243;mitos.</span></p>\r\n\r\n    <p style=\"margin:0pt; line-height:115%; font-size:11pt\"><span style=\"font-family:Times New Roman; font-size:11pt\">Una administraci&#243;n accidental en los ojos puede causar quemaz&#243;n e irritaci&#243;n ocular sin gravedad, en ese caso enjuagar los ojos con abundante cantidad de agua.</span></p>\r\n  </div>",
+   "vacia": false
+  }
+ ]
+}

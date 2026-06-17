@@ -60,6 +60,11 @@ window.DRUGS = {
     "nregistro": "80831",
     "fecha": "2026-06-17"
   },
+  "adrenalina_infusion": {
+    "presentacion": "ADRENALINA AGUETTANT 0,1 MG/ML SOLUCION INYECTABLE EN JERINGA PRECARGADA",
+    "nregistro": "80831",
+    "fecha": "2026-06-17"
+  },
   "agua": {
     "presentacion": "AGUA DEL CARMEN SOLUCIÓN ORAL",
     "nregistro": "27454",
@@ -145,9 +150,24 @@ window.DRUGS = {
     "nregistro": "65679",
     "fecha": "2026-06-17"
   },
+  "amoxicilina_clavulanico": {
+    "presentacion": "AMOXICILINA / ACIDO CLAVULANICO SANDOZ 250 mg/62,5 mg/5 ml POLVO PARA SUSPENSION ORAL EFG",
+    "nregistro": "62800",
+    "fecha": "2026-06-17"
+  },
   "ampicilina": {
     "presentacion": "AMPICILINA ANTIBIOTICE 1 G POLVO PARA SOLUCIÓN INYECTABLE Y PARA PERFUSIÓN EFG",
     "nregistro": "89095",
+    "fecha": "2026-06-17"
+  },
+  "ampicilina_sulbactam": {
+    "presentacion": "AMPICILINA ANTIBIOTICE 1 G POLVO PARA SOLUCIÓN INYECTABLE Y PARA PERFUSIÓN EFG",
+    "nregistro": "89095",
+    "fecha": "2026-06-17"
+  },
+  "anestesia_local": {
+    "presentacion": "ANESTESIA TOPICA B. BRAUN 10 mg/ml SOLUCION",
+    "nregistro": "15371",
     "fecha": "2026-06-17"
   },
   "anidulafungina": {
@@ -285,6 +305,11 @@ window.DRUGS = {
     "nregistro": "62620",
     "fecha": "2026-06-17"
   },
+  "carbon_activado": {
+    "presentacion": "CARBON ULTRA ADSORBENTE LAINCO 125 mg/ml GRANULADO PARA SUSPENSIÓN ORAL",
+    "nregistro": "61645",
+    "fecha": "2026-06-17"
+  },
   "carbonato_calcico": {
     "presentacion": "CARBONATO CALCICO/COLECALCIFEROL CINFA 1500 mg/400 U.I. COMPRIMIDOS MASTICABLES EFG",
     "nregistro": "72175",
@@ -345,12 +370,22 @@ window.DRUGS = {
     "nregistro": "67007",
     "fecha": "2026-06-17"
   },
+  "ceftazidima_avibactam": {
+    "presentacion": "CEFTAZIDIMA NORMON 1 g POLVO Y DISOLVENTE PARA SOLUCION INYECTABLE EFG",
+    "nregistro": "67007",
+    "fecha": "2026-06-17"
+  },
   "ceftriaxona": {
     "presentacion": "CEFTRIAXONA NORMON 1000 MG POLVO Y DISOLVENTE PARA SOLUCIÓN INYECTABLE Y PARA PERFUSION EFG",
     "nregistro": "62635",
     "fecha": "2026-06-17"
   },
   "cefuroxima": {
+    "presentacion": "CEFUROXIMA CINFA 250 mg COMPRIMIDOS RECUBIERTOS CON PELICULA EFG",
+    "nregistro": "72258",
+    "fecha": "2026-06-17"
+  },
+  "cefuroxima_axetilo": {
     "presentacion": "CEFUROXIMA CINFA 250 mg COMPRIMIDOS RECUBIERTOS CON PELICULA EFG",
     "nregistro": "72258",
     "fecha": "2026-06-17"
@@ -380,6 +415,11 @@ window.DRUGS = {
     "nregistro": "62768",
     "fecha": "2026-06-17"
   },
+  "ciprofloxacino_otico": {
+    "presentacion": "CIPROFLOXACINO CINFA 250 MG COMPRIMIDOS RECUBIERTOS EFG",
+    "nregistro": "62768",
+    "fecha": "2026-06-17"
+  },
   "cisatracurio": {
     "presentacion": "CISATRACURIO NORMON 2 mg/ml SOLUCION INYECTABLE Y PARA PERFUSION EFG",
     "nregistro": "76000",
@@ -400,6 +440,16 @@ window.DRUGS = {
     "nregistro": "63667",
     "fecha": "2026-06-17"
   },
+  "clindamicina_ovulos_vaginales": {
+    "presentacion": "CLINDAMICINA NORMON 300 mg/2 ml SOLUCION INYECTABLE EFG",
+    "nregistro": "63667",
+    "fecha": "2026-06-17"
+  },
+  "clindamicina_vaginal": {
+    "presentacion": "CLINDAMICINA NORMON 300 mg/2 ml SOLUCION INYECTABLE EFG",
+    "nregistro": "63667",
+    "fecha": "2026-06-17"
+  },
   "clonazepam": {
     "presentacion": "CLONAZEPAM BIOMED 2 MG COMPRIMIDOS EFG",
     "nregistro": "79769",
@@ -415,12 +465,32 @@ window.DRUGS = {
     "nregistro": "71622",
     "fecha": "2026-06-16"
   },
+  "clorazepato_dipotasico": {
+    "presentacion": "CLORAZEPATO NORMON 10 mg CAPSULAS DURAS EFG",
+    "nregistro": "74362",
+    "fecha": "2026-06-17"
+  },
+  "clorhexidina_ovulos_vaginales": {
+    "presentacion": "CLORHEXIDINA/BENZOCAINA/ENOXOLONA SANDOZ CARE COMPRIMIDOS PARA CHUPAR SABOR MIEL-LIMON",
+    "nregistro": "80113",
+    "fecha": "2026-06-17"
+  },
   "clortalidona": {
     "presentacion": "CLORTALIDONA GLENMARK 12,5 MG COMPRIMIDOS",
     "nregistro": "89953",
     "fecha": "2026-06-17"
   },
   "clotrimazol": {
+    "presentacion": "CLOTRIMAZOL CANESMED 10 mg/g CREMA EFG",
+    "nregistro": "62221",
+    "fecha": "2026-06-17"
+  },
+  "clotrimazol_ovulo_vaginal": {
+    "presentacion": "CLOTRIMAZOL CANESMED 10 mg/g CREMA EFG",
+    "nregistro": "62221",
+    "fecha": "2026-06-17"
+  },
+  "clotrimazol_vaginal": {
     "presentacion": "CLOTRIMAZOL CANESMED 10 mg/g CREMA EFG",
     "nregistro": "62221",
     "fecha": "2026-06-17"
@@ -496,6 +566,11 @@ window.DRUGS = {
     "fecha": "2026-06-17"
   },
   "dexketoprofeno": {
+    "presentacion": "DEXKETOPROFENO CINFA 12,5 MG COMPRIMIDOS RECUBIERTOS CON PELICULA EFG",
+    "nregistro": "77840",
+    "fecha": "2026-06-17"
+  },
+  "dexketoprofeno_trometamol": {
     "presentacion": "DEXKETOPROFENO CINFA 12,5 MG COMPRIMIDOS RECUBIERTOS CON PELICULA EFG",
     "nregistro": "77840",
     "fecha": "2026-06-17"
@@ -665,6 +740,16 @@ window.DRUGS = {
     "nregistro": "81033",
     "fecha": "2026-06-17"
   },
+  "estradiol_anillo_vaginal": {
+    "presentacion": "ESTRADIOL MERIESTRA 2 MG COMPRIMIDOS RECUBIERTOS CON PELICULA EFG",
+    "nregistro": "82115",
+    "fecha": "2026-06-17"
+  },
+  "estradiol_ovulos_vaginales": {
+    "presentacion": "ESTRADIOL MERIESTRA 2 MG COMPRIMIDOS RECUBIERTOS CON PELICULA EFG",
+    "nregistro": "82115",
+    "fecha": "2026-06-17"
+  },
   "etomidato": {
     "presentacion": "ETOMIDATO -LIPURO 2 mg/ml EMULSION INYECTABLE",
     "nregistro": "64095",
@@ -693,6 +778,11 @@ window.DRUGS = {
   "fenilefrina": {
     "presentacion": "FENILEFRINA AGUETTANT 100 MICROGRAMOS/ML SOLUCION INYECTABLE Y PARA PERFUSION",
     "nregistro": "85084",
+    "fecha": "2026-06-17"
+  },
+  "fenitoina_sodica": {
+    "presentacion": "FENITOINA ACCORD 50 MG/ML SOLUCION INYECTABLE",
+    "nregistro": "65303",
     "fecha": "2026-06-17"
   },
   "fentanilo": {
@@ -780,7 +870,17 @@ window.DRUGS = {
     "nregistro": "80903",
     "fecha": "2026-06-17"
   },
+  "fosfomicina_trometamol": {
+    "presentacion": "FOSFOMICINA ABAMED 3G GRANULADO PARA SOLUCION ORAL EN SOBRES EFG",
+    "nregistro": "80903",
+    "fecha": "2026-06-17"
+  },
   "furosemida": {
+    "presentacion": "FUROSEMIDA BEXAL 40 mg COMPRIMIDOS EFG",
+    "nregistro": "68078",
+    "fecha": "2026-06-17"
+  },
+  "furosemida_u_otros": {
     "presentacion": "FUROSEMIDA BEXAL 40 mg COMPRIMIDOS EFG",
     "nregistro": "68078",
     "fecha": "2026-06-17"
@@ -800,12 +900,27 @@ window.DRUGS = {
     "nregistro": "63854",
     "fecha": "2026-06-17"
   },
+  "gliclazida_mr": {
+    "presentacion": "GLICLAZIDA CINFA 30 MG COMPRIMIDOS DE LIBERACION MODIFICADA EFG",
+    "nregistro": "78439",
+    "fecha": "2026-06-17"
+  },
   "glimepirida": {
     "presentacion": "GLIMEPIRIDA CINFA 2 mg COMPRIMIDOS EFG",
     "nregistro": "67512",
     "fecha": "2026-06-17"
   },
   "glucosa": {
+    "presentacion": "GLUCOSA PHYSAN 10% SOLUCION PARA PERFUSION",
+    "nregistro": "67796",
+    "fecha": "2026-06-17"
+  },
+  "glucosa_hipertonica": {
+    "presentacion": "GLUCOSA PHYSAN 10% SOLUCION PARA PERFUSION",
+    "nregistro": "67796",
+    "fecha": "2026-06-17"
+  },
+  "glucosa_pura": {
     "presentacion": "GLUCOSA PHYSAN 10% SOLUCION PARA PERFUSION",
     "nregistro": "67796",
     "fecha": "2026-06-17"
@@ -833,6 +948,11 @@ window.DRUGS = {
   "haloperidol": {
     "presentacion": "HALOPERIDOL ESTEVE 10 mg COMPRIMIDOS",
     "nregistro": "58343",
+    "fecha": "2026-06-17"
+  },
+  "heparina_bajo_peso": {
+    "presentacion": "HEPARINA SODICA ROVI 1000 UI/ml SOLUCIÓN INYECTABLE",
+    "nregistro": "58691",
     "fecha": "2026-06-17"
   },
   "heparina_sodica": {
@@ -880,6 +1000,26 @@ window.DRUGS = {
     "nregistro": "84370",
     "fecha": "2026-06-17"
   },
+  "inmunoglobulina_antirrabica": {
+    "presentacion": "INMUNOGLOBULINA HUMANA OCTAPHARMA 100 MG/ML SOLUCION PARA PERFUSION",
+    "nregistro": "84370",
+    "fecha": "2026-06-17"
+  },
+  "inmunoglobulina_antitetanica": {
+    "presentacion": "INMUNOGLOBULINA HUMANA OCTAPHARMA 100 MG/ML SOLUCION PARA PERFUSION",
+    "nregistro": "84370",
+    "fecha": "2026-06-17"
+  },
+  "inmunoglobulina_botulinica_humana": {
+    "presentacion": "INMUNOGLOBULINA HUMANA OCTAPHARMA 100 MG/ML SOLUCION PARA PERFUSION",
+    "nregistro": "84370",
+    "fecha": "2026-06-17"
+  },
+  "inmunoglobulina_f": {
+    "presentacion": "INMUNOGLOBULINA HUMANA OCTAPHARMA 100 MG/ML SOLUCION PARA PERFUSION",
+    "nregistro": "84370",
+    "fecha": "2026-06-17"
+  },
   "inmunoglobulina_humana": {
     "presentacion": "INMUNOGLOBULINA HUMANA OCTAPHARMA 100 MG/ML SOLUCION PARA PERFUSION",
     "nregistro": "84370",
@@ -898,6 +1038,11 @@ window.DRUGS = {
   "ivabradina": {
     "presentacion": "IVABRADINA CINFA 5 MG COMPRIMIDOS RECUBIERTOS CON PELICULA EFG",
     "nregistro": "81279",
+    "fecha": "2026-06-17"
+  },
+  "jarabe_ipecacuana": {
+    "presentacion": "JARABE DEL DR MANCEAU",
+    "nregistro": "43225",
     "fecha": "2026-06-17"
   },
   "ketoprofeno": {
@@ -956,6 +1101,11 @@ window.DRUGS = {
     "fecha": "2026-06-17"
   },
   "lidocaina": {
+    "presentacion": "LIDOCAINA/ADRENALINA NORMOGEN 20 MG/ML + 0,0125 MG/ML SOLUCION INYECTABLE EFG",
+    "nregistro": "89517",
+    "fecha": "2026-06-17"
+  },
+  "lidocaina_viscosa": {
     "presentacion": "LIDOCAINA/ADRENALINA NORMOGEN 20 MG/ML + 0,0125 MG/ML SOLUCION INYECTABLE EFG",
     "nregistro": "89517",
     "fecha": "2026-06-17"
@@ -1020,6 +1170,16 @@ window.DRUGS = {
     "nregistro": "68116",
     "fecha": "2026-06-17"
   },
+  "metamizol_magnesico": {
+    "presentacion": "METAMIZOL CINFA 575 mg CAPSULAS DURAS EFG",
+    "nregistro": "68116",
+    "fecha": "2026-06-17"
+  },
+  "metamizol_sodico": {
+    "presentacion": "METAMIZOL CINFA 575 mg CAPSULAS DURAS EFG",
+    "nregistro": "68116",
+    "fecha": "2026-06-17"
+  },
   "metformina": {
     "presentacion": "METFORMINA CINFA 850 mg COMPRIMIDOS RECUBIERTOS CON PELICULA EFG",
     "nregistro": "68167",
@@ -1060,6 +1220,11 @@ window.DRUGS = {
     "nregistro": "63936",
     "fecha": "2026-06-17"
   },
+  "midazolam_bucal": {
+    "presentacion": "MIDAZOLAM NORMON 1 MG/ML SOLUCIÓN INYECTABLE Y PARA PERFUSIÓN EFG",
+    "nregistro": "63936",
+    "fecha": "2026-06-17"
+  },
   "milrinona": {
     "presentacion": "MILRINONA LORIEN 1 MG/ML SOLUCION INYECTABLE Y PARA PERFUSION EFG",
     "nregistro": "91153",
@@ -1091,6 +1256,11 @@ window.DRUGS = {
     "fecha": "2026-06-16"
   },
   "naloxona": {
+    "presentacion": "NALOXONA ACCORD 0,4 MG /ML SOLUCION INYECTABLE Y PARA PERFUSION EN JERINGA PRECARGADA",
+    "nregistro": "88941",
+    "fecha": "2026-06-17"
+  },
+  "naloxona_infusion": {
     "presentacion": "NALOXONA ACCORD 0,4 MG /ML SOLUCION INYECTABLE Y PARA PERFUSION EN JERINGA PRECARGADA",
     "nregistro": "88941",
     "fecha": "2026-06-17"
@@ -1185,6 +1355,11 @@ window.DRUGS = {
     "nregistro": "82918",
     "fecha": "2026-06-17"
   },
+  "pamidronato_disodico": {
+    "presentacion": "PAMIDRONATO HOSPIRA 3 mg/ml CONCENTRADO PARA SOLUCION PARA PERFUSION",
+    "nregistro": "64945",
+    "fecha": "2026-06-17"
+  },
   "pantoprazol": {
     "presentacion": "PANTOPRAZOL CINFA 20 MG COMPRIMIDOS GASTRORRESISTENTES EFG",
     "nregistro": "71118",
@@ -1210,9 +1385,24 @@ window.DRUGS = {
     "nregistro": "90357",
     "fecha": "2026-06-17"
   },
+  "piperacilina_tazobactam": {
+    "presentacion": "PIPERACILINA/TAZOBACTAM SANDOZ 2 G/0,25 G POLVO PARA SOLUCION PARA PERFUSION",
+    "nregistro": "71287",
+    "fecha": "2026-06-17"
+  },
   "pirazinamida": {
     "presentacion": "PIRAZINAMIDA PRODES 250 mg COMPRIMIDOS",
     "nregistro": "43418",
+    "fecha": "2026-06-17"
+  },
+  "plasma_fresco_congelado": {
+    "presentacion": "PLASMALG (A) 45-70 MG/ML SOLUCION PARA PERFUSION",
+    "nregistro": "88673",
+    "fecha": "2026-06-17"
+  },
+  "plasma_leucodeplecionado": {
+    "presentacion": "PLASMALG (A) 45-70 MG/ML SOLUCION PARA PERFUSION",
+    "nregistro": "88673",
     "fecha": "2026-06-17"
   },
   "prasugrel": {
@@ -1320,7 +1510,17 @@ window.DRUGS = {
     "nregistro": "91155",
     "fecha": "2026-06-17"
   },
+  "sacubitril_valsartan": {
+    "presentacion": "SACUBITRILO/VALSARTAN ALTER 24 MG/26 MG COMPRIMIDOS RECUBIERTOS CON PELICULA EFG",
+    "nregistro": "90636",
+    "fecha": "2026-06-17"
+  },
   "salbutamol": {
+    "presentacion": "SALBUTAMOL ALDO-UNION 100 microgramos/dosis SUSPENSION PARA INHALACION EN ENVASE A PRESION",
+    "nregistro": "65850",
+    "fecha": "2026-06-17"
+  },
+  "salbutamol_continuo": {
     "presentacion": "SALBUTAMOL ALDO-UNION 100 microgramos/dosis SUSPENSION PARA INHALACION EN ENVASE A PRESION",
     "nregistro": "65850",
     "fecha": "2026-06-17"
@@ -1331,6 +1531,31 @@ window.DRUGS = {
     "fecha": "2026-06-17"
   },
   "salina_fisiologica": {
+    "presentacion": "SALINA FISIOLOGICA GRIFOLS 0,9% SOLUCION PARA PERFUSION",
+    "nregistro": "34365",
+    "fecha": "2026-06-17"
+  },
+  "salina_fisiologica_alternando": {
+    "presentacion": "SALINA FISIOLOGICA GRIFOLS 0,9% SOLUCION PARA PERFUSION",
+    "nregistro": "34365",
+    "fecha": "2026-06-17"
+  },
+  "salina_fisiologica_mas": {
+    "presentacion": "SALINA FISIOLOGICA GRIFOLS 0,9% SOLUCION PARA PERFUSION",
+    "nregistro": "34365",
+    "fecha": "2026-06-17"
+  },
+  "salina_hipertonica": {
+    "presentacion": "SALINA FISIOLOGICA GRIFOLS 0,9% SOLUCION PARA PERFUSION",
+    "nregistro": "34365",
+    "fecha": "2026-06-17"
+  },
+  "salina_hipotonica": {
+    "presentacion": "SALINA FISIOLOGICA GRIFOLS 0,9% SOLUCION PARA PERFUSION",
+    "nregistro": "34365",
+    "fecha": "2026-06-17"
+  },
+  "salina_seminormal": {
     "presentacion": "SALINA FISIOLOGICA GRIFOLS 0,9% SOLUCION PARA PERFUSION",
     "nregistro": "34365",
     "fecha": "2026-06-17"
@@ -1460,6 +1685,11 @@ window.DRUGS = {
     "nregistro": "77153",
     "fecha": "2026-06-16"
   },
+  "tiosulfato_sodico": {
+    "presentacion": "TIOSULFATO DE SODIO HOPE 250 MG/ML SOLUCION INYECTABLE",
+    "nregistro": "83936",
+    "fecha": "2026-06-17"
+  },
   "tirofiban": {
     "presentacion": "TIROFIBAN ALTAN 50 MICROGRAMOS/ML SOLUCION PARA PERFUSION EFG",
     "nregistro": "78408",
@@ -1543,6 +1773,11 @@ window.DRUGS = {
   "vitamina_c": {
     "presentacion": "VITAMINA C BASI 100 MG/ML SOLUCION INYECTABLE",
     "nregistro": "90151",
+    "fecha": "2026-06-17"
+  },
+  "vitamina_k": {
+    "presentacion": "VITAMINA B12 ANKERMANN 1.000 MICROGRAMOS COMPRIMIDOS RECUBIERTOS",
+    "nregistro": "90484",
     "fecha": "2026-06-17"
   },
   "voriconazol": {
