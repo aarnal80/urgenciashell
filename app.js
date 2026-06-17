@@ -21,6 +21,9 @@
     escalas: '<svg ' + SVG + '><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="16" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="8" y2="18"/><line x1="12" y1="18" x2="12" y2="18"/></svg>',
     criterios: '<svg ' + SVG + '><path d="M3 21h18"/><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"/><path d="M12 7v4"/><path d="M10 9h4"/></svg>',
     conexiones: '<svg ' + SVG + '><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>',
+    ddx: '<svg ' + SVG + '><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>',
+    plan: '<svg ' + SVG + '><path d="M11 6h9"/><path d="M11 12h9"/><path d="M11 18h9"/><path d="m3 5 1.4 1.4L6.2 4"/><path d="m3 11 1.4 1.4L6.2 10"/><path d="m3 17 1.4 1.4L6.2 16"/></svg>',
+    bibliografia: '<svg ' + SVG + '><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
     pulse: '<svg ' + SVG + '><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>',
     check: '<svg ' + SVG + '><polyline points="20 6 9 17 4 12"/></svg>',
     swap: '<svg ' + SVG + '><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>',
@@ -41,6 +44,7 @@
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
+  function escA(s) { return esc(s).replace(/"/g, "&quot;"); } // escape para atributos
 
   function highlight(text, q) {
     var safe = esc(text);
@@ -113,10 +117,49 @@
 
     // Briefing
     if ((t.briefing || []).length) {
-      html += block("briefing", "Resumen", true,
+      html += block("briefing", "Resumen", false,
         '<ul class="briefing">' + t.briefing.map(function (b) {
           return "<li>" + esc(b) + "</li>";
         }).join("") + "</ul>");
+    }
+
+    // Diagnóstico diferencial (basado en WikEM): chips agrupados por urgencia;
+    // al tocar un chip se muestra su pista y el enlace al tema en el panel del grupo.
+    if ((t.ddx || []).length) {
+      html += block("ddx", "Diagnóstico diferencial", false,
+        '<div class="ddx-groups">' + t.ddx.map(function (g) {
+          return '<div class="ddx-group ddx-lvl-' + esc(g.nivel || "") + '">' +
+            '<div class="ddx-group-head">' + esc(g.grupo) + "</div>" +
+            '<div class="ddx-chips">' + (g.items || []).map(function (x) {
+              var hasTopic = x.slug && bySlug[x.slug];
+              return '<button class="ddx-chip" type="button" data-dx="' + escA(x.dx) + '"' +
+                (x.clave ? ' data-clave="' + escA(x.clave) + '"' : "") +
+                (hasTopic ? ' data-slug="' + escA(x.slug) + '"' : "") +
+                ">" + esc(x.dx) + "</button>";
+            }).join("") + "</div>" +
+            '<div class="ddx-detail" hidden></div>' +
+          "</div>";
+        }).join("") + "</div>");
+    }
+
+    // Plan de trabajo / algoritmo (qué hacer, paso a paso) — basado en WikEM + Jiménez Murillo
+    if ((t.plan || []).length) {
+      html += block("plan", "Plan de trabajo", true,
+        '<ol class="plan">' + t.plan.map(function (p) {
+          var s = '<li class="plan-step"><div class="plan-act">' + esc(p.paso) + "</div>";
+          if (p.detalle) s += '<div class="plan-det">' + esc(p.detalle) + "</div>";
+          if ((p.sub || []).length)
+            s += '<ul class="plan-sub">' + p.sub.map(function (x) {
+              var txt = typeof x === "string" ? x : (x.t || "");
+              var nivel = (x && typeof x === "object" && x.nivel) ? x.nivel : "";
+              var i = txt.indexOf("→");
+              var inner = i > 0
+                ? "<strong>" + esc(txt.slice(0, i).trim()) + "</strong> → " + esc(txt.slice(i + 1).trim())
+                : esc(txt);
+              return '<li class="' + (nivel ? "plan-lvl-" + esc(nivel) : "") + '">' + inner + "</li>";
+            }).join("") + "</ul>";
+          return s + "</li>";
+        }).join("") + "</ol>");
     }
 
     // Red flags
@@ -135,30 +178,48 @@
         if (!(key in gmap)) { gmap[key] = []; groups.push({ esc: key, items: gmap[key] }); }
         gmap[key].push(x);
       });
+      function txCard(x) {
+        var s = '<div class="tx-card" data-open="0">';
+        s += '<button class="tx-card-head" type="button"><span class="tx-head-text">';
+        if (x.preferencia === "eleccion")
+          s += '<span class="tx-pref pref-eleccion">' + ICONS.check + "De elección</span>";
+        else if (x.preferencia === "alternativa")
+          s += '<span class="tx-pref pref-alternativa">' + ICONS.swap + "Alternativa</span>";
+        s += '<span class="tx-head-main"><span class="tx-drug">' + esc(x.farmaco || "") + "</span>";
+        if (x.via) s += '<span class="tx-via">' + esc(x.via) + "</span>";
+        s += "</span>";
+        if (x.indicacion) s += '<span class="tx-ind">' + esc(x.indicacion) + "</span>";
+        s += '</span><span class="tx-chev">' + ICONS.chev + "</span></button>";
+        s += '<div class="tx-card-body">';
+        if (x.dosis) s += '<div class="tx-dose">' + esc(x.dosis) + "</div>";
+        if (x.notas) s += '<div class="tx-notes">' + esc(x.notas) + "</div>";
+        if (x.drug_id && DRUGS[x.drug_id])
+          s += '<a class="tx-ft" href="#/farmaco/' + esc(x.drug_id) + '">' + ICONS.tratamiento +
+            "Ficha técnica (AEMPS)" + ICONS.chevR + "</a>";
+        s += "</div></div>";
+        return s;
+      }
       var txHtml = groups.map(function (g) {
-        var cards = g.items.map(function (x) {
-          var s = '<div class="tx-card" data-open="0">';
-          s += '<button class="tx-card-head" type="button"><span class="tx-head-text">';
-          if (x.preferencia === "eleccion")
-            s += '<span class="tx-pref pref-eleccion">' + ICONS.check + "De elección</span>";
-          else if (x.preferencia === "alternativa")
-            s += '<span class="tx-pref pref-alternativa">' + ICONS.swap + "Alternativa</span>";
-          s += '<span class="tx-head-main"><span class="tx-drug">' + esc(x.farmaco || "") + "</span>";
-          if (x.via) s += '<span class="tx-via">' + esc(x.via) + "</span>";
-          s += "</span>";
-          if (x.indicacion) s += '<span class="tx-ind">' + esc(x.indicacion) + "</span>";
-          s += '</span><span class="tx-chev">' + ICONS.chev + "</span></button>";
-          s += '<div class="tx-card-body">';
-          if (x.dosis) s += '<div class="tx-dose">' + esc(x.dosis) + "</div>";
-          if (x.notas) s += '<div class="tx-notes">' + esc(x.notas) + "</div>";
-          if (x.drug_id && DRUGS[x.drug_id])
-            s += '<a class="tx-ft" href="#/farmaco/' + esc(x.drug_id) + '">' + ICONS.tratamiento +
-              "Ficha técnica (AEMPS)" + ICONS.chevR + "</a>";
-          s += "</div></div>";
-          return s;
-        }).join("");
-        var head = '<div class="tx-group-head">' + ICONS.pulse + "<span>" + esc(g.esc) + "</span></div>";
-        return '<div class="tx-group">' + head + cards + "</div>";
+        // Separa los de elección (siempre visibles) del resto (alternativas, plegadas).
+        var primary = [], rest = [];
+        g.items.forEach(function (x) {
+          if (x.preferencia === "eleccion") primary.push(x); else rest.push(x);
+        });
+        // Si el escenario no tiene ninguno de elección, se muestran todos.
+        if (!primary.length) { primary = g.items; rest = []; }
+
+        var hasAlts = rest.length > 0;
+        // El título del escenario actúa de desencadenante del desplegable de alternativas.
+        var head = hasAlts
+          ? '<button class="tx-group-head tx-group-toggle" type="button">' + ICONS.pulse +
+              "<span>" + esc(g.esc) + "</span>" +
+              '<span class="tx-alts-count">+' + rest.length + "</span>" +
+              '<span class="tx-chev">' + ICONS.chev + "</span></button>"
+          : '<div class="tx-group-head">' + ICONS.pulse + "<span>" + esc(g.esc) + "</span></div>";
+
+        var cards = primary.map(txCard).join("");
+        var alts = hasAlts ? '<div class="tx-alts-body">' + rest.map(txCard).join("") + "</div>" : "";
+        return '<div class="tx-group" data-open="0">' + head + cards + alts + "</div>";
       }).join("");
       html += block("tratamiento", "Tratamiento", false, '<div class="tx">' + txHtml + "</div>");
     }
@@ -197,6 +258,18 @@
             '<div class="conn-why">' + esc(c.motivo || "") + "</div></a>";
         }).join("") + "</div>");
     }
+
+    // Bibliografía (fuentes) — texto plano, al final
+    var bib = [
+      "Jiménez Murillo L, Montero Pérez FJ. <em>Medicina de Urgencias y Emergencias. Guía diagnóstica y protocolos de actuación</em>. Elsevier."
+    ];
+    if (t.wikem_titulo)
+      bib.push("WikEM. <em>" + esc(t.wikem_titulo) + "</em>. www.wikem.org");
+    var hasDrugs = (t.tratamiento || []).some(function (x) { return x.drug_id && DRUGS[x.drug_id]; });
+    if (hasDrugs)
+      bib.push("Fichas técnicas de los fármacos: Agencia Española de Medicamentos y Productos Sanitarios (AEMPS), CIMA.");
+    html += block("bibliografia", "Bibliografía", false,
+      '<ul class="bib">' + bib.map(function (b) { return "<li>" + b + "</li>"; }).join("") + "</ul>");
 
     $topic.innerHTML = (navCount > 0 ? backBtn() : "") + html;
     document.title = t.title + " — Vital Assist";
@@ -421,10 +494,37 @@
     var chip = e.target.closest(".scale-chip");
     if (chip) { openScale(chip.getAttribute("data-scale")); return; }
 
+    var gt = e.target.closest(".tx-group-toggle");
+    if (gt) {
+      var grp = gt.closest(".tx-group");
+      grp.setAttribute("data-open", grp.getAttribute("data-open") === "1" ? "0" : "1");
+      return;
+    }
+
     var th = e.target.closest(".tx-card-head");
     if (th) {
       var card = th.parentElement;
       card.setAttribute("data-open", card.getAttribute("data-open") === "1" ? "0" : "1");
+      return;
+    }
+
+    var chipx = e.target.closest(".ddx-chip");
+    if (chipx) {
+      var group = chipx.closest(".ddx-group");
+      var detail = group.querySelector(".ddx-detail");
+      var wasActive = chipx.classList.contains("active");
+      [].forEach.call(group.querySelectorAll(".ddx-chip.active"), function (c) { c.classList.remove("active"); });
+      if (wasActive) { detail.hidden = true; detail.innerHTML = ""; return; }
+      chipx.classList.add("active");
+      var dx = chipx.getAttribute("data-dx") || "";
+      var clave = chipx.getAttribute("data-clave");
+      var slug = chipx.getAttribute("data-slug");
+      var h = slug
+        ? '<a class="ddx-detail-dx ddx-detail-link" href="#/tema/' + esc(slug) + '">' + esc(dx) + ICONS.chevR + "</a>"
+        : '<div class="ddx-detail-dx">' + esc(dx) + "</div>";
+      if (clave) h += '<div class="ddx-key">' + esc(clave) + "</div>";
+      detail.innerHTML = h;
+      detail.hidden = false;
       return;
     }
 
