@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"Reconoce y estima el riesgo por la latencia","detalle":"Monitoriza y canaliza vía. Determina el tiempo entre ingesta y primeros síntomas: latencia <6 h suele ser leve; latencia >6 h señala síndromes potencialmente mortales (hepatotóxico/nefrotóxico). Recoge restos de setas y contacta con micólogo."},
+ {"paso":"Estabiliza e inicia fluidoterapia","detalle":"Solución glucosalina 3.000 mL/24 h; repón potasio según potasemia. Solicita transaminasas, coagulación, glucemia, función renal y metahemoglobina. Controla vómitos con metoclopramida 10 mg/8 h (ondansetrón 8 mg/12 h si no cede)."},
+ {"paso":"Descontaminación con carbón activado","sub":[
+   {"t":"Latencia corta → dosis única 25-50 g en las primeras 2 h."},
+   {"nivel":"critico","t":"Sospecha de amatoxinas (Amanita phalloides y similares) → 25 g/2-4 h durante 48-72 h por recirculación enterohepática; por SNG si vomita."}
+ ]},
+ {"paso":"Trata el síndrome según toxíndromo de latencia corta","sub":[
+   {"t":"Síndrome colinérgico (bradicardia/hipotensión muscarínica) → atropina 0,04 mg/kg IV (máx 2 mg), repetible hasta atropinización."},
+   {"t":"Síndrome atropínico → fisostigmina 1 mg IV lento, repetible cada 10 min (máx 4 mg)."},
+   {"nivel":"emergente","t":"Síndrome giromitrínico con convulsiones → piridoxina 70 mg/kg IV (máx 5 g); metahemoglobinemia >20% → azul de metileno 1-2 mg/kg."}
+ ]},
+ {"paso":"Antídoto del síndrome hepatotóxico (amatoxinas)","detalle":"Silibinina IV de elección: 5 mg/kg en 2 h, seguida de 20 mg/kg/24 h en perfusión 6 días. Si no se dispone: penicilina G 1 millón UI/h. Coadyuvantes: N-acetilcisteína, ácido tióctico, vitamina C. Corrige coagulopatía con vitamina K 10 mg/6 h y plasma fresco."},
+ {"paso":"Vigila el fallo multiorgánico tardío","detalle":"No te dejes engañar por la mejoría aparente: el fallo hepático aparece a partir de las 36 h. Monitoriza transaminasas, amonio, glucemia y coagulación; valora criterios de trasplante (encefalopatía, coagulopatía, insuficiencia renal)."},
+ {"paso":"Destino","detalle":"Todo paciente sintomático ingresa. Latencia >6 h, amatoxinas, fallo hepático/renal o metahemoglobinemia >20% → UCI. Casos menos graves → observación de urgencias."}
+], "ddx": []}

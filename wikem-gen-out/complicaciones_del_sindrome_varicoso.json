@@ -1,0 +1,17 @@
+{"plan": [
+ {"paso":"Valora repercusión hemodinámica en varicorragia","detalle":"En sangrado activo, comprueba TA y FC: si hipotensión/taquicardia por varicorragia masiva, coloca vía venosa, extrae hemograma y maneja la anemia aguda."},
+ {"paso":"Controla la hemorragia activa (varicorragia externa)","detalle":"Eleva el miembro (decúbito con pierna elevada), aplica compresión directa local y vendaje compresivo. Esta medida postural-compresiva es la primera maniobra y suele ser resolutiva."},
+ {"paso":"Clasifica el tipo de complicación","detalle":"Diferencia: varicorragia (externa, subcutánea o subaponeurótica), trombosis venosa superficial, trastornos tróficos y úlcera varicosa (limpia, infectada o necrótica)."},
+ {"paso":"Trata según el tipo de complicación","sub":[
+   {"nivel":"emergente","t":"Varicorragia externa que no cede con postura y compresión → ligadura vascular quirúrgica urgente."},
+   {"t":"Varicorragia subcutánea sin fluctuación → heparina sódica tópica 3-10 cm/8 h con masaje suave + analgesia (naproxeno 500 mg/12 h o ibuprofeno 600 mg/8 h)."},
+   {"t":"Varicorragia subcutánea con colección fluctuante → desbridamiento quirúrgico."}
+ ]},
+ {"paso":"Maneja la úlcera varicosa","sub":[
+   {"t":"Úlcera infectada → clostridiopeptidasa tópica/24 h; toma cultivo y antibiograma si signos de infección sistémica antes de antibioterapia."},
+   {"t":"Úlcera necrótica exudativa → óxido de cinc en capa fina sobre piel circundante."},
+   {"t":"Pulsos distales ausentes/débiles → sospecha componente arterial; diferencia de úlcera isquémica antes de comprimir."}
+ ]},
+ {"paso":"Aplica terapia compresiva y coadyuvante","detalle":"La compresión es la medida común a todas las complicaciones (reduce reflujo venoso). Añade coadyuvantes en úlceras: pentoxifilina 400 mg/8 h o sulodexida 15 mg/8 h."},
+ {"paso":"Destino","detalle":"Ingreso/valoración quirúrgica: varicorragia externa no controlada con postura-compresión y varicorragia subcutánea fluctuante. Resto → alta con cura, compresión y seguimiento ambulatorio."}
+], "ddx": []}

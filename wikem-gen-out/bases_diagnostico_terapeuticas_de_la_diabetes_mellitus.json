@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"Confirma la hiperglucemia y descarta descompensación aguda","detalle":"Glucemia capilar y venosa; ante glucemia >250 mg/dL determina cetonuria/cetonemia, gasometría y osmolaridad para descartar cetoacidosis o descompensación hiperosmolar antes de clasificar el cuadro."},
+ {"paso":"Decide si es diagnóstico de DM o descompensación de DM conocida","sub":[
+   {"t":"Glucemia aleatoria ≥200 mg/dL con clínica cardinal → diagnóstico inmediato de DM, sin necesidad de confirmación.","nivel":"emergente"},
+   {"t":"Glucemia ≥200 mg/dL sin síntomas → requiere confirmación en segundo día (glucemia o HbA1c)."}
+ ]},
+ {"paso":"Solicita HbA1c y valora el grado de control","detalle":"HbA1c orienta la intensidad terapéutica: >7% con dosis máximas de ADO indica fracaso oral y necesidad de insulinizar; >10-12% o glucemia >300-350 mg/dL indican iniciar insulina desde el principio."},
+ {"paso":"Elige el escalón terapéutico","sub":[
+   {"t":"DM2 con estilo de vida insuficiente → metformina (salvo hipoxia tisular, acidosis o insuficiencia renal/cardiaca: contraindicada).","nivel":"emergente"},
+   {"t":"DM2 con obesidad/riesgo cardiovascular → añade agonista GLP-1 (liraglutida 0,6 mg/24 h SC) o iSGLT-2 (dapagliflozina 10 mg/24 h).","nivel":"emergente"},
+   {"t":"DM1 o fracaso oral → insulina basal-bolo: 0,3-0,5 UI/kg/día, 50% basal (glargina) + 50% bolo (ultrarrápido 30-40-30%).","nivel":"emergente"}
+ ]},
+ {"paso":"Maneja la descompensación hiperglucémica aguda en urgencias","detalle":"Solo la cetoacidosis y la descompensación hiperosmolar son indicación de insulina regular IV. Ante glucemia >250 mg/dL con cetonuria positiva: insulina rápida e hidratación; suspende metformina en situación aguda."},
+ {"paso":"Ajusta el tratamiento crónico y educa","detalle":"Revisa y ajusta la pauta domiciliaria; refuerza modificaciones del estilo de vida, vigilancia de hipoglucemias (8-10 h tras ejercicio) y técnica de insulina."},
+ {"paso":"Destino","detalle":"Cetoacidosis/hiperosmolar, hipoglucemia grave recurrente, debut de DM1 con cetosis o glucemia >300-350 mg/dL sintomática → ingreso. DM2 estable → alta con tratamiento ajustado y derivación a atención primaria."}
+], "ddx": []}

@@ -1,0 +1,14 @@
+{"plan": [
+ {"paso":"Asegura la vía aérea (prioridad absoluta)","sub":[
+   {"nivel":"critico","t":"Obstrucción por sangre, cuerpos extraños, abatimiento mandibular o mordaza maxilar → aspira, tracciona la mandíbula; insuficiencia respiratoria por compresión → intubación endotraqueal o traqueotomía."},
+   {"t":"Vía aérea estable → oxigenoterapia y monitorización."}
+ ]},
+ {"paso":"Estabiliza y canaliza acceso venoso","detalle":"Control cervical (frecuente politraumatismo asociado), monitor TA/SatO2. SSF 2.000 mL/24 h de mantenimiento. Controla la hemorragia facial; epistaxis posterior → taponamiento posterior."},
+ {"paso":"Explora de forma sistemática","detalle":"Inspección extraoral, intraoral y palpación de maxilares. Busca maloclusión, escalones óseos, diplopía (fractura de suelo de órbita), movilidad anómala del tercio medio."},
+ {"paso":"Descarta fractura de base de cráneo y fístula de LCR","sub":[
+   {"nivel":"emergente","t":"Rinorrea/otorrea clara con glucosa positiva, hemotímpano, ojos de mapache o signo de Battle → sospecha de fractura de base; TC y aviso a Neurocirugía."}
+ ]},
+ {"paso":"Solicita imagen y trata diente avulsionado a tiempo","detalle":"TC para definir la extensión de fracturas; ortopantomografía para la mandíbula. Diente avulsionado → reimplante antes de 30 min para mejor pronóstico."},
+ {"paso":"Pauta analgesia, profilaxis y soporte","detalle":"Dexketoprofeno 25 mg/8 h VO o 50 mg/8 h IV/IM (o metamizol 575 mg/8 h). Fracturas abiertas/heridas → amoxicilina-clavulánico 1.000+62,5 mg/8 h 10 días. Edema con riesgo de vía aérea → dexametasona 8 mg + 4 mg/6 h. Pantoprazol 40 mg/24 h si AINE/corticoide."},
+ {"paso":"Destino","detalle":"Toda fractura maxilofacial ingresa (tratamiento quirúrgico, diferible hasta 10 días salvo urgencia). Compromiso de vía aérea, politraumatismo, fístula de LCR o fractura de base → ingreso urgente con interconsulta a Cirugía Maxilofacial."}
+], "ddx": []}

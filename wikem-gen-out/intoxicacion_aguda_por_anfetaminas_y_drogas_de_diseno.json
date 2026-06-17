@@ -1,0 +1,21 @@
+{"plan": [
+ {"paso":"Reconoce el síndrome simpaticomimético y estabiliza","detalle":"Monitor ECG, TA, SatO2, temperatura central y glucemia. Vía venosa. Sospecha ante midriasis, HTA, hipertermia, taquicardia e hipertonía en paciente de ambiente de ocio. Diagnóstico clínico (detección urinaria con falsos positivos)."},
+ {"paso":"Identifica banderas rojas que marcan gravedad","sub":[
+   {"nivel":"critico","t":"Hiperpirexia >40 °C → enfriamiento agresivo con mantas hipotérmicas o baños de agua helada (compresas si moderada)."},
+   {"nivel":"critico","t":"Déficit neurológico focal → sospecha hemorragia intracraneal; TC craneal urgente."},
+   {"nivel":"emergente","t":"Rabdomiólisis (CK elevada, mioglobinuria) → hidratación abundante y vigilancia renal; descarta CID."}
+ ]},
+ {"paso":"Descontamina si procede","detalle":"Paciente alerta con ingesta <2 h → carbón activado 25-50 g + sorbitol 1-2 mL/kg de solución al 70% VO."},
+ {"paso":"Controla la agitación y las convulsiones","sub":[
+   {"t":"Agitación → midazolam 0,1 mg/kg IV o 0,2 mg/kg IM (lorazepam 1-2 mg/4 h VO alternativa)."},
+   {"nivel":"emergente","t":"Crisis convulsivas → midazolam 0,1 mg/kg IV (repetible hasta 0,4 mg/kg); si no ceden, fenitoína 18 mg/kg IV de ataque."},
+   {"t":"Síntomas psicóticos → haloperidol 10 mg VO inicial (máx 30 mg/24 h)."}
+ ]},
+ {"paso":"Trata las complicaciones cardiovasculares","sub":[
+   {"t":"HTA con diastólica >120 mmHg y afectación de órgano diana → nitroprusiato 1 µg/kg/min IV (nitroglicerina alternativa)."},
+   {"t":"Hipotensión por hipovolemia → SSF 300 mL en carga repetible; si fallo ventricular izquierdo, noradrenalina 0,05-0,5 µg/kg/min."},
+   {"t":"Arritmias → lidocaína en ventriculares; verapamilo o diltiazem en supraventriculares."}
+ ]},
+ {"paso":"Hidrata y vigila la temperatura y la función renal","detalle":"Fluidoterapia para compensar pérdidas por fiebre/hiperventilación y prevenir el daño renal por rabdomiólisis; controla CK e iones."},
+ {"paso":"Decide destino","detalle":"Todos los sintomáticos ingresan: leve-moderado en observación de urgencias; grave en UCI. Alta solo si asintomático tras 4 h con constantes normales y carbón administrado; derivar a Psiquiatría si la intoxicación fue intencionada."}
+], "ddx": []}

@@ -1,0 +1,19 @@
+{"plan": [
+ {"paso":"Localiza el cuerpo extraño y descarta peligro inmediato","detalle":"Anamnesis (qué, cuándo, dónde) y exploración por localización: oído, nariz u orofaringoesófago. Identifica el tipo: sólido inerte, no inerte (semillas, pila de botón) o animado (insecto)."},
+ {"paso":"Prioriza la pila de botón en cualquier localización","sub":[
+   {"nivel":"critico","t":"Pila de botón en oído, nariz o esófago → extracción URGENTE por riesgo de lesión cáustica por corriente eléctrica; no demorar."}
+ ]},
+ {"paso":"Extrae el cuerpo extraño ótico","detalle":"Inerte: extracción instrumental o lavado (contraindicado si hay perforación o material que se hincha con agua). Insecto animado: inmovilízalo primero (aceite/lidocaína) y luego extrae; el dolor intenso con vértigo obliga a inmovilizar antes de manipular. Tras la extracción, si hay laceración del CAE o era animado: gotas óticas antibióticas polimicrobianas 3-4 gotas/4-6 h, 7 días."},
+ {"paso":"Extrae el cuerpo extraño nasal","sub":[
+   {"t":"Rinorrea mucopurulenta unilateral prolongada en niño → descarta cuerpo extraño retenido (riesgo de sinusitis/meningitis)."},
+   {"t":"No extraíble por tumefacción mucosa → derivar para extracción bajo anestesia general."}
+ ]},
+ {"paso":"Trata la infección por cuerpo extraño nasal","detalle":"Amoxicilina-clavulánico 875/125 mg/8 h + metronidazol 500 mg/8 h (3 días, luego 250 mg/8 h 4 días más), 7 días en total. Alérgico a penicilina: trimetoprima-sulfametoxazol 1 comp/12 h, 7 días."},
+ {"paso":"Maneja el cuerpo extraño esofágico","sub":[
+   {"nivel":"emergente","t":"Sospecha de perforación o extracción traumática/cuerpo cortante → TC urgente y antibioterapia IV triple: cefepima 2 g/12 h (o ceftriaxona 2 g/24 h / ceftazidima 2 g/8 h) + metronidazol 500 mg/8 h + tobramicina 3-5 mg/kg/24 h."}
+ ]},
+ {"paso":"Decide destino","sub":[
+   {"t":"Esofágico → ingreso en observación de urgencias hasta 24 h tras la extracción."},
+   {"t":"Ótico o nasal extraído sin complicación → alta y manejo ambulatorio."}
+ ]}
+], "ddx": []}

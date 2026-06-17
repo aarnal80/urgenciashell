@@ -1,0 +1,14 @@
+{"plan": [
+ {"paso":"Confirma la indicación antes de transfundir","detalle":"Hematíes: anemia crónica con Hb <7-8 g/dL o anemia aguda según clínica/hemodinámica (no solo cifra). Plasma 10-15 mL/kg solo si coagulopatía con hemorragia activa. Extrae muestras para estudio etiológico antes de transfundir."},
+ {"paso":"Verifica compatibilidad e inicia con vigilancia","detalle":"Comprueba identidad, grupo y compatibilidad ABO. Toma constantes basales. Inicia la transfusión lentamente y monitoriza al paciente durante los primeros 15 min, el período de mayor riesgo."},
+ {"paso":"Ante cualquier signo de alarma, suspende de inmediato","detalle":"Fiebre con escalofríos, dolor torácico/lumbar, disnea, taquicardia o hipotensión → detén la transfusión, mantén la vía con SSF y revalúa identidad/etiqueta del componente."},
+ {"paso":"Identifica y trata el tipo de reacción","sub":[
+   {"nivel":"critico","t":"Reacción hemolítica aguda (hemoglobinuria, shock) → SSF 300 mL en 20 min repetible; dopamina 5 µg/kg/min hasta TAS >90 mmHg o diuresis >35 mL/h si no responde; vigila CID."},
+   {"nivel":"critico","t":"Shock séptico por contaminación bacteriana → hemocultivos, antibioterapia empírica y soporte hemodinámico; ingreso en UCI."},
+   {"nivel":"critico","t":"TRALI (edema pulmonar no cardiogénico) → soporte respiratorio/oxigenoterapia, valorar ventilación; ingreso en críticos."},
+   {"t":"Reacción febril no hemolítica → paracetamol 1 g IV (o metamizol 2 g IV)."}
+ ]},
+ {"paso":"Vigila complicaciones de la transfusión masiva","detalle":"Controla potasio y calcio: trata hiperpotasemia e hipocalcemia graves. Monitoriza coagulación si CID."},
+ {"paso":"Recuerda contraindicaciones y precauciones","detalle":"No transfundir plaquetas en PTT ni en síndrome hemolítico urémico. Evita la sobrecarga de volumen en cardiópatas."},
+ {"paso":"Decide destino","detalle":"Reacción leve resuelta → continúa observación. Reacción hemolítica, séptica, TRALI, CID o trastorno electrolítico grave → ingreso urgente con monitorización (UCI en shock/TRALI)."}
+], "ddx": []}

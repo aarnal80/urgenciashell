@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"Reconoce y estabiliza (emergencia endocrina)","detalle":"Sospecha ante cefalea brusca, vómitos, déficit visual, oftalmoplejía y alteración de conciencia. Monitoriza TA, nivel de conciencia y glucemia; vía venosa, analítica con cortisol e iones. Asegura vía aérea si deterioro."},
+ {"paso":"Administra glucocorticoide IV ante la sospecha, sin esperar confirmación","detalle":"Hidrocortisona 100 mg en bolo IV inmediato (insuficiencia suprarrenal secundaria en 60-70%), seguida de 50-100 mg/6 h IV las primeras 24 h. Alternativa: dexametasona 4-8 mg en bolo + 4 mg/4-6 h IV (también reduce edema)."},
+ {"paso":"Corrige las alteraciones que ponen en riesgo la vida","sub":[
+   {"t":"Hipotensión → descarta hipocorticismo y trata con hidrocortisona y volumen.","nivel":"critico"},
+   {"t":"Hipoglucemia → manifestación de insuficiencia suprarrenal central; corrige de inmediato.","nivel":"critico"},
+   {"t":"Hiponatremia severa → valora hipotiroidismo central o SIADH asociado.","nivel":"emergente"}
+ ]},
+ {"paso":"Reponer volumen y tratar síntomas","detalle":"Suero salino alternando con glucosado 5% 3.000 mL/24 h (modificar según IC o PVC). Cefalea: paracetamol 1 g/6 h IV (metamizol 2 g/8 h alternativa). Vómitos: metoclopramida 10 mg/8 h IV."},
+ {"paso":"Realiza el diagnóstico diferencial y la prueba de imagen","detalle":"Prioriza descartar hemorragia subaracnoidea y meningitis. TC craneal urgente (detecta hemorragia aguda en primeras 72 h); RM de elección para valoración completa del adenoma."},
+ {"paso":"Valora la indicación quirúrgica","sub":[
+   {"t":"Deterioro del nivel de conciencia, déficit visual grave/progresivo o escasa mejoría farmacológica → cirugía transesfenoidal (preferible en la 1ª semana).","nivel":"emergente"},
+   {"t":"Estabilidad con buena respuesta a glucocorticoides → manejo conservador y seguimiento."}
+ ]},
+ {"paso":"Destino","detalle":"Siempre ingreso: emergencia médica. UCI/soporte vital si precisa intubación. Observación hasta confirmar diagnóstico si no precisa soporte avanzado; después ingreso en Endocrinología para estudio hormonal y ajuste sustitutivo."}
+], "ddx": []}

@@ -1,0 +1,14 @@
+{"plan": [
+ {"paso":"Asegura la escena y reconoce (primeros minutos)","detalle":"Confirma que la fuente eléctrica está desconectada antes de tocar al paciente. Monitor de ECG, TA y SatO2; doble vía venosa. Valora ABCDE; sospecha lesiones internas a lo largo del trayecto de la corriente."},
+ {"paso":"Maneja la parada cardiorrespiratoria","sub":[
+   {"nivel":"critico","t":"Electrocución con PCR → RCP prolongada, mantenida al menos 4 h; la midriasis no tiene valor pronóstico."},
+   {"nivel":"critico","t":"FV (trayecto brazo-brazo) o asistolia (rayo) → desfibrilación/soporte vital avanzado según ritmo."}
+ ]},
+ {"paso":"Monitoriza el ritmo en las primeras horas","detalle":"ECG seriado y monitorización continua: vigila taquiarritmias y bradiarritmias en las primeras 2 h postaccidente."},
+ {"paso":"Fluidoterapia agresiva para proteger el riñón","detalle":"Ringer lactato 4.000 mL/24 h, ajustando para mantener diuresis >100 mL/h y prevenir el fracaso renal por mioglobinuria/hemoglobinuria. Considera alcalinización urinaria."},
+ {"paso":"Corrige complicaciones metabólicas y locales","detalle":"Bicarbonato 1 M si pH <7,20; trata la hiperpotasemia por destrucción tisular. Midazolam o Diazepam IV si convulsiones. Explora signos de síndrome compartimental (valorar fasciotomía) y vigila datos de CID."},
+ {"paso":"Destino","sub":[
+   {"t":"Consciente y estable → observación en urgencias (toda quemadura eléctrica ingresa)."},
+   {"nivel":"emergente","t":"Inestable hemodinámicamente o con alteración del nivel de conciencia → UCI."}
+ ]}
+], "ddx": []}

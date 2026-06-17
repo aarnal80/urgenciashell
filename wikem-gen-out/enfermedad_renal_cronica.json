@@ -1,0 +1,18 @@
+{"plan": [
+ {"paso":"Reconoce y monitoriza (primeros minutos)","detalle":"Monitor ECG, TA, SatO2 y vía venosa. Identifica el motivo de descompensación: deterioro agudo de función renal, sobrecarga de volumen o trastorno hidroelectrolítico. ECG de 12 derivaciones precoz."},
+ {"paso":"Descarta la hiperpotasemia como prioridad","sub":[
+   {"nivel":"critico","t":"Hiperpotasemia con alteraciones ECG (T picudas, QRS ancho) → gluconato cálcico IV, insulina-glucosa y broncodilatadores; en diálisis, la hemodiálisis es el tratamiento de elección."},
+   {"t":"Sin alteraciones ECG → corrección farmacológica como puente y reevaluación analítica seriada."}
+ ]},
+ {"paso":"Extrae analítica y solicita pruebas","detalle":"Hemograma, función renal con urea/creatinina, iones, gasometría (acidosis), y compara con situación basal del paciente. Radiografía de tórax si sospecha de sobrecarga. Valora ecografía del acceso vascular si complicación."},
+ {"paso":"Maneja la sobrecarga de volumen","sub":[
+   {"nivel":"emergente","t":"Edema agudo de pulmón en paciente en diálisis → diálisis urgente (tratamiento de elección)."},
+   {"t":"Sobrecarga sin EAP en paciente no en diálisis → furosemida IV 20 mg/8 h (ineficaz si ClCr muy bajo; valorar diálisis)."}
+ ]},
+ {"paso":"Reponé volumen con precaución si hipovolemia","detalle":"Si el deterioro renal es por hipovolemia, reposición IV cautelosa ajustada a la situación clínica, vigilando estrechamente la aparición de sobrecarga."},
+ {"paso":"Corrige la acidosis y trata complicaciones asociadas","detalle":"Maneja acidosis metabólica grave, hipertensión maligna y complicaciones del acceso vascular (infección, hemorragia, trombosis). Avisa a nefrología de guardia."},
+ {"paso":"Decide destino","sub":[
+   {"t":"ERC no conocida estable → derivación a consulta de nefrología."},
+   {"nivel":"emergente","t":"Sobrecarga con EAP, hiperpotasemia/acidosis graves, HTA maligna, progresión rápida o complicaciones graves del acceso → ingreso hospitalario."}
+ ]}
+], "ddx": []}

@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"Reconoce, protege la vía aérea y monitoriza","detalle":"Monitor ECG, TA, SatO2 y Tª; vía venosa. Coloca en decúbito lateral si bajo nivel de conciencia (la broncoaspiración es la causa más frecuente de muerte). Determina glucemia capilar de inmediato: la hipoglucemia es la complicación más frecuente."},
+ {"paso":"Administra tiamina ANTES que la glucosa","detalle":"Tiamina 250 mg/24 h IM en intoxicación etílica. La tiamina debe preceder siempre a cualquier infusión de glucosa para no precipitar una encefalopatía de Wernicke. Inicia suero glucosado 5% a 21 gotas/min."},
+ {"paso":"Corrige hipoglucemia y agitación","sub":[
+   {"t":"Hipoglucemia → glucosa hipertónica 50%: 10 g en bolo IV (20 mL), repetible 2-3 veces."},
+   {"t":"Agitación → midazolam 0,1 mg/kg IV (repetible hasta 0,4 mg/kg) o diazepam 5 mg IV."}
+ ]},
+ {"paso":"Descarta otras causas de bajo nivel de conciencia","sub":[
+   {"nivel":"emergente","t":"Alteración no explicada por la alcoholemia, focalidad o TCE → TC craneal urgente; descarta meningitis e hipoglucemia."}
+ ]},
+ {"paso":"Identifica y trata la cetoacidosis alcohólica","detalle":"Sospéchala ante acidosis metabólica con anion gap elevado, cetonemia y alcoholemia baja/nula. Repón con suero glucosado 5% (NO salino, empeora la acidosis), tiamina, antieméticos (metoclopramida 10 mg/8 h) y corrige magnesio (sulfato de Mg si K >4 mEq/L) y fósforo. Bicarbonato 1 M solo si pH <7,20 (50% del déficit)."},
+ {"paso":"Trata la encefalopatía de Wernicke ante la mínima sospecha","sub":[
+   {"nivel":"emergente","t":"Tríada disfunción oculomotora + alteración mental + ataxia → tiamina 500 mg/8 h IV 3 días (luego 300 mg/24 h VO), sin esperar confirmación."}
+ ]},
+ {"paso":"Destino","detalle":"Intoxicación etílica con coma: observación de urgencias hasta recuperar la conciencia. Cetoacidosis alcohólica: ingreso hospitalario siempre. Encefalopatía de Wernicke: ingreso hospitalario. Intoxicación leve: observación domiciliaria por familiar."}
+], "ddx": []}

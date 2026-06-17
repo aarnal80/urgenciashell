@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Fija el objetivo glucémico y el método de control","detalle":"Objetivo 140-180 mg/dL en la mayoría de hospitalizados (críticos y no críticos). Establece controles glucémicos capilares según pauta (antes de comidas y al acostarse si come; cada 4-6 h si no come o si infusión IV)."},
+ {"paso":"Decide la vía de insulinización según estabilidad metabólica","sub":[
+   {"t":"Inestabilidad metabólica, paciente crítico, perioperatorio mayor, corticoides a altas dosis, NPT → infusión IV de insulina regular.","nivel":"critico"},
+   {"t":"Paciente estable que come → pauta subcutánea basal-bolo-corrección.","nivel":"emergente"}
+ ]},
+ {"paso":"Inicia la infusión IV correctamente cuando esté indicada","detalle":"100 UI de regular en 100 mL SSF (1 UI/mL), comenzar a 0,5-1 UI/h ajustando con tablas de pautas 1-4. Acompaña SIEMPRE con glucosa: glucosado 5% a 100 mL/h o 10% a 50 mL/h. Vigila descenso ≥50-60 mg/dL/h."},
+ {"paso":"Calcula la pauta basal-bolo-corrección en el paciente estable","detalle":"Dosis total: 0,3 UI/kg/día si glucemia <150, 0,4 si 150-200, 0,5 si >200 mg/dL. 50% basal (análogo lento, 1 dosis) + 50% bolo ultrarrápido (30-40-30% en desayuno-almuerzo-cena) + corrección según pauta A/B/C por peso/requerimientos. Si no come, no administres el bolo."},
+ {"paso":"Trata la hipoglucemia y reajusta a diario","sub":[
+   {"t":"Glucemia <70 mg/dL → tratamiento inmediato; reinicia infusión IV (pauta 1) cuando ≥140 mg/dL en dos controles.","nivel":"critico"},
+   {"t":"Glucemia >360 mg/dL en infusión → pauta de máxima velocidad (hasta 24 UI/h).","nivel":"emergente"}
+ ]},
+ {"paso":"Suspende los no insulínicos y planifica la transición al alta","detalle":"Retira metformina, glitazonas, secretagogos e inhibidores DPP-4/SGLT-2 durante el ingreso (ayuno, inestabilidad, fracaso renal/hepático/cardiaco). Paso de IV a SC: 80% de la dosis IV de las últimas 24 h tras 24-48 h de normoglucemia."},
+ {"paso":"Destino y plan al alta","detalle":"DM1, corticoides a altas dosis o insuficiencia pancreática → alta con basal-bolo reduciendo 10-20% la dosis intrahospitalaria. HbA1c >10%, glucemias >300 mg/dL o requerimientos >0,8 UI/kg/día → intensificar tratamiento previo al alta."}
+], "ddx": []}

@@ -1,0 +1,25 @@
+{"plan": [
+ {"paso":"Valora el dolor y descarta toxicidad/urgencia mayor","detalle":"Cuantifica la intensidad (escala EVA) y vigila signos de toxicidad opiácea: miosis puntiforme, sedación extrema, bradipnea. Descarta una urgencia oncológica mayor (compresión medular/radicular) como causa del dolor."},
+ {"paso":"Clasifica el tipo de dolor","sub":[
+   {"t":"Somático (constante, bien localizado) o visceral (sordo, mal localizado, con cortejo vegetativo) → escalera analgésica OMS."},
+   {"t":"Neuropático (paroxístico, ardor, alodinia) → asocia coadyuvante (amitriptilina, gabapentina o pregabalina)."},
+   {"t":"Irruptivo (>3 episodios/24 h) → revisa el tratamiento basal y pauta dosis de rescate."}
+ ]},
+ {"paso":"Aplica la escalera analgésica de la OMS a intervalos fijos","sub":[
+   {"t":"1.er escalón (no opiáceos) → paracetamol 1 g/6 h y/o AINE (dexketoprofeno 25 mg/8 h VO, eficaz en metástasis óseas); metamizol en dolor visceral."},
+   {"t":"2.º escalón si no se controla en 48-72 h → tramadol 50-100 mg/8 h VO o codeína, manteniendo el 1.er escalón."},
+   {"t":"3.er escalón (opiáceos mayores) → morfina de liberación inmediata 10 mg/4 h VO para titular; oxicodona si predominio neuropático; fentanilo transdérmico en dolor estable."}
+ ]},
+ {"paso":"Trata el dolor intenso agudo y el irruptivo","sub":[
+   {"nivel":"emergente","t":"Dolor intenso urgente o sin vía oral → morfina IV: carga 10 mg, luego perfusión 1-10 mg/h; titula según respuesta y vigila depresión respiratoria."},
+   {"t":"Dolor irruptivo → rescate de morfina de liberación inmediata (1/3 de la dosis regular) o fentanilo transmucoso/nasal."}
+ ]},
+ {"paso":"Añade coadyuvantes y previene efectos adversos","detalle":"En dolor neuropático: amitriptilina 25 mg/noche (subir a 75-150 mg/día), gabapentina 300 mg/8 h o pregabalina 75 mg/12 h; carbamazepina si dolor lancinante. Pauta laxante y antiemético al iniciar opioides."},
+ {"paso":"Maneja la toxicidad opiácea si aparece","sub":[
+   {"nivel":"critico","t":"Depresión respiratoria/miosis/sedación extrema → naloxona y soporte respiratorio."}
+ ]},
+ {"paso":"Decide destino","sub":[
+   {"t":"Dolor controlado → alta con pauta a intervalos fijos, rescates y seguimiento por Oncología/Paliativos."},
+   {"t":"Dolor no controlable ambulatoriamente pese a tratamiento correcto, o signos de toxicidad por la analgesia → ingreso."}
+ ]}
+], "ddx": []}

@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Atención inicial y medidas locales","detalle":"Monitoriza, canaliza vía venosa en miembro NO afectado con SSF (21 gotas/min). Inmoviliza y eleva ligeramente la extremidad, retira anillos/objetos compresivos. NO realices torniquete, incisiones ni succión. Limpia la herida."},
+ {"paso":"Clasifica la gravedad (grados 0-III)","detalle":"Valora distancia entre colmillos, edema, clínica sistémica y, si disponible, veneno plasmático. Recuerda que los efectos máximos aparecen a las 24-48 h: un paciente leve inicial puede progresar."},
+ {"paso":"Analgesia y profilaxis","detalle":"Paracetamol 1 g/6 h IV (de elección; EVITA salicilatos y AINE por riesgo hemorrágico); metamizol 2 g/6 h como alternativa. Profilaxis/actualización antitetánica. Antibiótico solo si signos de infección (ceftazidima 2 g/8 h + metronidazol)."},
+ {"paso":"Solicita analítica y vigila complicaciones","detalle":"Hemograma, coagulación con fibrinógeno, función renal, CK e iones. Vigila CID, rabdomiólisis, insuficiencia renal y síndrome compartimental (mide presión intracompartimental si edema tenso)."},
+ {"paso":"Indica el suero antiofídico según grado","sub":[
+   {"nivel":"emergente","t":"Envenenamiento grado I-III → suero antivíbora 1 vial (4 mL) en 100 mL SSF en 1 h, idealmente en las primeras 4 h; repetible cada 5 h. Premedica con adrenalina 0,25 mg SC (o metilprednisolona 1 mg/kg) por riesgo anafiláctico."},
+   {"t":"Grado 0 / asintomático → no precisa antídoto; observación."}
+ ]},
+ {"paso":"Trata las complicaciones graves","sub":[
+   {"nivel":"critico","t":"Síndrome compartimental con presión >30 mmHg → fasciotomía urgente."},
+   {"nivel":"critico","t":"CID o sangrado activo → manejo según hematología."}
+ ]},
+ {"paso":"Destino","detalle":"Mordedura sintomática (grado I-III): ingreso mínimo 24 h. Grado II: ingreso con antiveneno. Grado III: UCI. Asintomático tras 4-6 h de observación: alta con instrucciones sobre signos de alarma."}
+], "ddx": []}

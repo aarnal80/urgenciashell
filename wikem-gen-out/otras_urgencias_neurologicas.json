@@ -1,0 +1,13 @@
+{"plan": [
+ {"paso":"Reconoce y monitoriza la función respiratoria","detalle":"En todo déficit neuromuscular agudo (Guillain-Barré, miastenia) monitoriza SatO2, capacidad vital y deglución; vigila debilidad de flexores del cuello y disnea como predictores de fallo diafragmático inminente."},
+ {"paso":"Orienta el síndrome y solicita pruebas dirigidas","detalle":"Diferencia Guillain-Barré (debilidad ascendente, arreflexia), mielitis (nivel sensitivo), miastenia (fatigabilidad), encefalopatía autoinmune (psicosis + signos neurológicos) y síndrome neuroléptico maligno (rigidez-fiebre-disautonomía + CK). Pide LCR, RM y CK según sospecha."},
+ {"paso":"Identifica las situaciones tiempo-dependientes","sub":[
+   {"t":"Crisis miasténica o Guillain-Barré con disnea/disfagia/inestabilidad → soporte ventilatorio y UCI.","nivel":"critico"},
+   {"t":"Compresión medular en mielitis → descomprimir antes de 48-72 h; metilprednisolona 1 g/24 h IV.","nivel":"critico"},
+   {"t":"Síndrome neuroléptico maligno con hiperpirexia y CK muy elevada → retirar fármaco, enfriar, hidratar; riesgo de rabdomiólisis y fracaso renal.","nivel":"emergente"},
+   {"t":"Midriasis unilateral arreactiva con diplopía y ptosis (III par) → urgencia neuroquirúrgica (aneurisma).","nivel":"emergente"}
+ ]},
+ {"paso":"Inicia el tratamiento inmunomodulador/específico según entidad","detalle":"Guillain-Barré sin deambulación autónoma: inmunoglobulina 0,4 g/kg/día IV 5 días (o plasmaféresis si fulminante). Miastenia grave/crisis: inmunoglobulina misma pauta. SNM: bromocriptina 2,5 mg/8-12 h ± dantroleno 1-2,5 mg/kg IV. Brote de EM: metilprednisolona 1 g/24 h IV 3-5 días."},
+ {"paso":"Trata síntomas y previene complicaciones","detalle":"Guillain-Barré: profilaxis de TVP con bemiparina 3.500 UI/24 h SC; analgesia escalonada (paracetamol 1 g/6 h → metamizol → tramadol 100 mg/8 h → morfina). NO administres prednisona a dosis altas en miastenia desde urgencias sin inmunoglobulinas previas (riesgo de exacerbación)."},
+ {"paso":"Destino","detalle":"Guillain-Barré, mielitis, crisis miasténica, encefalopatía autoinmune y SNM → ingreso (UCI si compromiso respiratorio/hemodinámico). Diplopía aislada de un par sin otros signos → alta con derivación a neurología. Amnesia global transitoria → observación hasta resolución."}
+], "ddx": []}

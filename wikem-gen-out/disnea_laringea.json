@@ -1,0 +1,18 @@
+{"plan": [
+ {"paso":"Reconoce la obstrucción de vía aérea superior y monitoriza","detalle":"Identifica la tríada: tiraje, estridor INSPIRATORIO y descenso inspiratorio de la laringe (diferencia de la vía baja, espiratoria/sibilancias). Monitor, SatO2, O2 si precisa. NO acuestes al paciente; permite postura cómoda."},
+ {"paso":"Evalúa la gravedad del compromiso aéreo","sub":[
+   {"nivel":"critico","t":"Estridor intenso con tiraje supraesternal/supraclavicular, cianosis o SatO2 descendente → riesgo de obstrucción completa: prepara material de vía aérea difícil y avisa a ORL/anestesia; valora cricotiroidotomía si obstrucción inminente."}
+ ]},
+ {"paso":"Orienta la etiología sin precipitar la obstrucción","sub":[
+   {"nivel":"emergente","t":"Fiebre alta + postración + salivación + voz apagada + posición en trípode → epiglotitis aguda: NO explorar la orofaringe en niños; diagnóstico en adulto por laringoscopia/fibroscopia en entorno controlado."},
+   {"t":"Estridor con cuadro catarral (crup viral) → laringitis subglótica."},
+   {"t":"Deterioro progresivo en paciente con neoplasia conocida → disnea de origen tumoral."}
+ ]},
+ {"paso":"Trata la epiglotitis aguda","detalle":"Ceftriaxona 2 g/24 h IV + clindamicina 600 mg/8 h IV (7-10 días) para H. influenzae y anaerobios. Metilprednisolona 1 mg/kg IV inicial, luego 20 mg/8 h, para reducir el edema supraglótico. Antipirexia con paracetamol 1 g/6 h IV."},
+ {"paso":"Trata la laringitis subglótica del adulto","detalle":"Metilprednisolona 1 mg/kg IV inicial seguida de 20 mg/8 h para reducir el edema subglótico. Analgesia/antipirexia: paracetamol 650 mg/6 h VO o metamizol 2 g/8 h IV."},
+ {"paso":"Resuelve la distonía aguda laríngea iatrogénica","detalle":"Emergencia con respuesta casi inmediata: biperideno 5 mg IV lento (diluido en 4 mL SSF), repetible cada 30 min sin superar 20 mg. Si insuficiente o no disponible, midazolam 0,1 mg/kg IV de rescate. Mantenimiento: biperideno 2 mg/6 h VO 1 semana si no puede retirarse el fármaco causante."},
+ {"paso":"Maneja la disnea tumoral y decide destino","sub":[
+   {"t":"Tumoral → metilprednisolona 250 mg en bolo IV; si no responde, traqueostomía urgente; ingreso en ORL."},
+   {"t":"Laringitis/epiglotitis → observación de urgencias; UCI si precisa intubación o cricotiroidotomía."}
+ ]}
+], "ddx": []}

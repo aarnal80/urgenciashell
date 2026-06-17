@@ -1,0 +1,22 @@
+{"plan": [
+ {"paso":"Reconoce y monitoriza","detalle":"Monitor ECG, TA, SatO2 y temperatura; vía venosa con glucosalino de mantenimiento (2.500 mL/24 h). Identifica el fármaco (citalopram/escitalopram son los más cardiotóxicos) y la dosis ingerida respecto a la dosis tóxica."},
+ {"paso":"Realiza ECG y vigila la cardiotoxicidad","sub":[
+   {"nivel":"emergente","t":"QTc prolongado o QRS ensanchado → riesgo de torsades/FV (citalopram/escitalopram); si QRS ancho, bicarbonato sódico 1 M 1-2 mEq/kg IV manteniendo pH ~7,55."}
+ ]},
+ {"paso":"Descontamina según ventana","detalle":"Carbón activado 1 g/kg si <2 h desde la ingesta. Irrigación intestinal con polietilenglicol en preparados de liberación retardada."},
+ {"paso":"Identifica y trata el síndrome serotoninérgico","sub":[
+   {"nivel":"emergente","t":"Taquicardia, hipertermia, mioclonías, hiperreflexia y rigidez → ciproheptadina 4-8 mg/h VO (máx 32 mg/día); enfriamiento y benzodiacepinas. No usar si coexiste intoxicación anticolinérgica."},
+   {"nivel":"critico","t":"Forma grave: fiebre >39,5 °C, rigidez, coma → soporte intensivo, valorar sedación y relajación."}
+ ]},
+ {"paso":"Controla convulsiones, agitación y síntomas digestivos","sub":[
+   {"nivel":"emergente","t":"Convulsiones → midazolam 0,1 mg/kg IV (máx 0,4 mg/kg)."},
+   {"t":"Agitación con delirio → midazolam 0,2 mg/kg IM (lorazepam alternativo)."},
+   {"t":"Náuseas/vómitos → ondansetrón 8 mg/8 h IV."},
+   {"nivel":"critico","t":"Hipotensión refractaria o PCR por bupropión → valorar rescate lipídico."}
+ ]},
+ {"paso":"Define el destino","sub":[
+   {"nivel":"critico","t":"Glasgow ≤8 → intubación y UCI."},
+   {"t":"Mayoría → observación ≥6 h con monitorización ECG; ≥12 h si citalopram/escitalopram, liberación retardada o coingesta serotoninérgica."},
+   {"t":"Síndrome serotoninérgico → observación ≥24 h salvo UCI."}
+ ]}
+], "ddx": []}

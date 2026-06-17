@@ -1,0 +1,14 @@
+{"plan": [
+ {"paso":"Asegura la vía aérea (prioridad inicial)","detalle":"Evalúa disnea, estridor, elevación del suelo de la boca, desviación de la úvula, trismus, disfagia/disfonía. Ante riesgo de obstrucción, prepara manejo avanzado de vía aérea (posible intubación/vía quirúrgica) y avisa a Anestesia/Maxilofacial."},
+ {"paso":"Monitoriza e identifica el origen y la extensión","detalle":"Constantes, vía venosa, hemograma y reactantes. Localiza la pieza/foco odontogénico y valora espacios afectados (submandibular, sublingual, submentoniano). TC con contraste si sospecha de espacio profundo."},
+ {"paso":"Inicia fluidoterapia y antibioterapia IV empírica","detalle":"Suero salino 1.000 mL/8 h. Bencilpenicilina 4 millones UI/4 h (o ceftriaxona 2 g/24 h) + metronidazol 500 mg/8 h. Clindamicina 600 mg/6 h IV si alergia a penicilina."},
+ {"paso":"Añade corticoide y analgesia","detalle":"Dexametasona 8 mg IV inicial y luego 4 mg/6 h para reducir el edema. Paracetamol 1 g/6 h IV; tramadol 100 mg/8 h si el dolor no cede."},
+ {"paso":"Valora drenaje quirúrgico","sub":[
+   {"nivel":"emergente","t":"Colección/absceso o afectación de espacios profundos → interconsulta urgente a Maxilofacial para drenaje (a menudo bajo anestesia general)."},
+   {"nivel":"critico","t":"Eritema/induración con extensión descendente o crepitación → sospecha de mediastinitis o fascitis necrosante: cirugía urgente."}
+ ]},
+ {"paso":"Decide destino","sub":[
+   {"t":"Inmunodepresión (diabetes, neoplasia, VIH, corticoides), signos de gravedad, disnea/disfagia, afectación de espacios profundos o fracaso antibiótico previo → ingreso."},
+   {"t":"Celulitis leve circunscrita en paciente inmunocompetente → posible manejo ambulatorio con antibiótico oral y control estrecho."}
+ ]}
+], "ddx": []}

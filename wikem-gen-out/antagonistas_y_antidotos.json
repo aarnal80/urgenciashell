@@ -1,0 +1,21 @@
+{"plan": [
+ {"paso":"Estabiliza primero (ABC) y trata sintomáticamente","detalle":"Monitor ECG, TA, SatO2 y glucemia; vía venosa. El soporte vital y el tratamiento sintomático preceden y acompañan siempre al antídoto. Recuerda que solo existe antídoto para una fracción de los tóxicos."},
+ {"paso":"Identifica el tóxico y verifica disponibilidad","detalle":"Anamnesis, toxíndromo y toxicología orientan el antídoto. Confirma de antemano la cadena de suministro local: varios son medicamentos extranjeros o fórmulas magistrales de acceso limitado."},
+ {"paso":"Administra el antagonista/antídoto con dosis precisas","sub":[
+   {"nivel":"critico","t":"Opiáceos con depresión respiratoria → naloxona inmediata, repetible cuantas veces sea necesario."},
+   {"t":"Benzodiacepinas → flumazenilo 0,3 mg IV cada 30 s (máx 3 mg); si recaída, perfusión 0,1-0,4 mg/h."},
+   {"t":"Anticolinérgicos → fisostigmina 1-2 mg/10 min (máx 4 mg/30 min)."},
+   {"t":"Anticoagulantes cumarínicos → vitamina K 10-20 mg; dabigatrán con hemorragia → idarucizumab 5 g."}
+ ]},
+ {"paso":"Aplica los antídotos tiempo-dependientes sin demora","sub":[
+   {"nivel":"critico","t":"Cianuro con inestabilidad → hidroxicobalamina 5 g (o edetato dicobáltico 600 mg + tiosulfato sódico)."},
+   {"nivel":"critico","t":"Organofosforados con síndrome colinérgico → atropina a dosis altas + pralidoxima 30 mg/kg precoz."},
+   {"nivel":"critico","t":"Metanol/etilenglicol → fomepizol 15 mg/kg inicial, luego 10 mg/kg/12 h 48 h (metanol: añade folinato cálcico)."},
+   {"nivel":"emergente","t":"Amanita phalloides → silibinina, penicilina G y N-acetilcisteína cuanto antes."}
+ ]},
+ {"paso":"Considera la emulsión lipídica en cardiotoxicidad refractaria","sub":[
+   {"nivel":"critico","t":"Intoxicación grave por anestésicos locales, bloqueantes del calcio, betabloqueantes o tricíclicos sin respuesta convencional → emulsión lipídica 20%: 1,5 mL/kg inicial + 0,25 mL/kg/min (máx 8-10 mL/kg)."},
+   {"t":"Betabloqueantes → glucagón 50 µg/kg (máx 10 mg) + 4 mg/h; hierro → deferoxamina; metahemoglobinemia → azul de metileno (máx 7 mg/kg)."}
+ ]},
+ {"paso":"Destino","detalle":"Todo paciente que precise antídoto IV queda en observación/ingreso hasta confirmar estabilidad. UCI en Amanita phalloides, cianuro, organofosforados graves y digitálicos con Fab. Monitorización mínima 24 h tras suero antiviperino."}
+], "ddx": []}

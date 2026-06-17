@@ -1,0 +1,11 @@
+{"plan": [
+ {"paso":"Garantiza la seguridad y estabiliza (primeros minutos)","detalle":"Asegura entorno y personal (riesgo de agresividad/reacciones homicidas). Monitor de TA, FC y SatO2; vía venosa. Vigila estrechamente la TA por riesgo de hipotensión grave."},
+ {"paso":"Descarta causa orgánica","detalle":"Glucemia capilar, ECG y exploración neurológica básica. Considera TC craneal si hay focalidad, lesión cerebral conocida o coma al ceder la excitación (forma furiosa)."},
+ {"paso":"Sedación según el cuadro predominante","sub":[
+   {"nivel":"emergente","t":"Agitación/agresividad → Midazolam 0,2 mg/kg IM (≈1 ampolla de 15 mg) como primera opción; alternativa Diazepam 10 mg IV a 2 mg/min o Clorazepato 50 mg IM."},
+   {"t":"Predominio de alucinaciones o delirio de persecución → Haloperidol 5 mg IM inicial, mantenimiento 5 mg VO/8 h."}
+ ]},
+ {"paso":"Evita contraindicaciones","detalle":"En la forma convulsiva/epileptiforme NO uses fenotiazinas. Indaga uso concomitante de ISRS (mayor riesgo de desencadenar el cuadro)."},
+ {"paso":"Reevalúa de forma continua","detalle":"Monitoriza nivel de conciencia y TA hasta que descienda la alcoholemia. Vigila la entrada en coma al ceder la excitación psicomotriz."},
+ {"paso":"Destino","detalle":"Todos requieren ingreso, preferiblemente en área de observación de urgencias, hasta que cesen los efectos del alcohol y se normalice la conducta. Valoración psiquiátrica posterior."}
+], "ddx": []}

@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"X — Control de hemorragia exanguinante","detalle":"Antes del ABCDE: comprime y aplica torniquete en hemorragias externas masivas de miembros; empaquetamiento en uniones. Avisa al equipo de trauma y prepara protocolo de transfusión masiva."},
+ {"paso":"A — Vía aérea con control cervical","detalle":"Asegura permeabilidad con inmovilización cervical en bloque. Glasgow ≤8 → intubación endotraqueal. Aspira, retira cuerpos extraños, cánula si precisa."},
+ {"paso":"B — Ventilación y oxigenación","sub":[
+   {"nivel":"critico","t":"Neumotórax a tensión → descompresión inmediata con aguja y posterior drenaje torácico."},
+   {"nivel":"critico","t":"Hemotórax masivo → drenaje torácico y reposición; valorar toracotomía."},
+   {"nivel":"critico","t":"Taponamiento cardíaco (tríada de Beck) → pericardiocentesis/toracotomía urgente."}
+ ]},
+ {"paso":"C — Circulación y control del shock","detalle":"Dos vías de grueso calibre. Ringer lactato 1,5-2 L (20-25 mL/kg) en 10-20 min (SSF si TCE). Ácido tranexámico 1 g IV en 10 min + 1 g en 8 h dentro de las 3 h. Busca el foco de sangrado (tórax, abdomen, pelvis, fémur)."},
+ {"paso":"D — Valoración neurológica","detalle":"Glasgow, pupilas, focalidad. Glasgow <15 con focalidad → TC craneal urgente. Midriasis unilateral arreactiva + deterioro → herniación: medidas anti-PIC. Revierte anticoagulación si sangrado vital (complejo protrombínico; idarucizumab 5 g si dabigatrán)."},
+ {"paso":"E — Exposición y prevención de hipotermia","detalle":"Desnuda por completo para inspección, después cubre con mantas y usa fluidos calientes. Glucemia, temperatura, sondajes según proceda."},
+ {"paso":"Destino y tratamiento definitivo","sub":[
+   {"nivel":"critico","t":"Inestable / shock clase III-IV / control de daños → quirófano urgente; la cirugía es parte de la reanimación."},
+   {"t":"TCE con Glasgow <15 o focalidad → UCI/Neurocirugía. Transferencia a centro de referencia tras estabilización si los recursos son insuficientes."}
+ ]}
+], "ddx": []}

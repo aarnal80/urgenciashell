@@ -1,0 +1,17 @@
+{"plan": [
+ {"paso":"Reconoce y monitoriza","detalle":"Monitor ECG, TA, SatO2 y vía venosa. O2 si SpO2 <90%. Valora estabilidad hemodinámica (TA, perfusión, nivel de conciencia)."},
+ {"paso":"Realiza ECG de 12 derivaciones e identifica el ritmo","detalle":"Diferencia taquicardia sinusal, taquicardia auricular unifocal, multifocal o paro sinusal. Busca ondas P', BAV 2:1 (sospecha digitálica) y frecuencia ventricular."},
+ {"paso":"Busca y trata la causa subyacente","detalle":"La taquicardia sinusal casi siempre es secundaria: fiebre, dolor, hipovolemia, TEP, tirotoxicosis, anemia. El tratamiento prioritario es el de la causa; descarta TEP, hipertiroidismo y feocromocitoma si es inapropiada."},
+ {"paso":"Decide según tipo de arritmia y estabilidad","sub":[
+   {"nivel":"emergente","t":"Cualquier taquiarritmia auricular con inestabilidad hemodinámica → cardioversión eléctrica sincronizada urgente (previa sedoanalgesia)."},
+   {"t":"Taquicardia sinusal sintomática en ansioso → lorazepam 1 mg SL; si no cede o crisis tirotóxica → metoprolol 2,5 mg IV repetible (máx 15 mg)."},
+   {"t":"Taquicardia auricular unifocal estable sin IC → control de frecuencia con verapamilo 5 mg IV (repetible hasta 20 mg) o metoprolol; con IC → digoxina."},
+   {"t":"Taquicardia auricular multifocal → tratar EPOC/IC descompensadas; corregir hipomagnesemia con sulfato de magnesio 1.500 mg IV; antiarrítmicos poco eficaces."}
+ ]},
+ {"paso":"Maneja el paro sinusal sintomático","sub":[
+   {"nivel":"critico","t":"Pausas >3 s o FC <40 lat/min con inestabilidad → atropina 0,5-1 mg IV repetible (máx 3 mg); si fracasa, marcapasos transcutáneo con analgesia (tramadol IV)."},
+   {"t":"Sin marcapasos disponible → isoproterenol 1 µg/min IV o adrenalina 2 µg/min IV como puente al marcapasos intravenoso."}
+ ]},
+ {"paso":"Considera reversión a ritmo sinusal","detalle":"En taquicardia auricular unifocal estable sin cardiopatía estructural y con frecuencia controlada: flecainida 1,5-3 mg/kg IV en 20 min o propafenona; amiodarona 5-7 mg/kg IV si inestabilidad sin respuesta a cardioversión."},
+ {"paso":"Destino","detalle":"Inestabilidad, paro sinusal con pausas >3 s/FC <40, necesidad de amiodarona IV o cardioversión, multifocal con EPOC/IC descompensada o sospecha digitálica → ingreso/cardiología. Estable controlada → alta con seguimiento."}
+], "ddx": []}

@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"Estabiliza ABC y monitoriza (primeros minutos)","detalle":"Asegura vía aérea, posición lateral, oxígeno y aspiración de secreciones. Monitoriza SatO2, FC y TA. Glucemia capilar inmediata. Pesa o estima el peso para dosificar. Si depresión respiratoria, valora intubación orotraqueal."},
+ {"paso":"Corrige causas tratables y obtén acceso","detalle":"Canaliza vía venosa; corrige hipoglucemia. En <18 meses con estatus establecido, administra piridoxina 100-200 mg IV para descartar dependencia. Busca fiebre, tóxicos, focalidad o signos meníngeos."},
+ {"paso":"Administra benzodiacepina de primera línea si la crisis dura >5 min","sub":[
+   {"nivel":"emergente","t":"Sin acceso venoso → diazepam rectal 0,5 mg/kg (5 mg si <3 años, 10 mg si >3 años) o midazolam bucal según edad; repetible a los 10-15 min."},
+   {"nivel":"emergente","t":"Con acceso venoso → diazepam IV 0,3 mg/kg a <1-2 mg/min, repetible cada 5 min (máx 5 mg si <5 años, 10 mg si >5 años)."}
+ ]},
+ {"paso":"Escala a segunda línea si no cede tras dos dosis de benzodiacepina","sub":[
+   {"nivel":"emergente","t":"Estatus establecido → valproato 20 mg/kg IV en 5 min (mantenimiento 1-2 mg/kg/h), o levetiracetam 30-60 mg/kg en 20 min (máx 1.500 mg), o difenilhidantoína 15-20 mg/kg a <50 mg/min."}
+ ]},
+ {"paso":"Trata el estatus refractario en tercera línea","sub":[
+   {"nivel":"critico","t":"Crisis >30 min sin respuesta → midazolam 0,2 mg/kg IV en bolo + perfusión 0,1-0,5 mg/kg/h, o tiopental, o propofol; ingreso en UCIP con soporte ventilatorio."}
+ ]},
+ {"paso":"Maneja la crisis febril y su filiación","detalle":"Control de fiebre con paracetamol 10-15 mg/kg/4-6 h o ibuprofeno 7 mg/kg/8 h. Identifica crisis febril compleja (focal, >15 min, recidivante o con déficit poscrítico). Indica TC y/o punción lumbar si focalidad, signos meníngeos o Glasgow <15 mantenido."},
+ {"paso":"Decide destino","detalle":"UCIP: estatus refractario o necesidad de ventilación. Ingreso: crisis febril compleja, sospecha de infección del SNC, alteración neurológica poscrítica, primera crisis febril con ansiedad familiar o condiciones sociales desfavorables. Resto: alta con instrucciones y seguimiento por pediatra/neuropediatría."}
+], "ddx": []}

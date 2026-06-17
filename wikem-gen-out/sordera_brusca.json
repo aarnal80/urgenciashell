@@ -1,0 +1,11 @@
+{"plan": [
+ {"paso":"Reconoce la emergencia otológica","detalle":"Sospecha sordera brusca ante pérdida neurosensorial ≥30 dB instaurada en ≤72 h, habitualmente unilateral, a veces con sensación de taponamiento. El diagnóstico y tratamiento precoces son determinantes para evitar pérdida permanente."},
+ {"paso":"Confirma el patrón neurosensorial a pie de cama","detalle":"Otoscopia (normal) y acumetría: Weber lateralizado al oído sano y Rinne positivo patológico confirman hipoacusia neurosensorial. Solicita audiograma urgente."},
+ {"paso":"Descarta causas y signos de alarma","detalle":"Indaga vértigo o acúfenos (peor pronóstico), exposición ototóxica y antecedentes. Si hay sospecha de lesión retrococlear (neurinoma del acústico), programa RMN con gadolinio."},
+ {"paso":"Inicia corticoterapia sin demora (primeras 48 h)","sub":[
+   {"nivel":"emergente","t":"Primera línea → Metilprednisolona 1 mg/kg/24 h IV (o Prednisona 1 mg/kg/24 h VO) 10-14 días, con reducción progresiva otros 10-14 días."},
+   {"t":"Contraindicación de corticoides sistémicos o rescate → corticoides intratimpánicos a cargo de ORL."}
+ ]},
+ {"paso":"Valora tratamiento empírico coadyuvante","detalle":"Según protocolo del centro, considera vasodilatadores (gas carbógeno 5 L/min, piracetam, nimodipino o pentoxifilina) o hemodilución con dextrano 40. Pasadas 4 semanas, los corticoides apenas aportan beneficio."},
+ {"paso":"Destino","detalle":"Todos los pacientes con sospecha diagnóstica requieren ingreso hospitalario y evaluación por ORL. Reevalúa con audiograma a las 2 semanas y valora terapia de rescate si no hay mejoría."}
+], "ddx": []}

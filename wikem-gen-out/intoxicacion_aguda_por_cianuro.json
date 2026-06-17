@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Sospecha precoz y estabilización inmediata","detalle":"Monitoriza ECG, TA y SatO2; canaliza vía con SSF. Sospecha ante víctima de incendio (humos de plásticos/poliuretano) que NO mejora con O2 a alto flujo y presenta coma, shock o convulsiones de inicio brusco. No hay cianosis. Administra O2 al 100%."},
+ {"paso":"Confirma con datos analíticos","detalle":"Gasometría: acidosis láctica con anion gap elevado. Sospecha fuerte si lactato ≥10 mmol/L (incendio) o ≥8 (cianuro puro). Dato paradójico: SatO2 venosa central >70% o pO2 venosa >40 mmHg por bloqueo de la utilización tisular."},
+ {"paso":"Administra el antídoto SIN demora","sub":[
+   {"nivel":"critico","t":"Sospecha fundada o riesgo vital → hidroxicobalamina 5 g IV en 15 min (10 g si parada/riesgo vital); 2.ª dosis de 5 g según respuesta."},
+   {"nivel":"critico","t":"Intoxicación grave → añadir tiosulfato sódico 12,5 g IV en 10 min (sinérgico)."},
+   {"t":"No se dispone de hidroxicobalamina → edetato dicobáltico 600 mg IV en 1 min; 300 mg más si no hay respuesta a los 5 min."}
+ ]},
+ {"paso":"Descontamina con la vía aérea protegida","detalle":"Exposición cutánea: retira la ropa y lava piel y ojos con abundante agua/SSF. Ingestión <30 min: carbón activado 1 g/kg solo si la vía aérea está protegida (intubación previa)."},
+ {"paso":"Soporte avanzado de las complicaciones","detalle":"Trata convulsiones, arritmias (bloqueo AV, isquemia) y shock; soporte ventilatorio y hemodinámico. Considera intoxicación combinada por CO en víctimas de incendio."},
+ {"paso":"Define el destino","sub":[
+   {"nivel":"critico","t":"Toda intoxicación confirmada o tratada → UCI."},
+   {"t":"Sospecha que a las 4 h tiene constantes normales, sin acidosis, lactato normal y ECG normal → alta."}
+ ]}
+], "ddx": []}

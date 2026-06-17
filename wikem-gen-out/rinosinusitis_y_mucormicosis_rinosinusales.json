@@ -1,0 +1,17 @@
+{"plan": [
+ {"paso":"Valora signos de complicación grave (primeros minutos)","detalle":"Constantes y temperatura. Busca banderas rojas: dolor orbitario, proptosis, diplopía, pérdida de agudeza visual, cefalea intensa, focalidad neurológica, rigidez de nuca o disminución del nivel de conciencia."},
+ {"paso":"Identifica al paciente inmunodeprimido y descarta mucormicosis","sub":[
+   {"nivel":"critico","t":"Placas necróticas negruzcas en fosas/paladar, rinorrea sanguinolenta o celulitis malar de rápida progresión en inmunodeprimido (diabetes, hemopatía, trasplante, VIH, COVID+corticoides) → sospecha de mucormicosis: TC/RM urgente, valoración ORL y cirugía urgente para desbridamiento + antifúngico IV."}
+ ]},
+ {"paso":"Ante complicación orbitaria o intracraneal, imagen y especialista","sub":[
+   {"nivel":"emergente","t":"Celulitis preseptal/orbitaria, oftalmoplejía o quemosis → TC/RM urgente; vancomicina IV (cobertura SARM) asociada a ceftriaxona/cefotaxima, ampicilina-sulbactam o piperacilina-tazobactam, y valoración por ORL/oftalmología."},
+   {"nivel":"emergente","t":"Sospecha de meningitis, absceso o trombosis del seno cavernoso → neuroimagen urgente y antibioterapia IV; ingreso."}
+ ]},
+ {"paso":"Trata la mucormicosis confirmada/sospechada","detalle":"Anfotericina B 5-10 mg/kg/día IV (en glucosado 5% hasta 500 mL, en 2-3 h) como antifúngico de elección; voriconazol IV como alternativa. Control del dolor IV con dexketoprofeno 50 mg/8 h o metamizol 2 g/8 h. Corrige la inmunodepresión de base (p. ej. cetoacidosis diabética)."},
+ {"paso":"En rinosinusitis no complicada, clasifica viral vs bacteriana","detalle":"Diagnóstico clínico. Viral (<7-10 días): sintomático. Bacteriana: síntomas >10 días o empeoramiento tras 5-7 días, o fiebre >39 °C/dolor facial intenso."},
+ {"paso":"Pauta el tratamiento sintomático y antibiótico según corresponda","sub":[
+   {"t":"No complicada → analgesia (ibuprofeno 600 mg/8 h), corticoide nasal (mometasona/fluticasona 2 puls/12 h), descongestivo (oximetazolina, máx. 5 días)."},
+   {"t":"Bacteriana leve-moderada → amoxicilina 1 g/8 h o amoxicilina-clavulánico 875/125 mg/8 h 7 días; alérgicos/sin mejoría: levofloxacino 500 mg/24 h o moxifloxacino 400 mg/24 h."}
+ ]},
+ {"paso":"Decide destino","detalle":"Rinosinusitis no complicada: alta con tratamiento y normas de revisión. Complicación orbitaria/intracraneal, inmunodeprimido con cuadro complicado o mucormicosis: ingreso hospitalario."}
+], "ddx": []}

@@ -1,0 +1,20 @@
+{"plan": [
+ {"paso":"Reconoce la toxicidad cardiovascular y estabiliza","detalle":"Monitor ECG continuo, TA, SatO2 y glucemia; doble vía venosa. Sospecha ante bradicardia intensa, hipotensión y shock cardiogénico. La nula respuesta a 1 mg de atropina confirma el diagnóstico. Recuerda que el sotalol puede dar toxicidad tardía (hasta 48 h)."},
+ {"paso":"Realiza ECG y ecocardiograma urgente","detalle":"Valora bradicardia, bloqueo AV, QRS >0,12 s y QT (torsades, sobre todo con sotalol). El ecocardiograma orienta el soporte inotrópico y vasopresor."},
+ {"paso":"Descontamina y corrige la conducción","detalle":"Carbón activado 1 g/kg (luego 0,5 g/kg/4 h), útil en liberación retardada; irrigación con polietilenglicol si procede. Si QRS >0,12 s: bicarbonato sódico 1 M 0,5-2 mEq/kg en bolo. Magnesio 2 g IV si arritmia ventricular/torsades."},
+ {"paso":"Trata la bradicardia, el bloqueo y la hipotensión","sub":[
+   {"nivel":"critico","t":"Bradicardia/bloqueo AV → glucagón bolo 5-10 mg IV (repetible cada 3-5 min), seguido de infusión 4 mg/h ajustable; si no responde, adrenalina o milrinona."},
+   {"nivel":"critico","t":"Hipotensión/shock → cargas de SSF 200 mL/10 min hasta 20-40 mL/kg + noradrenalina; gluconato cálcico 10% 0,6 mL/kg para la contractilidad."},
+   {"nivel":"critico","t":"Shock refractario → hiperinsulinemia-euglucemia: insulina 1 UI/kg en bolo + infusión 0,5 UI/kg/h con glucosa 50% 25 g; vigila K+ y glucemia."}
+ ]},
+ {"paso":"Maneja las complicaciones sistémicas","sub":[
+   {"nivel":"emergente","t":"Convulsiones → midazolam 0,1 mg/kg IV (máx 0,4 mg/kg); evita difenilhidantoína."},
+   {"t":"Hiperpotasemia → salbutamol 0,5 mg IV en 20 min o nebulizado 5-10 mg."},
+   {"t":"Vómitos → metoclopramida 10-20 mg/8 h IV (granisetrón si no responde)."}
+ ]},
+ {"paso":"Define el destino","sub":[
+   {"t":"Alteración de conciencia, arritmias o hipotensión → UCI."},
+   {"t":"Estable → observación mínima 24 h."},
+   {"t":"Sotalol → observación mínima 48 h por toxicidad tardía."}
+ ]}
+], "ddx": []}

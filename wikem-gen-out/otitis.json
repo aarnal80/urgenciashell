@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Anamnesis y otoscopia (prueba clave)","detalle":"Caracteriza la otodinia, otorrea, fiebre y antecedentes (diabetes, inmunodepresión, colesteatoma). Realiza otoscopia para clasificar: otitis externa (localizada/difusa, bacteriana/micótica), otitis media aguda o externa maligna."},
+ {"paso":"Identifica datos de alarma","detalle":"Busca parálisis facial periférica, dolor/edema retroauricular (mastoiditis), signos meníngeos o deterioro de conciencia, y otorrea verdosa persistente en diabético/inmunodeprimido. Ante cualquiera, TC urgente."},
+ {"paso":"Controla el dolor","detalle":"Metamizol 575 mg/6-8 h, Ibuprofeno 600 mg/8 h o Dexketoprofeno 25 mg/8 h VO. Si no cede, añade Tramadol 50 mg/8 h."},
+ {"paso":"Pauta el tratamiento según el tipo","sub":[
+   {"t":"Otitis externa → gotas óticas antibióticas 7 días; ciprofloxacino oral 500 mg/12 h si premedicado, alérgico a penicilina o diabético. Si micótica → clioquinol-beclometasona tópico."},
+   {"t":"Otitis media aguda presupurada/supurada → Amoxicilina-clavulánico 875/125 mg/8 h o Cefuroxima 500 mg/12 h, 7-10 días; descongestivo nasal si fase catarral."},
+   {"nivel":"emergente","t":"Otitis externa maligna → ciprofloxacino 500 mg/12 h VO 10 días + tópico ótico; valoración ORL preferente."}
+ ]},
+ {"paso":"Reevalúa la respuesta","detalle":"Revisa la evolución del dolor y la fiebre. El fracaso del tratamiento oral con afectación general puede requerir antibioterapia parenteral (Ceftriaxona 1-2 g/24 h IV/IM)."},
+ {"paso":"Destino","sub":[
+   {"nivel":"emergente","t":"Complicaciones (mastoiditis, meningitis otógena, absceso, tromboflebitis) o externa maligna con parálisis facial/extensión → ingreso con TC y antibioterapia parenteral precoz."},
+   {"t":"Otitis no complicada → alta con tratamiento ambulatorio y control por su médico/ORL."}
+ ]}
+], "ddx": []}

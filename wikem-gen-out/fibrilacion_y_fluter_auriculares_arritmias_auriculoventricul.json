@@ -1,0 +1,19 @@
+{"plan": [
+ {"paso":"Reconoce y monitoriza","detalle":"Monitor ECG, TA, SatO2 y vía venosa. O2 si SpO2 <90%. Valora estabilidad hemodinámica de inmediato."},
+ {"paso":"Realiza ECG de 12 derivaciones y caracteriza la arritmia","detalle":"Identifica FA/FLA, anchura del QRS, frecuencia ventricular (lenta/normal/rápida), preexcitación (WPW) y TV. Define duración del episodio (<48 h vs >48 h/desconocida)."},
+ {"paso":"Decide según estabilidad hemodinámica","sub":[
+   {"nivel":"emergente","t":"Inestabilidad (shock cardiogénico, EAP, síncope) → cardioversión eléctrica urgente sincronizada inmediata, previa sedoanalgesia."},
+   {"nivel":"critico","t":"FA con WPW (QRS >0,12 s, FV >200 lat/min) → cardioversión eléctrica urgente; NO uses adenosina, betabloqueantes, verapamilo, diltiazem ni digoxina (riesgo de fibrilación ventricular)."},
+   {"nivel":"critico","t":"Torsades de pointes → sulfato de magnesio IV y corrección del QTc; TV monomorfa sostenida con deterioro → cardioversión prioritaria."}
+ ]},
+ {"paso":"Controla la frecuencia ventricular en FA/FLA rápida estable","sub":[
+   {"t":"Sin insuficiencia cardíaca → metoprolol 2,5 mg IV repetible (máx 15 mg) o verapamilo 5 mg IV (máx 20 mg)."},
+   {"t":"Con insuficiencia cardíaca → digoxina 0,25 mg IV/2 h (máx 1,5 mg); si fracasa o contraindicación, amiodarona 5-7 mg/kg IV."}
+ ]},
+ {"paso":"Plantea control del ritmo (cardioversión farmacológica)","sub":[
+   {"t":"Sin cardiopatía estructural ni IC → flecainida 1,5-3 mg/kg IV en 20 min, propafenona o vernakalant 3 mg/kg IV en 10 min."},
+   {"t":"Con cardiopatía estructural sin IC → amiodarona IV."}
+ ]},
+ {"paso":"Estratifica riesgo y anticoagula","detalle":"Calcula CHA2DS2-VASc (tromboembólico) y HAS-BLED (hemorrágico). FA no valvular → ACOD (apixabán 5 mg/12 h, rivaroxabán 20 mg/24 h, etc.) o AVK (INR 2-3); FA valvular → acenocumarol (INR 2,5-3,5). En FA aguda <48 h: enoxaparina 100 UI/kg SC."},
+ {"paso":"Maneja arritmias AV específicas y destino","detalle":"Taquicardia paroxística de la unión AV estable → maniobras vagales + adenosina 6 mg IV (hasta 24 mg); si no, verapamilo IV. Ingreso: inestabilidad, WPW, TV/torsades, FA lenta sintomática (<40 o pausas >3 s), taquicardia nodal refractaria o intoxicación digitálica."}
+], "ddx": []}

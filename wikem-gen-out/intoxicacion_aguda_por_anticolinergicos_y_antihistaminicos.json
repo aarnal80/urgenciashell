@@ -1,0 +1,17 @@
+{"plan": [
+ {"paso":"Reconoce el síndrome anticolinérgico y estabiliza","detalle":"Monitoriza ECG, TA, SatO2 y temperatura; canaliza vía venosa. O2 en Venturi al 30% y fluidoterapia con glucosalino. Busca la tríada clave: anhidrosis (signo guía), midriasis y taquicardia, con agitación/delirio."},
+ {"paso":"Realiza ECG e identifica la cardiotoxicidad","detalle":"Mide QRS y QT. La difenhidramina y los tricíclicos bloquean los canales rápidos de sodio: si QRS ensanchado, prepara bicarbonato sódico para arritmias por bloqueo de sodio."},
+ {"paso":"Descontamina si procede","detalle":"Carbón activado (dosis múltiples cada 2-4 h) válido hasta 6 h por el íleo que produce el tóxico. Contraindicado si íleo paralítico establecido."},
+ {"paso":"Trata según la manifestación predominante","sub":[
+   {"nivel":"emergente","t":"Delirio/alucinaciones/agitación grave → fisostigmina 1-2 mg IV lenta (3 min), repetible cada 10 min hasta 4 mg/30 min; más eficaz que las benzodiacepinas."},
+   {"t":"Agitación sin indicación de fisostigmina → midazolam 0,2 mg/kg IM (≈1 amp de 15 mg)."},
+   {"nivel":"emergente","t":"Convulsiones → midazolam 0,1 mg/kg IV inicial, repetible sin superar 0,4 mg/kg."},
+   {"t":"Íleo/seudoobstrucción → neostigmina 0,25 mg SC."}
+ ]},
+ {"paso":"Vigila la hipertermia y la rabdomiólisis","detalle":"Enfría activamente si T >40 °C; hidrata y controla CK ante agitación intensa. Ten preparada atropina (mitad de la dosis de fisostigmina) por si aparece toxicidad colinérgica iatrogénica."},
+ {"paso":"Define el destino","sub":[
+   {"t":"Cuadro confusional, agitación grave, arritmias, convulsiones o hipertermia → UCI."},
+   {"t":"Cuadro leve → observación ≥8 h hasta quedar asintomático (escopolamina: ~6 h de toxicidad)."},
+   {"t":"Normalidad neurológica y cardiovascular → alta con seguimiento."}
+ ]}
+], "ddx": []}

@@ -1,0 +1,20 @@
+{
+ "plan": [
+  {"paso":"Valora estabilidad y busca red flags (primeros minutos)","detalle":"Comprueba constantes. Sospecha sífilis cardiovascular terciaria si inestabilidad hemodinámica y neurosífilis/sífilis ocular u ótica si clínica neurológica o visual: requieren manejo hospitalario IV."},
+  {"paso":"Anamnesis y exploración genital dirigida","detalle":"Caracteriza la presentación: úlcera genital, secreción uretral/cervicitis, adenopatía inguinal o lesión no ulcerosa. Toma muestras microbiológicas antes de tratar."},
+  {"paso":"Criba sistemáticamente coinfecciones","detalle":"Solicita serología de VIH, sífilis y hepatitis en toda ITS. En toda mujer en edad fértil, descarta embarazo con test."},
+  {"paso":"Trata empíricamente según el síndrome clínico","sub":[
+    {"t":"Úlcera genital indolora → sífilis: penicilina G benzatina 2.400.000 U IM dosis única (doxiciclina 100 mg/12 h 14 días si alergia)."},
+    {"t":"Úlcera dolorosa → chancroide: azitromicina 1 g VO dosis única o ceftriaxona 250 mg IM."},
+    {"t":"Adenopatía inguinal/proctitis → LGV: doxiciclina 100 mg/12 h 21 días."},
+    {"t":"Secreción uretral/cervicitis → cubre gonococo + Chlamydia de forma combinada por coinfección frecuente."}
+  ]},
+  {"paso":"Anticipa la reacción de Jarisch-Herxheimer","detalle":"Tras la primera dosis de penicilina en sífilis temprana, advierte y vigila 1-2 h por fiebre, escalofríos, hipotensión y taquicardia; en embarazada hay riesgo de parto prematuro y sufrimiento fetal."},
+  {"paso":"Identifica las formas que exigen ingreso","sub":[
+    {"nivel":"emergente","t":"Neurosífilis/sífilis ocular u ótica → ingreso: penicilina G sódica 18-24 MUI/24 h IV 10-14 días (desensibilizar si alergia)."},
+    {"t":"VIH con CD4 <200/µL y fiebre, o EPI moderada-grave → ingreso y estudio de oportunistas/complicaciones."}
+  ]},
+  {"paso":"Destino, declaración y medidas de salud pública","detalle":"La mayoría se manejan ambulatoriamente con alta y tratamiento. Declara las ITS de declaración obligatoria, recomienda estudio y tratamiento de contactos y abstinencia hasta completar la pauta."}
+ ],
+ "ddx": []
+}

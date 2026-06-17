@@ -1,0 +1,17 @@
+{"plan": [
+ {"paso":"Reconoce y monitoriza","detalle":"Monitor ECG continuo, TA, SatO2 y vía venosa. O2 si SpO2 <90%. Valora estabilidad hemodinámica (hipotensión, síncope, bajo gasto)."},
+ {"paso":"Realiza ECG de 12 derivaciones e identifica el trastorno de conducción","detalle":"Diferencia BSA, BAV de primer grado (PR largo), segundo grado (Mobitz I/II), tercer grado (disociación AV con escape), WPW y enfermedad del seno (bradicardia-taquicardia). Mide anchura del QRS del ritmo de escape."},
+ {"paso":"Decide según tipo de bloqueo y estabilidad","sub":[
+   {"nivel":"critico","t":"BAV de tercer grado o Mobitz II, o bradiarritmia inestable → marcapasos transcutáneo urgente; si escape ventricular (QRS ancho) la atropina NO está indicada."},
+   {"t":"Bradiarritmia inestable con escape no ventricular → atropina 0,5-1 mg IV repetible (máx 3 mg) como puente al marcapasos."},
+   {"t":"BAV de primer grado o Mobitz I asintomático → no precisa tratamiento urgente; vigila progresión."}
+ ]},
+ {"paso":"Maneja el síndrome de WPW","sub":[
+   {"nivel":"critico","t":"WPW con FA y RR <0,20 s → cardioversión eléctrica urgente (riesgo de fibrilación ventricular)."},
+   {"t":"WPW con taquicardia QRS ancho estable sin cardiopatía → procainamida 50 mg IV cada 5 min (máx 1 g) o flecainida 1,5-3 mg/kg IV en 20 min."},
+   {"nivel":"critico","t":"Evita SIEMPRE en WPW: adenosina, betabloqueantes, verapamilo, diltiazem y digoxina (pueden precipitar fibrilación ventricular)."}
+ ]},
+ {"paso":"Trata factores precipitantes","detalle":"Descarta y corrige isquemia, hiperpotasemia, fármacos bradicardizantes (betabloqueantes, calcioantagonistas, digoxina) e hipotiroidismo."},
+ {"paso":"Maneja la enfermedad del seno","detalle":"Bradicardia sinusal persistente, paro sinusal o BSA con repercusión → atropina/marcapasos según estabilidad. En síndrome bradicardia-taquicardia, valora marcapasos antes de antiarrítmicos."},
+ {"paso":"Destino","detalle":"BAV Mobitz II o completo, BSA con pausas >3 s o FC <40, WPW sintomático y enfermedad del seno con repercusión → ingreso (marcapasos/estudio electrofisiológico). BAV de primer grado por fármaco/intoxicación → observación. Inestabilidad → ingreso urgente."}
+], "ddx": []}

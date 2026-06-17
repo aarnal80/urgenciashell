@@ -1,0 +1,17 @@
+{"plan": [
+ {"paso":"Confirma hiperglucemia aislada y descarta complicación aguda","detalle":"HS = glucemia >200 mg/dL sin acidosis (pH normal) ni hiperosmolaridad (<320 mOsm/L). Determina cetonemia/cetonuria, gasometría y osmolaridad para excluir cetoacidosis o descompensación hiperosmolar."},
+ {"paso":"Identifica los signos de alarma que cambian el manejo","sub":[
+   {"t":"Cetosis grave (cetonemia ≥3 mmol/L o cetonuria +++/++++) o síntomas de cetoacidosis → trata como cetoacidosis: insulina IV.","nivel":"critico"},
+   {"t":"Glucemia >400 mg/dL → reposición hídrica IV obligatoria y valorar insulina IV.","nivel":"emergente"},
+   {"t":"Glucemia 250-400 mg/dL sin cetosis o cetosis leve → insulina SC correctora.","nivel":"emergente"}
+ ]},
+ {"paso":"Administra la dosis correctora de insulina","detalle":"Análogo ultrarrápido SC: dosis = (glucemia real − 170) / FSI, con FSI = 1.800/DTI (si no se conoce, FSI ≈50, o 0,05 UI/kg si <400 mg/dL sin cetosis, 0,10 UI/kg si ≥400 mg/dL o cetosis moderada/grave). +20% en cetosis moderada/grave o HS por corticoides; −50% si ejercicio en las 2-3 h previas."},
+ {"paso":"Aplica insulina IV e hidratación cuando proceda","detalle":"Si glucemia >400 mg/dL, cetosis grave o necesidad de control rápido (cirugía inmediata, ACV, IAM): insulina regular IV 0,1 UI/kg/h (100 UI en 100 mL SSF; 7 mL/h para 70 kg) + SSF 0,9% según deshidratación. Hidratación oral si deshidratación leve y tolera."},
+ {"paso":"Maneja las situaciones especiales con su pauta propia","sub":[
+   {"t":"Hiperglucemia por corticoides → ascenso posprandial vespertino: incrementa bolos +20% desayuno/cena y +30% almuerzo, mantén basal.","nivel":"emergente"},
+   {"t":"DM1 hospitalizada (incluso en ayuno) → aporte insulina-glucosa con mínimo 4-6 controles/día.","nivel":"emergente"},
+   {"t":"Perioperatorio → glucemia objetivo 110-180 mg/dL; iniciar tratamiento si >180 mg/dL; pauta IV si >350 mg/dL al llegar a quirófano.","nivel":"emergente"}
+ ]},
+ {"paso":"Reevalúa la respuesta a las dosis correctoras","detalle":"Repite control glucémico (cada 1 h en pauta IV, cada 2 h en SC). Si la cetosis persiste tras 2-3 dosis correctoras, replantea el manejo y considera observación."},
+ {"paso":"Destino","detalle":"DM conocido con HS puntual sin cetosis → alta sin cambios. Cetosis persistente tras 2-3 dosis, mal control reiterado o sospecha de DM1/insulinopenia/corticoides → observación o interconsulta a hospital de día de diabetes. DM no conocido sin criterios → alta con tratamiento y derivación a atención primaria."}
+], "ddx": []}

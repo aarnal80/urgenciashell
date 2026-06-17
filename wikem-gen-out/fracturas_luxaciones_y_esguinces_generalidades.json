@@ -1,0 +1,14 @@
+{"plan": [
+ {"paso":"Valora el miembro y descarta urgencia neurovascular","sub":[
+   {"nivel":"emergente","t":"Ausencia de pulsos, palidez/frialdad, parestesias o dolor distal (especialmente luxación de rodilla, fractura supracondílea o cintura escapular/pélvica) → reducción/alineación urgente y valoración vascular."},
+   {"t":"Estado neurovascular conservado → continúa exploración y analgesia."}
+ ]},
+ {"paso":"Inmoviliza y analgesia precoz","detalle":"Alinea y entablilla el foco, retira anillos/ropa compresiva, eleva el miembro y aplica frío. Pauta analgesia adecuada antes de movilizar para imagen."},
+ {"paso":"Clasifica la lesión con radiografía","detalle":"Solicita radiografía en dos proyecciones incluyendo articulaciones adyacentes. Define: fractura/luxación/esguince, abierta o cerrada, desplazada o no, grado del esguince (I-III). Fractura patológica → descarta tumor/quiste/osteoporosis."},
+ {"paso":"Trata la fractura abierta como urgencia infecciosa","sub":[
+   {"nivel":"emergente","t":"Fractura abierta (grados I-III) → en las primeras 4 h: cefazolina 2 g IV de carga + 1 g/8 h 3 días (+ tobramicina 3-5 mg/kg/día si grado alto); herida con tierra → añade penicilina G 4 MUI/6 h. Profilaxis antitetánica, cubre la herida y avisa a Traumatología."}
+ ]},
+ {"paso":"Reduce luxaciones e inmoviliza definitivamente","detalle":"Reduce las luxaciones lo antes posible bajo analgesia/sedación; comprueba estado neurovascular antes y después. Yeso/férula según lesión, con control de tolerancia."},
+ {"paso":"Pauta tromboprofilaxis si inmovilización prolongada","detalle":"Fracturas de miembro inferior, columna, cadera o pelvis (y esguinces que obligan a inmovilidad) → bemiparina 3.500 UI/24 h SC durante todo el período de inmovilización."},
+ {"paso":"Destino","detalle":"Ingresan: fracturas abiertas, las que requieren cirugía, edema importante o yeso cerrado con vigilancia neurovascular, y vertebrales con dolor intenso no manejable ambulatoriamente. El resto: alta con inmovilización, analgesia y revisión por Traumatología."}
+], "ddx": []}

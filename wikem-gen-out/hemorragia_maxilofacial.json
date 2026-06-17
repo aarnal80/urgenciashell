@@ -1,0 +1,14 @@
+{"plan": [
+ {"paso":"Valora repercusión hemodinámica y la vía aérea","detalle":"Monitoriza TA, FC, SatO2. Busca taquicardia, palidez, hipotensión (shock hipovolémico). Vigila el sangrado en suelo de boca por riesgo de compromiso de vía aérea."},
+ {"paso":"Localiza el punto sangrante","detalle":"Aspira secreciones y coágulos, buena iluminación. Identifica origen local (exodoncia, periodontitis, tumor, traumatismo) frente a sospecha de coagulopatía (sangrado sin coágulos)."},
+ {"paso":"Aplica hemostasia local escalonada","detalle":"Compresión con gasa, taponamiento y sutura del alvéolo. Agentes coagulantes tópicos. Ácido tranexámico tópico (vial 500 mg) o enjuagues 2 min hasta 4 veces/día en sangrado periodontal."},
+ {"paso":"Solicita pruebas si hay datos de gravedad","detalle":"Hemograma y coagulación solo si inestabilidad, sospecha de anemia o coagulopatía. Revisa anticoagulación/antiagregación."},
+ {"paso":"Trata el shock y la coagulopatía","sub":[
+   {"nivel":"critico","t":"Shock hipovolémico → cristaloides IV, fármacos vasoactivos y concentrado de hematíes según protocolo; ácido tranexámico IV 0,5-1 g si sangrado muy abundante."},
+   {"t":"Coagulopatía → corrige con plasma, factores de coagulación o pool de plaquetas según el déficit identificado."}
+ ]},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"critico","t":"Inestabilidad/shock, hemorragia tumoral masiva (posible ligadura de carótida externa) o postraumática con lesión ósea/vascular mayor → ingreso e interconsulta urgente a Maxilofacial."},
+   {"t":"Sangrado controlado con medidas locales → observación y alta con instrucciones, evitar enjuagues vigorosos."}
+ ]}
+], "ddx": []}

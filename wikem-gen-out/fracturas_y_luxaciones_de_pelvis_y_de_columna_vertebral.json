@@ -1,0 +1,14 @@
+{"plan": [
+ {"paso":"Estabiliza como politraumatizado de alta energía","detalle":"ABCDE, monitor TA/SatO2, dos vías gruesas, analítica con pruebas cruzadas. Inmoviliza en bloque con tabla espinal y collarín; moviliza con maniobra en bloque (log-roll)."},
+ {"paso":"Controla la hemorragia pélvica si hay inestabilidad","sub":[
+   {"nivel":"critico","t":"Inestabilidad hemodinámica o sospecha de hemorragia masiva en fractura pélvica → faja/cinturón pélvico de inmediato, reposición y protocolo de transfusión masiva; valora angioembolización o fijación externa."}
+ ]},
+ {"paso":"Realiza exploración neurológica sistemática","detalle":"Valora fuerza, sensibilidad, reflejos y tono esfinteriano en toda fractura de columna. Documenta nivel lesional. Detecta paraplejía, síndrome del cono medular o de la cola de caballo."},
+ {"paso":"Identifica lesiones de máxima urgencia","sub":[
+   {"nivel":"critico","t":"Síndrome del cono medular o fractura-luxación cervical con compromiso del canal → descompresión quirúrgica urgente; aviso inmediato a Neurocirugía/Traumatología."},
+   {"nivel":"emergente","t":"Fractura odontoides inestable o estallido vertebral con fragmentos en canal → inmovilización estricta y valoración quirúrgica."}
+ ]},
+ {"paso":"Solicita imagen y clasifica","detalle":"TC para pelvis (clasificación de Tile A/B/C) y columna. Descarta lesión urológica asociada: hematuria/uretrorragia → no sondar, valora rotura uretral/vesical. NO usar corticoides en lesión medular."},
+ {"paso":"Pauta tromboprofilaxis","detalle":"Fractura pélvica con inmovilización → bemiparina 3.500 UI/24 h SC mientras dure la inmovilización (alto riesgo de enfermedad tromboembólica)."},
+ {"paso":"Destino","detalle":"Ingreso: fractura pélvica inestable (Tile B/C) con sangrado, cualquier fractura de columna con déficit neurológico, cono medular/cola de caballo (urgente), fractura-luxación con riesgo medular y fracturas que precisen tracción/halo. Politraumatismo con fractura pélvica grave → UCI/quirófano."}
+], "ddx": []}

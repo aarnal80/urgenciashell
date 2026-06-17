@@ -1,5 +1,5 @@
 /* Service worker — cache-first del shell para uso offline. */
-var CACHE = "vital-assist-v32";
+var CACHE = "vital-assist-v33";
 var ASSETS = [
   "./", "./index.html", "./styles.css", "./app.js", "./topics-data.js", "./scales-data.js", "./drugs-index.js",
   "./drug-aliases.js", "./scales-extra.js", "./topics-extra.js", "./ddx-demo.js",

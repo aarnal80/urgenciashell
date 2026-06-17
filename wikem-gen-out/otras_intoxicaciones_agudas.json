@@ -1,0 +1,17 @@
+{"plan": [
+ {"paso":"Reconoce y estabiliza (ABC)","detalle":"Monitor ECG, TA, SatO2, Tª y glucemia; vía venosa. Asegura vía aérea y ventilación (barbitúricos y neurolépticos pueden causar coma con depresión respiratoria). Trata el shock con cargas de SSF 300 mL repetibles; dopamina si fracasa la volemia."},
+ {"paso":"Orienta el tóxico e identifica el toxíndromo","detalle":"Anamnesis, examen físico y toxicología. Radiografía simple de abdomen útil en sustancias radioopacas (arsénico, hierro, plomo). Solicita gasometría con anion gap (elevado en etilenglicol, metanol, isoniazida), iones, función renal/hepática, CK y niveles si disponibles. Activa protocolo médico-forense si sospecha de sumisión química."},
+ {"paso":"Descontaminación digestiva","detalle":"Carbón activado 1 g/kg VO/SNG (útil en arsénico, IMAO, isoniazida, neurolépticos, paraquat, teofilinas, barbitúricos; NO útil en hierro). Irrigación intestinal con polietilenglicol 2 L/h si comprimidos persistentes de hierro, material radioopaco o preparados de liberación prolongada."},
+ {"paso":"Administra el antídoto específico según el tóxico","sub":[
+   {"nivel":"critico","t":"Metanol/etilenglicol con acidosis → bloqueo con fomepizol (ver capítulo de antídotos); etilenglicol: tiamina 100 mg/6 h + piridoxina 600 mg/6 h, corrige hipocalcemia con gluconato cálcico."},
+   {"t":"Arsénico grave → dimercaprol IM 3 mg/kg/4 h (o D-penicilamina/DMSA/DMPS si no disponible)."},
+   {"nivel":"critico","t":"Tóxico metahemoglobinizante >20% o sintomático → azul de metileno; CO → oxígeno alto flujo/hiperbárico."},
+   {"t":"Colchicina → Fab antic-colchicina si disponible; íleo → neostigmina 0,5 mg/4 h SC."}
+ ]},
+ {"paso":"Trata complicaciones y agitación","detalle":"Convulsiones (isoniazida): piridoxina + benzodiacepinas. Barbitúricos de acción larga: alcalinización urinaria (bicarbonato, pH >7,5). Agitación/delirio por cannabis: midazolam 5 mg IV o haloperidol 5 mg; hiperémesis cannabinoide: metoclopramida 10-20 mg/8 h + omeprazol."},
+ {"paso":"Identifica los cuadros de mortalidad muy elevada","sub":[
+   {"nivel":"critico","t":"Paraquat clase II-III → mortalidad casi del 100%; evita oxígeno suplementario salvo hipoxemia grave."},
+   {"nivel":"critico","t":"IMAO con hipertermia >41 °C / síndrome serotoninérgico → enfriamiento y soporte intensivo."}
+ ]},
+ {"paso":"Destino","detalle":"La mayoría de estas intoxicaciones requieren ingreso hospitalario. UCI en metanol, etilenglicol, coma, arritmias graves o complicaciones cardiorrespiratorias. Cannabis: alta salvo complicaciones. CO: observación neurológica 1-2 semanas."}
+], "ddx": []}

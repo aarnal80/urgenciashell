@@ -1,0 +1,18 @@
+{"plan": [
+ {"paso":"Aplica medidas de emergencia y estabiliza (A-B-C-D-E toxicológico)","detalle":"Monitor ECG, TA, SatO2, glucemia capilar y temperatura. Vía venosa. Asegura vía aérea y ventilación; protege la columna si trauma asociado."},
+ {"paso":"Asegura la vía aérea según el nivel de conciencia","sub":[
+   {"nivel":"critico","t":"Coma con Glasgow <9 o FR >35 o <10 rpm → intubación endotraqueal ANTES de cualquier descontaminación digestiva."},
+   {"nivel":"emergente","t":"Convulsiones activas → contraindican lavado/emesis sin intubación; trata con benzodiacepinas."}
+ ]},
+ {"paso":"Reconoce el toxíndrome para orientar el tratamiento","detalle":"Identifica el patrón (colinérgico, anticolinérgico, simpaticomimético, opiáceo, serotoninérgico, tricíclico, salicílico) y, si procede, administra el antídoto: naloxona en sd. opiáceo (miosis + hipoventilación + coma)."},
+ {"paso":"Decide la descontaminación digestiva","sub":[
+   {"t":"Tóxico adsorbible en la 1.ª hora, paciente consciente → carbón activado 25-100 g VO (≥0,5 g/kg); dosis repetidas (50 g, luego 25 g/4-6 h) si recirculación enterohepática."},
+   {"nivel":"critico","t":"Sospecha de cáusticos o hidrocarburos → contraindicación absoluta de emesis y lavado gástrico."},
+   {"t":"Hierro/litio/plomo o liberación sostenida → irrigación intestinal total con polietilenglicol 2 L/h hasta líquido rectal claro."}
+ ]},
+ {"paso":"Potencia la eliminación cuando esté indicado","detalle":"Diuresis forzada alcalina (salicilatos, fenobarbital, metotrexato) con bicarbonato 1 M manteniendo pH urinario ≥7,5; diuresis neutra en litio/paraquat/amanita. Valora depuración extrarrenal precoz si fallo renal/hepático/respiratorio por el tóxico."},
+ {"paso":"Aplica medidas de rescate en el caso refractario","sub":[
+   {"nivel":"critico","t":"Parada cardíaca o shock refractario por fármaco liposoluble → emulsión lipídica 20% 100 mL en bolo (repetible cada 5 min x3), luego 500 mL en 1 h (máx acumulado 1.500 mL)."}
+ ]},
+ {"paso":"Observa y decide destino","detalle":"Todo intoxicado: observación mínima 12-24 h desde la ingesta. Leve-moderado → observación de urgencias. Coma, depresión respiratoria, shock o arritmias letales → UCI. Valora evaluación psiquiátrica si fue intencionada."}
+], "ddx": []}

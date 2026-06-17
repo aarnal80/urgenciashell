@@ -1,0 +1,19 @@
+{"plan": [
+ {"paso":"Valora y estabiliza (primeros minutos)","detalle":"Monitoriza TA, FC, SatO2 y diuresis. Explora edemas (declives, perioculares, anasarca), signos de derrame pleural/ascitis y de depleción intravascular. Vía venosa y analítica."},
+ {"paso":"Solicita estudio dirigido","detalle":"Hemograma, bioquímica con albúmina, perfil lipídico, función renal e iones, proteinuria, sistemático de orina. Albúmina < 2 g/dL marca riesgo trombótico muy alto."},
+ {"paso":"Descarta y trata las complicaciones graves","sub":[
+   {"nivel":"emergente","t":"Dolor lumbar agudo + hematuria + deterioro renal → sospecha de trombosis de vena renal; imagen urgente y anticoagulación."},
+   {"nivel":"emergente","t":"Disnea/dolor pleurítico/desaturación → sospecha de TEP; estudio y anticoagulación."},
+   {"nivel":"emergente","t":"Fiebre o signos de infección (peritonitis, neumonía, celulitis) → antibioterapia empírica IV (cefepima 2 g/12 h o ceftriaxona 2 g/24 h) tras hemocultivos."}
+ ]},
+ {"paso":"Trata los edemas y controla la TA","detalle":"Furosemida 20 mg/6 h IV en infusión, incrementable sin pasar de 250 mg/día (o 40 mg/24 h-40 mg/6 h VO si leves); asociar clortalidona 50 mg/48 h si respuesta insuficiente. HTA: enalapril 5 mg/día VO (hasta 20 mg/12 h) por su efecto antiproteinúrico, o losartán 25-100 mg/24 h si intolerancia a IECA."},
+ {"paso":"Maneja el soporte hemodinámico y la profilaxis trombótica","sub":[
+   {"nivel":"critico","t":"Lesión renal aguda con hipotensión → noradrenalina 0,05 µg/kg/min IV (hasta 0,5) ± albúmina 0,5-1 g/kg/día IV si depleción intravascular grave."},
+   {"t":"Alto riesgo de trombosis (membranosa, reposo, edemas) → profilaxis con bemiparina 3.500 UI/24 h SC o enoxaparina 1 mg/kg/24 h SC."}
+ ]},
+ {"paso":"Inicia tratamiento de base y de la hiperlipidemia","detalle":"Atorvastatina 10 mg/día VO (o ezetimiba 10 mg/24 h si intolerancia). Ajusta dosis de fármacos por hipoalbuminemia. Inmunosupresión (prednisona 1 mg/kg/día) se inicia en planta de nefrología. En membranosa, descarta neoplasia oculta."},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"emergente","t":"Lesión renal aguda, sobrecarga grave (anasarca/derrame), sepsis, TVP o necesidad de diálisis → ingreso."},
+   {"t":"Sin diagnóstico previo, buen estado y sin complicaciones → derivación a consulta de nefrología tras consultar al nefrólogo de guardia."}
+ ]}
+], "ddx": []}

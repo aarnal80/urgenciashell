@@ -1,0 +1,13 @@
+{"plan": [
+ {"paso":"Reconoce signos de gravedad (primeros minutos)","detalle":"Toma constantes (TA, FC, Tª). Si fiebre alta, dolor perianal intenso, ampollas o necrosis cutánea → activa sospecha de gangrena de Fournier y maneja como emergencia."},
+ {"paso":"Explora la región anorrectal","detalle":"Anamnesis, inspección, palpación y tacto rectal; anoscopia si el dolor lo permite. Identifica el proceso: trombosis hemorroidal, absceso, fisura, sinus pilonidal, fascitis necrosante, cuerpo extraño o prolapso."},
+ {"paso":"Decide según el proceso y su gravedad","sub":[
+   {"nivel":"critico","t":"Fascitis necrosante (gangrena de Fournier) → TC urgente, antibioterapia IV de amplio espectro (piperacilina-tazobactam 4+0,5 g/6 h IV o meropenem 1 g/8 h IV) y desbridamiento quirúrgico inmediato."},
+   {"nivel":"emergente","t":"Absceso anorrectal → drenaje quirúrgico precoz; el profundo (isquiorrectal/pelvirrectal/supraelevador) bajo anestesia."},
+   {"t":"Cuerpo extraño intrarrectal con dolor abdominal, fiebre o taquicardia → descarta perforación rectal."}
+ ]},
+ {"paso":"Trata la trombosis hemorroidal","detalle":"Si <72 h y muy dolorosa, valora trombectomía/exéresis. Analgesia: dexketoprofeno 50 mg IM; si dolor/edema importantes, metilprednisolona 1 mg/kg dosis única. Domicilio: diosmina 500 mg/8 h 2 semanas, laxante formador de volumen (ispágula) y metamizol 575 mg/8 h."},
+ {"paso":"Trata la fisura anal","detalle":"Medidas higiénico-dietéticas, baños de asiento, laxante (ispágula) y analgesia. Si crónica o sin respuesta: nitroglicerina rectal 4 mg/g/12 h 4-8 semanas (advertir cefalea) o diltiazem tópico 2%/12 h. Fisura atípica/indolora → descarta Crohn, VIH, sífilis, leucemia."},
+ {"paso":"Trata el sinus pilonidal y la celulitis","detalle":"Fase celulítica de absceso o sinus pilonidal infectado → amoxicilina-clavulánico 875/125 mg/8 h VO o cefuroxima 500 mg/12 h; alérgicos a betalactámicos → ciprofloxacino 500 mg/12 h + metronidazol 500 mg/8 h. Asocia omeprazol 20 mg/24 h con AINE."},
+ {"paso":"Destino","detalle":"Ingreso urgente: gangrena de Fournier, absceso profundo, trombosis con necrosis, prolapso irreductible/estrangulado, cuerpo extraño no extraíble o perforación, cáncer obstructivo perforado y sepsis postoperatoria. Procesos no complicados → alta con tratamiento y seguimiento."}
+], "ddx": []}

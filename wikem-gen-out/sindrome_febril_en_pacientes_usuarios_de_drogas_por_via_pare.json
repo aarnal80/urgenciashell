@@ -1,0 +1,20 @@
+{"plan": [
+ {"paso":"Reconoce y monitoriza (primeros minutos)","detalle":"Monitoriza TA, FC, Tª, SatO2 y nivel de conciencia. Vía venosa. Identifica precozmente datos de sepsis: PAS < 90 mmHg, hipoperfusión, oligoanuria, insuficiencia respiratoria o coagulopatía."},
+ {"paso":"Anamnesis dirigida y estudio del foco","detalle":"Historia de drogadicción, tipo de droga, VIH (CD4, carga viral) y enfermedades previas. Hemograma, bioquímica, coagulación, gasometría, hemocultivos, sistemático de orina y radiografía de tórax. Valora ecocardiograma, punción lumbar o TC según sospecha."},
+ {"paso":"Estabiliza si hay sepsis grave","detalle":"Si hipotensión o hipoperfusión: fluidoterapia, antibioterapia precoz tras hemocultivos y soporte. Antipiresis con paracetamol 1 g/6 h IV o metamizol 2 g/6 h IV."},
+ {"paso":"Orienta el tratamiento según el foco infeccioso","sub":[
+   {"nivel":"emergente","t":"Sospecha de endocarditis → cloxacilina 2 g/6 h IV + gentamicina 3-5 mg/kg/24 h IV."},
+   {"t":"Piel y partes blandas con criterios de ingreso → cloxacilina 2 g/4-6 h IV + ceftriaxona 2 g/24 h IV (cloxacilina 1 g/6 h VO si manejo ambulatorio)."},
+   {"t":"Artritis/osteomielitis → cloxacilina 2 g/4-6 h IV + ceftriaxona 2 g/24 h IV."},
+   {"t":"Neumonía bacteriana → ceftriaxona 2 g/24 h IV + cloxacilina 2 g/6 h IV."}
+ ]},
+ {"paso":"Cubre etiologías específicas del UDVP y del VIH","sub":[
+   {"nivel":"emergente","t":"Candidiasis (heroína marrón): sin endoftalmitis → fluconazol 200 mg/12 h VO 15 días; con endoftalmitis → anfotericina B 3-5 mg/kg/24 h IV."},
+   {"t":"Pneumocystis jiroveci → cotrimoxazol 2 viales/8 h IV 21 días (+ prednisona 40 mg/12 h si PaO2 < 70 mmHg)."},
+   {"t":"Toxoplasmosis cerebral → sulfadiazina 2 g/6 h VO + pirimetamina 25 mg/6 h VO el primer día y luego 25 mg/12 h."}
+ ]},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"emergente","t":"Sepsis, endocarditis, neumonía, infección oportunista, endoftalmitis, artritis/osteomielitis o inestabilidad → ingreso."},
+   {"t":"Infección de piel/partes blandas limitada con buen estado y soporte social adecuado → alta con antibioterapia oral y antipiresis (paracetamol 650 mg/6 h)."}
+ ]}
+], "ddx": []}

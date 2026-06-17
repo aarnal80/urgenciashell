@@ -1,0 +1,22 @@
+{"plan": [
+ {"paso":"Diferencia celulitis orbitaria de preseptal (paso clave)","sub":[
+   {"nivel":"emergente","t":"Proptosis, quemosis, oftalmoplejía o dolor con los movimientos oculares → celulitis ORBITARIA: TC de órbita y senos urgente, ingreso y antibioterapia IV."},
+   {"t":"Eritema y edema palpebral SIN proptosis, motilidad ni agudeza visual alteradas → celulitis preseptal."}
+ ]},
+ {"paso":"Detecta signos de extensión o compresión","sub":[
+   {"nivel":"emergente","t":"Reducción de agudeza visual en contexto inflamatorio → posible compresión del nervio óptico: valoración oftalmológica urgente."},
+   {"nivel":"emergente","t":"Signos meníngeos, fiebre alta o leucocitosis marcada → descartar extensión intracraneal/meningitis."}
+ ]},
+ {"paso":"Trata la celulitis orbitaria","detalle":"Cloxacilina 1 g/8 h IV + ceftriaxona 1 g/24 h IV durante 14 días. Alérgico a penicilina: vancomicina 500 mg/6 h IV + tobramicina 3-5 mg/kg/día. Añade metronidazol 500 mg/8 h si se sospecha anaerobios. Analgesia con metamizol; naproxeno 500 mg/12 h para la inflamación."},
+ {"paso":"Trata la celulitis preseptal con seguimiento estrecho","detalle":"Cefuroxima 250 mg/12 h VO durante 10 días, con revisión diaria para detectar progresión a celulitis orbitaria o signos meníngeos."},
+ {"paso":"Maneja la dacriocistitis aguda","sub":[
+   {"t":"Sin absceso → cefuroxima 250-500 mg/12 h VO (o amoxicilina-clavulánico) 7 días + tópico (gramicidina+neomicina+polimixina B) y analgesia (paracetamol 650 mg/6 h)."},
+   {"t":"Absceso fluctuante → drenaje quirúrgico urgente."}
+ ]},
+ {"paso":"Trata las patologías palpebrales menores","sub":[
+   {"t":"Orzuelo → calor local + ácido fusídico tópico 1 aplic/4 h el 1er día y luego cada 12 h, 7 días."},
+   {"t":"Blefaritis → higiene palpebral + clortetraciclina tópica cada 8 h de forma continuada; lubricante (carmelosa) si ojo seco."},
+   {"t":"Chalazión persistente → triamcinolona intralesional o extirpación quirúrgica."}
+ ]},
+ {"paso":"Decide destino","detalle":"Ingreso obligatorio: celulitis orbitaria confirmada, proptosis/oftalmoplejía/reducción visual, fiebre o leucocitosis marcada, dacriocistitis con absceso para drenaje, preseptal con progresión o signos meníngeos, e inmunocomprometido con cualquier celulitis periorbitaria. El resto: alta con tratamiento y revisión."}
+], "ddx": []}

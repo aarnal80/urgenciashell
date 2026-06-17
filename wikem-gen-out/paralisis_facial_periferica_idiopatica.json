@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Confirma el patrón periférico y descarta el central","sub":[
+   {"nivel":"emergente","t":"Pliegues frontales y cierre palpebral CONSERVADOS (afectación solo de hemicara inferior) → parálisis central (ACV, tumor): neuroimagen urgente y manejo neurológico."},
+   {"t":"Afectación de toda la hemicara incluyendo frente y cierre ocular → patrón periférico, compatible con parálisis de Bell."}
+ ]},
+ {"paso":"Busca causas secundarias antes de etiquetar de idiopática","sub":[
+   {"t":"Parálisis bilateral → descartar sarcoidosis, enfermedad de Lyme, linfoma o Guillain-Barré."},
+   {"t":"Vesículas herpéticas en CAE/pabellón → síndrome de Ramsay Hunt (herpes zóster)."},
+   {"t":"Otitis media aguda u otitis externa maligna → tratar la causa subyacente."}
+ ]},
+ {"paso":"Protege el ojo del lado afectado","detalle":"Riesgo de queratitis por exposición si no cierra el párpado: colirio lubricante de carmelosa cada 6 h (hasta cada hora si precisa) durante el día y pomada epitelizante con oclusión nocturna."},
+ {"paso":"Inicia corticoterapia precoz","detalle":"Base del tratamiento, máxima eficacia en las primeras 72 h: prednisona 60-80 mg/24 h en dosis matutina durante 5 días, con descenso de 10 mg/día durante 5 días más; o 60-80 mg/24 h durante 7 días."},
+ {"paso":"Asocia antiviral","detalle":"Valaciclovir 1 g/8 h VO 7 días (siempre combinado con corticoide), o aciclovir 400 mg/4 h VO 10 días (800 mg/4 h si se sospecha origen herpético) como alternativa. Añade omeprazol 20 mg/24 h si hay riesgo gástrico (antecedente de úlcera, >60 años, antiagregantes/anticoagulantes/ISRS)."},
+ {"paso":"Informa del pronóstico y deriva sin ingreso","detalle":"El 85% mejora en 3 semanas y la mayoría se recupera en 6 meses; el dolor mastoideo es signo de mal pronóstico. No requiere ingreso: alta con seguimiento ambulatorio (ORL/neurología). Valorar ingreso/derivación urgente solo si se sospecha causa central o enfermedad sistémica grave."}
+], "ddx": []}

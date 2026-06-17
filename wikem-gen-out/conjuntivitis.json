@@ -1,0 +1,19 @@
+{"plan": [
+ {"paso":"Descarta que NO sea una conjuntivitis","sub":[
+   {"nivel":"emergente","t":"Dolor ocular significativo, fotofobia o disminución de agudeza visual → no es conjuntivitis simple: descartar queratitis, uveítis o glaucoma agudo y derivar a oftalmología."}
+ ]},
+ {"paso":"Identifica la conjuntivitis hiperaguda (urgencia)","sub":[
+   {"nivel":"emergente","t":"Secreción purulenta muy copiosa con edema palpebral intenso y quemosis (sospecha de Neisseria/Pseudomonas) → riesgo de ulceración y perforación corneal: antibioterapia sistémica inmediata con ceftriaxona 1 g/24 h IM 5 días y valoración oftalmológica urgente."}
+ ]},
+ {"paso":"Clasifica la etiología por la secreción","detalle":"Purulenta/mucopurulenta → bacteriana; serosa → viral; mucosa con prurito → alérgica; mucopurulenta crónica → clamidial. Recomienda higiene ocular y lavados; evita compartir toallas (la viral es muy contagiosa)."},
+ {"paso":"Trata la conjuntivitis bacteriana","detalle":"Tópico: gramicidina + neomicina + polimixina B 1 gota/2-4 h durante el día, 5-7 días; alternativas tobramicina o ciprofloxacino colirio 0,3%."},
+ {"paso":"Trata la conjuntivitis viral","sub":[
+   {"t":"Viral común → sintomático: AINE tópico (diclofenaco 0,1% cada 8 h) y antihistamínico (levocabastina/azelastina 0,05% cada 12 h); profilaxis de sobreinfección con colirio antibiótico."},
+   {"t":"Sospecha de herpes → aciclovir pomada oftálmica 3% cada 4 h 7 días (alternativa ganciclovir gel); deriva si afectación corneal."}
+ ]},
+ {"paso":"Trata la conjuntivitis alérgica y la clamidial","sub":[
+   {"t":"Alérgica → estabilizador de mastocitos (cromoglicato 4% cada 4 h) y/o ketotifeno 0,025% cada 12 h; fluorometolona tópica solo si refractaria."},
+   {"t":"Clamidial del adulto/tracoma → doxiciclina 100 mg/12 h VO 21 días."}
+ ]},
+ {"paso":"Decide destino","detalle":"La mayoría: alta con tratamiento tópico y normas de revisión. Ingreso/seguimiento hospitalario: conjuntivitis hiperaguda por Neisseria, afectación corneal con riesgo de ulceración/perforación, oftalmía neonatal o conjuntivitis herpética con afectación corneal significativa."}
+], "ddx": []}

@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"Valora vía aérea y oxigenación (primeros minutos)","detalle":"Triángulo de evaluación pediátrica, FR, trabajo respiratorio y SatO2. Si SatO2 <92%, estridor en reposo, tiraje intenso o cianosis, prioriza la vía aérea. Pesa al niño para dosificar."},
+ {"paso":"Descarta la emergencia de vía aérea antes de explorar la faringe","sub":[
+   {"nivel":"critico","t":"Posición en trípode, babeo, fiebre alta y estridor de tono bajo → sospecha epiglotitis: NO explores la faringe, traslado a UCIP con la vía aérea asegurada por personal experto."},
+   {"nivel":"emergente","t":"Laringitis con estridor en reposo → dexametasona 0,15-0,6 mg/kg + adrenalina nebulizada; observa 3-4 h."}
+ ]},
+ {"paso":"Orienta el síndrome y la etiología por edad","detalle":"Distingue catarro, faringoamigdalitis, OMA, bronquiolitis y NAC. La edad condiciona etiología y antibiótico. Lactante <2 meses con fiebre o cualquier distrés es de alto riesgo."},
+ {"paso":"Trata síntomas y decide antibioterapia solo si hay criterio bacteriano","sub":[
+   {"t":"Faringoamigdalitis estreptocócica → fenoximetilpenicilina 250 mg/12 h (<27 kg) o 500 mg/12 h (>27 kg) 10 días; amoxicilina 25-30 mg/kg/8 h alternativa; azitromicina si alergia."},
+   {"t":"Rinosinusitis bacteriana → amoxicilina 25-30 mg/kg/8 h 10 días."},
+   {"t":"OMA → antipiresis con paracetamol 10-15 mg/kg/4-6 h o ibuprofeno 7 mg/kg/8 h; antibiótico si fiebre >39 ºC u otodinia intensa."}
+ ]},
+ {"paso":"Maneja bronquiolitis y NAC con soporte","detalle":"Bronquiolitis: aspiración de secreciones, posición, O2 si SatO2 <92%, hidratación; monitoriza apneas en <1 mes y prematuros. NAC: antibiótico según edad y soporte de O2."},
+ {"paso":"Antipiresis y analgesia transversal","detalle":"Paracetamol 10-15 mg/kg/4-6 h VO/rectal o ibuprofeno 7 mg/kg/8 h VO (máximo 40 mg/kg/día) en mayores de 6 meses."},
+ {"paso":"Decide destino","detalle":"UCIP: epiglotitis y bronquiolitis/NAC con insuficiencia respiratoria grave. Ingreso: lactante <2 meses con OMA, bronquiolitis de riesgo, NAC <3 meses o complicada. Resto: alta con tratamiento y signos de alarma escritos."}
+], "ddx": []}

@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Identifica el cuadro articular","detalle":"Distingue luxación de la ATM (boca abierta fija, cóndilo anterior), trismus (espasmo masticador, descartar causa odontogénica/extrapiramidal/tétanos), dolor miofascial e infección de la ATM. Descarta fractura asociada antes de reducir."},
+ {"paso":"Reduce la luxación temporomandibular","detalle":"Maniobra de Nelaton lo antes posible: pulgares sobre molares inferiores, empuja abajo y atrás. Si contractura intensa o luxación de larga evolución, sedorrelajación con diazepam 10 mg IV previo."},
+ {"paso":"Trata tras la reducción y el dolor miofascial","detalle":"Naproxeno 500 mg/12 h (o ibuprofeno 600 mg/8 h) + relajante: tizanidina 2-4 mg/8 h o diazepam 2,5-5 mg/8 h. Recomendar dieta blanda y limitar la apertura."},
+ {"paso":"Maneja el trismus según su causa","sub":[
+   {"nivel":"emergente","t":"Trismus con celulitis cervicofacial o angina de Ludwig → priorizar vía aérea, ingreso urgente y antibioterapia IV."},
+   {"nivel":"emergente","t":"Trismus con disfagia y sospecha de tétanos → aislamiento de estímulos, medidas específicas e ingreso."},
+   {"t":"Reacción extrapiramidal → biperideno; suspender el fármaco causal."}
+ ]},
+ {"paso":"Trata la infección de la ATM","detalle":"Antibioterapia IV empírica: ampicilina-sulbactam 3 g/1,5 g/6 h (cefotaxima 1-2 g/4 h o clindamicina 600 mg/6 h si alergia); continuar con sultamicilina 750 mg/12 h VO hasta 30 días."},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"emergente","t":"Infección de la ATM, luxación irreducible, con fractura, posterior/superior o trismus por celulitis grave → interconsulta urgente a Cirugía Maxilofacial e ingreso."},
+   {"t":"Luxación reducida o dolor miofascial → alta con tratamiento y derivación a Maxilofacial (recidivante)."}
+ ]}
+], "ddx": []}

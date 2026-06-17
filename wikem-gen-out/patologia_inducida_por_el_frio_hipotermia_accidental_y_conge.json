@@ -1,0 +1,18 @@
+{"plan": [
+ {"paso":"Reconoce y mide temperatura central","detalle":"Termómetro de baja lectura (esofágico/rectal). Monitor de ECG, TA y SatO2; vía venosa. Manipula al paciente con suavidad (riesgo de FV). Recuerda: 'nadie está muerto si no está caliente y muerto'."},
+ {"paso":"Asegura vía aérea y soporte vital","detalle":"Intuba si Glasgow <9 o abolición de reflejos protectores. Oxígeno caliente y humidificado. Retira ropa húmeda y aísla del frío."},
+ {"paso":"Recalienta según el grado","sub":[
+   {"t":"Hipotermia leve → recalentamiento externo pasivo; glucosalina IV a 21 gotas/min."},
+   {"nivel":"emergente","t":"Moderada-grave con hipotensión → fluidos calentados a 40-42 °C (2.000 mL en 2 h); recalentamiento activo externo/interno."},
+   {"nivel":"critico","t":"T <28 °C / profunda → recalentamiento interno activo (ECMO/circulación extracorpórea); contraindica ECMO si K >8 mEq/L."}
+ ]},
+ {"paso":"Maneja la parada y las arritmias","sub":[
+   {"nivel":"critico","t":"FV con T <30 °C → desfibrilación generalmente ineficaz; prioriza recalentamiento. RCP y adrenalina solo con T >30 °C (intervalo doble, 6-10 min)."},
+   {"nivel":"critico","t":"Hipotensión refractaria (PAS <60 mmHg) → Dopamina 3 µg/kg/min IV en perfusión, evitando dosis mayores."}
+ ]},
+ {"paso":"Trata la congelación","detalle":"Recalentamiento en agua a 37-39 °C; Ibuprofeno 400-600 mg/8 h previo; bloqueo con ropivacaína 0,5% en grados 2-4. Bemiparina 3.500 UI/24 h SC. Estadifica por Cauchy; la SatO2 en zona congelada infravalora el grado real."},
+ {"paso":"Activa terapia tiempo-dependiente y deriva","sub":[
+   {"nivel":"critico","t":"Congelación grado Cauchy 3-5 → rtPA + heparina en las primeras 24 h del recalentamiento, o Iloprost IV si rtPA contraindicado/no disponible o demora >24 h."},
+   {"t":"Destino → leve/moderada a observación; grave/profunda a UCI; congelación más que superficial a unidad de quemados."}
+ ]}
+], "ddx": []}

@@ -339,6 +339,284 @@
   ],
   "wikem_titulo": "Angioedema"
  },
+ "antagonistas_y_antidotos": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Estabiliza primero (ABC) y trata sintomáticamente",
+    "detalle": "Monitor ECG, TA, SatO2 y glucemia; vía venosa. El soporte vital y el tratamiento sintomático preceden y acompañan siempre al antídoto. Recuerda que solo existe antídoto para una fracción de los tóxicos."
+   },
+   {
+    "paso": "Identifica el tóxico y verifica disponibilidad",
+    "detalle": "Anamnesis, toxíndromo y toxicología orientan el antídoto. Confirma de antemano la cadena de suministro local: varios son medicamentos extranjeros o fórmulas magistrales de acceso limitado."
+   },
+   {
+    "paso": "Administra el antagonista/antídoto con dosis precisas",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Opiáceos con depresión respiratoria → naloxona inmediata, repetible cuantas veces sea necesario."
+     },
+     {
+      "t": "Benzodiacepinas → flumazenilo 0,3 mg IV cada 30 s (máx 3 mg); si recaída, perfusión 0,1-0,4 mg/h."
+     },
+     {
+      "t": "Anticolinérgicos → fisostigmina 1-2 mg/10 min (máx 4 mg/30 min)."
+     },
+     {
+      "t": "Anticoagulantes cumarínicos → vitamina K 10-20 mg; dabigatrán con hemorragia → idarucizumab 5 g."
+     }
+    ]
+   },
+   {
+    "paso": "Aplica los antídotos tiempo-dependientes sin demora",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Cianuro con inestabilidad → hidroxicobalamina 5 g (o edetato dicobáltico 600 mg + tiosulfato sódico)."
+     },
+     {
+      "nivel": "critico",
+      "t": "Organofosforados con síndrome colinérgico → atropina a dosis altas + pralidoxima 30 mg/kg precoz."
+     },
+     {
+      "nivel": "critico",
+      "t": "Metanol/etilenglicol → fomepizol 15 mg/kg inicial, luego 10 mg/kg/12 h 48 h (metanol: añade folinato cálcico)."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Amanita phalloides → silibinina, penicilina G y N-acetilcisteína cuanto antes."
+     }
+    ]
+   },
+   {
+    "paso": "Considera la emulsión lipídica en cardiotoxicidad refractaria",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Intoxicación grave por anestésicos locales, bloqueantes del calcio, betabloqueantes o tricíclicos sin respuesta convencional → emulsión lipídica 20%: 1,5 mL/kg inicial + 0,25 mL/kg/min (máx 8-10 mL/kg)."
+     },
+     {
+      "t": "Betabloqueantes → glucagón 50 µg/kg (máx 10 mg) + 4 mg/h; hierro → deferoxamina; metahemoglobinemia → azul de metileno (máx 7 mg/kg)."
+     }
+    ]
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Todo paciente que precise antídoto IV queda en observación/ingreso hasta confirmar estabilidad. UCI en Amanita phalloides, cianuro, organofosforados graves y digitálicos con Fab. Monitorización mínima 24 h tras suero antiviperino."
+   }
+  ]
+ },
+ "apoplejia_hipofisaria": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y estabiliza (emergencia endocrina)",
+    "detalle": "Sospecha ante cefalea brusca, vómitos, déficit visual, oftalmoplejía y alteración de conciencia. Monitoriza TA, nivel de conciencia y glucemia; vía venosa, analítica con cortisol e iones. Asegura vía aérea si deterioro."
+   },
+   {
+    "paso": "Administra glucocorticoide IV ante la sospecha, sin esperar confirmación",
+    "detalle": "Hidrocortisona 100 mg en bolo IV inmediato (insuficiencia suprarrenal secundaria en 60-70%), seguida de 50-100 mg/6 h IV las primeras 24 h. Alternativa: dexametasona 4-8 mg en bolo + 4 mg/4-6 h IV (también reduce edema)."
+   },
+   {
+    "paso": "Corrige las alteraciones que ponen en riesgo la vida",
+    "sub": [
+     {
+      "t": "Hipotensión → descarta hipocorticismo y trata con hidrocortisona y volumen.",
+      "nivel": "critico"
+     },
+     {
+      "t": "Hipoglucemia → manifestación de insuficiencia suprarrenal central; corrige de inmediato.",
+      "nivel": "critico"
+     },
+     {
+      "t": "Hiponatremia severa → valora hipotiroidismo central o SIADH asociado.",
+      "nivel": "emergente"
+     }
+    ]
+   },
+   {
+    "paso": "Reponer volumen y tratar síntomas",
+    "detalle": "Suero salino alternando con glucosado 5% 3.000 mL/24 h (modificar según IC o PVC). Cefalea: paracetamol 1 g/6 h IV (metamizol 2 g/8 h alternativa). Vómitos: metoclopramida 10 mg/8 h IV."
+   },
+   {
+    "paso": "Realiza el diagnóstico diferencial y la prueba de imagen",
+    "detalle": "Prioriza descartar hemorragia subaracnoidea y meningitis. TC craneal urgente (detecta hemorragia aguda en primeras 72 h); RM de elección para valoración completa del adenoma."
+   },
+   {
+    "paso": "Valora la indicación quirúrgica",
+    "sub": [
+     {
+      "t": "Deterioro del nivel de conciencia, déficit visual grave/progresivo o escasa mejoría farmacológica → cirugía transesfenoidal (preferible en la 1ª semana).",
+      "nivel": "emergente"
+     },
+     {
+      "t": "Estabilidad con buena respuesta a glucocorticoides → manejo conservador y seguimiento."
+     }
+    ]
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Siempre ingreso: emergencia médica. UCI/soporte vital si precisa intubación. Observación hasta confirmar diagnóstico si no precisa soporte avanzado; después ingreso en Endocrinología para estudio hormonal y ajuste sustitutivo."
+   }
+  ]
+ },
+ "arritmias_cardiacas_estrategia_diagnostica_y_tratamiento_gen": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y estabiliza (primeros minutos)",
+    "detalle": "Monitor ECG continuo, TA, SatO2 y vía venosa. O2 al 50% (Venturi o reservorio) solo si SpO2 <90%; si no mejora, VMNI. Palpa pulso central: si ausente, inicia SVB/SVA."
+   },
+   {
+    "paso": "Valora la repercusión hemodinámica",
+    "detalle": "Busca signos de bajo gasto, shock cardiogénico, edema agudo de pulmón o isquemia. Principio rector: no ser más agresivo con la arritmia de lo que esta lo es con el paciente."
+   },
+   {
+    "paso": "Realiza ECG de 12 derivaciones con tira de ritmo",
+    "detalle": "Clasifica: taqui- o bradiarritmia; en taquiarritmias mide la anchura del QRS (<0,12 s supraventricular vs >0,12 s ventricular o asumido ventricular si cardiopatía)."
+   },
+   {
+    "paso": "Decide según ritmo y estabilidad",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Taquiarritmia con inestabilidad (shock, EAP, SCA) → cardioversión eléctrica sincronizada urgente sin demora diagnóstica, previa sedoanalgesia (midazolam 0,1 mg/kg IV + fentanilo 2 µg/kg IV); bifásica 150 J ascendente hasta 200 J."
+     },
+     {
+      "t": "Taquiarritmia QRS estrecho estable → maniobras vagales; si no revierte, adenosina 6 mg IV en bolo rápido, repetir 12 mg cada 5 min (máx 24 mg)."
+     },
+     {
+      "nivel": "critico",
+      "t": "Bradiarritmia inestable → marcapasos transcutáneo urgente con analgesia (tramadol IV); atropina 0,5-1 mg IV (NO en BAV Mobitz II ni BAV completo con escape ventricular)."
+     }
+    ]
+   },
+   {
+    "paso": "Trata causas y contraindicaciones específicas",
+    "detalle": "Corrige hipoxemia, alteraciones electrolíticas y fármacos. Si intoxicación digitálica, la cardioversión está contraindicada (solo 25-50 J valorando riesgo/beneficio). En preexcitación antidrómica NO uses adenosina ni maniobras vagales."
+   },
+   {
+    "paso": "Soporte cronotrópico si no hay marcapasos",
+    "detalle": "En bradiarritmia grave sin marcapasos disponible: isoproterenol 1 µg/min IV en aumento (máx 20 µg/min) o adrenalina 2 µg/min IV como puente al marcapasos intravenoso."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "PCR resuelta, IAM o inestabilidad con vigilancia intensiva → UCI. Inestabilidad cardiovertida estable, cardiopatía descompensada o necesidad de marcapasos → Cardiología. Arritmia estable no revertida o intoxicación <24 h → Observación de urgencias."
+   }
+  ]
+ },
+ "arritmias_por_alteracion_en_la_conduccion_del_impulso_enferm": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y monitoriza",
+    "detalle": "Monitor ECG continuo, TA, SatO2 y vía venosa. O2 si SpO2 <90%. Valora estabilidad hemodinámica (hipotensión, síncope, bajo gasto)."
+   },
+   {
+    "paso": "Realiza ECG de 12 derivaciones e identifica el trastorno de conducción",
+    "detalle": "Diferencia BSA, BAV de primer grado (PR largo), segundo grado (Mobitz I/II), tercer grado (disociación AV con escape), WPW y enfermedad del seno (bradicardia-taquicardia). Mide anchura del QRS del ritmo de escape."
+   },
+   {
+    "paso": "Decide según tipo de bloqueo y estabilidad",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "BAV de tercer grado o Mobitz II, o bradiarritmia inestable → marcapasos transcutáneo urgente; si escape ventricular (QRS ancho) la atropina NO está indicada."
+     },
+     {
+      "t": "Bradiarritmia inestable con escape no ventricular → atropina 0,5-1 mg IV repetible (máx 3 mg) como puente al marcapasos."
+     },
+     {
+      "t": "BAV de primer grado o Mobitz I asintomático → no precisa tratamiento urgente; vigila progresión."
+     }
+    ]
+   },
+   {
+    "paso": "Maneja el síndrome de WPW",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "WPW con FA y RR <0,20 s → cardioversión eléctrica urgente (riesgo de fibrilación ventricular)."
+     },
+     {
+      "t": "WPW con taquicardia QRS ancho estable sin cardiopatía → procainamida 50 mg IV cada 5 min (máx 1 g) o flecainida 1,5-3 mg/kg IV en 20 min."
+     },
+     {
+      "nivel": "critico",
+      "t": "Evita SIEMPRE en WPW: adenosina, betabloqueantes, verapamilo, diltiazem y digoxina (pueden precipitar fibrilación ventricular)."
+     }
+    ]
+   },
+   {
+    "paso": "Trata factores precipitantes",
+    "detalle": "Descarta y corrige isquemia, hiperpotasemia, fármacos bradicardizantes (betabloqueantes, calcioantagonistas, digoxina) e hipotiroidismo."
+   },
+   {
+    "paso": "Maneja la enfermedad del seno",
+    "detalle": "Bradicardia sinusal persistente, paro sinusal o BSA con repercusión → atropina/marcapasos según estabilidad. En síndrome bradicardia-taquicardia, valora marcapasos antes de antiarrítmicos."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "BAV Mobitz II o completo, BSA con pausas >3 s o FC <40, WPW sintomático y enfermedad del seno con repercusión → ingreso (marcapasos/estudio electrofisiológico). BAV de primer grado por fármaco/intoxicación → observación. Inestabilidad → ingreso urgente."
+   }
+  ]
+ },
+ "arritmias_sinusales_y_auriculares": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y monitoriza",
+    "detalle": "Monitor ECG, TA, SatO2 y vía venosa. O2 si SpO2 <90%. Valora estabilidad hemodinámica (TA, perfusión, nivel de conciencia)."
+   },
+   {
+    "paso": "Realiza ECG de 12 derivaciones e identifica el ritmo",
+    "detalle": "Diferencia taquicardia sinusal, taquicardia auricular unifocal, multifocal o paro sinusal. Busca ondas P', BAV 2:1 (sospecha digitálica) y frecuencia ventricular."
+   },
+   {
+    "paso": "Busca y trata la causa subyacente",
+    "detalle": "La taquicardia sinusal casi siempre es secundaria: fiebre, dolor, hipovolemia, TEP, tirotoxicosis, anemia. El tratamiento prioritario es el de la causa; descarta TEP, hipertiroidismo y feocromocitoma si es inapropiada."
+   },
+   {
+    "paso": "Decide según tipo de arritmia y estabilidad",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Cualquier taquiarritmia auricular con inestabilidad hemodinámica → cardioversión eléctrica sincronizada urgente (previa sedoanalgesia)."
+     },
+     {
+      "t": "Taquicardia sinusal sintomática en ansioso → lorazepam 1 mg SL; si no cede o crisis tirotóxica → metoprolol 2,5 mg IV repetible (máx 15 mg)."
+     },
+     {
+      "t": "Taquicardia auricular unifocal estable sin IC → control de frecuencia con verapamilo 5 mg IV (repetible hasta 20 mg) o metoprolol; con IC → digoxina."
+     },
+     {
+      "t": "Taquicardia auricular multifocal → tratar EPOC/IC descompensadas; corregir hipomagnesemia con sulfato de magnesio 1.500 mg IV; antiarrítmicos poco eficaces."
+     }
+    ]
+   },
+   {
+    "paso": "Maneja el paro sinusal sintomático",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Pausas >3 s o FC <40 lat/min con inestabilidad → atropina 0,5-1 mg IV repetible (máx 3 mg); si fracasa, marcapasos transcutáneo con analgesia (tramadol IV)."
+     },
+     {
+      "t": "Sin marcapasos disponible → isoproterenol 1 µg/min IV o adrenalina 2 µg/min IV como puente al marcapasos intravenoso."
+     }
+    ]
+   },
+   {
+    "paso": "Considera reversión a ritmo sinusal",
+    "detalle": "En taquicardia auricular unifocal estable sin cardiopatía estructural y con frecuencia controlada: flecainida 1,5-3 mg/kg IV en 20 min o propafenona; amiodarona 5-7 mg/kg IV si inestabilidad sin respuesta a cardioversión."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Inestabilidad, paro sinusal con pausas >3 s/FC <40, necesidad de amiodarona IV o cardioversión, multifocal con EPOC/IC descompensada o sospecha digitálica → ingreso/cardiología. Estable controlada → alta con seguimiento."
+   }
+  ]
+ },
  "ascitis": {
   "ddx": [
    {
@@ -453,6 +731,57 @@
   ],
   "wikem_titulo": "Ascites"
  },
+ "aspectos_basicos_del_recien_nacido_y_el_lactante": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Triángulo de evaluación pediátrica y constantes (primeros minutos)",
+    "detalle": "Valora apariencia, respiración y circulación. Monitoriza FC, FR, TA, SatO2 y temperatura (recuerda la labilidad térmica: la infección puede cursar con hipotermia). Pesa al niño para dosificar por kg."
+   },
+   {
+    "paso": "Identifica signos de alarma a pie de cama",
+    "detalle": "Busca llanto inconsolable, letargia, fontanela abombada/deprimida, signos meníngeos, petequias, dificultad respiratoria, rechazo agudo de tomas o vómitos proyectivos. Su presencia obliga a descartar patología grave urgente."
+   },
+   {
+    "paso": "Estratifica el riesgo de infección bacteriana grave según edad",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Recién nacido (0-28 días) con fiebre de cualquier cifra → vía venosa, analítica, hemocultivo, orina, valorar punción lumbar e iniciar antibioterapia empírica; ingreso siempre."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Lactante con signos de alarma (irritabilidad, letargia, petequias, fontanela tensa) → estudio de sepsis y observación monitorizada."
+     }
+    ]
+   },
+   {
+    "paso": "Sospecha cuadros tiempo-dependientes específicos",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Llanto periódico con encogimiento de piernas → sospecha invaginación intestinal: ecografía abdominal urgente."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Caída en lactante <3 meses con cefalohematoma no frontal, focalidad, fontanela tensa o convulsiones → TC craneal."
+     }
+    ]
+   },
+   {
+    "paso": "Trata el problema concreto y proporciona analgesia",
+    "detalle": "Paracetamol 15 mg/kg/6 h VO o ibuprofeno 7 mg/kg/8 h VO. En quemaduras: paracetamol VO o tramadol 1 mg/kg/8 h IV o fentanilo 1-2 µg/kg IV. Procesos locales: dermatitis del pañal con óxido de cinc, onfalitis leve con mupirocina tópica, granuloma umbilical con nitrato de plata."
+   },
+   {
+    "paso": "Descarta maltrato infantil",
+    "detalle": "Ante historia inconsistente con el mecanismo o lesiones no congruentes, activa el protocolo de protección al menor y notifica a la autoridad judicial."
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "Ingreso: recién nacido febril, lactante con signos de alarma, onfalitis grave, quemaduras en <1 año o extensas/zonas críticas, TCE de riesgo o sospecha de maltrato. Resto: alta con pautas escritas de reconsulta y revisión por pediatra."
+   }
+  ]
+ },
  "ataque_de_asma": {
   "ddx": [
    {
@@ -565,6 +894,114 @@
    }
   ],
   "wikem_titulo": "Acute asthma exacerbation"
+ },
+ "atencion_inicial_al_paciente_con_traumatismo_grave": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "X — Control de hemorragia exanguinante",
+    "detalle": "Antes del ABCDE: comprime y aplica torniquete en hemorragias externas masivas de miembros; empaquetamiento en uniones. Avisa al equipo de trauma y prepara protocolo de transfusión masiva."
+   },
+   {
+    "paso": "A — Vía aérea con control cervical",
+    "detalle": "Asegura permeabilidad con inmovilización cervical en bloque. Glasgow ≤8 → intubación endotraqueal. Aspira, retira cuerpos extraños, cánula si precisa."
+   },
+   {
+    "paso": "B — Ventilación y oxigenación",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Neumotórax a tensión → descompresión inmediata con aguja y posterior drenaje torácico."
+     },
+     {
+      "nivel": "critico",
+      "t": "Hemotórax masivo → drenaje torácico y reposición; valorar toracotomía."
+     },
+     {
+      "nivel": "critico",
+      "t": "Taponamiento cardíaco (tríada de Beck) → pericardiocentesis/toracotomía urgente."
+     }
+    ]
+   },
+   {
+    "paso": "C — Circulación y control del shock",
+    "detalle": "Dos vías de grueso calibre. Ringer lactato 1,5-2 L (20-25 mL/kg) en 10-20 min (SSF si TCE). Ácido tranexámico 1 g IV en 10 min + 1 g en 8 h dentro de las 3 h. Busca el foco de sangrado (tórax, abdomen, pelvis, fémur)."
+   },
+   {
+    "paso": "D — Valoración neurológica",
+    "detalle": "Glasgow, pupilas, focalidad. Glasgow <15 con focalidad → TC craneal urgente. Midriasis unilateral arreactiva + deterioro → herniación: medidas anti-PIC. Revierte anticoagulación si sangrado vital (complejo protrombínico; idarucizumab 5 g si dabigatrán)."
+   },
+   {
+    "paso": "E — Exposición y prevención de hipotermia",
+    "detalle": "Desnuda por completo para inspección, después cubre con mantas y usa fluidos calientes. Glucemia, temperatura, sondajes según proceda."
+   },
+   {
+    "paso": "Destino y tratamiento definitivo",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Inestable / shock clase III-IV / control de daños → quirófano urgente; la cirugía es parte de la reanimación."
+     },
+     {
+      "t": "TCE con Glasgow <15 o focalidad → UCI/Neurocirugía. Transferencia a centro de referencia tras estabilización si los recursos son insuficientes."
+     }
+    ]
+   }
+  ]
+ },
+ "bases_diagnostico_terapeuticas_de_la_diabetes_mellitus": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Confirma la hiperglucemia y descarta descompensación aguda",
+    "detalle": "Glucemia capilar y venosa; ante glucemia >250 mg/dL determina cetonuria/cetonemia, gasometría y osmolaridad para descartar cetoacidosis o descompensación hiperosmolar antes de clasificar el cuadro."
+   },
+   {
+    "paso": "Decide si es diagnóstico de DM o descompensación de DM conocida",
+    "sub": [
+     {
+      "t": "Glucemia aleatoria ≥200 mg/dL con clínica cardinal → diagnóstico inmediato de DM, sin necesidad de confirmación.",
+      "nivel": "emergente"
+     },
+     {
+      "t": "Glucemia ≥200 mg/dL sin síntomas → requiere confirmación en segundo día (glucemia o HbA1c)."
+     }
+    ]
+   },
+   {
+    "paso": "Solicita HbA1c y valora el grado de control",
+    "detalle": "HbA1c orienta la intensidad terapéutica: >7% con dosis máximas de ADO indica fracaso oral y necesidad de insulinizar; >10-12% o glucemia >300-350 mg/dL indican iniciar insulina desde el principio."
+   },
+   {
+    "paso": "Elige el escalón terapéutico",
+    "sub": [
+     {
+      "t": "DM2 con estilo de vida insuficiente → metformina (salvo hipoxia tisular, acidosis o insuficiencia renal/cardiaca: contraindicada).",
+      "nivel": "emergente"
+     },
+     {
+      "t": "DM2 con obesidad/riesgo cardiovascular → añade agonista GLP-1 (liraglutida 0,6 mg/24 h SC) o iSGLT-2 (dapagliflozina 10 mg/24 h).",
+      "nivel": "emergente"
+     },
+     {
+      "t": "DM1 o fracaso oral → insulina basal-bolo: 0,3-0,5 UI/kg/día, 50% basal (glargina) + 50% bolo (ultrarrápido 30-40-30%).",
+      "nivel": "emergente"
+     }
+    ]
+   },
+   {
+    "paso": "Maneja la descompensación hiperglucémica aguda en urgencias",
+    "detalle": "Solo la cetoacidosis y la descompensación hiperosmolar son indicación de insulina regular IV. Ante glucemia >250 mg/dL con cetonuria positiva: insulina rápida e hidratación; suspende metformina en situación aguda."
+   },
+   {
+    "paso": "Ajusta el tratamiento crónico y educa",
+    "detalle": "Revisa y ajusta la pauta domiciliaria; refuerza modificaciones del estilo de vida, vigilancia de hipoglucemias (8-10 h tras ejercicio) y técnica de insulina."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Cetoacidosis/hiperosmolar, hipoglucemia grave recurrente, debut de DM1 con cetosis o glucemia >300-350 mg/dL sintomática → ingreso. DM2 estable → alta con tratamiento ajustado y derivación a atención primaria."
+   }
+  ]
  },
  "botulismo": {
   "ddx": [
@@ -864,6 +1301,51 @@
    }
   ],
   "wikem_titulo": "Headache"
+ },
+ "celulitis_cervicofaciales": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Asegura la vía aérea (prioridad inicial)",
+    "detalle": "Evalúa disnea, estridor, elevación del suelo de la boca, desviación de la úvula, trismus, disfagia/disfonía. Ante riesgo de obstrucción, prepara manejo avanzado de vía aérea (posible intubación/vía quirúrgica) y avisa a Anestesia/Maxilofacial."
+   },
+   {
+    "paso": "Monitoriza e identifica el origen y la extensión",
+    "detalle": "Constantes, vía venosa, hemograma y reactantes. Localiza la pieza/foco odontogénico y valora espacios afectados (submandibular, sublingual, submentoniano). TC con contraste si sospecha de espacio profundo."
+   },
+   {
+    "paso": "Inicia fluidoterapia y antibioterapia IV empírica",
+    "detalle": "Suero salino 1.000 mL/8 h. Bencilpenicilina 4 millones UI/4 h (o ceftriaxona 2 g/24 h) + metronidazol 500 mg/8 h. Clindamicina 600 mg/6 h IV si alergia a penicilina."
+   },
+   {
+    "paso": "Añade corticoide y analgesia",
+    "detalle": "Dexametasona 8 mg IV inicial y luego 4 mg/6 h para reducir el edema. Paracetamol 1 g/6 h IV; tramadol 100 mg/8 h si el dolor no cede."
+   },
+   {
+    "paso": "Valora drenaje quirúrgico",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Colección/absceso o afectación de espacios profundos → interconsulta urgente a Maxilofacial para drenaje (a menudo bajo anestesia general)."
+     },
+     {
+      "nivel": "critico",
+      "t": "Eritema/induración con extensión descendente o crepitación → sospecha de mediastinitis o fascitis necrosante: cirugía urgente."
+     }
+    ]
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "t": "Inmunodepresión (diabetes, neoplasia, VIH, corticoides), signos de gravedad, disnea/disfagia, afectación de espacios profundos o fracaso antibiótico previo → ingreso."
+     },
+     {
+      "t": "Celulitis leve circunscrita en paciente inmunocompetente → posible manejo ambulatorio con antibiótico oral y control estrecho."
+     }
+    ]
+   }
+  ]
  },
  "cervicalgia": {
   "ddx": [
@@ -1305,6 +1787,117 @@
   ],
   "wikem_titulo": "Altered mental status"
  },
+ "complicaciones_del_sindrome_varicoso": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Valora repercusión hemodinámica en varicorragia",
+    "detalle": "En sangrado activo, comprueba TA y FC: si hipotensión/taquicardia por varicorragia masiva, coloca vía venosa, extrae hemograma y maneja la anemia aguda."
+   },
+   {
+    "paso": "Controla la hemorragia activa (varicorragia externa)",
+    "detalle": "Eleva el miembro (decúbito con pierna elevada), aplica compresión directa local y vendaje compresivo. Esta medida postural-compresiva es la primera maniobra y suele ser resolutiva."
+   },
+   {
+    "paso": "Clasifica el tipo de complicación",
+    "detalle": "Diferencia: varicorragia (externa, subcutánea o subaponeurótica), trombosis venosa superficial, trastornos tróficos y úlcera varicosa (limpia, infectada o necrótica)."
+   },
+   {
+    "paso": "Trata según el tipo de complicación",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Varicorragia externa que no cede con postura y compresión → ligadura vascular quirúrgica urgente."
+     },
+     {
+      "t": "Varicorragia subcutánea sin fluctuación → heparina sódica tópica 3-10 cm/8 h con masaje suave + analgesia (naproxeno 500 mg/12 h o ibuprofeno 600 mg/8 h)."
+     },
+     {
+      "t": "Varicorragia subcutánea con colección fluctuante → desbridamiento quirúrgico."
+     }
+    ]
+   },
+   {
+    "paso": "Maneja la úlcera varicosa",
+    "sub": [
+     {
+      "t": "Úlcera infectada → clostridiopeptidasa tópica/24 h; toma cultivo y antibiograma si signos de infección sistémica antes de antibioterapia."
+     },
+     {
+      "t": "Úlcera necrótica exudativa → óxido de cinc en capa fina sobre piel circundante."
+     },
+     {
+      "t": "Pulsos distales ausentes/débiles → sospecha componente arterial; diferencia de úlcera isquémica antes de comprimir."
+     }
+    ]
+   },
+   {
+    "paso": "Aplica terapia compresiva y coadyuvante",
+    "detalle": "La compresión es la medida común a todas las complicaciones (reduce reflujo venoso). Añade coadyuvantes en úlceras: pentoxifilina 400 mg/8 h o sulodexida 15 mg/8 h."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Ingreso/valoración quirúrgica: varicorragia externa no controlada con postura-compresión y varicorragia subcutánea fluctuante. Resto → alta con cura, compresión y seguimiento ambulatorio."
+   }
+  ]
+ },
+ "conjuntivitis": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Descarta que NO sea una conjuntivitis",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Dolor ocular significativo, fotofobia o disminución de agudeza visual → no es conjuntivitis simple: descartar queratitis, uveítis o glaucoma agudo y derivar a oftalmología."
+     }
+    ]
+   },
+   {
+    "paso": "Identifica la conjuntivitis hiperaguda (urgencia)",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Secreción purulenta muy copiosa con edema palpebral intenso y quemosis (sospecha de Neisseria/Pseudomonas) → riesgo de ulceración y perforación corneal: antibioterapia sistémica inmediata con ceftriaxona 1 g/24 h IM 5 días y valoración oftalmológica urgente."
+     }
+    ]
+   },
+   {
+    "paso": "Clasifica la etiología por la secreción",
+    "detalle": "Purulenta/mucopurulenta → bacteriana; serosa → viral; mucosa con prurito → alérgica; mucopurulenta crónica → clamidial. Recomienda higiene ocular y lavados; evita compartir toallas (la viral es muy contagiosa)."
+   },
+   {
+    "paso": "Trata la conjuntivitis bacteriana",
+    "detalle": "Tópico: gramicidina + neomicina + polimixina B 1 gota/2-4 h durante el día, 5-7 días; alternativas tobramicina o ciprofloxacino colirio 0,3%."
+   },
+   {
+    "paso": "Trata la conjuntivitis viral",
+    "sub": [
+     {
+      "t": "Viral común → sintomático: AINE tópico (diclofenaco 0,1% cada 8 h) y antihistamínico (levocabastina/azelastina 0,05% cada 12 h); profilaxis de sobreinfección con colirio antibiótico."
+     },
+     {
+      "t": "Sospecha de herpes → aciclovir pomada oftálmica 3% cada 4 h 7 días (alternativa ganciclovir gel); deriva si afectación corneal."
+     }
+    ]
+   },
+   {
+    "paso": "Trata la conjuntivitis alérgica y la clamidial",
+    "sub": [
+     {
+      "t": "Alérgica → estabilizador de mastocitos (cromoglicato 4% cada 4 h) y/o ketotifeno 0,025% cada 12 h; fluorometolona tópica solo si refractaria."
+     },
+     {
+      "t": "Clamidial del adulto/tracoma → doxiciclina 100 mg/12 h VO 21 días."
+     }
+    ]
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "La mayoría: alta con tratamiento tópico y normas de revisión. Ingreso/seguimiento hospitalario: conjuntivitis hiperaguda por Neisseria, afectación corneal con riesgo de ulceración/perforación, oftalmía neonatal o conjuntivitis herpética con afectación corneal significativa."
+   }
+  ]
+ },
  "crisis_addisoniana": {
   "ddx": [
    {
@@ -1704,6 +2297,58 @@
   ],
   "wikem_titulo": "Seizure"
  },
+ "crisis_epilepticas_en_la_infancia": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Estabiliza ABC y monitoriza (primeros minutos)",
+    "detalle": "Asegura vía aérea, posición lateral, oxígeno y aspiración de secreciones. Monitoriza SatO2, FC y TA. Glucemia capilar inmediata. Pesa o estima el peso para dosificar. Si depresión respiratoria, valora intubación orotraqueal."
+   },
+   {
+    "paso": "Corrige causas tratables y obtén acceso",
+    "detalle": "Canaliza vía venosa; corrige hipoglucemia. En <18 meses con estatus establecido, administra piridoxina 100-200 mg IV para descartar dependencia. Busca fiebre, tóxicos, focalidad o signos meníngeos."
+   },
+   {
+    "paso": "Administra benzodiacepina de primera línea si la crisis dura >5 min",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Sin acceso venoso → diazepam rectal 0,5 mg/kg (5 mg si <3 años, 10 mg si >3 años) o midazolam bucal según edad; repetible a los 10-15 min."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Con acceso venoso → diazepam IV 0,3 mg/kg a <1-2 mg/min, repetible cada 5 min (máx 5 mg si <5 años, 10 mg si >5 años)."
+     }
+    ]
+   },
+   {
+    "paso": "Escala a segunda línea si no cede tras dos dosis de benzodiacepina",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Estatus establecido → valproato 20 mg/kg IV en 5 min (mantenimiento 1-2 mg/kg/h), o levetiracetam 30-60 mg/kg en 20 min (máx 1.500 mg), o difenilhidantoína 15-20 mg/kg a <50 mg/min."
+     }
+    ]
+   },
+   {
+    "paso": "Trata el estatus refractario en tercera línea",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Crisis >30 min sin respuesta → midazolam 0,2 mg/kg IV en bolo + perfusión 0,1-0,5 mg/kg/h, o tiopental, o propofol; ingreso en UCIP con soporte ventilatorio."
+     }
+    ]
+   },
+   {
+    "paso": "Maneja la crisis febril y su filiación",
+    "detalle": "Control de fiebre con paracetamol 10-15 mg/kg/4-6 h o ibuprofeno 7 mg/kg/8 h. Identifica crisis febril compleja (focal, >15 min, recidivante o con déficit poscrítico). Indica TC y/o punción lumbar si focalidad, signos meníngeos o Glasgow <15 mantenido."
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "UCIP: estatus refractario o necesidad de ventilación. Ingreso: crisis febril compleja, sospecha de infección del SNC, alteración neurológica poscrítica, primera crisis febril con ansiedad familiar o condiciones sociales desfavorables. Resto: alta con instrucciones y seguimiento por pediatra/neuropediatría."
+   }
+  ]
+ },
  "crisis_mixedematosa": {
   "ddx": [
    {
@@ -1902,6 +2547,114 @@
    }
   ],
   "wikem_titulo": "Thyroid storm"
+ },
+ "cuerpos_extranos_en_otorrinolaringologia": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Localiza el cuerpo extraño y descarta peligro inmediato",
+    "detalle": "Anamnesis (qué, cuándo, dónde) y exploración por localización: oído, nariz u orofaringoesófago. Identifica el tipo: sólido inerte, no inerte (semillas, pila de botón) o animado (insecto)."
+   },
+   {
+    "paso": "Prioriza la pila de botón en cualquier localización",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Pila de botón en oído, nariz o esófago → extracción URGENTE por riesgo de lesión cáustica por corriente eléctrica; no demorar."
+     }
+    ]
+   },
+   {
+    "paso": "Extrae el cuerpo extraño ótico",
+    "detalle": "Inerte: extracción instrumental o lavado (contraindicado si hay perforación o material que se hincha con agua). Insecto animado: inmovilízalo primero (aceite/lidocaína) y luego extrae; el dolor intenso con vértigo obliga a inmovilizar antes de manipular. Tras la extracción, si hay laceración del CAE o era animado: gotas óticas antibióticas polimicrobianas 3-4 gotas/4-6 h, 7 días."
+   },
+   {
+    "paso": "Extrae el cuerpo extraño nasal",
+    "sub": [
+     {
+      "t": "Rinorrea mucopurulenta unilateral prolongada en niño → descarta cuerpo extraño retenido (riesgo de sinusitis/meningitis)."
+     },
+     {
+      "t": "No extraíble por tumefacción mucosa → derivar para extracción bajo anestesia general."
+     }
+    ]
+   },
+   {
+    "paso": "Trata la infección por cuerpo extraño nasal",
+    "detalle": "Amoxicilina-clavulánico 875/125 mg/8 h + metronidazol 500 mg/8 h (3 días, luego 250 mg/8 h 4 días más), 7 días en total. Alérgico a penicilina: trimetoprima-sulfametoxazol 1 comp/12 h, 7 días."
+   },
+   {
+    "paso": "Maneja el cuerpo extraño esofágico",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Sospecha de perforación o extracción traumática/cuerpo cortante → TC urgente y antibioterapia IV triple: cefepima 2 g/12 h (o ceftriaxona 2 g/24 h / ceftazidima 2 g/8 h) + metronidazol 500 mg/8 h + tobramicina 3-5 mg/kg/24 h."
+     }
+    ]
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "t": "Esofágico → ingreso en observación de urgencias hasta 24 h tras la extracción."
+     },
+     {
+      "t": "Ótico o nasal extraído sin complicación → alta y manejo ambulatorio."
+     }
+    ]
+   }
+  ]
+ },
+ "deplecion_hidrosalina": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y valora la gravedad (primeros minutos)",
+    "detalle": "Monitoriza TA, FC, SatO2 y diuresis; valora signos de hipoperfusión (taquicardia, frialdad, relleno capilar, nivel de conciencia). Busca hipotensión en decúbito como marcador de depleción grave."
+   },
+   {
+    "paso": "Canaliza vía y extrae analítica",
+    "detalle": "Vía venosa periférica. Hemograma, bioquímica con osmolaridad, iones, función renal, bioquímica de orina (FeNa) y gasometría arterial para orientar etiología y detectar acidosis láctica."
+   },
+   {
+    "paso": "Clasifica la depleción y elige la vía de reposición",
+    "sub": [
+     {
+      "t": "Leve-moderada sin intolerancia oral → suero electrolítico por vía oral; alta con instrucciones."
+     },
+     {
+      "t": "Moderada con intolerancia oral → reposición IV con suero salino fisiológico 3.000 mL/24 h."
+     },
+     {
+      "nivel": "critico",
+      "t": "Grave (hipotensión, oligoanuria, alteración de conciencia, acidosis) → carga rápida de SSF 500-1.000 mL/h durante las primeras 2 h."
+     }
+    ]
+   },
+   {
+    "paso": "Reevalúa la respuesta y ajusta el mantenimiento",
+    "detalle": "Tras la carga, control de TA, FC, diuresis y estado cardiovascular. Mantenimiento mínimo 3.000 mL/24 h ajustando según PVC y cardiopatía previa para evitar sobrecarga."
+   },
+   {
+    "paso": "Trata la causa subyacente",
+    "detalle": "Corrige el origen: pérdidas digestivas, cutáneas, tercer espacio, diuréticos o insuficiencia suprarrenal. Reevalúa iones y equilibrio ácido-base de forma seriada."
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "t": "Leve-moderada sin intolerancia oral → alta desde urgencias con reposición oral y seguimiento."
+     },
+     {
+      "t": "Moderada con intolerancia oral → observación de urgencias."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Grave con repercusión hemodinámica, alteración de conciencia, insuficiencia renal o acidosis → observación de urgencias con monitorización estricta."
+     }
+    ]
+   }
+  ]
  },
  "derrame_pleural": {
   "ddx": [
@@ -2115,6 +2868,65 @@
    }
   ],
   "wikem_titulo": "Hyperosmolar hyperglycemic state"
+ },
+ "diabetes_mellitus_en_situaciones_especiales_hiperglucemia_ai": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Confirma hiperglucemia aislada y descarta complicación aguda",
+    "detalle": "HS = glucemia >200 mg/dL sin acidosis (pH normal) ni hiperosmolaridad (<320 mOsm/L). Determina cetonemia/cetonuria, gasometría y osmolaridad para excluir cetoacidosis o descompensación hiperosmolar."
+   },
+   {
+    "paso": "Identifica los signos de alarma que cambian el manejo",
+    "sub": [
+     {
+      "t": "Cetosis grave (cetonemia ≥3 mmol/L o cetonuria +++/++++) o síntomas de cetoacidosis → trata como cetoacidosis: insulina IV.",
+      "nivel": "critico"
+     },
+     {
+      "t": "Glucemia >400 mg/dL → reposición hídrica IV obligatoria y valorar insulina IV.",
+      "nivel": "emergente"
+     },
+     {
+      "t": "Glucemia 250-400 mg/dL sin cetosis o cetosis leve → insulina SC correctora.",
+      "nivel": "emergente"
+     }
+    ]
+   },
+   {
+    "paso": "Administra la dosis correctora de insulina",
+    "detalle": "Análogo ultrarrápido SC: dosis = (glucemia real − 170) / FSI, con FSI = 1.800/DTI (si no se conoce, FSI ≈50, o 0,05 UI/kg si <400 mg/dL sin cetosis, 0,10 UI/kg si ≥400 mg/dL o cetosis moderada/grave). +20% en cetosis moderada/grave o HS por corticoides; −50% si ejercicio en las 2-3 h previas."
+   },
+   {
+    "paso": "Aplica insulina IV e hidratación cuando proceda",
+    "detalle": "Si glucemia >400 mg/dL, cetosis grave o necesidad de control rápido (cirugía inmediata, ACV, IAM): insulina regular IV 0,1 UI/kg/h (100 UI en 100 mL SSF; 7 mL/h para 70 kg) + SSF 0,9% según deshidratación. Hidratación oral si deshidratación leve y tolera."
+   },
+   {
+    "paso": "Maneja las situaciones especiales con su pauta propia",
+    "sub": [
+     {
+      "t": "Hiperglucemia por corticoides → ascenso posprandial vespertino: incrementa bolos +20% desayuno/cena y +30% almuerzo, mantén basal.",
+      "nivel": "emergente"
+     },
+     {
+      "t": "DM1 hospitalizada (incluso en ayuno) → aporte insulina-glucosa con mínimo 4-6 controles/día.",
+      "nivel": "emergente"
+     },
+     {
+      "t": "Perioperatorio → glucemia objetivo 110-180 mg/dL; iniciar tratamiento si >180 mg/dL; pauta IV si >350 mg/dL al llegar a quirófano.",
+      "nivel": "emergente"
+     }
+    ]
+   },
+   {
+    "paso": "Reevalúa la respuesta a las dosis correctoras",
+    "detalle": "Repite control glucémico (cada 1 h en pauta IV, cada 2 h en SC). Si la cetosis persiste tras 2-3 dosis correctoras, replantea el manejo y considera observación."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "DM conocido con HS puntual sin cetosis → alta sin cambios. Cetosis persistente tras 2-3 dosis, mal control reiterado o sospecha de DM1/insulinopenia/corticoides → observación o interconsulta a hospital de día de diabetes. DM no conocido sin criterios → alta con tratamiento y derivación a atención primaria."
+   }
+  ]
  },
  "diagnostico_diferencial_del_ojo_rojo": {
   "ddx": [
@@ -2452,6 +3264,107 @@
   ],
   "wikem_titulo": "Acute dyspnea"
  },
+ "disnea_laringea": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce la obstrucción de vía aérea superior y monitoriza",
+    "detalle": "Identifica la tríada: tiraje, estridor INSPIRATORIO y descenso inspiratorio de la laringe (diferencia de la vía baja, espiratoria/sibilancias). Monitor, SatO2, O2 si precisa. NO acuestes al paciente; permite postura cómoda."
+   },
+   {
+    "paso": "Evalúa la gravedad del compromiso aéreo",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Estridor intenso con tiraje supraesternal/supraclavicular, cianosis o SatO2 descendente → riesgo de obstrucción completa: prepara material de vía aérea difícil y avisa a ORL/anestesia; valora cricotiroidotomía si obstrucción inminente."
+     }
+    ]
+   },
+   {
+    "paso": "Orienta la etiología sin precipitar la obstrucción",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Fiebre alta + postración + salivación + voz apagada + posición en trípode → epiglotitis aguda: NO explorar la orofaringe en niños; diagnóstico en adulto por laringoscopia/fibroscopia en entorno controlado."
+     },
+     {
+      "t": "Estridor con cuadro catarral (crup viral) → laringitis subglótica."
+     },
+     {
+      "t": "Deterioro progresivo en paciente con neoplasia conocida → disnea de origen tumoral."
+     }
+    ]
+   },
+   {
+    "paso": "Trata la epiglotitis aguda",
+    "detalle": "Ceftriaxona 2 g/24 h IV + clindamicina 600 mg/8 h IV (7-10 días) para H. influenzae y anaerobios. Metilprednisolona 1 mg/kg IV inicial, luego 20 mg/8 h, para reducir el edema supraglótico. Antipirexia con paracetamol 1 g/6 h IV."
+   },
+   {
+    "paso": "Trata la laringitis subglótica del adulto",
+    "detalle": "Metilprednisolona 1 mg/kg IV inicial seguida de 20 mg/8 h para reducir el edema subglótico. Analgesia/antipirexia: paracetamol 650 mg/6 h VO o metamizol 2 g/8 h IV."
+   },
+   {
+    "paso": "Resuelve la distonía aguda laríngea iatrogénica",
+    "detalle": "Emergencia con respuesta casi inmediata: biperideno 5 mg IV lento (diluido en 4 mL SSF), repetible cada 30 min sin superar 20 mg. Si insuficiente o no disponible, midazolam 0,1 mg/kg IV de rescate. Mantenimiento: biperideno 2 mg/6 h VO 1 semana si no puede retirarse el fármaco causante."
+   },
+   {
+    "paso": "Maneja la disnea tumoral y decide destino",
+    "sub": [
+     {
+      "t": "Tumoral → metilprednisolona 250 mg en bolo IV; si no responde, traqueostomía urgente; ingreso en ORL."
+     },
+     {
+      "t": "Laringitis/epiglotitis → observación de urgencias; UCI si precisa intubación o cricotiroidotomía."
+     }
+    ]
+   }
+  ]
+ },
+ "distonias_agudas_iatrogenicas": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce el cuadro y descarta compromiso de vía aérea",
+    "detalle": "Identifica espasmos craneofaciales (oromandibulolingual, tortícolis, crisis oculógiras) de inicio brusco. Explora la presencia de estridor inspiratorio que indique distonía laríngea."
+   },
+   {
+    "paso": "Confirma la exposición a fármaco bloqueante dopaminérgico",
+    "detalle": "Indaga neurolépticos y antieméticos (metoclopramida) en los últimos 3 días; pregunta específicamente por neuroléptico depot (flufenazina), que puede haberse administrado mucho antes."
+   },
+   {
+    "paso": "Decide la vía de tratamiento según gravedad",
+    "sub": [
+     {
+      "t": "Distonía laríngea con estridor → emergencia: biperideno 5 mg IV lento (vía IV obligada) y monitoriza vía aérea.",
+      "nivel": "critico"
+     },
+     {
+      "t": "Tormenta distónica con hipertermia, insuficiencia respiratoria o rabdomiólisis → soporte, hidratación y valorar UCI.",
+      "nivel": "emergente"
+     },
+     {
+      "t": "Distonía focal sin compromiso → biperideno 5 mg IM/IV."
+     }
+    ]
+   },
+   {
+    "paso": "Administra anticolinérgico de primera línea",
+    "detalle": "Biperideno 5 mg (1 ampolla diluida en 4 mL SSF) IV lento; puede repetirse cada 30 min sin superar 20 mg (4 ampollas). Por IM mismo efecto, retrasado hasta 20 min."
+   },
+   {
+    "paso": "Refuerza si no hay respuesta",
+    "detalle": "Midazolam 0,1 mg/kg IV (hasta 0,4 mg/kg) o diazepam 5-10 mg IV lento. Crisis oculógiras resistentes: clonazepam 0,5-4 mg. Alternativa: dexclorfeniramina 5 mg IM."
+   },
+   {
+    "paso": "Pauta de mantenimiento y prevención de recaídas",
+    "detalle": "Tras yugular la distonía, si no se puede retirar el fármaco causante o fue depot: biperideno oral 2 mg/6 h (o 4 mg retard/12 h) durante 1 semana. Suspende o sustituye el fármaco responsable."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Resolución completa y fármaco retirado → alta con anticolinérgico oral y control. Distonía laríngea, opistótonos o ausencia de respuesta → observación/ingreso. Tormenta distónica → UCI."
+   }
+  ]
+ },
  "dolor_abdominal_agudo": {
   "ddx": [
    {
@@ -2665,6 +3578,79 @@
   ],
   "wikem_titulo": "Pharyngitis"
  },
+ "dolor_oncologico": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Valora el dolor y descarta toxicidad/urgencia mayor",
+    "detalle": "Cuantifica la intensidad (escala EVA) y vigila signos de toxicidad opiácea: miosis puntiforme, sedación extrema, bradipnea. Descarta una urgencia oncológica mayor (compresión medular/radicular) como causa del dolor."
+   },
+   {
+    "paso": "Clasifica el tipo de dolor",
+    "sub": [
+     {
+      "t": "Somático (constante, bien localizado) o visceral (sordo, mal localizado, con cortejo vegetativo) → escalera analgésica OMS."
+     },
+     {
+      "t": "Neuropático (paroxístico, ardor, alodinia) → asocia coadyuvante (amitriptilina, gabapentina o pregabalina)."
+     },
+     {
+      "t": "Irruptivo (>3 episodios/24 h) → revisa el tratamiento basal y pauta dosis de rescate."
+     }
+    ]
+   },
+   {
+    "paso": "Aplica la escalera analgésica de la OMS a intervalos fijos",
+    "sub": [
+     {
+      "t": "1.er escalón (no opiáceos) → paracetamol 1 g/6 h y/o AINE (dexketoprofeno 25 mg/8 h VO, eficaz en metástasis óseas); metamizol en dolor visceral."
+     },
+     {
+      "t": "2.º escalón si no se controla en 48-72 h → tramadol 50-100 mg/8 h VO o codeína, manteniendo el 1.er escalón."
+     },
+     {
+      "t": "3.er escalón (opiáceos mayores) → morfina de liberación inmediata 10 mg/4 h VO para titular; oxicodona si predominio neuropático; fentanilo transdérmico en dolor estable."
+     }
+    ]
+   },
+   {
+    "paso": "Trata el dolor intenso agudo y el irruptivo",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Dolor intenso urgente o sin vía oral → morfina IV: carga 10 mg, luego perfusión 1-10 mg/h; titula según respuesta y vigila depresión respiratoria."
+     },
+     {
+      "t": "Dolor irruptivo → rescate de morfina de liberación inmediata (1/3 de la dosis regular) o fentanilo transmucoso/nasal."
+     }
+    ]
+   },
+   {
+    "paso": "Añade coadyuvantes y previene efectos adversos",
+    "detalle": "En dolor neuropático: amitriptilina 25 mg/noche (subir a 75-150 mg/día), gabapentina 300 mg/8 h o pregabalina 75 mg/12 h; carbamazepina si dolor lancinante. Pauta laxante y antiemético al iniciar opioides."
+   },
+   {
+    "paso": "Maneja la toxicidad opiácea si aparece",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Depresión respiratoria/miosis/sedación extrema → naloxona y soporte respiratorio."
+     }
+    ]
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "t": "Dolor controlado → alta con pauta a intervalos fijos, rescates y seguimiento por Oncología/Paliativos."
+     },
+     {
+      "t": "Dolor no controlable ambulatoriamente pese a tratamiento correcto, o signos de toxicidad por la analgesia → ingreso."
+     }
+    ]
+   }
+  ]
+ },
  "dolor_toracico_agudo": {
   "ddx": [
    {
@@ -2795,6 +3781,68 @@
    }
   ],
   "wikem_titulo": "Acute chest pain"
+ },
+ "dosificacion_farmacologica_en_pediatria": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Confirma el peso real y la edad (antes de prescribir)",
+    "detalle": "Pesa al niño siempre que sea posible; no estimes a la ligera. La mayoría de fármacos se dosifican en mg/kg con margen estrecho. Registra alergias y la última administración de cada fármaco."
+   },
+   {
+    "paso": "Calcula la dosis y verifica los topes de seguridad",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Paracetamol → 10-15 mg/kg/4-6 h; recuerda que >100 mg/kg es tóxica y >150 mg/kg letal."
+     },
+     {
+      "nivel": "critico",
+      "t": "AAS → 15-20 mg/kg/4-6 h; tóxica >150 mg/kg/día, letal 300-500 mg/kg."
+     },
+     {
+      "t": "Metamizol → no administrar a menores de 3 meses."
+     }
+    ]
+   },
+   {
+    "paso": "Selecciona vía, dilución y ritmo de infusión correctos",
+    "detalle": "Comprueba concentración y velocidad: errores aquí causan toxicidad grave. Metamizol IV 20-40 mg/kg/6 h diluido en 50 mL de SSF en 15 min. Antibióticos por peso (amoxicilina 40-80 mg/kg/día en 3 dosis; ampicilina en meningitis neonatal 150-200 mg/kg/día)."
+   },
+   {
+    "paso": "Aplica precauciones críticas en fármacos de alto riesgo",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Adrenalina en parada → dilución 1/10.000, 0,1 mL/kg; la 1/1.000 es 10 veces la dosis y puede ser letal."
+     },
+     {
+      "nivel": "critico",
+      "t": "Noradrenalina → siempre por vía central; la extravasación periférica produce necrosis."
+     },
+     {
+      "t": "Flumazenilo → contraindicado si coingesta de antidepresivos tricíclicos (riesgo de convulsiones). Midazolam IV >0,2 mg/kg/h: riesgo de depresión respiratoria."
+     }
+    ]
+   },
+   {
+    "paso": "Trata la intoxicación por paracetamol según ventana temporal",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Ingesta tóxica → N-acetilcisteína IV en las primeras 16-24 h; pasada esa ventana la eficacia disminuye drásticamente."
+     }
+    ]
+   },
+   {
+    "paso": "Revisa el cálculo con un segundo profesional",
+    "detalle": "Doble comprobación independiente de dosis, dilución y vía en fármacos de alto riesgo (inotrópicos, antiepilépticos IV, antídotos) antes de administrar."
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "Ingreso/UCIP: intoxicación por paracetamol con niveles tóxicos, shock séptico con inotrópicos, parada recuperada, estatus refractario o depresión respiratoria que precisa antídoto de repetición. Resto: alta con la pauta calculada por escrito y control."
+   }
+  ]
  },
  "edema_agudo_de_pulmon_cardiogenico": {
   "ddx": [
@@ -3327,6 +4375,118 @@
   ],
   "wikem_titulo": "Crohn's disease"
  },
+ "enfermedad_por_el_sars_cov_2_covid_19_y_variantes_relacionad": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Aísla, monitoriza y mide SatO2 (primeros minutos)",
+    "detalle": "Mascarilla y aislamiento por gotas/aéreo. Monitor de TA, FC, FR, temperatura y pulsioximetría OBLIGATORIA: la hipoxia silenciosa puede caer sin disnea, sobre todo en mayores de 60 años. Vía venosa."
+   },
+   {
+    "paso": "Clasifica la gravedad",
+    "sub": [
+     {
+      "t": "Leve (sin neumonía) → manejo domiciliario."
+     },
+     {
+      "t": "Moderada (neumonía, SatO2 >93%) → valorar ingreso según riesgo."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Grave (SatO2 ≤93%) → oxigenoterapia e ingreso."
+     },
+     {
+      "nivel": "critico",
+      "t": "Crítica (ventilación mecánica, shock séptico, fallo multiorgánico) → UCI; si inestabilidad o bajo nivel de conciencia, intubación directa (no VMNI/CPAP)."
+     }
+    ]
+   },
+   {
+    "paso": "Solicita pruebas y calcula el riesgo",
+    "detalle": "Analítica con biomarcadores (PCR, dímero D, ferritina, LDH, linfocitos, IL-6), radiografía de tórax y QCSI. QCSI ≥7 indica riesgo de enfermedad crítica a 24 h ≥44%."
+   },
+   {
+    "paso": "Inicia oxigenoterapia y corticoides si lo precisa",
+    "detalle": "O2 para mantener SatO2 objetivo. Si requiere O2 o SatO2 <94% con infiltrados bilaterales: dexametasona 6 mg/24 h IV/VO 10 días (en SDRA moderado-grave 20 mg/24 h IV 5 días y luego 10 mg/24 h 5 días)."
+   },
+   {
+    "paso": "Profilaxis tromboembólica y antibiótico si sobreinfección",
+    "detalle": "En todo ingreso sin contraindicación: enoxaparina 1,5 mg/kg/24 h SC. Si leucocitosis >12.000 y procalcitonina >1: cubre sobreinfección bacteriana (ceftriaxona 2 g/24 h + amoxicilina-clavulánico 1 g/8 h + azitromicina 500 mg/24 h)."
+   },
+   {
+    "paso": "Valora antiviral en ambulatorios de alto riesgo",
+    "detalle": "COVID leve-moderada con alto riesgo de progresión y <5 días de evolución: nirmatrelvir/ritonavir 300/100 mg/12 h 5 días (no si ClCr <30 ni Child-Pugh C); alternativa molnupiravir 800 mg/12 h 5 días."
+   },
+   {
+    "paso": "Destino",
+    "sub": [
+     {
+      "t": "SatO2 ≤93%, infiltrados bilaterales, QCSI ≥7, inmunodepresión o biomarcadores de riesgo → ingreso."
+     },
+     {
+      "t": "Leve sin criterios → alta domiciliaria con paracetamol, vigilancia de signos de alarma y pulsioximetría si posible."
+     }
+    ]
+   }
+  ]
+ },
+ "enfermedad_renal_cronica": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y monitoriza (primeros minutos)",
+    "detalle": "Monitor ECG, TA, SatO2 y vía venosa. Identifica el motivo de descompensación: deterioro agudo de función renal, sobrecarga de volumen o trastorno hidroelectrolítico. ECG de 12 derivaciones precoz."
+   },
+   {
+    "paso": "Descarta la hiperpotasemia como prioridad",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Hiperpotasemia con alteraciones ECG (T picudas, QRS ancho) → gluconato cálcico IV, insulina-glucosa y broncodilatadores; en diálisis, la hemodiálisis es el tratamiento de elección."
+     },
+     {
+      "t": "Sin alteraciones ECG → corrección farmacológica como puente y reevaluación analítica seriada."
+     }
+    ]
+   },
+   {
+    "paso": "Extrae analítica y solicita pruebas",
+    "detalle": "Hemograma, función renal con urea/creatinina, iones, gasometría (acidosis), y compara con situación basal del paciente. Radiografía de tórax si sospecha de sobrecarga. Valora ecografía del acceso vascular si complicación."
+   },
+   {
+    "paso": "Maneja la sobrecarga de volumen",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Edema agudo de pulmón en paciente en diálisis → diálisis urgente (tratamiento de elección)."
+     },
+     {
+      "t": "Sobrecarga sin EAP en paciente no en diálisis → furosemida IV 20 mg/8 h (ineficaz si ClCr muy bajo; valorar diálisis)."
+     }
+    ]
+   },
+   {
+    "paso": "Reponé volumen con precaución si hipovolemia",
+    "detalle": "Si el deterioro renal es por hipovolemia, reposición IV cautelosa ajustada a la situación clínica, vigilando estrechamente la aparición de sobrecarga."
+   },
+   {
+    "paso": "Corrige la acidosis y trata complicaciones asociadas",
+    "detalle": "Maneja acidosis metabólica grave, hipertensión maligna y complicaciones del acceso vascular (infección, hemorragia, trombosis). Avisa a nefrología de guardia."
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "t": "ERC no conocida estable → derivación a consulta de nefrología."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Sobrecarga con EAP, hiperpotasemia/acidosis graves, HTA maligna, progresión rápida o complicaciones graves del acceso → ingreso hospitalario."
+     }
+    ]
+   }
+  ]
+ },
  "enfermedad_tromboembolica_venosa": {
   "ddx": [
    {
@@ -3436,6 +4596,115 @@
    }
   ],
   "wikem_titulo": "Deep venous thrombosis"
+ },
+ "enfermedades_exantematicas_de_la_infancia": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Valora estado general y constantes (primeros minutos)",
+    "detalle": "Triángulo de evaluación pediátrica, temperatura, SatO2, TA y relleno capilar. Pesa al niño. Identifica de inmediato el niño con aspecto tóxico."
+   },
+   {
+    "paso": "Caracteriza el exantema y descarta lo emergente",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Exantema petequial o purpúrico en niño febril con aspecto tóxico → sospecha meningococemia: vía venosa, hemocultivo y antibiótico IV empírico sin demora; aislamiento."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Convulsiones o deterioro neurológico en exantema febril → estabiliza, descarta meningoencefalitis (valorar punción lumbar y TC)."
+     }
+    ]
+   },
+   {
+    "paso": "Reconoce los cuadros que requieren tratamiento específico",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Fiebre >5 días sin foco con criterios clínicos → sospecha Kawasaki: analítica y ecocardiograma; ingreso para inmunoglobulina IV 2 g/kg + AAS."
+     },
+     {
+      "t": "Escarlatina (lengua aframbuesada, exantema en lija) → amoxicilina 25 mg/kg/12 h 10 días para erradicar S. pyogenes y prevenir fiebre reumática."
+     }
+    ]
+   },
+   {
+    "paso": "Pauta tratamiento sintomático y antiviral cuando proceda",
+    "detalle": "Antipiresis con paracetamol 10-15 mg/kg/4-6 h (en varicela NO salicilatos). Varicela: prurito con hidroxizina; aciclovir 20 mg/kg/6 h VO en grupos de riesgo o 10 mg/kg/8 h IV si inmunodeprimido/diseminada. Sarampión ingresado: vitamina A según edad."
+   },
+   {
+    "paso": "Vigila complicaciones de Schönlein-Henoch y crisis aplásica",
+    "sub": [
+     {
+      "t": "Schönlein-Henoch → analgesia con ibuprofeno; prednisona 1-2 mg/kg/día si afectación GI, neurológica o nefrótica; controla TA, función renal y hematuria."
+     },
+     {
+      "t": "Eritema infeccioso en hemólisis crónica → vigila crisis aplásica; inmunoglobulina IV si inmunodeprimido con aplasia."
+     }
+    ]
+   },
+   {
+    "paso": "Indica medidas de aislamiento y salud pública",
+    "detalle": "Aísla según el agente (gotas/contacto), notifica las enfermedades de declaración obligatoria (sarampión, rubéola) y revisa el estado vacunal y de contactos."
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "Ingreso: Kawasaki (siempre), complicaciones de sarampión/rubéola/varicela, Schönlein-Henoch con afectación renal o GI grave, deshidratación por mano-pie-boca. Resto: alta con tratamiento sintomático y signos de alarma."
+   }
+  ]
+ },
+ "enfermedades_infecciosas_emergentes": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce, aísla y monitoriza (primeros minutos)",
+    "detalle": "Coloca mascarilla al paciente y aplica precauciones de aislamiento precoz (aéreo/contacto/gotas según sospecha). Monitor de TA, FC, FR, SatO2 y temperatura; vía venosa. O2 si SatO2 <95%."
+   },
+   {
+    "paso": "Realiza anamnesis epidemiológica dirigida",
+    "detalle": "Pregunta por viajes, zonas endémicas, contacto con casos, picaduras de artrópodos, contacto sexual y fechas. Es la clave para orientar el diferencial entre arbovirosis, fiebres hemorrágicas y gripal."
+   },
+   {
+    "paso": "Orienta el síndrome y busca red flags",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Diátesis hemorrágica, shock o fallo orgánico (Crimea-Congo, Ébola, Marburgo) → activa aislamiento de alto nivel, notifica de inmediato y prepara traslado a centro de referencia."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Fiebre + clínica respiratoria con FR >30 o SatO2 <95% (gripal A H1N1) → trata como neumonía viral grave."
+     },
+     {
+      "t": "Fiebre + exantema/artralgias tras viaje (dengue, Zika, chikungunya) → vigila fase crítica del dengue."
+     }
+    ]
+   },
+   {
+    "paso": "Trata según la entidad sospechada",
+    "detalle": "Antipirético SIEMPRE con paracetamol 1 g/6-8 h (evita AINE en arbovirosis por riesgo hemorrágico). Gripal A H1N1: oseltamivir 75 mg/12 h 5 días. Monkeypox: tecovirimat 600 mg/12 h 14 días (≥40 kg). Dengue grupo B: SSF/Ringer 5-10 mL/kg/h 1 h y desescalada, objetivo diuresis 0,5 mL/kg/h."
+   },
+   {
+    "paso": "Vigila la fase crítica del dengue",
+    "detalle": "Atento a la defervescencia (descenso a 37,5-38 °C con empeoramiento): hematocrito en ascenso, plaquetopenia, ascitis o derrame pleural marcan inicio de fase crítica y exigen reposición controlada."
+   },
+   {
+    "paso": "Declaración y coordinación obligatoria",
+    "detalle": "Notifica de forma urgente a Medicina Preventiva y Salud Pública (enfermedad de declaración obligatoria) y coordina con la unidad de referencia el manejo y traslado."
+   },
+   {
+    "paso": "Destino",
+    "sub": [
+     {
+      "t": "Crimea-Congo/Ébola/fiebres hemorrágicas o dengue → ingreso; valorar UAAN/UCI o centro de referencia según gravedad."
+     },
+     {
+      "t": "Gripal con criterios de gravedad (CURB65, FR >30, SatO2 <95%, shock) → ingreso. Caso leve sin criterios → alta con tratamiento y vigilancia."
+     }
+    ]
+   }
+  ]
  },
  "epistaxis": {
   "ddx": [
@@ -3719,6 +4988,159 @@
    }
   ],
   "wikem_titulo": "Preeclampsia"
+ },
+ "fibrilacion_y_fluter_auriculares_arritmias_auriculoventricul": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y monitoriza",
+    "detalle": "Monitor ECG, TA, SatO2 y vía venosa. O2 si SpO2 <90%. Valora estabilidad hemodinámica de inmediato."
+   },
+   {
+    "paso": "Realiza ECG de 12 derivaciones y caracteriza la arritmia",
+    "detalle": "Identifica FA/FLA, anchura del QRS, frecuencia ventricular (lenta/normal/rápida), preexcitación (WPW) y TV. Define duración del episodio (<48 h vs >48 h/desconocida)."
+   },
+   {
+    "paso": "Decide según estabilidad hemodinámica",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Inestabilidad (shock cardiogénico, EAP, síncope) → cardioversión eléctrica urgente sincronizada inmediata, previa sedoanalgesia."
+     },
+     {
+      "nivel": "critico",
+      "t": "FA con WPW (QRS >0,12 s, FV >200 lat/min) → cardioversión eléctrica urgente; NO uses adenosina, betabloqueantes, verapamilo, diltiazem ni digoxina (riesgo de fibrilación ventricular)."
+     },
+     {
+      "nivel": "critico",
+      "t": "Torsades de pointes → sulfato de magnesio IV y corrección del QTc; TV monomorfa sostenida con deterioro → cardioversión prioritaria."
+     }
+    ]
+   },
+   {
+    "paso": "Controla la frecuencia ventricular en FA/FLA rápida estable",
+    "sub": [
+     {
+      "t": "Sin insuficiencia cardíaca → metoprolol 2,5 mg IV repetible (máx 15 mg) o verapamilo 5 mg IV (máx 20 mg)."
+     },
+     {
+      "t": "Con insuficiencia cardíaca → digoxina 0,25 mg IV/2 h (máx 1,5 mg); si fracasa o contraindicación, amiodarona 5-7 mg/kg IV."
+     }
+    ]
+   },
+   {
+    "paso": "Plantea control del ritmo (cardioversión farmacológica)",
+    "sub": [
+     {
+      "t": "Sin cardiopatía estructural ni IC → flecainida 1,5-3 mg/kg IV en 20 min, propafenona o vernakalant 3 mg/kg IV en 10 min."
+     },
+     {
+      "t": "Con cardiopatía estructural sin IC → amiodarona IV."
+     }
+    ]
+   },
+   {
+    "paso": "Estratifica riesgo y anticoagula",
+    "detalle": "Calcula CHA2DS2-VASc (tromboembólico) y HAS-BLED (hemorrágico). FA no valvular → ACOD (apixabán 5 mg/12 h, rivaroxabán 20 mg/24 h, etc.) o AVK (INR 2-3); FA valvular → acenocumarol (INR 2,5-3,5). En FA aguda <48 h: enoxaparina 100 UI/kg SC."
+   },
+   {
+    "paso": "Maneja arritmias AV específicas y destino",
+    "detalle": "Taquicardia paroxística de la unión AV estable → maniobras vagales + adenosina 6 mg IV (hasta 24 mg); si no, verapamilo IV. Ingreso: inestabilidad, WPW, TV/torsades, FA lenta sintomática (<40 o pausas >3 s), taquicardia nodal refractaria o intoxicación digitálica."
+   }
+  ]
+ },
+ "fracturas_luxaciones_y_esguinces_generalidades": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Valora el miembro y descarta urgencia neurovascular",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Ausencia de pulsos, palidez/frialdad, parestesias o dolor distal (especialmente luxación de rodilla, fractura supracondílea o cintura escapular/pélvica) → reducción/alineación urgente y valoración vascular."
+     },
+     {
+      "t": "Estado neurovascular conservado → continúa exploración y analgesia."
+     }
+    ]
+   },
+   {
+    "paso": "Inmoviliza y analgesia precoz",
+    "detalle": "Alinea y entablilla el foco, retira anillos/ropa compresiva, eleva el miembro y aplica frío. Pauta analgesia adecuada antes de movilizar para imagen."
+   },
+   {
+    "paso": "Clasifica la lesión con radiografía",
+    "detalle": "Solicita radiografía en dos proyecciones incluyendo articulaciones adyacentes. Define: fractura/luxación/esguince, abierta o cerrada, desplazada o no, grado del esguince (I-III). Fractura patológica → descarta tumor/quiste/osteoporosis."
+   },
+   {
+    "paso": "Trata la fractura abierta como urgencia infecciosa",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Fractura abierta (grados I-III) → en las primeras 4 h: cefazolina 2 g IV de carga + 1 g/8 h 3 días (+ tobramicina 3-5 mg/kg/día si grado alto); herida con tierra → añade penicilina G 4 MUI/6 h. Profilaxis antitetánica, cubre la herida y avisa a Traumatología."
+     }
+    ]
+   },
+   {
+    "paso": "Reduce luxaciones e inmoviliza definitivamente",
+    "detalle": "Reduce las luxaciones lo antes posible bajo analgesia/sedación; comprueba estado neurovascular antes y después. Yeso/férula según lesión, con control de tolerancia."
+   },
+   {
+    "paso": "Pauta tromboprofilaxis si inmovilización prolongada",
+    "detalle": "Fracturas de miembro inferior, columna, cadera o pelvis (y esguinces que obligan a inmovilidad) → bemiparina 3.500 UI/24 h SC durante todo el período de inmovilización."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Ingresan: fracturas abiertas, las que requieren cirugía, edema importante o yeso cerrado con vigilancia neurovascular, y vertebrales con dolor intenso no manejable ambulatoriamente. El resto: alta con inmovilización, analgesia y revisión por Traumatología."
+   }
+  ]
+ },
+ "fracturas_y_luxaciones_de_pelvis_y_de_columna_vertebral": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Estabiliza como politraumatizado de alta energía",
+    "detalle": "ABCDE, monitor TA/SatO2, dos vías gruesas, analítica con pruebas cruzadas. Inmoviliza en bloque con tabla espinal y collarín; moviliza con maniobra en bloque (log-roll)."
+   },
+   {
+    "paso": "Controla la hemorragia pélvica si hay inestabilidad",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Inestabilidad hemodinámica o sospecha de hemorragia masiva en fractura pélvica → faja/cinturón pélvico de inmediato, reposición y protocolo de transfusión masiva; valora angioembolización o fijación externa."
+     }
+    ]
+   },
+   {
+    "paso": "Realiza exploración neurológica sistemática",
+    "detalle": "Valora fuerza, sensibilidad, reflejos y tono esfinteriano en toda fractura de columna. Documenta nivel lesional. Detecta paraplejía, síndrome del cono medular o de la cola de caballo."
+   },
+   {
+    "paso": "Identifica lesiones de máxima urgencia",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Síndrome del cono medular o fractura-luxación cervical con compromiso del canal → descompresión quirúrgica urgente; aviso inmediato a Neurocirugía/Traumatología."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Fractura odontoides inestable o estallido vertebral con fragmentos en canal → inmovilización estricta y valoración quirúrgica."
+     }
+    ]
+   },
+   {
+    "paso": "Solicita imagen y clasifica",
+    "detalle": "TC para pelvis (clasificación de Tile A/B/C) y columna. Descarta lesión urológica asociada: hematuria/uretrorragia → no sondar, valora rotura uretral/vesical. NO usar corticoides en lesión medular."
+   },
+   {
+    "paso": "Pauta tromboprofilaxis",
+    "detalle": "Fractura pélvica con inmovilización → bemiparina 3.500 UI/24 h SC mientras dure la inmovilización (alto riesgo de enfermedad tromboembólica)."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Ingreso: fractura pélvica inestable (Tile B/C) con sangrado, cualquier fractura de columna con déficit neurológico, cono medular/cola de caballo (urgente), fractura-luxación con riesgo medular y fracturas que precisen tracción/halo. Politraumatismo con fractura pélvica grave → UCI/quirófano."
+   }
+  ]
  },
  "gastroenteritis_aguda_en_la_infancia": {
   "ddx": [
@@ -4262,6 +5684,51 @@
    }
   ],
   "wikem_titulo": "Undifferentiated lower gastrointestinal bleeding"
+ },
+ "hemorragia_maxilofacial": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Valora repercusión hemodinámica y la vía aérea",
+    "detalle": "Monitoriza TA, FC, SatO2. Busca taquicardia, palidez, hipotensión (shock hipovolémico). Vigila el sangrado en suelo de boca por riesgo de compromiso de vía aérea."
+   },
+   {
+    "paso": "Localiza el punto sangrante",
+    "detalle": "Aspira secreciones y coágulos, buena iluminación. Identifica origen local (exodoncia, periodontitis, tumor, traumatismo) frente a sospecha de coagulopatía (sangrado sin coágulos)."
+   },
+   {
+    "paso": "Aplica hemostasia local escalonada",
+    "detalle": "Compresión con gasa, taponamiento y sutura del alvéolo. Agentes coagulantes tópicos. Ácido tranexámico tópico (vial 500 mg) o enjuagues 2 min hasta 4 veces/día en sangrado periodontal."
+   },
+   {
+    "paso": "Solicita pruebas si hay datos de gravedad",
+    "detalle": "Hemograma y coagulación solo si inestabilidad, sospecha de anemia o coagulopatía. Revisa anticoagulación/antiagregación."
+   },
+   {
+    "paso": "Trata el shock y la coagulopatía",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Shock hipovolémico → cristaloides IV, fármacos vasoactivos y concentrado de hematíes según protocolo; ácido tranexámico IV 0,5-1 g si sangrado muy abundante."
+     },
+     {
+      "t": "Coagulopatía → corrige con plasma, factores de coagulación o pool de plaquetas según el déficit identificado."
+     }
+    ]
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Inestabilidad/shock, hemorragia tumoral masiva (posible ligadura de carótida externa) o postraumática con lesión ósea/vascular mayor → ingreso e interconsulta urgente a Maxilofacial."
+     },
+     {
+      "t": "Sangrado controlado con medidas locales → observación y alta con instrucciones, evitar enjuagues vigorosos."
+     }
+    ]
+   }
+  ]
  },
  "hemorragia_subaracnoidea_espontanea": {
   "ddx": [
@@ -4839,6 +6306,57 @@
    }
   ],
   "wikem_titulo": "Hyperkalemia"
+ },
+ "hipo": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Clasifica el hipo según duración",
+    "detalle": "Agudo (<48 h, benigno y autolimitado), persistente (>48 h y <1 mes) o intratable (>1 mes). Solo persistente e intratable obligan a descartar patología subyacente grave."
+   },
+   {
+    "paso": "Busca signos de alarma",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Dolor torácico → descarta IAM, pericarditis o TEP (ECG, troponina)."
+     },
+     {
+      "t": "Focalidad neurológica, síndrome meníngeo o signos de hipertensión intracraneal → descarta ACV, HSA, meningitis o neoplasia (TC craneal)."
+     },
+     {
+      "t": "Disnea asociada → descarta TEP, asma o patología mediastínica."
+     }
+    ]
+   },
+   {
+    "paso": "Identifica la causa y revisa fármacos",
+    "detalle": "El tratamiento etiológico es prioritario. Revisa inductores frecuentes: corticoides, midazolam, opioides, benzodiacepinas, cisplatino. Orienta el origen como central vs. periférico."
+   },
+   {
+    "paso": "Aplica maniobras físicas en el hipo agudo",
+    "detalle": "En el hipo agudo prueba primero maniobras físicas (estimulación faríngea, apnea, maniobra de Valsalva); raramente requiere fármacos."
+   },
+   {
+    "paso": "Inicia tratamiento farmacológico según fisiopatología",
+    "sub": [
+     {
+      "t": "Origen periférico / reflujo → omeprazol 20 mg/24 h (VO o IV si no tolera VO) y/o metoclopramida 10 mg/8 h."
+     },
+     {
+      "t": "Origen central (incluido ACV) → baclofeno 5-10 mg/8 h (máx 45 mg/día); en causa neurológica o paliativos, gabapentina 100-400 mg/8 h."
+     }
+    ]
+   },
+   {
+    "paso": "Escala a segunda línea si fracasa",
+    "detalle": "Si IBP y metoclopramida son insuficientes → clorpromazina 25 mg/8 h (máx 50 mg/8 h)."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Alta con tratamiento si responde. Ingreso si el hipo agudo/persistente no responde al tratamiento inicial o si la causa subyacente identificada (ACV, neoplasia, infección grave, IAM) lo justifica."
+   }
+  ]
  },
  "hipocalcemia": {
   "ddx": [
@@ -5471,6 +6989,59 @@
   ],
   "wikem_titulo": "Hypokalemia"
  },
+ "hombro_doloroso": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Descarta primero la causa extrínseca grave",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Dolor de hombro SIN limitación funcional o con síntomas cardiovasculares/respiratorios/abdominales → descarta IAM, disección aórtica, TEP, rotura hepática o embarazo ectópico (ECG, constantes, exploración dirigida) antes de atribuirlo al hombro."
+     }
+    ]
+   },
+   {
+    "paso": "Anamnesis y caracterización del dolor",
+    "detalle": "Diferencia intrínseco (aumenta con la movilización) de extrínseco (referido, sin déficit funcional). Recoge traumatismo, fiebre y tiempo de evolución."
+   },
+   {
+    "paso": "Exploración física diferenciada",
+    "detalle": "Dolor con movilidad pasiva → afección articular; dolor con movilidad resistida → origen musculotendinoso. Limitación de la abducción a 20° sugiere rotura del manguito de los rotadores."
+   },
+   {
+    "paso": "Solicita radiografía solo si está indicada",
+    "detalle": "Única prueba urgente: radiografía de hombros de frente comparada. Espacio acromiohumeral <7 mm indica rotura del manguito de los rotadores."
+   },
+   {
+    "paso": "Descarta artritis séptica",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Calor, rubor, fiebre e impotencia funcional grave → sospecha artritis séptica: requiere ingreso hospitalario urgente."
+     }
+    ]
+   },
+   {
+    "paso": "Trata el dolor de forma escalonada",
+    "detalle": "Escalón 1: paracetamol 1 g/8 h. Escalón 2: metamizol 575 mg/8 h. Añade AINE si hay componente inflamatorio (naproxeno 500 mg/12 h). Refractario: paracetamol+tramadol 325/37,5 mg/8 h. Tendinitis/subacromial rebelde: infiltración con triamcinolona 40 mg/mL (1-2 mL) + lidocaína. Capsulitis adhesiva: dexametasona oral en pauta descendente."
+   },
+   {
+    "paso": "Destino",
+    "sub": [
+     {
+      "t": "Artritis séptica o causa extrínseca grave → ingreso según enfermedad causante."
+     },
+     {
+      "t": "Rotura del manguito/tendón largo del bíceps → valoración traumatológica urgente."
+     },
+     {
+      "t": "Patología intrínseca no complicada → alta con analgesia, reposo relativo y derivación a su médico/rehabilitación."
+     }
+    ]
+   }
+  ]
+ },
  "ictericia": {
   "ddx": [
    {
@@ -5689,6 +7260,220 @@
   ],
   "wikem_titulo": "Stroke (main)"
  },
+ "indicaciones_y_complicaciones_de_la_transfusion_de_sangre_y_": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Confirma la indicación antes de transfundir",
+    "detalle": "Hematíes: anemia crónica con Hb <7-8 g/dL o anemia aguda según clínica/hemodinámica (no solo cifra). Plasma 10-15 mL/kg solo si coagulopatía con hemorragia activa. Extrae muestras para estudio etiológico antes de transfundir."
+   },
+   {
+    "paso": "Verifica compatibilidad e inicia con vigilancia",
+    "detalle": "Comprueba identidad, grupo y compatibilidad ABO. Toma constantes basales. Inicia la transfusión lentamente y monitoriza al paciente durante los primeros 15 min, el período de mayor riesgo."
+   },
+   {
+    "paso": "Ante cualquier signo de alarma, suspende de inmediato",
+    "detalle": "Fiebre con escalofríos, dolor torácico/lumbar, disnea, taquicardia o hipotensión → detén la transfusión, mantén la vía con SSF y revalúa identidad/etiqueta del componente."
+   },
+   {
+    "paso": "Identifica y trata el tipo de reacción",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Reacción hemolítica aguda (hemoglobinuria, shock) → SSF 300 mL en 20 min repetible; dopamina 5 µg/kg/min hasta TAS >90 mmHg o diuresis >35 mL/h si no responde; vigila CID."
+     },
+     {
+      "nivel": "critico",
+      "t": "Shock séptico por contaminación bacteriana → hemocultivos, antibioterapia empírica y soporte hemodinámico; ingreso en UCI."
+     },
+     {
+      "nivel": "critico",
+      "t": "TRALI (edema pulmonar no cardiogénico) → soporte respiratorio/oxigenoterapia, valorar ventilación; ingreso en críticos."
+     },
+     {
+      "t": "Reacción febril no hemolítica → paracetamol 1 g IV (o metamizol 2 g IV)."
+     }
+    ]
+   },
+   {
+    "paso": "Vigila complicaciones de la transfusión masiva",
+    "detalle": "Controla potasio y calcio: trata hiperpotasemia e hipocalcemia graves. Monitoriza coagulación si CID."
+   },
+   {
+    "paso": "Recuerda contraindicaciones y precauciones",
+    "detalle": "No transfundir plaquetas en PTT ni en síndrome hemolítico urémico. Evita la sobrecarga de volumen en cardiópatas."
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "Reacción leve resuelta → continúa observación. Reacción hemolítica, séptica, TRALI, CID o trastorno electrolítico grave → ingreso urgente con monitorización (UCI en shock/TRALI)."
+   }
+  ]
+ },
+ "infeccion_en_el_paciente_receptor_de_trasplante": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y monitoriza (primeros minutos)",
+    "detalle": "Todo trasplantado con fiebre es de alto riesgo. Monitoriza TA, FC, Tª, SatO2 y nivel de conciencia. Vía venosa. Identifica precozmente sepsis grave, shock o distrés (PaO2 < 60 mmHg)."
+   },
+   {
+    "paso": "Anamnesis, estudio del foco y hemocultivos",
+    "detalle": "Determina órgano trasplantado, tiempo postrasplante, inmunosupresión, profilaxis y colonizaciones previas (SARM). Extrae hemocultivos (incluido del catéter), bioquímica con función del injerto, sistemático de orina, radiografía de tórax y serologías/PCR de CMV. No demores el antibiótico."
+   },
+   {
+    "paso": "Inicia antibioterapia empírica sin demora y ajusta inmunosupresión",
+    "detalle": "Fiebre sin foco, sin mucositis ni sepsis grave: cefepima 2 g/12 h IV en infusión extendida de 3 h (alternativas piperacilina-tazobactam o meropenem). Antipiresis con paracetamol 650 mg/6 h VO. Reduce la inmunosupresión en la mayor cuantía posible junto con el especialista."
+   },
+   {
+    "paso": "Amplía cobertura según gravedad y factores de riesgo",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Sepsis grave, shock o distrés → añade cobertura grampositiva con vancomicina 15-20 mg/kg/12 h IV (salvo neumonía)."
+     },
+     {
+      "t": "Catéter venoso central infectado, mucositis o colonización SARM → añade vancomicina (o daptomicina 6-10 mg/kg/24 h IV)."
+     },
+     {
+      "t": "Sospecha de P. aeruginosa en foco focal → añade amikacina 15-20 mg/kg/24 h IV."
+     }
+    ]
+   },
+   {
+    "paso": "Dirige el tratamiento según el foco identificado",
+    "sub": [
+     {
+      "t": "Foco respiratorio: gripe → oseltamivir 75 mg/12 h VO; neumonía grave/precoz → meropenem 1 g/8 h IV; nódulos/cavitación (Aspergillus) → voriconazol 6 mg/kg/12 h IV día 1."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Viremia o retinitis por CMV → ganciclovir 5 mg/kg/12 h IV."
+     },
+     {
+      "t": "Foco urinario con enterobacterias multirresistentes → meropenem 1 g/8 h IV (o imipenem 500 mg/6 h IV)."
+     }
+    ]
+   },
+   {
+    "paso": "Decide destino conjuntamente con el especialista",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Sepsis grave, disfunción del injerto, inmunosupresión intensa o infección grave → ingreso (observación o servicio correspondiente)."
+     },
+     {
+      "t": "Buen estado tras evaluación conjunta y pruebas favorables → alta domiciliaria con seguimiento en consulta externa."
+     }
+    ]
+   }
+  ]
+ },
+ "infecciones_de_transmision_sexual": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Valora estabilidad y busca red flags (primeros minutos)",
+    "detalle": "Comprueba constantes. Sospecha sífilis cardiovascular terciaria si inestabilidad hemodinámica y neurosífilis/sífilis ocular u ótica si clínica neurológica o visual: requieren manejo hospitalario IV."
+   },
+   {
+    "paso": "Anamnesis y exploración genital dirigida",
+    "detalle": "Caracteriza la presentación: úlcera genital, secreción uretral/cervicitis, adenopatía inguinal o lesión no ulcerosa. Toma muestras microbiológicas antes de tratar."
+   },
+   {
+    "paso": "Criba sistemáticamente coinfecciones",
+    "detalle": "Solicita serología de VIH, sífilis y hepatitis en toda ITS. En toda mujer en edad fértil, descarta embarazo con test."
+   },
+   {
+    "paso": "Trata empíricamente según el síndrome clínico",
+    "sub": [
+     {
+      "t": "Úlcera genital indolora → sífilis: penicilina G benzatina 2.400.000 U IM dosis única (doxiciclina 100 mg/12 h 14 días si alergia)."
+     },
+     {
+      "t": "Úlcera dolorosa → chancroide: azitromicina 1 g VO dosis única o ceftriaxona 250 mg IM."
+     },
+     {
+      "t": "Adenopatía inguinal/proctitis → LGV: doxiciclina 100 mg/12 h 21 días."
+     },
+     {
+      "t": "Secreción uretral/cervicitis → cubre gonococo + Chlamydia de forma combinada por coinfección frecuente."
+     }
+    ]
+   },
+   {
+    "paso": "Anticipa la reacción de Jarisch-Herxheimer",
+    "detalle": "Tras la primera dosis de penicilina en sífilis temprana, advierte y vigila 1-2 h por fiebre, escalofríos, hipotensión y taquicardia; en embarazada hay riesgo de parto prematuro y sufrimiento fetal."
+   },
+   {
+    "paso": "Identifica las formas que exigen ingreso",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Neurosífilis/sífilis ocular u ótica → ingreso: penicilina G sódica 18-24 MUI/24 h IV 10-14 días (desensibilizar si alergia)."
+     },
+     {
+      "t": "VIH con CD4 <200/µL y fiebre, o EPI moderada-grave → ingreso y estudio de oportunistas/complicaciones."
+     }
+    ]
+   },
+   {
+    "paso": "Destino, declaración y medidas de salud pública",
+    "detalle": "La mayoría se manejan ambulatoriamente con alta y tratamiento. Declara las ITS de declaración obligatoria, recomienda estudio y tratamiento de contactos y abstinencia hasta completar la pauta."
+   }
+  ]
+ },
+ "infecciones_respiratorias_en_la_infancia": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Valora vía aérea y oxigenación (primeros minutos)",
+    "detalle": "Triángulo de evaluación pediátrica, FR, trabajo respiratorio y SatO2. Si SatO2 <92%, estridor en reposo, tiraje intenso o cianosis, prioriza la vía aérea. Pesa al niño para dosificar."
+   },
+   {
+    "paso": "Descarta la emergencia de vía aérea antes de explorar la faringe",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Posición en trípode, babeo, fiebre alta y estridor de tono bajo → sospecha epiglotitis: NO explores la faringe, traslado a UCIP con la vía aérea asegurada por personal experto."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Laringitis con estridor en reposo → dexametasona 0,15-0,6 mg/kg + adrenalina nebulizada; observa 3-4 h."
+     }
+    ]
+   },
+   {
+    "paso": "Orienta el síndrome y la etiología por edad",
+    "detalle": "Distingue catarro, faringoamigdalitis, OMA, bronquiolitis y NAC. La edad condiciona etiología y antibiótico. Lactante <2 meses con fiebre o cualquier distrés es de alto riesgo."
+   },
+   {
+    "paso": "Trata síntomas y decide antibioterapia solo si hay criterio bacteriano",
+    "sub": [
+     {
+      "t": "Faringoamigdalitis estreptocócica → fenoximetilpenicilina 250 mg/12 h (<27 kg) o 500 mg/12 h (>27 kg) 10 días; amoxicilina 25-30 mg/kg/8 h alternativa; azitromicina si alergia."
+     },
+     {
+      "t": "Rinosinusitis bacteriana → amoxicilina 25-30 mg/kg/8 h 10 días."
+     },
+     {
+      "t": "OMA → antipiresis con paracetamol 10-15 mg/kg/4-6 h o ibuprofeno 7 mg/kg/8 h; antibiótico si fiebre >39 ºC u otodinia intensa."
+     }
+    ]
+   },
+   {
+    "paso": "Maneja bronquiolitis y NAC con soporte",
+    "detalle": "Bronquiolitis: aspiración de secreciones, posición, O2 si SatO2 <92%, hidratación; monitoriza apneas en <1 mes y prematuros. NAC: antibiótico según edad y soporte de O2."
+   },
+   {
+    "paso": "Antipiresis y analgesia transversal",
+    "detalle": "Paracetamol 10-15 mg/kg/4-6 h VO/rectal o ibuprofeno 7 mg/kg/8 h VO (máximo 40 mg/kg/día) en mayores de 6 meses."
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "UCIP: epiglotitis y bronquiolitis/NAC con insuficiencia respiratoria grave. Ingreso: lactante <2 meses con OMA, bronquiolitis de riesgo, NAC <3 meses o complicada. Resto: alta con tratamiento y signos de alarma escritos."
+   }
+  ]
+ },
  "infecciones_urinarias_bajas_cistitis_y_uretritis": {
   "ddx": [
    {
@@ -5901,6 +7686,127 @@
   ],
   "wikem_titulo": "Congestive heart failure"
  },
+ "intoxicacion_aguda_por_anfetaminas_y_drogas_de_diseno": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce el síndrome simpaticomimético y estabiliza",
+    "detalle": "Monitor ECG, TA, SatO2, temperatura central y glucemia. Vía venosa. Sospecha ante midriasis, HTA, hipertermia, taquicardia e hipertonía en paciente de ambiente de ocio. Diagnóstico clínico (detección urinaria con falsos positivos)."
+   },
+   {
+    "paso": "Identifica banderas rojas que marcan gravedad",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Hiperpirexia >40 °C → enfriamiento agresivo con mantas hipotérmicas o baños de agua helada (compresas si moderada)."
+     },
+     {
+      "nivel": "critico",
+      "t": "Déficit neurológico focal → sospecha hemorragia intracraneal; TC craneal urgente."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Rabdomiólisis (CK elevada, mioglobinuria) → hidratación abundante y vigilancia renal; descarta CID."
+     }
+    ]
+   },
+   {
+    "paso": "Descontamina si procede",
+    "detalle": "Paciente alerta con ingesta <2 h → carbón activado 25-50 g + sorbitol 1-2 mL/kg de solución al 70% VO."
+   },
+   {
+    "paso": "Controla la agitación y las convulsiones",
+    "sub": [
+     {
+      "t": "Agitación → midazolam 0,1 mg/kg IV o 0,2 mg/kg IM (lorazepam 1-2 mg/4 h VO alternativa)."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Crisis convulsivas → midazolam 0,1 mg/kg IV (repetible hasta 0,4 mg/kg); si no ceden, fenitoína 18 mg/kg IV de ataque."
+     },
+     {
+      "t": "Síntomas psicóticos → haloperidol 10 mg VO inicial (máx 30 mg/24 h)."
+     }
+    ]
+   },
+   {
+    "paso": "Trata las complicaciones cardiovasculares",
+    "sub": [
+     {
+      "t": "HTA con diastólica >120 mmHg y afectación de órgano diana → nitroprusiato 1 µg/kg/min IV (nitroglicerina alternativa)."
+     },
+     {
+      "t": "Hipotensión por hipovolemia → SSF 300 mL en carga repetible; si fallo ventricular izquierdo, noradrenalina 0,05-0,5 µg/kg/min."
+     },
+     {
+      "t": "Arritmias → lidocaína en ventriculares; verapamilo o diltiazem en supraventriculares."
+     }
+    ]
+   },
+   {
+    "paso": "Hidrata y vigila la temperatura y la función renal",
+    "detalle": "Fluidoterapia para compensar pérdidas por fiebre/hiperventilación y prevenir el daño renal por rabdomiólisis; controla CK e iones."
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "Todos los sintomáticos ingresan: leve-moderado en observación de urgencias; grave en UCI. Alta solo si asintomático tras 4 h con constantes normales y carbón administrado; derivar a Psiquiatría si la intoxicación fue intencionada."
+   }
+  ]
+ },
+ "intoxicacion_aguda_por_anticolinergicos_y_antihistaminicos": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce el síndrome anticolinérgico y estabiliza",
+    "detalle": "Monitoriza ECG, TA, SatO2 y temperatura; canaliza vía venosa. O2 en Venturi al 30% y fluidoterapia con glucosalino. Busca la tríada clave: anhidrosis (signo guía), midriasis y taquicardia, con agitación/delirio."
+   },
+   {
+    "paso": "Realiza ECG e identifica la cardiotoxicidad",
+    "detalle": "Mide QRS y QT. La difenhidramina y los tricíclicos bloquean los canales rápidos de sodio: si QRS ensanchado, prepara bicarbonato sódico para arritmias por bloqueo de sodio."
+   },
+   {
+    "paso": "Descontamina si procede",
+    "detalle": "Carbón activado (dosis múltiples cada 2-4 h) válido hasta 6 h por el íleo que produce el tóxico. Contraindicado si íleo paralítico establecido."
+   },
+   {
+    "paso": "Trata según la manifestación predominante",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Delirio/alucinaciones/agitación grave → fisostigmina 1-2 mg IV lenta (3 min), repetible cada 10 min hasta 4 mg/30 min; más eficaz que las benzodiacepinas."
+     },
+     {
+      "t": "Agitación sin indicación de fisostigmina → midazolam 0,2 mg/kg IM (≈1 amp de 15 mg)."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Convulsiones → midazolam 0,1 mg/kg IV inicial, repetible sin superar 0,4 mg/kg."
+     },
+     {
+      "t": "Íleo/seudoobstrucción → neostigmina 0,25 mg SC."
+     }
+    ]
+   },
+   {
+    "paso": "Vigila la hipertermia y la rabdomiólisis",
+    "detalle": "Enfría activamente si T >40 °C; hidrata y controla CK ante agitación intensa. Ten preparada atropina (mitad de la dosis de fisostigmina) por si aparece toxicidad colinérgica iatrogénica."
+   },
+   {
+    "paso": "Define el destino",
+    "sub": [
+     {
+      "t": "Cuadro confusional, agitación grave, arritmias, convulsiones o hipertermia → UCI."
+     },
+     {
+      "t": "Cuadro leve → observación ≥8 h hasta quedar asintomático (escopolamina: ~6 h de toxicidad)."
+     },
+     {
+      "t": "Normalidad neurológica y cardiovascular → alta con seguimiento."
+     }
+    ]
+   }
+  ]
+ },
  "intoxicacion_aguda_por_antidepresivos_ciclicos": {
   "ddx": [
    {
@@ -6091,6 +7997,118 @@
    }
   ],
   "wikem_titulo": "Benzodiazepine toxicity"
+ },
+ "intoxicacion_aguda_por_bloqueadores": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce la toxicidad cardiovascular y estabiliza",
+    "detalle": "Monitor ECG continuo, TA, SatO2 y glucemia; doble vía venosa. Sospecha ante bradicardia intensa, hipotensión y shock cardiogénico. La nula respuesta a 1 mg de atropina confirma el diagnóstico. Recuerda que el sotalol puede dar toxicidad tardía (hasta 48 h)."
+   },
+   {
+    "paso": "Realiza ECG y ecocardiograma urgente",
+    "detalle": "Valora bradicardia, bloqueo AV, QRS >0,12 s y QT (torsades, sobre todo con sotalol). El ecocardiograma orienta el soporte inotrópico y vasopresor."
+   },
+   {
+    "paso": "Descontamina y corrige la conducción",
+    "detalle": "Carbón activado 1 g/kg (luego 0,5 g/kg/4 h), útil en liberación retardada; irrigación con polietilenglicol si procede. Si QRS >0,12 s: bicarbonato sódico 1 M 0,5-2 mEq/kg en bolo. Magnesio 2 g IV si arritmia ventricular/torsades."
+   },
+   {
+    "paso": "Trata la bradicardia, el bloqueo y la hipotensión",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Bradicardia/bloqueo AV → glucagón bolo 5-10 mg IV (repetible cada 3-5 min), seguido de infusión 4 mg/h ajustable; si no responde, adrenalina o milrinona."
+     },
+     {
+      "nivel": "critico",
+      "t": "Hipotensión/shock → cargas de SSF 200 mL/10 min hasta 20-40 mL/kg + noradrenalina; gluconato cálcico 10% 0,6 mL/kg para la contractilidad."
+     },
+     {
+      "nivel": "critico",
+      "t": "Shock refractario → hiperinsulinemia-euglucemia: insulina 1 UI/kg en bolo + infusión 0,5 UI/kg/h con glucosa 50% 25 g; vigila K+ y glucemia."
+     }
+    ]
+   },
+   {
+    "paso": "Maneja las complicaciones sistémicas",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Convulsiones → midazolam 0,1 mg/kg IV (máx 0,4 mg/kg); evita difenilhidantoína."
+     },
+     {
+      "t": "Hiperpotasemia → salbutamol 0,5 mg IV en 20 min o nebulizado 5-10 mg."
+     },
+     {
+      "t": "Vómitos → metoclopramida 10-20 mg/8 h IV (granisetrón si no responde)."
+     }
+    ]
+   },
+   {
+    "paso": "Define el destino",
+    "sub": [
+     {
+      "t": "Alteración de conciencia, arritmias o hipotensión → UCI."
+     },
+     {
+      "t": "Estable → observación mínima 24 h."
+     },
+     {
+      "t": "Sotalol → observación mínima 48 h por toxicidad tardía."
+     }
+    ]
+   }
+  ]
+ },
+ "intoxicacion_aguda_por_cianuro": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Sospecha precoz y estabilización inmediata",
+    "detalle": "Monitoriza ECG, TA y SatO2; canaliza vía con SSF. Sospecha ante víctima de incendio (humos de plásticos/poliuretano) que NO mejora con O2 a alto flujo y presenta coma, shock o convulsiones de inicio brusco. No hay cianosis. Administra O2 al 100%."
+   },
+   {
+    "paso": "Confirma con datos analíticos",
+    "detalle": "Gasometría: acidosis láctica con anion gap elevado. Sospecha fuerte si lactato ≥10 mmol/L (incendio) o ≥8 (cianuro puro). Dato paradójico: SatO2 venosa central >70% o pO2 venosa >40 mmHg por bloqueo de la utilización tisular."
+   },
+   {
+    "paso": "Administra el antídoto SIN demora",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Sospecha fundada o riesgo vital → hidroxicobalamina 5 g IV en 15 min (10 g si parada/riesgo vital); 2.ª dosis de 5 g según respuesta."
+     },
+     {
+      "nivel": "critico",
+      "t": "Intoxicación grave → añadir tiosulfato sódico 12,5 g IV en 10 min (sinérgico)."
+     },
+     {
+      "t": "No se dispone de hidroxicobalamina → edetato dicobáltico 600 mg IV en 1 min; 300 mg más si no hay respuesta a los 5 min."
+     }
+    ]
+   },
+   {
+    "paso": "Descontamina con la vía aérea protegida",
+    "detalle": "Exposición cutánea: retira la ropa y lava piel y ojos con abundante agua/SSF. Ingestión <30 min: carbón activado 1 g/kg solo si la vía aérea está protegida (intubación previa)."
+   },
+   {
+    "paso": "Soporte avanzado de las complicaciones",
+    "detalle": "Trata convulsiones, arritmias (bloqueo AV, isquemia) y shock; soporte ventilatorio y hemodinámico. Considera intoxicación combinada por CO en víctimas de incendio."
+   },
+   {
+    "paso": "Define el destino",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Toda intoxicación confirmada o tratada → UCI."
+     },
+     {
+      "t": "Sospecha que a las 4 h tiene constantes normales, sin acidosis, lactato normal y ECG normal → alta."
+     }
+    ]
+   }
+  ]
  },
  "intoxicacion_aguda_por_cocaina": {
   "ddx": [
@@ -6290,6 +8308,174 @@
    }
   ],
   "wikem_titulo": "Digoxin toxicity"
+ },
+ "intoxicacion_aguda_por_ingestion_de_causticos": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Estabiliza y prioriza la vía aérea",
+    "detalle": "Monitoriza TA, SatO2 y FC; canaliza vía. Dieta absoluta. Valora urgentemente la vía aérea: disnea, estridor o disfonía indican edema de glotis y obligan a asegurar la vía (intubación precoz, valorar traqueostomía)."
+   },
+   {
+    "paso": "EVITA las maniobras contraindicadas",
+    "detalle": "NO induzcas el vómito, NO uses sonda nasogástrica a ciegas, NO administres carbón activado, neutralizantes ni catárticos. El tratamiento es de soporte y dirigido por endoscopia."
+   },
+   {
+    "paso": "Inicia soporte, analgesia y protección gástrica",
+    "detalle": "SSF de mantenimiento (21 mL/h); en shock, carga de 300 mL/20 min repetible. Analgesia con paracetamol 1 g/6 h IV (metamizol 2 g/6 h alternativo). Omeprazol IV/VO 40 mg/24 h."
+   },
+   {
+    "paso": "Solicita pruebas y programa la endoscopia",
+    "detalle": "Hemograma, gasometría y lactato. Vigila marcadores de gravedad: dolor torácico/abdominal, leucocitosis >20.000, pH <7,22 (ácidos), hiperlactacidemia (álcalis), enfisema subcutáneo. Endoscopia digestiva alta a las 12-24 h para estadificar (Zargar)."
+   },
+   {
+    "paso": "Trata según el grado endoscópico",
+    "sub": [
+     {
+      "t": "Grado 0-1 → asintomáticos: observación; tolerancia oral progresiva."
+     },
+     {
+      "t": "Grado 2A → omeprazol VO 40 mg/24 h; 2B → dieta absoluta IV + metilprednisolona 1 mg/kg/día (primeras 48 h) + antibióticos (metronidazol + cefepima/meropenem)."
+     },
+     {
+      "nivel": "critico",
+      "t": "Grado 3B-4 (necrosis extensa/perforación) → cirugía URGENTE y antibioterapia de amplio espectro."
+     }
+    ]
+   },
+   {
+    "paso": "Define el destino",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Inestabilidad, dolor torácico/abdominal, grado 3B-4 o perforación → UCI/cirugía."
+     },
+     {
+      "t": "Grado 2B → UCI o planta de digestivo."
+     },
+     {
+      "t": "Asintomático o grado 0-1 → observación de urgencias; seguimiento de estenosis si lesión circunferencial."
+     }
+    ]
+   }
+  ]
+ },
+ "intoxicacion_aguda_por_inhibidores_selectivos_de_la_recaptac": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y monitoriza",
+    "detalle": "Monitor ECG, TA, SatO2 y temperatura; vía venosa con glucosalino de mantenimiento (2.500 mL/24 h). Identifica el fármaco (citalopram/escitalopram son los más cardiotóxicos) y la dosis ingerida respecto a la dosis tóxica."
+   },
+   {
+    "paso": "Realiza ECG y vigila la cardiotoxicidad",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "QTc prolongado o QRS ensanchado → riesgo de torsades/FV (citalopram/escitalopram); si QRS ancho, bicarbonato sódico 1 M 1-2 mEq/kg IV manteniendo pH ~7,55."
+     }
+    ]
+   },
+   {
+    "paso": "Descontamina según ventana",
+    "detalle": "Carbón activado 1 g/kg si <2 h desde la ingesta. Irrigación intestinal con polietilenglicol en preparados de liberación retardada."
+   },
+   {
+    "paso": "Identifica y trata el síndrome serotoninérgico",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Taquicardia, hipertermia, mioclonías, hiperreflexia y rigidez → ciproheptadina 4-8 mg/h VO (máx 32 mg/día); enfriamiento y benzodiacepinas. No usar si coexiste intoxicación anticolinérgica."
+     },
+     {
+      "nivel": "critico",
+      "t": "Forma grave: fiebre >39,5 °C, rigidez, coma → soporte intensivo, valorar sedación y relajación."
+     }
+    ]
+   },
+   {
+    "paso": "Controla convulsiones, agitación y síntomas digestivos",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Convulsiones → midazolam 0,1 mg/kg IV (máx 0,4 mg/kg)."
+     },
+     {
+      "t": "Agitación con delirio → midazolam 0,2 mg/kg IM (lorazepam alternativo)."
+     },
+     {
+      "t": "Náuseas/vómitos → ondansetrón 8 mg/8 h IV."
+     },
+     {
+      "nivel": "critico",
+      "t": "Hipotensión refractaria o PCR por bupropión → valorar rescate lipídico."
+     }
+    ]
+   },
+   {
+    "paso": "Define el destino",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Glasgow ≤8 → intubación y UCI."
+     },
+     {
+      "t": "Mayoría → observación ≥6 h con monitorización ECG; ≥12 h si citalopram/escitalopram, liberación retardada o coingesta serotoninérgica."
+     },
+     {
+      "t": "Síndrome serotoninérgico → observación ≥24 h salvo UCI."
+     }
+    ]
+   }
+  ]
+ },
+ "intoxicacion_aguda_por_insecticidas_organofosforados_carbama": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Protégete y reconoce el síndrome colinérgico",
+    "detalle": "Usa guantes/EPI y retira la ropa contaminada (riesgo de contaminación del personal). Monitoriza ECG, TA, SatO2; vía venosa. Identifica la presentación clásica: bajo nivel de conciencia, sudoración, miosis puntiforme, fasciculaciones y olor a insecticida."
+   },
+   {
+    "paso": "Asegura oxigenación y vía aérea ANTES de atropinizar",
+    "detalle": "Oxigena bien: la hipoxemia previa a la atropina puede precipitar fibrilación ventricular. Si parálisis respiratoria, secreciones masivas o coma, intubación con secuencia rápida (midazolam 0,1 mg/kg + rocuronio 1 mg/kg; NO succinilcolina). SSF 2 L si pérdidas digestivas."
+   },
+   {
+    "paso": "Administra el antídoto: atropina",
+    "detalle": "Atropina 1-3 mg IV según gravedad, duplicando cada 5 min hasta control de broncorrea/broncoespasmo y mantener TAS >90 mmHg y FC >80 lpm (objetivo: secar secreciones, NO atropinizar). Luego infusión con el 10% de la dosis total/hora. Vigila signos de toxicidad atropínica (confusión, T >37 °C, FC >140)."
+   },
+   {
+    "paso": "Añade oxima y descontamina",
+    "detalle": "Pralidoxima 30 mg/kg IV lenta + infusión 8 mg/kg/h en las primeras 24 h, siempre combinada con atropina (especialmente en paratión; contraindicada en carbarilo). Si ingesta <1 h y paciente estabilizado/oxigenado/atropinizado: carbón activado 1 g/kg."
+   },
+   {
+    "paso": "Trata las complicaciones según el tóxico",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Convulsiones (organofosforados) → midazolam o diazepam IV."
+     },
+     {
+      "t": "Hipotensión que no responde a atropina ni fluidos → fenilefrina 50-100 µg IV o en perfusión."
+     },
+     {
+      "t": "Organoclorados (convulsiones, hiperexcitabilidad miocárdica) → benzodiacepinas; si insuficientes, vecuronio/pancuronio; arritmias supraventriculares con propranolol/metoprolol/esmolol (evita adrenalina y atropina); clordano: colestiramina 4 g/8 h."
+     }
+    ]
+   },
+   {
+    "paso": "Define el destino",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Organofosforados → ingreso en UCI siempre."
+     },
+     {
+      "t": "Carbamatos u organoclorados → ingreso hospitalario; UCI si precisan soporte ventilatorio."
+     }
+    ]
+   }
+  ]
  },
  "intoxicacion_aguda_por_litio": {
   "ddx": [
@@ -6724,6 +8910,108 @@
   ],
   "wikem_titulo": "Salicylate toxicity"
  },
+ "intoxicacion_aguda_por_setas": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y estima el riesgo por la latencia",
+    "detalle": "Monitoriza y canaliza vía. Determina el tiempo entre ingesta y primeros síntomas: latencia <6 h suele ser leve; latencia >6 h señala síndromes potencialmente mortales (hepatotóxico/nefrotóxico). Recoge restos de setas y contacta con micólogo."
+   },
+   {
+    "paso": "Estabiliza e inicia fluidoterapia",
+    "detalle": "Solución glucosalina 3.000 mL/24 h; repón potasio según potasemia. Solicita transaminasas, coagulación, glucemia, función renal y metahemoglobina. Controla vómitos con metoclopramida 10 mg/8 h (ondansetrón 8 mg/12 h si no cede)."
+   },
+   {
+    "paso": "Descontaminación con carbón activado",
+    "sub": [
+     {
+      "t": "Latencia corta → dosis única 25-50 g en las primeras 2 h."
+     },
+     {
+      "nivel": "critico",
+      "t": "Sospecha de amatoxinas (Amanita phalloides y similares) → 25 g/2-4 h durante 48-72 h por recirculación enterohepática; por SNG si vomita."
+     }
+    ]
+   },
+   {
+    "paso": "Trata el síndrome según toxíndromo de latencia corta",
+    "sub": [
+     {
+      "t": "Síndrome colinérgico (bradicardia/hipotensión muscarínica) → atropina 0,04 mg/kg IV (máx 2 mg), repetible hasta atropinización."
+     },
+     {
+      "t": "Síndrome atropínico → fisostigmina 1 mg IV lento, repetible cada 10 min (máx 4 mg)."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Síndrome giromitrínico con convulsiones → piridoxina 70 mg/kg IV (máx 5 g); metahemoglobinemia >20% → azul de metileno 1-2 mg/kg."
+     }
+    ]
+   },
+   {
+    "paso": "Antídoto del síndrome hepatotóxico (amatoxinas)",
+    "detalle": "Silibinina IV de elección: 5 mg/kg en 2 h, seguida de 20 mg/kg/24 h en perfusión 6 días. Si no se dispone: penicilina G 1 millón UI/h. Coadyuvantes: N-acetilcisteína, ácido tióctico, vitamina C. Corrige coagulopatía con vitamina K 10 mg/6 h y plasma fresco."
+   },
+   {
+    "paso": "Vigila el fallo multiorgánico tardío",
+    "detalle": "No te dejes engañar por la mejoría aparente: el fallo hepático aparece a partir de las 36 h. Monitoriza transaminasas, amonio, glucemia y coagulación; valora criterios de trasplante (encefalopatía, coagulopatía, insuficiencia renal)."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Todo paciente sintomático ingresa. Latencia >6 h, amatoxinas, fallo hepático/renal o metahemoglobinemia >20% → UCI. Casos menos graves → observación de urgencias."
+   }
+  ]
+ },
+ "intoxicacion_etilica_aguda_cetoacidosis_alcoholica_encefalop": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce, protege la vía aérea y monitoriza",
+    "detalle": "Monitor ECG, TA, SatO2 y Tª; vía venosa. Coloca en decúbito lateral si bajo nivel de conciencia (la broncoaspiración es la causa más frecuente de muerte). Determina glucemia capilar de inmediato: la hipoglucemia es la complicación más frecuente."
+   },
+   {
+    "paso": "Administra tiamina ANTES que la glucosa",
+    "detalle": "Tiamina 250 mg/24 h IM en intoxicación etílica. La tiamina debe preceder siempre a cualquier infusión de glucosa para no precipitar una encefalopatía de Wernicke. Inicia suero glucosado 5% a 21 gotas/min."
+   },
+   {
+    "paso": "Corrige hipoglucemia y agitación",
+    "sub": [
+     {
+      "t": "Hipoglucemia → glucosa hipertónica 50%: 10 g en bolo IV (20 mL), repetible 2-3 veces."
+     },
+     {
+      "t": "Agitación → midazolam 0,1 mg/kg IV (repetible hasta 0,4 mg/kg) o diazepam 5 mg IV."
+     }
+    ]
+   },
+   {
+    "paso": "Descarta otras causas de bajo nivel de conciencia",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Alteración no explicada por la alcoholemia, focalidad o TCE → TC craneal urgente; descarta meningitis e hipoglucemia."
+     }
+    ]
+   },
+   {
+    "paso": "Identifica y trata la cetoacidosis alcohólica",
+    "detalle": "Sospéchala ante acidosis metabólica con anion gap elevado, cetonemia y alcoholemia baja/nula. Repón con suero glucosado 5% (NO salino, empeora la acidosis), tiamina, antieméticos (metoclopramida 10 mg/8 h) y corrige magnesio (sulfato de Mg si K >4 mEq/L) y fósforo. Bicarbonato 1 M solo si pH <7,20 (50% del déficit)."
+   },
+   {
+    "paso": "Trata la encefalopatía de Wernicke ante la mínima sospecha",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Tríada disfunción oculomotora + alteración mental + ataxia → tiamina 500 mg/8 h IV 3 días (luego 300 mg/24 h VO), sin esperar confirmación."
+     }
+    ]
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Intoxicación etílica con coma: observación de urgencias hasta recuperar la conciencia. Cetoacidosis alcohólica: ingreso hospitalario siempre. Encefalopatía de Wernicke: ingreso hospitalario. Intoxicación leve: observación domiciliaria por familiar."
+   }
+  ]
+ },
  "intoxicaciones_agudas_actitud_diagnostica_y_tratamiento_gene": {
   "ddx": [
    {
@@ -7054,6 +9342,52 @@
   ],
   "wikem_titulo": "Acute kidney injury"
  },
+ "lesiones_por_electricidad": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Asegura la escena y reconoce (primeros minutos)",
+    "detalle": "Confirma que la fuente eléctrica está desconectada antes de tocar al paciente. Monitor de ECG, TA y SatO2; doble vía venosa. Valora ABCDE; sospecha lesiones internas a lo largo del trayecto de la corriente."
+   },
+   {
+    "paso": "Maneja la parada cardiorrespiratoria",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Electrocución con PCR → RCP prolongada, mantenida al menos 4 h; la midriasis no tiene valor pronóstico."
+     },
+     {
+      "nivel": "critico",
+      "t": "FV (trayecto brazo-brazo) o asistolia (rayo) → desfibrilación/soporte vital avanzado según ritmo."
+     }
+    ]
+   },
+   {
+    "paso": "Monitoriza el ritmo en las primeras horas",
+    "detalle": "ECG seriado y monitorización continua: vigila taquiarritmias y bradiarritmias en las primeras 2 h postaccidente."
+   },
+   {
+    "paso": "Fluidoterapia agresiva para proteger el riñón",
+    "detalle": "Ringer lactato 4.000 mL/24 h, ajustando para mantener diuresis >100 mL/h y prevenir el fracaso renal por mioglobinuria/hemoglobinuria. Considera alcalinización urinaria."
+   },
+   {
+    "paso": "Corrige complicaciones metabólicas y locales",
+    "detalle": "Bicarbonato 1 M si pH <7,20; trata la hiperpotasemia por destrucción tisular. Midazolam o Diazepam IV si convulsiones. Explora signos de síndrome compartimental (valorar fasciotomía) y vigila datos de CID."
+   },
+   {
+    "paso": "Destino",
+    "sub": [
+     {
+      "t": "Consciente y estable → observación en urgencias (toda quemadura eléctrica ingresa)."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Inestable hemodinámicamente o con alteración del nivel de conciencia → UCI."
+     }
+    ]
+   }
+  ]
+ },
  "lumbalgia_aguda_lumbociatica": {
   "ddx": [
    {
@@ -7161,6 +9495,57 @@
    }
   ],
   "wikem_titulo": "Lower back pain"
+ },
+ "manejo_del_paciente_con_diabetes_hospitalizado": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Fija el objetivo glucémico y el método de control",
+    "detalle": "Objetivo 140-180 mg/dL en la mayoría de hospitalizados (críticos y no críticos). Establece controles glucémicos capilares según pauta (antes de comidas y al acostarse si come; cada 4-6 h si no come o si infusión IV)."
+   },
+   {
+    "paso": "Decide la vía de insulinización según estabilidad metabólica",
+    "sub": [
+     {
+      "t": "Inestabilidad metabólica, paciente crítico, perioperatorio mayor, corticoides a altas dosis, NPT → infusión IV de insulina regular.",
+      "nivel": "critico"
+     },
+     {
+      "t": "Paciente estable que come → pauta subcutánea basal-bolo-corrección.",
+      "nivel": "emergente"
+     }
+    ]
+   },
+   {
+    "paso": "Inicia la infusión IV correctamente cuando esté indicada",
+    "detalle": "100 UI de regular en 100 mL SSF (1 UI/mL), comenzar a 0,5-1 UI/h ajustando con tablas de pautas 1-4. Acompaña SIEMPRE con glucosa: glucosado 5% a 100 mL/h o 10% a 50 mL/h. Vigila descenso ≥50-60 mg/dL/h."
+   },
+   {
+    "paso": "Calcula la pauta basal-bolo-corrección en el paciente estable",
+    "detalle": "Dosis total: 0,3 UI/kg/día si glucemia <150, 0,4 si 150-200, 0,5 si >200 mg/dL. 50% basal (análogo lento, 1 dosis) + 50% bolo ultrarrápido (30-40-30% en desayuno-almuerzo-cena) + corrección según pauta A/B/C por peso/requerimientos. Si no come, no administres el bolo."
+   },
+   {
+    "paso": "Trata la hipoglucemia y reajusta a diario",
+    "sub": [
+     {
+      "t": "Glucemia <70 mg/dL → tratamiento inmediato; reinicia infusión IV (pauta 1) cuando ≥140 mg/dL en dos controles.",
+      "nivel": "critico"
+     },
+     {
+      "t": "Glucemia >360 mg/dL en infusión → pauta de máxima velocidad (hasta 24 UI/h).",
+      "nivel": "emergente"
+     }
+    ]
+   },
+   {
+    "paso": "Suspende los no insulínicos y planifica la transición al alta",
+    "detalle": "Retira metformina, glitazonas, secretagogos e inhibidores DPP-4/SGLT-2 durante el ingreso (ayuno, inestabilidad, fracaso renal/hepático/cardiaco). Paso de IV a SC: 80% de la dosis IV de las últimas 24 h tras 24-48 h de normoglucemia."
+   },
+   {
+    "paso": "Destino y plan al alta",
+    "detalle": "DM1, corticoides a altas dosis o insuficiencia pancreática → alta con basal-bolo reduciendo 10-20% la dosis intrahospitalaria. HbA1c >10%, glucemias >300 mg/dL o requerimientos >0,8 UI/kg/día → intensificar tratamiento previo al alta."
+   }
+  ]
  },
  "miocarditis_aguda": {
   "ddx": [
@@ -7366,6 +9751,56 @@
   ],
   "wikem_titulo": "Septic arthritis"
  },
+ "mordedura_de_vibora": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Atención inicial y medidas locales",
+    "detalle": "Monitoriza, canaliza vía venosa en miembro NO afectado con SSF (21 gotas/min). Inmoviliza y eleva ligeramente la extremidad, retira anillos/objetos compresivos. NO realices torniquete, incisiones ni succión. Limpia la herida."
+   },
+   {
+    "paso": "Clasifica la gravedad (grados 0-III)",
+    "detalle": "Valora distancia entre colmillos, edema, clínica sistémica y, si disponible, veneno plasmático. Recuerda que los efectos máximos aparecen a las 24-48 h: un paciente leve inicial puede progresar."
+   },
+   {
+    "paso": "Analgesia y profilaxis",
+    "detalle": "Paracetamol 1 g/6 h IV (de elección; EVITA salicilatos y AINE por riesgo hemorrágico); metamizol 2 g/6 h como alternativa. Profilaxis/actualización antitetánica. Antibiótico solo si signos de infección (ceftazidima 2 g/8 h + metronidazol)."
+   },
+   {
+    "paso": "Solicita analítica y vigila complicaciones",
+    "detalle": "Hemograma, coagulación con fibrinógeno, función renal, CK e iones. Vigila CID, rabdomiólisis, insuficiencia renal y síndrome compartimental (mide presión intracompartimental si edema tenso)."
+   },
+   {
+    "paso": "Indica el suero antiofídico según grado",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Envenenamiento grado I-III → suero antivíbora 1 vial (4 mL) en 100 mL SSF en 1 h, idealmente en las primeras 4 h; repetible cada 5 h. Premedica con adrenalina 0,25 mg SC (o metilprednisolona 1 mg/kg) por riesgo anafiláctico."
+     },
+     {
+      "t": "Grado 0 / asintomático → no precisa antídoto; observación."
+     }
+    ]
+   },
+   {
+    "paso": "Trata las complicaciones graves",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Síndrome compartimental con presión >30 mmHg → fasciotomía urgente."
+     },
+     {
+      "nivel": "critico",
+      "t": "CID o sangrado activo → manejo según hematología."
+     }
+    ]
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Mordedura sintomática (grado I-III): ingreso mínimo 24 h. Grado II: ingreso con antiveneno. Grado III: UCI. Asintomático tras 4-6 h de observación: alta con instrucciones sobre signos de alarma."
+   }
+  ]
+ },
  "nauseas_vomitos_y_diarrea": {
   "ddx": [
    {
@@ -7481,6 +9916,55 @@
    }
   ],
   "wikem_titulo": "Nausea and vomiting"
+ },
+ "nauseas_y_vomitos_en_el_embarazo": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Valora la gravedad y la repercusión (primeros minutos)",
+    "detalle": "Confirma edad gestacional, evalúa estado de hidratación (mucosas, pliegue, TA, FC), peso actual frente al pregestacional y diuresis. Solicita tira de orina (cetonuria), iones, función renal y hepática."
+   },
+   {
+    "paso": "Descarta diagnósticos alternativos y signos de alarma",
+    "detalle": "Diferencia de gastroenteritis, colecistitis, apendicitis, hepatitis, pancreatitis, pielonefritis e hipertiroidismo. Busca ictericia, transaminasas elevadas, alteraciones electrolíticas graves y datos neurológicos."
+   },
+   {
+    "paso": "Distingue náuseas-vómitos leves de hiperémesis gravídica",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Pérdida de peso >5%, deshidratación, cetonuria y alteraciones iónicas → hiperémesis gravídica: vía venosa e ingreso."
+     },
+     {
+      "nivel": "critico",
+      "t": "Confusión, ataxia, nistagmo u oftalmoplejía → sospecha Wernicke: tiamina IM/IV ANTES de la perfusión glucosada."
+     }
+    ]
+   },
+   {
+    "paso": "Trata las formas leves de forma escalonada",
+    "detalle": "Primera línea: piridoxina 300 mg/día VO y/o jengibre, doxilamina+piridoxina. Si no responde: metoclopramida 10 mg/8 h VO. Reserva ondansetrón (evitar en primer trimestre)."
+   },
+   {
+    "paso": "Maneja la hiperémesis gravídica",
+    "detalle": "Rehidratación con suero glucosado al 10% 500 mL/8 h alternando con SSF o Ringer lactato 500 mL/8 h, ajustando a diuresis >100 mL/h. Antieméticos IV: piridoxina 300 mg/día y metoclopramida 10 mg/8 h; difenhidramina/hidroxizina; pantoprazol 40 mg/24 h si reflujo. Corrige iones."
+   },
+   {
+    "paso": "Previene Wernicke y reserva corticoides para casos refractarios",
+    "sub": [
+     {
+      "t": "Vómitos >3 semanas → tiamina 100 mg/24 h IM antes del suero glucosado."
+     },
+     {
+      "t": "Refractariedad pese a tratamiento pleno → metilprednisolona 16 mg/8 h con pauta decreciente; contraindicada antes de la semana 10."
+     }
+    ]
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "Ingreso: hiperémesis sin respuesta a segunda línea, deshidratación significativa, insuficiencia renal aguda, hipopotasemia/hiponatremia/hipercalcemia graves, signos de Wernicke o pérdida de peso >5%. Resto: alta con antieméticos orales, medidas dietéticas y control obstétrico."
+   }
+  ]
  },
  "neumonia_adquirida_en_la_comunidad": {
   "ddx": [
@@ -8033,6 +10517,404 @@
   ],
   "wikem_titulo": "Ear diagnoses"
  },
+ "otitis": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Anamnesis y otoscopia (prueba clave)",
+    "detalle": "Caracteriza la otodinia, otorrea, fiebre y antecedentes (diabetes, inmunodepresión, colesteatoma). Realiza otoscopia para clasificar: otitis externa (localizada/difusa, bacteriana/micótica), otitis media aguda o externa maligna."
+   },
+   {
+    "paso": "Identifica datos de alarma",
+    "detalle": "Busca parálisis facial periférica, dolor/edema retroauricular (mastoiditis), signos meníngeos o deterioro de conciencia, y otorrea verdosa persistente en diabético/inmunodeprimido. Ante cualquiera, TC urgente."
+   },
+   {
+    "paso": "Controla el dolor",
+    "detalle": "Metamizol 575 mg/6-8 h, Ibuprofeno 600 mg/8 h o Dexketoprofeno 25 mg/8 h VO. Si no cede, añade Tramadol 50 mg/8 h."
+   },
+   {
+    "paso": "Pauta el tratamiento según el tipo",
+    "sub": [
+     {
+      "t": "Otitis externa → gotas óticas antibióticas 7 días; ciprofloxacino oral 500 mg/12 h si premedicado, alérgico a penicilina o diabético. Si micótica → clioquinol-beclometasona tópico."
+     },
+     {
+      "t": "Otitis media aguda presupurada/supurada → Amoxicilina-clavulánico 875/125 mg/8 h o Cefuroxima 500 mg/12 h, 7-10 días; descongestivo nasal si fase catarral."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Otitis externa maligna → ciprofloxacino 500 mg/12 h VO 10 días + tópico ótico; valoración ORL preferente."
+     }
+    ]
+   },
+   {
+    "paso": "Reevalúa la respuesta",
+    "detalle": "Revisa la evolución del dolor y la fiebre. El fracaso del tratamiento oral con afectación general puede requerir antibioterapia parenteral (Ceftriaxona 1-2 g/24 h IV/IM)."
+   },
+   {
+    "paso": "Destino",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Complicaciones (mastoiditis, meningitis otógena, absceso, tromboflebitis) o externa maligna con parálisis facial/extensión → ingreso con TC y antibioterapia parenteral precoz."
+     },
+     {
+      "t": "Otitis no complicada → alta con tratamiento ambulatorio y control por su médico/ORL."
+     }
+    ]
+   }
+  ]
+ },
+ "otras_intoxicaciones_agudas": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y estabiliza (ABC)",
+    "detalle": "Monitor ECG, TA, SatO2, Tª y glucemia; vía venosa. Asegura vía aérea y ventilación (barbitúricos y neurolépticos pueden causar coma con depresión respiratoria). Trata el shock con cargas de SSF 300 mL repetibles; dopamina si fracasa la volemia."
+   },
+   {
+    "paso": "Orienta el tóxico e identifica el toxíndromo",
+    "detalle": "Anamnesis, examen físico y toxicología. Radiografía simple de abdomen útil en sustancias radioopacas (arsénico, hierro, plomo). Solicita gasometría con anion gap (elevado en etilenglicol, metanol, isoniazida), iones, función renal/hepática, CK y niveles si disponibles. Activa protocolo médico-forense si sospecha de sumisión química."
+   },
+   {
+    "paso": "Descontaminación digestiva",
+    "detalle": "Carbón activado 1 g/kg VO/SNG (útil en arsénico, IMAO, isoniazida, neurolépticos, paraquat, teofilinas, barbitúricos; NO útil en hierro). Irrigación intestinal con polietilenglicol 2 L/h si comprimidos persistentes de hierro, material radioopaco o preparados de liberación prolongada."
+   },
+   {
+    "paso": "Administra el antídoto específico según el tóxico",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Metanol/etilenglicol con acidosis → bloqueo con fomepizol (ver capítulo de antídotos); etilenglicol: tiamina 100 mg/6 h + piridoxina 600 mg/6 h, corrige hipocalcemia con gluconato cálcico."
+     },
+     {
+      "t": "Arsénico grave → dimercaprol IM 3 mg/kg/4 h (o D-penicilamina/DMSA/DMPS si no disponible)."
+     },
+     {
+      "nivel": "critico",
+      "t": "Tóxico metahemoglobinizante >20% o sintomático → azul de metileno; CO → oxígeno alto flujo/hiperbárico."
+     },
+     {
+      "t": "Colchicina → Fab antic-colchicina si disponible; íleo → neostigmina 0,5 mg/4 h SC."
+     }
+    ]
+   },
+   {
+    "paso": "Trata complicaciones y agitación",
+    "detalle": "Convulsiones (isoniazida): piridoxina + benzodiacepinas. Barbitúricos de acción larga: alcalinización urinaria (bicarbonato, pH >7,5). Agitación/delirio por cannabis: midazolam 5 mg IV o haloperidol 5 mg; hiperémesis cannabinoide: metoclopramida 10-20 mg/8 h + omeprazol."
+   },
+   {
+    "paso": "Identifica los cuadros de mortalidad muy elevada",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Paraquat clase II-III → mortalidad casi del 100%; evita oxígeno suplementario salvo hipoxemia grave."
+     },
+     {
+      "nivel": "critico",
+      "t": "IMAO con hipertermia >41 °C / síndrome serotoninérgico → enfriamiento y soporte intensivo."
+     }
+    ]
+   },
+   {
+    "paso": "Destino",
+    "detalle": "La mayoría de estas intoxicaciones requieren ingreso hospitalario. UCI en metanol, etilenglicol, coma, arritmias graves o complicaciones cardiorrespiratorias. Cannabis: alta salvo complicaciones. CO: observación neurológica 1-2 semanas."
+   }
+  ]
+ },
+ "otras_urgencias_en_oncologia": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y estabiliza (primeros minutos)",
+    "detalle": "Monitor ECG, TA, SatO2 y vía venosa. Solicita hemograma, iones (K, P, Ca), ácido úrico, función renal y ECG. Identifica el síndrome oncológico de urgencia."
+   },
+   {
+    "paso": "Identifica banderas rojas inmediatas",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Edema laríngeo/disnea grave en sd. vena cava superior u obstrucción de vía aérea (calibre <20%) → asegura vía aérea, valora cricotiroidotomía."
+     },
+     {
+      "nivel": "critico",
+      "t": "Hiperpotasemia grave en lisis tumoral (T picudas, QRS ancho) → tratamiento urgente de hiperpotasemia y monitorización."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Déficit neurológico rápidamente progresivo en compresión medular → dexametasona inmediata y RM urgente."
+     }
+    ]
+   },
+   {
+    "paso": "Trata el síndrome específico",
+    "sub": [
+     {
+      "t": "Lisis tumoral → hidratación con glucosalina 2-3 L/m2/día (diuresis 80-100 mL/m2); rasburicasa 0,2 mg/kg/24 h IV si ácido úrico >7,5 mg/dL (o alopurinol); furosemida 20 mg/8 h si oliguria."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Compresión medular → dexametasona 10-20 mg en bolo, luego 4-6 mg/6-8 h; profilaxis con bemiparina 3.500 UI/24 h SC; RM y aviso a Oncología/Neurocirugía."
+     },
+     {
+      "t": "Sd. vena cava superior → cabecera elevada, glucosalina por vena de miembro inferior, furosemida 20 mg/12 h; dexametasona 16 mg + 8 mg/8 h si linfoma/timoma o radioterapia."
+     },
+     {
+      "t": "Cistitis hemorrágica → hiperhidratación con glucosalina 3.000 mL/24 h; flavoxato 200 mg/8 h; MESNA si recibe ifosfamida/ciclofosfamida."
+     }
+    ]
+   },
+   {
+    "paso": "Corrige alteraciones metabólicas asociadas",
+    "detalle": "En lisis tumoral: alcaliniza con bicarbonato 1 M 100 mEq/8 h si acidosis; trata hiperfosfatemia con antiácido no absorbible (suspende bicarbonato). Vigila calcio y potasio."
+   },
+   {
+    "paso": "Solicita pruebas de imagen y avisa a especialista",
+    "detalle": "RM urgente en compresión medular; TC/radiografía en sd. vena cava superior; contacta con Oncología, Radioterapia o Neurocirugía según el caso."
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "Lisis tumoral → observación de urgencias con monitorización (diálisis si oliguria/PVC alta). Compresión medular y sd. vena cava superior → ingreso hospitalario urgente. Cistitis hemorrágica → ingreso salvo hematuria microscópica aislada."
+   }
+  ]
+ },
+ "otras_urgencias_hematologicas": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Valora estabilidad y solicita hemograma con frotis",
+    "detalle": "Constantes y signos de compromiso hemodinámico. Hemograma completo con recuento de neutrófilos y plaquetas, frotis, coagulación (TP/TTPa, fibrinógeno, dímero D) y bioquímica. Identifica la citopenia o alteración predominante."
+   },
+   {
+    "paso": "Identifica banderas rojas que exigen actuación inmediata",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Neutrófilos <500/µL con fiebre → hemocultivos y antibioterapia empírica IV precoz (piperacilina-tazobactam 4+0,5 g/6 h o cefepima 2 g/8 h)."
+     },
+     {
+      "nivel": "emergente",
+      "t": "PTT (trombopenia + anemia hemolítica microangiopática + clínica neurológica + fiebre) → aviso urgente a Hematología; NO transfundir plaquetas."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Sangrado mayor en anticoagulado → reversión específica según fármaco e INR; aviso inmediato al hematólogo si ACOD."
+     }
+    ]
+   },
+   {
+    "paso": "Trata según la alteración hematológica",
+    "sub": [
+     {
+      "t": "Anemia ferropénica → sulfato ferroso 80 mg/24 h VO; hierro IV (sacarosa o carboximaltosa) si fracaso/contraindicación oral."
+     },
+     {
+      "t": "Anemia megaloblástica → cianocobalamina 1 mg/24 h IM (déficit B12) o ácido fólico 5 mg/24 h VO."
+     },
+     {
+      "t": "Trombopenia inmunitaria con sangrado → metilprednisolona 1-2 mg/kg/día IV (o dexametasona 40 mg/24 h x4 días); inmunoglobulinas 1 g/kg/24 h x2 días si hemorragia grave; ácido tranexámico 500 mg/6-8 h coadyuvante."
+     },
+     {
+      "t": "Neutropenia grave → filgrastim 300 µg/24 h SC; paracetamol 1 g/6 h IV para la fiebre."
+     }
+    ]
+   },
+   {
+    "paso": "Trata las complicaciones críticas de la coagulación",
+    "detalle": "En CID: tratar la causa de base y dar soporte hemostático (plasma/plaquetas/fibrinógeno) según sangrado. En hemofílico con TCE: TC craneal obligatoria y observación mínima 24 h."
+   },
+   {
+    "paso": "Decide transfusión si procede",
+    "detalle": "Hematíes si Hb <8 g/dL o anemia aguda sintomática; plaquetas según umbral y contexto (recordar contraindicación en PTT/SHU). Extrae muestras para estudio antes de transfundir."
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "Anemia grave (<8 g/dL), trombopenia <20.000/µL o con sangrado, neutropenia grave, pancitopenia, PTT, hemofílico con TCE/herida grave o sangrado mayor en anticoagulado → ingreso. Eritrocitosis solo ingresa si hay complicaciones."
+   }
+  ]
+ },
+ "otras_urgencias_neurologicas": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y monitoriza la función respiratoria",
+    "detalle": "En todo déficit neuromuscular agudo (Guillain-Barré, miastenia) monitoriza SatO2, capacidad vital y deglución; vigila debilidad de flexores del cuello y disnea como predictores de fallo diafragmático inminente."
+   },
+   {
+    "paso": "Orienta el síndrome y solicita pruebas dirigidas",
+    "detalle": "Diferencia Guillain-Barré (debilidad ascendente, arreflexia), mielitis (nivel sensitivo), miastenia (fatigabilidad), encefalopatía autoinmune (psicosis + signos neurológicos) y síndrome neuroléptico maligno (rigidez-fiebre-disautonomía + CK). Pide LCR, RM y CK según sospecha."
+   },
+   {
+    "paso": "Identifica las situaciones tiempo-dependientes",
+    "sub": [
+     {
+      "t": "Crisis miasténica o Guillain-Barré con disnea/disfagia/inestabilidad → soporte ventilatorio y UCI.",
+      "nivel": "critico"
+     },
+     {
+      "t": "Compresión medular en mielitis → descomprimir antes de 48-72 h; metilprednisolona 1 g/24 h IV.",
+      "nivel": "critico"
+     },
+     {
+      "t": "Síndrome neuroléptico maligno con hiperpirexia y CK muy elevada → retirar fármaco, enfriar, hidratar; riesgo de rabdomiólisis y fracaso renal.",
+      "nivel": "emergente"
+     },
+     {
+      "t": "Midriasis unilateral arreactiva con diplopía y ptosis (III par) → urgencia neuroquirúrgica (aneurisma).",
+      "nivel": "emergente"
+     }
+    ]
+   },
+   {
+    "paso": "Inicia el tratamiento inmunomodulador/específico según entidad",
+    "detalle": "Guillain-Barré sin deambulación autónoma: inmunoglobulina 0,4 g/kg/día IV 5 días (o plasmaféresis si fulminante). Miastenia grave/crisis: inmunoglobulina misma pauta. SNM: bromocriptina 2,5 mg/8-12 h ± dantroleno 1-2,5 mg/kg IV. Brote de EM: metilprednisolona 1 g/24 h IV 3-5 días."
+   },
+   {
+    "paso": "Trata síntomas y previene complicaciones",
+    "detalle": "Guillain-Barré: profilaxis de TVP con bemiparina 3.500 UI/24 h SC; analgesia escalonada (paracetamol 1 g/6 h → metamizol → tramadol 100 mg/8 h → morfina). NO administres prednisona a dosis altas en miastenia desde urgencias sin inmunoglobulinas previas (riesgo de exacerbación)."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Guillain-Barré, mielitis, crisis miasténica, encefalopatía autoinmune y SNM → ingreso (UCI si compromiso respiratorio/hemodinámico). Diplopía aislada de un par sin otros signos → alta con derivación a neurología. Amnesia global transitoria → observación hasta resolución."
+   }
+  ]
+ },
+ "otras_urgencias_reumatologicas": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y estabiliza (primeros minutos)",
+    "detalle": "Monitor de TA, FC, FR, SatO2 y temperatura; vía venosa. Identifica la emergencia hiperinflamatoria o trombótica, que tienen alta mortalidad y requieren ingreso en UCI."
+   },
+   {
+    "paso": "Identifica el síndrome de presentación y sus red flags",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "HTA maligna + insuficiencia renal rápida en esclerodermia (incluso normotenso) → crisis renal esclerodérmica."
+     },
+     {
+      "nivel": "critico",
+      "t": "Fiebre >39 °C + citopenias + ferritina >5.000-10.000 → síndrome de activación macrofágica (mortalidad ~70%, UCI)."
+     },
+     {
+      "nivel": "critico",
+      "t": "Fallo de ≥3 órganos en <1 semana con anticuerpos antifosfolípidos → SAF catastrófico."
+     },
+     {
+      "nivel": "critico",
+      "t": "Hemoptisis + deterioro renal/oliguria → síndrome pulmonar-renal con hemorragia alveolar."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Pérdida brusca de visión + cefalea temporal en >50 años → arteritis de la temporal, ceguera irreversible."
+     }
+    ]
+   },
+   {
+    "paso": "Inicia tratamiento dirigido sin demora",
+    "detalle": "Crisis renal esclerodérmica: captopril 25 mg VO (repetible a los 30 min); si no responde, nitroprusiato IV. Activación macrofágica: metilprednisolona 0,5-1 g/día IV 3-5 días + inmunoglobulina 1 g/kg/día 2 días. SAF catastrófico: heparina sódica (bolo 5.000 UI + perfusión) + metilprednisolona + plasmaféresis."
+   },
+   {
+    "paso": "Trata la arteritis de la temporal de inmediato",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Con afectación ocular → metilprednisolona 0,5-1 g/día IV 3-5 días, no esperes a la biopsia."
+     },
+     {
+      "t": "Sin afectación ocular → prednisona 1 mg/kg/día VO; considera AAS 100 mg/día y profilaxis con cotrimoxazol si ≥20 mg/día de prednisona."
+     }
+    ]
+   },
+   {
+    "paso": "Maneja el brote lúpico y la fiebre en inmunosuprimidos",
+    "detalle": "Brote de LES grave: metilprednisolona 1-2 mg/kg IV en bolo. Fiebre bajo inmunosupresión: descarta infección oportunista (Pneumocystis, TBC, herpes zóster) e inicia antibioterapia si procede; hidrocortisona 50-100 mg/8 h IV si infección sobreañadida."
+   },
+   {
+    "paso": "Solicita pruebas y consulta a especialista",
+    "detalle": "Hemograma, bioquímica con función renal, ferritina, coagulación, autoanticuerpos, radiografía/TC de tórax y gasometría según el caso. Contacta con Reumatología/Nefrología/UCI precozmente."
+   },
+   {
+    "paso": "Destino",
+    "sub": [
+     {
+      "t": "Activación macrofágica, SAF catastrófico, crisis renal esclerodérmica, síndrome pulmonar-renal y vasculitis del SNC → ingreso (UCI según gravedad)."
+     },
+     {
+      "t": "Arteritis de la temporal sin afectación ocular → alta con corticoterapia oral inmediata y seguimiento; LES con nefritis, trombosis, infección o afectación del SNC → ingreso."
+     }
+    ]
+   }
+  ]
+ },
+ "otros_procesos_oftalmologicos": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Diferencia celulitis orbitaria de preseptal (paso clave)",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Proptosis, quemosis, oftalmoplejía o dolor con los movimientos oculares → celulitis ORBITARIA: TC de órbita y senos urgente, ingreso y antibioterapia IV."
+     },
+     {
+      "t": "Eritema y edema palpebral SIN proptosis, motilidad ni agudeza visual alteradas → celulitis preseptal."
+     }
+    ]
+   },
+   {
+    "paso": "Detecta signos de extensión o compresión",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Reducción de agudeza visual en contexto inflamatorio → posible compresión del nervio óptico: valoración oftalmológica urgente."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Signos meníngeos, fiebre alta o leucocitosis marcada → descartar extensión intracraneal/meningitis."
+     }
+    ]
+   },
+   {
+    "paso": "Trata la celulitis orbitaria",
+    "detalle": "Cloxacilina 1 g/8 h IV + ceftriaxona 1 g/24 h IV durante 14 días. Alérgico a penicilina: vancomicina 500 mg/6 h IV + tobramicina 3-5 mg/kg/día. Añade metronidazol 500 mg/8 h si se sospecha anaerobios. Analgesia con metamizol; naproxeno 500 mg/12 h para la inflamación."
+   },
+   {
+    "paso": "Trata la celulitis preseptal con seguimiento estrecho",
+    "detalle": "Cefuroxima 250 mg/12 h VO durante 10 días, con revisión diaria para detectar progresión a celulitis orbitaria o signos meníngeos."
+   },
+   {
+    "paso": "Maneja la dacriocistitis aguda",
+    "sub": [
+     {
+      "t": "Sin absceso → cefuroxima 250-500 mg/12 h VO (o amoxicilina-clavulánico) 7 días + tópico (gramicidina+neomicina+polimixina B) y analgesia (paracetamol 650 mg/6 h)."
+     },
+     {
+      "t": "Absceso fluctuante → drenaje quirúrgico urgente."
+     }
+    ]
+   },
+   {
+    "paso": "Trata las patologías palpebrales menores",
+    "sub": [
+     {
+      "t": "Orzuelo → calor local + ácido fusídico tópico 1 aplic/4 h el 1er día y luego cada 12 h, 7 días."
+     },
+     {
+      "t": "Blefaritis → higiene palpebral + clortetraciclina tópica cada 8 h de forma continuada; lubricante (carmelosa) si ojo seco."
+     },
+     {
+      "t": "Chalazión persistente → triamcinolona intralesional o extirpación quirúrgica."
+     }
+    ]
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "Ingreso obligatorio: celulitis orbitaria confirmada, proptosis/oftalmoplejía/reducción visual, fiebre o leucocitosis marcada, dacriocistitis con absceso para drenaje, preseptal con progresión o signos meníngeos, e inmunocomprometido con cualquier celulitis periorbitaria. El resto: alta con tratamiento y revisión."
+   }
+  ]
+ },
  "pancreatitis_aguda": {
   "ddx": [
    {
@@ -8140,6 +11022,102 @@
    }
   ],
   "wikem_titulo": "Acute pancreatitis"
+ },
+ "paralisis_facial_periferica_idiopatica": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Confirma el patrón periférico y descarta el central",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Pliegues frontales y cierre palpebral CONSERVADOS (afectación solo de hemicara inferior) → parálisis central (ACV, tumor): neuroimagen urgente y manejo neurológico."
+     },
+     {
+      "t": "Afectación de toda la hemicara incluyendo frente y cierre ocular → patrón periférico, compatible con parálisis de Bell."
+     }
+    ]
+   },
+   {
+    "paso": "Busca causas secundarias antes de etiquetar de idiopática",
+    "sub": [
+     {
+      "t": "Parálisis bilateral → descartar sarcoidosis, enfermedad de Lyme, linfoma o Guillain-Barré."
+     },
+     {
+      "t": "Vesículas herpéticas en CAE/pabellón → síndrome de Ramsay Hunt (herpes zóster)."
+     },
+     {
+      "t": "Otitis media aguda u otitis externa maligna → tratar la causa subyacente."
+     }
+    ]
+   },
+   {
+    "paso": "Protege el ojo del lado afectado",
+    "detalle": "Riesgo de queratitis por exposición si no cierra el párpado: colirio lubricante de carmelosa cada 6 h (hasta cada hora si precisa) durante el día y pomada epitelizante con oclusión nocturna."
+   },
+   {
+    "paso": "Inicia corticoterapia precoz",
+    "detalle": "Base del tratamiento, máxima eficacia en las primeras 72 h: prednisona 60-80 mg/24 h en dosis matutina durante 5 días, con descenso de 10 mg/día durante 5 días más; o 60-80 mg/24 h durante 7 días."
+   },
+   {
+    "paso": "Asocia antiviral",
+    "detalle": "Valaciclovir 1 g/8 h VO 7 días (siempre combinado con corticoide), o aciclovir 400 mg/4 h VO 10 días (800 mg/4 h si se sospecha origen herpético) como alternativa. Añade omeprazol 20 mg/24 h si hay riesgo gástrico (antecedente de úlcera, >60 años, antiagregantes/anticoagulantes/ISRS)."
+   },
+   {
+    "paso": "Informa del pronóstico y deriva sin ingreso",
+    "detalle": "El 85% mejora en 3 semanas y la mayoría se recupera en 6 meses; el dolor mastoideo es signo de mal pronóstico. No requiere ingreso: alta con seguimiento ambulatorio (ORL/neurología). Valorar ingreso/derivación urgente solo si se sospecha causa central o enfermedad sistémica grave."
+   }
+  ]
+ },
+ "patologia_articular_maxilofacial": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Identifica el cuadro articular",
+    "detalle": "Distingue luxación de la ATM (boca abierta fija, cóndilo anterior), trismus (espasmo masticador, descartar causa odontogénica/extrapiramidal/tétanos), dolor miofascial e infección de la ATM. Descarta fractura asociada antes de reducir."
+   },
+   {
+    "paso": "Reduce la luxación temporomandibular",
+    "detalle": "Maniobra de Nelaton lo antes posible: pulgares sobre molares inferiores, empuja abajo y atrás. Si contractura intensa o luxación de larga evolución, sedorrelajación con diazepam 10 mg IV previo."
+   },
+   {
+    "paso": "Trata tras la reducción y el dolor miofascial",
+    "detalle": "Naproxeno 500 mg/12 h (o ibuprofeno 600 mg/8 h) + relajante: tizanidina 2-4 mg/8 h o diazepam 2,5-5 mg/8 h. Recomendar dieta blanda y limitar la apertura."
+   },
+   {
+    "paso": "Maneja el trismus según su causa",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Trismus con celulitis cervicofacial o angina de Ludwig → priorizar vía aérea, ingreso urgente y antibioterapia IV."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Trismus con disfagia y sospecha de tétanos → aislamiento de estímulos, medidas específicas e ingreso."
+     },
+     {
+      "t": "Reacción extrapiramidal → biperideno; suspender el fármaco causal."
+     }
+    ]
+   },
+   {
+    "paso": "Trata la infección de la ATM",
+    "detalle": "Antibioterapia IV empírica: ampicilina-sulbactam 3 g/1,5 g/6 h (cefotaxima 1-2 g/4 h o clindamicina 600 mg/6 h si alergia); continuar con sultamicilina 750 mg/12 h VO hasta 30 días."
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Infección de la ATM, luxación irreducible, con fractura, posterior/superior o trismus por celulitis grave → interconsulta urgente a Cirugía Maxilofacial e ingreso."
+     },
+     {
+      "t": "Luxación reducida o dolor miofascial → alta con tratamiento y derivación a Maxilofacial (recidivante)."
+     }
+    ]
+   }
+  ]
  },
  "patologia_esofagica_aguda": {
   "ddx": [
@@ -8826,6 +11804,192 @@
   ],
   "wikem_titulo": "Priapism"
  },
+ "procesos_agudos_de_la_region_anorrectal": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce signos de gravedad (primeros minutos)",
+    "detalle": "Toma constantes (TA, FC, Tª). Si fiebre alta, dolor perianal intenso, ampollas o necrosis cutánea → activa sospecha de gangrena de Fournier y maneja como emergencia."
+   },
+   {
+    "paso": "Explora la región anorrectal",
+    "detalle": "Anamnesis, inspección, palpación y tacto rectal; anoscopia si el dolor lo permite. Identifica el proceso: trombosis hemorroidal, absceso, fisura, sinus pilonidal, fascitis necrosante, cuerpo extraño o prolapso."
+   },
+   {
+    "paso": "Decide según el proceso y su gravedad",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Fascitis necrosante (gangrena de Fournier) → TC urgente, antibioterapia IV de amplio espectro (piperacilina-tazobactam 4+0,5 g/6 h IV o meropenem 1 g/8 h IV) y desbridamiento quirúrgico inmediato."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Absceso anorrectal → drenaje quirúrgico precoz; el profundo (isquiorrectal/pelvirrectal/supraelevador) bajo anestesia."
+     },
+     {
+      "t": "Cuerpo extraño intrarrectal con dolor abdominal, fiebre o taquicardia → descarta perforación rectal."
+     }
+    ]
+   },
+   {
+    "paso": "Trata la trombosis hemorroidal",
+    "detalle": "Si <72 h y muy dolorosa, valora trombectomía/exéresis. Analgesia: dexketoprofeno 50 mg IM; si dolor/edema importantes, metilprednisolona 1 mg/kg dosis única. Domicilio: diosmina 500 mg/8 h 2 semanas, laxante formador de volumen (ispágula) y metamizol 575 mg/8 h."
+   },
+   {
+    "paso": "Trata la fisura anal",
+    "detalle": "Medidas higiénico-dietéticas, baños de asiento, laxante (ispágula) y analgesia. Si crónica o sin respuesta: nitroglicerina rectal 4 mg/g/12 h 4-8 semanas (advertir cefalea) o diltiazem tópico 2%/12 h. Fisura atípica/indolora → descarta Crohn, VIH, sífilis, leucemia."
+   },
+   {
+    "paso": "Trata el sinus pilonidal y la celulitis",
+    "detalle": "Fase celulítica de absceso o sinus pilonidal infectado → amoxicilina-clavulánico 875/125 mg/8 h VO o cefuroxima 500 mg/12 h; alérgicos a betalactámicos → ciprofloxacino 500 mg/12 h + metronidazol 500 mg/8 h. Asocia omeprazol 20 mg/24 h con AINE."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Ingreso urgente: gangrena de Fournier, absceso profundo, trombosis con necrosis, prolapso irreductible/estrangulado, cuerpo extraño no extraíble o perforación, cáncer obstructivo perforado y sepsis postoperatoria. Procesos no complicados → alta con tratamiento y seguimiento."
+   }
+  ]
+ },
+ "procesos_agudos_de_las_glandulas_salivales": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Identifica la entidad y valora gravedad",
+    "detalle": "Diferencia parotiditis viral (tumefacción sin pus), sialoadenitis supurada (eritema, pus por el conducto, deshidratación) y sialolitiasis (cólico salival con las comidas). Busca red flags: trismo, disfagia, sepsis."
+   },
+   {
+    "paso": "Orienta el tratamiento según el diagnóstico",
+    "sub": [
+     {
+      "t": "Parotiditis viral → sintomático: paracetamol 650 mg/6 h o metamizol 2 g/8 h; medidas higiénicas y vigilar complicaciones (orquitis, pancreatitis, meningitis)."
+     },
+     {
+      "t": "Sialoadenitis supurada → hidratación, antibioterapia y antiinflamatorio."
+     },
+     {
+      "t": "Sialolitiasis → calor local, masaje, sialogogos, analgesia y antiinflamatorio."
+     }
+    ]
+   },
+   {
+    "paso": "Trata la sialoadenitis aguda supurada",
+    "detalle": "Rehidratación. Ambulatorio: amoxicilina-clavulánico 2.000/125 mg/12 h 10 días. Hospitalario: amoxicilina-clavulánico 2 g/200 mg/8 h IV (o piperacilina-tazobactam ± linezolid si grave). Metamizol 2 g/8 h y naproxeno 500 mg/12 h."
+   },
+   {
+    "paso": "Trata la sialolitiasis",
+    "detalle": "Analgesia con metamizol 2 g/8 h y butilescopolamina 10 mg/8 h VO; naproxeno 500 mg/12 h. Profilaxis antibiótica si procede: amoxicilina-clavulánico 1.000/62,5 mg/8 h 7 días."
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Sialoadenitis con deshidratación grave, shock séptico, inmunosupresión, afectación submaxilar bilateral o sospecha de Ludwig/colección profunda → ingreso y antibioterapia IV."
+     },
+     {
+      "t": "Parotiditis viral complicada (orquitis, pancreatitis, meningitis) → ingreso."
+     },
+     {
+      "t": "Sialolitiasis o cuadro leve no complicado → alta con tratamiento y derivación a Maxilofacial/ORL para estudio."
+     }
+    ]
+   }
+  ]
+ },
+ "procesos_agudos_odontologicos": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Evalúa el proceso y descarta infección profunda",
+    "detalle": "Exploración oral: pieza causal, edema, fluctuación. Busca red flags: trismus, disfagia/odinofagia, fiebre alta o afectación del estado general que sugieran flemón/absceso cervical profundo."
+   },
+   {
+    "paso": "Controla el dolor",
+    "detalle": "Ibuprofeno 600 mg/8 h VO; si no cede, dexketoprofeno 25 mg/8 h o tramadol 50 mg/8 h. En caries con pulpopatía sin odontólogo disponible, clavo tópico 1-3 gotas/8 h."
+   },
+   {
+    "paso": "Pauta antibiótico según el cuadro",
+    "sub": [
+     {
+      "t": "Infección periapical / absceso periodontal / pericoronaritis → amoxicilina-clavulánico 2.000/125 mg/12 h 7 días (clindamicina 300 mg/6 h si alergia)."
+     },
+     {
+      "t": "Gingivitis ulceronecrosante o periodontitis → amoxicilina-clavulánico + metronidazol 500 mg/8 h 7 días."
+     },
+     {
+      "t": "Candidiasis oral → fluconazol 200 mg/día 5-14 días (nistatina tópica si alternativa)."
+     }
+    ]
+   },
+   {
+    "paso": "Trata la pericoronaritis con edema intenso o trismus",
+    "detalle": "Naproxeno 500 mg/12 h; si edema muy importante o trismus, metilprednisolona 125 mg IM/IV en dosis única."
+   },
+   {
+    "paso": "Maneja la hemorragia postextracción",
+    "detalle": "Compresión con gasa, sutura si precisa. Si no cede, ácido tranexámico tópico o enjuagues; revisar coagulación/anticoagulación."
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Trismus, disfagia, celulitis progresiva, crepitación o sepsis → ingreso, antibioterapia IV e interconsulta a Maxilofacial."
+     },
+     {
+      "t": "Proceso no complicado → alta con antibioterapia/analgesia y derivación preferente al odontólogo para tratamiento definitivo."
+     }
+    ]
+   }
+  ]
+ },
+ "profilaxis_postexposicion_frente_al_virus_de_la_inmunodefici": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Evalúa la exposición y el tiempo transcurrido (urgente)",
+    "detalle": "Caracteriza tipo (percutánea, mucosa, sexual, parenteral), profundidad, volumen y tiempo desde la exposición. La eficacia cae rápido: iniciar cuanto antes, idealmente <24 h."
+   },
+   {
+    "paso": "Decide la indicación según el plazo",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Menos de 72 h con exposición de riesgo → indica PPE lo antes posible, no demores."
+     },
+     {
+      "t": "Más de 72 h desde la exposición → la PPE NO está recomendada por pérdida de eficacia."
+     }
+    ]
+   },
+   {
+    "paso": "Valora la fuente y el riesgo",
+    "sub": [
+     {
+      "t": "Fuente VIH positivo con carga detectable/desconocida, o exposición percutánea profunda con alta carga → PPE obligatoria."
+     },
+     {
+      "t": "Fuente desconocida con factores de alto riesgo (UDVP, trabajo sexual, prevalencia >1%) → considera PPE como si fuese positiva."
+     }
+    ]
+   },
+   {
+    "paso": "Extrae serología basal antes de iniciar",
+    "detalle": "Solicita serología VIH basal del expuesto (y de la fuente si es posible). En exposición no ocupacional, añade cribado de otras ITS y test de embarazo en exposiciones sexuales."
+   },
+   {
+    "paso": "Inicia la pauta de tres fármacos 4 semanas",
+    "detalle": "Backbone: tenofovir + emtricitabina 1 comp/24 h (zidovudina+lamivudina 1 comp/12 h si patología renal). Tercer fármaco: raltegravir 1.200 mg/12 h (alternativa dolutegravir 50 mg/24 h o IP potenciado), durante 4 semanas."
+   },
+   {
+    "paso": "Maneja casos especiales y efectos adversos",
+    "detalle": "Agresión sexual: valoración multidisciplinar urgente (ginecología, salud mental, infecciosas). Coordina con infecciosas si dudas en la indicación o intolerancia grave a los antirretrovirales."
+   },
+   {
+    "paso": "Destino y seguimiento",
+    "detalle": "Manejo ambulatorio en la mayoría: alta con la pauta iniciada, instrucciones de adherencia y cita de seguimiento con infecciosas para controles serológicos y de tolerancia."
+   }
+  ]
+ },
  "prostatitis_aguda": {
   "ddx": [
    {
@@ -8921,6 +12085,55 @@
    }
   ],
   "wikem_titulo": "Prostatitis"
+ },
+ "quemaduras_quimicas": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Descontamina de inmediato (única medida eficaz precoz)",
+    "detalle": "Retira ropa y restos del producto con guantes de protección. Irrigación abundante con agua tibia ('regla de los 15') hasta neutralizar el pH cutáneo. No pierdas tiempo buscando neutralizantes. Identifica el agente (ácido, álcali, fluorhídrico, fenol, crómico)."
+   },
+   {
+    "paso": "Valora vía aérea, respiración y circulación",
+    "detalle": "Monitor de TA, FC, SatO2 y ECG; vía venosa. SSF 500 mL inicial, ajustando a PAM >70 mmHg, FC ≤120 lpm y diuresis 1 mL/kg/h. Recuerda que los síntomas respiratorios pueden tardar 12-14 h."
+   },
+   {
+    "paso": "Activa el tratamiento específico según el agente",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Ácido fluorhídrico → gluconato cálcico gel 2,5% tópico hasta ceder dolor; calcemia urgente y monitor ECG por hipocalcemia mortal/FV; SC al 10% si no cede; baño/intraarterial según extensión."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Afectación ocular → irrigación copiosa precoz, colirio anestésico para abrir párpados y valoración oftalmológica urgente."
+     },
+     {
+      "t": "Fenol, crómico, fósforo o amoníaco → alta toxicidad sistémica; valora intubación temprana en amoníaco (edema de glotis) y escarectomía precoz en crómico."
+     }
+    ]
+   },
+   {
+    "paso": "Controla dolor y ansiedad",
+    "detalle": "Metamizol 2 g/6 h IV o dexketoprofeno; si dolor moderado-intenso, Tramadol 100 mg/6-8 h IV o Morfina titulada 2 mg/min (máx 10 mg/dosis). Midazolam 0,1 mg/kg IV para la ansiedad. NO uses succinilcolina si precisa relajación (riesgo de hiperpotasemia)."
+   },
+   {
+    "paso": "Medidas generales y soporte",
+    "detalle": "Pantoprazol 40 mg/24 h IV (úlcera de estrés), toxoide tetánico 0,5 mL SC. Corrige acidosis con bicarbonato 1 M si pH <7,20. Vigila carboxihemoglobina y nivel de conciencia (TC si focalidad)."
+   },
+   {
+    "paso": "Destino",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "SCQT ≥1% por producto peligroso o afectación digestiva/respiratoria → UCI o Unidad de Grandes Quemados / tercer nivel."
+     },
+     {
+      "t": "SCQT <1% sin zonas especiales → observación u hospital comarcal; con zonas especiales → tercer nivel. Ninguna quemadura química se da de alta directa."
+     }
+    ]
+   }
+  ]
  },
  "quemaduras_termicas": {
   "ddx": [
@@ -9309,6 +12522,60 @@
   ],
   "wikem_titulo": "Acute urinary retention"
  },
+ "rinosinusitis_y_mucormicosis_rinosinusales": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Valora signos de complicación grave (primeros minutos)",
+    "detalle": "Constantes y temperatura. Busca banderas rojas: dolor orbitario, proptosis, diplopía, pérdida de agudeza visual, cefalea intensa, focalidad neurológica, rigidez de nuca o disminución del nivel de conciencia."
+   },
+   {
+    "paso": "Identifica al paciente inmunodeprimido y descarta mucormicosis",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Placas necróticas negruzcas en fosas/paladar, rinorrea sanguinolenta o celulitis malar de rápida progresión en inmunodeprimido (diabetes, hemopatía, trasplante, VIH, COVID+corticoides) → sospecha de mucormicosis: TC/RM urgente, valoración ORL y cirugía urgente para desbridamiento + antifúngico IV."
+     }
+    ]
+   },
+   {
+    "paso": "Ante complicación orbitaria o intracraneal, imagen y especialista",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Celulitis preseptal/orbitaria, oftalmoplejía o quemosis → TC/RM urgente; vancomicina IV (cobertura SARM) asociada a ceftriaxona/cefotaxima, ampicilina-sulbactam o piperacilina-tazobactam, y valoración por ORL/oftalmología."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Sospecha de meningitis, absceso o trombosis del seno cavernoso → neuroimagen urgente y antibioterapia IV; ingreso."
+     }
+    ]
+   },
+   {
+    "paso": "Trata la mucormicosis confirmada/sospechada",
+    "detalle": "Anfotericina B 5-10 mg/kg/día IV (en glucosado 5% hasta 500 mL, en 2-3 h) como antifúngico de elección; voriconazol IV como alternativa. Control del dolor IV con dexketoprofeno 50 mg/8 h o metamizol 2 g/8 h. Corrige la inmunodepresión de base (p. ej. cetoacidosis diabética)."
+   },
+   {
+    "paso": "En rinosinusitis no complicada, clasifica viral vs bacteriana",
+    "detalle": "Diagnóstico clínico. Viral (<7-10 días): sintomático. Bacteriana: síntomas >10 días o empeoramiento tras 5-7 días, o fiebre >39 °C/dolor facial intenso."
+   },
+   {
+    "paso": "Pauta el tratamiento sintomático y antibiótico según corresponda",
+    "sub": [
+     {
+      "t": "No complicada → analgesia (ibuprofeno 600 mg/8 h), corticoide nasal (mometasona/fluticasona 2 puls/12 h), descongestivo (oximetazolina, máx. 5 días)."
+     },
+     {
+      "t": "Bacteriana leve-moderada → amoxicilina 1 g/8 h o amoxicilina-clavulánico 875/125 mg/8 h 7 días; alérgicos/sin mejoría: levofloxacino 500 mg/24 h o moxifloxacino 400 mg/24 h."
+     }
+    ]
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "Rinosinusitis no complicada: alta con tratamiento y normas de revisión. Complicación orbitaria/intracraneal, inmunodeprimido con cuadro complicado o mucormicosis: ingreso hospitalario."
+   }
+  ]
+ },
  "sangrado_menstrual_abundante": {
   "ddx": [
    {
@@ -9598,6 +12865,44 @@
   ],
   "wikem_titulo": "Undifferentiated shock"
  },
+ "shock_acetaldehidico_y_otras_reacciones_similares": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y monitoriza (primeros minutos)",
+    "detalle": "Sospecha ante reacción anafilactoide 15-30 min tras alcohol en paciente con interdictor (disulfiram, carbimida) u otro fármaco implicado (cefalosporinas, metronidazol, etc.). Monitor de TA, FC, SatO2 y ECG; vía venosa; O2 si hipoxemia."
+   },
+   {
+    "paso": "Suspende el desencadenante e inicia tratamiento básico",
+    "detalle": "Retira el alcohol. Dexclorfeniramina 5 mg IM inicial (luego 6 mg/8 h VO). Metoclopramida 10 mg/8 h si vómitos."
+   },
+   {
+    "paso": "Trata la hipotensión de forma escalonada",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Hipotensión con mala perfusión → SSF 500 mL/h las primeras 2 h; añade Metilprednisolona 60 mg IV inicial."
+     },
+     {
+      "nivel": "critico",
+      "t": "Hipotensión refractaria a volumen → Dopamina 5 µg/kg/min IV en perfusión, titular hasta máx 20 µg/kg/min (objetivo PAS >90 mmHg o diuresis >35 mL/h)."
+     }
+    ]
+   },
+   {
+    "paso": "Vigila complicaciones graves",
+    "detalle": "ECG seriado por arritmias; descarta SCA si dolor torácico intenso. Atento a depresión respiratoria, crisis convulsivas y síndrome confusional."
+   },
+   {
+    "paso": "Reevalúa la respuesta",
+    "detalle": "Control de TA, FC, SatO2 y diuresis. La gravedad es proporcional al alcohol y a la dosis del interdictor; el efecto del disulfiram puede durar hasta 15 días."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Ingreso si disnea, taquicardia, hipotensión, convulsiones o síndrome confusional. Caso leve y resuelto → observación prolongada antes del alta, con advertencia de abstinencia de alcohol."
+   }
+  ]
+ },
  "sincope": {
   "ddx": [
    {
@@ -9819,6 +13124,43 @@
   ],
   "wikem_titulo": "Nontraumatic thoracic aortic dissection"
  },
+ "sindrome_de_abstinencia_alcoholica": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Garantiza la seguridad y estabiliza (primeros minutos)",
+    "detalle": "Asegura entorno y personal (riesgo de agresividad/reacciones homicidas). Monitor de TA, FC y SatO2; vía venosa. Vigila estrechamente la TA por riesgo de hipotensión grave."
+   },
+   {
+    "paso": "Descarta causa orgánica",
+    "detalle": "Glucemia capilar, ECG y exploración neurológica básica. Considera TC craneal si hay focalidad, lesión cerebral conocida o coma al ceder la excitación (forma furiosa)."
+   },
+   {
+    "paso": "Sedación según el cuadro predominante",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Agitación/agresividad → Midazolam 0,2 mg/kg IM (≈1 ampolla de 15 mg) como primera opción; alternativa Diazepam 10 mg IV a 2 mg/min o Clorazepato 50 mg IM."
+     },
+     {
+      "t": "Predominio de alucinaciones o delirio de persecución → Haloperidol 5 mg IM inicial, mantenimiento 5 mg VO/8 h."
+     }
+    ]
+   },
+   {
+    "paso": "Evita contraindicaciones",
+    "detalle": "En la forma convulsiva/epileptiforme NO uses fenotiazinas. Indaga uso concomitante de ISRS (mayor riesgo de desencadenar el cuadro)."
+   },
+   {
+    "paso": "Reevalúa de forma continua",
+    "detalle": "Monitoriza nivel de conciencia y TA hasta que descienda la alcoholemia. Vigila la entrada en coma al ceder la excitación psicomotriz."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Todos requieren ingreso, preferiblemente en área de observación de urgencias, hasta que cesen los efectos del alcohol y se normalice la conducta. Valoración psiquiátrica posterior."
+   }
+  ]
+ },
  "sindrome_escrotal_agudo": {
   "ddx": [
    {
@@ -9910,6 +13252,58 @@
    }
   ],
   "wikem_titulo": "Testicular torsion"
+ },
+ "sindrome_febril_en_el_paciente_oncologico": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce, monitoriza y busca signos de sepsis (primeros minutos)",
+    "detalle": "Considera toda fiebre oncológica como infección hasta demostrar lo contrario. Monitor de TA, FC, FR, SatO2 y temperatura; vía venosa. Alerta si PAS <90 mmHg o caída >40 mmHg, hipoperfusión o acidosis láctica."
+   },
+   {
+    "paso": "Confirma neutropenia febril",
+    "detalle": "Solicita hemograma urgente: granulocitos <500/µL (o <1.000/µL prenadir) con Tª >38,5 °C puntual o >38 °C en tres tomas, o signos de sepsis. Recoge bioquímica, coagulación, lactato y PCR."
+   },
+   {
+    "paso": "Extrae cultivos ANTES del antibiótico (sin demorarlo)",
+    "detalle": "Hemocultivos de vena periférica y de cada luz del catéter, urocultivo y muestras del foco sospechoso. No retrases el antibiótico empírico por esperar las muestras."
+   },
+   {
+    "paso": "Inicia antibioterapia empírica precoz",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Neutropenia grave + fiebre sin sepsis ni foco → monoterapia: piperacilina-tazobactam 4/0,5 g/6 h o cefepima 2 g/8 h o meropenem 1 g/8 h."
+     },
+     {
+      "nivel": "critico",
+      "t": "Sepsis grave/shock séptico → añade aminoglucósido (amikacina 500 mg/12 h o tobramicina 3-5 mg/kg/día) al β-lactámico."
+     },
+     {
+      "t": "Sospecha de catéter, foco cutáneo/pulmonar, hipotensión, colonización MARSA o hemocultivo grampositivo → añade glucopéptido (teicoplanina o vancomicina 1 g/12 h; linezolid si foco pulmonar/cutáneo)."
+     }
+    ]
+   },
+   {
+    "paso": "Estratifica el riesgo con el índice CISNE",
+    "detalle": "En paciente estable, valora ECOG ≥2, hiperglucemia y mucositis ≥grado 2 (puntuación alta = riesgo de complicaciones graves), para decidir manejo hospitalario o domiciliario."
+   },
+   {
+    "paso": "Añade medidas de soporte y reevalúa",
+    "detalle": "Fluidoterapia (glucosalino 2.500-3.000 mL/día), antipirético con paracetamol 1 g/6 h IV, y considera filgrastim 300 µg/24 h SC. Si fiebre persiste al 5.º día, sospecha hongos: fluconazol o voriconazol según levaduras o filamentosos."
+   },
+   {
+    "paso": "Destino",
+    "sub": [
+     {
+      "t": "Criterios de neutropenia febril o neutropenia grave con malestar → ingreso (UCI si sepsis/shock)."
+     },
+     {
+      "t": ">1.000 granulocitos/µL, estable y CISNE bajo → alta con ciprofloxacino 500 mg/12 h + amoxicilina-clavulánico 875/125 mg/8 h 7 días y seguimiento domiciliario."
+     }
+    ]
+   }
+  ]
  },
  "sindrome_febril_en_la_infancia": {
   "ddx": [
@@ -10023,6 +13417,68 @@
    }
   ],
   "wikem_titulo": "Pediatric fever of uncertain source"
+ },
+ "sindrome_febril_en_pacientes_usuarios_de_drogas_por_via_pare": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y monitoriza (primeros minutos)",
+    "detalle": "Monitoriza TA, FC, Tª, SatO2 y nivel de conciencia. Vía venosa. Identifica precozmente datos de sepsis: PAS < 90 mmHg, hipoperfusión, oligoanuria, insuficiencia respiratoria o coagulopatía."
+   },
+   {
+    "paso": "Anamnesis dirigida y estudio del foco",
+    "detalle": "Historia de drogadicción, tipo de droga, VIH (CD4, carga viral) y enfermedades previas. Hemograma, bioquímica, coagulación, gasometría, hemocultivos, sistemático de orina y radiografía de tórax. Valora ecocardiograma, punción lumbar o TC según sospecha."
+   },
+   {
+    "paso": "Estabiliza si hay sepsis grave",
+    "detalle": "Si hipotensión o hipoperfusión: fluidoterapia, antibioterapia precoz tras hemocultivos y soporte. Antipiresis con paracetamol 1 g/6 h IV o metamizol 2 g/6 h IV."
+   },
+   {
+    "paso": "Orienta el tratamiento según el foco infeccioso",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Sospecha de endocarditis → cloxacilina 2 g/6 h IV + gentamicina 3-5 mg/kg/24 h IV."
+     },
+     {
+      "t": "Piel y partes blandas con criterios de ingreso → cloxacilina 2 g/4-6 h IV + ceftriaxona 2 g/24 h IV (cloxacilina 1 g/6 h VO si manejo ambulatorio)."
+     },
+     {
+      "t": "Artritis/osteomielitis → cloxacilina 2 g/4-6 h IV + ceftriaxona 2 g/24 h IV."
+     },
+     {
+      "t": "Neumonía bacteriana → ceftriaxona 2 g/24 h IV + cloxacilina 2 g/6 h IV."
+     }
+    ]
+   },
+   {
+    "paso": "Cubre etiologías específicas del UDVP y del VIH",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Candidiasis (heroína marrón): sin endoftalmitis → fluconazol 200 mg/12 h VO 15 días; con endoftalmitis → anfotericina B 3-5 mg/kg/24 h IV."
+     },
+     {
+      "t": "Pneumocystis jiroveci → cotrimoxazol 2 viales/8 h IV 21 días (+ prednisona 40 mg/12 h si PaO2 < 70 mmHg)."
+     },
+     {
+      "t": "Toxoplasmosis cerebral → sulfadiazina 2 g/6 h VO + pirimetamina 25 mg/6 h VO el primer día y luego 25 mg/12 h."
+     }
+    ]
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Sepsis, endocarditis, neumonía, infección oportunista, endoftalmitis, artritis/osteomielitis o inestabilidad → ingreso."
+     },
+     {
+      "t": "Infección de piel/partes blandas limitada con buen estado y soporte social adecuado → alta con antibioterapia oral y antipiresis (paracetamol 650 mg/6 h)."
+     }
+    ]
+   }
+  ]
  },
  "sindrome_febril_sin_foco_en_pacientes_no_inmunodeprimidos": {
   "ddx": [
@@ -10248,6 +13704,122 @@
   ],
   "wikem_titulo": "Meningitis"
  },
+ "sindrome_nefritico_agudo": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce y monitoriza (primeros minutos)",
+    "detalle": "Monitoriza TA, FC, SatO2 y diuresis. Sospéchalo ante hematuria glomerular (orina color té/cola, hematíes dismórficos, cilindros hemáticos) con edemas, oliguria, HTA o deterioro renal. Vía venosa."
+   },
+   {
+    "paso": "Solicita estudio analítico y microbiológico",
+    "detalle": "Hemograma, función renal con urea/creatinina, iones, gasometría, sistemático y sedimento de orina, proteinuria, complemento (C3/C4), ASLO y cultivo faríngeo/cutáneo. Radiografía de tórax si congestión."
+   },
+   {
+    "paso": "Identifica las emergencias tiempo-dependientes",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Oligoanuria con hiperpotasemia, hiponatremia o acidosis → corrección urgente y valorar diálisis."
+     },
+     {
+      "nivel": "critico",
+      "t": "HTA maligna/acelerada con convulsiones, focalidad o edema de papila → control tensional urgente."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Edema agudo de pulmón o congestión vascular grave → diuréticos IV y soporte; valorar diálisis."
+     }
+    ]
+   },
+   {
+    "paso": "Controla la sobrecarga hidrosalina",
+    "detalle": "Restricción de sal y líquidos. Furosemida 20 mg/6 h (0,5-2 mg/kg/24 h) VO o IV, incrementable hasta 10 mg/kg/24 h IV en casos graves; asociar clortalidona 25-50 mg/48 h a 100 mg/24 h si ClCr > 30 mL/min, vigilando potasemia."
+   },
+   {
+    "paso": "Controla la hipertensión arterial",
+    "detalle": "Si HTA no controlada pese a restricción salina y diuréticos: hidralazina 25 mg/6 h VO o nifedipino 60 mg/24 h VO."
+   },
+   {
+    "paso": "Trata la infección estreptocócica si procede",
+    "detalle": "Cultivo positivo para estreptococo grupo A: penicilina G benzatina IM en dosis única (600.000 UI si < 25 kg; 1.200.000 UI si > 25 kg), o fenoximetilpenicilina VO 10 días; claritromicina 500 mg/12 h VO 10 días si alergia a penicilina."
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "t": "Norma general → ingreso hospitalario de todo paciente con sospecha de síndrome nefrítico agudo."
+     },
+     {
+      "nivel": "critico",
+      "t": "Indicación de diálisis (EAP/HTA grave con oligoanuria refractaria, hiperpotasemia o acidosis graves refractarias, pericarditis o encefalopatía urémica) → ingreso con nefrología."
+     }
+    ]
+   }
+  ]
+ },
+ "sindrome_nefrotico": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Valora y estabiliza (primeros minutos)",
+    "detalle": "Monitoriza TA, FC, SatO2 y diuresis. Explora edemas (declives, perioculares, anasarca), signos de derrame pleural/ascitis y de depleción intravascular. Vía venosa y analítica."
+   },
+   {
+    "paso": "Solicita estudio dirigido",
+    "detalle": "Hemograma, bioquímica con albúmina, perfil lipídico, función renal e iones, proteinuria, sistemático de orina. Albúmina < 2 g/dL marca riesgo trombótico muy alto."
+   },
+   {
+    "paso": "Descarta y trata las complicaciones graves",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Dolor lumbar agudo + hematuria + deterioro renal → sospecha de trombosis de vena renal; imagen urgente y anticoagulación."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Disnea/dolor pleurítico/desaturación → sospecha de TEP; estudio y anticoagulación."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Fiebre o signos de infección (peritonitis, neumonía, celulitis) → antibioterapia empírica IV (cefepima 2 g/12 h o ceftriaxona 2 g/24 h) tras hemocultivos."
+     }
+    ]
+   },
+   {
+    "paso": "Trata los edemas y controla la TA",
+    "detalle": "Furosemida 20 mg/6 h IV en infusión, incrementable sin pasar de 250 mg/día (o 40 mg/24 h-40 mg/6 h VO si leves); asociar clortalidona 50 mg/48 h si respuesta insuficiente. HTA: enalapril 5 mg/día VO (hasta 20 mg/12 h) por su efecto antiproteinúrico, o losartán 25-100 mg/24 h si intolerancia a IECA."
+   },
+   {
+    "paso": "Maneja el soporte hemodinámico y la profilaxis trombótica",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Lesión renal aguda con hipotensión → noradrenalina 0,05 µg/kg/min IV (hasta 0,5) ± albúmina 0,5-1 g/kg/día IV si depleción intravascular grave."
+     },
+     {
+      "t": "Alto riesgo de trombosis (membranosa, reposo, edemas) → profilaxis con bemiparina 3.500 UI/24 h SC o enoxaparina 1 mg/kg/24 h SC."
+     }
+    ]
+   },
+   {
+    "paso": "Inicia tratamiento de base y de la hiperlipidemia",
+    "detalle": "Atorvastatina 10 mg/día VO (o ezetimiba 10 mg/24 h si intolerancia). Ajusta dosis de fármacos por hipoalbuminemia. Inmunosupresión (prednisona 1 mg/kg/día) se inicia en planta de nefrología. En membranosa, descarta neoplasia oculta."
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Lesión renal aguda, sobrecarga grave (anasarca/derrame), sepsis, TVP o necesidad de diálisis → ingreso."
+     },
+     {
+      "t": "Sin diagnóstico previo, buen estado y sin complicaciones → derivación a consulta de nefrología tras consultar al nefrólogo de guardia."
+     }
+    ]
+   }
+  ]
+ },
  "soporte_vital_avanzado_en_adultos": {
   "ddx": [],
   "plan": [
@@ -10368,6 +13940,43 @@
   ],
   "biblio": [
    "European Resuscitation Council (ERC). Guidelines 2021. Consejo Español de RCP (CERCP)."
+  ]
+ },
+ "sordera_brusca": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Reconoce la emergencia otológica",
+    "detalle": "Sospecha sordera brusca ante pérdida neurosensorial ≥30 dB instaurada en ≤72 h, habitualmente unilateral, a veces con sensación de taponamiento. El diagnóstico y tratamiento precoces son determinantes para evitar pérdida permanente."
+   },
+   {
+    "paso": "Confirma el patrón neurosensorial a pie de cama",
+    "detalle": "Otoscopia (normal) y acumetría: Weber lateralizado al oído sano y Rinne positivo patológico confirman hipoacusia neurosensorial. Solicita audiograma urgente."
+   },
+   {
+    "paso": "Descarta causas y signos de alarma",
+    "detalle": "Indaga vértigo o acúfenos (peor pronóstico), exposición ototóxica y antecedentes. Si hay sospecha de lesión retrococlear (neurinoma del acústico), programa RMN con gadolinio."
+   },
+   {
+    "paso": "Inicia corticoterapia sin demora (primeras 48 h)",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Primera línea → Metilprednisolona 1 mg/kg/24 h IV (o Prednisona 1 mg/kg/24 h VO) 10-14 días, con reducción progresiva otros 10-14 días."
+     },
+     {
+      "t": "Contraindicación de corticoides sistémicos o rescate → corticoides intratimpánicos a cargo de ORL."
+     }
+    ]
+   },
+   {
+    "paso": "Valora tratamiento empírico coadyuvante",
+    "detalle": "Según protocolo del centro, considera vasodilatadores (gas carbógeno 5 L/min, piracetam, nimodipino o pentoxifilina) o hemodilución con dextrano 40. Pasadas 4 semanas, los corticoides apenas aportan beneficio."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Todos los pacientes con sospecha diagnóstica requieren ingreso hospitalario y evaluación por ORL. Reevalúa con audiograma a las 2 semanas y valora terapia de rescate si no hay mejoría."
+   }
   ]
  },
  "taponamiento_cardiaco": {
@@ -10536,6 +14145,185 @@
    }
   ],
   "wikem_titulo": "Tetanus"
+ },
+ "traumatismo_craneoencefalico": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Estabiliza según ABCDE y clasifica por Glasgow",
+    "detalle": "Monitor, vía venosa, control cervical. Calcula Glasgow: leve 14-15, moderado 9-13, grave ≤8 (el componente motor es el más pronóstico). Glasgow ≤8 → intubación. Evita hipoxia e hipotensión (lesión secundaria)."
+   },
+   {
+    "paso": "Previene la lesión cerebral secundaria",
+    "detalle": "Mantén PaO2 >100 mmHg, PaCO2 30-35 mmHg, PAS adecuada, normoglucemia. SSF 1.500 mL/24 h de mantenimiento; si PAS <90 mmHg, SSF 10 mL/kg y noradrenalina titulada si precisa. NO usar corticoides (contraindicados)."
+   },
+   {
+    "paso": "Decide la TC craneal y busca red flags",
+    "detalle": "TC urgente si Glasgow <15, focalidad, deterioro, vómitos repetidos, crisis, signos de fractura de base (hemotímpano, ojos de mapache, otorrea/licuorrea, Battle) o anticoagulación. Ácido tranexámico 1 g IV + 1 g/8 h en TCE leve-moderado dentro de las 3 h."
+   },
+   {
+    "paso": "Trata la hipertensión intracraneal con signos de herniación",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Reflejo de Cushing, midriasis arreactiva o deterioro progresivo → manitol 20% 0,6-1,4 g/kg IV en bolo (± furosemida 0,3-0,5 mg/kg), elevar cabecero 30°, normocapnia-hipocapnia leve y aviso a Neurocirugía."
+     }
+    ]
+   },
+   {
+    "paso": "Maneja crisis, vómitos, dolor y agitación",
+    "detalle": "Crisis postraumática → fenitoína 18 mg/kg IV de ataque y 6 mg/kg/24 h (o valproato). Metoclopramida 10 mg/8 h. Metamizol 2 g/8 h IV. Agitación → midazolam 0,1 mg/kg o propofol (no elevan PIC); haloperidol si delirio."
+   },
+   {
+    "paso": "Pauta profilaxis antibiótica si hay fístula/fractura",
+    "detalle": "Pérdida de LCR, fractura de base o hundimiento compuesto → amoxicilina-clavulánico 1 g/200 mg/8 h IV 10 días (o cefuroxima + metronidazol)."
+   },
+   {
+    "paso": "Decide destino",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "TCE grave (Glasgow ≤8), lesión en TC o deterioro → UCI/Neurocirugía."
+     },
+     {
+      "t": "Pérdida de conciencia/amnesia, vómitos, cefalea persistente, fractura, intoxicación o anticoagulación → ingreso/observación (anticoagulados ≥24 h; antiagregados ≥6 h; repetir TC a las 24 h si INR >3). Asintomático con TC normal y bajo riesgo → alta con hoja de vigilancia neurológica."
+     }
+    ]
+   }
+  ]
+ },
+ "traumatismos_genitourinarios": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Estabiliza y encuadra en el contexto del politraumatizado",
+    "detalle": "ABCDE; monitoriza TA/SatO2, vía venosa. La hematuria macroscópica con inestabilidad hemodinámica es signo de gravedad: trátala dentro del manejo del shock hemorrágico."
+   },
+   {
+    "paso": "Antes de sondar, descarta lesión uretral",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Uretrorragia, fractura pélvica o globo vesical con imposibilidad de orinar → NO sondar; deriva la orina por punción suprapúbica y avisa al urólogo."
+     },
+     {
+      "t": "Paciente orina espontáneamente sin uretrorragia → sondaje vesical permitido."
+     }
+    ]
+   },
+   {
+    "paso": "Comprueba la diuresis y caracteriza la hematuria",
+    "detalle": "Confirma que el paciente orina; recoge muestra. La ausencia de hematuria NO descarta lesión grave (10-25% de traumatismos renales graves sin hematuria)."
+   },
+   {
+    "paso": "Solicita TC con contraste y fase excretora",
+    "detalle": "Prueba de elección para riñón, uréter, vejiga y uretra. Valora extravasación de orina, lesión de pedículo vascular o avulsión ureteropiélica."
+   },
+   {
+    "paso": "Explora los genitales externos y detecta urgencias quirúrgicas",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Rotura testicular o hematocele >3 veces el tamaño testicular → exploración quirúrgica urgente (<72 h)."
+     },
+     {
+      "t": "Orquiepididimitis/hematocele sin rotura → analgesia (metamizol 575 mg/8 h), naproxeno 500 mg/12 h y ciprofloxacino 500 mg/12 h 10 días."
+     }
+    ]
+   },
+   {
+    "paso": "Interconsulta a Urología y destino",
+    "detalle": "Avisa al urólogo en cuanto se complete la evaluación inicial. Ingresan: extravasación de orina, hematuria macroscópica, rotura renal/vesical/uretral, lesión ureteral y rotura testicular."
+   }
+  ]
+ },
+ "traumatismos_maxilofaciales": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Asegura la vía aérea (prioridad absoluta)",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Obstrucción por sangre, cuerpos extraños, abatimiento mandibular o mordaza maxilar → aspira, tracciona la mandíbula; insuficiencia respiratoria por compresión → intubación endotraqueal o traqueotomía."
+     },
+     {
+      "t": "Vía aérea estable → oxigenoterapia y monitorización."
+     }
+    ]
+   },
+   {
+    "paso": "Estabiliza y canaliza acceso venoso",
+    "detalle": "Control cervical (frecuente politraumatismo asociado), monitor TA/SatO2. SSF 2.000 mL/24 h de mantenimiento. Controla la hemorragia facial; epistaxis posterior → taponamiento posterior."
+   },
+   {
+    "paso": "Explora de forma sistemática",
+    "detalle": "Inspección extraoral, intraoral y palpación de maxilares. Busca maloclusión, escalones óseos, diplopía (fractura de suelo de órbita), movilidad anómala del tercio medio."
+   },
+   {
+    "paso": "Descarta fractura de base de cráneo y fístula de LCR",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Rinorrea/otorrea clara con glucosa positiva, hemotímpano, ojos de mapache o signo de Battle → sospecha de fractura de base; TC y aviso a Neurocirugía."
+     }
+    ]
+   },
+   {
+    "paso": "Solicita imagen y trata diente avulsionado a tiempo",
+    "detalle": "TC para definir la extensión de fracturas; ortopantomografía para la mandíbula. Diente avulsionado → reimplante antes de 30 min para mejor pronóstico."
+   },
+   {
+    "paso": "Pauta analgesia, profilaxis y soporte",
+    "detalle": "Dexketoprofeno 25 mg/8 h VO o 50 mg/8 h IV/IM (o metamizol 575 mg/8 h). Fracturas abiertas/heridas → amoxicilina-clavulánico 1.000+62,5 mg/8 h 10 días. Edema con riesgo de vía aérea → dexametasona 8 mg + 4 mg/6 h. Pantoprazol 40 mg/24 h si AINE/corticoide."
+   },
+   {
+    "paso": "Destino",
+    "detalle": "Toda fractura maxilofacial ingresa (tratamiento quirúrgico, diferible hasta 10 días salvo urgencia). Compromiso de vía aérea, politraumatismo, fístula de LCR o fractura de base → ingreso urgente con interconsulta a Cirugía Maxilofacial."
+   }
+  ]
+ },
+ "traumatismos_oftalmicos": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Clasifica el tipo de lesión y prioriza",
+    "detalle": "Distingue causticación química, quemadura térmica, lesión por radiación UV y trauma mecánico. La causticación es la máxima urgencia y se trata ANTES de explorar."
+   },
+   {
+    "paso": "Ante causticación, lava de inmediato",
+    "sub": [
+     {
+      "nivel": "critico",
+      "t": "Lesión química → lavado ocular abundante inmediato con SSF/agua (≥15-30 min) antes de cualquier exploración; instila anestésico (tetracaína+oxibuprocaína 1 gota) para facilitarlo. Alcalis más graves que ácidos."
+     }
+    ]
+   },
+   {
+    "paso": "Explora agudeza visual, tinción y descarta perforación",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Signos de perforación del globo (hipotonía, pupila irregular, prolapso de contenido, cámara plana) → NO aplicar pomadas ni manipular; protege con escudo y deriva urgente a Oftalmología."
+     },
+     {
+      "t": "Sin perforación → tinción con fluoresceína para objetivar áreas desepitelizadas."
+     }
+    ]
+   },
+   {
+    "paso": "Trata según la lesión",
+    "detalle": "Química: ciclopléjico (ciclopentolato 1 gota/8 h), dexametasona 1 gota/4 h, pomada antibiótica/8 h 5 días. Abrasión/cuerpo extraño: ciclopentolato dosis única + pomada antibiótica/8 h. Queratoconjuntivitis actínica: ciclopléjico y antibiótico previos a oclusión."
+   },
+   {
+    "paso": "Controla el dolor",
+    "detalle": "Paracetamol 650 mg/6 h; si no cede, metamizol 575 mg/6 h VO o 2 g/8 h IM. No pautar anestésico tópico para uso domiciliario (retrasa la cicatrización)."
+   },
+   {
+    "paso": "Destino y derivación",
+    "detalle": "Deriva urgente a Oftalmología: perforación del globo, Hughes III-IV, cuerpo extraño intraocular, fractura orbitaria con afectación visual/motilidad, laceración conjuntival >10 mm o herida de canalículos. Sospecha de metal-contra-metal → radiografía/TC de órbita."
+   }
+  ]
  },
  "tromboembolia_pulmonar": {
   "ddx": [
@@ -10959,6 +14747,58 @@
    }
   ],
   "wikem_titulo": "Vertigo"
+ },
+ "vomitos_mucositis_y_diarrea_posquimioterapia": {
+  "ddx": [],
+  "plan": [
+   {
+    "paso": "Valora y estabiliza al paciente oncológico",
+    "detalle": "Constantes (TA, FC, Tª, SatO2), nivel de conciencia y estado de hidratación. Vía venosa. Solicita hemograma (recuento de neutrófilos), iones, función renal y glucemia."
+   },
+   {
+    "paso": "Descarta causas alternativas de los síntomas",
+    "detalle": "No asumas que todo es toxicidad: descarta origen infeccioso, metabólico (hiponatremia, hipopotasemia) y metástasis cerebrales si hay vómitos atípicos o focalidad."
+   },
+   {
+    "paso": "Trata según el síndrome predominante",
+    "sub": [
+     {
+      "t": "Vómitos → granisetrón 3 mg IV de rescate (o ondansetrón 8 mg IV); si persisten, metoclopramida 1-3 mg/kg/8 h IV +/- dexametasona 16 mg/24 h o metilprednisolona 125 mg/24 h."
+     },
+     {
+      "t": "Mucositis dolorosa → paracetamol 1 g/6 h IV (o metamizol 2 g/6 h IV); nistatina tópica 5 mL/6 h si candidiasis; fluconazol 200 mg IV si intensa o con fiebre/neutropenia."
+     },
+     {
+      "t": "Diarrea → rehidratación; loperamida 2 mg/2 h VO (máx 16 mg/día); atropina 1 mg SC si por irinotecán; ciprofloxacino 500 mg/12 h si origen infeccioso."
+     }
+    ]
+   },
+   {
+    "paso": "Corrige hidratación y alteraciones hidroelectrolíticas",
+    "detalle": "Reposición con SSF 2.500-3.000 mL/24 h si intolerancia oral; corrige hiponatremia/hipopotasemia. Vigila signos de depleción hidrosalina grave."
+   },
+   {
+    "paso": "Identifica banderas rojas",
+    "sub": [
+     {
+      "nivel": "emergente",
+      "t": "Neutropenia grave (<500/µL) con fiebre o mucositis grado 3-4 → hemocultivos y antibioterapia empírica precoz; aislamiento."
+     },
+     {
+      "nivel": "emergente",
+      "t": "Diarrea con inestabilidad hemodinámica (criterios de shock) → resucitación con fluidos y monitorización."
+     }
+    ]
+   },
+   {
+    "paso": "Reevalúa la respuesta al tratamiento inicial",
+    "detalle": "Si vómitos persisten pese a antiemético, mucositis con intolerancia oral o diarrea con riesgo de deshidratación, plantea ingreso."
+   },
+   {
+    "paso": "Decide destino",
+    "detalle": "Control sintomático y tolerancia oral → alta con pauta domiciliaria y seguimiento por Oncología. Persistencia, depleción grave, mucositis grado 3-4, neutropenia grave o inestabilidad → ingreso (UCI si shock)."
+   }
+  ]
  }
 };
   T.forEach(function (t) {

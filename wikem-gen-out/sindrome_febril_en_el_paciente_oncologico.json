@@ -1,0 +1,19 @@
+{
+ "plan": [
+  {"paso":"Reconoce, monitoriza y busca signos de sepsis (primeros minutos)","detalle":"Considera toda fiebre oncológica como infección hasta demostrar lo contrario. Monitor de TA, FC, FR, SatO2 y temperatura; vía venosa. Alerta si PAS <90 mmHg o caída >40 mmHg, hipoperfusión o acidosis láctica."},
+  {"paso":"Confirma neutropenia febril","detalle":"Solicita hemograma urgente: granulocitos <500/µL (o <1.000/µL prenadir) con Tª >38,5 °C puntual o >38 °C en tres tomas, o signos de sepsis. Recoge bioquímica, coagulación, lactato y PCR."},
+  {"paso":"Extrae cultivos ANTES del antibiótico (sin demorarlo)","detalle":"Hemocultivos de vena periférica y de cada luz del catéter, urocultivo y muestras del foco sospechoso. No retrases el antibiótico empírico por esperar las muestras."},
+  {"paso":"Inicia antibioterapia empírica precoz","sub":[
+    {"nivel":"emergente","t":"Neutropenia grave + fiebre sin sepsis ni foco → monoterapia: piperacilina-tazobactam 4/0,5 g/6 h o cefepima 2 g/8 h o meropenem 1 g/8 h."},
+    {"nivel":"critico","t":"Sepsis grave/shock séptico → añade aminoglucósido (amikacina 500 mg/12 h o tobramicina 3-5 mg/kg/día) al β-lactámico."},
+    {"t":"Sospecha de catéter, foco cutáneo/pulmonar, hipotensión, colonización MARSA o hemocultivo grampositivo → añade glucopéptido (teicoplanina o vancomicina 1 g/12 h; linezolid si foco pulmonar/cutáneo)."}
+  ]},
+  {"paso":"Estratifica el riesgo con el índice CISNE","detalle":"En paciente estable, valora ECOG ≥2, hiperglucemia y mucositis ≥grado 2 (puntuación alta = riesgo de complicaciones graves), para decidir manejo hospitalario o domiciliario."},
+  {"paso":"Añade medidas de soporte y reevalúa","detalle":"Fluidoterapia (glucosalino 2.500-3.000 mL/día), antipirético con paracetamol 1 g/6 h IV, y considera filgrastim 300 µg/24 h SC. Si fiebre persiste al 5.º día, sospecha hongos: fluconazol o voriconazol según levaduras o filamentosos."},
+  {"paso":"Destino","sub":[
+    {"t":"Criterios de neutropenia febril o neutropenia grave con malestar → ingreso (UCI si sepsis/shock)."},
+    {"t":">1.000 granulocitos/µL, estable y CISNE bajo → alta con ciprofloxacino 500 mg/12 h + amoxicilina-clavulánico 875/125 mg/8 h 7 días y seguimiento domiciliario."}
+  ]}
+ ],
+ "ddx": []
+}

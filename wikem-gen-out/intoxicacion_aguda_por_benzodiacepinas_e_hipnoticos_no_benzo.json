@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"Valora vía aérea y nivel de conciencia","detalle":"Monitoriza SatO2, TA y ECG; canaliza vía. La intoxicación pura cursa con sedación, disartria y ataxia sin compromiso hemodinámico; en ancianos vigila confusión e insuficiencia respiratoria global."},
+ {"paso":"Identifica la sustancia y la coingesta","detalle":"Diferencia benzodiacepina pura de hipnóticos no benzodiacepínicos (zolpidem, zopiclona, zaleplón, meprobamato). Busca coingesta de alcohol, tricíclicos, opioides o barbitúricos que potencien la depresión. Vigila metahemoglobinemia con zopiclona."},
+ {"paso":"Descontamina según ventana temporal","detalle":"Carbón activado 1 g/kg si <1 h (benzodiacepinas) o <2 h (zolpidem). En meprobamato: carbón en dosis repetidas e irrigación con polietilenglicol 2 L/h hasta líquido rectal claro (concreciones gástricas)."},
+ {"paso":"Decide el uso de flumazenilo","sub":[
+   {"nivel":"emergente","t":"Coma o depresión respiratoria SIN contraindicación → flumazenilo 0,3 mg IV, repetible cada 30 s hasta máx 3 mg; si coma profundo, infusión 0,2 mg/h (hasta 1 mg/h)."},
+   {"t":"Coingesta de tricíclicos/ISRS/teofilina/litio/cocaína, epilepsia o dependencia a BZD → NO administrar flumazenilo (riesgo de convulsiones o abstinencia); soporte ventilatorio."},
+   {"t":"Sin respuesta a 3 mg totales → descarta las benzodiacepinas como causa y reevalúa el diagnóstico."}
+ ]},
+ {"paso":"Da soporte y vigila el meprobamato grave","detalle":"Soporte respiratorio y hemodinámico. En meprobamato >12 g (mortal): vigila edema agudo de pulmón y convulsiones; considera hemoperfusión si riesgo vital, niveles >100 µg/mL o coma prolongado."},
+ {"paso":"Define el destino","sub":[
+   {"t":"Benzodiacepina pura, asintomático y deambula sin ataxia → alta a las 6 h."},
+   {"t":"Hipnótico no benzodiacepínico → ingreso; UCI según clínica y semivida."},
+   {"t":"Coma, fracaso respiratorio o meprobamato grave → UCI."}
+ ]}
+], "ddx": []}

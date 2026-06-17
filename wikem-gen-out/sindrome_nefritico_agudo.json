@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"Reconoce y monitoriza (primeros minutos)","detalle":"Monitoriza TA, FC, SatO2 y diuresis. Sospéchalo ante hematuria glomerular (orina color té/cola, hematíes dismórficos, cilindros hemáticos) con edemas, oliguria, HTA o deterioro renal. Vía venosa."},
+ {"paso":"Solicita estudio analítico y microbiológico","detalle":"Hemograma, función renal con urea/creatinina, iones, gasometría, sistemático y sedimento de orina, proteinuria, complemento (C3/C4), ASLO y cultivo faríngeo/cutáneo. Radiografía de tórax si congestión."},
+ {"paso":"Identifica las emergencias tiempo-dependientes","sub":[
+   {"nivel":"critico","t":"Oligoanuria con hiperpotasemia, hiponatremia o acidosis → corrección urgente y valorar diálisis."},
+   {"nivel":"critico","t":"HTA maligna/acelerada con convulsiones, focalidad o edema de papila → control tensional urgente."},
+   {"nivel":"emergente","t":"Edema agudo de pulmón o congestión vascular grave → diuréticos IV y soporte; valorar diálisis."}
+ ]},
+ {"paso":"Controla la sobrecarga hidrosalina","detalle":"Restricción de sal y líquidos. Furosemida 20 mg/6 h (0,5-2 mg/kg/24 h) VO o IV, incrementable hasta 10 mg/kg/24 h IV en casos graves; asociar clortalidona 25-50 mg/48 h a 100 mg/24 h si ClCr > 30 mL/min, vigilando potasemia."},
+ {"paso":"Controla la hipertensión arterial","detalle":"Si HTA no controlada pese a restricción salina y diuréticos: hidralazina 25 mg/6 h VO o nifedipino 60 mg/24 h VO."},
+ {"paso":"Trata la infección estreptocócica si procede","detalle":"Cultivo positivo para estreptococo grupo A: penicilina G benzatina IM en dosis única (600.000 UI si < 25 kg; 1.200.000 UI si > 25 kg), o fenoximetilpenicilina VO 10 días; claritromicina 500 mg/12 h VO 10 días si alergia a penicilina."},
+ {"paso":"Decide destino","sub":[
+   {"t":"Norma general → ingreso hospitalario de todo paciente con sospecha de síndrome nefrítico agudo."},
+   {"nivel":"critico","t":"Indicación de diálisis (EAP/HTA grave con oligoanuria refractaria, hiperpotasemia o acidosis graves refractarias, pericarditis o encefalopatía urémica) → ingreso con nefrología."}
+ ]}
+], "ddx": []}

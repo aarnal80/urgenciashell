@@ -1,0 +1,18 @@
+{
+ "plan": [
+  {"paso":"Evalúa la exposición y el tiempo transcurrido (urgente)","detalle":"Caracteriza tipo (percutánea, mucosa, sexual, parenteral), profundidad, volumen y tiempo desde la exposición. La eficacia cae rápido: iniciar cuanto antes, idealmente <24 h."},
+  {"paso":"Decide la indicación según el plazo","sub":[
+    {"nivel":"emergente","t":"Menos de 72 h con exposición de riesgo → indica PPE lo antes posible, no demores."},
+    {"t":"Más de 72 h desde la exposición → la PPE NO está recomendada por pérdida de eficacia."}
+  ]},
+  {"paso":"Valora la fuente y el riesgo","sub":[
+    {"t":"Fuente VIH positivo con carga detectable/desconocida, o exposición percutánea profunda con alta carga → PPE obligatoria."},
+    {"t":"Fuente desconocida con factores de alto riesgo (UDVP, trabajo sexual, prevalencia >1%) → considera PPE como si fuese positiva."}
+  ]},
+  {"paso":"Extrae serología basal antes de iniciar","detalle":"Solicita serología VIH basal del expuesto (y de la fuente si es posible). En exposición no ocupacional, añade cribado de otras ITS y test de embarazo en exposiciones sexuales."},
+  {"paso":"Inicia la pauta de tres fármacos 4 semanas","detalle":"Backbone: tenofovir + emtricitabina 1 comp/24 h (zidovudina+lamivudina 1 comp/12 h si patología renal). Tercer fármaco: raltegravir 1.200 mg/12 h (alternativa dolutegravir 50 mg/24 h o IP potenciado), durante 4 semanas."},
+  {"paso":"Maneja casos especiales y efectos adversos","detalle":"Agresión sexual: valoración multidisciplinar urgente (ginecología, salud mental, infecciosas). Coordina con infecciosas si dudas en la indicación o intolerancia grave a los antirretrovirales."},
+  {"paso":"Destino y seguimiento","detalle":"Manejo ambulatorio en la mayoría: alta con la pauta iniciada, instrucciones de adherencia y cita de seguimiento con infecciosas para controles serológicos y de tolerancia."}
+ ],
+ "ddx": []
+}

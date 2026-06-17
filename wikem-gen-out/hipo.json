@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"Clasifica el hipo según duración","detalle":"Agudo (<48 h, benigno y autolimitado), persistente (>48 h y <1 mes) o intratable (>1 mes). Solo persistente e intratable obligan a descartar patología subyacente grave."},
+ {"paso":"Busca signos de alarma","sub":[
+   {"nivel":"emergente","t":"Dolor torácico → descarta IAM, pericarditis o TEP (ECG, troponina)."},
+   {"t":"Focalidad neurológica, síndrome meníngeo o signos de hipertensión intracraneal → descarta ACV, HSA, meningitis o neoplasia (TC craneal)."},
+   {"t":"Disnea asociada → descarta TEP, asma o patología mediastínica."}
+ ]},
+ {"paso":"Identifica la causa y revisa fármacos","detalle":"El tratamiento etiológico es prioritario. Revisa inductores frecuentes: corticoides, midazolam, opioides, benzodiacepinas, cisplatino. Orienta el origen como central vs. periférico."},
+ {"paso":"Aplica maniobras físicas en el hipo agudo","detalle":"En el hipo agudo prueba primero maniobras físicas (estimulación faríngea, apnea, maniobra de Valsalva); raramente requiere fármacos."},
+ {"paso":"Inicia tratamiento farmacológico según fisiopatología","sub":[
+   {"t":"Origen periférico / reflujo → omeprazol 20 mg/24 h (VO o IV si no tolera VO) y/o metoclopramida 10 mg/8 h."},
+   {"t":"Origen central (incluido ACV) → baclofeno 5-10 mg/8 h (máx 45 mg/día); en causa neurológica o paliativos, gabapentina 100-400 mg/8 h."}
+ ]},
+ {"paso":"Escala a segunda línea si fracasa","detalle":"Si IBP y metoclopramida son insuficientes → clorpromazina 25 mg/8 h (máx 50 mg/8 h)."},
+ {"paso":"Destino","detalle":"Alta con tratamiento si responde. Ingreso si el hipo agudo/persistente no responde al tratamiento inicial o si la causa subyacente identificada (ACV, neoplasia, infección grave, IAM) lo justifica."}
+], "ddx": []}

@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Identifica la entidad y valora gravedad","detalle":"Diferencia parotiditis viral (tumefacción sin pus), sialoadenitis supurada (eritema, pus por el conducto, deshidratación) y sialolitiasis (cólico salival con las comidas). Busca red flags: trismo, disfagia, sepsis."},
+ {"paso":"Orienta el tratamiento según el diagnóstico","sub":[
+   {"t":"Parotiditis viral → sintomático: paracetamol 650 mg/6 h o metamizol 2 g/8 h; medidas higiénicas y vigilar complicaciones (orquitis, pancreatitis, meningitis)."},
+   {"t":"Sialoadenitis supurada → hidratación, antibioterapia y antiinflamatorio."},
+   {"t":"Sialolitiasis → calor local, masaje, sialogogos, analgesia y antiinflamatorio."}
+ ]},
+ {"paso":"Trata la sialoadenitis aguda supurada","detalle":"Rehidratación. Ambulatorio: amoxicilina-clavulánico 2.000/125 mg/12 h 10 días. Hospitalario: amoxicilina-clavulánico 2 g/200 mg/8 h IV (o piperacilina-tazobactam ± linezolid si grave). Metamizol 2 g/8 h y naproxeno 500 mg/12 h."},
+ {"paso":"Trata la sialolitiasis","detalle":"Analgesia con metamizol 2 g/8 h y butilescopolamina 10 mg/8 h VO; naproxeno 500 mg/12 h. Profilaxis antibiótica si procede: amoxicilina-clavulánico 1.000/62,5 mg/8 h 7 días."},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"emergente","t":"Sialoadenitis con deshidratación grave, shock séptico, inmunosupresión, afectación submaxilar bilateral o sospecha de Ludwig/colección profunda → ingreso y antibioterapia IV."},
+   {"t":"Parotiditis viral complicada (orquitis, pancreatitis, meningitis) → ingreso."},
+   {"t":"Sialolitiasis o cuadro leve no complicado → alta con tratamiento y derivación a Maxilofacial/ORL para estudio."}
+ ]}
+], "ddx": []}

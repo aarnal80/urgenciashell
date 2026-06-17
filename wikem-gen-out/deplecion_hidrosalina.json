@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"Reconoce y valora la gravedad (primeros minutos)","detalle":"Monitoriza TA, FC, SatO2 y diuresis; valora signos de hipoperfusión (taquicardia, frialdad, relleno capilar, nivel de conciencia). Busca hipotensión en decúbito como marcador de depleción grave."},
+ {"paso":"Canaliza vía y extrae analítica","detalle":"Vía venosa periférica. Hemograma, bioquímica con osmolaridad, iones, función renal, bioquímica de orina (FeNa) y gasometría arterial para orientar etiología y detectar acidosis láctica."},
+ {"paso":"Clasifica la depleción y elige la vía de reposición","sub":[
+   {"t":"Leve-moderada sin intolerancia oral → suero electrolítico por vía oral; alta con instrucciones."},
+   {"t":"Moderada con intolerancia oral → reposición IV con suero salino fisiológico 3.000 mL/24 h."},
+   {"nivel":"critico","t":"Grave (hipotensión, oligoanuria, alteración de conciencia, acidosis) → carga rápida de SSF 500-1.000 mL/h durante las primeras 2 h."}
+ ]},
+ {"paso":"Reevalúa la respuesta y ajusta el mantenimiento","detalle":"Tras la carga, control de TA, FC, diuresis y estado cardiovascular. Mantenimiento mínimo 3.000 mL/24 h ajustando según PVC y cardiopatía previa para evitar sobrecarga."},
+ {"paso":"Trata la causa subyacente","detalle":"Corrige el origen: pérdidas digestivas, cutáneas, tercer espacio, diuréticos o insuficiencia suprarrenal. Reevalúa iones y equilibrio ácido-base de forma seriada."},
+ {"paso":"Decide destino","sub":[
+   {"t":"Leve-moderada sin intolerancia oral → alta desde urgencias con reposición oral y seguimiento."},
+   {"t":"Moderada con intolerancia oral → observación de urgencias."},
+   {"nivel":"emergente","t":"Grave con repercusión hemodinámica, alteración de conciencia, insuficiencia renal o acidosis → observación de urgencias con monitorización estricta."}
+ ]}
+], "ddx": []}

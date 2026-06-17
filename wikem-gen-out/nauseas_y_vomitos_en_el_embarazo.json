@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Valora la gravedad y la repercusión (primeros minutos)","detalle":"Confirma edad gestacional, evalúa estado de hidratación (mucosas, pliegue, TA, FC), peso actual frente al pregestacional y diuresis. Solicita tira de orina (cetonuria), iones, función renal y hepática."},
+ {"paso":"Descarta diagnósticos alternativos y signos de alarma","detalle":"Diferencia de gastroenteritis, colecistitis, apendicitis, hepatitis, pancreatitis, pielonefritis e hipertiroidismo. Busca ictericia, transaminasas elevadas, alteraciones electrolíticas graves y datos neurológicos."},
+ {"paso":"Distingue náuseas-vómitos leves de hiperémesis gravídica","sub":[
+   {"nivel":"emergente","t":"Pérdida de peso >5%, deshidratación, cetonuria y alteraciones iónicas → hiperémesis gravídica: vía venosa e ingreso."},
+   {"nivel":"critico","t":"Confusión, ataxia, nistagmo u oftalmoplejía → sospecha Wernicke: tiamina IM/IV ANTES de la perfusión glucosada."}
+ ]},
+ {"paso":"Trata las formas leves de forma escalonada","detalle":"Primera línea: piridoxina 300 mg/día VO y/o jengibre, doxilamina+piridoxina. Si no responde: metoclopramida 10 mg/8 h VO. Reserva ondansetrón (evitar en primer trimestre)."},
+ {"paso":"Maneja la hiperémesis gravídica","detalle":"Rehidratación con suero glucosado al 10% 500 mL/8 h alternando con SSF o Ringer lactato 500 mL/8 h, ajustando a diuresis >100 mL/h. Antieméticos IV: piridoxina 300 mg/día y metoclopramida 10 mg/8 h; difenhidramina/hidroxizina; pantoprazol 40 mg/24 h si reflujo. Corrige iones."},
+ {"paso":"Previene Wernicke y reserva corticoides para casos refractarios","sub":[
+   {"t":"Vómitos >3 semanas → tiamina 100 mg/24 h IM antes del suero glucosado."},
+   {"t":"Refractariedad pese a tratamiento pleno → metilprednisolona 16 mg/8 h con pauta decreciente; contraindicada antes de la semana 10."}
+ ]},
+ {"paso":"Decide destino","detalle":"Ingreso: hiperémesis sin respuesta a segunda línea, deshidratación significativa, insuficiencia renal aguda, hipopotasemia/hiponatremia/hipercalcemia graves, signos de Wernicke o pérdida de peso >5%. Resto: alta con antieméticos orales, medidas dietéticas y control obstétrico."}
+], "ddx": []}

@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Triángulo de evaluación pediátrica y constantes (primeros minutos)","detalle":"Valora apariencia, respiración y circulación. Monitoriza FC, FR, TA, SatO2 y temperatura (recuerda la labilidad térmica: la infección puede cursar con hipotermia). Pesa al niño para dosificar por kg."},
+ {"paso":"Identifica signos de alarma a pie de cama","detalle":"Busca llanto inconsolable, letargia, fontanela abombada/deprimida, signos meníngeos, petequias, dificultad respiratoria, rechazo agudo de tomas o vómitos proyectivos. Su presencia obliga a descartar patología grave urgente."},
+ {"paso":"Estratifica el riesgo de infección bacteriana grave según edad","sub":[
+   {"nivel":"critico","t":"Recién nacido (0-28 días) con fiebre de cualquier cifra → vía venosa, analítica, hemocultivo, orina, valorar punción lumbar e iniciar antibioterapia empírica; ingreso siempre."},
+   {"nivel":"emergente","t":"Lactante con signos de alarma (irritabilidad, letargia, petequias, fontanela tensa) → estudio de sepsis y observación monitorizada."}
+ ]},
+ {"paso":"Sospecha cuadros tiempo-dependientes específicos","sub":[
+   {"nivel":"emergente","t":"Llanto periódico con encogimiento de piernas → sospecha invaginación intestinal: ecografía abdominal urgente."},
+   {"nivel":"emergente","t":"Caída en lactante <3 meses con cefalohematoma no frontal, focalidad, fontanela tensa o convulsiones → TC craneal."}
+ ]},
+ {"paso":"Trata el problema concreto y proporciona analgesia","detalle":"Paracetamol 15 mg/kg/6 h VO o ibuprofeno 7 mg/kg/8 h VO. En quemaduras: paracetamol VO o tramadol 1 mg/kg/8 h IV o fentanilo 1-2 µg/kg IV. Procesos locales: dermatitis del pañal con óxido de cinc, onfalitis leve con mupirocina tópica, granuloma umbilical con nitrato de plata."},
+ {"paso":"Descarta maltrato infantil","detalle":"Ante historia inconsistente con el mecanismo o lesiones no congruentes, activa el protocolo de protección al menor y notifica a la autoridad judicial."},
+ {"paso":"Decide destino","detalle":"Ingreso: recién nacido febril, lactante con signos de alarma, onfalitis grave, quemaduras en <1 año o extensas/zonas críticas, TCE de riesgo o sospecha de maltrato. Resto: alta con pautas escritas de reconsulta y revisión por pediatra."}
+], "ddx": []}

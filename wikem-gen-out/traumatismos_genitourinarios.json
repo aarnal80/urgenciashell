@@ -1,0 +1,14 @@
+{"plan": [
+ {"paso":"Estabiliza y encuadra en el contexto del politraumatizado","detalle":"ABCDE; monitoriza TA/SatO2, vía venosa. La hematuria macroscópica con inestabilidad hemodinámica es signo de gravedad: trátala dentro del manejo del shock hemorrágico."},
+ {"paso":"Antes de sondar, descarta lesión uretral","sub":[
+   {"nivel":"emergente","t":"Uretrorragia, fractura pélvica o globo vesical con imposibilidad de orinar → NO sondar; deriva la orina por punción suprapúbica y avisa al urólogo."},
+   {"t":"Paciente orina espontáneamente sin uretrorragia → sondaje vesical permitido."}
+ ]},
+ {"paso":"Comprueba la diuresis y caracteriza la hematuria","detalle":"Confirma que el paciente orina; recoge muestra. La ausencia de hematuria NO descarta lesión grave (10-25% de traumatismos renales graves sin hematuria)."},
+ {"paso":"Solicita TC con contraste y fase excretora","detalle":"Prueba de elección para riñón, uréter, vejiga y uretra. Valora extravasación de orina, lesión de pedículo vascular o avulsión ureteropiélica."},
+ {"paso":"Explora los genitales externos y detecta urgencias quirúrgicas","sub":[
+   {"nivel":"emergente","t":"Rotura testicular o hematocele >3 veces el tamaño testicular → exploración quirúrgica urgente (<72 h)."},
+   {"t":"Orquiepididimitis/hematocele sin rotura → analgesia (metamizol 575 mg/8 h), naproxeno 500 mg/12 h y ciprofloxacino 500 mg/12 h 10 días."}
+ ]},
+ {"paso":"Interconsulta a Urología y destino","detalle":"Avisa al urólogo en cuanto se complete la evaluación inicial. Ingresan: extravasación de orina, hematuria macroscópica, rotura renal/vesical/uretral, lesión ureteral y rotura testicular."}
+], "ddx": []}

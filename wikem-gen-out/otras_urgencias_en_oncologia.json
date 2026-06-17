@@ -1,0 +1,17 @@
+{"plan": [
+ {"paso":"Reconoce y estabiliza (primeros minutos)","detalle":"Monitor ECG, TA, SatO2 y vía venosa. Solicita hemograma, iones (K, P, Ca), ácido úrico, función renal y ECG. Identifica el síndrome oncológico de urgencia."},
+ {"paso":"Identifica banderas rojas inmediatas","sub":[
+   {"nivel":"critico","t":"Edema laríngeo/disnea grave en sd. vena cava superior u obstrucción de vía aérea (calibre <20%) → asegura vía aérea, valora cricotiroidotomía."},
+   {"nivel":"critico","t":"Hiperpotasemia grave en lisis tumoral (T picudas, QRS ancho) → tratamiento urgente de hiperpotasemia y monitorización."},
+   {"nivel":"emergente","t":"Déficit neurológico rápidamente progresivo en compresión medular → dexametasona inmediata y RM urgente."}
+ ]},
+ {"paso":"Trata el síndrome específico","sub":[
+   {"t":"Lisis tumoral → hidratación con glucosalina 2-3 L/m2/día (diuresis 80-100 mL/m2); rasburicasa 0,2 mg/kg/24 h IV si ácido úrico >7,5 mg/dL (o alopurinol); furosemida 20 mg/8 h si oliguria."},
+   {"nivel":"emergente","t":"Compresión medular → dexametasona 10-20 mg en bolo, luego 4-6 mg/6-8 h; profilaxis con bemiparina 3.500 UI/24 h SC; RM y aviso a Oncología/Neurocirugía."},
+   {"t":"Sd. vena cava superior → cabecera elevada, glucosalina por vena de miembro inferior, furosemida 20 mg/12 h; dexametasona 16 mg + 8 mg/8 h si linfoma/timoma o radioterapia."},
+   {"t":"Cistitis hemorrágica → hiperhidratación con glucosalina 3.000 mL/24 h; flavoxato 200 mg/8 h; MESNA si recibe ifosfamida/ciclofosfamida."}
+ ]},
+ {"paso":"Corrige alteraciones metabólicas asociadas","detalle":"En lisis tumoral: alcaliniza con bicarbonato 1 M 100 mEq/8 h si acidosis; trata hiperfosfatemia con antiácido no absorbible (suspende bicarbonato). Vigila calcio y potasio."},
+ {"paso":"Solicita pruebas de imagen y avisa a especialista","detalle":"RM urgente en compresión medular; TC/radiografía en sd. vena cava superior; contacta con Oncología, Radioterapia o Neurocirugía según el caso."},
+ {"paso":"Decide destino","detalle":"Lisis tumoral → observación de urgencias con monitorización (diálisis si oliguria/PVC alta). Compresión medular y sd. vena cava superior → ingreso hospitalario urgente. Cistitis hemorrágica → ingreso salvo hematuria microscópica aislada."}
+], "ddx": []}

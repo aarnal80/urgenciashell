@@ -1,0 +1,13 @@
+{"plan": [
+ {"paso":"Clasifica el tipo de lesión y prioriza","detalle":"Distingue causticación química, quemadura térmica, lesión por radiación UV y trauma mecánico. La causticación es la máxima urgencia y se trata ANTES de explorar."},
+ {"paso":"Ante causticación, lava de inmediato","sub":[
+   {"nivel":"critico","t":"Lesión química → lavado ocular abundante inmediato con SSF/agua (≥15-30 min) antes de cualquier exploración; instila anestésico (tetracaína+oxibuprocaína 1 gota) para facilitarlo. Alcalis más graves que ácidos."}
+ ]},
+ {"paso":"Explora agudeza visual, tinción y descarta perforación","sub":[
+   {"nivel":"emergente","t":"Signos de perforación del globo (hipotonía, pupila irregular, prolapso de contenido, cámara plana) → NO aplicar pomadas ni manipular; protege con escudo y deriva urgente a Oftalmología."},
+   {"t":"Sin perforación → tinción con fluoresceína para objetivar áreas desepitelizadas."}
+ ]},
+ {"paso":"Trata según la lesión","detalle":"Química: ciclopléjico (ciclopentolato 1 gota/8 h), dexametasona 1 gota/4 h, pomada antibiótica/8 h 5 días. Abrasión/cuerpo extraño: ciclopentolato dosis única + pomada antibiótica/8 h. Queratoconjuntivitis actínica: ciclopléjico y antibiótico previos a oclusión."},
+ {"paso":"Controla el dolor","detalle":"Paracetamol 650 mg/6 h; si no cede, metamizol 575 mg/6 h VO o 2 g/8 h IM. No pautar anestésico tópico para uso domiciliario (retrasa la cicatrización)."},
+ {"paso":"Destino y derivación","detalle":"Deriva urgente a Oftalmología: perforación del globo, Hughes III-IV, cuerpo extraño intraocular, fractura orbitaria con afectación visual/motilidad, laceración conjuntival >10 mm o herida de canalículos. Sospecha de metal-contra-metal → radiografía/TC de órbita."}
+], "ddx": []}

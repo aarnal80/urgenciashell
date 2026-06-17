@@ -1,0 +1,20 @@
+{"plan": [
+ {"paso":"Reconoce y estabiliza (primeros minutos)","detalle":"Monitoriza TA, FC, SatO2 y nivel de conciencia (Glasgow); vía venosa y analítica con hemocultivos. O2 si precisa. Si shock séptico, expande volumen e ingresa en UCI sin demorar el antibiótico."},
+ {"paso":"Valora la necesidad de TC craneal antes de la punción lumbar","sub":[
+   {"t":"Glasgow <10, focalidad neurológica, crisis convulsivas, papiledema o inmunodepresión → TC craneal URGENTE antes de la PL para descartar efecto de masa.","nivel":"emergente"},
+   {"t":"Sin datos de riesgo de enclavamiento → procede directamente a la punción lumbar."}
+ ]},
+ {"paso":"NO retrases el antibiótico empírico por las pruebas","detalle":"Si hay alteración de conciencia o se va a hacer TC previa, extrae hemocultivos e inicia ya antibiótico. Dexametasona 10 mg/6 h IV 20 min antes o junto a la 1ª dosis."},
+ {"paso":"Inicia antibioterapia empírica ajustada a edad/contexto","sub":[
+   {"t":"18-50 años → cefotaxima o ceftriaxona 2 g/12 h + vancomicina.","nivel":"emergente"},
+   {"t":">50 años, alcoholismo o inmunodepresión → añade ampicilina 2 g/4 h para cubrir Listeria.","nivel":"emergente"},
+   {"t":"Sospecha meningocócica extrahospitalaria (petequias) → ceftriaxona 1-2 g IM/IV antes del traslado.","nivel":"critico"}
+ ]},
+ {"paso":"Reconoce y deriva las formas que exigen cirugía o tratamiento específico","sub":[
+   {"t":"Dolor dorsal + fiebre + bacteriemia por S. aureus → sospecha absceso epidural espinal: RM urgente y laminectomía descompresiva en <24-36 h.","nivel":"critico"},
+   {"t":"Sospecha de encefalitis herpética (fiebre, confusión, crisis) → aciclovir IV empírico inmediato sin esperar PCR.","nivel":"emergente"},
+   {"t":"Absceso cerebral en TC → neurocirugía; NO realizar PL.","nivel":"emergente"}
+ ]},
+ {"paso":"Medidas de soporte","detalle":"Fluidoterapia 1.500-2.000 mL/24 h. Antitérmico: paracetamol 1 g/6 h IV (metamizol 2 g/6 h si no cede). Si enclavamiento durante la PL: manitol 20% a chorro + dexametasona 16-32 mg IV."},
+ {"paso":"Destino","detalle":"Sospecha meníngea → observación hasta confirmar. Alteración de conciencia, convulsiones o sepsis → UCI. Absceso cerebral o epidural → neurocirugía."}
+], "ddx": []}

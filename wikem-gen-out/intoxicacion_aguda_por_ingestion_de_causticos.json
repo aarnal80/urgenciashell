@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"Estabiliza y prioriza la vía aérea","detalle":"Monitoriza TA, SatO2 y FC; canaliza vía. Dieta absoluta. Valora urgentemente la vía aérea: disnea, estridor o disfonía indican edema de glotis y obligan a asegurar la vía (intubación precoz, valorar traqueostomía)."},
+ {"paso":"EVITA las maniobras contraindicadas","detalle":"NO induzcas el vómito, NO uses sonda nasogástrica a ciegas, NO administres carbón activado, neutralizantes ni catárticos. El tratamiento es de soporte y dirigido por endoscopia."},
+ {"paso":"Inicia soporte, analgesia y protección gástrica","detalle":"SSF de mantenimiento (21 mL/h); en shock, carga de 300 mL/20 min repetible. Analgesia con paracetamol 1 g/6 h IV (metamizol 2 g/6 h alternativo). Omeprazol IV/VO 40 mg/24 h."},
+ {"paso":"Solicita pruebas y programa la endoscopia","detalle":"Hemograma, gasometría y lactato. Vigila marcadores de gravedad: dolor torácico/abdominal, leucocitosis >20.000, pH <7,22 (ácidos), hiperlactacidemia (álcalis), enfisema subcutáneo. Endoscopia digestiva alta a las 12-24 h para estadificar (Zargar)."},
+ {"paso":"Trata según el grado endoscópico","sub":[
+   {"t":"Grado 0-1 → asintomáticos: observación; tolerancia oral progresiva."},
+   {"t":"Grado 2A → omeprazol VO 40 mg/24 h; 2B → dieta absoluta IV + metilprednisolona 1 mg/kg/día (primeras 48 h) + antibióticos (metronidazol + cefepima/meropenem)."},
+   {"nivel":"critico","t":"Grado 3B-4 (necrosis extensa/perforación) → cirugía URGENTE y antibioterapia de amplio espectro."}
+ ]},
+ {"paso":"Define el destino","sub":[
+   {"nivel":"critico","t":"Inestabilidad, dolor torácico/abdominal, grado 3B-4 o perforación → UCI/cirugía."},
+   {"t":"Grado 2B → UCI o planta de digestivo."},
+   {"t":"Asintomático o grado 0-1 → observación de urgencias; seguimiento de estenosis si lesión circunferencial."}
+ ]}
+], "ddx": []}

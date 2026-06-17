@@ -1,0 +1,19 @@
+{"plan": [
+ {"paso":"Reconoce y monitoriza (primeros minutos)","detalle":"Todo trasplantado con fiebre es de alto riesgo. Monitoriza TA, FC, Tª, SatO2 y nivel de conciencia. Vía venosa. Identifica precozmente sepsis grave, shock o distrés (PaO2 < 60 mmHg)."},
+ {"paso":"Anamnesis, estudio del foco y hemocultivos","detalle":"Determina órgano trasplantado, tiempo postrasplante, inmunosupresión, profilaxis y colonizaciones previas (SARM). Extrae hemocultivos (incluido del catéter), bioquímica con función del injerto, sistemático de orina, radiografía de tórax y serologías/PCR de CMV. No demores el antibiótico."},
+ {"paso":"Inicia antibioterapia empírica sin demora y ajusta inmunosupresión","detalle":"Fiebre sin foco, sin mucositis ni sepsis grave: cefepima 2 g/12 h IV en infusión extendida de 3 h (alternativas piperacilina-tazobactam o meropenem). Antipiresis con paracetamol 650 mg/6 h VO. Reduce la inmunosupresión en la mayor cuantía posible junto con el especialista."},
+ {"paso":"Amplía cobertura según gravedad y factores de riesgo","sub":[
+   {"nivel":"emergente","t":"Sepsis grave, shock o distrés → añade cobertura grampositiva con vancomicina 15-20 mg/kg/12 h IV (salvo neumonía)."},
+   {"t":"Catéter venoso central infectado, mucositis o colonización SARM → añade vancomicina (o daptomicina 6-10 mg/kg/24 h IV)."},
+   {"t":"Sospecha de P. aeruginosa en foco focal → añade amikacina 15-20 mg/kg/24 h IV."}
+ ]},
+ {"paso":"Dirige el tratamiento según el foco identificado","sub":[
+   {"t":"Foco respiratorio: gripe → oseltamivir 75 mg/12 h VO; neumonía grave/precoz → meropenem 1 g/8 h IV; nódulos/cavitación (Aspergillus) → voriconazol 6 mg/kg/12 h IV día 1."},
+   {"nivel":"emergente","t":"Viremia o retinitis por CMV → ganciclovir 5 mg/kg/12 h IV."},
+   {"t":"Foco urinario con enterobacterias multirresistentes → meropenem 1 g/8 h IV (o imipenem 500 mg/6 h IV)."}
+ ]},
+ {"paso":"Decide destino conjuntamente con el especialista","sub":[
+   {"nivel":"emergente","t":"Sepsis grave, disfunción del injerto, inmunosupresión intensa o infección grave → ingreso (observación o servicio correspondiente)."},
+   {"t":"Buen estado tras evaluación conjunta y pruebas favorables → alta domiciliaria con seguimiento en consulta externa."}
+ ]}
+], "ddx": []}

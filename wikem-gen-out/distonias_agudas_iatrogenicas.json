@@ -1,0 +1,13 @@
+{"plan": [
+ {"paso":"Reconoce el cuadro y descarta compromiso de vía aérea","detalle":"Identifica espasmos craneofaciales (oromandibulolingual, tortícolis, crisis oculógiras) de inicio brusco. Explora la presencia de estridor inspiratorio que indique distonía laríngea."},
+ {"paso":"Confirma la exposición a fármaco bloqueante dopaminérgico","detalle":"Indaga neurolépticos y antieméticos (metoclopramida) en los últimos 3 días; pregunta específicamente por neuroléptico depot (flufenazina), que puede haberse administrado mucho antes."},
+ {"paso":"Decide la vía de tratamiento según gravedad","sub":[
+   {"t":"Distonía laríngea con estridor → emergencia: biperideno 5 mg IV lento (vía IV obligada) y monitoriza vía aérea.","nivel":"critico"},
+   {"t":"Tormenta distónica con hipertermia, insuficiencia respiratoria o rabdomiólisis → soporte, hidratación y valorar UCI.","nivel":"emergente"},
+   {"t":"Distonía focal sin compromiso → biperideno 5 mg IM/IV."}
+ ]},
+ {"paso":"Administra anticolinérgico de primera línea","detalle":"Biperideno 5 mg (1 ampolla diluida en 4 mL SSF) IV lento; puede repetirse cada 30 min sin superar 20 mg (4 ampollas). Por IM mismo efecto, retrasado hasta 20 min."},
+ {"paso":"Refuerza si no hay respuesta","detalle":"Midazolam 0,1 mg/kg IV (hasta 0,4 mg/kg) o diazepam 5-10 mg IV lento. Crisis oculógiras resistentes: clonazepam 0,5-4 mg. Alternativa: dexclorfeniramina 5 mg IM."},
+ {"paso":"Pauta de mantenimiento y prevención de recaídas","detalle":"Tras yugular la distonía, si no se puede retirar el fármaco causante o fue depot: biperideno oral 2 mg/6 h (o 4 mg retard/12 h) durante 1 semana. Suspende o sustituye el fármaco responsable."},
+ {"paso":"Destino","detalle":"Resolución completa y fármaco retirado → alta con anticolinérgico oral y control. Distonía laríngea, opistótonos o ausencia de respuesta → observación/ingreso. Tormenta distónica → UCI."}
+], "ddx": []}

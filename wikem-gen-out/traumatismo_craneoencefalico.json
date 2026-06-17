@@ -1,0 +1,14 @@
+{"plan": [
+ {"paso":"Estabiliza según ABCDE y clasifica por Glasgow","detalle":"Monitor, vía venosa, control cervical. Calcula Glasgow: leve 14-15, moderado 9-13, grave ≤8 (el componente motor es el más pronóstico). Glasgow ≤8 → intubación. Evita hipoxia e hipotensión (lesión secundaria)."},
+ {"paso":"Previene la lesión cerebral secundaria","detalle":"Mantén PaO2 >100 mmHg, PaCO2 30-35 mmHg, PAS adecuada, normoglucemia. SSF 1.500 mL/24 h de mantenimiento; si PAS <90 mmHg, SSF 10 mL/kg y noradrenalina titulada si precisa. NO usar corticoides (contraindicados)."},
+ {"paso":"Decide la TC craneal y busca red flags","detalle":"TC urgente si Glasgow <15, focalidad, deterioro, vómitos repetidos, crisis, signos de fractura de base (hemotímpano, ojos de mapache, otorrea/licuorrea, Battle) o anticoagulación. Ácido tranexámico 1 g IV + 1 g/8 h en TCE leve-moderado dentro de las 3 h."},
+ {"paso":"Trata la hipertensión intracraneal con signos de herniación","sub":[
+   {"nivel":"critico","t":"Reflejo de Cushing, midriasis arreactiva o deterioro progresivo → manitol 20% 0,6-1,4 g/kg IV en bolo (± furosemida 0,3-0,5 mg/kg), elevar cabecero 30°, normocapnia-hipocapnia leve y aviso a Neurocirugía."}
+ ]},
+ {"paso":"Maneja crisis, vómitos, dolor y agitación","detalle":"Crisis postraumática → fenitoína 18 mg/kg IV de ataque y 6 mg/kg/24 h (o valproato). Metoclopramida 10 mg/8 h. Metamizol 2 g/8 h IV. Agitación → midazolam 0,1 mg/kg o propofol (no elevan PIC); haloperidol si delirio."},
+ {"paso":"Pauta profilaxis antibiótica si hay fístula/fractura","detalle":"Pérdida de LCR, fractura de base o hundimiento compuesto → amoxicilina-clavulánico 1 g/200 mg/8 h IV 10 días (o cefuroxima + metronidazol)."},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"critico","t":"TCE grave (Glasgow ≤8), lesión en TC o deterioro → UCI/Neurocirugía."},
+   {"t":"Pérdida de conciencia/amnesia, vómitos, cefalea persistente, fractura, intoxicación o anticoagulación → ingreso/observación (anticoagulados ≥24 h; antiagregados ≥6 h; repetir TC a las 24 h si INR >3). Asintomático con TC normal y bajo riesgo → alta con hoja de vigilancia neurológica."}
+ ]}
+], "ddx": []}

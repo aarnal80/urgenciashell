@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Protégete y reconoce el síndrome colinérgico","detalle":"Usa guantes/EPI y retira la ropa contaminada (riesgo de contaminación del personal). Monitoriza ECG, TA, SatO2; vía venosa. Identifica la presentación clásica: bajo nivel de conciencia, sudoración, miosis puntiforme, fasciculaciones y olor a insecticida."},
+ {"paso":"Asegura oxigenación y vía aérea ANTES de atropinizar","detalle":"Oxigena bien: la hipoxemia previa a la atropina puede precipitar fibrilación ventricular. Si parálisis respiratoria, secreciones masivas o coma, intubación con secuencia rápida (midazolam 0,1 mg/kg + rocuronio 1 mg/kg; NO succinilcolina). SSF 2 L si pérdidas digestivas."},
+ {"paso":"Administra el antídoto: atropina","detalle":"Atropina 1-3 mg IV según gravedad, duplicando cada 5 min hasta control de broncorrea/broncoespasmo y mantener TAS >90 mmHg y FC >80 lpm (objetivo: secar secreciones, NO atropinizar). Luego infusión con el 10% de la dosis total/hora. Vigila signos de toxicidad atropínica (confusión, T >37 °C, FC >140)."},
+ {"paso":"Añade oxima y descontamina","detalle":"Pralidoxima 30 mg/kg IV lenta + infusión 8 mg/kg/h en las primeras 24 h, siempre combinada con atropina (especialmente en paratión; contraindicada en carbarilo). Si ingesta <1 h y paciente estabilizado/oxigenado/atropinizado: carbón activado 1 g/kg."},
+ {"paso":"Trata las complicaciones según el tóxico","sub":[
+   {"nivel":"emergente","t":"Convulsiones (organofosforados) → midazolam o diazepam IV."},
+   {"t":"Hipotensión que no responde a atropina ni fluidos → fenilefrina 50-100 µg IV o en perfusión."},
+   {"t":"Organoclorados (convulsiones, hiperexcitabilidad miocárdica) → benzodiacepinas; si insuficientes, vecuronio/pancuronio; arritmias supraventriculares con propranolol/metoprolol/esmolol (evita adrenalina y atropina); clordano: colestiramina 4 g/8 h."}
+ ]},
+ {"paso":"Define el destino","sub":[
+   {"nivel":"critico","t":"Organofosforados → ingreso en UCI siempre."},
+   {"t":"Carbamatos u organoclorados → ingreso hospitalario; UCI si precisan soporte ventilatorio."}
+ ]}
+], "ddx": []}

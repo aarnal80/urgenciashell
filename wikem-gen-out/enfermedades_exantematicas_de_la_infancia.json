@@ -1,0 +1,18 @@
+{"plan": [
+ {"paso":"Valora estado general y constantes (primeros minutos)","detalle":"Triángulo de evaluación pediátrica, temperatura, SatO2, TA y relleno capilar. Pesa al niño. Identifica de inmediato el niño con aspecto tóxico."},
+ {"paso":"Caracteriza el exantema y descarta lo emergente","sub":[
+   {"nivel":"critico","t":"Exantema petequial o purpúrico en niño febril con aspecto tóxico → sospecha meningococemia: vía venosa, hemocultivo y antibiótico IV empírico sin demora; aislamiento."},
+   {"nivel":"emergente","t":"Convulsiones o deterioro neurológico en exantema febril → estabiliza, descarta meningoencefalitis (valorar punción lumbar y TC)."}
+ ]},
+ {"paso":"Reconoce los cuadros que requieren tratamiento específico","sub":[
+   {"nivel":"emergente","t":"Fiebre >5 días sin foco con criterios clínicos → sospecha Kawasaki: analítica y ecocardiograma; ingreso para inmunoglobulina IV 2 g/kg + AAS."},
+   {"t":"Escarlatina (lengua aframbuesada, exantema en lija) → amoxicilina 25 mg/kg/12 h 10 días para erradicar S. pyogenes y prevenir fiebre reumática."}
+ ]},
+ {"paso":"Pauta tratamiento sintomático y antiviral cuando proceda","detalle":"Antipiresis con paracetamol 10-15 mg/kg/4-6 h (en varicela NO salicilatos). Varicela: prurito con hidroxizina; aciclovir 20 mg/kg/6 h VO en grupos de riesgo o 10 mg/kg/8 h IV si inmunodeprimido/diseminada. Sarampión ingresado: vitamina A según edad."},
+ {"paso":"Vigila complicaciones de Schönlein-Henoch y crisis aplásica","sub":[
+   {"t":"Schönlein-Henoch → analgesia con ibuprofeno; prednisona 1-2 mg/kg/día si afectación GI, neurológica o nefrótica; controla TA, función renal y hematuria."},
+   {"t":"Eritema infeccioso en hemólisis crónica → vigila crisis aplásica; inmunoglobulina IV si inmunodeprimido con aplasia."}
+ ]},
+ {"paso":"Indica medidas de aislamiento y salud pública","detalle":"Aísla según el agente (gotas/contacto), notifica las enfermedades de declaración obligatoria (sarampión, rubéola) y revisa el estado vacunal y de contactos."},
+ {"paso":"Decide destino","detalle":"Ingreso: Kawasaki (siempre), complicaciones de sarampión/rubéola/varicela, Schönlein-Henoch con afectación renal o GI grave, deshidratación por mano-pie-boca. Resto: alta con tratamiento sintomático y signos de alarma."}
+], "ddx": []}

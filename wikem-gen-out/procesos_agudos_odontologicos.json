@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Evalúa el proceso y descarta infección profunda","detalle":"Exploración oral: pieza causal, edema, fluctuación. Busca red flags: trismus, disfagia/odinofagia, fiebre alta o afectación del estado general que sugieran flemón/absceso cervical profundo."},
+ {"paso":"Controla el dolor","detalle":"Ibuprofeno 600 mg/8 h VO; si no cede, dexketoprofeno 25 mg/8 h o tramadol 50 mg/8 h. En caries con pulpopatía sin odontólogo disponible, clavo tópico 1-3 gotas/8 h."},
+ {"paso":"Pauta antibiótico según el cuadro","sub":[
+   {"t":"Infección periapical / absceso periodontal / pericoronaritis → amoxicilina-clavulánico 2.000/125 mg/12 h 7 días (clindamicina 300 mg/6 h si alergia)."},
+   {"t":"Gingivitis ulceronecrosante o periodontitis → amoxicilina-clavulánico + metronidazol 500 mg/8 h 7 días."},
+   {"t":"Candidiasis oral → fluconazol 200 mg/día 5-14 días (nistatina tópica si alternativa)."}
+ ]},
+ {"paso":"Trata la pericoronaritis con edema intenso o trismus","detalle":"Naproxeno 500 mg/12 h; si edema muy importante o trismus, metilprednisolona 125 mg IM/IV en dosis única."},
+ {"paso":"Maneja la hemorragia postextracción","detalle":"Compresión con gasa, sutura si precisa. Si no cede, ácido tranexámico tópico o enjuagues; revisar coagulación/anticoagulación."},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"emergente","t":"Trismus, disfagia, celulitis progresiva, crepitación o sepsis → ingreso, antibioterapia IV e interconsulta a Maxilofacial."},
+   {"t":"Proceso no complicado → alta con antibioterapia/analgesia y derivación preferente al odontólogo para tratamiento definitivo."}
+ ]}
+], "ddx": []}

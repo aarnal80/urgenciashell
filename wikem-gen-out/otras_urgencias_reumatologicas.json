@@ -1,0 +1,24 @@
+{
+ "plan": [
+  {"paso":"Reconoce y estabiliza (primeros minutos)","detalle":"Monitor de TA, FC, FR, SatO2 y temperatura; vía venosa. Identifica la emergencia hiperinflamatoria o trombótica, que tienen alta mortalidad y requieren ingreso en UCI."},
+  {"paso":"Identifica el síndrome de presentación y sus red flags","sub":[
+    {"nivel":"emergente","t":"HTA maligna + insuficiencia renal rápida en esclerodermia (incluso normotenso) → crisis renal esclerodérmica."},
+    {"nivel":"critico","t":"Fiebre >39 °C + citopenias + ferritina >5.000-10.000 → síndrome de activación macrofágica (mortalidad ~70%, UCI)."},
+    {"nivel":"critico","t":"Fallo de ≥3 órganos en <1 semana con anticuerpos antifosfolípidos → SAF catastrófico."},
+    {"nivel":"critico","t":"Hemoptisis + deterioro renal/oliguria → síndrome pulmonar-renal con hemorragia alveolar."},
+    {"nivel":"emergente","t":"Pérdida brusca de visión + cefalea temporal en >50 años → arteritis de la temporal, ceguera irreversible."}
+  ]},
+  {"paso":"Inicia tratamiento dirigido sin demora","detalle":"Crisis renal esclerodérmica: captopril 25 mg VO (repetible a los 30 min); si no responde, nitroprusiato IV. Activación macrofágica: metilprednisolona 0,5-1 g/día IV 3-5 días + inmunoglobulina 1 g/kg/día 2 días. SAF catastrófico: heparina sódica (bolo 5.000 UI + perfusión) + metilprednisolona + plasmaféresis."},
+  {"paso":"Trata la arteritis de la temporal de inmediato","sub":[
+    {"nivel":"emergente","t":"Con afectación ocular → metilprednisolona 0,5-1 g/día IV 3-5 días, no esperes a la biopsia."},
+    {"t":"Sin afectación ocular → prednisona 1 mg/kg/día VO; considera AAS 100 mg/día y profilaxis con cotrimoxazol si ≥20 mg/día de prednisona."}
+  ]},
+  {"paso":"Maneja el brote lúpico y la fiebre en inmunosuprimidos","detalle":"Brote de LES grave: metilprednisolona 1-2 mg/kg IV en bolo. Fiebre bajo inmunosupresión: descarta infección oportunista (Pneumocystis, TBC, herpes zóster) e inicia antibioterapia si procede; hidrocortisona 50-100 mg/8 h IV si infección sobreañadida."},
+  {"paso":"Solicita pruebas y consulta a especialista","detalle":"Hemograma, bioquímica con función renal, ferritina, coagulación, autoanticuerpos, radiografía/TC de tórax y gasometría según el caso. Contacta con Reumatología/Nefrología/UCI precozmente."},
+  {"paso":"Destino","sub":[
+    {"t":"Activación macrofágica, SAF catastrófico, crisis renal esclerodérmica, síndrome pulmonar-renal y vasculitis del SNC → ingreso (UCI según gravedad)."},
+    {"t":"Arteritis de la temporal sin afectación ocular → alta con corticoterapia oral inmediata y seguimiento; LES con nefritis, trombosis, infección o afectación del SNC → ingreso."}
+  ]}
+ ],
+ "ddx": []
+}

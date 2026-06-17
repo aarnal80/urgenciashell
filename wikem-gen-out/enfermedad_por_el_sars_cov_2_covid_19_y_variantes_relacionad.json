@@ -1,0 +1,20 @@
+{
+ "plan": [
+  {"paso":"Aísla, monitoriza y mide SatO2 (primeros minutos)","detalle":"Mascarilla y aislamiento por gotas/aéreo. Monitor de TA, FC, FR, temperatura y pulsioximetría OBLIGATORIA: la hipoxia silenciosa puede caer sin disnea, sobre todo en mayores de 60 años. Vía venosa."},
+  {"paso":"Clasifica la gravedad","sub":[
+    {"t":"Leve (sin neumonía) → manejo domiciliario."},
+    {"t":"Moderada (neumonía, SatO2 >93%) → valorar ingreso según riesgo."},
+    {"nivel":"emergente","t":"Grave (SatO2 ≤93%) → oxigenoterapia e ingreso."},
+    {"nivel":"critico","t":"Crítica (ventilación mecánica, shock séptico, fallo multiorgánico) → UCI; si inestabilidad o bajo nivel de conciencia, intubación directa (no VMNI/CPAP)."}
+  ]},
+  {"paso":"Solicita pruebas y calcula el riesgo","detalle":"Analítica con biomarcadores (PCR, dímero D, ferritina, LDH, linfocitos, IL-6), radiografía de tórax y QCSI. QCSI ≥7 indica riesgo de enfermedad crítica a 24 h ≥44%."},
+  {"paso":"Inicia oxigenoterapia y corticoides si lo precisa","detalle":"O2 para mantener SatO2 objetivo. Si requiere O2 o SatO2 <94% con infiltrados bilaterales: dexametasona 6 mg/24 h IV/VO 10 días (en SDRA moderado-grave 20 mg/24 h IV 5 días y luego 10 mg/24 h 5 días)."},
+  {"paso":"Profilaxis tromboembólica y antibiótico si sobreinfección","detalle":"En todo ingreso sin contraindicación: enoxaparina 1,5 mg/kg/24 h SC. Si leucocitosis >12.000 y procalcitonina >1: cubre sobreinfección bacteriana (ceftriaxona 2 g/24 h + amoxicilina-clavulánico 1 g/8 h + azitromicina 500 mg/24 h)."},
+  {"paso":"Valora antiviral en ambulatorios de alto riesgo","detalle":"COVID leve-moderada con alto riesgo de progresión y <5 días de evolución: nirmatrelvir/ritonavir 300/100 mg/12 h 5 días (no si ClCr <30 ni Child-Pugh C); alternativa molnupiravir 800 mg/12 h 5 días."},
+  {"paso":"Destino","sub":[
+    {"t":"SatO2 ≤93%, infiltrados bilaterales, QCSI ≥7, inmunodepresión o biomarcadores de riesgo → ingreso."},
+    {"t":"Leve sin criterios → alta domiciliaria con paracetamol, vigilancia de signos de alarma y pulsioximetría si posible."}
+  ]}
+ ],
+ "ddx": []
+}

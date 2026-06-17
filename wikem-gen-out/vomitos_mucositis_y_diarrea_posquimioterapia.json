@@ -1,0 +1,16 @@
+{"plan": [
+ {"paso":"Valora y estabiliza al paciente oncológico","detalle":"Constantes (TA, FC, Tª, SatO2), nivel de conciencia y estado de hidratación. Vía venosa. Solicita hemograma (recuento de neutrófilos), iones, función renal y glucemia."},
+ {"paso":"Descarta causas alternativas de los síntomas","detalle":"No asumas que todo es toxicidad: descarta origen infeccioso, metabólico (hiponatremia, hipopotasemia) y metástasis cerebrales si hay vómitos atípicos o focalidad."},
+ {"paso":"Trata según el síndrome predominante","sub":[
+   {"t":"Vómitos → granisetrón 3 mg IV de rescate (o ondansetrón 8 mg IV); si persisten, metoclopramida 1-3 mg/kg/8 h IV +/- dexametasona 16 mg/24 h o metilprednisolona 125 mg/24 h."},
+   {"t":"Mucositis dolorosa → paracetamol 1 g/6 h IV (o metamizol 2 g/6 h IV); nistatina tópica 5 mL/6 h si candidiasis; fluconazol 200 mg IV si intensa o con fiebre/neutropenia."},
+   {"t":"Diarrea → rehidratación; loperamida 2 mg/2 h VO (máx 16 mg/día); atropina 1 mg SC si por irinotecán; ciprofloxacino 500 mg/12 h si origen infeccioso."}
+ ]},
+ {"paso":"Corrige hidratación y alteraciones hidroelectrolíticas","detalle":"Reposición con SSF 2.500-3.000 mL/24 h si intolerancia oral; corrige hiponatremia/hipopotasemia. Vigila signos de depleción hidrosalina grave."},
+ {"paso":"Identifica banderas rojas","sub":[
+   {"nivel":"emergente","t":"Neutropenia grave (<500/µL) con fiebre o mucositis grado 3-4 → hemocultivos y antibioterapia empírica precoz; aislamiento."},
+   {"nivel":"emergente","t":"Diarrea con inestabilidad hemodinámica (criterios de shock) → resucitación con fluidos y monitorización."}
+ ]},
+ {"paso":"Reevalúa la respuesta al tratamiento inicial","detalle":"Si vómitos persisten pese a antiemético, mucositis con intolerancia oral o diarrea con riesgo de deshidratación, plantea ingreso."},
+ {"paso":"Decide destino","detalle":"Control sintomático y tolerancia oral → alta con pauta domiciliaria y seguimiento por Oncología. Persistencia, depleción grave, mucositis grado 3-4, neutropenia grave o inestabilidad → ingreso (UCI si shock)."}
+], "ddx": []}

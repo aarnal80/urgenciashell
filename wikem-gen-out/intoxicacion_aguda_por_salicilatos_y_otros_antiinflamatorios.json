@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Reconoce y monitoriza","detalle":"Monitor ECG, TA, SatO2, Tª y glucemia; vía venosa. Oxígeno en mascarilla Venturi al 50%. Sospecha intoxicación por salicilatos ante tríada hiperventilación + diaforesis + acúfenos."},
+ {"paso":"Extrae analítica y gasometría","detalle":"Solicita salicilemia (basal y seriada a las 6 h), gasometría, iones, función renal, coagulación y glucemia. La evolución típica es de alcalosis respiratoria a acidosis metabólica."},
+ {"paso":"Descontaminación digestiva","detalle":"Carbón activado 1-2 g/kg VO en las primeras 6 h (máxima eficacia <2 h), con dosis repetidas de 1 g/kg/2-4-6 h. Si salicilatos de liberación retardada: irrigación intestinal total con polietilenglicol hasta líquido rectal claro."},
+ {"paso":"Inicia fluidoterapia y alcaliniza la orina","detalle":"Sueroterapia para diuresis hasta 200 mL/h. Alcalinización urinaria con bicarbonato 1 M (250 mL la 1.ª h, luego 100-150 mEq/1.000 mL glucosado 5% + 30 mEq ClK a 150-200 mL/h) para mantener pH urinario 7-8. Vigila potasemia."},
+ {"paso":"Trata complicaciones según gravedad","sub":[
+   {"nivel":"emergente","t":"Acidosis metabólica (pH <7,20) → bicarbonato 1 M 3-5 mEq/kg en 2-4 h."},
+   {"t":"Tetania/sacudidas por hipocalcemia → gluconato cálcico 10% (225 mg calcio elemento en 100 mL glucosado, 15 min)."},
+   {"t":"Hemorragia/coagulopatía → vitamina K 10-20 mg IV; gastroprotección con omeprazol 40 mg/24 h."}
+ ]},
+ {"paso":"Valora depuración extrarrenal","sub":[
+   {"nivel":"critico","t":"Salicilemia >100 mg/dL (o >80 con fracaso renal), coma/convulsiones, edema pulmonar o acidosis refractaria → hemodiálisis."}
+ ]},
+ {"paso":"Destino","detalle":"Todo paciente con intoxicación por salicilatos o AINE ingresa. UCI si acidosis, afectación del SNC, hipertermia, edema pulmonar o inestabilidad. Alta solo si asintomático y salicilemia <50 mg/dL a las 6 h de ingestión única."}
+], "ddx": []}

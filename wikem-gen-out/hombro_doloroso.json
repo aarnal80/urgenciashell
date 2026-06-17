@@ -1,0 +1,20 @@
+{
+ "plan": [
+  {"paso":"Descarta primero la causa extrínseca grave","sub":[
+    {"nivel":"critico","t":"Dolor de hombro SIN limitación funcional o con síntomas cardiovasculares/respiratorios/abdominales → descarta IAM, disección aórtica, TEP, rotura hepática o embarazo ectópico (ECG, constantes, exploración dirigida) antes de atribuirlo al hombro."}
+  ]},
+  {"paso":"Anamnesis y caracterización del dolor","detalle":"Diferencia intrínseco (aumenta con la movilización) de extrínseco (referido, sin déficit funcional). Recoge traumatismo, fiebre y tiempo de evolución."},
+  {"paso":"Exploración física diferenciada","detalle":"Dolor con movilidad pasiva → afección articular; dolor con movilidad resistida → origen musculotendinoso. Limitación de la abducción a 20° sugiere rotura del manguito de los rotadores."},
+  {"paso":"Solicita radiografía solo si está indicada","detalle":"Única prueba urgente: radiografía de hombros de frente comparada. Espacio acromiohumeral <7 mm indica rotura del manguito de los rotadores."},
+  {"paso":"Descarta artritis séptica","sub":[
+    {"nivel":"emergente","t":"Calor, rubor, fiebre e impotencia funcional grave → sospecha artritis séptica: requiere ingreso hospitalario urgente."}
+  ]},
+  {"paso":"Trata el dolor de forma escalonada","detalle":"Escalón 1: paracetamol 1 g/8 h. Escalón 2: metamizol 575 mg/8 h. Añade AINE si hay componente inflamatorio (naproxeno 500 mg/12 h). Refractario: paracetamol+tramadol 325/37,5 mg/8 h. Tendinitis/subacromial rebelde: infiltración con triamcinolona 40 mg/mL (1-2 mL) + lidocaína. Capsulitis adhesiva: dexametasona oral en pauta descendente."},
+  {"paso":"Destino","sub":[
+    {"t":"Artritis séptica o causa extrínseca grave → ingreso según enfermedad causante."},
+    {"t":"Rotura del manguito/tendón largo del bíceps → valoración traumatológica urgente."},
+    {"t":"Patología intrínseca no complicada → alta con analgesia, reposo relativo y derivación a su médico/rehabilitación."}
+  ]}
+ ],
+ "ddx": []
+}

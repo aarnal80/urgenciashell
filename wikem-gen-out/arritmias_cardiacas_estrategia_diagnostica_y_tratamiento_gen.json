@@ -1,0 +1,13 @@
+{"plan": [
+ {"paso":"Reconoce y estabiliza (primeros minutos)","detalle":"Monitor ECG continuo, TA, SatO2 y vía venosa. O2 al 50% (Venturi o reservorio) solo si SpO2 <90%; si no mejora, VMNI. Palpa pulso central: si ausente, inicia SVB/SVA."},
+ {"paso":"Valora la repercusión hemodinámica","detalle":"Busca signos de bajo gasto, shock cardiogénico, edema agudo de pulmón o isquemia. Principio rector: no ser más agresivo con la arritmia de lo que esta lo es con el paciente."},
+ {"paso":"Realiza ECG de 12 derivaciones con tira de ritmo","detalle":"Clasifica: taqui- o bradiarritmia; en taquiarritmias mide la anchura del QRS (<0,12 s supraventricular vs >0,12 s ventricular o asumido ventricular si cardiopatía)."},
+ {"paso":"Decide según ritmo y estabilidad","sub":[
+   {"nivel":"emergente","t":"Taquiarritmia con inestabilidad (shock, EAP, SCA) → cardioversión eléctrica sincronizada urgente sin demora diagnóstica, previa sedoanalgesia (midazolam 0,1 mg/kg IV + fentanilo 2 µg/kg IV); bifásica 150 J ascendente hasta 200 J."},
+   {"t":"Taquiarritmia QRS estrecho estable → maniobras vagales; si no revierte, adenosina 6 mg IV en bolo rápido, repetir 12 mg cada 5 min (máx 24 mg)."},
+   {"nivel":"critico","t":"Bradiarritmia inestable → marcapasos transcutáneo urgente con analgesia (tramadol IV); atropina 0,5-1 mg IV (NO en BAV Mobitz II ni BAV completo con escape ventricular)."}
+ ]},
+ {"paso":"Trata causas y contraindicaciones específicas","detalle":"Corrige hipoxemia, alteraciones electrolíticas y fármacos. Si intoxicación digitálica, la cardioversión está contraindicada (solo 25-50 J valorando riesgo/beneficio). En preexcitación antidrómica NO uses adenosina ni maniobras vagales."},
+ {"paso":"Soporte cronotrópico si no hay marcapasos","detalle":"En bradiarritmia grave sin marcapasos disponible: isoproterenol 1 µg/min IV en aumento (máx 20 µg/min) o adrenalina 2 µg/min IV como puente al marcapasos intravenoso."},
+ {"paso":"Destino","detalle":"PCR resuelta, IAM o inestabilidad con vigilancia intensiva → UCI. Inestabilidad cardiovertida estable, cardiopatía descompensada o necesidad de marcapasos → Cardiología. Arritmia estable no revertida o intoxicación <24 h → Observación de urgencias."}
+], "ddx": []}

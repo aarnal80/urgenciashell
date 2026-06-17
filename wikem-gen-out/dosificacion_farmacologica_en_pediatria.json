@@ -1,0 +1,19 @@
+{"plan": [
+ {"paso":"Confirma el peso real y la edad (antes de prescribir)","detalle":"Pesa al niño siempre que sea posible; no estimes a la ligera. La mayoría de fármacos se dosifican en mg/kg con margen estrecho. Registra alergias y la última administración de cada fármaco."},
+ {"paso":"Calcula la dosis y verifica los topes de seguridad","sub":[
+   {"nivel":"critico","t":"Paracetamol → 10-15 mg/kg/4-6 h; recuerda que >100 mg/kg es tóxica y >150 mg/kg letal."},
+   {"nivel":"critico","t":"AAS → 15-20 mg/kg/4-6 h; tóxica >150 mg/kg/día, letal 300-500 mg/kg."},
+   {"t":"Metamizol → no administrar a menores de 3 meses."}
+ ]},
+ {"paso":"Selecciona vía, dilución y ritmo de infusión correctos","detalle":"Comprueba concentración y velocidad: errores aquí causan toxicidad grave. Metamizol IV 20-40 mg/kg/6 h diluido en 50 mL de SSF en 15 min. Antibióticos por peso (amoxicilina 40-80 mg/kg/día en 3 dosis; ampicilina en meningitis neonatal 150-200 mg/kg/día)."},
+ {"paso":"Aplica precauciones críticas en fármacos de alto riesgo","sub":[
+   {"nivel":"critico","t":"Adrenalina en parada → dilución 1/10.000, 0,1 mL/kg; la 1/1.000 es 10 veces la dosis y puede ser letal."},
+   {"nivel":"critico","t":"Noradrenalina → siempre por vía central; la extravasación periférica produce necrosis."},
+   {"t":"Flumazenilo → contraindicado si coingesta de antidepresivos tricíclicos (riesgo de convulsiones). Midazolam IV >0,2 mg/kg/h: riesgo de depresión respiratoria."}
+ ]},
+ {"paso":"Trata la intoxicación por paracetamol según ventana temporal","sub":[
+   {"nivel":"emergente","t":"Ingesta tóxica → N-acetilcisteína IV en las primeras 16-24 h; pasada esa ventana la eficacia disminuye drásticamente."}
+ ]},
+ {"paso":"Revisa el cálculo con un segundo profesional","detalle":"Doble comprobación independiente de dosis, dilución y vía en fármacos de alto riesgo (inotrópicos, antiepilépticos IV, antídotos) antes de administrar."},
+ {"paso":"Decide destino","detalle":"Ingreso/UCIP: intoxicación por paracetamol con niveles tóxicos, shock séptico con inotrópicos, parada recuperada, estatus refractario o depresión respiratoria que precisa antídoto de repetición. Resto: alta con la pauta calculada por escrito y control."}
+], "ddx": []}

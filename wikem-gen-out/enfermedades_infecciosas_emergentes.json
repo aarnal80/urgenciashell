@@ -1,0 +1,19 @@
+{
+ "plan": [
+  {"paso":"Reconoce, aísla y monitoriza (primeros minutos)","detalle":"Coloca mascarilla al paciente y aplica precauciones de aislamiento precoz (aéreo/contacto/gotas según sospecha). Monitor de TA, FC, FR, SatO2 y temperatura; vía venosa. O2 si SatO2 <95%."},
+  {"paso":"Realiza anamnesis epidemiológica dirigida","detalle":"Pregunta por viajes, zonas endémicas, contacto con casos, picaduras de artrópodos, contacto sexual y fechas. Es la clave para orientar el diferencial entre arbovirosis, fiebres hemorrágicas y gripal."},
+  {"paso":"Orienta el síndrome y busca red flags","sub":[
+    {"nivel":"critico","t":"Diátesis hemorrágica, shock o fallo orgánico (Crimea-Congo, Ébola, Marburgo) → activa aislamiento de alto nivel, notifica de inmediato y prepara traslado a centro de referencia."},
+    {"nivel":"emergente","t":"Fiebre + clínica respiratoria con FR >30 o SatO2 <95% (gripal A H1N1) → trata como neumonía viral grave."},
+    {"t":"Fiebre + exantema/artralgias tras viaje (dengue, Zika, chikungunya) → vigila fase crítica del dengue."}
+  ]},
+  {"paso":"Trata según la entidad sospechada","detalle":"Antipirético SIEMPRE con paracetamol 1 g/6-8 h (evita AINE en arbovirosis por riesgo hemorrágico). Gripal A H1N1: oseltamivir 75 mg/12 h 5 días. Monkeypox: tecovirimat 600 mg/12 h 14 días (≥40 kg). Dengue grupo B: SSF/Ringer 5-10 mL/kg/h 1 h y desescalada, objetivo diuresis 0,5 mL/kg/h."},
+  {"paso":"Vigila la fase crítica del dengue","detalle":"Atento a la defervescencia (descenso a 37,5-38 °C con empeoramiento): hematocrito en ascenso, plaquetopenia, ascitis o derrame pleural marcan inicio de fase crítica y exigen reposición controlada."},
+  {"paso":"Declaración y coordinación obligatoria","detalle":"Notifica de forma urgente a Medicina Preventiva y Salud Pública (enfermedad de declaración obligatoria) y coordina con la unidad de referencia el manejo y traslado."},
+  {"paso":"Destino","sub":[
+    {"t":"Crimea-Congo/Ébola/fiebres hemorrágicas o dengue → ingreso; valorar UAAN/UCI o centro de referencia según gravedad."},
+    {"t":"Gripal con criterios de gravedad (CURB65, FR >30, SatO2 <95%, shock) → ingreso. Caso leve sin criterios → alta con tratamiento y vigilancia."}
+  ]}
+ ],
+ "ddx": []
+}

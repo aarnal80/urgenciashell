@@ -1,0 +1,11 @@
+{"plan": [
+ {"paso":"Reconoce y monitoriza (primeros minutos)","detalle":"Sospecha ante reacción anafilactoide 15-30 min tras alcohol en paciente con interdictor (disulfiram, carbimida) u otro fármaco implicado (cefalosporinas, metronidazol, etc.). Monitor de TA, FC, SatO2 y ECG; vía venosa; O2 si hipoxemia."},
+ {"paso":"Suspende el desencadenante e inicia tratamiento básico","detalle":"Retira el alcohol. Dexclorfeniramina 5 mg IM inicial (luego 6 mg/8 h VO). Metoclopramida 10 mg/8 h si vómitos."},
+ {"paso":"Trata la hipotensión de forma escalonada","sub":[
+   {"nivel":"emergente","t":"Hipotensión con mala perfusión → SSF 500 mL/h las primeras 2 h; añade Metilprednisolona 60 mg IV inicial."},
+   {"nivel":"critico","t":"Hipotensión refractaria a volumen → Dopamina 5 µg/kg/min IV en perfusión, titular hasta máx 20 µg/kg/min (objetivo PAS >90 mmHg o diuresis >35 mL/h)."}
+ ]},
+ {"paso":"Vigila complicaciones graves","detalle":"ECG seriado por arritmias; descarta SCA si dolor torácico intenso. Atento a depresión respiratoria, crisis convulsivas y síndrome confusional."},
+ {"paso":"Reevalúa la respuesta","detalle":"Control de TA, FC, SatO2 y diuresis. La gravedad es proporcional al alcohol y a la dosis del interdictor; el efecto del disulfiram puede durar hasta 15 días."},
+ {"paso":"Destino","detalle":"Ingreso si disnea, taquicardia, hipotensión, convulsiones o síndrome confusional. Caso leve y resuelto → observación prolongada antes del alta, con advertencia de abstinencia de alcohol."}
+], "ddx": []}

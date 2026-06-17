@@ -1,0 +1,17 @@
+{"plan": [
+ {"paso":"Valora estabilidad y solicita hemograma con frotis","detalle":"Constantes y signos de compromiso hemodinámico. Hemograma completo con recuento de neutrófilos y plaquetas, frotis, coagulación (TP/TTPa, fibrinógeno, dímero D) y bioquímica. Identifica la citopenia o alteración predominante."},
+ {"paso":"Identifica banderas rojas que exigen actuación inmediata","sub":[
+   {"nivel":"emergente","t":"Neutrófilos <500/µL con fiebre → hemocultivos y antibioterapia empírica IV precoz (piperacilina-tazobactam 4+0,5 g/6 h o cefepima 2 g/8 h)."},
+   {"nivel":"emergente","t":"PTT (trombopenia + anemia hemolítica microangiopática + clínica neurológica + fiebre) → aviso urgente a Hematología; NO transfundir plaquetas."},
+   {"nivel":"emergente","t":"Sangrado mayor en anticoagulado → reversión específica según fármaco e INR; aviso inmediato al hematólogo si ACOD."}
+ ]},
+ {"paso":"Trata según la alteración hematológica","sub":[
+   {"t":"Anemia ferropénica → sulfato ferroso 80 mg/24 h VO; hierro IV (sacarosa o carboximaltosa) si fracaso/contraindicación oral."},
+   {"t":"Anemia megaloblástica → cianocobalamina 1 mg/24 h IM (déficit B12) o ácido fólico 5 mg/24 h VO."},
+   {"t":"Trombopenia inmunitaria con sangrado → metilprednisolona 1-2 mg/kg/día IV (o dexametasona 40 mg/24 h x4 días); inmunoglobulinas 1 g/kg/24 h x2 días si hemorragia grave; ácido tranexámico 500 mg/6-8 h coadyuvante."},
+   {"t":"Neutropenia grave → filgrastim 300 µg/24 h SC; paracetamol 1 g/6 h IV para la fiebre."}
+ ]},
+ {"paso":"Trata las complicaciones críticas de la coagulación","detalle":"En CID: tratar la causa de base y dar soporte hemostático (plasma/plaquetas/fibrinógeno) según sangrado. En hemofílico con TCE: TC craneal obligatoria y observación mínima 24 h."},
+ {"paso":"Decide transfusión si procede","detalle":"Hematíes si Hb <8 g/dL o anemia aguda sintomática; plaquetas según umbral y contexto (recordar contraindicación en PTT/SHU). Extrae muestras para estudio antes de transfundir."},
+ {"paso":"Decide destino","detalle":"Anemia grave (<8 g/dL), trombopenia <20.000/µL o con sangrado, neutropenia grave, pancitopenia, PTT, hemofílico con TCE/herida grave o sangrado mayor en anticoagulado → ingreso. Eritrocitosis solo ingresa si hay complicaciones."}
+], "ddx": []}

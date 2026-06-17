@@ -1,0 +1,15 @@
+{"plan": [
+ {"paso":"Descontamina de inmediato (única medida eficaz precoz)","detalle":"Retira ropa y restos del producto con guantes de protección. Irrigación abundante con agua tibia ('regla de los 15') hasta neutralizar el pH cutáneo. No pierdas tiempo buscando neutralizantes. Identifica el agente (ácido, álcali, fluorhídrico, fenol, crómico)."},
+ {"paso":"Valora vía aérea, respiración y circulación","detalle":"Monitor de TA, FC, SatO2 y ECG; vía venosa. SSF 500 mL inicial, ajustando a PAM >70 mmHg, FC ≤120 lpm y diuresis 1 mL/kg/h. Recuerda que los síntomas respiratorios pueden tardar 12-14 h."},
+ {"paso":"Activa el tratamiento específico según el agente","sub":[
+   {"nivel":"critico","t":"Ácido fluorhídrico → gluconato cálcico gel 2,5% tópico hasta ceder dolor; calcemia urgente y monitor ECG por hipocalcemia mortal/FV; SC al 10% si no cede; baño/intraarterial según extensión."},
+   {"nivel":"emergente","t":"Afectación ocular → irrigación copiosa precoz, colirio anestésico para abrir párpados y valoración oftalmológica urgente."},
+   {"t":"Fenol, crómico, fósforo o amoníaco → alta toxicidad sistémica; valora intubación temprana en amoníaco (edema de glotis) y escarectomía precoz en crómico."}
+ ]},
+ {"paso":"Controla dolor y ansiedad","detalle":"Metamizol 2 g/6 h IV o dexketoprofeno; si dolor moderado-intenso, Tramadol 100 mg/6-8 h IV o Morfina titulada 2 mg/min (máx 10 mg/dosis). Midazolam 0,1 mg/kg IV para la ansiedad. NO uses succinilcolina si precisa relajación (riesgo de hiperpotasemia)."},
+ {"paso":"Medidas generales y soporte","detalle":"Pantoprazol 40 mg/24 h IV (úlcera de estrés), toxoide tetánico 0,5 mL SC. Corrige acidosis con bicarbonato 1 M si pH <7,20. Vigila carboxihemoglobina y nivel de conciencia (TC si focalidad)."},
+ {"paso":"Destino","sub":[
+   {"nivel":"critico","t":"SCQT ≥1% por producto peligroso o afectación digestiva/respiratoria → UCI o Unidad de Grandes Quemados / tercer nivel."},
+   {"t":"SCQT <1% sin zonas especiales → observación u hospital comarcal; con zonas especiales → tercer nivel. Ninguna quemadura química se da de alta directa."}
+ ]}
+], "ddx": []}
