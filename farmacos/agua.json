@@ -8,7 +8,7 @@
   {
    "id": "4.2",
    "titulo": "Posología y forma de administración",
-   "html": "[{\"seccion\":\"4.2\",\"titulo\":\"Posolog\\u00EDa y forma de administraci\\u00F3n\",\"orden\":3},{\"seccion\":\"4.2.1\",\"titulo\":\"Posolog\\u00EDa\",\"contenido\":\"<div>\\r\\n    <p style=\\\"margin:0pt\\\"><span style=\\\"font-family:Times New Roman; font-size:11pt\\\">Administrar de 2 a 3 cucharaditas (cada cucharadita contiene 5 ml) diluidas en una infusi&#243;n (tila, manzanilla, etc.) o en agua azucarada, 3 &#243; 4 veces al d&#237;a.</span></p>\\r\\n  </div>\",\"orden\":4},{\"seccion\":\"4.2.2\",\"titulo\":\"Forma de administraci\\u00F3n\",\"contenido\":\"<div>\\r\\n    <p style=\\\"margin:0pt\\\"><span style=\\\"font-family:Times New Roman; font-size:11pt\\\">AGUA DEL CARMEN puede administrase a&#241;adida en una infusi&#243;n, o con agua azucarada; tambi&#233;n, a&#241;adiendo directamente unas gotas del producto en un terr&#243;n de az&#250;car.</span></p>\\r\\n  </div>\",\"orden\":5}]",
+   "html": "<div>\r\n    <p style=\"margin:0pt\"><span style=\"font-family:Times New Roman; font-size:11pt\">Administrar de 2 a 3 cucharaditas (cada cucharadita contiene 5 ml) diluidas en una infusión (tila, manzanilla, etc.) o en agua azucarada, 3 ó 4 veces al día.</span></p>\r\n  </div>\n\n<div>\r\n    <p style=\"margin:0pt\"><span style=\"font-family:Times New Roman; font-size:11pt\">AGUA DEL CARMEN puede administrase añadida en una infusión, o con agua azucarada; también, añadiendo directamente unas gotas del producto en un terrón de azúcar.</span></p>\r\n  </div>",
    "vacia": false
   },
   {
@@ -20,13 +20,13 @@
   {
    "id": "4.5",
    "titulo": "Interacción con otros medicamentos y otras formas de interacción",
-   "html": "[{\"seccion\":\"4.5\",\"titulo\":\"Interacci\\u00F3n con otros medicamentos y otras formas de interacci\\u00F3n\",\"contenido\":\"<div>\\r\\n    <p style=\\\"margin:0pt\\\"><span style=\\\"font-family:Times New Roman; font-size:11pt\\\">La cantidad de alcohol en este medicamento puede alterar los efectos de otros medicamentos (ver secci&#243;n 4.5).</span></p>\\r\\n  </div>\",\"orden\":9}]",
+   "html": "<div>\r\n    <p style=\"margin:0pt\"><span style=\"font-family:Times New Roman; font-size:11pt\">La cantidad de alcohol en este medicamento puede alterar los efectos de otros medicamentos (ver sección 4.5).</span></p>\r\n  </div>",
    "vacia": false
   },
   {
    "id": "4.6",
    "titulo": "Fertilidad, embarazo y lactancia",
-   "html": "[{\"seccion\":\"4.6\",\"titulo\":\"Fertilidad, embarazo y lactancia\",\"contenido\":\"<div>\\r\\n    <p style=\\\"margin:0pt\\\"><span style=\\\"font-family:Times New Roman; font-size:11pt\\\">Como medida de precauci&#243;n, no debe administrarse AGUA DEL CARMEN durante el embarazo y la lactancia.</span></p>\\r\\n\\r\\n    <p style=\\\"margin:0pt\\\"><span style=\\\"font-family:Times New Roman; font-size:11pt\\\">&#xa0;</span></p>\\r\\n\\r\\n    <p style=\\\"margin:0pt\\\"><span style=\\\"font-family:Times New Roman; font-size:11pt\\\">El contenido en alcohol debe tenerse en cuenta en el caso de mujeres embarazadas o en periodo de lactancia (ver</span> <span style=\\\"font-family:Times New Roman; font-size:11pt\\\">secci&#243;n 4.5).</span></p>\\r\\n  </div>\",\"orden\":11}]",
+   "html": "<div>\r\n    <p style=\"margin:0pt\"><span style=\"font-family:Times New Roman; font-size:11pt\">Como medida de precaución, no debe administrarse AGUA DEL CARMEN durante el embarazo y la lactancia.</span></p>\r\n\r\n    <p style=\"margin:0pt\"><span style=\"font-family:Times New Roman; font-size:11pt\"> </span></p>\r\n\r\n    <p style=\"margin:0pt\"><span style=\"font-family:Times New Roman; font-size:11pt\">El contenido en alcohol debe tenerse en cuenta en el caso de mujeres embarazadas o en periodo de lactancia (ver</span> <span style=\"font-family:Times New Roman; font-size:11pt\">sección 4.5).</span></p>\r\n  </div>",
    "vacia": false
   },
   {

@@ -54,22 +54,18 @@ def fetch(url, tries=3):
             time.sleep(0.6)
 
 def find_med(drug_id):
-    """Busca un medicamento cuyo nombre empiece por el principio activo.
-    Prueba prefijos cada vez más cortos (p. ej. 'metamizol magnesico' -> 'metamizol')."""
-    words = drug_id.split("_")
-    queries = []
-    for n in range(len(words), 0, -1):
-        q = " ".join(words[:n])
-        if q not in queries: queries.append(q)
-    for q in queries:
-        url = "https://cima.aemps.es/cima/rest/medicamentos?nombre=" + urllib.parse.quote(q) + "&pagina=1"
-        try:
-            d = json.loads(fetch(url))
-        except Exception:
-            continue
-        for r in d.get("resultados", []):
-            if simple_norm(r.get("nombre", "")).startswith(q):
-                return r
+    """Busca un medicamento cuyo nombre empiece por el principio activo COMPLETO.
+    Match estricto por frase completa (sin caer a la primera palabra: evita cazar
+    sales equivocadas, p. ej. 'sulfato ferroso' -> 'SULFATO DE BARIO')."""
+    phrase = drug_id.replace("_", " ")
+    url = "https://cima.aemps.es/cima/rest/medicamentos?nombre=" + urllib.parse.quote(phrase) + "&pagina=1"
+    try:
+        d = json.loads(fetch(url))
+    except Exception:
+        return None
+    for r in d.get("resultados", []):
+        if simple_norm(r.get("nombre", "")).startswith(phrase):
+            return r
     return None
 
 def clean_html(h):
@@ -91,10 +87,17 @@ def scrape_one(drug_id):
     for sid, titulo in SECS:
         try:
             raw = fetch("https://cima.aemps.es/cima/rest/docSegmentado/contenido/1?nregistro=%s&seccion=%s" % (nreg, sid))
-            # el endpoint devuelve HTML directo (a veces envuelto en JSON {"contenido":...})
-            if raw.lstrip().startswith("{"):
-                try: raw = json.loads(raw).get("contenido", "")
-                except Exception: pass
+            # el endpoint puede devolver HTML directo, un objeto {"contenido":...}
+            # o un array [{"seccion":..,"contenido":..}]
+            ls = raw.lstrip()
+            if ls.startswith("[") or ls.startswith("{"):
+                try:
+                    o = json.loads(raw)
+                    if isinstance(o, list):
+                        o = next((it for it in o if it.get("seccion") == sid), o[0] if o else {})
+                    raw = (o or {}).get("contenido", "")
+                except Exception:
+                    pass
             html, vacia = clean_html(raw)
         except Exception:
             html, vacia = "", True
@@ -141,11 +144,19 @@ def main():
     have = set(os.path.splitext(f)[0] for f in os.listdir("farmacos"))
     alias = {k: v for k, v in alias.items() if v in have}
 
-    # actualizar drugs-index.js (fusionar)
-    dj = open("drugs-index.js", encoding="utf-8").read()
-    DRUGS = json.loads(dj[dj.index("{"):dj.rstrip().rstrip(";").rindex("}") + 1])
-    DRUGS.update(new_drugs)
-    DRUGS = {k: DRUGS[k] for k in sorted(DRUGS)}
+    # reconstruir drugs-index.js escaneando la carpeta (consistente con las fichas reales)
+    DRUGS = {}
+    for fn in sorted(os.listdir("farmacos")):
+        if not fn.endswith(".json"): continue
+        try:
+            fd = json.load(open("farmacos/" + fn, encoding="utf-8"))
+        except Exception:
+            continue
+        DRUGS[fd.get("drug_id", os.path.splitext(fn)[0])] = {
+            "presentacion": fd.get("presentacion", ""),
+            "nregistro": fd.get("nregistro", ""),
+            "fecha": fd.get("fecha_consulta", HOY),
+        }
     with open("drugs-index.js", "w", encoding="utf-8") as fo:
         fo.write("// Generado por build_drug_data.py / cima_scrape.py — no editar a mano.\n")
         fo.write("window.DRUGS = " + json.dumps(DRUGS, ensure_ascii=False, indent=2) + ";\n")
