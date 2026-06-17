@@ -1,0 +1,29 @@
+{"wikem_titulo": "Jaundice", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Colangitis aguda","clave":"tríada de Charcot (fiebre, ictericia, dolor en HCD); pentada con shock y confusión"},
+   {"dx":"Insuficiencia hepática fulminante","clave":"ictericia + encefalopatía + coagulopatía (act. protrombina <50%)","slug":"encefalopatia_hepatica_aguda"},
+   {"dx":"Hepatitis isquémica (hígado de shock)","clave":"transaminasas muy altas tras hipotensión/sepsis","slug":"shock"},
+   {"dx":"HELLP / hígado graso del embarazo","clave":"gestante con HTA, plaquetopenia, hemólisis y citólisis","slug":"estados_hipertensivos_del_embarazo_preeclampsia_y_eclampsia"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Coledocolitiasis","clave":"causa más frecuente de obstrucción no tumoral; cólico biliar y colestasis"},
+   {"dx":"Colecistitis aguda","clave":"Murphy positivo, fiebre, dolor en HCD"},
+   {"dx":"Hepatitis aguda (vírica/tóxica)","clave":"citólisis marcada; antecedente de fármacos (paracetamol, isoniazida) o virus"},
+   {"dx":"Anemia hemolítica","clave":"hiperbilirrubinemia indirecta, LDH alta, haptoglobina baja, reticulocitosis"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Neoplasia de cabeza de páncreas / colangiocarcinoma","clave":"ictericia progresiva indolora, vesícula de Courvoisier, síndrome constitucional"},
+   {"dx":"Síndrome de Gilbert","clave":"hiperbilirrubinemia indirecta leve con ayuno/estrés; resto normal"}
+ ]}
+], "plan": [
+ {"paso":"Valora gravedad y signos de alarma","detalle":"Constantes; busca fiebre con escalofríos (colangitis), encefalopatía, coagulopatía o sangrado. Test de embarazo en mujer fértil."},
+ {"paso":"Caracteriza el patrón bioquímico","detalle":"Bilirrubina total y fraccionada (directa vs indirecta), AST/ALT, fosfatasa alcalina y GGT, albúmina, coagulación. Diferencia colestasis de citólisis y patrón obstructivo de hepatocelular."},
+ {"paso":"Completa el estudio según el patrón","detalle":"Indirecto → hemograma, reticulocitos, LDH, haptoglobina (hemólisis). Directo → ecografía abdominal (de elección; vía biliar dilatada = obstrucción). Añade lipasa, panel de hepatitis y niveles tóxicos (paracetamol) si procede."},
+ {"paso":"Trata la urgencia obstructiva/séptica","sub":[
+   {"nivel":"critico","t":"Colangitis aguda → antibióticos IV de amplio espectro + drenaje biliar urgente (CPRE)"},
+   {"nivel":"emergente","t":"Coledocolitiasis sin colangitis → ingreso y programar CPRE"}
+ ]},
+ {"paso":"Maneja la causa hepatocelular","detalle":"Suspende fármacos hepatotóxicos; N-acetilcisteína si intoxicación por paracetamol. Soporte y vigilancia de coagulopatía/encefalopatía en hepatitis grave."},
+ {"paso":"Recuerda el manejo etiológico","detalle":"La hiperbilirrubinemia en sí no requiere tratamiento específico en el adulto; la actitud depende de la enfermedad de base."},
+ {"paso":"Decide destino","detalle":"Colangitis, insuficiencia hepatocelular, coagulopatía o sospecha de neoplasia obstructiva → ingreso. Ictericia indirecta leve (Gilbert) o causa benigna filiada → alta con estudio ambulatorio."}
+]}

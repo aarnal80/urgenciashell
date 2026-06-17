@@ -1,0 +1,31 @@
+{"wikem_titulo": "Pneumonia (main)", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Sepsis / shock séptico","clave":"hipotensión, taquicardia, lactato elevado, disfunción orgánica","slug":"sepsis"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hipoxia; paciente encamado","slug":"tromboembolia_pulmonar"},
+   {"dx":"Edema agudo de pulmón cardiogénico","clave":"sobrecarga de volumen, crepitantes bilaterales, B-líneas; sin fiebre","slug":"edema_agudo_de_pulmon_cardiogenico"},
+   {"dx":"SDRA","clave":"infiltrados bilaterales, hipoxemia grave PaO2/FiO2 baja no cardiogénica"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Neumonía aspirativa","clave":"deterioro de conciencia, disfagia, sondas; infiltrado en zonas declives"},
+   {"dx":"Atelectasia","clave":"hipoventilación, infiltrado sin fiebre franca, post-encamamiento/cirugía"},
+   {"dx":"Derrame pleural / empiema","clave":"matidez, hipoventilación; valorar toracocentesis","slug":"derrame_pleural"},
+   {"dx":"Infarto pulmonar","clave":"dolor pleurítico, hemoptisis, contexto de inmovilización"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Fiebre de origen no pulmonar (flebitis, ITU, infección de catéter)","clave":"buscar otros focos nosocomiales antes de asumir neumonía","slug":"sindrome_febril_sin_foco_en_pacientes_no_inmunodeprimidos"},
+   {"dx":"Reacción/fiebre medicamentosa","clave":"relación temporal con fármaco, sin infiltrado convincente"}
+ ]}
+], "plan": [
+ {"paso":"Confirma el diagnóstico (primeros minutos)","detalle":"Infiltrado nuevo tras >48 h de ingreso + fiebre + secreciones purulentas + leucocitosis. Distingue forma precoz (<5.º día) de tardía (≥5.º día, multirresistencia). Monitor, SatO2, TA, FC."},
+ {"paso":"Pruebas iniciales","detalle":"Radiografía de tórax, hemograma, bioquímica, gasometría, lactato. Hemocultivos y cultivo de secreciones respiratorias (mejor aspirado traqueal en intubados) ANTES del antibiótico, sin demorarlo."},
+ {"paso":"Estratifica el riesgo de multirresistencia","detalle":"Puntuación PES y factores de riesgo (forma tardía, antibioterapia previa, ventilación mecánica, colonización conocida) para decidir la amplitud de la cobertura empírica."},
+ {"paso":"Antibioterapia empírica precoz (<4 h)","sub":[
+   {"t":"Precoz sin factores de riesgo → ceftriaxona o ertapenem / amoxicilina-clavulánico."},
+   {"nivel":"emergente","t":"Tardía o riesgo de multirresistencia → antipseudomónico (pipe-tazo, cefepima o meropenem) ± aminoglucósido/quinolona; añadir vancomicina o linezolid si riesgo de SARM."}
+ ]},
+ {"paso":"Oxígeno, fluidos y soporte","sub":[
+   {"t":"O2 para SatO2 >92%; fluidoterapia si hipoperfusión."},
+   {"nivel":"critico","t":"Shock séptico → bundle de sepsis: cristaloides, noradrenalina, lactato seriado; valorar VM."}
+ ]},
+ {"paso":"Decide el destino","detalle":"Formas graves (VM, FiO2>35%, shock séptico, progresión multilobar, acidosis metabólica, CID) → UCI. Resto → ingreso en planta con reevaluación y desescalada según cultivos."}
+]}

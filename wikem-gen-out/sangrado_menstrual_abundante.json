@@ -1,0 +1,25 @@
+{"wikem_titulo": "Vaginal bleeding (main)", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Sangrado con inestabilidad hemodinámica","clave":"hipotensión, taquicardia, palidez; valorar choque hipovolémico y transfusión","slug":"shock"},
+   {"dx":"Complicación de gestación (aborto/ectópico)","clave":"test de embarazo positivo + sangrado/dolor; descartar SIEMPRE primero"},
+   {"dx":"Coagulopatía (von Willebrand, trombopenia)","clave":"menorragia desde la menarquia, otros sangrados, anticoagulación"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Malignidad endometrial o cervical","clave":"sangrado posmenopáusico o factores de riesgo; lesión visible en exploración"},
+   {"dx":"Anemia sintomática grave","clave":"Hb <8 g/dL, disnea, mareo; criterio de ingreso"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Causas estructurales (pólipo, mioma, adenomiosis)","clave":"sangrado cíclico abundante; ecografía transvaginal diagnóstica"},
+   {"dx":"Disfunción ovulatoria","clave":"ciclos irregulares; perimenarquia, perimenopausia, SOP, tiroidopatía"},
+   {"dx":"Iatrogénico (DIU, anticoagulantes, hormonas)","clave":"relación temporal con fármaco o dispositivo"}
+ ]}
+], "plan": [
+ {"paso":"Valora primero la estabilidad hemodinámica","sub":[
+   {"nivel":"critico","t":"Hipotensión/taquicardia → 2 vías gruesas, fluidoterapia, pruebas cruzadas y transfusión; valora taponamiento uterino/balón y avisa a Ginecología."}
+ ]},
+ {"paso":"Descarta embarazo","detalle":"Test de gestación (orina o suero) en TODA mujer en edad fértil con sangrado; si es positivo, sigue el algoritmo de hemorragia en gestación."},
+ {"paso":"Solicita analítica básica","detalle":"Hemograma (Hb/Hto), coagulación, grupo y pruebas cruzadas si posible transfusión. Considera estudio de coagulopatía (von Willebrand) si menorragia desde la menarquia."},
+ {"paso":"Controla el sangrado agudo","detalle":"Ácido tranexámico 1 g/8 h; AINE (ibuprofeno/ác. mefenámico) si no contraindicados. Sangrado intenso: estrógenos conjugados IV o gestágenos/ACO a dosis altas pautados."},
+ {"paso":"Explora e identifica la causa","detalle":"Especuloscopia y tacto; ecografía transvaginal. Sangrado posmenopáusico o sospecha de malignidad → biopsia endometrial / derivación preferente a Ginecología."},
+ {"paso":"Destino","detalle":"Ingreso si Hb <8 g/dL, inestabilidad o necesidad de transfusión. Alta con control del sangrado, ferroterapia oral y seguimiento ginecológico para tratar la causa."}
+]}

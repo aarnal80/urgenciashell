@@ -1,0 +1,32 @@
+{"wikem_titulo": "Undifferentiated lower gastrointestinal bleeding", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hemorragia digestiva alta enmascarada","clave":"hematoquecia por HDA masiva con tránsito rápido; urea/creatinina >100; descartar SIEMPRE primero","slug":"hemorragia_digestiva_alta"},
+   {"dx":"Fístula aortoentérica","clave":"antecedente de aneurisma o prótesis aórtica; mortalidad casi 100% sin tratar","slug":"sindrome_aortico_agudo"},
+   {"dx":"Isquemia mesentérica / colitis isquémica","clave":"dolor desproporcionado, acidosis con lactato; anciano con factores vasculares"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Enfermedad diverticular","clave":"causa más frecuente de HDB; rectorragia indolora abundante en anciano"},
+   {"dx":"Angiodisplasia / ectasia vascular","clave":"sangrado recurrente indoloro; anciano, valvulopatía aórtica, insuficiencia renal"},
+   {"dx":"Colitis (infecciosa o EII)","clave":"diarrea sanguinolenta con fiebre, dolor cólico; brote conocido","slug":"enfermedad_inflamatoria_intestinal"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Hemorroides / fisura anal","clave":"sangre roja que mancha el papel, al final de la defecación; dolor en fisura"},
+   {"dx":"Neoplasia colorrectal / pólipos","clave":"sangrado intermitente, anemia, cambio del ritmo intestinal; síndrome constitucional"},
+   {"dx":"Divertículo de Meckel","clave":"hemorragia indolora en joven; gammagrafía con pertecnetato"}
+ ]}
+], "plan": [
+ {"paso":"Estabiliza y descarta origen alto","detalle":"2 vías gruesas, monitor, cristaloides. Tacto rectal e inspección anal. Urea/creatinina >100 o aspirado/SNG con sangre → trata como HDA y haz endoscopia alta."},
+ {"paso":"Calcula el índice de shock y transfunde","sub":[
+   {"nivel":"critico","t":"Índice de shock >1 (inestable) o Hb <7 (umbral 8 si cardiopatía, objetivo 10) → concentrados de hematíes."},
+   {"t":"Corrige coagulación y plaquetas según fármacos y cifras."}
+ ]},
+ {"paso":"Dieta absoluta y pruebas","detalle":"NPO ante posible endoscopia/cirugía. CBC con Hb seriada, coagulación, pruebas cruzadas. ECG si riesgo coronario."},
+ {"paso":"Localiza el sangrado según estabilidad","sub":[
+   {"nivel":"emergente","t":"Inestable → angio-TC urgente; si extravasación → arteriografía + embolización por radiología intervencionista."},
+   {"t":"Estable → colonoscopia (diagnóstica y terapéutica de elección) en 12-24 h, tras preparación."}
+ ]},
+ {"paso":"Escala a cirugía si fracasa","sub":[
+   {"nivel":"critico","t":"Hemorragia masiva persistente con estudio negativo o fallo de endoscopia/embolización → laparotomía exploradora."}
+ ]},
+ {"paso":"Decide destino","detalle":"Ingreso si inestabilidad, transfusión, comorbilidad o anciano. Alta solo en sangrado leve autolimitado de causa anal/banal con seguimiento."}
+]}

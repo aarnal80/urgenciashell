@@ -1,0 +1,43 @@
+{
+  "wikem_titulo": "Thyroid storm",
+  "ddx": [
+    {
+      "nivel": "critico",
+      "grupo": "Crítico · amenaza vital",
+      "items": [
+        {"dx": "Sepsis / shock séptico", "clave": "Fiebre + taquicardia + alteración mental; foco infeccioso, hipotensión, lactato elevado", "slug": "sepsis"},
+        {"dx": "Feocromocitoma / crisis catecolaminérgica", "clave": "HTA paroxística, cefalea, sudoración, palpitaciones; tiroides normal", "slug": null},
+        {"dx": "Intoxicación simpaticomimética (cocaína, anfetaminas)", "clave": "Agitación, midriasis, HTA; consumo reciente, sin bocio ni oftalmopatía", "slug": "intoxicacion_aguda_por_cocaina"}
+      ]
+    },
+    {
+      "nivel": "emergente",
+      "grupo": "Emergente",
+      "items": [
+        {"dx": "Síndrome neuroléptico maligno / hipertermia maligna", "clave": "Rigidez, hipertermia, CK alta; antipsicóticos o anestesia reciente", "slug": null},
+        {"dx": "Cetoacidosis diabética", "clave": "Hiperglucemia, acidosis con anion gap, cetonuria, deshidratación", "slug": "cetoacidosis_diabetica"},
+        {"dx": "Abstinencia alcohólica / delirium tremens", "clave": "Temblor, taquicardia, agitación, alucinaciones; cese de alcohol", "slug": null}
+      ]
+    },
+    {
+      "nivel": "no_emergente",
+      "grupo": "No emergente",
+      "items": [
+        {"dx": "Tirotoxicosis no complicada", "clave": "Hipermetabolismo SIN disfunción orgánica ni fiebre alta (escala Burch-Wartofsky baja)", "slug": null},
+        {"dx": "Crisis de ansiedad / pánico", "clave": "Taquicardia y temblor autolimitados, sin fiebre ni alteración de conciencia mantenida", "slug": "crisis_de_ansiedad"}
+      ]
+    }
+  ],
+  "plan": [
+    {"paso": "Tratar de forma empírica ante la sospecha, sin esperar a la analítica tiroidea", "detalle": "Diagnóstico clínico (escala de Burch-Wartofsky ≥45). Avisar a UCI: el ingreso es obligatorio."},
+    {"paso": "Estabilizar ABC y monitorización continua", "detalle": "O2, vía venosa, ECG, telemetría, sondaje. Sueroterapia SSF alternando con glucosado al 5% por las pérdidas y el hipercatabolismo."},
+    {"paso": "Bloquear los efectos adrenérgicos con betabloqueante", "sub": [
+      {"t": "Sin insuficiencia cardíaca → propranolol 1-2 mg IV lento, repetir cada 15 min hasta FC <100, luego 60-80 mg VO/4-6 h"},
+      {"t": "Insuficiencia cardíaca o broncoespasmo → esmolol 250-500 mcg/kg IV en bolo, luego 50-100 mcg/kg/min en perfusión", "nivel": "emergente"}
+    ]},
+    {"paso": "Inhibir la síntesis hormonal con antitiroideo", "detalle": "Propiltiouracilo 500-1000 mg VO/SNG de carga, luego 250 mg/4 h (de elección, bloquea conversión T4→T3); alternativa tiamazol/metimazol 20-25 mg/6 h."},
+    {"paso": "Bloquear la liberación hormonal con yodo, SIEMPRE ≥1 h tras el antitiroideo", "detalle": "Solución de yoduro potásico (Lugol/SSKI) 5 gotas (250 mg)/6 h VO. Nunca antes del tiamazol (efecto Jod-Basedow). Si alergia al yodo: litio 300 mg/8 h."},
+    {"paso": "Cubrir la insuficiencia suprarrenal relativa con corticoide", "detalle": "Hidrocortisona 300 mg IV en bolo y 100 mg/8 h; o dexametasona 4 mg/6 h (también frenan la conversión T4→T3)."},
+    {"paso": "Control de hipertermia y tratar el desencadenante", "detalle": "Paracetamol y medidas físicas (evitar AAS, desplaza T4 de proteínas). Buscar y tratar infección, IAM, CAD, suspensión del antitiroideo, cirugía o sobrecarga de yodo."}
+  ]
+}

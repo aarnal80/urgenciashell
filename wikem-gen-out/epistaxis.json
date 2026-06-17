@@ -1,0 +1,28 @@
+{"wikem_titulo": "Epistaxis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Epistaxis posterior con shock hipovolémico","clave":"sangrado abundante hacia orofaringe, hipotensión y taquicardia; no cede con taponamiento anterior","slug":"shock"},
+   {"dx":"Coagulopatía / paciente anticoagulado","clave":"sangrado persistente o difuso; antecedente de anticoagulantes o diátesis hemorrágica","slug":"estudio_de_la_coagulacion"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Emergencia hipertensiva asociada","clave":"epistaxis con TA muy elevada y sintomatología; dificulta el control del sangrado","slug":"emergencia_hipertensiva"},
+   {"dx":"Traumatismo facial / nasal","clave":"antecedente de golpe; valorar fractura y descartar hematoma septal","slug":"traumatismos_maxilofaciales"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Epistaxis anterior idiopática (área de Kiesselbach)","clave":"la más frecuente; punto sangrante anterior accesible, autolimitada"},
+   {"dx":"Tumor nasosinusal / angiofibroma juvenil","clave":"epistaxis recidivante unilateral, obstrucción nasal; varón joven en el angiofibroma"},
+   {"dx":"Malformación arteriovenosa / telangiectasias (Rendu-Osler)","clave":"epistaxis de repetición, telangiectasias mucocutáneas, historia familiar"}
+ ]}
+]
+, "plan": [
+ {"paso":"Valora primero el estado hemodinámico","detalle":"Constantes, signos de hipovolemia. Si inestable: dos vías de grueso calibre, cristaloides, cruzar sangre. Hemograma y coagulación si sangrado intenso o anticoagulado."},
+ {"paso":"Aplica medidas iniciales de control","detalle":"Paciente sentado e inclinado hacia delante; sonarse para retirar coágulos; compresión digital firme de alas nasales 10-15 min. Vasoconstrictor tópico (oximetazolina/adrenalina) ± anestésico."},
+ {"paso":"Localiza el punto sangrante","detalle":"Rinoscopia anterior con espéculo en orientación superior-inferior y buena iluminación. Diferencia anterior (Kiesselbach) de posterior (sangrado hacia faringe)."},
+ {"paso":"Escala el tratamiento según localización","sub":[
+   {"t":"Punto anterior visible → cauterización con nitrato de plata (no bilateral en septum por riesgo de perforación)"},
+   {"t":"No cede o no se ve foco → taponamiento anterior (gasa orillada o esponja expansible); cobertura antibiótica si se mantiene >48 h"},
+   {"nivel":"critico","t":"Epistaxis posterior o fracaso del taponamiento anterior → taponamiento posterior/neumático y valoración ORL urgente"}
+ ]},
+ {"paso":"Corrige factores precipitantes","detalle":"Controla la TA si está elevada; revierte/ajusta anticoagulación según fármaco y gravedad; considera ácido tranexámico tópico. Transfunde si Hb <9 g/dL con repercusión."},
+ {"paso":"Decide destino","detalle":"Alta tras hemostasia estable en epistaxis anterior controlada, con instrucciones y revisión para retirada del taponamiento. Ingreso/ORL en epistaxis posterior, inestabilidad, coagulopatía no controlada o sospecha tumoral."}
+]
+}

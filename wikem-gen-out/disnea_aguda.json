@@ -1,0 +1,37 @@
+{"wikem_titulo": "Acute dyspnea", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Neumotórax a tensión","clave":"hipoventilación unilateral, timpanismo, desviación traqueal, hipotensión; descompresión inmediata","slug":"neumotorax_espontaneo"},
+   {"dx":"Anafilaxia / angioedema","clave":"estridor, urticaria, hipotensión tras alérgeno; adrenalina IM","slug":"urticaria_y_anafilaxia"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hipoxia; factores de riesgo de TVP","slug":"tromboembolia_pulmonar"},
+   {"dx":"Taponamiento cardíaco","clave":"hipotensión, ingurgitación yugular, tonos apagados, pulso paradójico","slug":"taponamiento_cardiaco"},
+   {"dx":"Edema agudo de pulmón cardiogénico","clave":"crepitantes bilaterales, ortopnea, B-líneas en POCUS","slug":"edema_agudo_de_pulmon_cardiogenico"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Crisis asmática","clave":"sibilancias, espiración alargada, antecedente de asma","slug":"ataque_de_asma"},
+   {"dx":"EPOC agudizada","clave":"fumador, aumento de esputo/purulencia, hipercapnia","slug":"epoc_agudizada"},
+   {"dx":"Neumonía","clave":"fiebre, tos productiva, crepitantes focales, infiltrado","slug":"neumonia_adquirida_en_la_comunidad"},
+   {"dx":"Cetoacidosis diabética / acidosis metabólica","clave":"taquipnea de Kussmaul, hiperglucemia, anion gap","slug":"cetoacidosis_diabetica"},
+   {"dx":"Intoxicación por CO / salicilatos","clave":"contexto, cefalea, acúfenos; SatO2 normal engañosa en CO"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Derrame pleural","clave":"matidez, hipoventilación basal, semiología de líquido","slug":"derrame_pleural"},
+   {"dx":"Anemia","clave":"palidez, disnea de esfuerzo progresiva, Hb baja"},
+   {"dx":"Crisis de ansiedad / hiperventilación","clave":"parestesias, alcalosis respiratoria; diagnóstico de exclusión","slug":"crisis_de_ansiedad"}
+ ]}
+], "plan": [
+ {"paso":"Evalúa la vía aérea y la gravedad (primeros minutos)","detalle":"Monitor, SatO2, FR, TA, FC. Busca red flags: estridor, tiraje, cianosis, bajo nivel de conciencia, FR>30 o <10."},
+ {"paso":"Oxigenoterapia titulada","detalle":"O2 para SatO2 >94% (objetivo 88-92% si EPOC/retenedor de CO2). Gafas, mascarilla, alto flujo o VMNI según respuesta."},
+ {"paso":"Pruebas de primera línea a pie de cama","detalle":"ECG, gasometría arterial, radiografía de tórax y POCUS (pulmón/cardíaco/VCI). Analítica con hemograma, dímero-D si sospecha TEP."},
+ {"paso":"Trata las amenazas vitales inmediatas","sub":[
+   {"nivel":"critico","t":"Neumotórax a tensión → descompresión con aguja y tubo de tórax."},
+   {"nivel":"critico","t":"Anafilaxia → adrenalina 0,5 mg IM (1:1000) en cara anterolateral del muslo."},
+   {"nivel":"critico","t":"Taponamiento → pericardiocentesis ecoguiada."},
+   {"nivel":"critico","t":"TEP de alto riesgo → fibrinólisis sistémica si inestable."}
+ ]},
+ {"paso":"Trata la causa más probable","detalle":"EAP: nitroglicerina + VMNI + furosemida. Asma/EPOC: salbutamol+ipratropio nebulizado y corticoide sistémico. Neumonía: antibiótico precoz + fluidos. TEP: anticoagulación."},
+ {"paso":"Reevalúa y decide soporte ventilatorio","sub":[
+   {"nivel":"emergente","t":"EAP o EPOC con acidosis respiratoria → VMNI (BiPAP) precoz."},
+   {"nivel":"critico","t":"Fatiga, deterioro de conciencia o hipoxia refractaria → intubación y ventilación mecánica."}
+ ]},
+ {"paso":"Destino","detalle":"UCI si inestabilidad, VMNI con fracaso o IR inminente. Planta si requiere O2/tratamiento IV. Alta si causa leve resuelta y SatO2 estable."}
+]}

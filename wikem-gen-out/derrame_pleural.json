@@ -1,0 +1,30 @@
+{"wikem_titulo": "Pleural effusion", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Empiema / derrame paraneumónico complicado","clave":"fiebre, pus en toracocentesis; pH <7,20, glucosa <40; precisa tubo de tórax","slug":"neumonia_adquirida_en_la_comunidad"},
+   {"dx":"Hemotórax","clave":"hto líquido/suero >0,5; antecedente traumático o disección; valorar toracotomía","slug":"sindrome_aortico_agudo"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hipoxia; derrame pequeño en 30% de TEP","slug":"tromboembolia_pulmonar"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Insuficiencia cardíaca (trasudado)","clave":"bilateral, predominio derecho; cardiomegalia, ortopnea; responde a diuréticos","slug":"insuficiencia_cardiaca"},
+   {"dx":"Neoplasia pleuropulmonar","clave":"exudado, frecuentemente hemático; síndrome constitucional; recidiva tras evacuación"},
+   {"dx":"Rotura esofágica (Boerhaave)","clave":"vómitos, dolor torácico, enfisema subcutáneo; derrame izquierdo con amilasa alta","slug":"patologia_esofagica_aguda"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Cirrosis / síndrome nefrótico","clave":"trasudado por hipoalbuminemia; ascitis, edemas; hidrotórax hepático derecho","slug":"ascitis"},
+   {"dx":"Pancreatitis","clave":"exudado izquierdo, amilasa pleural elevada; dolor epigástrico irradiado","slug":"pancreatitis_aguda"},
+   {"dx":"Conectivopatía (LES, AR)","clave":"exudado linfocitario; manifestaciones sistémicas; ANA/FR"}
+ ]}
+], "plan": [
+ {"paso":"Confirma y valora repercusión","detalle":"Rx tórax PA/lateral (o en decúbito lateral); SatO2, FR, TA. Ecografía torácica para cuantificar y guiar punción."},
+ {"paso":"Trata la insuficiencia respiratoria","sub":[
+   {"nivel":"critico","t":"SatO2 <90% o disnea de reposo → toracocentesis evacuadora urgente; máx 1.000-1.500 mL para evitar edema de reexpansión."},
+   {"t":"Interrumpe la extracción si aparece tos, dolor torácico o más disnea durante el procedimiento."}
+ ]},
+ {"paso":"Caracteriza el líquido (toracocentesis diagnóstica)","detalle":"Criterios de Light: proteínas, LDH, glucosa, pH, recuento, citología, ADA y cultivos. Distingue trasudado de exudado."},
+ {"paso":"Identifica los que requieren drenaje","sub":[
+   {"nivel":"emergente","t":"Empiema o paraneumónico complicado (pH <7,20, glucosa <40, pus) → tubo de toracostomía + antibioterapia."},
+   {"nivel":"emergente","t":"Hemotórax >300 mL → tubo de tórax; toracotomía si débito >200 mL/h x3 h o >1.500 mL inicial."}
+ ]},
+ {"paso":"Trata la causa de base","detalle":"IC → diuréticos (resuelve >75% en 2-3 días). Cirrosis/nefrótico → manejo etiológico. Neoplásico → valorar pleurodesis."},
+ {"paso":"Decide destino","detalle":"Ingreso para todo derrame nuevo de tamaño no mínimo. Alta solo en trasudado pequeño conocido y controlado."}
+]}

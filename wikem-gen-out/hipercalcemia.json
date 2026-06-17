@@ -1,0 +1,25 @@
+{"wikem_titulo": "Hypercalcemia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Crisis hipercalcémica","clave":"Ca > 14-15 mg/dL; estupor/coma, deshidratación grave, fallo renal y cardíaco"},
+   {"dx":"Hipercalcemia maligna","clave":"neoplasia conocida (pulmón, mama, mieloma, linfoma); síndrome constitucional, instauración rápida"},
+   {"dx":"Toxicidad digitálica potenciada","clave":"paciente digitalizado; la hipercalcemia agrava arritmias por digoxina","slug":"intoxicacion_aguda_por_digitalicos"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Hiperparatiroidismo primario","clave":"causa ambulatoria más frecuente; PTH alta o inapropiadamente normal; suele crónica/leve"},
+   {"dx":"Intoxicación por vitamina D / síndrome leche-alcalinos","clave":"ingesta de suplementos o antiácidos; PTH suprimida"},
+   {"dx":"Enfermedad granulomatosa (sarcoidosis)","clave":"adenopatías, afectación pulmonar; calcitriol elevado"},
+   {"dx":"Diuréticos tiazídicos / litio","clave":"fármaco causal en la anamnesis; hipercalcemia leve reversible"},
+   {"dx":"Tirotoxicosis","clave":"clínica de hipertiroidismo; recambio óseo aumentado","slug":"crisis_tirotoxica"}
+ ]}
+], "plan": [
+ {"paso":"Confirma la hipercalcemia","detalle":"Calcio total corregido por albúmina (o calcio iónico). Solicita PTH, fósforo, función renal, iones y ECG."},
+ {"paso":"Valora gravedad y repercusión","detalle":"Estima volemia y nivel de conciencia. ECG: QT corto, bradiarritmias, bloqueos. Sospecha crisis si Ca > 14 mg/dL o sintomática."},
+ {"paso":"Hidrata de forma intensiva","detalle":"Suero salino fisiológico 0,9% 200-300 mL/h ajustado a diuresis y función cardíaca; corrige la depleción de volumen (pilar inicial del tratamiento)."},
+ {"paso":"Aumenta la calciuria con precaución","detalle":"Furosemida SOLO tras restaurar volemia y si hay riesgo de sobrecarga; vigila hipopotasemia/hipomagnesemia."},
+ {"paso":"Inhibe la resorción ósea","sub":[
+   {"nivel":"emergente","t":"Hipercalcemia grave/maligna → calcitonina 4 UI/kg SC/IM cada 12 h (efecto rápido) + bifosfonato IV (ácido zoledrónico 4 mg o pamidronato 60-90 mg, efecto en 2-4 días)."},
+   {"t":"Hipercalcemia por linfoma/granulomatosis/vitamina D → corticoides (prednisona 40-60 mg/día)."}
+ ]},
+ {"paso":"Considera diálisis","detalle":"Si insuficiencia renal o cardíaca que impide hidratar con seguridad, o hipercalcemia refractaria potencialmente mortal."},
+ {"paso":"Destino","detalle":"Sin cambios ECG → planta. Con cambios ECG → telemetría/monitorización. Crisis hipercalcémica → UCI. Trata la causa de base."}
+]}

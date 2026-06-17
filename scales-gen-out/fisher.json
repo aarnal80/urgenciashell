@@ -1,0 +1,15 @@
+{
+ "id": "fisher",
+ "nombre": "Fisher modificada",
+ "nombre_largo": "Escala de Fisher modificada",
+ "para": "Riesgo de vasoespasmo según la cantidad de sangre en la TC en la hemorragia subaracnoidea.",
+ "tipo": "clasificacion",
+ "clases": [
+  {"label": "Grado 0", "descripcion": "Sin hemorragia subaracnoidea ni hemorragia intraventricular.", "detalle": "Riesgo de vasoespasmo mínimo."},
+  {"label": "Grado 1", "descripcion": "HSA fina, sin hemorragia intraventricular.", "detalle": "Riesgo de vasoespasmo bajo."},
+  {"label": "Grado 2", "descripcion": "HSA fina con hemorragia intraventricular bilateral.", "detalle": "Riesgo de vasoespasmo moderado."},
+  {"label": "Grado 3", "descripcion": "HSA gruesa (>1 mm), sin hemorragia intraventricular.", "detalle": "Riesgo de vasoespasmo alto."},
+  {"label": "Grado 4", "descripcion": "HSA gruesa con hemorragia intraventricular.", "detalle": "Riesgo de vasoespasmo muy alto."}
+ ],
+ "nota": "El riesgo de vasoespasmo aumenta de forma creciente con el grado."
+}

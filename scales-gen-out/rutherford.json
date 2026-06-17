@@ -1,0 +1,30 @@
+{
+ "id": "rutherford",
+ "nombre": "Rutherford",
+ "nombre_largo": "Clasificación de Rutherford de la isquemia arterial aguda de extremidad",
+ "para": "Clasificar clínicamente la isquemia arterial aguda de la extremidad y orientar la actitud terapéutica.",
+ "tipo": "clasificacion",
+ "clases": [
+  {
+   "label": "I - Viable",
+   "descripcion": "Sin amenaza inmediata; sin déficit sensitivo ni motor; señal Doppler audible.",
+   "detalle": "No hay amenaza inmediata para la extremidad. Permite estudio y tratamiento no urgente."
+  },
+  {
+   "label": "IIa - Amenaza marginal",
+   "descripcion": "Recuperable si se trata pronto; déficit sensitivo mínimo, sin déficit motor.",
+   "detalle": "Recuperable con tratamiento precoz. Revascularización pronta (no emergente inmediata)."
+  },
+  {
+   "label": "IIb - Amenaza inmediata",
+   "descripcion": "Déficit sensitivo más allá de los dedos, dolor en reposo y debilidad muscular leve-moderada.",
+   "detalle": "Recuperable solo con revascularización inmediata. Urgencia quirúrgica."
+  },
+  {
+   "label": "III - Irreversible",
+   "descripcion": "Pérdida tisular mayor o daño nervioso permanente; anestesia, parálisis y rigidez muscular.",
+   "detalle": "Daño irreversible. Amputación; la revascularización no recupera la extremidad."
+  }
+ ],
+ "nota": "Clasificación de Rutherford para isquemia arterial aguda de las extremidades."
+}

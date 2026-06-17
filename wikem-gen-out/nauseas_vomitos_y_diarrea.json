@@ -1,0 +1,32 @@
+{"wikem_titulo": "Nausea and vomiting", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome coronario agudo / IAM","clave":"vómitos con dolor torácico o ECG alterado; sospecha en diabéticos y ancianos","slug":"sindrome_coronario_agudo"},
+   {"dx":"Cetoacidosis diabética","clave":"vómitos, dolor abdominal, polidipsia; hiperglucemia, acidosis y cetonas","slug":"cetoacidosis_diabetica"},
+   {"dx":"Hemorragia intracraneal / HTIC","clave":"vómitos sin náusea previa con cefalea progresiva o focalidad neurológica","slug":"hemorragia_subaracnoidea_espontanea"},
+   {"dx":"Isquemia mesentérica","clave":"dolor desproporcionado, acidosis con lactato; FA o arteriopatía"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Obstrucción intestinal","clave":"vómitos, distensión, dolor cólico y cierre intestinal; niveles hidroaéreos","slug":"obstruccion_intestinal"},
+   {"dx":"GEA inflamatoria","clave":"diarrea con fiebre, sangre y moco; riesgo de bacteriemia y sepsis"},
+   {"dx":"Colitis por C. difficile","clave":"diarrea grave tras antibiótico reciente; dolor abdominal, fiebre; riesgo de megacolon"},
+   {"dx":"Intoxicación medicamentosa (digoxina, AAS, paracetamol)","clave":"vómitos con fármaco sospechoso; pide niveles","slug":"intoxicacion_aguda_por_digitalicos"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"GEA no inflamatoria (vírica/enterotoxina)","clave":"diarrea acuosa sin fiebre ni sangre; autolimitada, manejo sintomático"},
+   {"dx":"Diarrea del viajero","clave":"deposiciones acuosas tras viaje reciente a zona endémica"},
+   {"dx":"Vómitos del embarazo / hiperémesis","clave":"mujer fértil con amenorrea; test de gestación positivo"},
+   {"dx":"Vértigo periférico / laberintitis","clave":"náuseas con giro de objetos y nistagmo; sin focalidad","slug":"vertigo"}
+ ]}
+], "plan": [
+ {"paso":"Identifica causas graves de entrada","sub":[
+   {"nivel":"critico","t":"Dolor torácico/ECG alterado, focalidad neurológica con cefalea, dolor abdominal desproporcionado o hiperglucemia con acidosis → estudio dirigido urgente (ECG, TC craneal, glucemia/cetonas, lactato)."}
+ ]},
+ {"paso":"Valora el estado de hidratación y constantes","detalle":"TA, FC, ortostatismo, diuresis y signos de hipoperfusión. Descarta shock hipovolémico (cólera, deshidratación grave)."},
+ {"paso":"Repón líquidos y electrolitos","sub":[
+   {"t":"Formas leves → rehidratación oral (solución hiposmolar OMS 245 mOsm/L)."},
+   {"nivel":"emergente","t":"Deshidratación moderada-grave o intolerancia oral → sueroterapia IV (Ringer/SSF) y corrige K+ y otros iones."}
+ ]},
+ {"paso":"Trata los síntomas","detalle":"Antieméticos: metoclopramida u ondansetrón 4 mg IV. Antitérmico/analgésico (paracetamol, metamizol). Loperamida o racecadotrilo solo en diarrea no inflamatoria, NO si fiebre o sangre."},
+ {"paso":"Indica antibiótico solo cuando proceda","detalle":"GEA inflamatoria grave/sepsis → ciprofloxacino o azitromicina. C. difficile → vancomicina oral o fidaxomicina (retira el antibiótico desencadenante)."},
+ {"paso":"Solicita pruebas según sospecha y decide destino","detalle":"Hemograma, bioquímica, test de embarazo, niveles de tóxicos si procede. Alta si no hay causa emergente y tolera líquidos; ingreso si deshidratación grave, vómitos incoercibles o causa grave."}
+]}

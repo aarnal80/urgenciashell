@@ -1,0 +1,33 @@
+{"wikem_titulo": "Seizure", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Estatus epiléptico","clave":"crisis ≥5 min o sin recuperación entre crisis; emergencia tiempo-dependiente"},
+   {"dx":"Hemorragia/lesión intracraneal","clave":"primera crisis con focalidad, cefalea o trauma; TC craneal","slug":"ictus"},
+   {"dx":"Meningoencefalitis","clave":"fiebre, rigidez de nuca, alteración mental","slug":"sindrome_meningeo_absceso_cerebral_absceso_epidural_espinal_y_encefalitis"},
+   {"dx":"Eclampsia","clave":"embarazo >20 sem, HTA, proteinuria; tratar con sulfato de magnesio","slug":"estados_hipertensivos_del_embarazo_preeclampsia_y_eclampsia"},
+   {"dx":"Hipoglucemia","clave":"glucemia capilar baja; revierte con glucosa","slug":"hipoglucemia"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Trastornos hidroelectrolíticos","clave":"hipo/hipernatremia, hipocalcemia, hipomagnesemia; corregir","slug":"hiponatremia"},
+   {"dx":"Abstinencia alcohólica","clave":"etilista, crisis a las 7-48 h del cese; descartar otras causas","slug":"sindrome_de_abstinencia_alcoholica"},
+   {"dx":"Intoxicación (cocaína, ATC, INH, litio, teofilina)","clave":"contexto tóxico; crisis refractarias a benzodiacepinas","slug":"intoxicacion_aguda_por_cocaina"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Crisis en epiléptico conocido / mala adherencia","clave":"abandono o niveles bajos de anticomicial"},
+   {"dx":"Crisis psicógena no epiléptica","clave":"movimientos asincrónicos, ojos cerrados resistentes, sin acidosis postcrítica"},
+   {"dx":"Síncope convulsivo","clave":"pródromos, recuperación rápida sin confusión postcrítica","slug":"sincope"}
+ ]}
+], "plan": [
+ {"paso":"Protege al paciente y la vía aérea","detalle":"Decúbito lateral, O2, evita lesiones. Monitor, vía venosa, glucemia capilar inmediata."},
+ {"paso":"Corrige causas reversibles inmediatas","detalle":"Glucosa si hipoglucemia (con tiamina 100 mg IV en etilista). Sulfato de magnesio si eclampsia."},
+ {"paso":"Trata la crisis activa con benzodiacepinas (1ª línea)","sub":[
+   {"nivel":"critico","t":"crisis ≥5 min → diazepam 10 mg IV (o midazolam 10 mg IM si no hay vía); repetir una vez si persiste"}
+ ]},
+ {"paso":"Si persiste, segunda línea anticomicial","sub":[
+   {"nivel":"critico","t":"estatus establecido → levetiracetam 60 mg/kg, valproato 40 mg/kg o fenitoína 20 mg/kg IV"}
+ ]},
+ {"paso":"Estatus refractario","sub":[
+   {"nivel":"critico","t":"sin respuesta a 1ª y 2ª línea → intubación, sedación (midazolam/propofol/tiopental) e ingreso en UCI"}
+ ]},
+ {"paso":"Estudio etiológico tras estabilizar","detalle":"Analítica con iones, función renal/hepática, niveles de fármacos, tóxicos. TC craneal y punción lumbar si primera crisis con focalidad, fiebre o inmunodepresión."},
+ {"paso":"Decide destino","detalle":"Epiléptico conocido recuperado → alta con ajuste de tratamiento. Primera crisis, estatus o causa aguda no resuelta → ingreso/observación y Neurología."}
+]}

@@ -1,0 +1,31 @@
+{"wikem_titulo": "Pneumonia (main)", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Sepsis / shock séptico","clave":"hipotensión, taquicardia, lactato elevado, disfunción orgánica","slug":"sepsis"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hipoxia; factores de riesgo de TVP","slug":"tromboembolia_pulmonar"},
+   {"dx":"Edema agudo de pulmón cardiogénico","clave":"crepitantes bilaterales, ortopnea, B-líneas; sin fiebre","slug":"edema_agudo_de_pulmon_cardiogenico"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"EPOC agudizada","clave":"fumador, sibilancias, aumento de esputo sin infiltrado claro","slug":"epoc_agudizada"},
+   {"dx":"Neumonía aspirativa","clave":"deterioro de conciencia, disfagia, infiltrado en zonas declives"},
+   {"dx":"Derrame pleural / empiema","clave":"matidez, hipoventilación, derrame >1 cm en decúbito lateral","slug":"derrame_pleural"},
+   {"dx":"COVID-19 / gripe","clave":"contexto epidemiológico, infiltrados bilaterales, mialgias","slug":"enfermedad_por_el_sars_cov_2_covid_19_y_variantes_relacionad"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Bronquitis aguda","clave":"tos sin infiltrado radiológico, sin hipoxia"},
+   {"dx":"Neoplasia pulmonar","clave":"síndrome constitucional, infiltrado/atelectasia persistente"},
+   {"dx":"Tuberculosis","clave":"tos crónica, sudoración nocturna, infiltrado apical/cavitado"}
+ ]}
+], "plan": [
+ {"paso":"Confirma el diagnóstico y valora la gravedad (primeros minutos)","detalle":"Tríada fiebre + clínica respiratoria + infiltrado. Monitor, SatO2, TA, FC. Calcula CURB-65/PSI y aplica criterios de UCI (mayores: VM, vasopresores)."},
+ {"paso":"Pruebas iniciales","detalle":"Radiografía de tórax (o ecografía pulmonar), hemograma, bioquímica con BUN/glucosa, lactato si sospecha de sepsis. Hemocultivos, antígenos urinarios y cultivo de esputo solo si NAC grave/ingreso en UCI."},
+ {"paso":"Oxígeno y fluidos","detalle":"O2 para SatO2 >92%. Fluidoterapia con cristaloides si hipotensión/hipoperfusión; reevaluar respuesta."},
+ {"paso":"Antibioterapia empírica precoz (<4 h)","sub":[
+   {"t":"Ambulatorio → amoxicilina-clavulánico o levofloxacino/moxifloxacino."},
+   {"t":"Ingreso en planta → betalactámico (ceftriaxona/cefotaxima) + macrólido, o monoterapia con fluoroquinolona respiratoria."},
+   {"nivel":"emergente","t":"UCI → betalactámico + macrólido o fluoroquinolona; añadir cobertura de Pseudomonas (pipe-tazo/cefepima) o SARM (vancomicina/linezolid) si factores de riesgo."}
+ ]},
+ {"paso":"Trata la sepsis si la hay","sub":[
+   {"nivel":"critico","t":"Shock séptico → bundle de sepsis: antibiótico inmediato, cristaloides 30 mL/kg, noradrenalina si hipotensión persistente; lactato seriado."}
+ ]},
+ {"paso":"Decide el destino","detalle":"PSI I-II / CURB-65 0-1 → alta con antibiótico oral y seguimiento 48-72 h. PSI III-IV / CURB-65 2 → planta. PSI V o criterios mayores/≥3 menores → UCI."}
+]}

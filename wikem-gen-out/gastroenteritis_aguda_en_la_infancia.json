@@ -1,0 +1,30 @@
+{"wikem_titulo": "Acute gastroenteritis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Sepsis","clave":"aspecto séptico, mal estado general, relleno capilar lento; fiebre y deshidratación","slug":"sepsis"},
+   {"dx":"Cetoacidosis diabética","clave":"poliuria-polidipsia, respiración de Kussmaul, dolor abdominal, glucemia alta","slug":"cetoacidosis_diabetica"},
+   {"dx":"Meningitis","clave":"vómitos con cefalea/irritabilidad, signos meníngeos, fontanela abombada","slug":"sindrome_meningeo_absceso_cerebral_absceso_epidural_espinal_y_encefalitis"},
+   {"dx":"Isquemia/invaginación intestinal","clave":"dolor cólico intenso, heces \"en jalea de grosella\", masa abdominal, letargia"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Apendicitis","clave":"dolor migratorio a FID, defensa, fiebre; vómitos tras el dolor"},
+   {"dx":"Síndrome hemolítico-urémico","clave":"diarrea sanguinolenta previa + palidez, oligoanuria, ictericia"},
+   {"dx":"Obstrucción intestinal / íleo","clave":"vómitos biliosos, distensión, ausencia de deposición/gas","slug":"obstruccion_intestinal"},
+   {"dx":"Torsión testicular/ovárica","clave":"dolor agudo escrotal o anexial con vómitos reflejos"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"GEA vírica (rotavirus)","clave":"diarrea + vómitos ± fiebre, autolimitada; 6-24 meses, buen estado entre tomas"},
+   {"dx":"Infección urinaria","clave":"fiebre con vómitos sin foco digestivo claro; tira de orina","slug":"infecciones_urinarias_bajas_cistitis_y_uretritis"},
+   {"dx":"GEA bacteriana invasiva","clave":"fiebre alta, diarrea sanguinolenta, viaje a zona de riesgo"}
+ ]}
+], "plan": [
+ {"paso":"Valora el estado general y el grado de deshidratación","detalle":"TEP, relleno capilar, turgencia, mucosas, diuresis, peso. Estima % de pérdida: leve (<5%), moderada (5-10%), grave (>10%)."},
+ {"paso":"Rehidrata según gravedad","sub":[
+   {"t":"Leve-moderada → rehidratación oral con SRO hipotónica, ~30-50 mL/kg en 4 h + reposición de pérdidas; de elección."},
+   {"nivel":"critico","t":"Shock/deshidratación grave → bolo IV de SSF 20 mL/kg, repetir según respuesta; monitoriza."},
+   {"t":"Vómitos que impiden la SRO → ondansetrón 0,15 mg/kg y reintentar SRO a pequeños sorbos."}
+ ]},
+ {"paso":"Limita las pruebas complementarias","detalle":"GEA típica no requiere analítica. Considera iones/gasometría si deshidratación grave o IV; coprocultivo solo si fiebre alta, sangre en heces, viaje, inmunodepresión o >10 deposiciones/24 h."},
+ {"paso":"Reintroduce la alimentación precozmente","detalle":"Dieta normal para la edad tras rehidratar (no dietas restrictivas); mantén lactancia materna. Evita zumos azucarados."},
+ {"paso":"Reserva el antibiótico para casos seleccionados","detalle":"Solo en sospecha de bacteriemia, <3 meses, GEA bacteriana invasiva o inmunodeprimidos (p. ej. azitromicina/cefotaxima). Evita antidiarreicos."},
+ {"paso":"Destino","detalle":"La mayoría se va de alta tras tolerancia oral, con SRO y signos de alarma. Ingreso si shock, deshidratación grave, vómitos incoercibles, sospecha quirúrgica o SHU."}
+]}

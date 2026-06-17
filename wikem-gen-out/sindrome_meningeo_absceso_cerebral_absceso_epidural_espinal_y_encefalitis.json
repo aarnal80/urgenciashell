@@ -1,0 +1,31 @@
+{"wikem_titulo": "Meningitis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hemorragia subaracnoidea","clave":"cefalea súbita 'en trueno', rigidez de nuca; TC/PL con xantocromía","slug":"hemorragia_subaracnoidea_espontanea"},
+   {"dx":"Encefalitis (herpética)","clave":"fiebre + alteración mental/crisis/focalidad; iniciar aciclovir empírico"},
+   {"dx":"Absceso cerebral","clave":"fiebre, cefalea, focalidad; lesión con captación en anillo en TC/RM"},
+   {"dx":"Absceso epidural espinal","clave":"dolor raquídeo, fiebre, déficit neurológico; RM urgente"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Ictus","clave":"focalidad de instauración súbita, sin fiebre prominente","slug":"ictus"},
+   {"dx":"Hematoma subdural","clave":"antecedente traumático, anciano/anticoagulado, curso fluctuante"},
+   {"dx":"Meningitis vírica","clave":"buen estado general, LCR con predominio linfocitario, glucosa normal"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Meningitis carcinomatosa","clave":"neoplasia conocida, curso subagudo; citología de LCR"},
+   {"dx":"Meningitis farmacológica","clave":"relación temporal con AINE, IGIV o TMP-SMX; resuelve al retirar"}
+ ]}
+], "plan": [
+ {"paso":"Estabiliza y valora gravedad","detalle":"ABC, constantes, glucemia, monitor, vía venosa. Identifica sepsis/shock y signos meníngeos o de focalidad."},
+ {"paso":"Extrae cultivos y NO retrases el antibiótico","detalle":"Hemocultivos antes del antibiótico, pero la primera dosis no debe demorarse por pruebas de imagen ni PL."},
+ {"paso":"Inicia antibioterapia empírica precoz","sub":[
+   {"nivel":"critico","t":"sospecha de meningitis bacteriana → cefotaxima/ceftriaxona + vancomicina IV; añadir ampicilina si >50 años, embarazo o inmunodepresión (Listeria)"},
+   {"nivel":"critico","t":"sospecha de encefalitis → añadir aciclovir IV empírico"}
+ ]},
+ {"paso":"Añade dexametasona si meningitis bacteriana","detalle":"Dexametasona 10 mg IV antes o con la primera dosis de antibiótico (beneficio en neumococo)."},
+ {"paso":"Decide TC antes de la punción lumbar","sub":[
+   {"t":"focalidad, crisis, inmunodepresión, papiledema o bajo nivel de conciencia → TC craneal previa a la PL"},
+   {"t":"sin datos de riesgo → punción lumbar directa (citobioquímica, Gram, cultivo, PCR vírica)"}
+ ]},
+ {"paso":"Solicita RM urgente si sospecha de absceso espinal","detalle":"Dolor raquídeo con fiebre y déficit → RM y valoración neuroquirúrgica para drenaje."},
+ {"paso":"Ingresa según gravedad","detalle":"Meningitis bacteriana o encefalitis sospechada → UCI/cama monitorizada. Meningitis vírica con buen estado y tolerancia oral → posible alta con seguimiento."}
+]}

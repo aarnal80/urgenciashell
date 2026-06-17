@@ -1,0 +1,28 @@
+{"wikem_titulo": "Hypertensive emergency", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Disección aórtica","clave":"dolor desgarrante a espalda, asimetría de pulsos/TA; exige bajar PAS rápido a 100-120 mmHg","slug":"sindrome_aortico_agudo"},
+   {"dx":"Ictus isquémico / hemorragia intracraneal","clave":"focalidad, cefalea, alteración de conciencia; precaución extrema al bajar TA","slug":"ictus"},
+   {"dx":"Síndrome coronario agudo","clave":"dolor torácico, cambios ECG, troponina; nitroglicerina de elección","slug":"sindrome_coronario_agudo"},
+   {"dx":"Edema agudo de pulmón","clave":"disnea, crepitantes, ortopnea; nitroglicerina + diurético","slug":"edema_agudo_de_pulmon_cardiogenico"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Eclampsia / preeclampsia grave","clave":"gestante, proteinuria, cefalea, convulsiones; labetalol/hidralazina + sulfato de Mg","slug":"estados_hipertensivos_del_embarazo_preeclampsia_y_eclampsia"},
+   {"dx":"Lesión renal aguda / GN aguda","clave":"oliguria, hematuria, creatinina elevada","slug":"lesion_renal_aguda"},
+   {"dx":"Crisis catecolaminérgica (feocromocitoma, cocaína)","clave":"crisis paroxística, sudoración, taquicardia; fentolamina, NO betabloqueo aislado","slug":"intoxicacion_aguda_por_cocaina"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Urgencia hipertensiva / HTA asintomática","clave":"cifras altas SIN daño de órgano; tratamiento oral gradual, no IV","slug":"urgencia_hipertensiva"}
+ ]}
+], "plan": [
+ {"paso":"Confirma daño agudo de órgano diana","detalle":"Monitor ECG, TA, SatO2, vía venosa. Exploración neurológica, fondo de ojo, auscultación. La HTA grave SIN daño de órgano NO es emergencia (no usar IV)."},
+ {"paso":"Solicita estudio dirigido al órgano afectado","detalle":"ECG, troponina, hemograma con frotis (esquistocitos), función renal, sistemático de orina, Rx tórax (mediastino ancho). TC craneal / eco / angio-TC según clínica."},
+ {"paso":"Inicia antihipertensivo IV titulable","detalle":"Objetivo general: reducir PAM 20-25% en la 1ª hora, luego a 160/100 en 2-6 h. Labetalol bolo 20 mg (doblar c/10 min, máx 300) o perfusión; nicardipino/urapidil. Nitroglicerina si SCA o EAP."},
+ {"paso":"Ajusta el fármaco al escenario clínico","sub":[
+   {"nivel":"critico","t":"Disección aórtica → betabloqueo (esmolol/labetalol) PRIMERO, luego vasodilatador; PAS objetivo 100-120 mmHg."},
+   {"nivel":"critico","t":"Crisis catecolaminérgica → fentolamina o urapidil; NUNCA betabloqueo solo."},
+   {"nivel":"emergente","t":"Ictus → no bajar TA salvo umbrales específicos; descenso muy cauto."},
+   {"nivel":"emergente","t":"Eclampsia → labetalol o hidralazina + sulfato de magnesio."}
+ ]},
+ {"paso":"Evita el descenso excesivo","detalle":"Reduce de forma controlada para no provocar hipoperfusión cerebral/coronaria/renal. Nitroprusiato solo si fallan otros (riesgo de toxicidad por cianuro)."},
+ {"paso":"Destino","detalle":"Todo paciente con emergencia hipertensiva ingresa: UCI o área monitorizada para titulación IV y vigilancia hemodinámica estrecha."}
+]}

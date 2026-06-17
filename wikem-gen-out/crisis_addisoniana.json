@@ -1,0 +1,23 @@
+{"wikem_titulo": "Adrenal crisis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Shock séptico","clave":"foco infeccioso, fiebre, lactato alto; es el dx erróneo más frecuente y a la vez el precipitante más común","slug":"sepsis"},
+   {"dx":"Shock hipovolémico","clave":"pérdidas evidentes, responde a volumen (la crisis adrenal NO responde sin corticoides)","slug":"shock"},
+   {"dx":"Coma mixedematoso","clave":"hipotermia, bradicardia, hiponatremia, antecedente de hipotiroidismo","slug":"crisis_mixedematosa"},
+   {"dx":"Cetoacidosis diabética","clave":"hiperglucemia, cetonuria, acidosis con anion gap; aquí hay hipoglucemia","slug":"cetoacidosis_diabetica"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Crisis tirotóxica","clave":"fiebre, taquicardia, agitación, bocio; hipertensión más que hipotensión","slug":"crisis_tirotoxica"},
+   {"dx":"Abdomen agudo","clave":"dolor con Blumberg que la crisis puede remedar; vigila si no cede con corticoides","slug":"dolor_abdominal_agudo"}
+ ]}
+], "plan": [
+ {"paso":"Reconoce y trata sin esperar confirmación","detalle":"Sospecha ante hipotensión refractaria + hiponatremia + hiperpotasemia + hipoglucemia. Monitor, 2 vías, glucemia capilar. Extrae cortisol y ACTH basales SIN demorar el tratamiento."},
+ {"paso":"Administra glucocorticoide URGENTE","detalle":"Hidrocortisona 100 mg IV en bolo, después 50 mg/6 h IV o 200 mg/24 h en perfusión. Si el diagnóstico no está hecho, usa dexametasona 4 mg IV (no interfiere con el test de ACTH)."},
+ {"paso":"Expande volumen y corrige glucemia","detalle":"SSF 0,9% 1.000 mL en la primera hora; alterna con glucosado 5% si hipoglucemia. Reevalúa según respuesta y comorbilidad cardíaca."},
+ {"paso":"Corrige las alteraciones electrolíticas","detalle":"La hiperpotasemia y la hiponatremia suelen mejorar con hidrocortisona y sueroterapia. Trata la hiperpotasemia si hay cambios en el ECG."},
+ {"paso":"Busca y trata el factor precipitante","sub":[
+   {"nivel":"critico","t":"Sepsis/infección → hemocultivos, sistemático de orina, Rx tórax, lactato y antibioterapia empírica precoz."},
+   {"nivel":"emergente","t":"Sospecha de hemorragia adrenal bilateral (caída de Hto + dolor + CID) → TC abdominal y soporte."}
+ ]},
+ {"paso":"No precisas mineralocorticoide en agudo","detalle":"A dosis altas la hidrocortisona ya tiene efecto mineralocorticoide. Añade fludrocortisona oral solo al bajar a dosis de mantenimiento."},
+ {"paso":"Destino","detalle":"UCI si inestabilidad hemodinámica o alteración del nivel de conciencia; cama monitorizada en casos leves. Interconsulta a Endocrinología y educación en dosis de estrés antes del alta."}
+]}

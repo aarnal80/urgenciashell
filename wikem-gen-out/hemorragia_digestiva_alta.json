@@ -1,0 +1,29 @@
+{"wikem_titulo": "Undifferentiated upper gastrointestinal bleeding", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Varices esofagogástricas","clave":"hepatópata conocido, estigmas de hipertensión portal; sangrado masivo, mayor mortalidad","slug":"encefalopatia_hepatica_aguda"},
+   {"dx":"Fístula aortoentérica","clave":"antecedente de aneurisma/prótesis aórtica; hemorragia 'centinela' previa a la masiva","slug":"sindrome_aortico_agudo"},
+   {"dx":"Rotura esofágica (Boerhaave)","clave":"vómitos, dolor torácico, enfisema subcutáneo; no es sangrado típico pero amenaza vital","slug":"patologia_esofagica_aguda"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Úlcera péptica gastroduodenal","clave":"causa más frecuente; epigastralgia, AINE/H. pylori; sangrado activo en endoscopia"},
+   {"dx":"Desgarro de Mallory-Weiss","clave":"hematemesis tras vómitos/arcadas repetidas; suele autolimitarse"},
+   {"dx":"Lesión de Dieulafoy / angiodisplasia","clave":"sangrado arterial brusco sin úlcera; diagnóstico endoscópico"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Gastritis / esofagitis erosiva","clave":"sangrado leve, posos de café; AINE, alcohol o reflujo","slug":"patologia_esofagica_aguda"},
+   {"dx":"Neoplasia gastroesofágica","clave":"síndrome constitucional, anemia crónica; sangrado intermitente"},
+   {"dx":"Falsa HDA (epistaxis deglutida, hemoptisis, dieta)","clave":"sangre de ORL/respiratorio o hierro/bismuto/remolacha; no hay foco digestivo","slug":"hemoptisis"}
+ ]}
+], "plan": [
+ {"paso":"Estabiliza (ABC)","detalle":"2 vías de grueso calibre, monitor, O2 si precisa. Cristaloides (SSF/Ringer). Cruza y reserva. Hb seriada, coagulación, urea/creatinina, función hepática."},
+ {"paso":"Transfunde y corrige coagulopatía","sub":[
+   {"nivel":"critico","t":"Inestabilidad o Hb <7 (umbral 8 si cardiopatía) → concentrados de hematíes; objetivo restrictivo Hb 7-9."},
+   {"t":"Revierte anticoagulación: vitamina K, CCP; idarucizumab si dabigatrán. Plaquetas si <50.000 y sangrado activo."}
+ ]},
+ {"paso":"Inicia tratamiento farmacológico precoz","detalle":"IBP IV en bolo + perfusión (omeprazol/esomeprazol). Procinético (eritromicina o metoclopramida) para vaciar el estómago antes de endoscopia."},
+ {"paso":"Cubre la sospecha de origen varicoso","sub":[
+   {"nivel":"emergente","t":"Hepatópata → vasoactivo (terlipresina o somatostatina) + ceftriaxona profiláctica precoz."}
+ ]},
+ {"paso":"Estratifica el riesgo y programa endoscopia","detalle":"Glasgow-Blatchford: ≤1 → bajo riesgo, valorar ambulatorio. Endoscopia digestiva alta diagnóstica y terapéutica en <24 h (urgente <12 h si varices o inestabilidad)."},
+ {"paso":"Decide destino","detalle":"Ingreso (UCI si inestabilidad o hemorragia varicosa). Alta selectiva solo en bajo riesgo con endoscopia ambulatoria asegurada."}
+]}

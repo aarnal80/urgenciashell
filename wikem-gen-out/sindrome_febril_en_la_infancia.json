@@ -1,0 +1,32 @@
+{"wikem_titulo": "Pediatric fever of uncertain source", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Sepsis / bacteriemia oculta","clave":"TEP alterado, mal estado general, relleno capilar lento; lactante febril","slug":"sepsis"},
+   {"dx":"Meningitis bacteriana","clave":"irritabilidad no consolable, fontanela abombada, petequias, signos meníngeos","slug":"sindrome_meningeo_absceso_cerebral_absceso_epidural_espinal_y_encefalitis"},
+   {"dx":"Herpes neonatal (VHS)","clave":"<21-28 días, vesículas, convulsiones, hipertransaminasemia o letargia"},
+   {"dx":"Síndrome inflamatorio multisistémico (MIS-C)","clave":"fiebre persistente, exantema, conjuntivitis, shock; antecedente COVID"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Infección urinaria / pielonefritis","clave":"causa frecuente de fiebre sin foco en lactante; tira/sedimento de orina","slug":"pielonefritis_aguda"},
+   {"dx":"Neumonía","clave":"taquipnea, tiraje, hipoxia, crepitantes; fiebre alta","slug":"neumonia_adquirida_en_la_comunidad"},
+   {"dx":"Enfermedad de Kawasaki","clave":"fiebre ≥5 días + conjuntivitis, labios fisurados, exantema, adenopatía, edema de manos"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Infección respiratoria de vías altas vírica","clave":"causa más frecuente; catarro, buen estado general, autolimitada"},
+   {"dx":"Otitis media aguda","clave":"otalgia, irritabilidad, tímpano abombado/hiperémico"},
+   {"dx":"Crisis febril","clave":"convulsión breve generalizada 6 m-5 a con fiebre; recuperación neurológica completa"}
+ ]}
+], "plan": [
+ {"paso":"Evalúa con el Triángulo de Evaluación Pediátrica (primeros segundos)","detalle":"Apariencia, trabajo respiratorio y circulación cutánea. TEP alterado a cualquier edad = activar manejo de paciente grave."},
+ {"paso":"Estratifica el riesgo por edad","sub":[
+   {"nivel":"critico","t":"<21-28 días con cualquier fiebre → estudio séptico completo (hemo, orina, LCR) e ingreso con antibiótico empírico."},
+   {"nivel":"emergente","t":"22 días-3 meses → analítica con PCT/PCR, hemo y urocultivo; escalas (YIOS); valorar LCR según riesgo."},
+   {"t":">3 meses con buen estado y foco claro → tratamiento del foco; reevaluación."}
+ ]},
+ {"paso":"Solicita pruebas dirigidas","detalle":"Tira/sedimento y urocultivo (siempre en lactante con fiebre sin foco), hemograma, PCR/PCT, hemocultivo SIEMPRE antes del antibiótico; Rx tórax si clínica respiratoria; LCR según edad/sospecha."},
+ {"paso":"Inicia antibioterapia empírica precoz si infección bacteriana grave","sub":[
+   {"nivel":"critico","t":"Sepsis/meningitis → cefotaxima; añade ampicilina en <1 mes (Listeria) y aciclovir si sospecha de VHS."},
+   {"t":"Neonato → ampicilina + gentamicina/cefotaxima."}
+ ]},
+ {"paso":"Trata la fiebre por confort","detalle":"Paracetamol 15 mg/kg/6 h o ibuprofeno 10 mg/kg/8 h (>6 meses). Objetivo: bienestar, no normotermia."},
+ {"paso":"Destino","detalle":"Ingreso: <1-3 meses de riesgo, mal estado, sospecha de IBI o mala tolerancia oral. Alta con signos de alarma y reevaluación si buen estado y bajo riesgo."}
+]}

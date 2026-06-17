@@ -1,0 +1,30 @@
+{"wikem_titulo": "Hypomagnesemia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Torsades de pointes / arritmia ventricular","clave":"QT largo, síncope arrítmico; Mg IV es el tratamiento de elección","slug":"fibrilacion_y_fluter_auriculares_arritmias_auriculoventricul"},
+   {"dx":"Intoxicación digitálica","clave":"paciente digitalizado; la hipomagnesemia potencia la toxicidad","slug":"intoxicacion_aguda_por_digitalicos"},
+   {"dx":"Crisis convulsivas / tetania","clave":"Mg <1,2 mg/dL, hiperexcitabilidad neuromuscular grave","slug":"crisis_epilepticas"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Hipopotasemia o hipocalcemia refractarias","clave":"no se corrigen sin reponer antes el magnesio","slug":"hipopotasemia"},
+   {"dx":"Pérdidas digestivas (diarrea)","clave":"diarrea prolongada, malabsorción","slug":"nauseas_vomitos_y_diarrea"},
+   {"dx":"Pancreatitis aguda","clave":"dolor abdominal, amilasa/lipasa altas; déficit asociado","slug":"pancreatitis_aguda"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Alcoholismo / malnutrición","clave":"contexto enólico, déficit nutricional; muy frecuente","slug":"sindrome_de_abstinencia_alcoholica"},
+   {"dx":"Pérdida renal por fármacos (diuréticos)","clave":"furosemida, tiazidas, IBP de uso crónico","slug":"hipopotasemia"},
+   {"dx":"Diabetes mellitus tipo 2 / post-CAD","clave":"diuresis osmótica, déficit acumulado","slug":"cetoacidosis_diabetica"}
+ ]}
+], "plan": [
+ {"paso":"Sospecha y confirma","detalle":"Mide el magnesio (Mg <1,8 mg/dL) ante hipopotasemia/hipocalcemia refractarias, torsades o intoxicación digitálica resistente. No está en el perfil básico, pídelo expresamente."},
+ {"paso":"Realiza ECG","detalle":"Busca QT largo, ensanchamiento del QRS y ondas U: marcadores de riesgo arrítmico. Monitoriza si hay clínica cardíaca."},
+ {"paso":"Trata la arritmia grave de inmediato","sub":[
+   {"nivel":"critico","t":"Torsades/FV/TV → sulfato de magnesio 2 g IV en bolo (1-2 min en parada), repetible."}
+ ]},
+ {"paso":"Repón según gravedad y síntomas","sub":[
+   {"nivel":"emergente","t":"Mg <1,2 o sintomático → sulfato de magnesio 4 g IV en 2 h (2 g IV en 1 h si 1,2-1,7 sintomático)."},
+   {"t":"Asintomático con tolerancia oral → magnesio oral (óxido de magnesio 400 mg o lactato de magnesio)."}
+ ]},
+ {"paso":"Corrige los déficits asociados","detalle":"Repón a la vez potasio, calcio y fósforo; comprueba la función renal antes de dosis altas de Mg para evitar hipermagnesemia."},
+ {"paso":"Trata la causa","detalle":"Suspende o ajusta diuréticos/IBP, trata la diarrea, apoya en el alcoholismo y la malnutrición."},
+ {"paso":"Destino","detalle":"Ingreso/monitorización si inestabilidad hemodinámica, arritmia o clínica grave; alta con suplemento oral y control si déficit leve y causa corregible."}
+]}

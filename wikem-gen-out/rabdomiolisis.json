@@ -1,0 +1,28 @@
+{"wikem_titulo": "Rhabdomyolysis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hiperpotasemia grave","clave":"complicación precoz letal por liberación de K muscular; ondas T picudas, QRS ancho","slug":"hiperpotasemia"},
+   {"dx":"Lesión renal aguda mioglobinúrica","clave":"orina oscura, oliguria; riesgo alto con CK > 5.000-30.000 U/L","slug":"lesion_renal_aguda"},
+   {"dx":"Síndrome compartimental","clave":"dolor desproporcionado, tensión muscular; presión > 35 mmHg requiere fasciotomía"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Intoxicación por monóxido de carbono","clave":"rabdomiólisis sin causa aparente; cefalea, ambiente con combustión, varios afectados"},
+   {"dx":"Crisis convulsivas prolongadas","clave":"actividad muscular sostenida; estado poscrítico","slug":"crisis_epilepticas"},
+   {"dx":"Sepsis","clave":"fiebre/foco infeccioso con hipotensión y mialgias","slug":"sepsis"},
+   {"dx":"Coagulación intravascular diseminada","clave":"trombopenia, hipofibrinogenemia, sangrado; forma grave"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Ejercicio intenso / inmovilización prolongada","clave":"esfuerzo extremo o compresión por coma; causa común y leve"},
+   {"dx":"Fármacos/tóxicos (estatinas, alcohol, cocaína)","clave":"anamnesis farmacológica/tóxica; mialgias y CK elevada"}
+ ]}
+], "plan": [
+ {"paso":"Confirma el diagnóstico","detalle":"CK > 5 veces el límite normal (típicamente > 1.000 U/L) con MB < 6%. Tira reactiva de orina positiva para sangre sin hematíes al microscopio (mioglobinuria)."},
+ {"paso":"Solicita analítica completa y ECG","detalle":"Iones (K, fósforo, calcio), función renal, gasometría, hemograma, coagulación, LDH y ácido úrico. ECG para detectar hiperpotasemia. CK seriada (pico a 24-72 h)."},
+ {"paso":"Inicia hidratación intensiva precoz","detalle":"Suero salino fisiológico 0,9% a alto ritmo (1-2 L/h inicial, ajustar a 200-300 mL/h de diuresis); la demora aumenta el riesgo de LRA."},
+ {"paso":"Trata las complicaciones tiempo-dependientes","sub":[
+   {"nivel":"critico","t":"Hiperpotasemia con cambios ECG → gluconato cálcico IV + insulina-glucosa + salbutamol; valora diálisis."},
+   {"nivel":"emergente","t":"Sospecha de síndrome compartimental → mide presión compartimental; > 35 mmHg → fasciotomía urgente."}
+ ]},
+ {"paso":"Considera alcalinización y diuréticos","detalle":"En casos seleccionados con diuresis adecuada: bicarbonato sódico para alcalinizar la orina; manitol/diuréticos solo si no hay oligoanuria. Evita sobrecarga."},
+ {"paso":"Maneja el dolor y retira el desencadenante","detalle":"Analgesia (paracetamol, metamizol); suspende fármacos miotóxicos. Si no hay causa, descarta intoxicación por CO."},
+ {"paso":"Destino","detalle":"Ingreso si CK > 5.000 U/L, LRA, alteraciones electrolíticas o CK en ascenso. Alta posible en formas leves (CK < 5.000, función renal y K normales) con hidratación oral y control."}
+]}

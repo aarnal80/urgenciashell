@@ -1,0 +1,31 @@
+{"wikem_titulo": "Abdominal pain", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Aneurisma de aorta abdominal roto","clave":"dolor abdominal/lumbar brusco, masa pulsátil, hipotensión; anciano con factores vasculares","slug":"sindrome_aortico_agudo"},
+   {"dx":"Perforación de víscera hueca","clave":"abdomen 'en tabla', dolor súbito; neumoperitoneo en Rx"},
+   {"dx":"Isquemia mesentérica","clave":"dolor desproporcionado a la exploración; acidosis con lactato; FA o arteriopatía"},
+   {"dx":"Embarazo ectópico roto","clave":"mujer fértil, amenorrea, dolor + shock; test de gestación positivo, líquido libre"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Apendicitis aguda","clave":"dolor periumbilical que migra a FID, Blumberg, febrícula, anorexia"},
+   {"dx":"Obstrucción intestinal","clave":"dolor cólico, distensión, vómitos, cierre intestinal; niveles hidroaéreos","slug":"obstruccion_intestinal"},
+   {"dx":"Colecistitis / colangitis","clave":"dolor en HCD, Murphy; fiebre e ictericia (tríada de Charcot) en colangitis"},
+   {"dx":"Pancreatitis aguda","clave":"dolor epigástrico irradiado en cinturón, vómitos; amilasa/lipasa elevadas","slug":"pancreatitis_aguda"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Cólico nefrítico","clave":"dolor lumbar cólico irradiado a genitales, inquietud; hematuria","slug":"colico_nefritico"},
+   {"dx":"Gastroenteritis aguda","clave":"dolor difuso cólico con diarrea y vómitos; exploración blanda","slug":"nauseas_vomitos_y_diarrea"},
+   {"dx":"Diverticulitis","clave":"dolor en FII, febrícula; defensa localizada en anciano"},
+   {"dx":"Dolor abdominal inespecífico","clave":"causa más frecuente (40%); exploración benigna que mejora con observación"}
+ ]}
+], "plan": [
+ {"paso":"Evalúa la estabilidad y descarta abdomen catastrófico","sub":[
+   {"nivel":"critico","t":"Taquicardia/hipotensión, abdomen en tabla o palidez sin sangrado externo → reanimación, ecografía a pie de cama (FAST, aorta) y cirugía urgente."}
+ ]},
+ {"paso":"Pide test de embarazo y constantes","detalle":"Test de gestación OBLIGATORIO en toda mujer en edad fértil. Monitoriza TA, FC, Tª; descarta hemorragia, sepsis y perforación por las constantes."},
+ {"paso":"Administra analgesia precoz","detalle":"No enmascara los hallazgos: paracetamol 1 g IV o metamizol; opiáceos (morfina/fentanilo) si dolor intenso. Antiemético (metoclopramida u ondansetrón)."},
+ {"paso":"Orienta el estudio por localización","detalle":"Analítica con lipasa y función hepática, sistemático de orina. Ecografía/TC según cuadrante. Lactato y gasometría si sospecha de isquemia o sepsis."},
+ {"paso":"Trata la causa e inicia antibiótico si procede","sub":[
+   {"nivel":"emergente","t":"Sepsis, perforación o apendicitis → antibioterapia de amplio espectro precoz y dieta absoluta."}
+ ]},
+ {"paso":"Consulta a cirugía y decide destino","detalle":"Cirugía urgente: peritonitis, perforación, isquemia intestinal, AAA roto, ectópico roto. Alta solo con exploración benigna que mejora, seguimiento fiable e instrucciones de reconsulta (cuidado: apendicitis y obstrucción son los diagnósticos más fallados)."}
+]}

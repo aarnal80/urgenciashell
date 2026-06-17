@@ -1,0 +1,51 @@
+{
+ "id": "gcs",
+ "nombre": "Glasgow (GCS)",
+ "nombre_largo": "Escala de coma de Glasgow",
+ "para": "Valorar el nivel de consciencia mediante la suma de la respuesta ocular, verbal y motora.",
+ "tipo": "suma",
+ "items": [
+  {
+   "id": "ocular",
+   "label": "Respuesta ocular",
+   "tipo": "opciones",
+   "opciones": [
+    {"label": "Espontánea", "puntos": 4},
+    {"label": "A la voz", "puntos": 3},
+    {"label": "Al dolor", "puntos": 2},
+    {"label": "Ninguna", "puntos": 1}
+   ]
+  },
+  {
+   "id": "verbal",
+   "label": "Respuesta verbal",
+   "tipo": "opciones",
+   "opciones": [
+    {"label": "Orientada", "puntos": 5},
+    {"label": "Confusa", "puntos": 4},
+    {"label": "Palabras inapropiadas", "puntos": 3},
+    {"label": "Sonidos incomprensibles", "puntos": 2},
+    {"label": "Ninguna", "puntos": 1}
+   ]
+  },
+  {
+   "id": "motora",
+   "label": "Respuesta motora",
+   "tipo": "opciones",
+   "opciones": [
+    {"label": "Obedece órdenes", "puntos": 6},
+    {"label": "Localiza el dolor", "puntos": 5},
+    {"label": "Retirada al dolor", "puntos": 4},
+    {"label": "Flexión anormal", "puntos": 3},
+    {"label": "Extensión", "puntos": 2},
+    {"label": "Ninguna", "puntos": 1}
+   ]
+  }
+ ],
+ "interpretacion": [
+  {"min": 13, "max": 15, "label": "Leve", "detalle": "Traumatismo craneoencefálico leve. Bajo deterioro de la consciencia."},
+  {"min": 9, "max": 12, "label": "Moderado", "detalle": "Deterioro moderado de la consciencia. Requiere vigilancia estrecha."},
+  {"min": 3, "max": 8, "label": "Grave", "detalle": "Coma. GCS ≤ 8 indica considerar aislamiento de la vía aérea (intubación)."}
+ ],
+ "nota": "Puntuación total de 3 a 15; una puntuación más alta indica mejor nivel de consciencia."
+}

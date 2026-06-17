@@ -1,0 +1,30 @@
+{"wikem_titulo": "Lithium toxicity", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome serotoninérgico","clave":"hipertermia, clonus, hiperreflexia, agitación; fármacos serotoninérgicos"},
+   {"dx":"Síndrome neuroléptico maligno","clave":"rigidez en tubo de plomo, hipertermia, CK alta; neurolépticos"},
+   {"dx":"Crisis tirotóxica","clave":"hipertermia, taquiarritmia, agitación; bocio, exoftalmos","slug":"crisis_tirotoxica"},
+   {"dx":"Lesión estructural del SNC","clave":"focalidad neurológica; descartar con TC si dudas"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Otras intoxicaciones por metales pesados","clave":"clínica neurológica/GI; antecedente de exposición"},
+   {"dx":"Uremia","clave":"alteración mental, asterixis, función renal muy alterada"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Intoxicación etílica o por sedantes-hipnóticos","clave":"depresión del SNC con constantes estables; anamnesis","slug":"intoxicacion_etilica_aguda_cetoacidosis_alcoholica_encefalop"},
+   {"dx":"Hipotiroidismo","clave":"litio crónico → hipotiroidismo; bradipsiquia, TSH alta"}
+ ]}
+], "plan": [
+ {"paso":"Estabiliza y monitoriza","detalle":"ABCDE, monitor ECG (QT, bradicardia, patrón Brugada), vía venosa. Valora si intoxicación aguda, aguda sobre crónica o crónica (la crónica es más grave a igual litemia)."},
+ {"paso":"Hidratación con suero salino isotónico","detalle":"Repón volumen con SSF 0,9%: restaura la natremia y la perfusión renal, principal vía de eliminación. Corrige la depleción de sodio/agua que aumenta la reabsorción de litio."},
+ {"paso":"Descontaminación digestiva","detalle":"El carbón activado NO adsorbe litio. En preparados de liberación retardada/litemia ascendente: irrigación intestinal total con polietilenglicol (único método con beneficio demostrado)."},
+ {"paso":"Solicita pruebas y litemias seriadas","detalle":"Litemia cada 2-4 h (NO tubo con litio-heparina). Función renal, sodio, calcio, TSH, ECG, paracetamol y salicilatos. Recuerda el rebote a las 6-8 h tras hemodiálisis."},
+ {"paso":"Indica hemodiálisis si criterios","sub":[
+   {"nivel":"critico","t":"Disfunción neurológica (confusión, convulsiones), hipertermia, arritmias graves o litemia >4-5 mEq/L → hemodiálisis urgente."},
+   {"nivel":"emergente","t":"Fracaso renal o litemia >4 mEq/L con clínica → rebaja el umbral de diálisis."}
+ ]},
+ {"paso":"Evita fármacos que aumentan la litemia","detalle":"Suspende tiazidas, AINE, IECA/ARA-II. Trata las convulsiones con benzodiacepinas (midazolam)."},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"critico","t":"Síntomas neurológicos, litemia >1,5 mEq/L, liberación retardada o necesidad de diálisis → ingreso."},
+   {"t":"Asintomático tras 4-6 h con dos litemias en descenso y función renal estable → alta; valoración psiquiátrica si intencionada."}
+ ]}
+]}

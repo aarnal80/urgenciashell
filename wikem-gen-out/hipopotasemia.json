@@ -1,0 +1,28 @@
+{"wikem_titulo": "Hypokalemia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Arritmia ventricular / torsades","clave":"QT largo, ondas U, K <2,5; riesgo de FV","slug":"fibrilacion_y_fluter_auriculares_arritmias_auriculoventricul"},
+   {"dx":"Cetoacidosis diabética","clave":"K total bajo pese a valor inicial normal/alto; cae con la insulina","slug":"cetoacidosis_diabetica"},
+   {"dx":"Intoxicación digitálica","clave":"paciente digitalizado; la hipopotasemia potencia la toxicidad","slug":"intoxicacion_aguda_por_digitalicos"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Pérdidas digestivas (vómitos, diarrea)","clave":"causa más frecuente; cloro urinario y estado ácido-base orientan","slug":"nauseas_vomitos_y_diarrea"},
+   {"dx":"Hipomagnesemia asociada","clave":"hipopotasemia refractaria a la reposición si no se corrige el Mg","slug":"hipomagnesemia"},
+   {"dx":"Fármacos (diuréticos, salbutamol, insulina)","clave":"anamnesis farmacológica; redistribución o pérdida renal","slug":"ataque_de_asma"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Hiperaldosteronismo","clave":"HTA + hipopotasemia + alcalosis metabólica","slug":"urgencia_hipertensiva"},
+   {"dx":"Acidosis tubular renal","clave":"acidosis metabólica hiperclorémica con K bajo","slug":"alteraciones_del_equilibrio_acidobasico"},
+   {"dx":"Parálisis periódica tirotóxica","clave":"varón joven asiático, debilidad aguda, hipertiroidismo","slug":"crisis_tirotoxica"}
+ ]}
+], "plan": [
+ {"paso":"Realiza ECG inmediato","detalle":"Busca ondas U, aplanamiento de T, QT largo y extrasistolia. Imprescindible, sobre todo en cardiopatía o paciente digitalizado."},
+ {"paso":"Confirma y clasifica","detalle":"Leve (3-3,5), moderada (2,5-2,9), grave (<2,5). BMP con bicarbonato, glucosa, creatinina; recuerda el gran déficit corporal que esconde."},
+ {"paso":"Mide el magnesio SIEMPRE","detalle":"La hipopotasemia es refractaria si hay hipomagnesemia. Repón Mg simultáneamente (sulfato de magnesio IV)."},
+ {"paso":"Repón potasio según gravedad y vía","sub":[
+   {"nivel":"critico","t":"Grave/sintomática o cambios ECG → cloruro potásico IV 10-20 mEq/h por vía central con monitorización; nunca en bolo."},
+   {"nivel":"emergente","t":"Moderada con tolerancia oral → cloruro potásico oral; objetivo K >4,0 (>4,5 si cardiopatía o digital)."}
+ ]},
+ {"paso":"Identifica y corrige la causa","detalle":"Suspende o ajusta diuréticos, trata vómitos/diarrea, revisa la digoxina; investiga causa endocrina si no se explica."},
+ {"paso":"Monitoriza","detalle":"Telemetría continua si K <3,0 o cambios ECG; controles seriados de potasio durante la reposición."},
+ {"paso":"Destino","detalle":"Ingreso si K <2,5, sintomática, cambios ECG, arritmia o pérdidas mantenidas. Alta si leve (3,0-3,5), asintomática, causa corregible y ECG normal, con recheck en 24-48 h."}
+]}

@@ -1,0 +1,25 @@
+{"wikem_titulo": "Acid-base disorders", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Acidosis láctica (shock/sepsis)","clave":"anion gap alto, lactato elevado, hipoperfusión; busca el origen del shock","slug":"shock"},
+   {"dx":"Cetoacidosis diabética","clave":"anion gap alto, hiperglucemia, cetonemia, Kussmaul","slug":"cetoacidosis_diabetica"},
+   {"dx":"Acidosis respiratoria por fallo ventilatorio","clave":"pCO2 alta, somnolencia, hipoventilación (EPOC, sedantes, opiáceos)","slug":"epoc_agudizada"},
+   {"dx":"Intoxicación por tóxicos con anion gap","clave":"gap osmolar elevado (metanol, etilenglicol), salicilatos","slug":"intoxicaciones_agudas_actitud_diagnostica_y_tratamiento_general"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Acidosis metabólica de la lesión renal aguda","clave":"creatinina elevada, anion gap alto o hiperclorémica","slug":"lesion_renal_aguda"},
+   {"dx":"Alcalosis metabólica por vómitos/diuréticos","clave":"HCO3 alto, hipopotasemia, cloro urinario bajo","slug":"nauseas_vomitos_y_diarrea"},
+   {"dx":"Alcalosis respiratoria psicógena","clave":"hiperventilación, parestesias periorales, espasmo carpopedal; única que suele resolverse sin ingreso","slug":"crisis_de_ansiedad"}
+ ]}
+], "plan": [
+ {"paso":"Obtén gasometría y descarta hipoxemia","detalle":"GAB (o venosa para bicarbonato), pulsioximetría. Monitor y vía si paciente inestable."},
+ {"paso":"Identifica el trastorno primario","detalle":"Mira pH (acidosis/alcalosis), después HCO3 y pCO2 para decidir si es metabólico o respiratorio. Valora si la compensación es adecuada."},
+ {"paso":"Calcula el anion gap y el delta gap","detalle":"AG = Na − (Cl + HCO3), normal 12 ± 3. Corrige por albúmina. El delta gap desenmascara trastornos mixtos ocultos."},
+ {"paso":"Solicita pruebas según el patrón","detalle":"Lactato, glucemia/cetonas, función renal, osmolaridad y gap osmolar (sospecha de tóxicos), cloro urinario en alcalosis metabólica."},
+ {"paso":"Trata la causa, no el número","sub":[
+   {"nivel":"critico","t":"Acidosis grave pH <7,0 (CAD) o pH <7,20 con shock/irritabilidad miocárdica → bicarbonato sódico 1 M; corrige déficit base."},
+   {"nivel":"critico","t":"Acidosis respiratoria pH <7,10 que no responde → soporte ventilatorio (VMNI/IOT); bicarbonato solo como puente."},
+   {"nivel":"emergente","t":"Alcalosis metabólica → SSF + cloruro potásico; acetazolamida si sobrecarga de volumen."}
+ ]},
+ {"paso":"Maneja la alcalosis respiratoria psicógena","detalle":"Tranquiliza, control respiratorio; lorazepam si ansiedad marcada. Vigila la hipocalcemia funcional (tetania)."},
+ {"paso":"Destino","detalle":"Ingreso si pH <7,2 o >7,55, trastorno mixto o causa que requiera hospitalización. UCI si pH <7,1 o >7,6, inestabilidad o necesidad de diálisis. Alta con seguimiento en trastorno leve y causa corregible."}
+]}

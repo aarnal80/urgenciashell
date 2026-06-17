@@ -1,0 +1,30 @@
+{"wikem_titulo": "Stroke (main)", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hemorragia intracraneal / HSA","clave":"cefalea súbita, vómitos, deterioro de conciencia; TC diferencia de isquémico","slug":"hemorragia_subaracnoidea_espontanea"},
+   {"dx":"Hipoglucemia","clave":"glucemia capilar baja; gran imitador de ictus, revierte con glucosa","slug":"hipoglucemia"},
+   {"dx":"Trombosis de senos venosos cerebrales","clave":"cefalea progresiva, crisis, estado protrombótico/puerperio"},
+   {"dx":"Crisis con parálisis de Todd","clave":"déficit postcrítico transitorio tras crisis presenciada","slug":"crisis_epilepticas"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Meningoencefalitis","clave":"fiebre, alteración mental, signos meníngeos","slug":"sindrome_meningeo_absceso_cerebral_absceso_epidural_espinal_y_encefalitis"},
+   {"dx":"Hiponatremia / encefalopatía metabólica","clave":"alteración del nivel de conciencia, sin focalidad clara; analítica","slug":"hiponatremia"},
+   {"dx":"Hematoma subdural/epidural","clave":"antecedente traumático, anticoagulación, deterioro fluctuante"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Migraña con aura / complicada","clave":"déficit progresivo, cefalea típica, episodios previos","slug":"cefaleas"},
+   {"dx":"Parálisis de Bell","clave":"paresia facial periférica que afecta frente; sin otra focalidad"},
+   {"dx":"Vértigo periférico / laberintitis","clave":"vértigo aislado con HINTS tranquilizador, sin otros déficits","slug":"vertigo"}
+ ]}
+], "plan": [
+ {"paso":"Activa Código Ictus y registra la hora de inicio","detalle":"Tiempo de última vez visto normal. ABC, O2 si SatO2 <94%, monitor, vía venosa, glucemia capilar inmediata."},
+ {"paso":"Evalúa el déficit y solicita neuroimagen urgente","detalle":"NIHSS y exploración neurológica. TC craneal urgente (puerta-TC mínimo) para diferenciar isquémico de hemorrágico."},
+ {"paso":"Corrige factores que contraindican o agravan","detalle":"Glucemia (corregir si <50 o >400). Si PAS >185 o PAD >105 antes de fibrinólisis → labetalol/urapidil/nicardipino IV."},
+ {"paso":"Decide la estrategia según TC y tiempo","sub":[
+   {"nivel":"critico","t":"isquémico <4,5 h sin contraindicación → fibrinólisis IV (alteplasa), puerta-aguja <60 min"},
+   {"nivel":"critico","t":"oclusión de gran vaso → activar trombectomía mecánica en centro de referencia"},
+   {"nivel":"critico","t":"hemorrágico → control estricto de TA, revertir anticoagulación y valorar Neurocirugía"}
+ ]},
+ {"paso":"Vigila complicaciones de la reperfusión","detalle":"Si cefalea súbita, HTA, vómitos o deterioro durante rtPA → detener infusión y TC urgente. Angioedema lingual → manejo de vía aérea."},
+ {"paso":"Medidas generales y prevención","detalle":"Normotermia (paracetamol si fiebre), normoglucemia, posición y profilaxis. AAS solo en isquémico tras descartar hemorragia y fuera de ventana de fibrinólisis."},
+ {"paso":"Ingreso en Unidad de Ictus","detalle":"Ingresar todo ictus agudo/subagudo. AIT: estudio y neuroimagen en <24 h por alto riesgo precoz."}
+]}

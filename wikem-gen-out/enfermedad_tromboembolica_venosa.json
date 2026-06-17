@@ -1,0 +1,31 @@
+{"wikem_titulo": "Deep venous thrombosis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hemoptisis, hipoxia o hipotensión en paciente con TVP","slug":"tromboembolia_pulmonar"},
+   {"dx":"Fascitis necrosante","clave":"dolor desproporcionado, crepitación, ampollas, toxicidad sistémica rápida","slug":"lesiones_elementales"},
+   {"dx":"Isquemia arterial aguda","clave":"frialdad, palidez, AUSENCIA de pulsos; en flegmasía cerúlea coexiste con TVP masiva","slug":"isquemia_arterial_aguda_de_las_extremidades"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Celulitis","clave":"eritema caliente bien delimitado, fiebre, puerta de entrada; eco sin trombo","slug":"lesiones_elementales"},
+   {"dx":"Síndrome compartimental","clave":"dolor intenso al estiramiento pasivo, tensión; antecedente de trauma o reperfusión"},
+   {"dx":"Quiste de Baker roto","clave":"dolor brusco en pantorrilla, equimosis en maléolo (signo de la media luna); eco diferencia"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Tromboflebitis superficial","clave":"cordón venoso indurado, eritematoso y doloroso superficial; eco para ver proximidad al cayado"},
+   {"dx":"Rotura de gemelo / tendón de Aquiles","clave":"dolor súbito en esfuerzo, hematoma; sin signos inflamatorios sistémicos"},
+   {"dx":"Insuficiencia venosa / linfedema","clave":"edema crónico, fóvea, cambios cutáneos; bilateral o de larga evolución"},
+   {"dx":"Edema bilateral (IC, renal, hepático)","clave":"edema simétrico con fóvea; orienta a causa sistémica","slug":"insuficiencia_cardiaca"}
+ ]}
+], "plan": [
+ {"paso":"Estima la probabilidad pretest (Wells)","detalle":"Valora factores de riesgo, asimetría, edema, dolor a la palpación del trayecto venoso, signo de Homans. Clasifica probabilidad baja/intermedia/alta."},
+ {"paso":"Aplica el algoritmo dímero D + ecografía","sub":[
+   {"t":"Probabilidad baja + dímero D negativo → excluye TVP, no más pruebas."},
+   {"t":"Probabilidad alta o dímero D positivo → ecografía de compresión/Doppler."}
+ ]},
+ {"paso":"Anticoagula ante TVP confirmada o alta sospecha","detalle":"Inicio precoz. ACOD de elección en TVP no oncológica (apixabán, rivaroxabán). HBPM/fondaparinux a dosis terapéuticas si cáncer, embarazo o función renal límite. Analgesia y deambulación precoz."},
+ {"paso":"Detecta la TVP grave / complicada","sub":[
+   {"nivel":"critico","t":"Flegmasía cerúlea/alba dolens (edema masivo, cianosis, shock) → valorar fibrinólisis/trombectomía urgente, riesgo de gangrena."},
+   {"nivel":"critico","t":"Signos de TEP o inestabilidad hemodinámica → manejar como TEP, considerar fibrinólisis."}
+ ]},
+ {"paso":"Maneja la trombosis venosa superficial","detalle":"Eco para medir distancia al cayado. Trombo a <3 cm del cayado safeno-femoral/poplíteo o safena completa → anticoagulación a dosis plenas; resto → fondaparinux/HBPM profiláctica."},
+ {"paso":"Destino","detalle":"TVP no complicada, estable → manejo ambulatorio con anticoagulación y seguimiento. Ingreso si flegmasía, TEP asociado, alto riesgo de sangrado o comorbilidad."}
+]}

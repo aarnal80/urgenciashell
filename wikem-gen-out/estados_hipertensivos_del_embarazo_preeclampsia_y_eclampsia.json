@@ -1,0 +1,24 @@
+{"wikem_titulo": "Preeclampsia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Eclampsia","clave":"convulsiones o coma en gestante hipertensa; pródromos: cefalea, clonus, alteraciones visuales"},
+   {"dx":"Síndrome HELLP","clave":"epigastralgia/dolor en HCD + hemólisis, GOT/GPT altas y plaquetas <100.000"},
+   {"dx":"PTT / SHU","clave":"trombopenia + anemia hemolítica microangiopática + fallo renal/neurológico; LDH muy alta"},
+   {"dx":"Hígado graso agudo del embarazo","clave":"náuseas, ictericia, hipoglucemia, coagulopatía en 3.er trimestre"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Hipertensión crónica","clave":"HTA conocida o detectada antes de la semana 20; sin proteinuria de novo"},
+   {"dx":"Hipertensión gestacional","clave":"HTA de novo >20 semanas SIN proteinuria ni daño orgánico"},
+   {"dx":"Feocromocitoma","clave":"crisis hipertensivas paroxísticas con cefalea, sudoración y palpitaciones"}
+ ]}
+], "plan": [
+ {"paso":"Confirma la HTA y busca criterios de gravedad","detalle":"PA con manguito adecuado, paciente sentada, 2 tomas. Gravedad: PAS >160 o PAD >110. Pregunta por cefalea, epigastralgia, alteraciones visuales, clonus."},
+ {"paso":"Solicita el estudio de preeclampsia","detalle":"Hemograma con plaquetas, función renal y ácido úrico, GOT/GPT, LDH, haptoglobina y frotis (hemólisis), coagulación/fibrinógeno y D-dímero si sospecha de CID, cociente proteína/creatinina en orina."},
+ {"paso":"Controla la HTA grave de forma urgente","sub":[
+   {"nivel":"critico","t":"PAS ≥160 o PAD ≥110 → labetalol IV (20 mg, repetir/doblar) o hidralazina IV o nifedipino oral; objetivo PAS 140-155 / PAD 90-105 sin descensos bruscos."}
+ ]},
+ {"paso":"Previene y trata las convulsiones","sub":[
+   {"nivel":"critico","t":"Eclampsia o preeclampsia grave → sulfato de magnesio IV: 4-6 g en 20 min y 1-2 g/h; vigila reflejos, diuresis y FR. Antídoto: gluconato cálcico."}
+ ]},
+ {"paso":"Monitoriza a madre y feto y consulta a Obstetricia","detalle":"Monitorización fetal continua/RCTG, balance hídrico, vigilancia de signos de gravedad. Avisa a Obstetricia en TODOS los casos sospechosos."},
+ {"paso":"Destino y tratamiento definitivo","detalle":"Ingreso en paritorio. El tratamiento curativo es finalizar la gestación: con criterios de gravedad, parto tras estabilización materna; sin gravedad y <37 sem, manejo expectante. Control de PA ≥72 h posparto."}
+]}

@@ -1,0 +1,30 @@
+{
+ "id": "westhaven",
+ "nombre": "West Haven",
+ "nombre_largo": "Criterios de West Haven para encefalopatía hepática",
+ "para": "Graduar la gravedad de la encefalopatía hepática.",
+ "tipo": "clasificacion",
+ "clases": [
+  {
+   "label": "Grado I",
+   "descripcion": "Cambios leves de conducta y atención; asterixis leve.",
+   "detalle": "Alteración clínica leve. Suele requerir observación y tratamiento del factor precipitante."
+  },
+  {
+   "label": "Grado II",
+   "descripcion": "Letargia, desorientación temporal; asterixis evidente.",
+   "detalle": "Encefalopatía moderada. Tratamiento dirigido y vigilancia del nivel de conciencia."
+  },
+  {
+   "label": "Grado III",
+   "descripcion": "Somnolencia o estupor, confusión marcada; responde a estímulos.",
+   "detalle": "Encefalopatía grave. Considerar ingreso y protección de la vía aérea."
+  },
+  {
+   "label": "Grado IV",
+   "descripcion": "Coma; no responde a estímulos.",
+   "detalle": "Encefalopatía muy grave. Soporte avanzado y protección de la vía aérea; valorar UCI."
+  }
+ ],
+ "nota": "El grado 0 corresponde a la ausencia de alteración clínica detectable."
+}

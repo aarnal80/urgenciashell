@@ -1,0 +1,17 @@
+{
+ "id": "qsofa",
+ "nombre": "qSOFA",
+ "nombre_largo": "Quick SOFA (cribado rápido de riesgo en sepsis)",
+ "para": "Cribado rápido de riesgo de mala evolución en pacientes con sospecha de sepsis fuera de la UCI.",
+ "tipo": "suma",
+ "items": [
+  {"id": "fr", "label": "Frecuencia respiratoria ≥ 22/min", "tipo": "binario", "puntos": 1},
+  {"id": "mental", "label": "Alteración del estado mental (GCS < 15)", "tipo": "binario", "puntos": 1},
+  {"id": "ta", "label": "TA sistólica ≤ 100 mmHg", "tipo": "binario", "puntos": 1}
+ ],
+ "interpretacion": [
+  {"min": 0, "max": 1, "label": "Riesgo bajo", "detalle": "Bajo riesgo de mala evolución. Reevaluar según evolución clínica."},
+  {"min": 2, "max": null, "label": "Riesgo alto", "detalle": "Alto riesgo de mala evolución y mayor mortalidad. Reevaluar y considerar sepsis."}
+ ],
+ "nota": "Cada ítem suma 1 punto; puntuación total 0-3."
+}

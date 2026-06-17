@@ -1,0 +1,27 @@
+{
+ "id": "ranson",
+ "nombre": "Ranson",
+ "nombre_largo": "Criterios de Ranson para la gravedad de la pancreatitis aguda (no biliar)",
+ "para": "Estimar la gravedad y el pronóstico (mortalidad) de la pancreatitis aguda no biliar mediante parámetros al ingreso y a las 48 horas.",
+ "tipo": "suma",
+ "items": [
+  {"id": "edad55", "label": "Edad > 55 años (al ingreso)", "tipo": "binario", "puntos": 1},
+  {"id": "leucocitos", "label": "Leucocitos > 16.000 /mm³ (al ingreso)", "tipo": "binario", "puntos": 1},
+  {"id": "glucosa", "label": "Glucosa > 200 mg/dL (al ingreso)", "tipo": "binario", "puntos": 1},
+  {"id": "ldh", "label": "LDH > 350 UI/L (al ingreso)", "tipo": "binario", "puntos": 1},
+  {"id": "ast", "label": "AST > 250 UI/L (al ingreso)", "tipo": "binario", "puntos": 1},
+  {"id": "hto", "label": "Descenso del hematocrito > 10% (a las 48 h)", "tipo": "binario", "puntos": 1},
+  {"id": "bun", "label": "Aumento del BUN > 5 mg/dL (a las 48 h)", "tipo": "binario", "puntos": 1},
+  {"id": "calcio", "label": "Calcio < 8 mg/dL (a las 48 h)", "tipo": "binario", "puntos": 1},
+  {"id": "pao2", "label": "PaO2 < 60 mmHg (a las 48 h)", "tipo": "binario", "puntos": 1},
+  {"id": "deficit_bases", "label": "Déficit de bases > 4 mEq/L (a las 48 h)", "tipo": "binario", "puntos": 1},
+  {"id": "secuestro", "label": "Secuestro de líquidos > 6 L (a las 48 h)", "tipo": "binario", "puntos": 1}
+ ],
+ "interpretacion": [
+  {"min": 0, "max": 2, "label": "Mortalidad baja (~1%)", "detalle": "Pancreatitis leve; bajo riesgo de mortalidad."},
+  {"min": 3, "max": 4, "label": "Mortalidad ~15%", "detalle": "Pancreatitis grave; considerar vigilancia intensiva."},
+  {"min": 5, "max": 6, "label": "Mortalidad ~40%", "detalle": "Pancreatitis grave; ingreso en cuidados intensivos."},
+  {"min": 7, "max": null, "label": "Mortalidad ~100%", "detalle": "Pancreatitis muy grave; pronóstico ominoso."}
+ ],
+ "nota": "Criterios de Ranson para pancreatitis aguda no biliar. Rango 0-11."
+}

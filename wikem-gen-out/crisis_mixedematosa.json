@@ -1,0 +1,26 @@
+{"wikem_titulo": "Myxedema coma", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Sepsis","clave":"precipitante y mimetizador más frecuente; fiebre/hipotermia, hipotensión","slug":"sepsis"},
+   {"dx":"Crisis addisoniana","clave":"hipotensión, hiponatremia, hiperpotasemia; puede coexistir","slug":"crisis_addisoniana"},
+   {"dx":"Hipotermia primaria (ambiental)","clave":"exposición al frío sin clínica de hipotiroidismo","slug":"patologia_inducida_por_el_frio_hipotermia_accidental_y_conge"},
+   {"dx":"Intoxicación por opiáceos/sedantes","clave":"miosis, depresión respiratoria; responde a naloxona","slug":"intoxicacion_aguda_por_opiaceos_y_derivados"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Ictus / patología intracraneal","clave":"focalidad neurológica, inicio brusco","slug":"ictus"},
+   {"dx":"Hipoglucemia","clave":"glucemia baja; coexiste y agrava el cuadro","slug":"hipoglucemia"},
+   {"dx":"Insuficiencia cardíaca / taponamiento","clave":"hipotensión, derrame pericárdico; ecocardiograma","slug":"insuficiencia_cardiaca"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Hiponatremia de otra causa","clave":"alteración de conciencia con Na bajo sin hipotiroidismo grave","slug":"hiponatremia"}
+ ]}
+], "plan": [
+ {"paso":"Estabiliza la vía aérea y la ventilación","sub":[
+   {"nivel":"critico","t":"hipoventilación con hipercapnia → valora intubación y ventilación precoces"}
+ ]},
+ {"paso":"Monitoriza y extrae analítica antes de tratar","detalle":"Monitor, vías, glucemia. Pide TSH, T4 libre, BMP (Na, glucosa), cortisol basal, gasometría, hemograma, ECG y cultivos. NO esperes el perfil hormonal para iniciar el tratamiento."},
+ {"paso":"Administra hidrocortisona ANTES de la hormona tiroidea","detalle":"Hidrocortisona 100 mg IV (extrayendo antes cortisol) para cubrir una insuficiencia suprarrenal concomitante y evitar crisis addisoniana."},
+ {"paso":"Inicia hormona tiroidea sin demora","detalle":"Levotiroxina IV en dosis de carga seguida de mantenimiento; valora añadir T3 en casos graves. Tratamiento empírico ante alta sospecha clínica."},
+ {"paso":"Corrige hipotermia, hiponatremia e hipoglucemia","detalle":"Recalentamiento pasivo (evita el activo agresivo por riesgo de vasodilatación/hipotensión). Suero glucosado 5% y salino; corrige Na de forma lenta. Soporte hemodinámico cauto (escasa respuesta a inotrópicos)."},
+ {"paso":"Busca y trata el desencadenante","detalle":"Cribado infeccioso (sepsis es lo más frecuente), descarta IAM silente (troponina, ECG) y revisa fármacos depresores. Antibiótico empírico si sospecha de infección."},
+ {"paso":"Ingreso en UCI","detalle":"Todos los pacientes en UCI con monitorización seriada de TSH, T4, iones, glucosa y cortisol; ajuste a levotiroxina oral al estabilizar."}
+]}

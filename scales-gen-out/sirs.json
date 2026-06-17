@@ -1,0 +1,18 @@
+{
+ "id": "sirs",
+ "nombre": "SIRS",
+ "nombre_largo": "Criterios de síndrome de respuesta inflamatoria sistémica (SIRS)",
+ "para": "Identificar la presencia de respuesta inflamatoria sistémica, útil en la sospecha de sepsis.",
+ "tipo": "suma",
+ "items": [
+  {"id": "temperatura", "label": "Temperatura > 38 ºC o < 36 ºC", "tipo": "binario", "puntos": 1},
+  {"id": "fc", "label": "Frecuencia cardiaca > 90 lpm", "tipo": "binario", "puntos": 1},
+  {"id": "fr", "label": "Frecuencia respiratoria > 20 rpm o PaCO2 < 32 mmHg", "tipo": "binario", "puntos": 1},
+  {"id": "leucocitos", "label": "Leucocitos > 12.000 o < 4.000/mm³ o > 10% de cayados", "tipo": "binario", "puntos": 1}
+ ],
+ "interpretacion": [
+  {"min": 0, "max": 1, "label": "No cumple SIRS", "detalle": "No se cumplen los criterios de respuesta inflamatoria sistémica."},
+  {"min": 2, "max": null, "label": "SIRS presente", "detalle": "Se cumplen los criterios de SIRS (≥ 2 criterios). Valorar foco infeccioso y posible sepsis."}
+ ],
+ "nota": "El SIRS requiere ≥ 2 de los 4 criterios. La presencia de SIRS no implica infección; debe interpretarse en el contexto clínico."
+}

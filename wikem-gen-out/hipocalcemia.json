@@ -1,0 +1,29 @@
+{"wikem_titulo": "Hypocalcemia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hipocalcemia grave sintomática","clave":"tetania, laringoespasmo, convulsiones, QT largo; Ca < 7,5 mg/dL"},
+   {"dx":"Síndrome de lisis tumoral","clave":"neoplasia/quimioterapia reciente; hiperK + hiperfosfatemia + hiperuricemia + hipoCa"},
+   {"dx":"Hipomagnesemia grave","clave":"bloquea la respuesta al calcio; alcoholismo, diuréticos, malabsorción","slug":"hipomagnesemia"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Pancreatitis aguda grave","clave":"dolor epigástrico irradiado a espalda; amilasa/lipasa altas; saponificación cálcica","slug":"pancreatitis_aguda"},
+   {"dx":"Sepsis","clave":"fiebre/foco infeccioso, hipotensión; hipocalcemia ionizada frecuente","slug":"sepsis"},
+   {"dx":"Rabdomiólisis","clave":"orina oscura, CK muy elevada; secuestro de calcio en músculo lesionado","slug":"rabdomiolisis"},
+   {"dx":"Transfusión masiva (quelación por citrato)","clave":"politransfundido reciente; hipocalcemia ionizada aguda"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Hipoparatiroidismo (postquirúrgico tiroideo)","clave":"cirugía cervical reciente; PTH baja; tetania subaguda"},
+   {"dx":"Déficit de vitamina D","clave":"malnutrición/malabsorción, escasa exposición solar; hipocalcemia crónica leve"},
+   {"dx":"Alcalosis respiratoria por hiperventilación","clave":"crisis de ansiedad, parestesias periorales; Ca total normal, ionizado bajo","slug":"crisis_de_ansiedad"}
+ ]}
+], "plan": [
+ {"paso":"Confirma y corrige el calcio","detalle":"Mide calcio total y, si es posible, calcio iónico. Corrige por albúmina: Ca corregido = Ca total + 0,8 × (4 − albúmina g/dL). Solicita Mg, fósforo, función renal, PTH."},
+ {"paso":"Haz ECG y monitoriza","detalle":"Busca QT largo y arritmias. Monitorización continua si hay síntomas o Ca < 7,5 mg/dL."},
+ {"paso":"Decide la vía según gravedad/síntomas","sub":[
+   {"nivel":"critico","t":"Sintomática (tetania, laringoespasmo, convulsiones, QT largo) o Ca < 7,5 → gluconato cálcico 10% 10-20 mL IV diluido en 100 mL SG5% en 10-20 min, seguido de perfusión."},
+   {"t":"Asintomática/leve → calcio oral (carbonato cálcico 1-2 g/día) + vitamina D (calcitriol 0,25-0,5 µg/día)."}
+ ]},
+ {"paso":"Corrige la hipomagnesemia en paralelo","detalle":"Si Mg bajo, sulfato de magnesio IV; sin corregir el Mg el calcio no responde."},
+ {"paso":"Trata la causa subyacente","detalle":"Pancreatitis, sepsis, lisis tumoral, hipoparatiroidismo o déficit de vitamina D según corresponda."},
+ {"paso":"Precauciones farmacológicas","detalle":"Cuidado con calcio IV en pacientes digitalizados (riesgo de stone heart): administrar lento y monitorizado. Evita furosemida y fenotiazinas."},
+ {"paso":"Destino","detalle":"Ingresa a todo paciente sintomático o con hipocalcemia grave. Alta con tratamiento oral y seguimiento si es leve/asintomática y reversible."}
+]}

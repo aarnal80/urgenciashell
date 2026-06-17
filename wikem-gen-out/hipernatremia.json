@@ -1,0 +1,29 @@
+{"wikem_titulo": "Hypernatremia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hipernatremia hipovolémica con shock","clave":"deshidratación grave, hipotensión; corrige primero la volemia","slug":"shock"},
+   {"dx":"Hemorragia/trombosis cerebral por contracción encefálica","clave":"focalidad neurológica, hipernatremia aguda grave","slug":"ictus"},
+   {"dx":"Hipernatremia aguda grave (>160 mEq/L)","clave":"alteración del nivel de conciencia, convulsiones, alta mortalidad","slug":"coma"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Diabetes insípida central","clave":"poliuria, orina diluida; responde a desmopresina","slug":"apoplejia_hipofisaria"},
+   {"dx":"Pérdidas digestivas / por el calor","clave":"diarrea, vómitos, golpe de calor, fiebre con pérdida de agua libre","slug":"nauseas_vomitos_y_diarrea"},
+   {"dx":"Diuresis osmótica","clave":"hiperglucemia, manitol, glucosuria; poliuria","slug":"cetoacidosis_diabetica"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Déficit de acceso al agua","clave":"anciano, demencia, encamado sin acceso a líquidos; mecanismo de la sed ausente","slug":"coma"},
+   {"dx":"Sobrecarga iatrogénica de sodio","clave":"sueros hipertónicos o bicarbonato IV en el ingreso","slug":"alteraciones_del_equilibrio_acidobasico"}
+ ]}
+], "plan": [
+ {"paso":"Confirma y valora gravedad/cronicidad","detalle":"Na >145; estima si es aguda (<48 h, sintomática) o crónica. Monitor y vía si inestable o Na muy elevado."},
+ {"paso":"Valora el estado de volumen y la causa","detalle":"Hipovolémica (pérdidas), euvolémica (DI, pérdidas insensibles) o hipervolémica (aporte de sodio). Excreción fraccional de sodio ayuda a la etiología."},
+ {"paso":"Estabiliza la perfusión primero","sub":[
+   {"nivel":"critico","t":"Inestabilidad/shock hipovolémico → SSF 0,9% hasta corregir el déficit de perfusión, antes de bajar el sodio."}
+ ]},
+ {"paso":"Calcula y repón el déficit de agua libre","detalle":"Una vez estable, pasa a hipotónico 0,45% o glucosado 5% según vía. Reponer también las pérdidas en curso."},
+ {"paso":"Controla la velocidad de corrección","detalle":"No bajes el Na más de 10-15 mEq/L/día (~0,5-1 mEq/L/h). En hipernatremia grave (>170) controla Na cada 2 h, objetivo no <150 en las primeras 48-72 h. Vigila convulsiones por edema cerebral."},
+ {"paso":"Trata la causa específica","sub":[
+   {"nivel":"emergente","t":"Diabetes insípida central → desmopresina (DDAVP)."},
+   {"t":"DI nefrogénica → retira el fármaco causal, tiazida/restricción de sodio."}
+ ]},
+ {"paso":"Destino","detalle":"Ajusta a la causa y la gravedad; ingreso en hipernatremia grave, sintomática o sin posibilidad de control hídrico ambulatorio. En pediatría >180 valora diálisis peritoneal."}
+]}

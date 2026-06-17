@@ -1,0 +1,33 @@
+{"wikem_titulo": "Acute chest pain", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome coronario agudo","clave":"dolor opresivo retroesternal, irradiado, cortejo vegetativo; cambios del ST, troponina","slug":"sindrome_coronario_agudo"},
+   {"dx":"Disección aórtica (síndrome aórtico agudo)","clave":"dolor brusco, desgarrante, migratorio; asimetría de pulsos/TA, soplo de IAo","slug":"sindrome_aortico_agudo"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hipoxia; factores de riesgo de TVP","slug":"tromboembolia_pulmonar"},
+   {"dx":"Neumotórax a tensión","clave":"disnea brusca, hipofonesis unilateral, IY, desviación traqueal","slug":"neumotorax_espontaneo"},
+   {"dx":"Taponamiento cardíaco","clave":"tonos apagados, IY, pulso paradójico; derrame en eco","slug":"taponamiento_cardiaco"},
+   {"dx":"Perforación esofágica (Boerhaave)","clave":"dolor tras vómitos intensos, enfisema subcutáneo, neumomediastino","slug":"patologia_esofagica_aguda"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Pericarditis aguda","clave":"dolor pleurítico que mejora al inclinarse; roce; ST cóncavo difuso con descenso del PR","slug":"pericarditis_aguda"},
+   {"dx":"Miocarditis","clave":"dolor torácico con troponina elevada y antecedente viral; puede simular SCA","slug":"miocarditis_aguda"},
+   {"dx":"Dolor torácico por cocaína","clave":"consumo reciente, taquicardia, HTA, agitación","slug":"intoxicacion_aguda_por_cocaina"},
+   {"dx":"Pancreatitis aguda","clave":"dolor epigástrico irradiado a espalda, vómitos; lipasa elevada","slug":"pancreatitis_aguda"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Dolor osteomuscular / costocondritis","clave":"reproducible a la palpación, mecánico, sin cortejo vegetativo"},
+   {"dx":"ERGE / espasmo esofágico","clave":"relación con la ingesta, pirosis; puede simular angina","slug":"patologia_esofagica_aguda"},
+   {"dx":"Crisis de ansiedad / hiperventilación","clave":"parestesias, opresión, contexto ansioso; diagnóstico de exclusión","slug":"crisis_de_ansiedad"},
+   {"dx":"Neumonía / pleuritis","clave":"dolor pleurítico, fiebre, tos; condensación en Rx","slug":"neumonia_adquirida_en_la_comunidad"}
+ ]}
+], "plan": [
+ {"paso":"Triaje y monitorización inmediata","detalle":"Monitor, TA en ambos brazos, SatO2, vía. ECG de 12 derivaciones en <10 min desde la llegada."},
+ {"paso":"Evalúa el ECG y descarta SCACEST","sub":[
+   {"nivel":"critico","t":"Elevación del ST o BCRI nuevo → activa código infarto y reperfusión urgente."},
+   {"nivel":"emergente","t":"ECG no diagnóstico con clínica sospechosa → troponina seriada y monitorización."}
+ ]},
+ {"paso":"Anamnesis y exploración orientadas a las causas vitales","detalle":"Características del dolor, factores de riesgo, asimetría de pulsos/TA (disección), signos de TVP (TEP), enfisema subcutáneo (Boerhaave), IY (taponamiento)."},
+ {"paso":"Solicita pruebas según sospecha","detalle":"Rx tórax, troponina seriada (0 h y 1-3 h alta sensibilidad), hemograma y bioquímica. Dímero-D/angio-TC si sospecha de TEP (Wells/PERC); angio-TC aórtica si disección; eco POCUS."},
+ {"paso":"Trata la causa identificada","detalle":"SCA: AAS, anticoagulación, cardiología. TEP: anticoagulación (fibrinólisis si masiva). Disección: control de FC y TA, cirugía urgente si tipo A. Neumotórax a tensión: descompresión. Taponamiento: pericardiocentesis."},
+ {"paso":"Control del dolor con cautela","detalle":"Nitroglicerina para dolor isquémico (evitar en IAM de VD, hipotensión o uso reciente de inhibidores de PDE5). Evita AINE si se sospecha SCA."},
+ {"paso":"Decide el destino","detalle":"UCI/monitorizado si causa vital. Observación si HEART intermedio con troponinas pendientes. Alta si HEART bajo (0-3) con troponinas negativas y causa no cardíaca clara, con seguimiento."}
+]}

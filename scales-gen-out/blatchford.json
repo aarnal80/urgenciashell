@@ -1,0 +1,39 @@
+{
+ "id": "blatchford",
+ "nombre": "Glasgow-Blatchford",
+ "nombre_largo": "Escala de Glasgow-Blatchford (GBS)",
+ "para": "Estratifica el riesgo en la hemorragia digestiva alta e identifica a los pacientes candidatos a manejo ambulatorio.",
+ "tipo": "suma",
+ "items": [
+  {"id": "urea", "label": "Urea (mmol/L)", "tipo": "opciones", "opciones": [
+   {"label": "< 6,5", "puntos": 0},
+   {"label": "6,5 - 8", "puntos": 2},
+   {"label": "8 - 10", "puntos": 3},
+   {"label": "10 - 25", "puntos": 4},
+   {"label": "≥ 25", "puntos": 6}
+  ]},
+  {"id": "hb", "label": "Hemoglobina (g/dL)", "tipo": "opciones", "opciones": [
+   {"label": "≥ 13", "puntos": 0},
+   {"label": "12 - 13", "puntos": 1},
+   {"label": "10 - 12", "puntos": 3},
+   {"label": "< 10", "puntos": 6}
+  ]},
+  {"id": "tas", "label": "Tensión arterial sistólica (mmHg)", "tipo": "opciones", "opciones": [
+   {"label": "≥ 110", "puntos": 0},
+   {"label": "100 - 109", "puntos": 1},
+   {"label": "90 - 99", "puntos": 2},
+   {"label": "< 90", "puntos": 3}
+  ]},
+  {"id": "fc100", "label": "Frecuencia cardiaca ≥ 100 lpm", "tipo": "binario", "puntos": 1},
+  {"id": "melena", "label": "Melena", "tipo": "binario", "puntos": 1},
+  {"id": "sincope", "label": "Síncope", "tipo": "binario", "puntos": 2},
+  {"id": "hepatopatia", "label": "Hepatopatía", "tipo": "binario", "puntos": 2},
+  {"id": "insuf_cardiaca", "label": "Insuficiencia cardiaca", "tipo": "binario", "puntos": 2}
+ ],
+ "interpretacion": [
+  {"min": 0, "max": 0, "label": "Muy bajo riesgo", "detalle": "Valorar alta y manejo ambulatorio; baja probabilidad de necesitar intervención."},
+  {"min": 1, "max": 5, "label": "Riesgo bajo-intermedio", "detalle": "Valoración hospitalaria; riesgo intermedio de intervención."},
+  {"min": 6, "max": null, "label": "Riesgo alto", "detalle": "Alta probabilidad de requerir intervención (transfusión, endoscopia, cirugía). Manejo hospitalario."}
+ ],
+ "nota": "El ítem de hemoglobina está simplificado a un único parámetro con umbrales ≥13=0, 12-13=1, 10-12=3, <10=6."
+}

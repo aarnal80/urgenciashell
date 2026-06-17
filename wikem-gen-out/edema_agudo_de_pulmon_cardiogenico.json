@@ -1,0 +1,28 @@
+{"wikem_titulo": "Flash pulmonary edema", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Edema agudo de pulmón no cardiogénico (SDRA)","clave":"infiltrados bilaterales sin cardiomegalia ni FEVI baja; desencadenante (sepsis, aspiración)","slug":"sepsis"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, hipoxia, dolor pleurítico; sobrecarga de VD, sin crepitantes húmedos difusos","slug":"tromboembolia_pulmonar"},
+   {"dx":"Síndrome coronario agudo","clave":"causa frecuente de EAP; dolor torácico, cambios del ST, troponina","slug":"sindrome_coronario_agudo"},
+   {"dx":"Emergencia hipertensiva (EAP simpático)","clave":"PAS muy alta de inicio brusco; respuesta rápida a vasodilatadores","slug":"emergencia_hipertensiva"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Neumonía / aspiración","clave":"fiebre, condensación focal, esputo purulento; no edema simétrico","slug":"neumonia_adquirida_en_la_comunidad"},
+   {"dx":"EPOC/asma agudizada","clave":"sibilancias y espiración alargada predominantes; antecedente respiratorio","slug":"epoc_agudizada"},
+   {"dx":"Sobrecarga de volumen iatrogénica / diálisis omitida","clave":"sueroterapia excesiva o IRC sin diálisis; oligoanuria","slug":"lesion_renal_aguda"}
+ ]}
+], "plan": [
+ {"paso":"Estabiliza de inmediato (emergencia)","detalle":"Sentar al paciente con piernas colgando. Monitor, TA, SatO2, vía. O2 alto flujo. Avisa a UCI precozmente."},
+ {"paso":"Inicia VNI sin demora","detalle":"CPAP/BiPAP con PEEP 8 cmH2O, titular rápido hasta 10-12. Reduce el trabajo respiratorio y la precarga/postcarga."},
+ {"paso":"Trata según la presión arterial","sub":[
+   {"nivel":"emergente","t":"PAS >160 mmHg → nitroglicerina IV a dosis altas (bolo y perfusión 100 mcg/min titulando); SL en lo que se prepara la perfusión."},
+   {"t":"PAS 90-160 mmHg (normotenso) → nitroglicerina a dosis menores + furosemida IV 20-40 mg."},
+   {"nivel":"critico","t":"PAS <90 mmHg (hipotensión) → contraindicada NTG; inotropos (dobutamina) o noradrenalina y considera shock cardiogénico/UCI."}
+ ]},
+ {"paso":"Diurético y valoración de volemia","detalle":"Furosemida IV; ten en cuenta que muchos pacientes están más redistribuidos que sobrecargados (reevalúa la volemia repetidamente)."},
+ {"paso":"Solicita pruebas y busca el precipitante","detalle":"ECG (descarta SCA/arritmia), troponina, gasometría, Rx tórax (puede ser normal en EAP súbito), eco POCUS (líneas B, FEVI, vena cava)."},
+ {"paso":"Trata la causa de base","detalle":"Reperfusión si SCA; control de frecuencia si FA rápida (digital útil en este contexto); diálisis si fracaso renal."},
+ {"paso":"Valora intubación e ingreso","sub":[
+   {"nivel":"critico","t":"PaO2 <50 con O2>=50% y CPAP, PaCO2 >50 con pH <7,20 o FR >40 → ventilación mecánica invasiva."},
+   {"t":"Ingreso hospitalario en todos; UCI si no mejora con tratamiento inicial."}
+ ]}
+]}

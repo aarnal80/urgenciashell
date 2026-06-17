@@ -1,0 +1,34 @@
+{"wikem_titulo": "Acute kidney injury", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"LRA posrenal por obstrucción bilateral completa","clave":"anuria brusca; globo vesical o hidronefrosis en ecografía; reversible si se desobstruye","slug":"retencion_aguda_de_orina"},
+   {"dx":"Hiperpotasemia grave secundaria","clave":"riesgo de arritmia fatal; ondas T picudas, QRS ancho","slug":"hiperpotasemia"},
+   {"dx":"Glomerulonefritis rápidamente progresiva","clave":"oliguria, HTA, edemas, cilindros hemáticos y proteinuria","slug":"sindrome_nefritico_agudo"},
+   {"dx":"Síndrome hepatorrenal tipo 1","clave":"cirrosis con ascitis; deterioro rápido sin causa renal aparente"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"LRA prerrenal (hipoperfusión)","clave":"la más frecuente; deshidratación, hemorragia, shock; FeNa < 1%, responde a volumen","slug":"shock"},
+   {"dx":"Necrosis tubular aguda","clave":"forma parenquimatosa habitual; isquemia o nefrotóxicos; FeNa > 1%, cilindros granulosos"},
+   {"dx":"Rabdomiólisis","clave":"orina oscura, CK muy elevada; mioglobinuria nefrotóxica","slug":"rabdomiolisis"},
+   {"dx":"Nefritis intersticial aguda","clave":"fármaco reciente, fiebre, eosinofiluria; a veces exantema"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"LRA posrenal por hiperplasia/tumor prostático","clave":"varón mayor, síntomas miccionales; sondaje resuelve","slug":"retencion_aguda_de_orina"},
+   {"dx":"Reagudización de enfermedad renal crónica","clave":"creatinina previa elevada, riñones pequeños en ecografía","slug":"enfermedad_renal_cronica"}
+ ]}
+], "plan": [
+ {"paso":"Evalúa estado de volemia y constantes","detalle":"TA, FC, diuresis, signos de deshidratación o sobrecarga. Vía venosa y monitorización si inestable. Sonda vesical para cuantificar diuresis."},
+ {"paso":"Solicita analítica y ECG urgentes","detalle":"Función renal, iones (descartar hiperK), gasometría (acidosis), hemograma, coagulación, sistemático de orina con sedimento e iones en orina (FeNa). ECG inmediato."},
+ {"paso":"Trata de inmediato las complicaciones vitales","sub":[
+   {"nivel":"critico","t":"Hiperpotasemia con cambios ECG → gluconato cálcico IV + insulina-glucosa + salbutamol nebulizado; valora resinas/diálisis."},
+   {"nivel":"emergente","t":"Acidosis grave (pH < 7,20) → bicarbonato sódico 1 M IV."},
+   {"nivel":"emergente","t":"Edema agudo de pulmón/sobrecarga refractaria → furosemida IV y considera diálisis urgente."}
+ ]},
+ {"paso":"Haz ecografía abdominal","detalle":"Prueba clave: descarta obstrucción (hidronefrosis, globo vesical) y valora tamaño renal para diferenciar de ERC."},
+ {"paso":"Clasifica y trata según el tipo","sub":[
+   {"t":"Prerrenal → reposición de volemia con suero salino (o hemoderivados si sangrado)."},
+   {"t":"Posrenal → desobstrucción urgente (sondaje vesical, talla suprapúbica o nefrostomía); vigila diuresis posobstructiva."},
+   {"t":"Parenquimatosa → trata la causa, retira nefrotóxicos y ajusta fármacos."}
+ ]},
+ {"paso":"Identifica indicaciones de diálisis urgente","detalle":"Hiperpotasemia o acidosis refractarias, sobrecarga de volumen refractaria, uremia grave (pericarditis, encefalopatía) o intoxicaciones dializables."},
+ {"paso":"Destino","detalle":"Ingreso de la mayoría de las LRA. UCI/nefrología si criterios de diálisis o inestabilidad."}
+]}

@@ -1,0 +1,31 @@
+{"wikem_titulo": "Acute asthma exacerbation", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Anafilaxia","clave":"inicio tras alérgeno, urticaria, angioedema, hipotensión; adrenalina IM","slug":"urticaria_y_anafilaxia"},
+   {"dx":"Obstrucción de vía aérea superior / cuerpo extraño","clave":"estridor, disfonía, inicio súbito; sibilancia localizada o fija"},
+   {"dx":"Neumotórax a tensión","clave":"dolor brusco, hipoventilación unilateral, timpanismo","slug":"neumotorax_espontaneo"},
+   {"dx":"Edema agudo de pulmón (asma cardial)","clave":"crepitantes bilaterales, ortopnea, B-líneas en POCUS","slug":"edema_agudo_de_pulmon_cardiogenico"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"EPOC agudizada","clave":"fumador, mayor edad, hipercapnia, antecedente de EPOC","slug":"epoc_agudizada"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hipoxia; sibilancias hasta en 25%","slug":"tromboembolia_pulmonar"},
+   {"dx":"Neumonía","clave":"fiebre, sibilancia focal, crepitantes, infiltrado","slug":"neumonia_adquirida_en_la_comunidad"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Disfunción de cuerdas vocales","clave":"estridor inspiratorio, a menudo confundido con asma refractaria"},
+   {"dx":"ERGE / aspiración","clave":"pirosis, tos nocturna, relación con la ingesta","slug":"patologia_esofagica_aguda"},
+   {"dx":"Broncoespasmo farmacológico","clave":"betabloqueante, AAS/AINE; relación temporal con el fármaco"}
+ ]}
+], "plan": [
+ {"paso":"Clasifica la gravedad de la crisis (primeros minutos)","detalle":"SatO2, FR, uso de musculatura accesoria, capacidad de hablar, nivel de conciencia y PEF/FEV1. El criterio más grave marca la categoría."},
+ {"paso":"Oxígeno y broncodilatadores de inicio","detalle":"O2 para SatO2 94-98%. Salbutamol 2,5-5 mg nebulizado (o cámara) repetido, asociado a bromuro de ipratropio 0,5 mg en crisis moderada-grave."},
+ {"paso":"Corticoide sistémico precoz","detalle":"Prednisona 40-60 mg VO o hidrocortisona 100-200 mg IV; administrar en la primera hora en toda crisis moderada-grave."},
+ {"paso":"Intensifica si crisis grave o mala respuesta","sub":[
+   {"nivel":"emergente","t":"Grave/refractaria → salbutamol nebulizado continuo + sulfato de magnesio 1,5-2 g IV en 20 min."},
+   {"nivel":"critico","t":"Riesgo vital (tórax silente, bradicardia, hipotensión, deterioro de conciencia, hipercapnia) → avisar UCI; valorar adrenalina y secuencia rápida de intubación."}
+ ]},
+ {"paso":"Reevalúa la respuesta a los 30-60 min","detalle":"Repite PEF/FEV1 y SatO2. Respuesta favorable: PEF o FEV1 >45% del teórico con incremento ≥50 L/min sobre el basal. Gasometría si fatiga o sospecha de hipercapnia (CO2>45 anormal)."},
+ {"paso":"Decide el destino","sub":[
+   {"t":"Buena respuesta mantenida (PEF >70%, asintomático) → alta con corticoide oral 5-7 días y ajuste de inhaladores."},
+   {"nivel":"emergente","t":"Respuesta parcial o factores de riesgo → observación/ingreso. Riesgo vital o hipercapnia → UCI."}
+ ]}
+]}

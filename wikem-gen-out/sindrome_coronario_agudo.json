@@ -1,0 +1,34 @@
+{"wikem_titulo": "Acute coronary syndrome (main)", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Disección aórtica","clave":"dolor brusco, desgarrante, irradiado a espalda; asimetría de pulsos/TA","slug":"sindrome_aortico_agudo"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hipoxia; factores de riesgo de TVP","slug":"tromboembolia_pulmonar"},
+   {"dx":"Taponamiento cardíaco","clave":"IY, tonos apagados, pulso paradójico; derrame en eco","slug":"taponamiento_cardiaco"},
+   {"dx":"Neumotórax a tensión","clave":"disnea brusca, hipofonesis unilateral, desviación traqueal","slug":"neumotorax_espontaneo"},
+   {"dx":"Perforación esofágica (Boerhaave)","clave":"dolor tras vómitos, enfisema subcutáneo, neumomediastino","slug":"patologia_esofagica_aguda"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Pericarditis aguda","clave":"dolor pleurítico que mejora al inclinarse; roce; ST cóncavo difuso con descenso del PR","slug":"pericarditis_aguda"},
+   {"dx":"Miocarditis","clave":"troponina elevada con antecedente viral; coronarias sin lesión","slug":"miocarditis_aguda"},
+   {"dx":"Síndrome de Takotsubo","clave":"mujer postmenopáusica tras estrés; balonización apical, coronarias normales"},
+   {"dx":"Dolor torácico por cocaína","clave":"consumo reciente, taquicardia, HTA","slug":"intoxicacion_aguda_por_cocaina"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"ERGE / espasmo esofágico","clave":"relación con la ingesta, pirosis; puede simular angina","slug":"patologia_esofagica_aguda"},
+   {"dx":"Dolor osteomuscular / costocondritis","clave":"reproducible a la palpación, mecánico"},
+   {"dx":"Crisis de ansiedad","clave":"parestesias, contexto ansioso; ECG y troponina normales","slug":"crisis_de_ansiedad"}
+ ]}
+], "plan": [
+ {"paso":"Reconoce y monitoriza (primeros minutos)","detalle":"Monitor ECG, TA y SatO2; vía venosa. O2 solo si SatO2 <90%. AAS 300 mg masticado."},
+ {"paso":"ECG de 12 derivaciones en <10 min","detalle":"Repite si cambia la clínica o es no diagnóstico. En BCRI aplica criterios de Sgarbossa. Considera derivaciones derechas/posteriores."},
+ {"paso":"Decide la estrategia según el ECG","sub":[
+   {"nivel":"critico","t":"SCACEST → reperfusión URGENTE: ICPp <120 min desde el FMC; si no es posible, fibrinólisis <10 min."},
+   {"nivel":"emergente","t":"SCASEST → estratifica riesgo (GRACE), anticoagula y doble antiagrega; coronariografía precoz si alto riesgo."}
+ ]},
+ {"paso":"Inicia tratamiento antitrombótico y antianginoso","detalle":"Doble antiagregación (AAS + ticagrelor/prasugrel/clopidogrel) y anticoagulación (enoxaparina/fondaparinux/heparina). Nitroglicerina y morfina para el dolor; betabloqueante si no hay contraindicación."},
+ {"paso":"Solicita troponina seriada y analítica","detalle":"hs-cTn 0 h y 1-3 h; hemograma, bioquímica, coagulación. No esperes el resultado para reperfundir en SCACEST."},
+ {"paso":"Vigila y trata complicaciones","sub":[
+   {"nivel":"critico","t":"Arritmias ventriculares/shock cardiogénico (Killip IV) → soporte avanzado y UCI inmediata."},
+   {"nivel":"critico","t":"IAM de VD con hipotensión → cargas de volumen; evita nitratos, diuréticos e IECA."}
+ ]},
+ {"paso":"Decide el destino","detalle":"Alto riesgo → UCI/unidad coronaria. Bajo riesgo (HEART) con troponinas negativas → observación/alta con seguimiento."}
+]}

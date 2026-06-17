@@ -1,0 +1,31 @@
+{"wikem_titulo": "Toxicology (main)", "ddx": [
+ {"grupo":"Crítico · toxíndromes con amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome simpaticomimético","clave":"HTA, taquicardia, hipertermia, midriasis, agitación, sudoración (cocaína, anfetaminas)","slug":"intoxicacion_aguda_por_cocaina"},
+   {"dx":"Síndrome opioide","clave":"miosis puntiforme, bradipnea, coma; responde a naloxona","slug":"intoxicacion_aguda_por_opiaceos_y_derivados"},
+   {"dx":"Síndrome colinérgico","clave":"SLUDGE, miosis, broncorrea, fasciculaciones, bradicardia (organofosforados)"},
+   {"dx":"Acidosis metabólica con anion gap (MUDPILES)","clave":"taquipnea, anion gap alto; metanol, etilenglicol, salicilatos, cetoacidosis"},
+   {"dx":"Hipoglucemia","clave":"coma/convulsión con glucemia baja; insulina, sulfonilureas; tratable de inmediato","slug":"hipoglucemia"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Síndrome anticolinérgico","clave":"piel seca y roja, midriasis, retención, delirio, hipertermia, taquicardia"},
+   {"dx":"Intoxicación por monóxido de carbono / cianuro","clave":"cefalea, coma, acidosis láctica; exposición a humo, lactato alto"},
+   {"dx":"Síndrome serotoninérgico / NMS","clave":"hipertermia, rigidez, clonus, alteración autonómica; fármacos serotoninérgicos/neurolépticos"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Síndrome sedante-hipnótico","clave":"depresión SNC con constantes estables (benzodiacepinas, alcohol)"}
+ ]}
+], "plan": [
+ {"paso":"ABCDE y monitorización","detalle":"Asegura vía aérea, ventilación y circulación. Monitor ECG, TA, SatO2, temperatura y glucemia capilar inmediata. Vía venosa."},
+ {"paso":"Aplica el coma cocktail ante coma/agitación inexplicada (DONT)","sub":[
+   {"nivel":"critico","t":"Hipoglucemia → glucosa 50% IV (precedida o acompañada de tiamina 100 mg en alcohólico/malnutrido)."},
+   {"nivel":"critico","t":"Sospecha de opioide (miosis + bradipnea) → naloxona 0,2-0,4 mg IV, repetir hasta 2 mg."}
+ ]},
+ {"paso":"Identifica el toxíndrome","detalle":"Examina pupilas, piel, constantes, ruidos respiratorios y nivel de conciencia para encuadrar el síndrome. Recoge anamnesis: tóxico, dosis, hora, coingestas."},
+ {"paso":"Solicita pruebas dirigidas","detalle":"Gasometría con anion gap y gap osmolar, glucosa, iones, función renal/hepática, CK, ECG (QRS/QT). Niveles de paracetamol y salicilatos sistemáticos en sobredosis intencionada."},
+ {"paso":"Descontaminación si está indicada","detalle":"Carbón activado 1 g/kg si ingesta <1-2 h y vía aérea protegida. Irrigación intestinal total en fármacos de liberación retardada/metales. Evita inducir el vómito."},
+ {"paso":"Administra el antídoto específico","detalle":"NAC (paracetamol), naloxona (opioides), flumazenilo (benzodiacepinas, con cautela), atropina/pralidoxima (organofosforados), bicarbonato (QRS ancho). Consulta toxicología."},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"critico","t":"Inestabilidad, depresión SNC, acidosis o arritmia → UCI/observación monitorizada."},
+   {"t":"Asintomático tras observación adecuada y niveles seguros → alta con valoración psiquiátrica si intencionada."}
+ ]}
+]}

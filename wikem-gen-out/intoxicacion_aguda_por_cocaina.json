@@ -1,0 +1,31 @@
+{"wikem_titulo": "Cocaine toxicity", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome coronario agudo por cocaína","clave":"dolor torácico, vasoespasmo/trombosis; SCA incluso en jóvenes sin factores de riesgo","slug":"sindrome_coronario_agudo"},
+   {"dx":"Disección aórtica","clave":"dolor desgarrante irradiado a espalda, asimetría de pulsos/TA; favorecida por HTA grave","slug":"sindrome_aortico_agudo"},
+   {"dx":"Ictus isquémico o hemorrágico","clave":"focalidad neurológica o alteración persistente de conciencia","slug":"ictus"},
+   {"dx":"Hipertermia con rabdomiólisis","clave":"agitación, hipertermia, CK elevada, fracaso renal; alto riesgo de muerte","slug":"rabdomiolisis"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Otros simpaticomiméticos (anfetaminas, MDMA, catinonas)","clave":"toxíndrome idéntico; orientar por anamnesis","slug":"intoxicacion_aguda_por_anfetaminas_y_drogas_de_diseno"},
+   {"dx":"Body packer/stuffer","clave":"síndrome adrenérgico grave u obstrucción intestinal; convulsiones refractarias"},
+   {"dx":"Síndrome anticolinérgico","clave":"piel seca y caliente (vs. sudoración en cocaína), retención urinaria"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Crisis de ansiedad / abstinencia","clave":"taquicardia y agitación sin hipertermia ni datos de daño orgánico"}
+ ]}
+], "plan": [
+ {"paso":"Monitoriza y estabiliza","detalle":"Monitor ECG, TA, SatO2, temperatura. Vía venosa y sueroterapia (depleción hidrosalina frecuente). Glucemia capilar. O2 si hipoxemia."},
+ {"paso":"Sedación con benzodiacepinas como pilar","detalle":"Diazepam 5-10 mg IV o lorazepam 2 mg IV cada 5 min según agitación. Evita haloperidol (baja umbral convulsivo, arritmias, hipertermia). NUNCA contención física sin sedación."},
+ {"paso":"Trata la urgencia hipertensiva sin betabloqueantes","sub":[
+   {"nivel":"emergente","t":"HTA grave → benzodiacepinas y fentolamina 2,5-5 mg IV (o nitroprusiato/nitroglicerina). Betabloqueantes CONTRAINDICADOS (HTA paradójica)."}
+ ]},
+ {"paso":"Maneja el dolor torácico como SCA","detalle":"ECG seriado, troponina. AAS, nitroglicerina y benzodiacepinas; fentolamina si vasoespasmo. ICP si SCACEST."},
+ {"paso":"Corrige las arritmias y el QRS ancho","sub":[
+   {"nivel":"critico","t":"QRS ancho/hipotensión → bicarbonato sódico 1 M IV en bolo."}
+ ]},
+ {"paso":"Enfría la hipertermia y trata rabdomiólisis","detalle":"Enfriamiento activo agresivo si Tª elevada; sueroterapia abundante, vigilar CK y función renal. Sedación profunda."},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"critico","t":"Disfunción orgánica (isquemia, ICC, rabdomiólisis) o body packer sintomático → ingreso/UCI; valorar cirugía."},
+   {"t":"Sin complicaciones tras observación → alta; valoración psiquiátrica/deshabituación."}
+ ]}
+]}

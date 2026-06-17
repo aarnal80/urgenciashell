@@ -1,0 +1,35 @@
+{
+  "wikem_titulo": "Hypermagnesemia",
+  "ddx": [
+    {
+      "nivel": "emergente",
+      "grupo": "Causa subyacente / emergente",
+      "items": [
+        {"dx": "Insuficiencia renal (aguda o crónica)", "clave": "Causa casi obligada; aclaramiento <30 mL/min, incapaz de eliminar el Mg aportado", "slug": "lesion_renal_aguda"},
+        {"dx": "Aporte exógeno masivo de magnesio", "clave": "Antiácidos, laxantes/enemas con Mg, sales de Epsom, Mg IV (preeclampsia)", "slug": null},
+        {"dx": "Cetoacidosis diabética / catabolismo celular", "clave": "Salida de Mg intracelular; hiperglucemia, acidosis, deshidratación", "slug": "cetoacidosis_diabetica"}
+      ]
+    },
+    {
+      "nivel": "no_emergente",
+      "grupo": "Imita la clínica (debilidad / hiporreflexia / bradiarritmia)",
+      "items": [
+        {"dx": "Hiperpotasemia", "clave": "Debilidad y cambios ECG similares; T picudas, suele coexistir en el renal", "slug": "hiperpotasemia"},
+        {"dx": "Intoxicación por litio", "clave": "Temblor, ataxia, alteración mental; antecedente de toma de litio", "slug": "intoxicacion_aguda_por_litio"},
+        {"dx": "Botulismo / síndrome de Guillain-Barré", "clave": "Parálisis flácida descendente o ascendente, sin trastorno iónico", "slug": "botulismo"}
+      ]
+    }
+  ],
+  "plan": [
+    {"paso": "Suspender de inmediato todo aporte exógeno de magnesio", "detalle": "Antiácidos, laxantes, enemas y perfusiones con Mg. Confirmar con Mg sérico (tóxico >3,5 mg/dL)."},
+    {"paso": "Monitorizar y valorar gravedad por ECG y clínica", "detalle": "ECG (PR largo, QRS ancho ≥5 mg/dL; BAV completo >15 mg/dL), reflejos osteotendinosos, frecuencia respiratoria, función renal e iones."},
+    {"paso": "Administrar calcio IV urgente si cardiotoxicidad, parálisis o depresión respiratoria", "detalle": "Antagoniza la membrana de forma inmediata. Gluconato cálcico 10% 15-30 mL IV en 5 min, o cloruro cálcico 10% 5-10 mL IV (vía central). Repetible.", "nivel": "critico"},
+    {"paso": "Forzar la eliminación renal en formas leves-moderadas con función renal conservada", "detalle": "SSF IV + furosemida 20-40 mg IV para aumentar la excreción urinaria de Mg; vigilar volemia e iones."},
+    {"paso": "Indicar hemodiálisis en insuficiencia renal grave o Mg muy elevado", "sub": [
+      {"t": "Mg >8 mg/dL, fracaso renal o clínica refractaria → hemodiálisis urgente", "nivel": "critico"},
+      {"t": "Inestabilidad hemodinámica → soporte y diálisis sin demora", "nivel": "critico"}
+    ]},
+    {"paso": "Soporte ventilatorio si insuficiencia respiratoria", "detalle": "Vigilar Mg >10 mg/dL (apnea); preparar IOT y ventilación mecánica."},
+    {"paso": "Corregir factores que potencian la cardiotoxicidad", "detalle": "Tratar hiperpotasemia, acidosis metabólica y revisar la digital concomitante."}
+  ]
+}

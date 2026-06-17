@@ -1,0 +1,26 @@
+{"wikem_titulo": "Myocarditis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome coronario agudo","clave":"el más importante a descartar; dolor opresivo, ST/troponina con coronarias patológicas; en miocarditis coronarias normales","slug":"sindrome_coronario_agudo"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hipoxia, sobrecarga derecha; factores de riesgo de TVP","slug":"tromboembolia_pulmonar"},
+   {"dx":"Taponamiento cardíaco","clave":"tonos apagados, IY, pulso paradójico; eco con derrame y colapso de cavidades","slug":"taponamiento_cardiaco"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Pericarditis / miopericarditis","clave":"dolor pleurítico que mejora al inclinarse, roce, ST cóncavo difuso; solapamiento clínico","slug":"pericarditis_aguda"},
+   {"dx":"Miocardiopatía de Takotsubo","clave":"mujer posmenopáusica tras estrés; balonización apical, coronarias normales","slug":"sindrome_coronario_agudo"},
+   {"dx":"Sepsis de otro origen","clave":"foco infeccioso, fiebre, hipotensión distributiva; sin disfunción ventricular primaria","slug":"sepsis"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Neumonía","clave":"fiebre, tos, condensación radiológica; dolor pleurítico sin elevación de troponina","slug":"neumonia_adquirida_en_la_comunidad"}
+ ]}
+], "plan": [
+ {"paso":"Monitoriza y descarta SCA primero","detalle":"Monitor ECG continuo (alto riesgo arrítmico), TA, SatO2, vía venosa. ECG seriado y troponina; valora angio si sospecha de SCA."},
+ {"paso":"Solicita pruebas de apoyo diagnóstico","detalle":"Troponina, CK-MB, hemograma, PCR, NT-proBNP, serologías virales. Rx tórax. Eco para evaluar FEVI y derrame. RM cardíaca es la técnica no invasiva de elección."},
+ {"paso":"Trata el soporte y la causa","detalle":"Manejo como insuficiencia cardíaca si hay disfunción VI. Antitérmicos (paracetamol, metamizol). Evita AINE en miocarditis franca. Reposo y abstención de ejercicio."},
+ {"paso":"Vigila y trata las arritmias / bloqueos","sub":[
+   {"nivel":"critico","t":"Arritmia ventricular sostenida o BAV completo → soporte avanzado, considera marcapasos transitorio."}
+ ]},
+ {"paso":"Identifica la miocarditis fulminante","sub":[
+   {"nivel":"critico","t":"Shock cardiogénico / inestabilidad → soporte inotrópico-vasopresor y traslado a centro con soporte circulatorio mecánico (ECMO/balón)."}
+ ]},
+ {"paso":"Destino","detalle":"Ingreso de todo caso sospechoso en cama monitorizada. UCI si inestabilidad, arritmias o FEVI reducida. Cardiología precoz."}
+]}

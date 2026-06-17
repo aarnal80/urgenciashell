@@ -1,0 +1,29 @@
+{"wikem_titulo": "Aneurysmal subarachnoid hemorrhage", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hemorragia intracerebral","clave":"focalidad, HTA marcada, deterioro de conciencia; TC","slug":"ictus"},
+   {"dx":"Meningoencefalitis","clave":"fiebre, rigidez de nuca, alteración mental; punción lumbar","slug":"sindrome_meningeo_absceso_cerebral_absceso_epidural_espinal_y_encefalitis"},
+   {"dx":"Disección arterial cervical (vertebral/carótida)","clave":"cervicalgia/cefalea, Horner o déficit focal tras esfuerzo cervical","slug":"sindrome_aortico_agudo"},
+   {"dx":"Trombosis venosa cerebral","clave":"cefalea progresiva, crisis, estado protrombótico/puerperio"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Emergencia hipertensiva / encefalopatía","clave":"TA muy elevada con afectación de órgano diana","slug":"emergencia_hipertensiva"},
+   {"dx":"Síndrome de vasoconstricción cerebral reversible (RCVS)","clave":"cefaleas 'en trueno' recurrentes, desencadenantes vasoactivos"},
+   {"dx":"Apoplejía hipofisaria","clave":"cefalea súbita + oftalmoplejía + déficit visual","slug":"apoplejia_hipofisaria"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Migraña","clave":"episodios previos similares, aura, fotofobia; instauración no instantánea","slug":"cefaleas"},
+   {"dx":"Cefalea tensional / en racimos","clave":"patrón conocido, sin signos de alarma","slug":"cefaleas"},
+   {"dx":"Arteritis de la temporal","clave":">50 años, claudicación mandibular, VSG alta","slug":"perdida_brusca_de_la_vision"}
+ ]}
+], "plan": [
+ {"paso":"Estabiliza y protege la vía aérea","detalle":"ABC, monitor, O2, vía venosa. Si Glasgow ≤8 → intubación. Reposo, cabecero a 30º, ambiente tranquilo."},
+ {"paso":"Realiza TC craneal urgente sin contraste","sub":[
+   {"nivel":"critico","t":"TC positiva → confirma HSA, valorar angio-TC y avisar a Neurocirugía/Neurorradiología"},
+   {"t":"TC negativa con alta sospecha (>6 h) → punción lumbar buscando xantocromía"}
+ ]},
+ {"paso":"Controla la TA para prevenir resangrado","detalle":"Objetivo PAS <160 mmHg con labetalol o urapidil IV; evita hipotensión que comprometa la perfusión."},
+ {"paso":"Trata el dolor y los síntomas","detalle":"Analgesia (paracetamol, metamizol; morfina si precisa), antieméticos (metoclopramida), evitar valsalva con laxantes."},
+ {"paso":"Inicia neuroprotección y profilaxis","detalle":"Nimodipino 60 mg/4 h VO para prevenir vasoespasmo. Profilaxis de crisis si indicado (levetiracetam)."},
+ {"paso":"Vigila y trata complicaciones","detalle":"Resangrado, hidrocefalia (valorar drenaje ventricular), vasoespasmo (días 5-14) e hiponatremia."},
+ {"paso":"Traslada e ingresa","detalle":"Todo HSA aneurismática confirmada → ingreso en UCI y centro con Neurocirugía. HSA descartada (TC + PL negativas) → alta con seguimiento."}
+]}

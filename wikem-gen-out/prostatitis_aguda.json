@@ -1,0 +1,27 @@
+{"wikem_titulo": "Prostatitis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Sepsis / shock séptico de origen urinario","clave":"hipotensión, taquicardia, alteración de conciencia, fiebre elevada","slug":"sepsis"},
+   {"dx":"Absceso prostático","clave":"fiebre persistente pese a antibiótico, fluctuación prostática; precisa drenaje"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Pielonefritis aguda","clave":"fiebre, dolor lumbar y puñopercusión positiva en lugar de dolor perineal","slug":"pielonefritis_aguda"},
+   {"dx":"Retención aguda de orina","clave":"globo vesical, imposibilidad de orinar; requiere cistostomía, no sonda uretral","slug":"retencion_aguda_de_orina"},
+   {"dx":"Epididimoorquitis / torsión testicular","clave":"dolor y tumefacción escrotal; descarta torsión en jóvenes","slug":"sindrome_escrotal_agudo"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Cistitis / ITU baja","clave":"síndrome miccional sin fiebre ni afectación general ni dolor prostático","slug":"infecciones_urinarias_bajas_cistitis_y_uretritis"},
+   {"dx":"Uretritis","clave":"disuria con exudado uretral, conducta de riesgo sexual"},
+   {"dx":"Prostatitis crónica / síndrome de dolor pélvico","clave":"clínica larvada y recurrente, sin fiebre ni afectación aguda"}
+ ]}
+], "plan": [
+ {"paso":"Reconoce el cuadro y valora gravedad","detalle":"Fiebre alta, escalofríos, mialgias y síndrome miccional. Tacto rectal: próstata aumentada, tensa y dolorosa. NO masajear la próstata (riesgo de bacteriemia)."},
+ {"paso":"Monitoriza y descarta sepsis","sub":[
+   {"nivel":"critico","t":"Sepsis grave/shock séptico → cristaloides, hemocultivos, lactato y antibiótico de amplio espectro precoz (meropenem + amikacina o ceftazidima-avibactam)."}
+ ]},
+ {"paso":"Solicita pruebas","detalle":"Hemograma, función renal, PCR/PCT, sistemático y urocultivo, hemocultivos si fiebre. El diagnóstico es clínico (cultivo puede ser normal)."},
+ {"paso":"Maneja la retención de orina si aparece","sub":[
+   {"nivel":"emergente","t":"Retención aguda → cistostomía suprapúbica percutánea; está contraindicada la manipulación uretral."}
+ ]},
+ {"paso":"Inicia antibioterapia parenteral","detalle":"Sin sepsis ni multirresistencia: ceftriaxona 1-2 g/24h IV o cefotaxima. Con factores de riesgo de BLEE: ertapenem o piperacilina-tazobactam. Añade analgesia/antitérmico (paracetamol, metamizol)."},
+ {"paso":"Observa e ingresa","detalle":"Observación mínima 24 h con antibiótico IV. Ingreso si paciente tóxico, retención, sepsis o absceso. Al alta: completar 2-4 semanas vía oral y seguimiento por Urología con urocultivo a los 7 días."}
+]}

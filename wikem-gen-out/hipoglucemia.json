@@ -1,0 +1,31 @@
+{"wikem_titulo": "Hypoglycemia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Sepsis","clave":"fiebre/hipotermia, hipotensión, foco infeccioso; hipoglucemia como signo de gravedad","slug":"sepsis"},
+   {"dx":"Insuficiencia suprarrenal (crisis addisoniana)","clave":"hipotensión, hiponatremia, hiperpotasemia, hiperpigmentación","slug":"crisis_addisoniana"},
+   {"dx":"Fallo hepático fulminante","clave":"ictericia, coagulopatía, encefalopatía","slug":"encefalopatia_hepatica_aguda"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Sobredosis de secretagogos (sulfonilureas/glinidas)","clave":"hipoglucemia prolongada y recurrente; alta sospecha de recaída"},
+   {"dx":"Exceso de insulina exógena","clave":"diabético insulinizado; péptido C suprimido"},
+   {"dx":"Cetoacidosis alcohólica / OH","clave":"consumo de alcohol, ayuno, cetosis; déficit de glucógeno"},
+   {"dx":"Crisis mixedematosa","clave":"hipotermia, bradicardia, alteración de conciencia, hiponatremia","slug":"crisis_mixedematosa"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Insulinoma","clave":"hipoglucemias de ayuno recurrentes; insulina y péptido C elevados (tríada de Whipple)"},
+   {"dx":"Hipoglucemia reactiva/postcirugía (bypass)","clave":"síntomas posprandiales tras cirugía bariátrica/gástrica"}
+ ]}
+], "plan": [
+ {"paso":"Confirma con glucemia capilar","detalle":"Tira reactiva inmediata. Glucemia ≤70 mg/dL con clínica compatible (tríada de Whipple). Extrae muestra venosa si etiología no clara."},
+ {"paso":"Corrige según nivel de conciencia","sub":[
+   {"t":"consciente y tolera VO → 15-20 g de hidratos rápidos (glucosa pura oral), repite a los 15 min si persiste"},
+   {"nivel":"critico","t":"bajo nivel de conciencia/no tolera VO → glucosa hipertónica 50% 50 mL IV (1 ampolla); reevalúa a los minutos"},
+   {"t":"sin acceso venoso → glucagón 1 mg SC/IM (menos eficaz en hepatópata, desnutrido o alcohólico)"}
+ ]},
+ {"paso":"Administra tiamina si alcoholismo/desnutrición","detalle":"Tiamina 100 mg IV antes o con la glucosa para prevenir Wernicke."},
+ {"paso":"Mantén aporte y vigila recurrencia","detalle":"Tras revertir, comida con hidratos complejos. Perfusión de glucosa 10% si recurre; vigilancia estrecha de glucemias seriadas."},
+ {"paso":"Busca el desencadenante","detalle":"Diabético con causa clara y no grave: poco estudio. Si grave o causa incierta: bioquímica, función hepática/renal, tóxicos, ECG y estudio de foco infeccioso."},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"emergente","t":"sulfonilureas/glinidas, insulina de acción prolongada o causa no aclarada → ingreso/observación prolongada (octreotida en sulfonilureas refractarias)"},
+   {"t":"reversión rápida, causa banal identificada, tolera comida y buen soporte → alta tras ≥4 h de observación sin recurrencia"}
+ ]}
+]}

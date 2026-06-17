@@ -1,0 +1,20 @@
+{
+ "id": "curb65",
+ "nombre": "CURB-65",
+ "nombre_largo": "Escala CURB-65 de gravedad de la neumonía adquirida en la comunidad",
+ "para": "Estimar la gravedad de la neumonía adquirida en la comunidad y orientar la decisión de ingreso.",
+ "tipo": "suma",
+ "items": [
+  {"id": "confusion", "label": "Confusión (desorientación de nueva aparición)", "tipo": "binario", "puntos": 1},
+  {"id": "urea", "label": "Urea > 7 mmol/L (BUN > 19 mg/dL)", "tipo": "binario", "puntos": 1},
+  {"id": "fr", "label": "Frecuencia respiratoria ≥ 30/min", "tipo": "binario", "puntos": 1},
+  {"id": "ta", "label": "TA sistólica < 90 mmHg o diastólica ≤ 60 mmHg", "tipo": "binario", "puntos": 1},
+  {"id": "edad65", "label": "Edad ≥ 65 años", "tipo": "binario", "puntos": 1}
+ ],
+ "interpretacion": [
+  {"min": 0, "max": 1, "label": "Riesgo bajo", "detalle": "Mortalidad baja. Tratamiento ambulatorio."},
+  {"min": 2, "max": 2, "label": "Riesgo intermedio", "detalle": "Valorar ingreso hospitalario u observación."},
+  {"min": 3, "max": null, "label": "Riesgo alto", "detalle": "Ingreso hospitalario. Con 4-5 puntos, valorar ingreso en UCI."}
+ ],
+ "nota": "Cada ítem suma 1 punto; puntuación total 0-5."
+}

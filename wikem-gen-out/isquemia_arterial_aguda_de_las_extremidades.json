@@ -1,0 +1,27 @@
+{"wikem_titulo": "Acute arterial ischemia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Flegmasía cerúlea dolens (TVP masiva)","clave":"edema masivo cianótico de toda la extremidad, ABOLICIÓN de pulsos por oclusión venosa; eco confirma TVP","slug":"enfermedad_tromboembolica_venosa"},
+   {"dx":"Síndrome compartimental","clave":"dolor desproporcionado al estiramiento pasivo, tensión a la palpación; tras reperfusión o trauma"},
+   {"dx":"Lesión arterial traumática","clave":"antecedente traumático, hemorragia o hematoma expansivo, ausencia de pulso distal"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Trombosis venosa profunda","clave":"dolor, edema, calor unilateral; pulsos CONSERVADOS, sin palidez ni frialdad","slug":"enfermedad_tromboembolica_venosa"},
+   {"dx":"Ateroembolismo (síndrome del dedo azul)","clave":"cianosis digital con pulsos distales presentes; livedo, fuente proximal","slug":"complicaciones_del_sindrome_varicoso"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Arteriopatía periférica crónica","clave":"claudicación progresiva, frialdad crónica; sin instauración brusca"},
+   {"dx":"Fenómeno de Raynaud / vasoespasmo","clave":"palidez-cianosis-rubor episódico desencadenado por frío, reversible"},
+   {"dx":"Celulitis","clave":"eritema caliente, fiebre, sin déficit de pulsos ni de movilidad","slug":"lesiones_elementales"}
+ ]}
+], "plan": [
+ {"paso":"Reconoce las 6 P y cronometra","detalle":"Dolor, palidez, parestesias, parálisis, ausencia de pulsos, poiquilotermia (frialdad). La ventana para salvar la extremidad es de 4-6 h: el tiempo es tejido."},
+ {"paso":"Explora pulsos y señal Doppler","detalle":"Palpa y compara pulsos bilaterales; Doppler arterial y venoso. Clasifica por Rutherford (I, IIa, IIb, III). Eco/angio-TC no deben retrasar el tratamiento."},
+ {"paso":"Anticoagula de inmediato","detalle":"Heparina sódica IV: bolo 80 U/kg → perfusión 18 U/kg/h. AAS. Analgesia potente (morfina). Mantén la extremidad en declive, protegida y caliente; no aplicar calor directo."},
+ {"paso":"Avisa a cirugía vascular y decide según Rutherford","sub":[
+   {"nivel":"emergente","t":"I-IIa (viable) → anticoagulación; revascularización programada/diferida."},
+   {"nivel":"critico","t":"IIb (amenaza inmediata, parálisis/déficit sensitivo) → revascularización URGENTE (embolectomía/trombectomía/trombólisis intraarterial)."},
+   {"nivel":"critico","t":"III (irreversible: anestesia, rigidez, flictenas) → amputación."}
+ ]},
+ {"paso":"Distingue embolia de trombosis","detalle":"Embolia (FA, prótesis, IAM) → embolectomía. Trombosis sobre placa/injerto → trombólisis intraarterial o trombectomía. Radiología intervencionista si demora vascular."},
+ {"paso":"Vigila la reperfusión y el destino","detalle":"Tras revascularizar, vigila síndrome compartimental, rabdomiólisis e hiperpotasemia. Ingreso en vascular/UCI según gravedad."}
+]}

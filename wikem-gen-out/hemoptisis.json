@@ -1,0 +1,30 @@
+{"wikem_titulo": "Hemoptysis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hemoptisis masiva / hemorragia alveolar difusa","clave":">100 mL/h o >600 mL/24h, o inestabilidad; riesgo de asfixia, no de exanguinación","slug":"sepsis"},
+   {"dx":"Tromboembolia pulmonar con infarto","clave":"disnea súbita, dolor pleurítico, hemoptisis escasa, factores de riesgo de TVP","slug":"tromboembolia_pulmonar"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Cáncer de pulmón","clave":">40 años, fumador, síndrome constitucional, hemoptisis recidivante"},
+   {"dx":"Tuberculosis","clave":"tos crónica, fiebre, sudoración nocturna, contexto epidemiológico"},
+   {"dx":"Neumonía / absceso pulmonar","clave":"fiebre, esputo purulento, infiltrado o cavitación","slug":"neumonia_adquirida_en_la_comunidad"},
+   {"dx":"Insuficiencia cardíaca / estenosis mitral","clave":"esputo rosado espumoso, ortopnea, soplo diastólico","slug":"insuficiencia_cardiaca"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Bronquitis / bronquiectasias","clave":"causa más frecuente de hemoptisis leve; esputo crónico abundante"},
+   {"dx":"Pseudohemoptisis (epistaxis / hematemesis)","clave":"sangre de origen ORL o digestivo; pH ácido en hematemesis, alcalino en hemoptisis","slug":"epistaxis"},
+   {"dx":"Coagulopatía / antiagregación-anticoagulación","clave":"fármacos antitrombóticos, trombopenia, uremia"}
+ ]}
+], "plan": [
+ {"paso":"Evalúa la gravedad y estabiliza (primeros minutos)","detalle":"Monitor, SatO2, TA, FC. Cuantifica el volumen y el ritmo del sangrado. Dos vías de grueso calibre, analítica con hemograma y coagulación, pruebas cruzadas."},
+ {"paso":"Confirma que es hemoptisis verdadera","detalle":"Diferencia de hematemesis (pH ácido, restos alimentarios) y epistaxis. Exploración ORL básica."},
+ {"paso":"Protege la vía aérea en hemoptisis masiva","sub":[
+   {"nivel":"critico","t":"Sangrado masivo o asfixia → decúbito lateral sobre el pulmón sangrante, aspiración, intubación con tubo ≥8 mm; valorar intubación selectiva del pulmón sano."},
+   {"nivel":"critico","t":"Inestabilidad o Hto <27% → transfusión de hematíes."}
+ ]},
+ {"paso":"Corrige la coagulación y frena el sangrado","detalle":"Revierte anticoagulación; vitamina K / plasma fresco si coagulopatía. Ácido tranexámico: nebulizado 500 mg/8h o IV. Antitusígeno (codeína) para reducir el esfuerzo tusivo."},
+ {"paso":"Localiza el origen con imagen","detalle":"Radiografía de tórax inicial (normal hasta en 30%). Angio-TC de tórax con contraste para localizar el sangrado y orientar tratamiento; broncoscopia si gross hemoptysis."},
+ {"paso":"Tratamiento definitivo y destino","sub":[
+   {"nivel":"emergente","t":"Hemorragia amenazante → embolización de arterias bronquiales (de elección), técnicas endoscópicas o cirugía. Ingreso/UCI."},
+   {"t":"Hemoptisis escasa, <40 años, no fumador, radiografía normal → alta con estudio ambulatorio; si riesgo de neoplasia, valorar con neumología antes del alta."}
+ ]}
+]}

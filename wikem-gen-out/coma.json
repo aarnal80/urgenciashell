@@ -1,0 +1,29 @@
+{"wikem_titulo": "Altered mental status", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hipoglucemia","clave":"glucemia capilar baja; revierte con glucosa; siempre descartar primero","slug":"hipoglucemia"},
+   {"dx":"Hemorragia intracraneal / HSA","clave":"focalidad, anisocoria, cefalea súbita; TC craneal","slug":"hemorragia_subaracnoidea_espontanea"},
+   {"dx":"Ictus de tronco/hemisférico extenso","clave":"focalidad neurológica, desviación oculocefálica","slug":"ictus"},
+   {"dx":"Intoxicación por opiáceos","clave":"miosis puntiforme, bradipnea; responde a naloxona","slug":"intoxicacion_aguda_por_opiaceos_y_derivados"},
+   {"dx":"Meningoencefalitis","clave":"fiebre, rigidez de nuca, alteración mental; punción lumbar","slug":"sindrome_meningeo_absceso_cerebral_absceso_epidural_espinal_y_encefalitis"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Estatus epiléptico no convulsivo / postcrítico","clave":"fluctuación, automatismos sutiles; EEG diagnóstico","slug":"crisis_epilepticas"},
+   {"dx":"Encefalopatía hepática","clave":"hepatopatía, asterixis, fetor; amonio elevado","slug":"encefalopatia_hepatica_aguda"},
+   {"dx":"Trastornos hidroelectrolíticos (Na, Ca)","clave":"hipo/hipernatremia, hipercalcemia; corregir según gravedad","slug":"hiponatremia"},
+   {"dx":"Encefalopatía de Wernicke","clave":"etilismo/desnutrición; oftalmoplejía, ataxia; tiamina urgente"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Encefalopatía tóxico-metabólica (delirium)","clave":"curso fluctuante, ancianos, factor precipitante (infección, fármacos)","slug":"sepsis"},
+   {"dx":"Causa psiquiátrica (psicosis, catatonía)","clave":"exclusión de organicidad; exploración neurológica normal","slug":"agitacion_psicomotriz"}
+ ]}
+], "plan": [
+ {"paso":"ABC y protección de vía aérea","detalle":"O2, monitorización, vía venosa. Si Glasgow ≤8 o no protege vía aérea → intubación endotraqueal."},
+ {"paso":"Administra el cóctel del coma empírico","detalle":"Glucosa hipertónica (50 mL al 50%) si hipoglucemia; tiamina 100 mg IV antes/con la glucosa; naloxona 0,4-2 mg IV si sospecha opiáceos."},
+ {"paso":"Exploración neurológica focalizada","detalle":"Glasgow, pupilas, reflejos oculocefálicos/oculovestibulares, patrón respiratorio y respuesta motora para localizar la lesión."},
+ {"paso":"Solicita analítica y tóxicos","detalle":"Glucemia, iones, función renal/hepática, amonio, gasometría, hemograma, tóxicos en orina y niveles si procede."},
+ {"paso":"Neuroimagen y punción lumbar según orientación","sub":[
+   {"nivel":"critico","t":"focalidad, anisocoria o signos de herniación → TC craneal urgente; manitol y control de PaCO2 si HTIC"},
+   {"nivel":"emergente","t":"fiebre + rigidez de nuca → hemocultivos, antibiótico empírico + aciclovir y punción lumbar tras TC"}
+ ]},
+ {"paso":"Trata la causa y decide destino","detalle":"Corrige el factor identificado. Ingreso en UCI si Glasgow ≤12, intubado o inestable; alta solo si causa benigna resuelta y entorno seguro."}
+]}

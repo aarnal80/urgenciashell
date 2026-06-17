@@ -1,0 +1,31 @@
+{"wikem_titulo": "Syncope", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Arritmia (BAV avanzado, TV/torsades, QT largo, Brugada)","clave":"síncope brusco sin pródromos, en decúbito o esfuerzo; ECG patológico","slug":"fibrilacion_y_fluter_auriculares_arritmias_auriculoventricul"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hipoxia; factores de riesgo de TVP","slug":"tromboembolia_pulmonar"},
+   {"dx":"Disección aórtica","clave":"dolor torácico desgarrante irradiado a espalda; asimetría de pulsos/TA","slug":"sindrome_aortico_agudo"},
+   {"dx":"Hemorragia/sangrado oculto (HDA, AAA, ectópico)","clave":"hipotensión, anemia, dolor abdominal; melenas o masa pulsátil","slug":"hemorragia_digestiva_alta"},
+   {"dx":"Síndrome coronario agudo","clave":"dolor torácico, cortejo vegetativo; cambios ECG isquémicos","slug":"sindrome_coronario_agudo"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Estenosis aórtica / MCH obstructiva","clave":"síncope de esfuerzo, soplo sistólico eyectivo","slug":"miocarditis_aguda"},
+   {"dx":"Hemorragia subaracnoidea","clave":"cefalea súbita 'en trueno' previa o asociada","slug":"hemorragia_subaracnoidea_espontanea"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Síncope vasovagal/neuromediado","clave":"pródromos (calor, náusea, sudor), desencadenante emocional/dolor, recuperación rápida"},
+   {"dx":"Síncope ortostático","clave":"al incorporarse; depleción de volumen o fármacos hipotensores"},
+   {"dx":"Crisis epiléptica","clave":"movimientos tónico-clónicos, mordedura lateral de lengua, confusión postcrítica","slug":"crisis_epilepticas"}
+ ]}
+], "plan": [
+ {"paso":"Confirma la recuperación y monitoriza","detalle":"Monitor, TA en decúbito y bipedestación, SatO2, glucemia capilar. Vía venosa si inestable."},
+ {"paso":"Realiza ECG de 12 derivaciones a TODOS","detalle":"Busca BAV, QT largo/corto, Brugada, preexcitación, signos de isquemia, datos de TEP o MCH."},
+ {"paso":"Anamnesis y exploración dirigidas","detalle":"Circunstancias, pródromos, esfuerzo/decúbito, cardiopatía previa, fármacos. Tacto rectal si sospecha de sangrado."},
+ {"paso":"Descarta causas tiempo-dependientes según sospecha","sub":[
+   {"nivel":"critico","t":"sospecha de TEP/SCA/disección/sangrado → analítica con troponina/dímero D, imagen urgente (angio-TC, eco) y tratamiento específico"}
+ ]},
+ {"paso":"Estratifica el riesgo","detalle":"Regla de San Francisco (ICC, disnea, ECG anormal, Hto <30%, PAS <90). Cualquier criterio o ECG de riesgo = alto riesgo."},
+ {"paso":"Corrige el desencadenante en bajo riesgo","detalle":"Reposición de volumen si ortostatismo; revisa y ajusta fármacos hipotensores."},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"emergente","t":"alto riesgo o causa cardiogénica → ingreso/monitorización y valoración por Cardiología"},
+   {"t":"síncope vasovagal típico con ECG normal y bajo riesgo → alta con recomendaciones y seguimiento"}
+ ]}
+]}

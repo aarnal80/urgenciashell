@@ -1,0 +1,32 @@
+{"wikem_titulo": "Headache", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hemorragia subaracnoidea","clave":"cefalea 'en trueno', máxima en segundos; rigidez de nuca","slug":"hemorragia_subaracnoidea_espontanea"},
+   {"dx":"Meningitis / encefalitis","clave":"fiebre, rigidez de nuca, fotofobia, alteración de conciencia","slug":"sindrome_meningeo_absceso_cerebral_absceso_epidural_espinal_y_encefalitis"},
+   {"dx":"Hemorragia intracraneal / ictus","clave":"focalidad neurológica, HTA, anticoagulación","slug":"ictus"},
+   {"dx":"Intoxicación por monóxido de carbono","clave":"cefalea en varios convivientes, exposición a combustión; carboxihemoglobina"},
+   {"dx":"Trombosis venosa cerebral","clave":"cefalea progresiva, crisis, focalidad; protrombótica/puerperio"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Arteritis de células gigantes","clave":">50 años, dolor temporal, claudicación mandibular, VSG alta; riesgo de ceguera"},
+   {"dx":"Glaucoma agudo","clave":"ojo rojo doloroso, midriasis media fija, visión borrosa con halos","slug":"diagnostico_diferencial_del_ojo_rojo"},
+   {"dx":"Emergencia hipertensiva","clave":"HTA grave con afectación de órgano diana (visual, neurológica)","slug":"emergencia_hipertensiva"},
+   {"dx":"Preeclampsia/eclampsia","clave":"gestante >20 sem con HTA, proteinuria, cefalea y fotopsias","slug":"estados_hipertensivos_del_embarazo_preeclampsia_y_eclampsia"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Migraña","clave":"hemicraneal, pulsátil, náuseas, foto/fonofobia; episodios recurrentes"},
+   {"dx":"Cefalea tensional","clave":"opresiva, bilateral 'en casco', sin cortejo vegetativo"},
+   {"dx":"Cefalea en racimos","clave":"periorbitaria intensa, unilateral, con lagrimeo/rinorrea; en salvas"},
+   {"dx":"Sinusitis aguda","clave":"dolor facial, congestión nasal, empeora al inclinarse"}
+ ]}
+], "plan": [
+ {"paso":"Identifica signos de alarma","detalle":"Inicio súbito 'en trueno', focalidad, fiebre con meningismo, papiledema, alteración de conciencia, edad >50 con cefalea nueva, inmunodepresión o anticoagulación, vómitos en escopetazo."},
+ {"paso":"Estabiliza y monitoriza si grave","detalle":"Constantes incluida TA, glucemia y SatO2; vía venosa si afectación. Valora carboxihemoglobina si sospecha de intoxicación por CO."},
+ {"paso":"Decide neuroimagen y punción lumbar","sub":[
+   {"nivel":"critico","t":"Sospecha de HSA → TC craneal urgente; si normal y alta sospecha → punción lumbar (xantocromía)"},
+   {"nivel":"critico","t":"Sospecha de meningitis → hemocultivos y antibiótico empírico precoz, no demores por la TC/PL"}
+ ]},
+ {"paso":"Solicita pruebas dirigidas","detalle":"VSG/PCR urgentes si sospecha de arteritis de la temporal (>50 años) e inicia corticoides sin esperar a la biopsia. Tonometría si ojo rojo doloroso."},
+ {"paso":"Trata la cefalea primaria","detalle":"Migraña moderada-grave: triptán (sumatriptán) + antiemético (metoclopramida) ± AINE. Cefalea en racimos: oxígeno alto flujo + sumatriptán SC. Tensional: paracetamol/AINE."},
+ {"paso":"Reevalúa la respuesta","detalle":"Si no mejora con tratamiento o persiste la duda diagnóstica, amplía estudio; estatus migrañoso refractario puede precisar ingreso."},
+ {"paso":"Decide destino","detalle":"Alta si etiología benigna filiada, exploración neurológica normal, tolera VO y sin signos de alarma, con seguimiento. Ingreso si causa secundaria grave, déficit persistente o estatus migrañoso refractario."}
+]}

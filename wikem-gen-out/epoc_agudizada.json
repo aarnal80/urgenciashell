@@ -1,0 +1,30 @@
+{"wikem_titulo": "COPD exacerbation", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Edema agudo de pulmón cardiogénico","clave":"crepitantes bilaterales, ortopnea, B-líneas; \"asma cardial\"","slug":"edema_agudo_de_pulmon_cardiogenico"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita desproporcionada, dolor pleurítico, hipoxia refractaria","slug":"tromboembolia_pulmonar"},
+   {"dx":"Neumotórax","clave":"dolor brusco, hipoventilación unilateral; frecuente en EPOC con bullas","slug":"neumotorax_espontaneo"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Neumonía","clave":"fiebre, esputo purulento, crepitantes focales, infiltrado nuevo","slug":"neumonia_adquirida_en_la_comunidad"},
+   {"dx":"Crisis asmática","clave":"menor edad, atopia, reversibilidad; solapamiento ACO","slug":"ataque_de_asma"},
+   {"dx":"Arritmia (FA, taquicardia auricular multifocal)","clave":"palpitaciones, irregularidad; común en EPOC e hipoxia","slug":"fibrilacion_y_fluter_auriculares_arritmias_auriculoventricul"},
+   {"dx":"Síndrome coronario agudo","clave":"dolor opresivo, cambios del ST/troponina","slug":"sindrome_coronario_agudo"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Derrame pleural","clave":"matidez, hipoventilación basal","slug":"derrame_pleural"},
+   {"dx":"Infección respiratoria de vías altas","clave":"rinorrea, odinofagia, sin infiltrado ni hipoxia significativa"}
+ ]}
+], "plan": [
+ {"paso":"Evalúa la gravedad (primeros minutos)","detalle":"SatO2, FR, nivel de conciencia, uso de musculatura accesoria, estabilidad hemodinámica. Busca encefalopatía hipercápnica (somnolencia, asterixis)."},
+ {"paso":"Oxigenoterapia controlada","detalle":"O2 con objetivo SatO2 88-92% (Venturi 24-28%) para evitar hipercapnia. Gasometría arterial si SatO2<90% o sospecha de retención de CO2."},
+ {"paso":"Broncodilatadores y corticoide sistémico","detalle":"Salbutamol 2,5-5 mg + ipratropio 0,5 mg nebulizados, repetidos. Prednisona 40 mg VO/día 5 días (o metilprednisolona/hidrocortisona IV si no tolera VO)."},
+ {"paso":"Antibiótico si criterios de Anthonisen","detalle":"Indicado si aumentan disnea, volumen Y purulencia del esputo (≥2 criterios) o ventilación mecánica. Empírico: amoxicilina-clavulánico o levofloxacino; cubrir Pseudomonas (cipro/cefepima/pipe-tazo) si EPOC grave o factores de riesgo."},
+ {"paso":"Soporte ventilatorio según gasometría","sub":[
+   {"nivel":"emergente","t":"Acidosis respiratoria pH 7,25-7,35 con hipercapnia → VMNI (BiPAP) precoz."},
+   {"nivel":"critico","t":"pH<7,25, deterioro de conciencia, fatiga o fracaso de VMNI → intubación y ventilación mecánica; avisar UCI."}
+ ]},
+ {"paso":"Decide el destino","sub":[
+   {"t":"Leve con buena respuesta y soporte domiciliario adecuado → alta con pauta de corticoide y broncodilatadores."},
+   {"nivel":"emergente","t":"Disnea de reposo marcada, hipoxia/hipercapnia respecto a basal, comorbilidad o arritmia nueva → ingreso; UCI si inestabilidad o VMNI fallida."}
+ ]}
+]}

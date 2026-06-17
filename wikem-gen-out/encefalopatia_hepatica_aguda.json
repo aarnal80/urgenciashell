@@ -1,0 +1,29 @@
+{"wikem_titulo": "Hepatic encephalopathy", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hipoglucemia","clave":"glucemia capilar baja; siempre descartar primero ante todo deterioro de conciencia","slug":"hipoglucemia"},
+   {"dx":"Hematoma subdural / hemorragia intracraneal","clave":"focalidad, traumatismo previo, anticoagulación; TC craneal"},
+   {"dx":"Sepsis / PBE","clave":"fiebre, hipotensión; en ascítico paracentesis con PMN>250","slug":"sepsis"},
+   {"dx":"Edema cerebral (insuficiencia hepática fulminante)","clave":"riesgo de herniación; deterioro rápido del nivel de conciencia"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Hiponatremia / hipernatremia","clave":"alteración del sodio como desencadenante o causa de confusión","slug":"hiponatremia"},
+   {"dx":"Intoxicación por benzodiacepinas","clave":"sedación, miosis; aclaramiento hepático reducido","slug":"intoxicacion_aguda_por_benzodiacepinas_e_hipnoticos_no_benzodiacepinicos"},
+   {"dx":"Encefalopatía de Wernicke","clave":"oftalmoplejía, ataxia, confusión en enol; dar tiamina"},
+   {"dx":"Lesión renal aguda / uremia","clave":"elevación de creatinina y urea; síndrome hepatorrenal","slug":"lesion_renal_aguda"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Hemorragia digestiva alta (desencadenante)","clave":"melenas/hematemesis; aumenta la carga nitrogenada","slug":"hemorragia_digestiva_alta"}
+ ]}
+], "plan": [
+ {"paso":"Asegura vía aérea y descarta causas inmediatas","detalle":"Valora protección de vía aérea si bajo nivel de conciencia. Glucemia capilar urgente. Es un diagnóstico de exclusión."},
+ {"paso":"Gradúa con West-Haven y monitoriza","detalle":"Grados I-IV. Grado III-IV: vigilancia estrecha, valora UCI y ventilación mecánica si coma profundo."},
+ {"paso":"Solicita estudio del desencadenante","detalle":"Hemograma, bioquímica con iones y función renal, amoníaco, LFT, coagulación, sistemático de orina, Rx tórax. Paracentesis diagnóstica si ascitis (descartar PBE). TC craneal y/o PL si dudas."},
+ {"paso":"Identifica y corrige el factor desencadenante","sub":[
+   {"nivel":"emergente","t":"HDA → estabiliza, IBP, valora endoscopia"},
+   {"nivel":"emergente","t":"PBE → cefotaxima IV + albúmina"},
+   {"t":"Corrige hipopotasemia/hiponatremia, retira sedantes y diuréticos, trata estreñimiento"}
+ ]},
+ {"paso":"Inicia tratamiento específico","detalle":"Lactulosa 20-30 g VO/SNG cada 6-8 h (objetivo 2-3 deposiciones blandas/día) o en enema (300 ml en 700 ml de agua) si bajo nivel de conciencia. Rifaximina 400 mg/8 h como complemento."},
+ {"paso":"Soporte general","detalle":"No restrinjas proteínas de forma prolongada; aporta nutrición. Glucosa 10%/salino para evitar hipoglucemia. Evita benzodiacepinas; flumazenilo solo si sospecha de sobredosis."},
+ {"paso":"Decide destino","detalle":"Grado I con buen soporte → alta/observación. Grado II → ingreso (salvo encefalopatía conocida y por lo demás estable). Grados III-IV → ingreso, valora UCI; en fallo hepático fulminante, contacta con unidad de trasplante."}
+]}

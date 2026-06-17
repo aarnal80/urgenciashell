@@ -1,0 +1,27 @@
+{"wikem_titulo": "Anaphylaxis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Angioedema (hereditario o por IECA)","clave":"edema sin habones ni prurito; sin broncoespasmo; no responde a adrenalina","slug":"angioedema"},
+   {"dx":"Crisis asmática grave","clave":"broncoespasmo y disnea sin habones ni hipotensión ni desencadenante alérgico","slug":"ataque_de_asma"},
+   {"dx":"Shock de otra causa","clave":"hipotensión sin urticaria/habones; buscar causa séptica, cardiogénica o hemorrágica","slug":"shock"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Urticaria aislada","clave":"habones y prurito SIN compromiso respiratorio ni circulatorio"},
+   {"dx":"Síncope vasovagal","clave":"bradicardia, palidez, recuperación al decúbito; sin habones ni sibilancias","slug":"sincope"},
+   {"dx":"Crisis de ansiedad/pánico","clave":"disnea subjetiva, parestesias; sin habones ni hipotensión real","slug":"crisis_de_ansiedad"},
+   {"dx":"Síndrome escombroide / carcinoide / mastocitosis","clave":"flushing y síntomas tras pescado mal conservado o cuadro recurrente"}
+ ]}
+], "plan": [
+ {"paso":"Reconoce anafilaxia (diagnóstico clínico) y no demores el tratamiento","detalle":"Inicio agudo con afectación cutáneo-mucosa + compromiso respiratorio y/o circulatorio, o ≥2 sistemas tras alérgeno. No esperes a la triptasa."},
+ {"paso":"Administra adrenalina IM de inmediato","detalle":"0,01 mg/kg (adulto 0,3-0,5 mg; niño 0,15 mg <25 kg) en cara anterolateral del muslo. Repite cada 5-15 min si persiste. Retira el alérgeno."},
+ {"paso":"Coloca y soporta vía aérea/circulación","sub":[
+   {"nivel":"critico","t":"Estridor/edema laríngeo progresivo → intubación precoz; prepara vía aérea quirúrgica (cricotiroidotomía) si fracasa."},
+   {"nivel":"critico","t":"Hipotensión → decúbito con piernas elevadas, O2, fluidos 1-2 L SSF/Ringer en bolo (20 mL/kg en niños)."}
+ ]},
+ {"paso":"Trata el broncoespasmo y añade fármacos de segunda línea","detalle":"Salbutamol nebulizado ± ipratropio. Antihistamínico (dexclorfeniramina) y corticoide (metilprednisolona) solo como coadyuvantes, NUNCA en lugar de la adrenalina."},
+ {"paso":"Maneja la refractariedad","sub":[
+   {"nivel":"critico","t":"No responde a adrenalina IM → adrenalina en infusión IV continua con monitorización."},
+   {"nivel":"emergente","t":"En tratamiento con betabloqueantes → glucagón 1-5 mg IV."}
+ ]},
+ {"paso":"Observación y destino","detalle":"Vigila ≥6 h tras resolución por reacción bifásica (8-24 h si grave o intubación). Urticaria aislada → alta con antihistamínico."},
+ {"paso":"Alta con prevención","detalle":"Receta 2 autoinyectores de adrenalina, antihistamínico y prednisona 40-60 mg/día 3-5 días, plan escrito, evitación del desencadenante y derivación a alergología."}
+]}

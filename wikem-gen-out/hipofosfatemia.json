@@ -1,0 +1,26 @@
+{"wikem_titulo": "Hypophosphatemia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome de realimentación","clave":"reinicio nutricional en desnutrido/alcohólico; caída brusca de fósforo, K y Mg"},
+   {"dx":"Cetoacidosis diabética en tratamiento","clave":"insulina + glucosa desplazan fósforo al interior celular; descenso durante el tratamiento","slug":"cetoacidosis_diabetica"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Alcalosis respiratoria por hiperventilación","clave":"crisis de ansiedad, sepsis; redistribución intracelular del fósforo","slug":"crisis_de_ansiedad"},
+   {"dx":"Sepsis","clave":"foco infeccioso + hipotensión; hipofosfatemia frecuente","slug":"sepsis"},
+   {"dx":"Síndrome del hueso hambriento","clave":"tras paratiroidectomía; hipocalcemia + hipofosfatemia mantenidas"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Alcoholismo / desnutrición crónica","clave":"baja ingesta y pérdidas; corregir con tiamina y reposición progresiva"},
+   {"dx":"Quelantes / antiácidos con aluminio o magnesio","clave":"fármaco causal; disminuyen la absorción intestinal de fosfato"},
+   {"dx":"Pérdida renal (Fanconi, déficit de vitamina D, diuresis osmótica)","clave":"fosfaturia inapropiada; glucosuria u otros marcadores tubulares"}
+ ]}
+], "plan": [
+ {"paso":"Confirma y clasifica","detalle":"Fosfato sérico: leve 2-2,5 / moderada 1-2 / grave < 1 mg/dL. Descarta seudohipofosfatemia (mieloma, hiperbilirrubinemia, manitol). Solicita Ca, Mg, K y función renal."},
+ {"paso":"Busca síntomas de gravedad","detalle":"Debilidad muscular respiratoria, arritmias, alteración de conciencia, rabdomiólisis o hemólisis; más probables con fósforo < 1,5 mg/dL o descenso rápido."},
+ {"paso":"Decide la vía de reposición","sub":[
+   {"nivel":"emergente","t":"Grave (< 1 mg/dL) o sintomática → fosfato IV (monosódico/monopotásico) 2,5-5 mg/kg en 6 h, con monitorización."},
+   {"t":"Leve-moderada y vía oral disponible → fosfato oral 1-2 g/día repartido."}
+ ]},
+ {"paso":"Monitoriza durante la reposición IV","detalle":"Vigila Ca (riesgo de hipocalcemia y calcificación), K y función renal; ECG si arritmias. Evita reposición rápida con fallo renal."},
+ {"paso":"Corrige déficits asociados","detalle":"Repón potasio y magnesio en paralelo; en alcohólicos administra tiamina antes de la glucosa."},
+ {"paso":"Trata la causa y previene","detalle":"En riesgo de realimentación, reintroduce nutrición de forma gradual con suplementación profiláctica de fósforo."}
+]}

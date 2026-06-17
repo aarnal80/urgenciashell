@@ -1,0 +1,24 @@
+{
+ "id": "wells_tvp",
+ "nombre": "Wells (TVP)",
+ "nombre_largo": "Escala de Wells para probabilidad clínica de trombosis venosa profunda",
+ "para": "Estimar la probabilidad clínica de trombosis venosa profunda (TVP) de miembros inferiores.",
+ "tipo": "suma",
+ "items": [
+  {"id": "cancer_activo", "label": "Cáncer activo", "tipo": "binario", "puntos": 1},
+  {"id": "paralisis", "label": "Parálisis, paresia o inmovilización reciente de la extremidad inferior", "tipo": "binario", "puntos": 1},
+  {"id": "encamamiento", "label": "Encamamiento > 3 días o cirugía mayor en las últimas 12 semanas", "tipo": "binario", "puntos": 1},
+  {"id": "dolor_trayecto", "label": "Dolor a la palpación en el trayecto venoso profundo", "tipo": "binario", "puntos": 1},
+  {"id": "edema_pierna", "label": "Edema de toda la pierna", "tipo": "binario", "puntos": 1},
+  {"id": "perimetro_pantorrilla", "label": "Aumento del perímetro de la pantorrilla > 3 cm respecto a la contralateral", "tipo": "binario", "puntos": 1},
+  {"id": "edema_fovea", "label": "Edema con fóvea unilateral", "tipo": "binario", "puntos": 1},
+  {"id": "venas_colaterales", "label": "Venas colaterales superficiales no varicosas", "tipo": "binario", "puntos": 1},
+  {"id": "tvp_previa", "label": "TVP previa documentada", "tipo": "binario", "puntos": 1},
+  {"id": "diagnostico_alternativo", "label": "Diagnóstico alternativo al menos tan probable como la TVP", "tipo": "opciones", "opciones": [{"label": "Sí", "puntos": -2}, {"label": "No", "puntos": 0}]}
+ ],
+ "interpretacion": [
+  {"min": null, "max": 1, "label": "TVP improbable", "detalle": "Probabilidad clínica baja de TVP. Valorar dímero D; si es negativo, descarta TVP con seguridad."},
+  {"min": 2, "max": null, "label": "TVP probable", "detalle": "Probabilidad clínica alta de TVP. Indicada ecografía Doppler de miembros inferiores."}
+ ],
+ "nota": "Puntuación posible de -2 a 9. El punto de corte de 2 separa TVP improbable (< 2) de TVP probable (≥ 2)."
+}

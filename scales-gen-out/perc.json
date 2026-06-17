@@ -1,0 +1,22 @@
+{
+ "id": "perc",
+ "nombre": "PERC",
+ "nombre_largo": "Pulmonary Embolism Rule-out Criteria (PERC)",
+ "para": "Regla para descartar tromboembolia pulmonar (TEP) en pacientes con baja probabilidad clínica, sin necesidad de dímero D.",
+ "tipo": "suma",
+ "items": [
+  {"id": "edad50", "label": "Edad ≥ 50 años", "tipo": "binario", "puntos": 1},
+  {"id": "fc100", "label": "Frecuencia cardiaca ≥ 100 lpm", "tipo": "binario", "puntos": 1},
+  {"id": "sato2", "label": "SatO2 < 95%", "tipo": "binario", "puntos": 1},
+  {"id": "hemoptisis", "label": "Hemoptisis", "tipo": "binario", "puntos": 1},
+  {"id": "estrogenos", "label": "Uso de estrógenos", "tipo": "binario", "puntos": 1},
+  {"id": "tvp_tep_previa", "label": "TVP o TEP previa", "tipo": "binario", "puntos": 1},
+  {"id": "cirugia_trauma", "label": "Cirugía o traumatismo en las últimas 4 semanas con hospitalización", "tipo": "binario", "puntos": 1},
+  {"id": "edema_unilateral", "label": "Edema unilateral de pierna", "tipo": "binario", "puntos": 1}
+ ],
+ "interpretacion": [
+  {"min": 0, "max": 0, "label": "PERC negativo", "detalle": "Si la probabilidad clínica es baja, se descarta TEP sin necesidad de dímero D ni pruebas de imagen."},
+  {"min": 1, "max": null, "label": "PERC positivo", "detalle": "No se puede descartar TEP. Continuar el estudio con dímero D o pruebas de imagen según corresponda."}
+ ],
+ "nota": "La regla solo es aplicable en pacientes con baja probabilidad clínica pretest. Todos los criterios deben ser negativos (0 puntos) para descartar TEP."
+}

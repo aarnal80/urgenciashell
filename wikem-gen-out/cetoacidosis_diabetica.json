@@ -1,0 +1,33 @@
+{"wikem_titulo": "Diabetic ketoacidosis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Descompensación hiperosmolar (SHH)","clave":"glucemia >600, osm alta, sin acidosis ni cetosis intensa; más en DM2","slug":"descompensacion_hiperglucemica_hiperosmolar_no_cetosica"},
+   {"dx":"Sepsis","clave":"fiebre, hipotensión, foco; precipitante más frecuente de la CAD","slug":"sepsis"},
+   {"dx":"Síndrome coronario agudo","clave":"desencadenante; descartar con ECG y troponinas","slug":"sindrome_coronario_agudo"},
+   {"dx":"Acidosis láctica / otras acidosis con anion gap","clave":"lactato elevado; tóxicos (salicilatos, metanol) sin cetonemia"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"CAD euglucémica","clave":"acidosis y cetonemia con glucemia normal/baja; iSGLT2, embarazo, ayuno"},
+   {"dx":"Cetoacidosis alcohólica","clave":"consumo de OH, ayuno, vómitos; glucemia normal o baja"},
+   {"dx":"Abdomen agudo","clave":"la propia CAD da dolor abdominal; vigila si no cede al corregir","slug":"dolor_abdominal_agudo"},
+   {"dx":"Pancreatitis aguda","clave":"dolor epigástrico irradiado, lipasa elevada; causa y consecuencia","slug":"pancreatitis_aguda"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"DM1 de novo","clave":"hasta 20% debuta como CAD; HbA1c orientativa"},
+   {"dx":"Omisión de insulina","clave":"causa más frecuente en DM1 conocida; valorar coste/acceso/fallo de bomba"}
+ ]}
+], "plan": [
+ {"paso":"Estabiliza y confirma el diagnóstico","detalle":"Constantes, monitor, 2 vías, glucemia capilar. Pide gasometría venosa, BMP con anion gap, beta-hidroxibutirato, iones, hemograma y ECG. Diagnóstico: hiperglucemia + cetonemia + acidosis con anion gap. Si hay bomba de insulina, apágala y retira el catéter."},
+ {"paso":"Fluidoterapia inicial","detalle":"SSF 0,9% 15-20 mL/kg (1-1,5 L) en la 1ª hora; ajusta según Na corregido y estado cardiovascular."},
+ {"paso":"Corrige el potasio ANTES o junto a la insulina","sub":[
+   {"nivel":"critico","t":"K <3,3 mEq/L → repón potasio y NO inicies insulina hasta ≥3,3"},
+   {"t":"K 3,3-5,2 → añade ClK 20-30 mEq por litro de suero y mantén insulina"},
+   {"t":"K >5,2 → no repongas; recontrola en 2 h"}
+ ]},
+ {"paso":"Insulina en perfusión","detalle":"Insulina rápida IV 0,1 U/kg/h (con K >3,3). Cuando glucemia <200-250 mg/dL, añade suero glucosado 5% y reduce el ritmo, manteniendo la perfusión hasta cerrar el anion gap."},
+ {"paso":"Reserva el bicarbonato y repón magnesio","detalle":"Bicarbonato solo si pH <7,0 (o <7,2 con inestabilidad). Corrige hipomagnesemia; fosfato solo si muy bajo o sintomático."},
+ {"paso":"Busca y trata el desencadenante","detalle":"Sedimento/urocultivo, Rx tórax, hemocultivos si fiebre; ECG/troponina si dolor torácico; test de embarazo en mujer fértil; HbA1c."},
+ {"paso":"Destino","sub":[
+   {"nivel":"emergente","t":"CAD moderada-grave (pH <7,24), alteración de conciencia o inestabilidad → UCI/cama monitorizada con insulina IV"},
+   {"t":"CAD leve resuelta (anion gap cerrado, tolera VO, K normal) con causa clara y buen seguimiento → valorar alta con educación en reglas de días de enfermedad"}
+ ]}
+]}

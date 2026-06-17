@@ -1,0 +1,33 @@
+{"wikem_titulo": "Acetaminophen toxicity", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hepatitis isquémica (hígado de shock)","clave":"transaminasas masivamente elevadas tras hipotensión/shock"},
+   {"dx":"Intoxicación por Amanita phalloides","clave":"diarrea coleriforme tardía tras ingesta de setas, fallo hepático a los días","slug":"intoxicacion_aguda_por_setas"},
+   {"dx":"Intoxicación por salicilatos (coingesta)","clave":"taquipnea, acidosis con anion gap, tinnitus; cribar siempre","slug":"intoxicacion_aguda_por_salicilatos_y_otros_antiinflamatorios"},
+   {"dx":"Insuficiencia hepática aguda de otra causa","clave":"coagulopatía y encefalopatía; valorar criterios de trasplante"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Hepatitis alcohólica","clave":"consumo crónico, AST/ALT >2:1, ictericia"},
+   {"dx":"Hepatitis vírica","clave":"pródromos, factores de riesgo, serologías positivas"},
+   {"dx":"Hepatotoxicidad por otros fármacos","clave":"anamnesis farmacológica; descartar coingestas"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Enfermedad de Wilson (presentación aguda)","clave":"joven, hemólisis con Coombs negativo, anillos de Kayser-Fleischer"}
+ ]}
+], "plan": [
+ {"paso":"Anamnesis y estratificación temporal","detalle":"Determina dosis (tóxica >125 mg/kg), hora de ingesta, ingesta única o escalonada y factores de riesgo (alcoholismo, malnutrición, inductores P450). Vía venosa."},
+ {"paso":"Descontaminación si procede","detalle":"Carbón activado 1 g/kg si ingesta <1-2 h y vía aérea protegida. No retrasa ni contraindica la NAC."},
+ {"paso":"Determina paracetamolemia y aplica el nomograma","sub":[
+   {"t":"Extrae nivel a las 4 h post-ingesta (o ya, si >4 h) y representa en el nomograma de Rumack-Matthew."},
+   {"nivel":"emergente","t":"Por encima de la línea de tratamiento, ingesta escalonada o tiempo incierto → inicia NAC."}
+ ]},
+ {"paso":"Inicia N-acetilcisteína precozmente","detalle":"Máxima eficacia <8 h; no la retrases esperando niveles si la ingesta es de riesgo. Pauta IV (p. ej. 150 mg/kg en 1 h, luego 50 mg/kg/4 h y 100 mg/kg/16 h) o protocolo local. Antiemético (ondansetrón) si vómitos."},
+ {"paso":"Solicita analítica completa y reevalúa","detalle":"AST/ALT, INR/TP (mejor marcador pronóstico), creatinina, bicarbonato, glucosa, lactato, fósforo, gasometría, salicilatos. Cualquier elevación de transaminasas obliga a NAC."},
+ {"paso":"Identifica fallo hepático y criterios de trasplante","sub":[
+   {"nivel":"critico","t":"Encefalopatía III-IV con pH <7,30 o lactato >3, INR >7 o TP >100 s, creatinina >3,3 → contacta con unidad de trasplante."},
+   {"nivel":"critico","t":"Paracetamolemia >700 µg/mL con fallo renal, coma y acidosis → hemodiálisis."}
+ ]},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"critico","t":"Fallo hepático (coagulopatía, encefalopatía, acidosis, fracaso renal) → UCI."},
+   {"t":"Nivel bajo el umbral a ≥4 h con AST/ALT, INR y creatinina normales → alta tras observación; valoración psiquiátrica si intencionada."}
+ ]}
+]}

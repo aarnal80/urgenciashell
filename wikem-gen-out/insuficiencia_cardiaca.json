@@ -1,0 +1,32 @@
+{"wikem_titulo": "Congestive heart failure", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome coronario agudo","clave":"dolor torácico, cambios del ST, troponina; causa precipitante frecuente de IC aguda","slug":"sindrome_coronario_agudo"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, hipoxia, dolor pleurítico; sobrecarga de VD en eco","slug":"tromboembolia_pulmonar"},
+   {"dx":"Taponamiento cardíaco","clave":"IY, pulso paradójico, tonos apagados; derrame en eco","slug":"taponamiento_cardiaco"},
+   {"dx":"Emergencia hipertensiva","clave":"PAS muy elevada con EAP; mejora al bajar la TA","slug":"emergencia_hipertensiva"},
+   {"dx":"Disfunción valvular aguda","clave":"soplo nuevo (insuf. mitral/aórtica), endocarditis o rotura de cuerda"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Neumonía","clave":"fiebre, tos productiva, condensación; puede simular o precipitar IC","slug":"neumonia_adquirida_en_la_comunidad"},
+   {"dx":"EPOC agudizada","clave":"sibilancias, espiración alargada, hipercapnia; antecedente de tabaquismo","slug":"epoc_agudizada"},
+   {"dx":"Sepsis","clave":"foco infeccioso, fiebre, hipotensión; descompensa la IC de base","slug":"sepsis"},
+   {"dx":"Sobrecarga de volumen / fracaso renal","clave":"diálisis omitida, oligoanuria, edemas; BNP elevado por insuficiencia renal","slug":"lesion_renal_aguda"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Anemia","clave":"palidez, astenia; descompensa por aumento de demanda. Hemograma"},
+   {"dx":"Tirotoxicosis","clave":"taquicardia, FA, temblor, pérdida de peso; precipitante de IC","slug":"crisis_tirotoxica"},
+   {"dx":"Incumplimiento terapéutico/dietético","clave":"abandono de diuréticos o transgresión salina; causa muy frecuente de descompensación"}
+ ]}
+], "plan": [
+ {"paso":"Valora gravedad y estabiliza (ABC)","detalle":"Monitor, TA, SatO2, vía. Sentar al paciente. O2 si SatO2 <90%. Identifica EAP, shock o arritmia con inestabilidad."},
+ {"paso":"Solicita pruebas dirigidas","detalle":"ECG, Rx tórax, hemograma, bioquímica con función renal e iones, troponina y BNP/NT-proBNP. Eco POCUS (líneas B, FEVI, vena cava)."},
+ {"paso":"Trata la congestión","detalle":"Furosemida IV 20-40 mg (o 2,5x la dosis oral habitual si crónica). Vasodilatadores (nitroglicerina) si TA conservada y congestión marcada."},
+ {"paso":"Adapta según el perfil hemodinámico","sub":[
+   {"nivel":"critico","t":"Hipotensión/hipoperfusión (shock cardiogénico) → inotropos (dobutamina), valora noradrenalina y UCI."},
+   {"nivel":"emergente","t":"PAS elevada con EAP → vasodilatadores IV precoces y VNI (CPAP)."},
+   {"t":"Normotenso congestivo → diurético IV y optimización oral."}
+ ]},
+ {"paso":"Busca y trata el factor precipitante","detalle":"SCA, arritmia (FA rápida → control de frecuencia/cardioversión si inestable), infección, anemia, incumplimiento, crisis hipertensiva."},
+ {"paso":"Optimiza el tratamiento de base","detalle":"En IC-FEr reintroduce/ajusta cuádruple terapia: betabloqueante, ARM, INRA (sacubitril-valsartán) e iSGLT2 cuando esté estable."},
+ {"paso":"Decide el destino","detalle":"UCI/coronaria si inestabilidad o EAP refractario. Planta si descompensación que cede. Alta solo si estable, sin congestión y con seguimiento."}
+]}

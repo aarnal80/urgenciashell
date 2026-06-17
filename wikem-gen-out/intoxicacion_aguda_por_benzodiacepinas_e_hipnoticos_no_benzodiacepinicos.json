@@ -1,0 +1,43 @@
+{
+  "wikem_titulo": "Benzodiazepine toxicity",
+  "ddx": [
+    {
+      "nivel": "critico",
+      "grupo": "Crítico · depresión SNC tratable de otro modo",
+      "items": [
+        {"dx": "Intoxicación por opiáceos", "clave": "Miosis puntiforme + depresión respiratoria; responde a naloxona", "slug": "intoxicacion_aguda_por_opiaceos_y_derivados"},
+        {"dx": "Hipoglucemia", "clave": "Coma reversible; glucemia capilar baja, descartar siempre primero", "slug": "hipoglucemia"},
+        {"dx": "Alcoholes tóxicos (metanol, etilenglicol)", "clave": "Acidosis con anion gap y gap osmolar; visión borrosa / fracaso renal", "slug": null}
+      ]
+    },
+    {
+      "nivel": "emergente",
+      "grupo": "Emergente · otros sedantes-hipnóticos",
+      "items": [
+        {"dx": "Barbitúricos", "clave": "Sedación profunda, hipotensión, ampollas cutáneas, hipotermia", "slug": null},
+        {"dx": "GHB / baclofeno", "clave": "Coma con despertar brusco fluctuante; bradicardia, recuperación rápida", "slug": null},
+        {"dx": "Intoxicación etílica aguda", "clave": "Aliento enólico, ataxia, disartria; etanolemia elevada", "slug": "intoxicacion_etilica_aguda_cetoacidosis_alcoholica_encefalop"}
+      ]
+    },
+    {
+      "nivel": "no_emergente",
+      "grupo": "No emergente",
+      "items": [
+        {"dx": "Estado postcrítico", "clave": "Somnolencia tras crisis comicial presenciada, recuperación progresiva", "slug": "crisis_epilepticas"},
+        {"dx": "Hipnóticos Z (zolpidem, zopiclona)", "clave": "Clínica más leve y breve que benzodiacepinas; UDS de BZD negativo", "slug": null}
+      ]
+    }
+  ],
+  "plan": [
+    {"paso": "Asegurar ABC: la prioridad es la vía aérea y la ventilación", "detalle": "O2, monitorización, glucemia capilar inmediata. Soporte ventilatorio si hipoventilación; IOT y ventilación mecánica si depresión respiratoria refractaria."},
+    {"paso": "Considerar descontaminación digestiva si ingesta reciente y vía aérea protegida", "detalle": "Carbón activado dosis única (1 g/kg) solo si <1-2 h y consciente/protegido; no inducir emesis. No en disminución de conciencia sin aislar la vía aérea."},
+    {"paso": "Solicitar estudio dirigido a la co-intoxicación", "detalle": "Tóxicos en orina (recordar que lorazepam, clonazepam y midazolam dan falsos negativos), paracetamol y salicilatos, ECG (QT) y gasometría si depresión respiratoria."},
+    {"paso": "Usar flumazenilo con cautela y de forma muy seleccionada", "detalle": "Flumazenilo 0,3 mg IV en 30 s, repetir 0,3 mg/min hasta despertar (máx. 2 mg); si reaparece sedación, perfusión 0,1-0,4 mg/h."},
+    {"paso": "NO administrar flumazenilo si hay riesgo convulsivo o de arritmia", "sub": [
+      {"t": "Sospecha de co-ingesta de antidepresivos tricíclicos o proconvulsivantes, dependencia crónica de BZD o epilepsia → NO dar flumazenilo (riesgo de convulsiones)", "nivel": "emergente"},
+      {"t": "QRS ancho o antecedente convulsivo → manejo de soporte sin antagonista", "nivel": "emergente"}
+    ]},
+    {"paso": "Tratamiento de soporte como base del manejo", "detalle": "Sueroterapia, posición de seguridad, vigilar broncoaspiración; la mayoría se recupera solo con soporte."},
+    {"paso": "Observación y disposición", "detalle": "Vigilancia mínima 6 h; alta si asintomático y sin co-intoxicación. Valoración psiquiátrica si gesto autolítico."}
+  ]
+}

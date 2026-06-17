@@ -1,0 +1,29 @@
+{"wikem_titulo": "Acute vision loss (noninflamed)", "ddx": [
+ {"grupo":"Crítico · amenaza visual/sistémica","nivel":"critico","items":[
+   {"dx":"Oclusión de la arteria central de la retina","clave":"pérdida monocular brusca e indolora, DPAR; retina pálida con mancha rojo cereza"},
+   {"dx":"Arteritis de células gigantes (de la temporal)","clave":">50 a, cefalea, claudicación mandibular, VSG/PCR muy altas; riesgo de ceguera bilateral"},
+   {"dx":"Ictus de corteza visual","clave":"hemianopsia homónima binocular; focalidad neurológica asociada","slug":"ictus"},
+   {"dx":"Apoplejía hipofisaria","clave":"cefalea súbita + hemianopsia bitemporal + oftalmoplejía"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Desprendimiento de retina","clave":"fotopsias, miodesopsias, \"cortina\" en campo visual; pérdida progresiva"},
+   {"dx":"Oclusión de la vena central de la retina","clave":"pérdida indolora; fondo \"en llamarada\" con hemorragias y venas dilatadas"},
+   {"dx":"Neuritis óptica","clave":"dolor con movimiento ocular, pérdida central, DPAR; sospecha de EM"},
+   {"dx":"Hemorragia vítrea","clave":"pérdida brusca indolora, ausencia de reflejo rojo; diabético o trauma"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Amaurosis fugax","clave":"pérdida monocular transitoria que recupera; origen embólico carotídeo"},
+   {"dx":"Glaucoma de ángulo abierto","clave":"pérdida campimétrica periférica crónica, indolora"}
+ ]}
+], "plan": [
+ {"paso":"Anamnesis y exploración dirigida (primeros minutos)","detalle":"¿Mono o binocular? ¿dolorosa? Agudeza visual de cada ojo, campos por confrontación, motilidad, reflejos pupilares (busca DPAR/Marcus-Gunn)."},
+ {"paso":"Realiza fondo de ojo y mide PIO","detalle":"Oftalmoscopia: mancha rojo cereza (OACR), \"sangre y trueno\" (OVCR), edema de papila, ausencia de reflejo rojo (hemorragia vítrea)."},
+ {"paso":"Clasifica y actúa según el patrón clínico","sub":[
+   {"nivel":"critico","t":"OACR (<6-24 h) → emergencia: masaje ocular, reducir PIO (acetazolamida), avisar oftalmología SIN demora; valorar ictus retiniano (código ictus)."},
+   {"nivel":"critico","t":">50 a con sospecha de arteritis temporal → pide VSG/PCR urgente e inicia metilprednisolona IV de inmediato (no esperes biopsia)."},
+   {"nivel":"emergente","t":"Cortina/fotopsias-miodesopsias → desprendimiento de retina: derivación oftalmológica urgente."}
+ ]},
+ {"paso":"Solicita pruebas según sospecha","detalle":"VSG/PCR (arteritis), glucemia/HbA1c (hemorragia vítrea); TC/RM craneal si déficit campimétrico binocular o sospecha de ictus/apoplejía hipofisaria."},
+ {"paso":"Trata la causa de base","detalle":"Corticoides en arteritis/neuritis óptica; control de PIO en glaucoma; estudio de fuente embólica en amaurosis fugax (Doppler carótidas, antiagregación)."},
+ {"paso":"Destino","detalle":"Causas amenazantes (OACR, arteritis, desprendimiento, apoplejía) → ingreso/valoración oftalmológica-neurológica urgente. Causas estables → derivación preferente a oftalmología."}
+]}

@@ -1,0 +1,29 @@
+{"wikem_titulo": "Hyperosmolar hyperglycemic state", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Cetoacidosis diabética","clave":"acidosis con anion gap, cetonemia; más en DM1 y curso más rápido","slug":"cetoacidosis_diabetica"},
+   {"dx":"Sepsis","clave":"fiebre, hipotensión, foco; desencadenante muy frecuente del SHH","slug":"sepsis"},
+   {"dx":"Acidosis láctica","clave":"hipoperfusión, lactato elevado, pH <7,2 por shock/deshidratación"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"CAD euglucémica","clave":"acidosis con cetonas y glucemia poco elevada; iSGLT2, embarazo, ayuno"},
+   {"dx":"Ictus / ACV","clave":"focalidad neurológica; puede ser causa o consecuencia del coma","slug":"ictus"},
+   {"dx":"Síndrome coronario agudo","clave":"desencadenante frecuente; ECG y troponinas","slug":"sindrome_coronario_agudo"},
+   {"dx":"Hiperglucemia de estrés","clave":"glucemia elevada por enfermedad aguda sin criterios de SHH"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Hiperglucemia inducida por fármacos","clave":"corticoides, tiazidas, antipsicóticos atípicos, fenitoína"},
+   {"dx":"DM2 de novo / mal control","clave":"hasta 35% de SHH es la primera manifestación de la enfermedad"}
+ ]}
+], "plan": [
+ {"paso":"Estabiliza y monitoriza","detalle":"Constantes, monitor ECG, 2 vías, glucemia, gasometría, osmolaridad e iones. Sondaje vesical para control de diuresis. Confirma SHH: glucemia >600, osm >320, pH ≥7,30, HCO3 >15, cetonas ausentes/leves."},
+ {"paso":"Reposición hídrica agresiva (pilar del tratamiento)","detalle":"SSF 0,9% 1 L en la 1ª hora; déficit medio 8-12 L, repón el 50% en las primeras 12 h. Cambia a salino 0,45% si Na corregido alto. Cautela en cardiópata/nefrópata."},
+ {"paso":"Corrige el potasio ANTES de la insulina","sub":[
+   {"nivel":"critico","t":"K <3,3 mEq/L → repón potasio y NO inicies insulina hasta corregir"},
+   {"t":"K 3,3-5,5 con diuresis → añade ClK al suero (20-30 mEq/L) y mantén insulina"},
+   {"t":"K ≥5,5 o anuria → no repongas potasio; recontrola"}
+ ]},
+ {"paso":"Inicia insulina tras la fluidoterapia inicial","detalle":"Insulina rápida IV en perfusión 0,1 U/kg/h (con K >3,3). Objetivo de descenso de glucemia 50-75 mg/dL/h. Añade suero glucosado cuando glucemia <250-300 mg/dL."},
+ {"paso":"Repón magnesio/fosfato y trata el desencadenante","detalle":"Corrige hipomagnesemia (ayuda al K) y fosfato solo si <1. Busca y trata infección, IAM o ictus. Profilaxis tromboembólica con HBPM."},
+ {"paso":"Vigila complicaciones","detalle":"Glucemia e iones horarios al inicio. Cuidado con el edema cerebral (sobre todo jóvenes) si la corrección es demasiado rápida."},
+ {"paso":"Destino","detalle":"La mayoría requiere ingreso en UCI por la elevada mortalidad."}
+]}

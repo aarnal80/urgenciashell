@@ -1,0 +1,30 @@
+{"wikem_titulo": "Salicylate toxicity", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Sepsis","clave":"taquipnea, acidosis metabólica y alteración del estado mental similares; buscar foco","slug":"sepsis"},
+   {"dx":"Cetoacidosis diabética","clave":"acidosis con anion gap, hiperglucemia, cetonuria","slug":"cetoacidosis_diabetica"},
+   {"dx":"Intoxicación por metanol/etilenglicol","clave":"anion y osmolar gap altos; visión borrosa (metanol), cristaluria (glicol)"},
+   {"dx":"Intoxicación por paracetamol (coingesta)","clave":"frecuente coingesta; cribar niveles siempre","slug":"intoxicacion_aguda_por_paracetamol"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Intoxicación por teofilina","clave":"vómitos, taquicardia, convulsiones, acidosis; rasgos solapados"},
+   {"dx":"Intoxicación por hierro","clave":"vómitos/diarrea, acidosis, radiopacos en abdomen, hipotensión"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Otras acidosis con anion gap (MUDPILES)","clave":"uremia, acidosis láctica; orientar por contexto y analítica"}
+ ]}
+], "plan": [
+ {"paso":"Estabiliza y monitoriza","detalle":"ABCDE, vía venosa, monitor. Sueroterapia para corregir depleción. Glucemia capilar (puede haber neuroglucopenia con glucemia sérica normal: dar glucosa si clínica neurológica)."},
+ {"paso":"Descontaminación si procede","detalle":"Carbón activado 1 g/kg si ingesta reciente y vía aérea protegida; valorar dosis repetidas. Considerar bezoar o comprimidos con cubierta entérica (absorción retardada)."},
+ {"paso":"Solicita pruebas y niveles seriados","detalle":"Salicilemia (tóxico >30 mg/dL, grave >90) repetida cada 2 h hasta descenso claro. Gasometría, iones, anion gap, glucosa, función renal/hepática, lactato, paracetamol."},
+ {"paso":"Alcaliniza con bicarbonato sódico","sub":[
+   {"nivel":"emergente","t":"Acidemia/niveles tóxicos → bicarbonato sódico IV (bolo + perfusión) para pH urinario 7,5-8 y pH sérico ~7,45-7,55; favorece eliminación renal."}
+ ]},
+ {"paso":"Repón potasio y evita la intubación innecesaria","detalle":"Mantén potasio normal (imprescindible para alcalinizar la orina). Evita intubar salvo necesidad: la hipoventilación empeora la acidosis y dispara la toxicidad al SNC."},
+ {"paso":"Indica hemodiálisis si criterios de gravedad","sub":[
+   {"nivel":"critico","t":"Nivel >90-100 mg/dL, acidosis refractaria, alteración del SNC, edema pulmonar o fracaso renal → hemodiálisis urgente."}
+ ]},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"critico","t":"Nivel >50 mg/dL, acidemia, alteración mental, edema pulmonar o fallo renal → UCI."},
+   {"t":"Toxicidad moderada con niveles en descenso → cama monitorizada; valoración psiquiátrica si intencionada."}
+ ]}
+]}

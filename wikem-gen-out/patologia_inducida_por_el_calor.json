@@ -1,0 +1,29 @@
+{"wikem_titulo": "Environmental heat diagnoses", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Golpe de calor","clave":"Tª rectal >40,5 °C + encefalopatía; fallo multiorgánico, enfriar en <30 min"},
+   {"dx":"Sepsis / infección del SNC","clave":"fiebre que persiste pese a enfriamiento; punción lumbar si dudas","slug":"sepsis"},
+   {"dx":"Crisis tirotóxica","clave":"hipertermia con taquiarritmia, bocio, agitación; antecedente tiroideo","slug":"crisis_tirotoxica"},
+   {"dx":"Síndrome neuroléptico maligno / serotoninérgico","clave":"hipertermia con rigidez o clonus; fármacos neurolépticos/serotoninérgicos"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Agotamiento por calor","clave":"Tª <40 °C, sudoración conservada, sin encefalopatía; mejora con líquidos"},
+   {"dx":"Calambres por calor","clave":"calambres musculares por hiponatremia tras esfuerzo y sudoración"},
+   {"dx":"Síncope por calor","clave":"síncope ortostático con vasodilatación; recuperación en decúbito","slug":"sincope"}
+ ]}
+], "plan": [
+ {"paso":"Mide temperatura central y nivel de conciencia","detalle":"Tª rectal (no axilar). Monitor, TA, SatO2, glucemia. Diferencia golpe de calor (>40,5 °C + encefalopatía) de las formas leves."},
+ {"paso":"Enfriamiento rápido si golpe de calor","sub":[
+   {"nivel":"critico","t":"Tª >40,5 °C → enfriamiento por evaporación/convección (agua templada nebulizada + ventiladores), bolsas de hielo en ingles/axilas; objetivo Tª <39 °C en <30 min, suspende a 38,5 °C"}
+ ]},
+ {"paso":"Soporte y vía aérea","sub":[
+   {"nivel":"critico","t":"Glasgow <9 pese a enfriamiento → intubación"},
+   {"nivel":"emergente","t":"Agitación/escalofríos → benzodiacepinas (midazolam) para frenar termogénesis"}
+ ]},
+ {"paso":"Reposición hidroelectrolítica","detalle":"Formas leves: suero oral con electrólitos. Graves: cristaloides IV con monitorización; corrige hiponatremia, hipoglucemia e hipocalcemia. No uses antipiréticos."},
+ {"paso":"Detecta y trata fallo multiorgánico","sub":[
+   {"t":"CK >1.000 con mioglobinuria → rabdomiólisis: fuerza diuresis"},
+   {"nivel":"emergente","t":"pH <7,20 → bicarbonato sódico"},
+   {"t":"Vigila CID, lesión renal aguda y disfunción hepática"}
+ ]},
+ {"paso":"Destino","detalle":"Golpe de calor → ingreso preferente en UCI. Formas leves → alta tras mejoría y rehidratación."}
+]}

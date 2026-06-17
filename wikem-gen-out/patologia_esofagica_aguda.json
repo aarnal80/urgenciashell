@@ -1,0 +1,31 @@
+{"wikem_titulo": "Esophagitis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Perforación esofágica / Boerhaave","clave":"dolor brusco cervical/retroesternal, enfisema subcutáneo, fiebre; neumomediastino; urgencia quirúrgica"},
+   {"dx":"Impactación con obstrucción de vía aérea","clave":"incapacidad para tragar la saliva, sofocación, cianosis; endoscopia inmediata"},
+   {"dx":"Pila de botón u objeto punzocortante impactado","clave":"riesgo de quemadura/perforación; extracción endoscópica inmediata"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Síndrome coronario agudo","clave":"el dolor esofágico puede simular angina; cortejo vegetativo y cambios en ECG","slug":"sindrome_coronario_agudo"},
+   {"dx":"Impactación alimentaria esofágica","clave":"disfagia brusca tras ingesta, sialorrea; suele subyacer esofagitis eosinofílica o estenosis"},
+   {"dx":"Esofagitis infecciosa (Candida, VHS, CMV)","clave":"odinofagia en inmunodeprimido (VIH CD4<100, trasplante); placas blancas o úlceras"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"ERGE / espasmo esofágico","clave":"pirosis, regurgitación, relación con la ingesta; responde a IBP"},
+   {"dx":"Esofagitis medicamentosa ('por pastilla')","clave":"odinofagia tras doxiciclina, AINE, bifosfonatos, hierro o KCl sin agua/decúbito"},
+   {"dx":"Esofagitis eosinofílica","clave":"varón joven atópico, disfagia recurrente e impactaciones; eosinofilia en biopsia"}
+ ]}
+], "plan": [
+ {"paso":"Valora la vía aérea y la deglución","sub":[
+   {"nivel":"critico","t":"Incapacidad para tragar secreciones u obstrucción de vía aérea → endoscopia inmediata; protege la vía aérea."}
+ ]},
+ {"paso":"Descarta perforación","sub":[
+   {"nivel":"critico","t":"Dolor intenso + enfisema subcutáneo/fiebre → Rx tórax y TC con contraste hidrosoluble; cirugía y antibióticos de amplio espectro; mortalidad sube si se demora >24 h."}
+ ]},
+ {"paso":"Maneja la impactación de cuerpo extraño","sub":[
+   {"nivel":"emergente","t":"Punzocortante o pila de botón → endoscopia inmediata."},
+   {"t":"Bolo alimentario sin signos de alarma → endoscopia en <24 h; puede ensayarse glucagón 1 mg IV mientras se prepara."}
+ ]},
+ {"paso":"Trata según la causa","detalle":"ERGE → IBP (omeprazol/pantoprazol). Candida → fluconazol 200 mg carga y 100-200 mg/día 7-14 días. VHS → aciclovir; CMV → ganciclovir/foscarnet. Eosinofílica → IBP y corticoide tópico deglutido."},
+ {"paso":"Hidrata y controla síntomas","detalle":"Sueroterapia IV si intolerancia oral; analgesia y antieméticos según necesidad."},
+ {"paso":"Decide destino","detalle":"Ingreso si perforación, intolerancia oral, sepsis o inmunodepresión grave. Alta con IBP y revisión digestiva en ERGE/esofagitis no complicada."}
+]}

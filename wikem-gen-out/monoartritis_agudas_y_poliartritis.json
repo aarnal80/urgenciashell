@@ -1,0 +1,32 @@
+{"wikem_titulo": "Septic arthritis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Artritis séptica","clave":"monoartritis caliente, fiebre, líquido >50.000 leucocitos PMN; daño articular en horas"},
+   {"dx":"Hemartros con coagulopatía","clave":"derrame hemático, anticoagulación/hemofilia; corregir hemostasia antes de puncionar"},
+   {"dx":"Artritis gonocócica diseminada","clave":"joven sexualmente activo, fiebre, tenosinovitis, pústulas, poliartralgia migratoria"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Artritis microcristalina (gota/pseudogota)","clave":"inicio nocturno, 1ª MTF o rodilla; cristales urato/pirofosfato; muy frecuente"},
+   {"dx":"Osteomielitis con extensión articular","clave":"dolor óseo focal, fiebre, RM con afectación medular ósea adyacente"},
+   {"dx":"Bursitis/celulitis periarticular","clave":"inflamación superficial extraarticular; movilidad pasiva conservada"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Artritis reactiva","clave":"oligoartritis tras infección GI/genitourinaria; conjuntivitis, uretritis"},
+   {"dx":"Brote de artritis reumatoide","clave":"poliartritis simétrica de pequeñas articulaciones, rigidez matutina prolongada"},
+   {"dx":"Artritis vírica","clave":"poliartritis autolimitada, exantema, pródromos virales (parvovirus, hepatitis)"},
+   {"dx":"Enfermedad de Lyme","clave":"monoartritis de rodilla, eritema migratorio, picadura de garrapata"}
+ ]}
+], "plan": [
+ {"paso":"Evalúa y estabiliza","detalle":"Constantes y búsqueda de sepsis. Identifica factores de riesgo: UDVP, prótesis, inmunodepresión, diabetes. Si fiebre + monoartritis, trata como séptica hasta descartar."},
+ {"paso":"Artrocentesis sin demora","detalle":"Punción de todo derrame articular ANTES de antibiótico. Enviar: recuento celular y diferencial, Gram, cultivo y estudio de cristales. >50.000 leucocitos (90% PMN) sugiere infección."},
+ {"paso":"Solicita analítica e imagen","detalle":"Hemograma, VSG, PCR, procalcitonina, hemocultivos (positivos ~50%), ácido úrico, función renal. Radiografía; ecografía para guiar punción. NAAT gonococo si se sospecha."},
+ {"paso":"Antibioterapia empírica si sospecha de séptica","sub":[
+   {"nivel":"critico","t":"Articulación nativa → vancomicina 15-20 mg/kg IV + ceftriaxona 2 g IV tras la punción."},
+   {"nivel":"emergente","t":"Prótesis articular → vancomicina + cefepima o meropenem y avisar a traumatología."}
+ ]},
+ {"paso":"Trata la causa no infecciosa","detalle":"Microcristalina: AINE (naproxeno, indometacina) o colchicina; corticoide intraarticular o sistémico si contraindicación. Analgesia e inmovilización."},
+ {"paso":"Interconsulta a traumatología","detalle":"Lavado articular (artroscópico o abierto) en artritis séptica; las infecciones de prótesis requieren cirugía urgente."},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"critico","t":"Séptica confirmada o sospechada → ingreso para antibiótico IV y lavado."},
+   {"t":"Microcristalina/reactiva sin criterios de ingreso → alta con tratamiento y control reumatológico."}
+ ]}
+]}

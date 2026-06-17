@@ -1,0 +1,28 @@
+{"wikem_titulo": "Undifferentiated shock", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Shock hipovolémico/hemorrágico","clave":"hemorragia evidente u oculta (digestiva, AAA roto, ectópico); piel fría, colapso de vena cava","slug":"hemorragia_digestiva_alta"},
+   {"dx":"Shock séptico","clave":"el más frecuente; foco infeccioso, fiebre/hipotermia, lactato alto, vasodilatación (piel caliente inicial)","slug":"sepsis"},
+   {"dx":"Shock cardiogénico","clave":"IAM, arritmia o ICC; ingurgitación yugular, crepitantes, hipoperfusión con congestión","slug":"sindrome_coronario_agudo"},
+   {"dx":"Taponamiento cardíaco","clave":"tonos apagados, IY, pulso paradójico; eco con derrame y colapso diastólico","slug":"taponamiento_cardiaco"},
+   {"dx":"Neumotórax a tensión","clave":"hipofonesis unilateral, desviación traqueal, IY; descompresión inmediata","slug":"neumotorax_espontaneo"},
+   {"dx":"Tromboembolia pulmonar masiva","clave":"disnea súbita, hipoxia, sobrecarga de VD; factores de riesgo de TVP","slug":"tromboembolia_pulmonar"},
+   {"dx":"Anafilaxia","clave":"exposición a alérgeno, urticaria/angioedema, broncoespasmo, hipotensión","slug":"urticaria_y_anafilaxia"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Crisis addisoniana","clave":"hipotensión refractaria a volumen, hiponatremia/hiperpotasemia, hiperpigmentación","slug":"crisis_addisoniana"},
+   {"dx":"Shock neurogénico","clave":"tras lesión medular; hipotensión con bradicardia paradójica y piel caliente"},
+   {"dx":"Intoxicación (betabloqueante/antagonista del calcio)","clave":"bradicardia e hipotensión; sospecha por anamnesis/fármacos","slug":"intoxicacion_aguda_por_digitalicos"}
+ ]}
+], "plan": [
+ {"paso":"Reconoce el shock y activa el ABC (primeros minutos)","detalle":"Monitor, TA, SatO2, dos vías de grueso calibre. O2 para SatO2 >=94%. Posición en decúbito. Avisa precozmente a UCI."},
+ {"paso":"Extrae analítica con lactato y gasometría","detalle":"Hemograma, bioquímica, coagulación, gasometría arterial con lactato y exceso de bases. Lactato >4 mmol/L = hipoperfusión grave. Pruebas cruzadas si sangrado."},
+ {"paso":"Clasifica el tipo de shock a pie de cama","detalle":"Eco POCUS (RUSH): función cardíaca, vena cava, derrame pericárdico, pulmón, aorta/abdomen. ECG y Rx tórax."},
+ {"paso":"Inicia resucitación según patrón hemodinámico","sub":[
+   {"nivel":"critico","t":"Hipovolémico/séptico/distributivo → cristaloides 30 mL/kg (Ringer lactato/SSF); en hemorragia activa hemoderivados y control del foco."},
+   {"nivel":"critico","t":"Obstructivo → descompresión inmediata: toracocentesis (neumotórax a tensión), pericardiocentesis (taponamiento), fibrinólisis/trombectomía (TEP masiva)."},
+   {"nivel":"emergente","t":"Cardiogénico → evita sobrecarga; inotropos (dobutamina) y considera reperfusión si IAM."}
+ ]},
+ {"paso":"Añade vasopresores si no responde a volumen","detalle":"Noradrenalina como primera línea (objetivo PAM >=65 mmHg). Adrenalina IM 0,5 mg si anafilaxia. Vía central en cuanto sea posible."},
+ {"paso":"Trata la causa específica sin demora","detalle":"Antibiótico de amplio espectro en la 1.ª hora si sepsis; hidrocortisona 100 mg IV si sospecha addisoniana; antídoto en intoxicaciones."},
+ {"paso":"Reevalúa y deriva a UCI","detalle":"Reevaluación frecuente (TA, diuresis >0,5 mL/kg/h, aclaramiento de lactato >10% a las 6 h). Todo shock requiere ingreso en UCI."}
+]}

@@ -1,0 +1,30 @@
+{"wikem_titulo": "Crohn's disease", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Megacolon tóxico","clave":"colon transverso >6 cm, fiebre, taquicardia, distensión y abdomen tóxico"},
+   {"dx":"Perforación intestinal","clave":"neumoperitoneo, peritonismo brusco; cirugía urgente"},
+   {"dx":"Isquemia mesentérica","clave":"dolor desproporcionado a la exploración; acidosis láctica","slug":"obstruccion_intestinal"},
+   {"dx":"Hemorragia digestiva baja masiva","clave":"rectorragia abundante con repercusión hemodinámica","slug":"hemorragia_digestiva_media_y_baja"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Colitis por C. difficile","clave":"diarrea tras antibióticos/ingreso; toxina o GDH positiva"},
+   {"dx":"Apendicitis aguda","clave":"dolor migratorio a FID, Blumberg; puede simular brote ileocecal"},
+   {"dx":"Obstrucción intestinal","clave":"vómitos, distensión, ausencia de tránsito; frecuente en EC estenosante","slug":"obstruccion_intestinal"},
+   {"dx":"Absceso intraabdominal","clave":"masa dolorosa con sepsis, típico de EC"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Gastroenteritis infecciosa","clave":"diarrea aguda autolimitada; coprocultivo, contexto epidémico","slug":"nauseas_vomitos_y_diarrea"},
+   {"dx":"Cáncer de colon","clave":"cambio del hábito, anemia ferropénica, síndrome constitucional en >50 años"},
+   {"dx":"Colitis isquémica","clave":"dolor y rectorragia en anciano vasculópata; afecta ángulo esplénico"}
+ ]}
+], "plan": [
+ {"paso":"Evalúa estabilidad y gravedad del brote","detalle":"Constantes, hidratación, abdomen. Aplica Truelove-Witts (CU): >6 deposiciones sanguinolentas/día + taquicardia/fiebre/Hb<10,5/PCR>30 = brote grave."},
+ {"paso":"Solicita analítica e imagen","detalle":"Hemograma, PCR, ionograma, función renal, gasometría si grave. Coprocultivo y toxina C. difficile. Rx simple de abdomen para descartar dilatación colónica/neumoperitoneo."},
+ {"paso":"Reanima y corrige","detalle":"Sueroterapia IV, corrige hipopotasemia e hipomagnesemia (favorecen megacolon). Transfunde si Hb<7-8. Profilaxis de ETV con HBPM."},
+ {"paso":"Descarta complicación quirúrgica","sub":[
+   {"nivel":"critico","t":"Megacolon tóxico / perforación / hemorragia masiva → cirugía urgente + antibióticos de amplio espectro IV"},
+   {"nivel":"emergente","t":"Absceso → TC abdominal, drenaje y antibioterapia, valora retraso de biológicos"}
+ ]},
+ {"paso":"Inicia tratamiento del brote","detalle":"Brote grave: corticoides IV (metilprednisolona 1 mg/kg/día o equivalente). Brote leve-moderado de CU: mesalazina oral/tópica. Evita opiáceos y antidiarreicos (riesgo de megacolon)."},
+ {"paso":"Reevalúa respuesta a corticoides","detalle":"En CU grave, al 3.er día: >8 deposiciones o PCR>45 = corticorrefractariedad → terapia de rescate (ciclosporina o infliximab) o valoración quirúrgica."},
+ {"paso":"Decide destino","detalle":"Brote grave, complicación o intolerancia oral → ingreso (UCI si inestable/séptico). Brote leve con buen soporte → alta con tratamiento y control por Digestivo."}
+]}

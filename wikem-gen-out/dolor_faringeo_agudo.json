@@ -1,0 +1,30 @@
+{"wikem_titulo": "Pharyngitis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Epiglotitis","clave":"odinofagia intensa con fiebre, babeo, voz gangosa y postura en trípode; vía aérea en riesgo","slug":"disnea_laringea"},
+   {"dx":"Angina de Ludwig","clave":"celulitis del suelo de la boca, edema sublingual y desplazamiento lingual; compromiso de vía aérea"},
+   {"dx":"Absceso retrofaríngeo","clave":"disfagia progresiva, rigidez/tortícolis, abombamiento de pared faríngea posterior; afectación general grave"},
+   {"dx":"Síndrome de Lemierre","clave":"faringitis seguida de fiebre alta y tromboflebitis de la yugular interna; sepsis","slug":"sepsis"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Absceso periamigdalino","clave":"trismo, voz gangosa, desviación de úvula y abombamiento periamigdalino unilateral; precisa drenaje"},
+   {"dx":"Mononucleosis infecciosa (VEB)","clave":"exudado, adenopatías generalizadas, esplenomegalia; exantema con ampicilina; evitar amoxicilina"},
+   {"dx":"Difteria","clave":"membranas grisáceas adherentes que sangran al desprenderse; no vacunados"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Faringitis viral","clave":"la más frecuente; tos, rinorrea, sin exudado; autolimitada"},
+   {"dx":"Faringitis estreptocócica (EBHGA)","clave":"exudado, adenopatía cervical dolorosa, fiebre >38 °C, ausencia de tos (Centor)"},
+   {"dx":"Angioedema con afectación faríngea","clave":"edema sin exudado, puede afectar lengua/labios; valorar vía aérea","slug":"angioedema"}
+ ]}
+]
+, "plan": [
+ {"paso":"Descarta primero las formas con riesgo vital","sub":[
+   {"nivel":"critico","t":"Estridor, babeo, trípode, disnea o trismo intenso → sospecha epiglotitis/Ludwig/absceso: NO explorar agresivamente, asegurar vía aérea y avisar ORL/anestesia"},
+   {"nivel":"critico","t":"Abombamiento faríngeo posterior con tortícolis y mal estado → absceso retrofaríngeo: TC cervical e ingreso urgente"}
+ ]},
+ {"paso":"Aplica criterios de Centor","detalle":"Exudado amigdalino, adenopatía cervical anterior dolorosa, fiebre >38 °C y ausencia de tos. Puntuación ≥3 → test rápido de antígeno (TDRAE)/cultivo y valorar antibiótico."},
+ {"paso":"Trata la faringitis estreptocócica confirmada/probable","detalle":"Fenoximetilpenicilina o amoxicilina 500 mg/8-12 h 10 días; alergia a penicilina: azitromicina o clindamicina. Penicilina G benzatina IM como alternativa de adherencia."},
+ {"paso":"Sospecha y maneja la mononucleosis","detalle":"Si adenopatías generalizadas y esplenomegalia: serología/Paul-Bunnell, evita ampicilina/amoxicilina, reposo y abstención deportiva por riesgo de rotura esplénica."},
+ {"paso":"Pauta tratamiento sintomático","detalle":"Analgesia/antitérmicos (paracetamol, ibuprofeno); valorar corticoide (dexametasona) en odinofagia intensa. Hidratación. La mayoría de las faringitis virales solo precisan medidas sintomáticas."},
+ {"paso":"Decide destino","detalle":"Alta con tratamiento ambulatorio en faringitis no complicada. Ingreso y/o drenaje quirúrgico en absceso periamigdalino/retrofaríngeo, angina de Ludwig, epiglotitis o mononucleosis con complicaciones."}
+]
+}

@@ -1,0 +1,36 @@
+{
+  "wikem_titulo": "Digoxin toxicity",
+  "ddx": [
+    {
+      "nivel": "critico",
+      "grupo": "Crítico · bradiarritmia / arritmia con shock",
+      "items": [
+        {"dx": "Intoxicación por betabloqueantes o antagonistas del calcio", "clave": "Bradicardia e hipotensión; verapamilo/diltiazem además vasodilatan, glucemia útil para diferenciar", "slug": "intoxicacion_aguda_por_bloqueadores"},
+        {"dx": "Hiperpotasemia", "clave": "Ondas T picudas, QRS ancho, bradicardia; marcador de gravedad en la propia digital", "slug": "hiperpotasemia"},
+        {"dx": "Síndrome coronario agudo / bloqueo AV isquémico", "clave": "Dolor torácico, cambios ST dinámicos, troponina elevada", "slug": "sindrome_coronario_agudo"}
+      ]
+    },
+    {
+      "nivel": "no_emergente",
+      "grupo": "Otras causas / imitadores",
+      "items": [
+        {"dx": "Intoxicación por glucósidos vegetales (adelfa, dedalera)", "clave": "Misma clínica que digoxina; antecedente de ingesta de plantas, digoxinemia puede ser detectable", "slug": null},
+        {"dx": "Enfermedad del nodo sinusal / bloqueo AV intrínseco", "clave": "Bradiarritmia crónica sin niveles tóxicos ni clínica digestiva/visual", "slug": null},
+        {"dx": "TV bidireccional de otra causa (aconitina, TV catecolaminérgica)", "clave": "Eje QRS alternante sin contexto digitálico", "slug": null}
+      ]
+    }
+  ],
+  "plan": [
+    {"paso": "Monitorización continua y ECG urgente", "detalle": "Telemetría mínimo 12-24 h. La toxicidad ES arritmia (cualquier tipo); el 'efecto digital' (ST en cubeta) NO es tóxico. Vía venosa, O2."},
+    {"paso": "Solicitar digoxinemia e iones clave", "detalle": "Digoxinemia ≥6 h tras la última dosis (terapéutica 0,8-2 ng/mL). BMP: potasio (crítico), creatinina, magnesio y calcio. Tras Fab los niveles dejan de ser útiles."},
+    {"paso": "Corregir alteraciones iónicas que potencian la toxicidad", "sub": [
+      {"t": "Hipopotasemia → reponer KCl IV con monitorización (la hipoK agrava la toxicidad)", "nivel": "emergente"},
+      {"t": "Hipomagnesemia → sulfato de magnesio IV", "nivel": "emergente"},
+      {"t": "Hiperpotasemia en intoxicación digitálica → tratar; EVITAR calcio IV (riesgo de 'corazón de piedra'), priorizar Fab", "nivel": "critico"}
+    ]},
+    {"paso": "Administrar anticuerpos antidigital (fragmentos Fab) si riesgo vital", "detalle": "Indicaciones: arritmia ventricular grave, bradiarritmia refractaria a atropina, K >5 mEq/L con toxicidad, parada cardíaca o digoxinemia ≥10 ng/mL. Empírico inestable: 10-20 viales. Por nivel: viales = (digoxinemia ng/mL × peso kg) / 100. Por dosis ingerida: viales = mg ingeridos × 0,8 / 0,5.", "nivel": "critico"},
+    {"paso": "Tratar la bradiarritmia mientras se prepara el Fab", "detalle": "Atropina 0,5-1 mg IV (puede repetirse). Marcapasos transcutáneo/transvenoso con cautela (riesgo de arritmia ventricular); evitar isoproterenol."},
+    {"paso": "Tratar la taquiarritmia ventricular", "detalle": "Fab es de elección. Coadyuvantes: lidocaína o fenitoína; sulfato de Mg. Evitar antiarrítmicos clase IA (quinidina) y la cardioversión salvo inestabilidad (riesgo de FV refractaria)."},
+    {"paso": "Descontaminación y disposición", "detalle": "Carbón activado en dosis múltiples si ingesta reciente y vía protegida (la hemodiálisis NO elimina digoxina). Ingreso monitorizado; UCI si arritmia, inestabilidad o administración de Fab."}
+  ]
+}

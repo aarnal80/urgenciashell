@@ -1,0 +1,28 @@
+{"wikem_titulo": "Pyelonephritis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Sepsis / shock séptico de origen urinario","clave":"hipotensión, taquicardia, alteración de conciencia; leucopenia es signo de gravedad","slug":"sepsis"},
+   {"dx":"Pielonefritis obstructiva (litiasis infectada)","clave":"fiebre + cólico + hidronefrosis; emergencia que precisa desobstrucción urgente","slug":"colico_nefritico"},
+   {"dx":"Aneurisma de aorta abdominal","clave":"dolor lumbar, masa pulsátil, hipotensión; simula dolor en flanco","slug":"sindrome_aortico_agudo"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Absceso renal/perinefrítico o pielonefritis enfisematosa","clave":"fiebre persistente >48-72h pese a antibiótico; diabético; precisa imagen","slug":"lesion_renal_aguda"},
+   {"dx":"Prostatitis aguda (varón)","clave":"fiebre con próstata dolorosa al tacto rectal","slug":"prostatitis_aguda"},
+   {"dx":"Apendicitis / diverticulitis","clave":"dolor abdominal con defensa, fiebre; puede confundir el flanco"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Cistitis / ITU baja","clave":"síndrome miccional sin fiebre, sin dolor lumbar ni afectación general","slug":"infecciones_urinarias_bajas_cistitis_y_uretritis"},
+   {"dx":"Lumbalgia musculoesquelética","clave":"dolor mecánico reproducible, afebril, sin piuria","slug":"colico_nefritico"},
+   {"dx":"Herpes zóster lumbar","clave":"dolor radicular unilateral, vesículas en dermatoma"}
+ ]}
+], "plan": [
+ {"paso":"Reconoce y clasifica","detalle":"Fiebre >38,5°C + escalofríos + dolor lumbar con puñopercusión positiva. Distingue no complicada (mujer joven sana) de complicada (varón, embarazo, anciano, inmunodeprimido, anomalía urológica)."},
+ {"paso":"Monitoriza y trata la sepsis precozmente","sub":[
+   {"nivel":"critico","t":"Datos de sepsis → cristaloides 30 mL/kg, hemocultivos, lactato y antibiótico IV en la primera hora."}
+ ]},
+ {"paso":"Solicita pruebas","detalle":"Sistemático y sedimento (piuria, nitritos), urocultivo y hemocultivos. Hemograma (vigila leucopenia), función renal, iones, PCR/PCT. β-hCG en mujer fértil."},
+ {"paso":"Indica imagen si hay alarma","sub":[
+   {"nivel":"emergente","t":"Fiebre persistente >48-72h, sospecha de obstrucción, monorreno o mala evolución → eco/TC para descartar absceso, hidronefrosis o pielonefritis enfisematosa."}
+ ]},
+ {"paso":"Inicia antibioterapia empírica","detalle":"Ceftriaxona 1-2 g/24h IV (o cefotaxima); alternativa aminoglucósido. Con riesgo de BLEE: ertapenem o piperacilina-tazobactam. Añade antitérmico/analgesia y antiemético."},
+ {"paso":"Decide destino","detalle":"No complicada estable y tolerancia oral → alta con antibiótico oral (cefixima/cefditoreno) y control. Ingreso si sepsis, vómitos, complicada, embarazo, obstrucción o mala evolución."}
+]}

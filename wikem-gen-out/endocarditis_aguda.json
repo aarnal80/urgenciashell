@@ -1,0 +1,28 @@
+{"wikem_titulo": "Endocarditis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Sepsis de otro foco","clave":"foco identificable, hipotensión distributiva; sin soplo nuevo ni estigmas embólicos","slug":"sepsis"},
+   {"dx":"Meningitis / encefalitis","clave":"fiebre, cefalea, rigidez de nuca, alteración del nivel de conciencia","slug":"sindrome_meningeo_absceso_cerebral_absceso_epidural_espinal_"},
+   {"dx":"Ictus / hemorragia intracraneal","clave":"focalidad neurológica brusca; puede ser embolia séptica de la propia EI","slug":"ictus"},
+   {"dx":"IAM","clave":"dolor opresivo, cambios ECG, troponina; sin fiebre mantenida ni soplo nuevo","slug":"sindrome_coronario_agudo"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Pielonefritis aguda","clave":"fiebre, puñopercusión positiva, síndrome miccional, piuria","slug":"pielonefritis_aguda"},
+   {"dx":"Neumonía","clave":"fiebre, tos, condensación radiológica; el foco explica la bacteriemia","slug":"neumonia_adquirida_en_la_comunidad"},
+   {"dx":"Pericarditis aguda","clave":"dolor pleurítico, roce, ST difuso; sin vegetaciones en eco","slug":"pericarditis_aguda"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Síndrome viral inespecífico","clave":"fiebre autolimitada sin foco ni soplo; reevaluar si persiste","slug":"sindrome_febril_sin_foco_en_pacientes_no_inmunodeprimidos"},
+   {"dx":"Fiebre por fármacos / neoplasia","clave":"fiebre sin foco infeccioso, relación temporal con fármaco o síndrome constitucional"}
+ ]}
+], "plan": [
+ {"paso":"Sospéchala en todo febril con factores de riesgo","detalle":"Soplo nuevo, ADVP, válvula protésica, marcapasos/DAI, bacteriemia por S. aureus. Busca estigmas periféricos (Janeway, Osler, hemorragias en astilla)."},
+ {"paso":"Extrae hemocultivos ANTES del antibiótico","detalle":"3 tandas de hemocultivos de venopunciones distintas. Hemograma, bioquímica, PCR, NT-proBNP, sistemático de orina. ECG (busca BAV nuevo = absceso perivalvular)."},
+ {"paso":"Solicita ecocardiografía","detalle":"ETT inicial; ETE si alta sospecha o ETT no concluyente (más sensible para vegetaciones, abscesos y prótesis). Aplica criterios de Duke modificados."},
+ {"paso":"Inicia antibioterapia empírica precoz tras cultivos","detalle":"Válvula nativa: cloxacilina + ampicilina + gentamicina (o vancomicina/daptomicina si alergia/SARM). Protésica precoz: vancomicina + gentamicina + rifampicina. Ajusta a antibiograma."},
+ {"paso":"Detecta complicaciones que indican cirugía urgente","sub":[
+   {"nivel":"critico","t":"IC aguda por regurgitación grave o shock cardiogénico → cirugía cardíaca urgente."},
+   {"nivel":"critico","t":"Embolia cerebral con focalidad → NO fibrinólisis IV; valora con neurología/cirugía."},
+   {"nivel":"emergente","t":"Bacteriemia persistente, vegetaciones >10 mm o embolias de repetición → valoración quirúrgica precoz."}
+ ]},
+ {"paso":"Destino","detalle":"Ingreso de todo caso sospechoso. Avisa a cardiología y cirugía cardíaca ante complicaciones. UCI si inestabilidad o sepsis grave."}
+]}

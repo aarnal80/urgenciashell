@@ -1,0 +1,27 @@
+{"wikem_titulo": "Accidental hypothermia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hipotermia secundaria a sepsis","clave":"hipotermia con foco infeccioso; descartar antes de atribuir solo a frío","slug":"sepsis"},
+   {"dx":"Hipoglucemia","clave":"frío genera consumo de glucosa; glucemia capilar siempre","slug":"hipoglucemia"},
+   {"dx":"Hipotiroidismo grave / crisis mixedematosa","clave":"hipotermia, bradicardia, estupor; antecedente tiroideo","slug":"crisis_mixedematosa"},
+   {"dx":"Intoxicación / coma","clave":"alcohol, sedantes, opiáceos favorecen hipotermia por exposición","slug":"coma"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Congelación (frostbite)","clave":"lesión por congelación tisular localizada; palidez, anestesia, ampollas tras recalentar"},
+   {"dx":"Pie de trinchera","clave":"lesión por frío húmedo no congelante; maceración, dolor al recalentar"},
+   {"dx":"Sabañones (pernio)","clave":"lesión cutánea por frío no congelante; pápulas pruriginosas violáceas"}
+ ]}
+], "plan": [
+ {"paso":"Mide temperatura central con termómetro de baja lectura","detalle":"Sonda esofágica si intubado. Monitor, glucemia, ECG (busca onda J de Osborn). Manipula con suavidad: el miocardio frío es irritable."},
+ {"paso":"ABC y soporte","sub":[
+   {"nivel":"critico","t":"PCR → RCP; en FV con Tª <30 °C la desfibrilación es poco eficaz: recalienta. \"No está muerto hasta que está caliente y muerto\""},
+   {"t":"K+ >10-12 mEq/L indica muerte (no recuperable)"}
+ ]},
+ {"paso":"Recalentamiento según gravedad","sub":[
+   {"t":"Leve (32-35 °C) → recalentamiento pasivo externo: manta, ambiente cálido"},
+   {"nivel":"emergente","t":"Moderada (28-32 °C) → recalentamiento activo externo + líquidos IV calientes"},
+   {"nivel":"critico","t":"Grave (<28 °C) o inestable → recalentamiento activo interno (sueros calientes, lavados, ECMO si disponible)"}
+ ]},
+ {"paso":"Fluidoterapia y corrección metabólica","detalle":"Cristaloides calientes (38-42 °C) IV. Corrige glucemia. Interpreta gasometría con cautela (la sangre se recalienta antes del análisis)."},
+ {"paso":"Trata las lesiones por frío locales","detalle":"Congelación: recalentar en agua a 37-39 °C, analgesia, no frotar, no recalentar si riesgo de recongelación. Eleva la extremidad."},
+ {"paso":"Destino","detalle":"UCI en hipotermia grave o inestable. Observación y alta en formas leves recalentadas sin complicación; deriva congelaciones extensas a cirugía."}
+]}

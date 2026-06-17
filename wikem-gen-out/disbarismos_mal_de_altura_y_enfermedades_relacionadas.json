@@ -1,0 +1,30 @@
+{"wikem_titulo": "Acute mountain sickness", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Edema cerebral de altitud (EAC-A)","clave":"ataxia y alteración del estado mental en altura; muerte en 24 h sin descenso"},
+   {"dx":"Edema pulmonar de altitud (EAP-A)","clave":"disnea de reposo, crepitantes, cianosis en altura; descenso inmediato"},
+   {"dx":"Enfermedad por descompresión / embolia gaseosa","clave":"déficit neurológico o dolor torácico tras buceo; cámara hiperbárica"},
+   {"dx":"Intoxicación por monóxido de carbono","clave":"cefalea en refugio con estufa/combustión; SatO2 normal engañosa"},
+   {"dx":"Infección del SNC (meningitis/encefalitis)","clave":"fiebre, rigidez, focalidad; O2 no mejora la cefalea","slug":"sindrome_meningeo_absceso_cerebral_absceso_epidural_espinal_y_encefalitis"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Mal agudo de montaña leve","clave":"cefalea + síntomas GI/fatiga/insomnio tras subir >2.500 m; Lake Louise 3-4"},
+   {"dx":"Migraña","clave":"cefalea recurrente conocida; O2 no la alivia, a diferencia del MAM"},
+   {"dx":"Deshidratación / agotamiento","clave":"esfuerzo y aporte hídrico escaso; el MAM no mejora solo con líquidos"},
+   {"dx":"Hipoglucemia","clave":"clínica neuroglucopénica; glucemia capilar baja","slug":"hipoglucemia"}
+ ]}
+], "plan": [
+ {"paso":"Valora gravedad y descarta formas mortales","detalle":"Exploración neurológica y cerebelosa (EAC-A) y auscultación pulmonar (EAP-A). Aplica Lake Louise. Monitor, SatO2, glucemia, Tª."},
+ {"paso":"Descenso y oxígeno si forma grave","sub":[
+   {"nivel":"critico","t":"EAC-A o EAP-A → descenso inmediato de altitud + O2; cámara hiperbárica portátil si no es posible descender"}
+ ]},
+ {"paso":"Tratamiento farmacológico según cuadro","sub":[
+   {"t":"MAM leve → acetazolamida 250 mg/12 h + analgesia (ibuprofeno/paracetamol) + antiemético"},
+   {"nivel":"critico","t":"EAC-A → dexametasona 8 mg inicial y 4 mg/6 h"},
+   {"nivel":"critico","t":"EAP-A → nifedipino 30 mg liberación prolongada; valora tadalafilo/salmeterol; reposo y abrigo"}
+ ]},
+ {"paso":"Maneja el disbarismo por buceo","sub":[
+   {"nivel":"critico","t":"Enfermedad por descompresión o embolia gaseosa → O2 100%, decúbito, cristaloides y traslado URGENTE a cámara hiperbárica"}
+ ]},
+ {"paso":"Soporte general","detalle":"Hidratación con cristaloides (no corrige el MAM por sí sola), reposo y evitar nuevos ascensos hasta resolución. No usar sedantes que enmascaren deterioro."},
+ {"paso":"Destino","detalle":"MAM leve → tratamiento ambulatorio sintomático. EAC-A/EAP-A/disbarismo grave → observación, ingreso y coordinación con unidad hiperbárica o descenso."}
+]}

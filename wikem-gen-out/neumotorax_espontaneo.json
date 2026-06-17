@@ -1,0 +1,32 @@
+{"wikem_titulo": "Spontaneous pneumothorax", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Neumotórax a tensión","clave":"hipotensión, ingurgitación yugular, desviación traqueal contralateral; descomprimir SIN esperar Rx"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita e hipoxia con Rx normal; factores de riesgo de TVP","slug":"tromboembolia_pulmonar"},
+   {"dx":"Síndrome coronario agudo","clave":"dolor opresivo, cortejo vegetativo; cambios en el ECG","slug":"sindrome_coronario_agudo"},
+   {"dx":"Disección aórtica","clave":"dolor desgarrante irradiado a espalda; asimetría de pulsos/TA","slug":"sindrome_aortico_agudo"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Hemoneumotórax espontáneo","clave":"nivel hidroaéreo en Rx; débito hemático alto por drenaje; valorar cirugía"},
+   {"dx":"Crisis asmática / EPOC agudizada","clave":"sibilancias, espiración alargada; antecedente obstructivo","slug":"epoc_agudizada"},
+   {"dx":"Neumonía","clave":"fiebre, tos productiva, condensación en Rx","slug":"neumonia_adquirida_en_la_comunidad"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Pleuritis / derrame pleural","clave":"dolor pleurítico, hipofonesis con matidez (no timpanismo)","slug":"derrame_pleural"},
+   {"dx":"Dolor musculoesquelético / fractura costal","clave":"dolor reproducible a la palpación; antecedente de esfuerzo o traumatismo"},
+   {"dx":"Crisis de ansiedad","clave":"hiperventilación, parestesias; exploración y Rx normales","slug":"crisis_de_ansiedad"}
+ ]}
+], "plan": [
+ {"paso":"Descarta tensión de inmediato","sub":[
+   {"nivel":"critico","t":"Inestabilidad + signos de tensión → toracocentesis descompresiva urgente (2.º espacio línea medioclavicular o 5.º línea axilar media) SIN esperar imagen, seguida de drenaje."}
+ ]},
+ {"paso":"Estabiliza y oxigena","detalle":"Monitor, vía venosa, O2 a alto flujo (mascarilla con reservorio): acelera la reabsorción del aire pleural. Analgesia (paracetamol/metamizol; morfina si dolor intenso)."},
+ {"paso":"Confirma con imagen","detalle":"Rx tórax en inspiración y bipedestación (línea pleural visceral sin trama distal). Ecografía/TC si dudas o sospecha de hemoneumotórax."},
+ {"paso":"Decide manejo según tamaño y tipo","sub":[
+   {"t":"NE primario pequeño (<2-3 cm) y asintomático → observación + O2, control radiológico."},
+   {"nivel":"emergente","t":"NE grande, sintomático o secundario (EPOC) → drenaje torácico (tubo o catéter pleural)."}
+ ]},
+ {"paso":"Vigila el hemoneumotórax","sub":[
+   {"nivel":"emergente","t":"Débito >700 mL en 1.ª hora o >200 mL/h durante 2 h → cirugía urgente."}
+ ]},
+ {"paso":"Decide destino","detalle":"Ingreso para NE secundario, drenado o complicado. NE primario pequeño en observación → alta con control si estable, evitar vuelos/buceo."}
+]}

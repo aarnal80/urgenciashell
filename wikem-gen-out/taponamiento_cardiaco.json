@@ -1,0 +1,23 @@
+{"wikem_titulo": "Pericardial effusion and tamponade", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Neumotórax a tensión","clave":"ausencia de murmullo y timpanismo unilateral, desviación traqueal, hipotensión; alivio inmediato con punción","slug":"neumotorax_espontaneo"},
+   {"dx":"Tromboembolia pulmonar masiva","clave":"disnea súbita, hipoxia, signos de fallo derecho; suele faltar el roce y los tonos apagados","slug":"tromboembolia_pulmonar"},
+   {"dx":"IAM con shock cardiogénico","clave":"dolor torácico, cambios ECG isquémicos, troponina elevada; sin pulso paradójico marcado","slug":"sindrome_coronario_agudo"},
+   {"dx":"Disección aórtica","clave":"dolor desgarrante a espalda, asimetría de pulsos/TA; puede causar taponamiento por hemopericardio","slug":"sindrome_aortico_agudo"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Insuficiencia cardíaca aguda","clave":"crepitantes, congestión pulmonar; mejora con diuréticos (contraindicados si hay taponamiento)","slug":"insuficiencia_cardiaca"},
+   {"dx":"Pericarditis constrictiva","clave":"signo de Kussmaul, dip-plateau; instauración crónica, sin colapso diastólico agudo","slug":"pericarditis_aguda"}
+ ]}
+], "plan": [
+ {"paso":"Reconoce el shock obstructivo y monitoriza","detalle":"Monitor ECG, TA, SatO2; dos vías de grueso calibre. Busca tríada de Beck y pulso paradójico >10 mmHg."},
+ {"paso":"Confirma con ecocardiografía urgente a pie de cama","detalle":"Derrame con colapso de AD/VD en diástole, vena cava dilatada sin colapso inspiratorio. No demores el tratamiento si hay inestabilidad."},
+ {"paso":"Optimiza la precarga, NUNCA la reduzcas","detalle":"Carga de volumen con cristaloides (Ringer lactato 500 mL). PROHIBIDOS diuréticos y vasodilatadores. Soporte inotrópico/vasopresor (dobutamina, dopamina) como puente."},
+ {"paso":"Decide la vía de evacuación según estabilidad","sub":[
+   {"nivel":"critico","t":"Inestable / shock → pericardiocentesis URGENTE guiada por eco (subxifoidea)."},
+   {"nivel":"critico","t":"Taponamiento traumático / hemopericardio → toracotomía o ventana pericárdica en quirófano."},
+   {"t":"Estable con derrame grande sin taponamiento → drenaje programado con cardiología."}
+ ]},
+ {"paso":"Corrige la acidosis y trata la causa","detalle":"Bicarbonato si pH <7,20. Orienta etiología (neoplasia, uremia, viral, urémica) y trátala."},
+ {"paso":"Destino","detalle":"Todo taponamiento → UCI. Avisa a cardiología y cirugía cardíaca. Derrame pequeño estable de causa conocida → seguimiento ambulatorio estrecho."}
+]}

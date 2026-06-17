@@ -1,0 +1,26 @@
+{
+ "id": "cha2ds2vasc",
+ "nombre": "CHA₂DS₂-VASc",
+ "nombre_largo": "Escala CHA₂DS₂-VASc de riesgo tromboembólico en fibrilación auricular",
+ "para": "Estimar el riesgo tromboembólico en la fibrilación auricular no valvular y decidir la indicación de anticoagulación.",
+ "tipo": "suma",
+ "items": [
+  {"id": "icc", "label": "Insuficiencia cardiaca o disfunción ventricular izquierda", "tipo": "binario", "puntos": 1},
+  {"id": "hta", "label": "Hipertensión arterial", "tipo": "binario", "puntos": 1},
+  {"id": "edad", "label": "Edad", "tipo": "opciones", "opciones": [
+    {"label": "< 65 años", "puntos": 0},
+    {"label": "65-74 años", "puntos": 1},
+    {"label": "≥ 75 años", "puntos": 2}
+  ]},
+  {"id": "diabetes", "label": "Diabetes mellitus", "tipo": "binario", "puntos": 1},
+  {"id": "ictus", "label": "Ictus, AIT o embolia previa", "tipo": "binario", "puntos": 2},
+  {"id": "vascular", "label": "Enfermedad vascular (IAM, arteriopatía periférica o placa aórtica)", "tipo": "binario", "puntos": 1},
+  {"id": "sexo_femenino", "label": "Sexo femenino", "tipo": "binario", "puntos": 1}
+ ],
+ "interpretacion": [
+  {"min": 0, "max": 1, "label": "Riesgo bajo", "detalle": "0 puntos en varón o 1 punto en mujer (por el sexo): no se recomienda anticoagulación."},
+  {"min": 1, "max": 1, "label": "Riesgo intermedio", "detalle": "1 punto (en varón): valorar individualmente la anticoagulación."},
+  {"min": 2, "max": null, "label": "Riesgo alto", "detalle": "≥ 2 puntos: anticoagulación recomendada."}
+ ],
+ "nota": "El punto por sexo femenino solo cuenta en presencia de otro factor de riesgo. Puntuación máxima 9."
+}

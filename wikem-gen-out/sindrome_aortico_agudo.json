@@ -1,0 +1,28 @@
+{"wikem_titulo": "Nontraumatic thoracic aortic dissection", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome coronario agudo","clave":"dolor opresivo, cambios del ST, troponina; la disección tipo A puede ocluir coronarias","slug":"sindrome_coronario_agudo"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hipoxia; factores de riesgo de TVP","slug":"tromboembolia_pulmonar"},
+   {"dx":"Taponamiento cardíaco","clave":"IY, tonos apagados, pulso paradójico; complicación de disección tipo A","slug":"taponamiento_cardiaco"},
+   {"dx":"Perforación esofágica (Boerhaave)","clave":"dolor tras vómitos, enfisema subcutáneo, neumomediastino","slug":"patologia_esofagica_aguda"},
+   {"dx":"Neumotórax a tensión","clave":"hipofonesis unilateral, desviación traqueal, IY","slug":"neumotorax_espontaneo"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Pericarditis aguda","clave":"dolor pleurítico que mejora al inclinarse; roce; ST cóncavo difuso","slug":"pericarditis_aguda"},
+   {"dx":"Ictus isquémico","clave":"déficit neurológico focal; puede ser por extensión de la disección a troncos supraaórticos","slug":"ictus"},
+   {"dx":"Cólico nefrítico / isquemia mesentérica","clave":"dolor abdominal/lumbar por afectación de ramas viscerales en disección tipo B","slug":"colico_nefritico"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Dolor osteomuscular","clave":"reproducible a la palpación, mecánico, sin cortejo vegetativo"},
+   {"dx":"ERGE / espasmo esofágico","clave":"relación con la ingesta, pirosis","slug":"patologia_esofagica_aguda"}
+ ]}
+], "plan": [
+ {"paso":"Reconoce y monitoriza (emergencia)","detalle":"Monitor, SatO2, vía. TA en AMBOS brazos y pulsos periféricos. Avisa a cirugía cardiovascular y UCI precozmente."},
+ {"paso":"Confirma con imagen urgente","detalle":"Angio-TC de tórax/abdomen/pelvis (de elección). Eco POCUS/transesofágico si inestable: derrame, colgajo intimal, insuficiencia aórtica."},
+ {"paso":"Controla la frecuencia cardíaca primero","detalle":"Betabloqueante IV (esmolol o labetalol) para FC <60 lpm ANTES de vasodilatar, para reducir el dP/dt y el estrés de pared."},
+ {"paso":"Controla después la presión arterial","detalle":"Objetivo PAS 100-120 mmHg. Añade vasodilatador si persiste HTA tras el betabloqueo. Analgesia con morfina (reduce el tono simpático)."},
+ {"paso":"Clasifica y define la estrategia","sub":[
+   {"nivel":"critico","t":"Tipo A (aorta ascendente) → cirugía emergente; quirófano sin demora."},
+   {"nivel":"emergente","t":"Tipo B (sin aorta ascendente) → tratamiento médico/endovascular salvo complicaciones (isquemia, rotura, dolor refractario)."}
+ ]},
+ {"paso":"Vigila las complicaciones críticas","detalle":"Hipotensión/shock (rotura o taponamiento), déficit neurológico, asimetría de pulsos, insuficiencia aórtica nueva. No demores el traslado a quirófano/UCI."}
+]}

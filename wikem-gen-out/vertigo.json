@@ -1,0 +1,30 @@
+{"wikem_titulo": "Vertigo", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Ictus/infarto cerebeloso","clave":"vértigo central: HINTS de riesgo, ataxia troncal, imposibilidad de caminar; impulso cefálico normal","slug":"ictus"},
+   {"dx":"Insuficiencia vertebrobasilar / AIT","clave":"factores de riesgo vascular; síntomas troncoencefálicos asociados (diplopía, disartria)","slug":"ictus"},
+   {"dx":"Disección de arteria vertebral","clave":"cervicalgia/cefalea occipital tras maniobra cervical; síndrome de Wallenberg","slug":"sindrome_aortico_agudo"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Síndrome de Ramsay Hunt","clave":"vértigo + parálisis facial + vesículas en CAE/pabellón","slug":"otalgia"},
+   {"dx":"Laberintitis","clave":"vértigo intenso + hipoacusia + acúfenos, contexto de otitis","slug":"otalgia"},
+   {"dx":"Neuritis vestibular","clave":"vértigo agudo prolongado, sin clínica coclear; impulso cefálico patológico"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"VPPB","clave":"crisis breves (<1 min) con cambios posturales; Dix-Hallpike positivo"},
+   {"dx":"Enfermedad de Ménière","clave":"crisis recurrentes de vértigo + hipoacusia fluctuante + acúfenos + plenitud ótica"},
+   {"dx":"Vértigo de origen metabólico/tóxico","clave":"hipoglucemia, alcohol, aminoglucósidos, disfunción tiroidea","slug":"hipoglucemia"}
+ ]}
+], "plan": [
+ {"paso":"Estabiliza y excluye causas sistémicas","detalle":"Constantes y glucemia capilar. Trata hipoglucemia si la hay. Valora hidratación si vómitos intensos."},
+ {"paso":"Diferencia periférico de central con la exploración","detalle":"Anamnesis (duración, desencadenantes, clínica coclear) y exploración neurológica completa con marcha."},
+ {"paso":"Aplica el protocolo HINTS en vértigo agudo continuo","sub":[
+   {"nivel":"critico","t":"impulso cefálico normal, nistagmo bidireccional/vertical o skew presente (peligroso) → sospecha central, TC/RM y código ictus si procede"},
+   {"t":"impulso cefálico patológico, nistagmo unidireccional y sin skew (tranquilizador) → origen periférico"}
+ ]},
+ {"paso":"Maniobras diagnóstico-terapéuticas si sospecha periférica","detalle":"Dix-Hallpike; si VPPB confirmado, realiza maniobra de Epley."},
+ {"paso":"Trata sintomáticamente el vértigo periférico","detalle":"Sulpirida 100 mg IM/IV o dimenhidrinato; metoclopramida 10 mg IV para vómitos. Sedante vestibular pocos días; no cronificar."},
+ {"paso":"Decide destino","sub":[
+   {"t":"vértigo periférico que mejora y deambula → alta con tratamiento y revisión por ORL"},
+   {"nivel":"critico","t":"sospecha central, inestabilidad grave o focalidad → neuroimagen urgente e ingreso/valoración por Neurología"}
+ ]}
+]}

@@ -1,0 +1,27 @@
+{"wikem_titulo": "Submersion injury", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hipotermia asociada","clave":"agua fría; bradicardia, arritmia; protege SNC si precede a la hipoxia","slug":"patologia_inducida_por_el_frio_hipotermia_accidental_y_congelacion"},
+   {"dx":"Traumatismo cervical/craneal por zambullida","clave":"antecedente de salto o trauma; inmoviliza columna y valora TC"},
+   {"dx":"Arritmia / síncope causante de la inmersión","clave":"síndrome de QT largo, cardiopatía; valorar causa precipitante","slug":"sincope"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Edema agudo de pulmón por inmersión","clave":"disnea e hipoxia tras inmersión sin gran aspiración; nadadores/buceadores"},
+   {"dx":"Emergencia por buceo (barotrauma/embolia gaseosa)","clave":"si descompresión; clínica neurológica o torácica tras inmersión profunda","slug":"disbarismos_mal_de_altura_y_enfermedades_relacionadas"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Neumonía por broncoaspiración","clave":"fiebre y deterioro respiratorio tardío (>24 h); infiltrado nuevo","slug":"neumonia_adquirida_en_la_comunidad"}
+ ]}
+], "plan": [
+ {"paso":"ABC con control cervical","detalle":"O2 alto flujo; intubación si hipoxia refractaria o bajo nivel de conciencia. Monitor, SatO2, glucemia, Tª central. Inmoviliza columna solo si historia/signos de trauma."},
+ {"paso":"Maneja la PCR y la hipotermia conjuntamente","sub":[
+   {"nivel":"critico","t":"PCR → RCP; asistolia y AESP son los ritmos más frecuentes"},
+   {"nivel":"critico","t":"Tª <28 °C → recalienta antes de dar por ineficaz la desfibrilación; prolonga la reanimación"}
+ ]},
+ {"paso":"Soporte respiratorio","sub":[
+   {"nivel":"emergente","t":"Hipoxia con trabajo respiratorio → VMNI/CPAP con PEEP; intubación y ventilación protectora si fracaso"},
+   {"t":"Corrige acidosis láctica; valora bicarbonato si pH muy bajo"}
+ ]},
+ {"paso":"Pruebas y vigilancia","detalle":"Rx tórax al ingreso y a las 4 h; gasometría arterial; ECG. No hay diferencia de manejo entre agua dulce y salada. Vigila edema cerebral si deterioro neurológico."},
+ {"paso":"Trata complicaciones","detalle":"No antibiótico profiláctico de rutina; iniciar si datos de infección/aspiración. Vigila lesión renal aguda (necrosis tubular) y CID."},
+ {"paso":"Destino","detalle":"Alta tras 4-6 h de observación si estado mental normal, SatO2 >95% en aire ambiente y Rx/exploración respiratoria normales. Ingresa al resto; UCI si inestable o bajo nivel de conciencia."}
+]}

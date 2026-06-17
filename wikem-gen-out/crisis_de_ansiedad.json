@@ -1,0 +1,27 @@
+{"wikem_titulo": "Panic attack", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome coronario agudo","clave":"dolor torácico opresivo, factores de riesgo; ECG y troponinas","slug":"sindrome_coronario_agudo"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hipoxia; factores de riesgo de TVP","slug":"tromboembolia_pulmonar"},
+   {"dx":"Arritmia","clave":"palpitaciones con síncope/mareo; alteración del ritmo en ECG"},
+   {"dx":"Anafilaxia","clave":"urticaria, angioedema, broncoespasmo, hipotensión tras exposición","slug":"urticaria_y_anafilaxia"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Crisis tirotóxica/hipertiroidismo","clave":"taquicardia, temblor, bocio, intolerancia al calor","slug":"crisis_tirotoxica"},
+   {"dx":"Hipoglucemia","clave":"glucemia baja, sudoración, temblor; revierte con glucosa","slug":"hipoglucemia"},
+   {"dx":"Intoxicación/abstinencia (cocaína, OH)","clave":"contexto de consumo; agitación autonómica","slug":"intoxicacion_aguda_por_cocaina"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Síndrome de hiperventilación","clave":"parestesias periorales/distales, tetania, alcalosis respiratoria"},
+   {"dx":"Trastorno de pánico/ansiedad primario","clave":"episodios recurrentes, pico <10 min; diagnóstico de exclusión"}
+ ]}
+], "plan": [
+ {"paso":"Descarta organicidad primero","detalle":"Constantes con SatO2, glucemia capilar y ECG. Es un diagnóstico de exclusión: descarta SCA, TEP, arritmia, hipoglucemia e hipertiroidismo."},
+ {"paso":"Aplica medidas generales de soporte","detalle":"Ambiente tranquilo, tranquilización, reeducación respiratoria. NO uses bolsa para reinhalación (riesgo si hay hipoxia o isquemia)."},
+ {"paso":"Si persiste, ansiolítico oral","sub":[
+   {"t":"agitación/angustia moderada → lorazepam 1-2 mg VO o alprazolam 0,5-1 mg VO"},
+   {"t":"componente somático predominante (taquicardia, temblor) → valorar propranolol si no hay contraindicación"}
+ ]},
+ {"paso":"Reevalúa la respuesta","detalle":"La falta de respuesta al ansiolítico debe reorientar hacia causa orgánica subyacente."},
+ {"paso":"Detecta criterios de derivación psiquiátrica","detalle":"Síntomas psicóticos, riesgo de suicidio o clínica grave/compleja → interconsulta urgente."},
+ {"paso":"Alta con plan ambulatorio","detalle":"Educación sobre el cuadro, evitar cafeína/tóxicos. Tratamiento de continuidad con ISRS/ISRN y seguimiento por su médico/salud mental."}
+]}

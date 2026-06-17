@@ -1,0 +1,25 @@
+{"wikem_titulo": "Hyperkalemia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Lesión renal aguda / ERC reagudizada","clave":"creatinina elevada, oligoanuria; causa orgánica más frecuente","slug":"lesion_renal_aguda"},
+   {"dx":"Rabdomiólisis","clave":"CK muy alta, mioglobinuria, antecedente de aplastamiento o inmovilización","slug":"rabdomiolisis"},
+   {"dx":"Síndrome de lisis tumoral","clave":"hiperpotasemia + hiperfosfatemia + hiperuricemia tras quimioterapia","slug":"hiperfosfatemia"},
+   {"dx":"Cetoacidosis diabética","clave":"hiperglucemia, acidosis; K plasmático alto con déficit corporal","slug":"cetoacidosis_diabetica"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Fármacos (IECA, ARA-II, espironolactona)","clave":"causa más frecuente, sobre todo con insuficiencia renal","slug":"emergencia_hipertensiva"},
+   {"dx":"Insuficiencia suprarrenal","clave":"hiponatremia + hiperpotasemia + hipotensión","slug":"crisis_addisoniana"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Pseudohiperpotasemia","clave":"muestra hemolizada o torniquete prolongado; repite la analítica","slug":"hematimetria"}
+ ]}
+], "plan": [
+ {"paso":"ECG urgente y monitorización","detalle":"Busca T picudas, PR largo, ensanchamiento del QRS y pérdida de onda P. Riesgo vital incluso con ECG normal; cuidado con el signo de Littmann (falso bigeminismo)."},
+ {"paso":"Estabiliza la membrana cardíaca","sub":[
+   {"nivel":"critico","t":"Cambios ECG o K >7,0 → gluconato cálcico 10% 10 mL IV en 2-3 min, repetible; precaución si toma digoxina."}
+ ]},
+ {"paso":"Introduce el potasio en la célula","detalle":"Insulina rápida 10 UI IV + glucosado (vigila hipoglucemia); salbutamol nebulizado 10-20 mg; bicarbonato sódico solo si acidosis metabólica significativa."},
+ {"paso":"Elimina potasio del organismo","detalle":"Furosemida si diuresis conservada; resinas de intercambio (poliestireno sulfonato, patiromer, ciclosilicato). Diálisis urgente si fracaso renal o refractariedad."},
+ {"paso":"Confirma y descarta pseudohiperpotasemia","detalle":"Repite el K si el valor es inesperado. BMP con creatinina y bicarbonato, gasometría, y según sospecha CK, ácido úrico, fósforo, cortisol."},
+ {"paso":"Identifica y trata la causa","detalle":"Retira IECA/ARA-II/diuréticos ahorradores; trata la rabdomiólisis, la lisis tumoral o la insuficiencia suprarrenal."},
+ {"paso":"Destino","detalle":"Ingreso si K >6,0, cambios ECG, fracaso renal o causa activa. UCI si grave (>7,0), cambios ECG o refractaria. Telemetría continua en todo ingresado."}
+]}

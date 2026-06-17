@@ -1,0 +1,15 @@
+{
+ "id": "hunthess",
+ "nombre": "Hunt-Hess",
+ "nombre_largo": "Escala de Hunt y Hess",
+ "para": "Gravedad clínica de la hemorragia subaracnoidea espontánea.",
+ "tipo": "clasificacion",
+ "clases": [
+  {"label": "Grado I", "descripcion": "Asintomático o cefalea y rigidez de nuca leves.", "detalle": "Mejor pronóstico, mortalidad muy baja."},
+  {"label": "Grado II", "descripcion": "Cefalea moderada-intensa y rigidez de nuca, sin déficit neurológico (salvo afectación de par craneal).", "detalle": "Pronóstico bueno, mortalidad baja."},
+  {"label": "Grado III", "descripcion": "Somnolencia o confusión, o déficit focal leve.", "detalle": "Pronóstico intermedio, mortalidad moderada."},
+  {"label": "Grado IV", "descripcion": "Estupor, hemiparesia moderada o grave.", "detalle": "Pronóstico malo, mortalidad elevada."},
+  {"label": "Grado V", "descripcion": "Coma profundo, rigidez de descerebración.", "detalle": "Peor pronóstico, mortalidad muy alta."}
+ ],
+ "nota": "Clasifica la gravedad clínica de la HSA; a mayor grado, mayor mortalidad."
+}

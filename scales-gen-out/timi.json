@@ -1,0 +1,23 @@
+{
+ "id": "timi",
+ "nombre": "TIMI (SCASEST)",
+ "nombre_largo": "Índice de riesgo TIMI para angina inestable / IAMSEST",
+ "para": "Estimar el riesgo de eventos cardiacos adversos a 14 días en la angina inestable y el IAMSEST.",
+ "tipo": "suma",
+ "items": [
+  {"id": "edad65", "label": "Edad ≥ 65 años", "tipo": "binario", "puntos": 1},
+  {"id": "factores_riesgo", "label": "≥ 3 factores de riesgo de enfermedad coronaria", "tipo": "binario", "puntos": 1},
+  {"id": "ec_conocida", "label": "Enfermedad coronaria conocida (estenosis ≥ 50 %)", "tipo": "binario", "puntos": 1},
+  {"id": "aas", "label": "Uso de AAS en los últimos 7 días", "tipo": "binario", "puntos": 1},
+  {"id": "angina_grave", "label": "Angina grave reciente (≥ 2 episodios en 24 h)", "tipo": "binario", "puntos": 1},
+  {"id": "desviacion_st", "label": "Desviación del ST ≥ 0,5 mm", "tipo": "binario", "puntos": 1},
+  {"id": "marcadores", "label": "Marcadores cardiacos elevados", "tipo": "binario", "puntos": 1}
+ ],
+ "interpretacion": [
+  {"min": 0, "max": 1, "label": "Riesgo bajo", "detalle": "Riesgo de eventos a 14 días en torno al 5 %."},
+  {"min": 2, "max": 3, "label": "Riesgo intermedio", "detalle": "Riesgo de eventos a 14 días aproximadamente del 8-13 %."},
+  {"min": 4, "max": 5, "label": "Riesgo alto", "detalle": "Riesgo de eventos a 14 días aproximadamente del 20-26 %."},
+  {"min": 6, "max": null, "label": "Riesgo muy alto", "detalle": "Riesgo de eventos a 14 días en torno al 41 %."}
+ ],
+ "nota": "7 ítems, 1 punto cada uno; puntuación total de 0 a 7."
+}

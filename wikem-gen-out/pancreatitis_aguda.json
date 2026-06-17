@@ -1,0 +1,29 @@
+{"wikem_titulo": "Acute pancreatitis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Úlcera péptica perforada","clave":"dolor epigástrico brusco, abdomen en tabla, neumoperitoneo","slug":"patologia_esofagica_aguda"},
+   {"dx":"Aneurisma de aorta abdominal roto/fisurado","clave":"dolor abdominal-lumbar, masa pulsátil, hipotensión"},
+   {"dx":"Isquemia mesentérica","clave":"dolor desproporcionado, acidosis láctica; vasculópata","slug":"obstruccion_intestinal"},
+   {"dx":"Infarto agudo de miocardio (cara inferior)","clave":"dolor epigástrico, cortejo vegetativo; ECG y troponina","slug":"sindrome_coronario_agudo"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Colangitis aguda","clave":"tríada de Charcot: fiebre, ictericia y dolor en HCD; vía biliar dilatada"},
+   {"dx":"Colecistitis aguda","clave":"Murphy positivo, dolor en HCD, fiebre"},
+   {"dx":"Obstrucción intestinal","clave":"vómitos, distensión, ausencia de tránsito","slug":"obstruccion_intestinal"},
+   {"dx":"Cetoacidosis diabética","clave":"hiperglucemia, acidosis, cetonuria; puede elevar amilasa","slug":"cetoacidosis_diabetica"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Gastritis / ERGE","clave":"epigastralgia, pirosis, relación con ingesta","slug":"patologia_esofagica_aguda"},
+   {"dx":"Cólico biliar simple","clave":"dolor en HCD postprandial autolimitado, sin fiebre ni colestasis"}
+ ]}
+], "plan": [
+ {"paso":"Confirma el diagnóstico (criterios de Atlanta)","detalle":"Dos de tres: dolor típico, lipasa/amilasa ≥3x el límite superior, hallazgos en imagen. La ecografía busca litiasis/vía biliar como etiología."},
+ {"paso":"Estratifica la gravedad","detalle":"BISAP, hematocrito, urea, PCR, calcio. Valora fallo orgánico (Marshall ≥2). PCR>190, urea>72 o BISAP≥3 = alto riesgo."},
+ {"paso":"Reanima con fluidos de forma controlada","detalle":"Ringer lactato 5-10 ml/kg/h ('menos es más'), guiado por diuresis y hematocrito; evita sobrecarga. Monitoriza."},
+ {"paso":"Analgesia y soporte","detalle":"Analgesia escalonada: metamizol/dexketoprofeno y opioides si precisa (fentanilo/tramadol). Antieméticos. Inicia nutrición enteral precoz en cuanto la tolere; no dejar en ayuno prolongado."},
+ {"paso":"Trata la causa y complicaciones","sub":[
+   {"nivel":"emergente","t":"Pancreatitis biliar con colangitis u obstrucción → CPRE urgente (<24-72 h)"},
+   {"nivel":"emergente","t":"Necrosis infectada (gas en TC, procalcitonina alta) → antibióticos (meropenem/piperacilina-tazobactam) y valorar drenaje"}
+ ]},
+ {"paso":"No uses antibióticos profilácticos","detalle":"Antibioterapia solo ante infección confirmada o sospecha de colangitis/necrosis infectada. Profilaxis de ETV con HBPM."},
+ {"paso":"Decide destino","detalle":"Forma grave o con fallo orgánico → UCI. Forma leve sin criterios de gravedad → planta para hidratación, analgesia y reintroducción de dieta."}
+]}

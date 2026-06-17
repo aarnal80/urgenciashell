@@ -1,0 +1,31 @@
+{"wikem_titulo": "Lower back pain", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome de cola de caballo","clave":"anestesia en silla de montar, retención/incontinencia, déficit bilateral; urgencia quirúrgica"},
+   {"dx":"Absceso epidural espinal","clave":"fiebre, dolor a la percusión, UDVP/inmunodepresión; déficit progresivo"},
+   {"dx":"Aneurisma de aorta abdominal roto/sintomático","clave":"dolor lumbar/abdominal súbito, masa pulsátil, hipotensión, >60 años","slug":"sindrome_aortico_agudo"},
+   {"dx":"Compresión medular metastásica","clave":"cáncer conocido, dolor nocturno progresivo, déficit motor; RM urgente"},
+   {"dx":"Espondilodiscitis / osteomielitis vertebral","clave":"fiebre, dolor inflamatorio persistente, VSG/PCR altas, factores de riesgo"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Fractura vertebral","clave":"traumatismo, osteoporosis/corticoides, dolor mecánico tras esfuerzo"},
+   {"dx":"Pielonefritis aguda","clave":"fiebre, puñopercusión renal positiva, síndrome miccional, piuria","slug":"pielonefritis_aguda"},
+   {"dx":"Cólico nefrítico / nefrolitiasis","clave":"dolor cólico en fosa renal irradiado a genitales, hematuria, inquietud"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Hernia discal con lumbociática","clave":"dolor radicular L4-S1, Lasègue positivo, sin red flags"},
+   {"dx":"Lumbalgia mecánica (esguince/contractura)","clave":"mejora en reposo, sin síntomas sistémicos ni déficit; causa más frecuente"},
+   {"dx":"Estenosis del canal lumbar","clave":"claudicación neurógena que mejora al flexionar el tronco, anciano"}
+ ]}
+], "plan": [
+ {"paso":"Triángulo de evaluación inicial","detalle":"Busca activamente red flags: déficit neurológico, fiebre, cáncer, trauma, anticoagulación, edad >50/<20. Exploración neurológica de MMII y reflejos."},
+ {"paso":"Descarta cola de caballo y compresión medular","sub":[
+   {"nivel":"critico","t":"Anestesia en silla de montar, retención urinaria o déficit bilateral → tacto rectal (tono), residuo posmiccional y RM urgente + neurocirugía."}
+ ]},
+ {"paso":"Solicita pruebas solo si hay red flags","detalle":"Sin red flags NO está indicada imagen. Si las hay: analítica con VSG/PCR, hemograma; RM (preferente) o TC según sospecha. Hemocultivos si fiebre."},
+ {"paso":"Analgesia escalonada","detalle":"Paracetamol 1 g/6 h y/o AINE (ibuprofeno 600 mg/8 h, dexketoprofeno 25 mg/8 h). Metamizol 575 mg/8 h si precisa. Tramadol como rescate."},
+ {"paso":"Recomienda actividad y evita reposo prolongado","detalle":"Mantener actividad según tolerancia; relajante muscular (tizanidina) en ciclo corto si contractura. Evitar reposo en cama estricto."},
+ {"paso":"Decide destino","sub":[
+   {"nivel":"critico","t":"Cola de caballo, compresión medular, absceso o AAA → ingreso urgente / quirófano."},
+   {"t":"Lumbalgia mecánica o ciática sin red flags → alta con analgesia y control por su médico; pautar signos de alarma."}
+ ]}
+]}

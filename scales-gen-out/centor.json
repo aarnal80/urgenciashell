@@ -1,0 +1,25 @@
+{
+ "id": "centor",
+ "nombre": "Centor/McIsaac",
+ "nombre_largo": "Criterios de Centor modificados (McIsaac) para faringitis estreptocócica",
+ "para": "Estimar la probabilidad de faringitis por estreptococo beta-hemolítico del grupo A y orientar la necesidad de test rápido y antibiótico.",
+ "tipo": "suma",
+ "items": [
+  {"id": "sin_tos", "label": "Ausencia de tos", "tipo": "binario", "puntos": 1},
+  {"id": "exudado", "label": "Exudado o inflamación amigdalar", "tipo": "binario", "puntos": 1},
+  {"id": "adenopatias", "label": "Adenopatías cervicales anteriores dolorosas", "tipo": "binario", "puntos": 1},
+  {"id": "fiebre", "label": "Fiebre > 38 ºC", "tipo": "binario", "puntos": 1},
+  {"id": "edad", "label": "Edad", "tipo": "opciones", "opciones": [
+    {"label": "3-14 años", "puntos": 1},
+    {"label": "15-44 años", "puntos": 0},
+    {"label": "≥ 45 años", "puntos": -1}
+  ]}
+ ],
+ "interpretacion": [
+  {"min": null, "max": 0, "label": "Probabilidad muy baja", "detalle": "No precisa test rápido ni antibiótico."},
+  {"min": 1, "max": 1, "label": "Probabilidad baja", "detalle": "Manejo sintomático; antibiótico no recomendado de rutina."},
+  {"min": 2, "max": 3, "label": "Probabilidad intermedia", "detalle": "Realizar test rápido de detección de antígeno estreptocócico."},
+  {"min": 4, "max": null, "label": "Probabilidad alta", "detalle": "Valorar antibiótico (idealmente confirmando con test rápido)."}
+ ],
+ "nota": "Criterios de Centor modificados por McIsaac (incluyen la edad). Puntuación de -1 a 5."
+}

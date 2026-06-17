@@ -1,0 +1,33 @@
+{"wikem_titulo": "Burns", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Lesión por inhalación de humo","clave":"esputo carbonáceo, ronquera, estridor, quemaduras faciales/perinasales; riesgo de obstrucción de vía aérea"},
+   {"dx":"Intoxicación por monóxido de carbono","clave":"incendio en espacio cerrado, cefalea, confusión; SatO2 normal engañosa, mide carboxihemoglobina"},
+   {"dx":"Intoxicación por cianuro","clave":"combustión de plásticos/lana; acidosis láctica grave, coma; tratar empíricamente con hidroxocobalamina"},
+   {"dx":"Quemadura eléctrica de alto voltaje","clave":"lesión profunda interna mayor que la externa; arritmias, rabdomiólisis"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Quemadura química / cáustica","clave":"agente identificable; irrigación abundante, neutralización contraindicada","slug":"quemaduras_quimicas"},
+   {"dx":"Síndrome compartimental por quemadura circunferencial","clave":"relleno capilar >3 s, frialdad, dolor; valora escarotomía"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Dermatosis ampollosas (Stevens-Johnson/NET, penfigoide)","clave":"sin antecedente térmico; afectación mucosa, signo de Nikolsky"},
+   {"dx":"Celulitis / impétigo ampolloso","clave":"eritema con fiebre, evolución infecciosa sin exposición a calor"}
+ ]}
+], "plan": [
+ {"paso":"Valoración inicial ABCDE y vía aérea","detalle":"Si signos de inhalación o quemadura facial → intubación precoz antes del edema. O2 alto flujo. Retira ropa y joyas; enfría la quemadura con agua templada (no hielo)."},
+ {"paso":"Sospecha y trata toxicidad por humo","sub":[
+   {"nivel":"critico","t":"Incendio en recinto cerrado + acidosis láctica/coma → hidroxocobalamina 5 g IV empírica por cianuro"},
+   {"t":"Carboxihemoglobina elevada → O2 100%; valora cámara hiperbárica según centro"}
+ ]},
+ {"paso":"Estima profundidad y SCQT","detalle":"Usa Lund-Browder (regla de los 9 orientativa). Calcula índice de gravedad de Garcés modificado para decidir ingreso/derivación a unidad de quemados."},
+ {"paso":"Reanimación con líquidos","sub":[
+   {"nivel":"emergente","t":"SCQT ≥20% adulto (>10% niño) → Parkland: Ringer lactato 4 mL/kg/%SCQT en 24 h (mitad en primeras 8 h desde la quemadura)"},
+   {"t":"Ajusta por diuresis: objetivo 0,5-1 mL/kg/h adulto, 1 mL/kg/h niño"}
+ ]},
+ {"paso":"Analgesia y profilaxis","detalle":"Morfina IV titulada. Profilaxis antitetánica. Protección gástrica con pantoprazol. Profilaxis de TVP con bemiparina. No antibiótico profiláctico sistémico."},
+ {"paso":"Vigila complicaciones de extremidad/abdomen","sub":[
+   {"nivel":"emergente","t":"Quemadura circunferencial con isquemia distal → escarotomía urgente"},
+   {"t":"Sospecha rabdomiólisis (mioglobinuria) → fuerza diuresis"}
+ ]},
+ {"paso":"Destino","detalle":"Unidad de quemados si SCQT extensa, quemaduras de cara/manos/pies/periné, tipo B, eléctricas o inhalación. Cura local y alta si quemadura menor superficial."}
+]}

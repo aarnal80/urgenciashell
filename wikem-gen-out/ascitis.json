@@ -1,0 +1,31 @@
+{"wikem_titulo": "Ascites", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Peritonitis bacteriana espontánea","clave":"fiebre/dolor/deterioro de conciencia; PMN en líquido ascítico >250/µL"},
+   {"dx":"Síndrome hepatorrenal","clave":"oliguria y ascenso de creatinina en cirrótico sin otra causa renal","slug":"lesion_renal_aguda"},
+   {"dx":"Rotura/estrangulación de hernia umbilical","clave":"salida de líquido o hernia incarcerada; urgencia quirúrgica"},
+   {"dx":"Insuficiencia respiratoria por hidrotórax/ascitis a tensión","clave":"disnea, SatO2<92%; precisa paracentesis evacuadora"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Insuficiencia cardíaca derecha","clave":"ingurgitación yugular, edemas, hepatomegalia congestiva","slug":"insuficiencia_cardiaca"},
+   {"dx":"Hepatocarcinoma","clave":"ascitis de debut en cirrótico conocido; descartar con imagen y AFP"},
+   {"dx":"Carcinomatosis peritoneal / neoplasia ovárica","clave":"ascitis en mujer sin hepatopatía = neoplasia ginecológica hasta descartar"},
+   {"dx":"Peritonitis tuberculosa","clave":"ascitis con linfocitosis, ADA elevada; contexto de riesgo"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Cirrosis con ascitis no complicada","clave":"GASA ≥1,1; estigmas de hepatopatía crónica"},
+   {"dx":"Obstrucción intestinal / globo vesical","clave":"distensión que simula ascitis; matidez no cambiante, timpanismo","slug":"obstruccion_intestinal"},
+   {"dx":"Síndrome nefrótico","clave":"proteinuria, hipoalbuminemia, edemas; GASA bajo","slug":"sindrome_nefrotico"}
+ ]}
+], "plan": [
+ {"paso":"Valora estabilidad y descarta complicación","detalle":"Constantes, abdomen, grado de ascitis y disnea. Busca signos de PBE, SHR o compromiso respiratorio."},
+ {"paso":"Realiza paracentesis diagnóstica","detalle":"Exploración clave. Recuento celular (PBE si PMN>250/µL), bioquímica (GASA, proteínas, glucosa, LDH), cultivo en frascos de hemocultivo y citología si sospecha tumoral."},
+ {"paso":"Solicita analítica e imagen","detalle":"Hemograma, función renal e iones, coagulación, LFT, lipasa. Ecografía abdominal (cuantifica ascitis, descarta hepatocarcinoma y trombosis portal)."},
+ {"paso":"Trata la ascitis complicada","sub":[
+   {"nivel":"critico","t":"PBE → cefotaxima IV + albúmina (1,5 g/kg día 1 y 1 g/kg día 3); evita aminoglucósidos"},
+   {"nivel":"critico","t":"Ascitis a tensión con disnea → paracentesis evacuadora con reposición de albúmina (8 g/L extraído por encima de 5 L)"},
+   {"nivel":"emergente","t":"Síndrome hepatorrenal → albúmina + terlipresina"}
+ ]},
+ {"paso":"Maneja la ascitis no complicada","detalle":"Restricción de sodio; diuréticos: espironolactona 100 mg/día (máx 400) ± furosemida 40 mg/día (máx 160), ratio 100:40. Restricción hídrica solo si hiponatremia."},
+ {"paso":"Evita nefrotóxicos","detalle":"Contraindicados AINE y aminoglucósidos en la ascitis cirrótica por riesgo de deterioro renal."},
+ {"paso":"Decide destino","detalle":"PBE, SHR, ascitis refractaria o compromiso respiratorio → ingreso. Ascitis conocida, PBE descartada y bien drenada → manejo ambulatorio con seguimiento."}
+]}

@@ -1,0 +1,23 @@
+{
+ "id": "hasbled",
+ "nombre": "HAS-BLED",
+ "nombre_largo": "Escala HAS-BLED de riesgo de sangrado mayor con anticoagulación",
+ "para": "Estimar el riesgo de sangrado mayor en pacientes con fibrilación auricular en tratamiento anticoagulante.",
+ "tipo": "suma",
+ "items": [
+  {"id": "hta", "label": "Hipertensión arterial (TAS > 160 mmHg)", "tipo": "binario", "puntos": 1},
+  {"id": "renal", "label": "Función renal alterada", "tipo": "binario", "puntos": 1},
+  {"id": "hepatica", "label": "Función hepática alterada", "tipo": "binario", "puntos": 1},
+  {"id": "ictus", "label": "Ictus previo", "tipo": "binario", "puntos": 1},
+  {"id": "sangrado", "label": "Sangrado previo o predisposición al sangrado", "tipo": "binario", "puntos": 1},
+  {"id": "inr_labil", "label": "INR lábil (mal control)", "tipo": "binario", "puntos": 1},
+  {"id": "edad", "label": "Edad > 65 años", "tipo": "binario", "puntos": 1},
+  {"id": "farmacos", "label": "Fármacos que predisponen al sangrado (antiagregantes o AINE)", "tipo": "binario", "puntos": 1},
+  {"id": "alcohol", "label": "Consumo de alcohol", "tipo": "binario", "puntos": 1}
+ ],
+ "interpretacion": [
+  {"min": 0, "max": 2, "label": "Riesgo bajo", "detalle": "0-2 puntos: riesgo de sangrado bajo."},
+  {"min": 3, "max": null, "label": "Riesgo alto", "detalle": "≥ 3 puntos: riesgo de sangrado alto; precaución y revisión periódica de los factores modificables."}
+ ],
+ "nota": "Puntuación total 0-9. Una puntuación alta no contraindica la anticoagulación, sino que obliga a corregir los factores de riesgo modificables."
+}

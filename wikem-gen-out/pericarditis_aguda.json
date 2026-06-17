@@ -1,0 +1,27 @@
+{"wikem_titulo": "Pericarditis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"SCACEST","clave":"elevación del ST localizada (no difusa), convexa, con imagen especular; troponina en ascenso, dolor opresivo","slug":"sindrome_coronario_agudo"},
+   {"dx":"Disección aórtica","clave":"dolor brusco, desgarrante, irradiado a espalda; asimetría de pulsos/TA","slug":"sindrome_aortico_agudo"},
+   {"dx":"Tromboembolia pulmonar","clave":"disnea súbita, dolor pleurítico, hipoxia; factores de riesgo de TVP","slug":"tromboembolia_pulmonar"},
+   {"dx":"Taponamiento cardíaco","clave":"complicación de la propia pericarditis; IY, pulso paradójico, hipotensión","slug":"taponamiento_cardiaco"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Miocarditis / miopericarditis","clave":"troponina elevada con dolor pericardítico; antecedente viral","slug":"miocarditis_aguda"},
+   {"dx":"Neumonía / pleuritis","clave":"dolor pleurítico, fiebre, tos; condensación en Rx","slug":"neumonia_adquirida_en_la_comunidad"},
+   {"dx":"Neumotórax","clave":"dolor pleurítico brusco, hipofonesis unilateral","slug":"neumotorax_espontaneo"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Repolarización precoz","clave":"elevación del ST cóncava en varón joven, estable, sin evolución ECG ni roce"},
+   {"dx":"Dolor osteomuscular / costocondritis","clave":"reproducible a la palpación, mecánico"},
+   {"dx":"ERGE / espasmo esofágico","clave":"relación con la ingesta, pirosis","slug":"patologia_esofagica_aguda"}
+ ]}
+], "plan": [
+ {"paso":"Confirma el diagnóstico clínico","detalle":"Requiere >=2 de: dolor pericardítico (mejora al inclinarse hacia delante), roce pericárdico, elevación difusa del ST con descenso del PR, derrame pericárdico nuevo."},
+ {"paso":"ECG y descarta SCA","detalle":"ST cóncavo difuso con descenso del PR (a diferencia del SCA, localizado y convexo). Ante duda, troponina y eco; trata como SCA si no puedes descartarlo."},
+ {"paso":"Solicita pruebas básicas","detalle":"Hemograma, PCR/VSG, función renal, troponina (descarta miopericarditis), Rx tórax (cardiomegalia = derrame) y ecocardiograma para valorar derrame/taponamiento."},
+ {"paso":"Descarta taponamiento","sub":[
+   {"nivel":"critico","t":"Inestabilidad, IY, pulso paradójico o derrame grave (>20 mm) → pericardiocentesis urgente y UCI."}
+ ]},
+ {"paso":"Inicia tratamiento antiinflamatorio","detalle":"AINE a dosis altas (ibuprofeno 600 mg/8 h o AAS 750-1000 mg/8 h) con protección gástrica (omeprazol), MÁS colchicina 0,5 mg/12-24 h durante 3 meses para reducir recurrencias. Corticoides solo si contraindicación o causa autoinmune."},
+ {"paso":"Decide el destino","detalle":"Alta domiciliaria con seguimiento en la mayoría. Ingresa si: fiebre >38 ºC, inicio subagudo, derrame grande/taponamiento, troponina elevada, inmunodepresión, anticoagulación, traumatismo o falta de respuesta a AINE en 7 días."}
+]}

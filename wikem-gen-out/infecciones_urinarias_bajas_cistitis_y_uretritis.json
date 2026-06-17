@@ -1,0 +1,25 @@
+{"wikem_titulo": "Acute cystitis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Pielonefritis / urosepsis","clave":"fiebre >38°C, escalofríos, dolor lumbar, mal estado general; ITU alta, no baja","slug":"pielonefritis_aguda"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Prostatitis aguda (varón)","clave":"fiebre, próstata tensa y dolorosa al tacto rectal, síndrome miccional","slug":"prostatitis_aguda"},
+   {"dx":"Litiasis infectada / cólico","clave":"dolor cólico lumbar, microhematuria; descarta obstrucción","slug":"colico_nefritico"},
+   {"dx":"Enfermedad inflamatoria pélvica (mujer)","clave":"dolor anexial, dolor a la movilización cervical, flujo; descarta ITS"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Uretritis (gonocócica/clamidia)","clave":"disuria con exudado uretral, conducta de riesgo; tratar como ITS","slug":"infecciones_de_transmision_sexual"},
+   {"dx":"Vaginitis / vulvovaginitis","clave":"prurito y leucorrea, disuria externa, sin polaquiuria ni urgencia"},
+   {"dx":"Cistitis intersticial / hematúrica","clave":"clínica recurrente con cultivos negativos o sangrado vesical"}
+ ]}
+], "plan": [
+ {"paso":"Confirma ITU baja y clasifícala","detalle":"Polaquiuria, disuria, tenesmo, dolor suprapúbico. Tira reactiva (nitritos + leucocituria) basta en cistitis no complicada. Sedimento y urocultivo si complicada, varón, embarazo o recidiva."},
+ {"paso":"Descarta ITU alta y complicaciones","sub":[
+   {"nivel":"critico","t":"Fiebre, escalofríos o dolor lumbar → reclasifica como pielonefritis: hemograma, hemocultivos y antibiótico sistémico."},
+   {"nivel":"emergente","t":"Varón con clínica → valora prostatitis (tacto rectal) antes de etiquetar de cistitis simple."}
+ ]},
+ {"paso":"Trata la cistitis no complicada (mujer)","detalle":"Fosfomicina trometamol 3 g VO dosis única, o nitrofurantoína 100 mg/12h 5 días. Evita fluoroquinolonas de primera línea."},
+ {"paso":"Trata la cistitis complicada / varón","detalle":"Cefixima 400 mg/24h o ciprofloxacino 500 mg/12h 7-14 días, según riesgo y resistencias locales. Urocultivo previo siempre."},
+ {"paso":"Trata la uretritis si se sospecha","detalle":"Ceftriaxona 1 g IM dosis única + azitromicina 1 g VO (cobertura gonococo y clamidia). Estudio y tratamiento de pareja."},
+ {"paso":"Control sintomático y destino","detalle":"Fenazopiridina o AINE para la disuria. Alta con tratamiento y revisión por su médico. Ingreso solo si cistitis hemorrágica grave, enfisematosa o absceso uretral."}
+]}

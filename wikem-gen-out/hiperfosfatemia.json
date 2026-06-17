@@ -1,0 +1,26 @@
+{"wikem_titulo": "Hyperphosphatemia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome de lisis tumoral","clave":"neoplasia/quimioterapia reciente; hiperfosfatemia + hipocalcemia + hiperK + hiperuricemia","slug":"hiperpotasemia"},
+   {"dx":"Rabdomiólisis","clave":"orina oscura, CK muy elevada; liberación masiva de fosfato muscular","slug":"rabdomiolisis"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Lesión renal aguda / ERC avanzada","clave":"FG < 30 mL/min; causa más frecuente; descenso de excreción renal","slug":"lesion_renal_aguda"},
+   {"dx":"Hipocalcemia secundaria por precipitación cálcica","clave":"tetania, convulsiones, QT largo por sales de fosfato cálcico","slug":"hipocalcemia"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Hipoparatiroidismo / seudohipoparatiroidismo","clave":"PTH baja o resistencia; hiperfosfatemia con hipocalcemia"},
+   {"dx":"Intoxicación por vitamina D","clave":"suplementos; hipercalcemia asociada"},
+   {"dx":"Abuso de laxantes/enemas con fosfato","clave":"anamnesis de fosfosoda; hiperfosfatemia aguda"}
+ ]}
+], "plan": [
+ {"paso":"Confirma y busca la causa","detalle":"Fosfato > 4,5 mg/dL. Solicita Ca, función renal, K, ácido úrico y LDH. Si hipocalcemia + hiperK + hiperuricemia, sospecha lisis tumoral."},
+ {"paso":"Valora repercusión por hipocalcemia","detalle":"ECG (QT largo), signos de Chvostek/Trousseau, convulsiones. Monitoriza si hay síntomas o compromiso vital."},
+ {"paso":"Favorece la eliminación renal si función conservada","sub":[
+   {"t":"Función renal conservada → hidratación con suero salino fisiológico para forzar fosfaturia; puede asociarse acetazolamida o diurético de asa."},
+   {"nivel":"emergente","t":"Insuficiencia renal grave o hiperfosfatemia con riesgo vital → hemodiálisis."}
+ ]},
+ {"paso":"Reduce la absorción intestinal","detalle":"Quelantes del fósforo orales con las comidas (carbonato cálcico/sevelámero) en formas crónicas o por aporte digestivo."},
+ {"paso":"Trata la hipocalcemia sintomática","detalle":"Calcio IV solo si tetania/convulsiones/arritmia; precaución por riesgo de calcificación metastásica con producto Ca×P elevado."},
+ {"paso":"Trata la causa de base","detalle":"Protocolo de lisis tumoral (hidratación, rasburicasa/alopurinol), manejo de la LRA o ajuste en ERC."},
+ {"paso":"Destino","detalle":"Ingreso si hay compromiso de funciones vitales, lisis tumoral o LRA; seguimiento nefrológico en formas crónicas."}
+]}

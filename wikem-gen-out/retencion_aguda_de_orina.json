@@ -1,0 +1,27 @@
+{"wikem_titulo": "Acute urinary retention", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome de cola de caballo / compresión medular","clave":"retención + anestesia en silla de montar, debilidad MMII, dolor lumbar; urgencia neuroquirúrgica"},
+   {"dx":"Aneurisma de aorta abdominal","clave":"dolor lumbar/abdominal, masa pulsátil; puede comprimir y simular retención","slug":"sindrome_aortico_agudo"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Prostatitis aguda","clave":"fiebre, afectación general, próstata tensa y dolorosa; NO sondar por vía uretral","slug":"prostatitis_aguda"},
+   {"dx":"Lesión renal aguda posrenal","clave":"obstrucción mantenida, elevación de urea/creatinina; reversible con drenaje","slug":"lesion_renal_aguda"},
+   {"dx":"Rotura uretral (traumatismo)","clave":"uretrorragia, traumatismo pélvico/perineal; contraindica sondaje uretral"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Hiperplasia benigna de próstata","clave":"varón mayor, clínica obstructiva progresiva previa; causa más frecuente"},
+   {"dx":"Retención farmacológica","clave":"anticolinérgicos, opioides, antihistamínicos, antidepresivos tricíclicos"},
+   {"dx":"Estenosis uretral / impactación fecal","clave":"antecedente de instrumentación; tacto rectal con fecaloma"}
+ ]}
+], "plan": [
+ {"paso":"Confirma el diagnóstico clínico","detalle":"Imposibilidad de orinar + dolor hipogástrico + globo vesical palpable y mate. Ecografía a pie de cama para confirmar volumen retenido."},
+ {"paso":"Descarta contraindicaciones antes de sondar","sub":[
+   {"nivel":"emergente","t":"Uretrorragia/traumatismo pélvico → sospecha rotura uretral: NO sondaje uretral, avisa a Urología (cistostomía suprapúbica)."},
+   {"nivel":"emergente","t":"Prostatitis aguda → evita manipulación uretral; valora cistostomía percutánea."}
+ ]},
+ {"paso":"Realiza vaciamiento vesical","detalle":"Sondaje uretral (Foley); si imposible, sonda acodada o suprapúbica. Descompresión; vigila hematuria ex vacuo."},
+ {"paso":"Vigila la diuresis postobstructiva","detalle":"Mide volumen evacuado y diuresis horaria. Poliuria postobstructiva (>200 mL/h) → repone líquidos y controla iones."},
+ {"paso":"Estudia la causa y la repercusión renal","detalle":"Función renal e iones, sedimento y urocultivo. Tacto rectal (próstata, fecaloma). Hemograma si fiebre o hematuria masiva."},
+ {"paso":"Inicia tratamiento de la causa","detalle":"Alfabloqueante (tamsulosina 0,4 mg/24h) en HBP para mejorar retirada de sonda. Trata infección o impactación. Retira fármacos causantes."},
+ {"paso":"Decide destino","detalle":"Alta con sonda y bolsa + cita en Urología si estable. Ingreso si LRA establecida, urosepsis, prostatitis o sospecha de cola de caballo."}
+]}

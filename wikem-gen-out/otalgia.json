@@ -1,0 +1,31 @@
+{"wikem_titulo": "Ear diagnoses", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Otitis externa maligna (necrosante)","clave":"diabético/inmunodeprimido; dolor intenso, tejido de granulación en CAE; riesgo de osteomielitis de base de cráneo"},
+   {"dx":"Mastoiditis","clave":"tumefacción retroauricular dolorosa, pabellón desplazado; tras otitis media","slug":"otitis"},
+   {"dx":"Tumor de orofaringe/hipofaringe (otalgia refleja)","clave":"fumador/enólico, otalgia con disfagia o disfonía y otoscopia normal; derivación ORL urgente"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Absceso periamigdalino","clave":"otalgia refleja con trismo, voz gangosa y abombamiento amigdalino unilateral","slug":"dolor_faringeo_agudo"},
+   {"dx":"Herpes zóster ótico (Ramsay Hunt)","clave":"vesículas en CAE/pabellón + parálisis facial periférica","slug":"paralisis_facial_periferica_idiopatica"},
+   {"dx":"Pericondritis auricular","clave":"pabellón rojo, caliente y doloroso respetando el lóbulo; tras trauma/piercing"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Otitis media aguda","clave":"otalgia con fiebre, hipoacusia; tímpano abombado e hiperémico","slug":"otitis"},
+   {"dx":"Otitis externa","clave":"dolor al traccionar el trago, CAE edematoso; antecedente de baños","slug":"otitis"},
+   {"dx":"Faringoamigdalitis (otalgia refleja)","clave":"causa más frecuente, sobre todo en niños; otoscopia normal","slug":"dolor_faringeo_agudo"},
+   {"dx":"Disfunción de la ATM (síndrome de Costen)","clave":"dolor preauricular al masticar, chasquido articular; otoscopia normal"}
+ ]}
+]
+, "plan": [
+ {"paso":"Anamnesis y otoscopia dirigidas","detalle":"Diferencia otodinia (patología ótica, otoscopia patológica) de otalgia refleja (otoscopia normal). Valora factores de riesgo oncológico (tabaco, alcohol, piorrea) y diabetes/inmunosupresión."},
+ {"paso":"Exploración orofaríngea y cervicofacial completa","detalle":"Si la otoscopia es normal, explora orofaringe, dientes, ATM, parótida, cuello y laringe para localizar el origen referido."},
+ {"paso":"Identifica y descarta red flags","sub":[
+   {"nivel":"critico","t":"Diabético con dolor desproporcionado y granulación en CAE → sospecha otitis externa maligna: TC, antibiótico antipseudomónico IV e ingreso ORL"},
+   {"nivel":"critico","t":"Tumefacción retroauricular → mastoiditis: antibiótico IV y valoración ORL urgente"},
+   {"nivel":"emergente","t":"Otalgia refleja persistente en adulto >40 años con disfagia/disfonía → derivación ORL urgente para descartar neoplasia"}
+ ]},
+ {"paso":"Trata la causa específica","detalle":"Otitis media: amoxicilina; otitis externa: gotas tópicas con antibiótico ± corticoide y limpieza; faringoamigdalitis según etiología; síndrome de Costen: AINE y medidas posturales."},
+ {"paso":"Pauta analgesia","detalle":"AINE de primera línea (ibuprofeno 600 mg/8 h o naproxeno); paracetamol asociado si precisa. Protección gástrica con omeprazol si riesgo."},
+ {"paso":"Decide destino","detalle":"Mayoría: alta con tratamiento ambulatorio y reconsulta si empeora. Ingreso/derivación ORL urgente en otitis externa maligna, mastoiditis, complicaciones supuradas o sospecha tumoral."}
+]
+}

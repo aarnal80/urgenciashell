@@ -1,0 +1,32 @@
+{"wikem_titulo": "Hematuria", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Aneurisma de aorta abdominal (fístula/erosión)","clave":"varón >60a, dolor lumbar/abdominal, masa pulsátil, hipotensión","slug":"sindrome_aortico_agudo"},
+   {"dx":"Glomerulonefritis aguda con sobrecarga","clave":"hematíes dismórficos/cilindros hemáticos, HTA, edemas, oliguria; riesgo de EAP y uremia","slug":"sindrome_nefritico_agudo"},
+   {"dx":"Hematuria por coagulopatía/anticoagulación","clave":"anticoagulados, INR elevado, hematuria masiva con coágulos y anemización"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Pielonefritis / ITU","clave":"fiebre, puñopercusión positiva, síndrome miccional; nitritos y leucocituria","slug":"pielonefritis_aguda"},
+   {"dx":"Litiasis ureteral","clave":"dolor cólico lumbar irradiado a genitales, microhematuria, síntomas vegetativos","slug":"colico_nefritico"},
+   {"dx":"Retención por coágulos vesicales","clave":"globo vesical doloroso, coágulos gruesos, no orina pese a esfuerzo","slug":"retencion_aguda_de_orina"},
+   {"dx":"Hematuria postraumática","clave":"traumatismo lumbar/pélvico previo; valorar lesión renal o vesical"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Tumor vesical (carcinoma urotelial)","clave":"hematuria macroscópica indolora en >40a/fumador; coágulos gruesos vesicales"},
+   {"dx":"Hiperplasia benigna de próstata","clave":"varón mayor, clínica obstructiva miccional previa, sangrado leve"},
+   {"dx":"Cistitis","clave":"disuria, polaquiuria, hematuria terminal; tira con nitritos","slug":"infecciones_urinarias_bajas_cistitis_y_uretritis"},
+   {"dx":"Pseudohematuria (alimentos/fármacos/mioglobina)","clave":"tira positiva sin hematíes en sedimento: rifampicina, remolacha, rabdomiólisis"}
+ ]}
+], "plan": [
+ {"paso":"Confirma la hematuria y valora repercusión","detalle":"Tira reactiva + sedimento (confirma hematíes). Constantes, valora palidez/inestabilidad. Sondaje vesical de tres vías si coágulos."},
+ {"paso":"Estabiliza si hay inestabilidad o anemización","sub":[
+   {"nivel":"critico","t":"Shock hipovolémico → 2 vías gruesas, cristaloides, cruzar y transfundir; reversión de anticoagulación si procede."},
+   {"nivel":"emergente","t":"Retención por coágulos → sonda de tres vías y lavado vesical continuo; si no se aclara, avisa a Urología."}
+ ]},
+ {"paso":"Solicita pruebas dirigidas","detalle":"Hemograma, coagulación, función renal e iones. Urocultivo si sospecha infecciosa. Sedimento con hematíes dismórficos/cilindros orienta a glomerular."},
+ {"paso":"Distingue origen glomerular de urológico","sub":[
+   {"t":"Glomerular (hematíes dismórficos, proteinuria, cilindros, HTA) → manejo nefrológico; vigila sobrecarga y emergencia hipertensiva."},
+   {"t":"Urológico (coágulos, hematuria monosintomática) → estudio urológico (eco/TC, cistoscopia diferida)."}
+ ]},
+ {"paso":"Trata la causa","detalle":"Antibiótico si ITU/pielonefritis. Analgesia si cólico. Hidratación abundante para evitar nuevos coágulos."},
+ {"paso":"Decide destino","detalle":"Ingreso si inestabilidad, anemia grave (Hb <7), retención por coágulos persistente, insuficiencia renal o sospecha de glomerulonefritis. Alta con derivación a Urología en >40a para descartar neoplasia."}
+]}

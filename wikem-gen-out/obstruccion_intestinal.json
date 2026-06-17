@@ -1,0 +1,30 @@
+{"wikem_titulo": "Small bowel obstruction", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Estrangulación / isquemia de asa","clave":"dolor continuo intenso, fiebre, peritonismo, acidosis láctica; cirugía urgente"},
+   {"dx":"Perforación intestinal","clave":"neumoperitoneo, abdomen en tabla, shock séptico"},
+   {"dx":"Vólvulo","clave":"dolor brusco, distensión masiva; imagen en 'grano de café' (sigma) o asa fija"},
+   {"dx":"Isquemia mesentérica","clave":"dolor desproporcionado, fibrilación auricular; lactato elevado"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Hernia incarcerada","clave":"masa herniaria irreductible, dolorosa; explora todos los orificios"},
+   {"dx":"Obstrucción de colon","clave":"distensión, marco cólico dilatado; descartar neoplasia obstructiva"},
+   {"dx":"Brote estenosante de Crohn","clave":"antecedente de EII, dolor cólico y vómitos","slug":"enfermedad_inflamatoria_intestinal"},
+   {"dx":"Pancreatitis aguda","clave":"dolor epigástrico irradiado a espalda; lipasa ≥3x","slug":"pancreatitis_aguda"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Íleo paralítico","clave":"postoperatorio, fármacos, alteraciones iónicas; silencio abdominal sin dolor cólico"},
+   {"dx":"Seudoobstrucción colónica (Ogilvie)","clave":"dilatación masiva de colon sin obstáculo mecánico, paciente encamado"},
+   {"dx":"Impactación fecal","clave":"anciano estreñido; ampolla rectal ocupada al tacto"}
+ ]}
+], "plan": [
+ {"paso":"Evalúa estabilidad y signos de alarma","detalle":"Constantes, abdomen (peritonismo, masa herniaria), tacto rectal. Dolor continuo intenso + fiebre + peritonismo = estrangulación hasta demostrar lo contrario."},
+ {"paso":"Coloca SNG y dieta absoluta","detalle":"Descompresión con sonda nasogástrica en aspiración, suspende ingesta. Sonda vesical para control de diuresis."},
+ {"paso":"Reanima con fluidos y corrige iones","detalle":"Suero fisiológico/Ringer lactato IV; repón pérdidas y corrige hipopotasemia y alcalosis por vómitos. Analgesia."},
+ {"paso":"Solicita pruebas","detalle":"Hemograma, bioquímica, gasometría con lactato (acidosis = isquemia), coagulación. Rx simple de abdomen; TC abdominal con contraste para nivel, causa y signos de sufrimiento de asa."},
+ {"paso":"Decide manejo según hallazgos","sub":[
+   {"nivel":"critico","t":"Estrangulación, isquemia, perforación o vólvulo → cirugía urgente + antibióticos de amplio espectro (piperacilina-tazobactam o meropenem)"},
+   {"nivel":"emergente","t":"Hernia incarcerada → intento de reducción/cirugía; obstrucción mecánica completa → valoración quirúrgica"}
+ ]},
+ {"paso":"Maneja conservadoramente si procede","detalle":"Obstrucción simple por bridas sin signos de gravedad: SNG, fluidos y observación 24-48 h con exploraciones seriadas; valora contraste hidrosoluble (gastrografín) diagnóstico-terapéutico."},
+ {"paso":"Ingresa siempre","detalle":"Todo paciente con obstrucción ingresa con interconsulta a Cirugía. UCI si séptico, inestable o peritonítico; reevaluación abdominal cada 4-8 h."}
+]}

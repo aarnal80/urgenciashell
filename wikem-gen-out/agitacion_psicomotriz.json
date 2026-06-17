@@ -1,0 +1,31 @@
+{"wikem_titulo": "Agitated or combative patient", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hipoglucemia","clave":"glucemia capilar baja; revierte con glucosa; SIEMPRE descartar primero","slug":"hipoglucemia"},
+   {"dx":"Hipoxia","clave":"SatO2 baja, cianosis; agitación que cede con oxígeno"},
+   {"dx":"Infección SNC (encefalitis/meningitis)","clave":"fiebre, cefalea, meningismo, focalidad","slug":"sindrome_meningeo_absceso_cerebral_absceso_epidural_espinal_"},
+   {"dx":"Intoxicación simpaticomimética","clave":"taquicardia, HTA, midriasis, diaforesis; cocaína/anfetaminas","slug":"intoxicacion_aguda_por_cocaina"},
+   {"dx":"Abstinencia alcohólica/delirium tremens","clave":"temblor, alucinaciones, hiperactividad autonómica tras cese de OH"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Delirium (síndrome confusional agudo)","clave":"inicio agudo, curso fluctuante, inatención; descompensa enfermedad médica oculta","slug":"coma"},
+   {"dx":"Alteración hidroelectrolítica","clave":"Na/Ca alterados; descartar con bioquímica"},
+   {"dx":"Crisis tirotóxica","clave":"fiebre, taquicardia, bocio, temblor","slug":"crisis_tirotoxica"},
+   {"dx":"Crisis epiléptica (estado postictal/parcial complejo)","clave":"automatismos, amnesia del episodio","slug":"crisis_epilepticas"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Psicosis/manía primaria","clave":"<40 a, antecedentes psiquiátricos, exploración y constantes normales"},
+   {"dx":"Trastorno de personalidad / situacional","clave":"factor desencadenante claro, sin organicidad"}
+ ]}
+], "plan": [
+ {"paso":"Garantiza la seguridad (primeros minutos)","detalle":"Entorno seguro, retira objetos peligrosos, personal suficiente. Glucemia capilar y constantes (TA, FC, SatO2, Tª) a TODO paciente agitado."},
+ {"paso":"Intenta desescalada verbal","detalle":"Tono calmado, escucha, ofrece opciones; primera línea siempre que sea posible."},
+ {"paso":"Si fracasa, sedación farmacológica según causa","sub":[
+   {"t":"Agitación psiquiátrica/desconocida cooperante → vía oral (olanzapina 10 mg o risperidona)."},
+   {"nivel":"emergente","t":"Agitación intensa no cooperante → haloperidol 5 mg + lorazepam/midazolam IM; vigila vía aérea."},
+   {"nivel":"critico","t":"Intoxicación por simpaticomiméticos/abstinencia → benzodiacepinas de elección (midazolam/diazepam); EVITA neurolépticos como único agente."}
+ ]},
+ {"paso":"Contención física si riesgo inmediato","detalle":"Solo si fracasa lo anterior; pauta médica, vigilancia continua, retirada precoz. Profilaxis con HBPM si >24 h."},
+ {"paso":"Estudia organicidad cuando esté seguro","detalle":"Si >40 a sin antecedentes, inicio agudo, constantes alteradas o focalidad: bioquímica, tóxicos, ECG, TC craneal y valora punción lumbar."},
+ {"paso":"Da tiamina si sospecha de alcoholismo","detalle":"Tiamina 100 mg IV antes de la glucosa para prevenir encefalopatía de Wernicke."},
+ {"paso":"Destino","detalle":"Causa orgánica → ingreso/tratamiento dirigido. Origen psiquiátrico filiado → interconsulta psiquiatría."}
+]}

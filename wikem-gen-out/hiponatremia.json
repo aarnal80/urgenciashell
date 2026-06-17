@@ -1,0 +1,28 @@
+{"wikem_titulo": "Hyponatremia", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Hiponatremia aguda sintomática (<48 h)","clave":"convulsiones, coma, edema cerebral; precisa salino hipertónico urgente","slug":"crisis_epilepticas"},
+   {"dx":"Insuficiencia suprarrenal / déficit de glucocorticoides","clave":"hipotensión, hiperpotasemia, hipoglucemia asociadas","slug":"crisis_addisoniana"},
+   {"dx":"Hiponatremia hipovolémica por shock/pérdidas","clave":"signos de depleción de volumen, taquicardia, hipotensión","slug":"shock"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"SIADH","clave":"euvolemia, Na urinario >20-40, osmolaridad urinaria alta; descarta fármacos, tumor, neumopatía","slug":"neumonia_adquirida_en_la_comunidad"},
+   {"dx":"Hiponatremia hipervolémica (ICC, cirrosis, S. nefrótico)","clave":"edemas, ascitis; Na urinario <20","slug":"insuficiencia_cardiaca"},
+   {"dx":"Hipotiroidismo grave","clave":"clínica de hipofunción tiroidea, bradicardia, hipotermia","slug":"crisis_mixedematosa"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Pseudohiponatremia / hiponatremia por hiperglucemia","clave":"corrige 2,4 mEq/L por cada 100 mg/dL de glucosa >100; osmolaridad normal o alta","slug":"cetoacidosis_diabetica"},
+   {"dx":"Hiponatremia tiazídica","clave":"diurético reciente, euvolemia/hipovolemia leve","slug":"urgencia_hipertensiva"},
+   {"dx":"Polidipsia psicógena / potomanía","clave":"ingesta hídrica masiva, osmolaridad urinaria muy baja","slug":"crisis_de_ansiedad"}
+ ]}
+], "plan": [
+ {"paso":"Confirma y mide la gravedad","detalle":"Repite natremia; clasifica leve (125-135), moderada (115-125), grave (<115 o sintomática). Glucemia para descartar pseudohiponatremia."},
+ {"paso":"Valora síntomas neurológicos","detalle":"Busca confusión, cefalea, vómitos, convulsiones o disminución del nivel de conciencia: marcan la urgencia más que la cifra."},
+ {"paso":"Determina el estado de volumen","detalle":"Hipovolemia, euvolemia o hipervolemia; con osmolaridad plasmática y urinaria y Na urinario. Define el tratamiento."},
+ {"paso":"Trata según síntomas y volemia","sub":[
+   {"nivel":"critico","t":"Sintomática grave (convulsión/coma) → salino hipertónico 3%: bolo 100-150 mL en 10-20 min, repetible; objetivo subir Na 4-6 mEq/L."},
+   {"nivel":"emergente","t":"Hipovolémica → SSF 0,9%. Hipervolémica → restricción hídrica + furosemida. Euvolémica/SIADH → restricción hídrica ± tolvaptán."}
+ ]},
+ {"paso":"Controla la velocidad de corrección","detalle":"No superes 8-10 mEq/L en 24 h (6 mEq/L si alto riesgo: alcoholismo, malnutrición, hipopotasemia). Con tolvaptán suspende si sube >5 mEq/L en 8 h."},
+ {"paso":"Vigila la sobrecorrección","detalle":"Controles seriados de natremia cada 2-4 h en formas graves. Si te pasas, frena con suero glucosado 5% ± desmopresina."},
+ {"paso":"Destino","detalle":"Ingreso si sintomática o Na <125. UCI/área de monitorización estrecha si síntomas graves o corrección con hipertónico."}
+]}

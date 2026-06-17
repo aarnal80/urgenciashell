@@ -1,0 +1,28 @@
+{"wikem_titulo": "Ocular and periocular diagnoses", "ddx": [
+ {"grupo":"Crítico · amenaza visual","nivel":"critico","items":[
+   {"dx":"Glaucoma agudo de ángulo cerrado","clave":"dolor intenso 'en clavo' con náuseas, midriasis media fija, edema corneal y PIO muy alta; derivación inmediata"},
+   {"dx":"Queratitis (herpética o por lentes de contacto)","clave":"dolor, fotofobia, defecto que tiñe con fluoresceína; hipoestesia corneal en herpes; no dar corticoides sin diagnóstico"},
+   {"dx":"Uveítis anterior aguda / iridociclitis","clave":"dolor, fotofobia, hiperemia ciliar periquerática, Tyndall en cámara anterior, miosis"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Escleritis","clave":"dolor profundo intenso, vasos esclerales que no blanquean con fenilefrina; asociada a enfermedad sistémica reumática"},
+   {"dx":"Celulitis orbitaria","clave":"ojo rojo con proptosis, dolor al movimiento ocular, diplopía y afectación general"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Conjuntivitis (vírica/bacteriana/alérgica)","clave":"hiperemia conjuntival difusa (rojo ladrillo), secreción/legañas, visión y PIO normales","slug":"conjuntivitis"},
+   {"dx":"Hemorragia subconjuntival","clave":"mancha roja homogénea, indolora, visión normal; descartar HTA o coagulopatía si recurrente"},
+   {"dx":"Epiescleritis","clave":"enrojecimiento sectorial, molestia leve, blanquea con fenilefrina; benigna"}
+ ]}
+]
+, "plan": [
+ {"paso":"Anamnesis y valoración inicial dirigida","detalle":"Indaga dolor, fotofobia, secreción, uso de lentes de contacto, trauma y afectación de la visión. Toma agudeza visual en ambos ojos: su descenso orienta a patología grave."},
+ {"paso":"Caracteriza el patrón de hiperemia","detalle":"Conjuntival (rojo ladrillo, fondos de saco → procesos benignos) vs ciliar/periquerática (rojo vinoso → procesos graves: glaucoma, uveítis, queratitis)."},
+ {"paso":"Explora con lámpara de hendidura, fluoresceína y tonometría","sub":[
+   {"nivel":"critico","t":"PIO muy elevada + midriasis media fija + edema corneal → glaucoma agudo: derivación oftalmológica inmediata"},
+   {"nivel":"critico","t":"Captación con fluoresceína (dendrita/úlcera) → queratitis: NO corticoides tópicos; valoración oftalmológica"}
+ ]},
+ {"paso":"Inicia tratamiento del glaucoma agudo si se confirma","detalle":"Reducir PIO: acetazolamida (oral/IV) ± manitol 20% IV, hipotensores tópicos y analgesia/antieméticos, mientras se traslada al oftalmólogo."},
+ {"paso":"Trata los cuadros benignos","detalle":"Conjuntivitis bacteriana: colirio antibiótico; vírica: medidas higiénicas y lágrimas; alérgica: antihistamínico tópico. Hemorragia subconjuntival: tranquilizar y controlar TA."},
+ {"paso":"Decide destino","detalle":"Derivación oftalmológica urgente en glaucoma agudo, queratitis, uveítis, escleritis o celulitis orbitaria. Manejo ambulatorio en conjuntivitis, epiescleritis y hemorragia subconjuntival, con reconsulta si empeora la visión o el dolor."}
+]
+}

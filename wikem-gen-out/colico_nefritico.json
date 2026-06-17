@@ -1,0 +1,27 @@
+{"wikem_titulo": "Urolithiasis", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Aneurisma/disección de aorta abdominal","clave":"varón >60a, dolor desgarrante, masa pulsátil, asimetría de pulsos/hipotensión","slug":"sindrome_aortico_agudo"},
+   {"dx":"Pielonefritis obstructiva / urosepsis","clave":"cólico + fiebre y mal estado general; emergencia que precisa derivación urgente","slug":"pielonefritis_aguda"},
+   {"dx":"Embarazo ectópico (mujer)","clave":"amenorrea, dolor pélvico, β-hCG positiva, posible inestabilidad"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Infarto renal","clave":"dolor lumbar brusco, FA/cardiopatía embolígena, LDH muy elevada"},
+   {"dx":"Apendicitis / diverticulitis","clave":"dolor migratorio en FID o FII, fiebre, defensa abdominal"},
+   {"dx":"Torsión testicular (varón joven)","clave":"dolor escrotal brusco irradiado a fosa; reflejo cremastérico abolido","slug":"sindrome_escrotal_agudo"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Pielonefritis no obstructiva","clave":"fiebre, puñopercusión positiva, piuria con nitritos"},
+   {"dx":"Lumbalgia musculoesquelética","clave":"dolor mecánico, reproducible a la palpación, sin síntomas urinarios"},
+   {"dx":"Cólico biliar","clave":"dolor en hipocondrio derecho tras comida grasa, Murphy positivo"}
+ ]}
+], "plan": [
+ {"paso":"Confirma sospecha clínica","detalle":"Dolor cólico lumbar irradiado a genitales + síntomas vegetativos + microhematuria (2 de 3 criterios). Tira reactiva de orina."},
+ {"paso":"Analgesia precoz y enérgica","detalle":"AINE de primera línea: dexketoprofeno 50 mg IV o diclofenaco 75 mg IM. Metamizol 2 g IV alternativo. Antiemético (metoclopramida 10 mg IV) si vómitos."},
+ {"paso":"Identifica banderas rojas","sub":[
+   {"nivel":"critico","t":"Fiebre + cólico (pielonefritis obstructiva/urosepsis) → hemocultivos, antibiótico IV y derivación urgente a Urología para desobstrucción (catéter doble J o nefrostomía)."},
+   {"nivel":"emergente","t":"Monorreno, trasplantado, obstrucción bilateral o LRA → eco urgente y valoración urológica."}
+ ]},
+ {"paso":"Elige la prueba de imagen","detalle":"TC sin contraste = patrón de referencia. Ecografía si embarazo, monorreno, fiebre o insuficiencia renal."},
+ {"paso":"Analítica si hay datos de alarma","detalle":"Función renal e iones, hemograma y PCR si fiebre. β-hCG en mujer fértil. Sedimento y urocultivo."},
+ {"paso":"Tratamiento expulsivo y destino","detalle":"Tamsulosina 0,4 mg/24h si cálculo distal <10 mm. Alta con AINE pautado y filtrado de orina si dolor controlado. Ingreso si dolor refractario, infección obstructiva, LRA o monorreno."}
+]}

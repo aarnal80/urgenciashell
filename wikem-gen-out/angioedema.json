@@ -1,0 +1,30 @@
+{"wikem_titulo": "Angioedema", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Anafilaxia","clave":"angioedema con broncoespasmo, hipotensión o afectación multisistémica; responde a adrenalina","slug":"urticaria_y_anafilaxia"},
+   {"dx":"Edema de glotis / obstrucción de vía aérea","clave":"estridor, disfonía, disfagia, sialorrea; emergencia, asegurar vía aérea"},
+   {"dx":"Shock","clave":"hipotensión por extravasación al tercer espacio","slug":"shock"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Angioedema bradicinérgico (hereditario/IECA)","clave":"sin habones, no responde a adrenalina/antihistamínicos/corticoides; precisa icatibant o C1-inhibidor"},
+   {"dx":"Crisis asmática","clave":"disnea con sibilancias sin edema facial; broncoespasmo aislado","slug":"ataque_de_asma"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Urticaria / reacción alérgica","clave":"habones pruriginosos sin edema profundo; histaminérgica","slug":"urticaria_y_anafilaxia"},
+   {"dx":"Crisis de ansiedad","clave":"sensación de cierre de garganta sin edema objetivable ni estridor","slug":"crisis_de_ansiedad"},
+   {"dx":"Síndrome escombroide","clave":"flushing y síntomas tras pescado mal conservado; transitorio"}
+ ]}
+], "plan": [
+ {"paso":"Evalúa la vía aérea de inmediato","detalle":"Busca estridor, disfonía, disfagia, sialorrea. Monitor, SatO2, TA. Postura semisentada. Prepara material de vía aérea difícil si edema progresivo."},
+ {"paso":"Asegura la vía aérea si compromiso","sub":[
+   {"nivel":"critico","t":"Estridor o edema laríngeo progresivo → intubación precoz (idealmente con fibrobroncoscopio); cricotirotomía si fracaso"}
+ ]},
+ {"paso":"Diferencia el mecanismo","detalle":"Histaminérgico (con habones/prurito, alérgico) vs bradicinérgico (sin habones, IECA o hereditario, dolor abdominal). El tratamiento difiere por completo."},
+ {"paso":"Trata el angioedema histaminérgico/anafilaxia","sub":[
+   {"nivel":"critico","t":"Anafilaxia → adrenalina IM 0,5 mg (0,01 mg/kg) en cara anterolateral del muslo, repetible cada 5-15 min"},
+   {"t":"Añade dexclorfeniramina 5 mg IV + metilprednisolona/hidrocortisona IV"}
+ ]},
+ {"paso":"Trata el angioedema bradicinérgico","sub":[
+   {"nivel":"emergente","t":"AEH/por IECA que no responde → icatibant 30 mg SC o concentrado de C1-inhibidor; alternativa plasma; suspende el IECA"}
+ ]},
+ {"paso":"Destino","detalle":"Alta tras 4-6 h si no hay edema de vía aérea y mejora (edema limitado a cara/labios). Observación 24 h si se administró adrenalina. Ingreso si afectación laríngea o bradicinérgico grave."}
+]}

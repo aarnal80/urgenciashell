@@ -1,0 +1,32 @@
+{"wikem_titulo": "Pulmonary embolism", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Síndrome coronario agudo","clave":"dolor opresivo, cambios del ST/troponina; puede coexistir con sobrecarga de VD","slug":"sindrome_coronario_agudo"},
+   {"dx":"Disección aórtica","clave":"dolor desgarrante irradiado a espalda, asimetría de pulsos/TA","slug":"sindrome_aortico_agudo"},
+   {"dx":"Taponamiento cardíaco","clave":"hipotensión, ingurgitación yugular, tonos apagados, pulso paradójico","slug":"taponamiento_cardiaco"},
+   {"dx":"Neumotórax a tensión","clave":"hipoventilación unilateral, timpanismo, desviación traqueal","slug":"neumotorax_espontaneo"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Neumonía","clave":"fiebre, tos productiva, crepitantes focales, infiltrado","slug":"neumonia_adquirida_en_la_comunidad"},
+   {"dx":"Pericarditis aguda","clave":"dolor pleurítico que mejora al inclinarse; roce; ST cóncavo difuso","slug":"pericarditis_aguda"},
+   {"dx":"Insuficiencia cardíaca descompensada","clave":"ortopnea, crepitantes bilaterales, edemas","slug":"insuficiencia_cardiaca"},
+   {"dx":"Crisis asmática / EPOC agudizada","clave":"sibilancias, broncoespasmo; el TEP puede dar sibilancias hasta en 25%","slug":"epoc_agudizada"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Dolor osteomuscular / costocondritis","clave":"dolor reproducible a la palpación, sin hipoxia"},
+   {"dx":"Crisis de ansiedad / hiperventilación","clave":"parestesias, alcalosis respiratoria; diagnóstico de exclusión","slug":"crisis_de_ansiedad"},
+   {"dx":"ERGE / espasmo esofágico","clave":"relación con la ingesta, pirosis","slug":"patologia_esofagica_aguda"}
+ ]}
+], "plan": [
+ {"paso":"Estima la probabilidad pretest y estratifica el riesgo (primeros minutos)","detalle":"Wells/Ginebra. Monitor, SatO2, TA, FC. Busca inestabilidad (TAS<90 o caída ≥40 mmHg >15 min) que define el TEP de alto riesgo."},
+ {"paso":"Solicita las pruebas según el escenario","sub":[
+   {"nivel":"critico","t":"Paciente inestable → ecocardiografía a pie de cama (disfunción de VD); no demorar con angio-TC si no es seguro trasladarlo."},
+   {"t":"Probabilidad baja-intermedia y estable → dímero-D (ajustado a edad); si positivo o probabilidad alta → angio-TC helicoidal."}
+ ]},
+ {"paso":"Completa el estudio inicial","detalle":"ECG (taquicardia sinusal, S1Q3T3, BRD), gasometría, troponina y BNP/NT-proBNP para estratificar riesgo intermedio. Valora signos de TVP."},
+ {"paso":"Soporte y anticoagulación","detalle":"O2 si SatO2<90%. Anticoagula precozmente salvo contraindicación: HBPM (enoxaparina 1 mg/kg/12h) o HNF si inestabilidad/insuficiencia renal. Analgesia con morfina."},
+ {"paso":"Decide la reperfusión según el riesgo","sub":[
+   {"nivel":"critico","t":"Alto riesgo (inestable) → fibrinólisis sistémica (alteplasa/tenecteplasa) + HNF; soporte hemodinámico con dobutamina/noradrenalina; valorar embolectomía si contraindicación."},
+   {"nivel":"emergente","t":"Riesgo intermedio-alto (VD disfuncional + troponina) → ingreso monitorizado, vigilar deterioro para rescate con fibrinólisis."}
+ ]},
+ {"paso":"Destino","detalle":"Alto riesgo e intermedio → ingreso (UCI si inestable). Bajo riesgo (sPESI 0, Hestia negativos, soporte social adecuado) → valorar anticoagulación y manejo ambulatorio."}
+]}

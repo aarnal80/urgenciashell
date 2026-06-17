@@ -1,0 +1,26 @@
+{"wikem_titulo": "Tricyclic antidepressant toxicity", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Intoxicación por otros bloqueadores de canales de sodio","clave":"antiarrítmicos Ia/Ic, carbamazepina, difenhidramina; QRS ancho, mismo tratamiento con bicarbonato"},
+   {"dx":"Intoxicación por cocaína","clave":"QRS ancho con simpaticomimético: HTA, taquicardia, agitación, dolor torácico","slug":"intoxicacion_aguda_por_cocaina"},
+   {"dx":"Otras causas de taquicardia de complejo ancho","clave":"TV vs taquicardia supraventricular aberrada; valora hiperpotasemia y SCA"},
+   {"dx":"Síndrome serotoninérgico","clave":"si coingesta de serotoninérgicos: clonus, hiperreflexia, hipertermia, agitación"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Toxicidad anticolinérgica","clave":"midriasis, piel seca y caliente, retención urinaria, delirium; sin QRS ancho","slug":"intoxicacion_aguda_por_anticolinergicos_y_antihistaminicos"},
+   {"dx":"Intoxicación mixta / coingesta","clave":"frecuente; cribar paracetamol y salicilatos siempre"}
+ ]}
+], "plan": [
+ {"paso":"Estabiliza y monitoriza (primeros minutos)","detalle":"Monitor ECG continuo, TA, SatO2; dos vías. Vía aérea si bajo nivel de conciencia. ECG de 12 derivaciones INMEDIATO y repetido cada 15-30 min las primeras 2 h."},
+ {"paso":"Valora el riesgo por el ECG","sub":[
+   {"nivel":"critico","t":"QRS >0,16 s u onda R en aVR >3 mm → alto riesgo de arritmia ventricular: alcaliniza ya"},
+   {"nivel":"emergente","t":"QRS >0,10 s o QTc >0,40 s → alto riesgo de convulsiones: monitoriza y prepara bicarbonato"}
+ ]},
+ {"paso":"Alcaliniza con bicarbonato sódico","detalle":"Bicarbonato 1 M 1-2 mEq/kg IV en bolo si QRS >0,10 s, hipotensión o arritmia; repite hasta estrechar QRS. Objetivo pH 7,45-7,55."},
+ {"paso":"Descontaminación digestiva","detalle":"Carbón activado 1 g/kg si vía aérea protegida y <2 h desde ingesta (absorción lenta). Lavado orogástrico solo en ingesta masiva muy reciente."},
+ {"paso":"Trata complicaciones","sub":[
+   {"t":"Hipotensión refractaria → cristaloides, luego noradrenalina; emulsión lipídica al 20% 1,5 mL/kg si shock o PCR refractarios"},
+   {"nivel":"emergente","t":"Convulsiones → benzodiacepinas (midazolam); evita fenitoína"},
+   {"t":"Corrige hipopotasemia e hipoxia (empeoran la cardiotoxicidad)"}
+ ]},
+ {"paso":"Destino","detalle":"UCI si QRS ancho, arritmia, convulsión, hipotensión o alteración de conciencia. Cama monitorizada y alta si asintomático con ECG normal (QRS <100 ms) tras 6 h. Valoración psiquiátrica tras estabilización médica."}
+]}

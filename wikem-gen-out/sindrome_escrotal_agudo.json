@@ -1,0 +1,26 @@
+{"wikem_titulo": "Testicular torsion", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Torsión testicular","clave":"dolor brusco intenso en <30a, sin fiebre, cremastérico abolido, Prehn positivo, teste horizontalizado","slug":"sindrome_escrotal_agudo"},
+   {"dx":"Gangrena de Fournier","clave":"dolor desproporcionado, crepitación, necrosis cutánea, sepsis; emergencia quirúrgica","slug":"sepsis"},
+   {"dx":"Rotura testicular (traumática)","clave":"traumatismo, hematocele, pérdida de contorno testicular en ecografía"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Epididimoorquitis","clave":"dolor progresivo, fiebre, Prehn negativo (alivio al elevar), síndrome miccional","slug":"infecciones_de_transmision_sexual"},
+   {"dx":"Torsión de hidátide de Morgagni","clave":"niño, dolor en polo superior, punto azul (blue dot sign)"},
+   {"dx":"Hernia inguinal incarcerada","clave":"masa inguinoescrotal irreductible, dolorosa, posibles síntomas oclusivos"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Hidrocele / espermatocele","clave":"aumento escrotal indoloro, transiluminación positiva"},
+   {"dx":"Varicocele","clave":"\"bolsa de gusanos\" que aumenta con Valsalva, predominio izquierdo"},
+   {"dx":"Tumor testicular","clave":"masa indolora, dura, no transiluminable"}
+ ]}
+], "plan": [
+ {"paso":"Reconoce y prioriza descartar torsión","detalle":"Ante dolor escrotal agudo en joven, asume torsión hasta demostrar lo contrario. Explora: reflejo cremastérico, signo de Prehn, posición y eje testicular (signo de Gouverneur)."},
+ {"paso":"Activa la vía quirúrgica si alta sospecha","sub":[
+   {"nivel":"critico","t":"Sospecha de torsión → consulta a Urología SIN demora; ventana de salvamento <6h. No esperes a la ecografía si la clínica es clara."}
+ ]},
+ {"paso":"Solicita Doppler color solo en casos dudosos","detalle":"Eco-Doppler valora vascularización; recuerda que hasta el 24% de torsiones mantienen flujo, por lo que no descarta. Sistemático de orina para apoyar diagnóstico infeccioso."},
+ {"paso":"Intenta detorsión manual si no hay quirófano inmediato","detalle":"Medida temporizadora: rotación externa (\"abrir el libro\"); el éxito alivia el dolor. No sustituye a la exploración quirúrgica."},
+ {"paso":"Trata la epididimoorquitis si esa es la causa","detalle":"Reposo, elevación escrotal, AINE (naproxeno/dexketoprofeno). Antibiótico según edad: <35a ceftriaxona 1 g IM + doxiciclina 100 mg/12h 10 días (ITS); >35a ciprofloxacino o levofloxacino."},
+ {"paso":"Decide destino","detalle":"Torsión, rotura, absceso o Fournier → quirófano/ingreso. Epididimoorquitis no séptica → alta con antibiótico y control. Ingreso si sepsis, absceso o mala evolución."}
+]}

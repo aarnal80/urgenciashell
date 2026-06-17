@@ -1,0 +1,26 @@
+{"wikem_titulo": "Hypertensive urgency", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Emergencia hipertensiva","clave":"HTA grave CON daño agudo de órgano diana (neuro, cardíaco, renal, retina); requiere IV","slug":"emergencia_hipertensiva"},
+   {"dx":"Ictus / hemorragia intracraneal","clave":"focalidad, cefalea explosiva, bajada de conciencia; no bajar TA bruscamente","slug":"ictus"},
+   {"dx":"Síndrome coronario agudo","clave":"dolor torácico, cambios ECG, troponina; la HTA puede ser reactiva","slug":"sindrome_coronario_agudo"},
+   {"dx":"Edema agudo de pulmón simpático","clave":"disnea súbita, crepitantes, ortopnea con cifras muy altas","slug":"edema_agudo_de_pulmon_cardiogenico"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Preeclampsia / eclampsia","clave":"gestante >20 sem, proteinuria, edemas, cefalea; convulsiones en eclampsia","slug":"estados_hipertensivos_del_embarazo_preeclampsia_y_eclampsia"},
+   {"dx":"Sobrecarga de volumen / IRA","clave":"oliguria, edemas, creatinina elevada","slug":"lesion_renal_aguda"},
+   {"dx":"Intoxicación por simpaticomiméticos","clave":"consumo de cocaína/anfetaminas, taquicardia, midriasis, agitación","slug":"intoxicacion_aguda_por_cocaina"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Seudocrisis hipertensiva","clave":"elevación reactiva por dolor, ansiedad o retención urinaria; normaliza al tratar la causa","slug":"crisis_de_ansiedad"},
+   {"dx":"Retención aguda de orina","clave":"globo vesical, agitación; la TA cede al sondar","slug":"retencion_aguda_de_orina"}
+ ]}
+], "plan": [
+ {"paso":"Confirma la cifra y descarta emergencia","detalle":"Mide TA en ambos brazos tras reposo, manguito adecuado. Lo clave: ¿hay daño agudo de órgano diana? Si lo hay → es emergencia hipertensiva (vía IV)."},
+ {"paso":"Busca síntomas y signos de alarma","detalle":"Cefalea explosiva, focalidad neurológica, dolor torácico, disnea, déficit visual, asimetría de pulsos. Si presentes → tratar como emergencia."},
+ {"paso":"Identifica y trata la seudocrisis","sub":[
+   {"t":"Elevación por dolor / ansiedad / retención urinaria → trata la causa (analgesia, ansiolítico, sondaje); no antihipertensivos."}
+ ]},
+ {"paso":"Reduce la TA de forma gradual por vía ORAL","detalle":"Objetivo: bajar la PAM ~20% o PAD <120 mmHg en 24-48 h. Captopril 25 mg VO, amlodipino o labetalol oral, a dosis baja. Evita descensos bruscos (riesgo de hipoperfusión)."},
+ {"paso":"Reevalúa la respuesta","detalle":"Observación con controles seriados de TA. Reanuda/ajusta el tratamiento de base habitual."},
+ {"paso":"Destino","detalle":"Alta con seguimiento ambulatorio precoz (24-72 h) y revisión de adherencia. Ingreso solo si aparece daño de órgano o mala respuesta."}
+]}

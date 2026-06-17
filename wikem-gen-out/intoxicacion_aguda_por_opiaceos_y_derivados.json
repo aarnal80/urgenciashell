@@ -1,0 +1,47 @@
+{
+  "wikem_titulo": "Opioid toxicity",
+  "ddx": [
+    {
+      "nivel": "critico",
+      "grupo": "Crítico · coma con depresión respiratoria",
+      "items": [
+        {"dx": "Hipoglucemia", "clave": "Coma reversible; glucemia capilar baja, descartar de entrada", "slug": "hipoglucemia"},
+        {"dx": "Intoxicación por benzodiacepinas / sedantes", "clave": "Depresión SNC pero pupilas normales y respiración menos deprimida; sin respuesta a naloxona", "slug": "intoxicacion_aguda_por_benzodiacepinas_e_hipnoticos_no_benzodiacepinicos"},
+        {"dx": "Hemorragia protuberancial / ictus", "clave": "Miosis bilateral + coma pero focalidad neurológica, NO responde a naloxona", "slug": "ictus"}
+      ]
+    },
+    {
+      "nivel": "emergente",
+      "grupo": "Emergente · imitan la miosis o el coma",
+      "items": [
+        {"dx": "Intoxicación por clonidina", "clave": "Miosis, bradicardia, hipotensión, depresión SNC; respuesta parcial/escasa a naloxona", "slug": null},
+        {"dx": "Intoxicación por organofosforados", "clave": "Miosis + síndrome colinérgico (sialorrea, broncorrea, fasciculaciones)", "slug": "intoxicacion_aguda_por_insecticidas_organofosforados_carbama"},
+        {"dx": "Intoxicación por CO", "clave": "Cefalea, coma, contexto de inhalación; carboxihemoglobina elevada", "slug": null}
+      ]
+    },
+    {
+      "nivel": "no_emergente",
+      "grupo": "No emergente",
+      "items": [
+        {"dx": "Estado postcrítico", "clave": "Somnolencia tras crisis presenciada, sin miosis puntiforme, recuperación progresiva", "slug": "crisis_epilepticas"},
+        {"dx": "Intoxicación por xilacina", "clave": "Sedación que NO responde a naloxona en consumidor de opioides adulterados", "slug": null}
+      ]
+    }
+  ],
+  "plan": [
+    {"paso": "Asegurar ABC: ventilar primero, antídoto después", "detalle": "Apertura de vía aérea, ventilar con bolsa-mascarilla y O2; la causa de muerte es la parada respiratoria. Monitorización y glucemia capilar inmediata."},
+    {"paso": "Administrar naloxona titulada según la depresión respiratoria", "detalle": "0,04-0,4 mg IV (IM/SC/intranasal si no hay vía), repetir cada 2-3 min doblando dosis hasta FR >10-12 rpm. Objetivo: ventilación adecuada, no plena consciencia (evitar abstinencia)."},
+    {"paso": "Iniciar perfusión continua de naloxona si reaparece la depresión", "detalle": "Frecuente con opioides de vida media larga (metadona, buprenorfina, liberación prolongada). Perfusión horaria = 2/3 de la dosis de bolo eficaz/h, ajustando a la respuesta."},
+    {"paso": "Reevaluar si NO hay respuesta a naloxona", "sub": [
+      {"t": "Sin respuesta tras dosis total de 10 mg → replantear diagnóstico, buscar co-intoxicación o causa no opioide (xilacina, clonidina)", "nivel": "emergente"},
+      {"t": "Coma persistente → IOT y ventilación mecánica", "nivel": "critico"}
+    ]},
+    {"paso": "Buscar y tratar complicaciones y toxicidades específicas", "sub": [
+      {"t": "Convulsiones (meperidina, tramadol, tapentadol) → benzodiacepina IV (lorazepam)", "nivel": "emergente"},
+      {"t": "QT largo / torsades (metadona, loperamida) → sulfato de magnesio IV, corregir iones", "nivel": "emergente"},
+      {"t": "Edema agudo de pulmón no cardiogénico → O2 y soporte ventilatorio", "nivel": "emergente"}
+    ]},
+    {"paso": "Estudio dirigido a la co-ingesta", "detalle": "Clínico de base; UDS (fentanilo y sintéticos no se detectan). Si sospecha de co-intoxicación: paracetamol, salicilatos, ECG, Rx tórax, gasometría y CK si inmovilización prolongada."},
+    {"paso": "Observación y disposición", "detalle": "Vigilar mínimo 4-6 h tras la última dosis de naloxona (más con opioides de acción prolongada). UCI si perfusión de naloxona, ventilación mecánica o inestabilidad. Valoración psiquiátrica si gesto autolítico."}
+  ]
+}

@@ -1,0 +1,27 @@
+{"wikem_titulo": "Acute asthma exacerbation (peds)", "ddx": [
+ {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+   {"dx":"Aspiración de cuerpo extraño","clave":"inicio súbito, atragantamiento, sibilancias/hipoventilación unilateral; sin antecedente de asma"},
+   {"dx":"Anafilaxia","clave":"broncoespasmo + habones/edema/hipotensión tras alérgeno; respuesta a adrenalina","slug":"urticaria_y_anafilaxia"},
+   {"dx":"Cardiopatía / insuficiencia cardíaca","clave":"sibilancias con soplo, hepatomegalia, mala perfusión; lactante con fallo de medro"}
+ ]},
+ {"grupo":"Emergente","nivel":"emergente","items":[
+   {"dx":"Bronquiolitis vírica","clave":"<2 a, primer episodio, pródromo catarral, crepitantes y sibilancias difusas"},
+   {"dx":"Obstrucción de vía aérea grande (anillo vascular, laringomalacia)","clave":"estridor/sibilancia persistente desde lactante; ruidos posicionales"},
+   {"dx":"Neumonía","clave":"fiebre, hipoventilación focal, crepitantes; mala respuesta a broncodilatador","slug":"neumonia_adquirida_en_la_comunidad"}
+ ]},
+ {"grupo":"No emergente","nivel":"no_emergente","items":[
+   {"dx":"Disfunción de cuerdas vocales","clave":"estridor inspiratorio, no mejora con broncodilatador; espirometría/laringoscopia"},
+   {"dx":"Reflujo gastroesofágico","clave":"tos y sibilancias tras tomas, regurgitación; lactante"}
+ ]}
+], "plan": [
+ {"paso":"Valora la gravedad (primeros minutos)","detalle":"Pulmonary Score + SatO2: leve (PS 0-3, >94%), moderada (PS 4-6, 91-94%), grave (PS 7-9, <91%). Monitoriza y administra O2 si SatO2 <94%."},
+ {"paso":"Inicia broncodilatador de acción corta","detalle":"Salbutamol con MDI + cámara (2-10 pulsaciones según peso/gravedad) o nebulizado; vía inhalatoria de elección. Repite hasta 3 tandas en la primera hora."},
+ {"paso":"Escalona según gravedad","sub":[
+   {"t":"Moderada-grave → añade bromuro de ipratropio inhalado y corticoide sistémico (prednisolona/prednisona oral 1-2 mg/kg; metilprednisolona IV si no tolera)."},
+   {"nivel":"emergente","t":"Grave sin respuesta → sulfato de magnesio IV 40 mg/kg (máx 2 g) en 20 min."},
+   {"nivel":"critico","t":"Inminencia de parada respiratoria → adrenalina IM, avisar UCIP, valorar VMNI/intubación."}
+ ]},
+ {"paso":"Reevalúa la respuesta","detalle":"Repite PS y SatO2 tras cada tanda. La Rx tórax NO es rutinaria: solo si auscultación asimétrica, fiebre inexplicada, dolor torácico o sospecha de complicación (neumotórax)."},
+ {"paso":"Vigila el agotamiento","detalle":"PaCO2 >45 mmHg en asmático (típicamente hipocápnico) sugiere fallo respiratorio inminente. Cianosis, bradicardia o consciencia disminuida = alarma."},
+ {"paso":"Destino","detalle":"Buena respuesta y SatO2 estable → alta con salbutamol y corticoide oral 3-5 días + plan escrito. Grave persistente, hipoxia o agotamiento → ingreso/UCIP."}
+]}
