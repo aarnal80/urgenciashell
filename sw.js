@@ -1,9 +1,9 @@
 /* Service worker — cache-first del shell para uso offline. */
-var CACHE = "vital-assist-v22";
+var CACHE = "vital-assist-v29";
 var ASSETS = [
   "./", "./index.html", "./styles.css", "./app.js", "./topics-data.js", "./scales-data.js", "./drugs-index.js",
-  "./scales-extra.js", "./topics-extra.js", "./ddx-demo.js",
-  "./manifest.webmanifest", "./icons/icon.svg", "./icons/icon-192.png", "./icons/icon-512.png"
+  "./drug-aliases.js", "./scales-extra.js", "./topics-extra.js", "./ddx-demo.js",
+  "./manifest.webmanifest", "./icons/logo.png", "./icons/icon-192.png", "./icons/icon-512.png"
 ];
 
 self.addEventListener("install", function (e) {

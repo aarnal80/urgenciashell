@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#0f766e" />
   <title>Manual de Urgencias in HELL</title>
   <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="icon" href="icons/icon.svg" type="image/svg+xml" />
+  <link rel="icon" href="icons/logo.png" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -21,7 +21,7 @@
   <div id="app">
     <aside id="sidebar">
       <a class="brand" href="#">
-        <div class="brand-mark">MU</div>
+        <img class="brand-mark" src="icons/logo.png" alt="Manual de Urgencias" />
         <div class="brand-text">
           <strong>Manual de Urgencias <em>in HELL</em></strong>
           <span>Guía de consulta rápida</span>
@@ -41,9 +41,9 @@
       <article id="topic" hidden></article>
       <section id="empty" class="empty">
         <div class="empty-inner">
-          <div class="empty-mark">＋</div>
+          <img class="empty-mark" src="icons/logo.png" alt="" />
           <h1>Manual de Urgencias <em>in HELL</em></h1>
-          <p>Guía de consulta rápida · Dr. Antonio J. Arnal Meinhardt</p>
+          <p>Guía de consulta rápida<br /><span class="author-line">Dr. Antonio J. Arnal Meinhardt</span></p>
           <p class="hint">Resumen rápido · tratamiento con dosis · signos de alarma · criterios de ingreso · temas conectados.</p>
         </div>
       </section>
@@ -56,6 +56,7 @@
   <script src="scales-data.js"></script>
   <script src="scales-extra.js"></script>
   <script src="drugs-index.js"></script>
+  <script src="drug-aliases.js"></script>
   <script src="topics-extra.js"></script>
   <script src="ddx-demo.js"></script>
   <script src="app.js"></script>

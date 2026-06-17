@@ -5,6 +5,7 @@
   var INDEX = window.TOPIC_INDEX || {};
   var SCALES = window.SCALES || {};
   var DRUGS = window.DRUGS || {};
+  var DRUG_ALIAS = window.DRUG_ALIAS || {};
   var navCount = 0; // navegaciones internas (para mostrar "Volver")
   var bySlug = {};
   TOPICS.forEach(function (t) { bySlug[t.slug] = t; });
@@ -46,6 +47,18 @@
   }
   function escA(s) { return esc(s).replace(/"/g, "&quot;"); } // escape para atributos
 
+  // Normalización ligera (igual que cima_scrape.py) para resolver alias de fármaco
+  function simpleNorm(s) {
+    return String(s == null ? "" : s).normalize("NFKD").replace(/[̀-ͯ]/g, "")
+      .toLowerCase().replace(/[^a-z0-9]+/g, " ").trim().replace(/\s+/g, " ");
+  }
+  // Devuelve el id de ficha técnica para un item de tratamiento (drug_id directo o por alias de nombre)
+  function drugFichaId(x) {
+    if (x.drug_id && DRUGS[x.drug_id]) return x.drug_id;
+    var a = DRUG_ALIAS[simpleNorm(x.farmaco)];
+    return (a && DRUGS[a]) ? a : null;
+  }
+
   function highlight(text, q) {
     var safe = esc(text);
     if (!q) return safe;
@@ -60,7 +73,38 @@
     (t.briefing || []).forEach(function (b) { parts.push(b); });
     (t.red_flags || []).forEach(function (b) { parts.push(b); });
     (t.tratamiento || []).forEach(function (x) { parts.push(x.farmaco, x.dosis, x.indicacion); });
+    (t.ddx || []).forEach(function (g) { (g.items || []).forEach(function (i) { parts.push(i.dx, i.clave); }); });
+    (t.plan || []).forEach(function (p) { parts.push(p.paso); });
     return parts.join(" · ").toLowerCase();
+  }
+
+  // Para la búsqueda: devuelve un fragmento que explica por qué coincide el tema
+  // (cuando la coincidencia no está en el título).
+  function matchSnippet(t, q) {
+    if (!q || t.title.toLowerCase().indexOf(q) !== -1) return "";
+    var ddxNames = [], plan = [];
+    (t.ddx || []).forEach(function (g) { (g.items || []).forEach(function (i) { ddxNames.push(i.dx, i.clave); }); });
+    (t.plan || []).forEach(function (p) { plan.push(p.paso, p.detalle); });
+    var checks = [
+      ["tratamiento", (t.tratamiento || []).map(function (x) { return [x.farmaco, x.dosis, x.indicacion].filter(Boolean).join(" · "); })],
+      ["dx diferencial", ddxNames],
+      ["signos de alarma", t.red_flags || []],
+      ["resumen", t.briefing || []],
+      ["plan", plan]
+    ];
+    for (var i = 0; i < checks.length; i++) {
+      var label = checks[i][0], arr = checks[i][1];
+      for (var j = 0; j < arr.length; j++) {
+        var s = arr[j] || "", idx = s.toLowerCase().indexOf(q);
+        if (idx !== -1) {
+          var start = Math.max(0, idx - 22);
+          var frag = (start > 0 ? "…" : "") + s.slice(start, idx + q.length + 28) +
+            (idx + q.length + 28 < s.length ? "…" : "");
+          return '<span class="tl-snip"><span class="tl-snip-tag">' + label + "</span>" + highlight(frag, q) + "</span>";
+        }
+      }
+    }
+    return "";
   }
 
   /* ---------- Sidebar list ---------- */
@@ -79,19 +123,36 @@
       groups[c].push(t);
     });
 
+    // Mover al final lo que no es enfermedad (pruebas complementarias, técnicas/misceláneas)
+    var LAST_CATS = ["Exploraciones Complementarias en Medicina de Urgencias", "Miscelánea"];
+    order = order.filter(function (c) { return LAST_CATS.indexOf(c) === -1; })
+      .concat(LAST_CATS.filter(function (c) { return order.indexOf(c) !== -1; }));
+
     var active = location.hash.replace(/^#\/tema\//, "");
+    var activeT = bySlug[active];
+    var activeCat = activeT ? (activeT.categoria || "Otros") : null;
     var html = "";
     order.forEach(function (c) {
-      html += '<div class="cat-group"><div class="cat-label">' + esc(c) + "</div>";
+      // Abierta si hay búsqueda (todas con coincidencias) o si es la categoría del tema activo.
+      var open = q ? true : (c === activeCat);
+      html += '<div class="cat-group" data-open="' + (open ? "1" : "0") + '">' +
+        '<button class="cat-head" type="button">' +
+          '<span class="cat-label">' + esc(c) + "</span>" +
+          '<span class="cat-count">' + groups[c].length + "</span>" +
+          '<span class="cat-chev">' + ICONS.chev + "</span>" +
+        "</button>" +
+        '<div class="cat-topics">';
       groups[c].forEach(function (t) {
+        var snip = matchSnippet(t, q);
         html += '<a class="topic-link' + (t.slug === active ? " active" : "") +
           '" href="#/tema/' + esc(t.slug) + '">' +
           '<span class="num">' + String(t.number).padStart(3, "0") + "</span>" +
-          "<span>" + highlight(t.title, q) + "</span></a>";
+          '<span class="tl-main"><span class="tl-title">' + highlight(t.title, q) + "</span>" +
+          snip + "</span></a>";
       });
-      html += "</div>";
+      html += "</div></div>";
     });
-    if (!matches.length) html = '<div class="cat-label">Sin resultados</div>';
+    if (!matches.length) html = '<div class="cat-label" style="padding:14px 10px">Sin resultados</div>';
     $list.innerHTML = html;
     $count.textContent = TOPICS.length + " temas" + (q ? " · " + matches.length + " coinciden" : "");
   }
@@ -115,9 +176,9 @@
       (t.status === "revisado" ? "Revisado" : "Borrador IA") + "</span>";
     html += "</div>";
 
-    // Briefing
+    // Briefing — abierto por defecto si el tema no tiene Plan de trabajo
     if ((t.briefing || []).length) {
-      html += block("briefing", "Resumen", false,
+      html += block("briefing", "Resumen", !(t.plan || []).length,
         '<ul class="briefing">' + t.briefing.map(function (b) {
           return "<li>" + esc(b) + "</li>";
         }).join("") + "</ul>");
@@ -193,8 +254,9 @@
         s += '<div class="tx-card-body">';
         if (x.dosis) s += '<div class="tx-dose">' + esc(x.dosis) + "</div>";
         if (x.notas) s += '<div class="tx-notes">' + esc(x.notas) + "</div>";
-        if (x.drug_id && DRUGS[x.drug_id])
-          s += '<a class="tx-ft" href="#/farmaco/' + esc(x.drug_id) + '">' + ICONS.tratamiento +
+        var fid = drugFichaId(x);
+        if (fid)
+          s += '<a class="tx-ft" href="#/farmaco/' + esc(fid) + '">' + ICONS.tratamiento +
             "Ficha técnica (AEMPS)" + ICONS.chevR + "</a>";
         s += "</div></div>";
         return s;
@@ -265,7 +327,7 @@
     ];
     if (t.wikem_titulo)
       bib.push("WikEM. <em>" + esc(t.wikem_titulo) + "</em>. www.wikem.org");
-    var hasDrugs = (t.tratamiento || []).some(function (x) { return x.drug_id && DRUGS[x.drug_id]; });
+    var hasDrugs = (t.tratamiento || []).some(function (x) { return drugFichaId(x); });
     if (hasDrugs)
       bib.push("Fichas técnicas de los fármacos: Agencia Española de Medicamentos y Productos Sanitarios (AEMPS), CIMA.");
     html += block("bibliografia", "Bibliografía", false,
@@ -308,7 +370,7 @@
     var meta = TOPICS.length + " temas · " + Object.keys(DRUGS).length + " fármacos con ficha técnica · " + Object.keys(SCALES).length + " escalas con calculadora";
     $topic.innerHTML = (navCount > 0 ? backBtn() : "") +
       '<div class="about">' +
-        '<div class="about-mark">MU</div>' +
+        '<img class="about-mark" src="icons/logo.png" alt="" />' +
         '<h1>Manual de Urgencias <em>in HELL</em></h1>' +
         '<p class="about-sub">Guía de consulta rápida</p>' +
         '<div class="about-card"><h2>Autor</h2>' +
@@ -383,7 +445,7 @@
   function openScale(id) {
     var s = SCALES[id];
     if (!s) return;
-    calc = { id: id, scale: s, sel: {}, cls: null };
+    calc = { id: id, scale: s, sel: {}, cls: null, num: {} };
     renderCalc();
   }
 
@@ -408,6 +470,49 @@
       }
     });
     return { total: total, faltan: faltan };
+  }
+
+  function formulaValues(s) {
+    var vals = {}, faltan = 0;
+    s.items.forEach(function (it) {
+      if (it.tipo === "opciones") {
+        var idx = calc.sel[it.id];
+        if (idx == null) { faltan++; vals[it.id] = NaN; }
+        else vals[it.id] = it.opciones[idx].valor;
+      } else {
+        var v = calc.num[it.id];
+        if (v == null || v === "" || isNaN(+v)) { faltan++; vals[it.id] = NaN; }
+        else vals[it.id] = +v;
+      }
+    });
+    return { vals: vals, faltan: faltan };
+  }
+  function computeFormula(s) {
+    var fv = formulaValues(s);
+    if (fv.faltan) return { faltan: fv.faltan, result: null };
+    var ids = s.items.map(function (it) { return it.id; });
+    try {
+      var fn = new Function(ids.join(","), "return (" + s.formula + ");");
+      return { faltan: 0, result: fn.apply(null, ids.map(function (id) { return fv.vals[id]; })) };
+    } catch (e) { return { faltan: 0, result: null }; }
+  }
+  function formulaFoot(s) {
+    var c = computeFormula(s);
+    if (c.faltan)
+      return '<div class="calc-result"><div class="calc-interp"><span class="calc-warn">Faltan ' + c.faltan + " dato(s) por introducir</span></div></div>";
+    var val = c.result;
+    var disp = (val == null || isNaN(val)) ? "—" : (s.decimales != null ? Number(val).toFixed(s.decimales) : val);
+    var band = null, bidx = -1;
+    (s.interpretacion || []).forEach(function (b, i) {
+      if (val >= b.min && (b.max == null || val <= b.max)) { band = b; bidx = i; }
+    });
+    var sev = band ? severityClass(bidx, s.interpretacion.length) : "";
+    return '<div class="calc-result ' + sev + '">' +
+      '<div class="calc-score"><span class="calc-num">' + disp + '</span><span class="calc-unit">' + esc(s.unidad_resultado || "") + "</span></div>" +
+      '<div class="calc-interp">' +
+        (band ? "<strong>" + esc(band.label) + "</strong>" + (band.detalle ? "<span>" + esc(band.detalle) + "</span>" : "") : "") +
+      "</div>" +
+    "</div>";
   }
 
   function renderCalc() {
@@ -456,6 +561,25 @@
       foot = '<div class="calc-result ' + (calc.cls != null ? severityClass(calc.cls, s.clases.length) : "") + '">' +
         (c ? '<div class="calc-interp"><strong>' + esc(c.label) + "</strong><span>" + esc(c.detalle || c.descripcion) + "</span></div>"
            : '<div class="calc-interp"><span class="calc-warn">Selecciona una clase</span></div>') + "</div>";
+    } else if (s.tipo === "formula") {
+      body = s.items.map(function (it) {
+        var inner;
+        if (it.tipo === "opciones") {
+          var sel = calc.sel[it.id];
+          inner = '<div class="opts">' + it.opciones.map(function (o, i) {
+            return '<button class="opt' + (sel === i ? " on" : "") + '" data-item="' + esc(it.id) +
+              '" data-opt="' + i + '">' + esc(o.label) + "</button>";
+          }).join("") + "</div>";
+        } else {
+          var v = calc.num[it.id];
+          inner = '<div class="num-wrap"><input type="number" inputmode="decimal" class="calc-num-input" data-num="' +
+            esc(it.id) + '" value="' + (v == null ? "" : esc(v)) + '"' +
+            (it.placeholder ? ' placeholder="' + esc(it.placeholder) + '"' : "") + " />" +
+            (it.unidad ? '<span class="num-unit">' + esc(it.unidad) + "</span>" : "") + "</div>";
+        }
+        return '<div class="calc-item"><div class="calc-label">' + esc(it.label) + "</div>" + inner + "</div>";
+      }).join("");
+      foot = formulaFoot(s);
     }
 
     $modal.innerHTML =
@@ -483,10 +607,19 @@
     if (!el) return;
     if (el.hasAttribute("data-close")) { closeScale(); return; }
     if (!calc) return;
-    if (el.hasAttribute("data-reset")) { calc.sel = {}; calc.cls = null; renderCalc(); return; }
+    if (el.hasAttribute("data-reset")) { calc.sel = {}; calc.cls = null; calc.num = {}; renderCalc(); return; }
     if (el.hasAttribute("data-bin")) { var b = el.getAttribute("data-bin"); calc.sel[b] = !calc.sel[b]; renderCalc(); return; }
     if (el.hasAttribute("data-item")) { calc.sel[el.getAttribute("data-item")] = +el.getAttribute("data-opt"); renderCalc(); return; }
     if (el.hasAttribute("data-class")) { calc.cls = +el.getAttribute("data-class"); renderCalc(); return; }
+  });
+
+  // Entradas numéricas (tipo "formula"): recalcula solo el resultado para no perder el foco
+  $modal.addEventListener("input", function (e) {
+    var inp = e.target.closest(".calc-num-input");
+    if (!inp || !calc || calc.scale.tipo !== "formula") return;
+    calc.num[inp.getAttribute("data-num")] = inp.value;
+    var res = $modal.querySelector(".calc-result");
+    if (res) res.outerHTML = formulaFoot(calc.scale);
   });
 
   // Interacciones dentro de la ficha: plegar secciones/notas y abrir calculadoras
@@ -572,6 +705,14 @@
   }
 
   $search.addEventListener("input", function () { renderList($search.value); });
+
+  // Plegar/desplegar categorías del índice
+  $list.addEventListener("click", function (e) {
+    var head = e.target.closest(".cat-head");
+    if (!head) return;
+    var g = head.parentElement;
+    g.setAttribute("data-open", g.getAttribute("data-open") === "1" ? "0" : "1");
+  });
   window.addEventListener("hashchange", function () { navCount++; route(); });
 
   // arranque
