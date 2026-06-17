@@ -32,7 +32,10 @@
     chev: '<svg ' + SVG + '><polyline points="6 9 12 15 18 9"/></svg>',
     chevR: '<svg ' + SVG + '><polyline points="9 18 15 12 9 6"/></svg>',
     search: '<svg ' + SVG + '><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>',
-    menu: '<svg ' + SVG + '><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>'
+    menu: '<svg ' + SVG + '><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>',
+    moon: '<svg ' + SVG + '><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>',
+    sun: '<svg ' + SVG + '><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></svg>',
+    reciente: '<svg ' + SVG + '><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>'
   };
 
   var $list = document.getElementById("topic-list");
@@ -152,6 +155,25 @@
       });
       html += "</div></div>";
     });
+    // Temas recientes (solo sin búsqueda activa)
+    if (!q) {
+      var R = [];
+      try { R = JSON.parse(localStorage.getItem("recientes") || "[]"); } catch (e) {}
+      R = R.filter(function (s) { return bySlug[s]; });
+      if (R.length) {
+        var rh = '<div class="cat-group cat-recientes" data-open="1">' +
+          '<button class="cat-head" type="button"><span class="cat-label">' + ICONS.reciente + "Recientes</span>" +
+          '<span class="cat-count">' + R.length + "</span>" +
+          '<span class="cat-chev">' + ICONS.chev + "</span></button><div class=\"cat-topics\">";
+        R.forEach(function (s) {
+          var t = bySlug[s];
+          rh += '<a class="topic-link' + (t.slug === active ? " active" : "") +
+            '" href="#/tema/' + esc(t.slug) + '"><span class="num">' + String(t.number).padStart(3, "0") + "</span>" +
+            '<span class="tl-main"><span class="tl-title">' + esc(t.title) + "</span></span></a>";
+        });
+        html = rh + "</div></div>" + html;
+      }
+    }
     if (!matches.length) html = '<div class="cat-label" style="padding:14px 10px">Sin resultados</div>';
     $list.innerHTML = html;
     $count.textContent = TOPICS.length + " temas" + (q ? " · " + matches.length + " coinciden" : "");
@@ -694,16 +716,66 @@
     if (e.key === "Escape") { if (calc) closeScale(); else document.body.classList.remove("nav-open"); }
   });
 
+  // Índice global de calculadoras (MedCalc)
+  function renderCalcIndex() {
+    $empty.hidden = true; $topic.hidden = false;
+    var tb = document.getElementById("topbar-title");
+    if (tb) tb.textContent = "Calculadoras";
+    document.title = "Calculadoras — Vital Assist";
+    var ids = Object.keys(SCALES).sort(function (a, b) {
+      return (SCALES[a].nombre || a).localeCompare(SCALES[b].nombre || b);
+    });
+    var html = (navCount > 0 ? backBtn() : "") +
+      '<div class="t-head"><div class="t-cat">Herramientas</div>' +
+      '<h1 class="t-title">Calculadoras</h1>' +
+      '<span class="t-status revisado">' + ids.length + " escalas</span></div>" +
+      '<div class="scales">' + ids.map(function (id) {
+        var s = SCALES[id];
+        return '<button class="scale-chip" data-scale="' + esc(id) + '">' +
+          '<span class="scale-ic">' + ICONS.escalas + "</span>" +
+          '<span class="scale-tx"><span class="scale-name">' + esc(s.nombre) + "</span>" +
+          (s.para ? '<span class="scale-for">' + esc(s.para) + "</span>" : "") + "</span>" +
+          '<span class="scale-go">' + ICONS.chevR + "</span></button>";
+      }).join("") + "</div>";
+    $topic.innerHTML = html;
+    $topic.parentElement.scrollTop = 0;
+    document.body.classList.remove("nav-open");
+  }
+
   /* ---------- Routing ---------- */
   function route() {
     if (location.hash === "#/about") { renderAbout(); renderList($search.value); return; }
+    if (location.hash === "#/calc") { renderCalcIndex(); renderList($search.value); return; }
     var dm = location.hash.match(/^#\/farmaco\/(.+)$/);
     if (dm) { renderDrug(decodeURIComponent(dm[1])); renderList($search.value); return; }
     var m = location.hash.match(/^#\/tema\/(.+)$/);
-    if (m) renderTopic(decodeURIComponent(m[1]));
+    if (m) { var sl = decodeURIComponent(m[1]); renderTopic(sl); pushRecent(sl); }
     else showEmpty();
     renderList($search.value);
   }
+
+  function pushRecent(slug) {
+    if (!bySlug[slug]) return;
+    try {
+      var R = JSON.parse(localStorage.getItem("recientes") || "[]");
+      R = R.filter(function (s) { return s !== slug; });
+      R.unshift(slug);
+      localStorage.setItem("recientes", JSON.stringify(R.slice(0, 5)));
+    } catch (e) {}
+  }
+
+  // Tema claro / oscuro
+  var $theme = document.getElementById("theme-btn");
+  function applyTheme(t) {
+    document.body.classList.toggle("dark", t === "dark");
+    if ($theme) $theme.innerHTML = t === "dark" ? ICONS.sun : ICONS.moon;
+  }
+  applyTheme(localStorage.getItem("tema") || "claro");
+  if ($theme) $theme.addEventListener("click", function () {
+    var t = document.body.classList.contains("dark") ? "claro" : "dark";
+    try { localStorage.setItem("tema", t); } catch (e) {}
+    applyTheme(t);
+  });
 
   $search.addEventListener("input", function () { renderList($search.value); });
 
