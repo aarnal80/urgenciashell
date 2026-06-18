@@ -49,6 +49,8 @@
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
   function escA(s) { return esc(s).replace(/"/g, "&quot;"); } // escape para atributos
+  // Minúsculas sin acentos (longitud 1:1, para búsqueda y resaltado insensibles a tildes)
+  function sinAcentos(s) { return String(s == null ? "" : s).normalize("NFD").replace(/\p{Diacritic}/gu, "").toLowerCase(); }
 
   // Normalización ligera (igual que cima_scrape.py) para resolver alias de fármaco
   function simpleNorm(s) {
@@ -63,12 +65,10 @@
   }
 
   function highlight(text, q) {
-    var safe = esc(text);
-    if (!q) return safe;
-    try {
-      var re = new RegExp("(" + q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig");
-      return safe.replace(re, "<mark>$1</mark>");
-    } catch (e) { return safe; }
+    if (!q) return esc(text);
+    var i = sinAcentos(text).indexOf(q);
+    if (i === -1) return esc(text);
+    return esc(text.slice(0, i)) + "<mark>" + esc(text.slice(i, i + q.length)) + "</mark>" + esc(text.slice(i + q.length));
   }
 
   function topicHaystack(t) {
@@ -78,13 +78,13 @@
     (t.tratamiento || []).forEach(function (x) { parts.push(x.farmaco, x.dosis, x.indicacion); });
     (t.ddx || []).forEach(function (g) { (g.items || []).forEach(function (i) { parts.push(i.dx, i.clave); }); });
     (t.plan || []).forEach(function (p) { parts.push(p.paso); });
-    return parts.join(" · ").toLowerCase();
+    return sinAcentos(parts.join(" · "));
   }
 
   // Para la búsqueda: devuelve un fragmento que explica por qué coincide el tema
   // (cuando la coincidencia no está en el título).
   function matchSnippet(t, q) {
-    if (!q || t.title.toLowerCase().indexOf(q) !== -1) return "";
+    if (!q || sinAcentos(t.title).indexOf(q) !== -1) return "";
     var ddxNames = [], plan = [];
     (t.ddx || []).forEach(function (g) { (g.items || []).forEach(function (i) { ddxNames.push(i.dx, i.clave); }); });
     (t.plan || []).forEach(function (p) { plan.push(p.paso, p.detalle); });
@@ -98,7 +98,7 @@
     for (var i = 0; i < checks.length; i++) {
       var label = checks[i][0], arr = checks[i][1];
       for (var j = 0; j < arr.length; j++) {
-        var s = arr[j] || "", idx = s.toLowerCase().indexOf(q);
+        var s = arr[j] || "", idx = sinAcentos(s).indexOf(q);
         if (idx !== -1) {
           var start = Math.max(0, idx - 22);
           var frag = (start > 0 ? "…" : "") + s.slice(start, idx + q.length + 28) +
@@ -112,7 +112,7 @@
 
   /* ---------- Sidebar list ---------- */
   function renderList(query) {
-    var q = (query || "").trim().toLowerCase();
+    var q = sinAcentos((query || "").trim());
     var matches = TOPICS.filter(function (t) {
       return !q || topicHaystack(t).indexOf(q) !== -1;
     });
