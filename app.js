@@ -11,6 +11,29 @@
   var bySlug = {};
   TOPICS.forEach(function (t) { bySlug[t.slug] = t; });
 
+  // Resolución de enlaces de "Temas conectados": recupera slugs desfasados o
+  // truncados (los slugs reales están limitados a ~60 caracteres).
+  var CONN_ALIAS = {
+    embolia_pulmonar: "tromboembolia_pulmonar", tep: "tromboembolia_pulmonar",
+    anafilaxia: "urticaria_y_anafilaxia",
+    edema_agudo_pulmon: "edema_agudo_de_pulmon_cardiogenico",
+    edema_agudo_de_pulmon: "edema_agudo_de_pulmon_cardiogenico"
+  };
+  function resolveSlug(slug) {
+    if (!slug) return null;
+    if (bySlug[slug]) return slug;
+    if (CONN_ALIAS[slug] && bySlug[CONN_ALIAS[slug]]) return CONN_ALIAS[slug];
+    var best = null;
+    for (var s in bySlug) {
+      var longer = s.length >= slug.length ? s : slug;
+      var shorter = s.length >= slug.length ? slug : s;
+      if (longer.indexOf(shorter) !== 0) continue;
+      var nextChar = longer.charAt(shorter.length);
+      if (nextChar === "_" || shorter.length >= 50) { if (!best || s.length > best.length) best = s; }
+    }
+    return best;
+  }
+
   var SVG = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
   var ICONS = {
     briefing: '<svg ' + SVG + '><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>',
@@ -568,13 +591,18 @@
         '<div class="crit">' + t.criterios_ingreso.map(function (c) { return '<div class="crit-item">' + esc(c) + "</div>"; }).join("") + "</div>");
     }
 
-    if ((t.conexiones || []).length) {
+    var conns = [], seenConn = {};
+    (t.conexiones || []).forEach(function (c) {
+      var rs = resolveSlug(c.slug);
+      if (!rs || rs === t.slug || seenConn[rs]) return;
+      seenConn[rs] = 1;
+      conns.push({ slug: rs, motivo: c.motivo });
+    });
+    if (conns.length) {
       html += block("conexiones", "Temas conectados", false,
-        '<div class="connections">' + t.conexiones.map(function (c) {
-          var exists = !!bySlug[c.slug];
-          return '<a class="conn" href="#/tema/' + esc(c.slug) + '"' +
-            (exists ? "" : ' style="opacity:.55;pointer-events:none"') + ">" +
-            '<div class="conn-title">' + esc(connLabel(c.slug)) + (exists ? "" : " (pendiente)") + "</div>" +
+        '<div class="connections">' + conns.map(function (c) {
+          return '<a class="conn" href="#/tema/' + esc(c.slug) + '">' +
+            '<div class="conn-title">' + esc(bySlug[c.slug].title) + "</div>" +
             '<div class="conn-why">' + esc(c.motivo || "") + "</div></a>";
         }).join("") + "</div>");
     }
