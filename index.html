@@ -2,58 +2,82 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0f766e" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d0f12" />
   <title>Manual de Urgencias in HELL</title>
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="icon" href="icons/logo.png" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header id="topbar">
-    <button id="menu-btn" aria-label="Abrir temas"></button>
-    <span id="topbar-title">Manual de Urgencias</span>
-    <span class="topbar-spacer"></span>
-    <button id="topbar-search" aria-label="Buscar"></button>
-  </header>
-  <div id="scrim"></div>
+  <div id="shell">
 
-  <div id="app">
-    <aside id="sidebar">
-      <a class="brand" href="#">
-        <img class="brand-mark" src="icons/logo.png" alt="Manual de Urgencias" />
-        <div class="brand-text">
-          <strong>Manual de Urgencias <em>in HELL</em></strong>
-          <span>Guía de consulta rápida</span>
-        </div>
-      </a>
-      <div class="search-wrap">
-        <input id="search" type="search" placeholder="Buscar tema, fármaco, síntoma…" autocomplete="off" />
+    <!-- Barra superior compacta (vistas de detalle) -->
+    <header id="topbar" hidden>
+      <button id="back-btn" class="tb-btn" aria-label="Volver"></button>
+      <div class="tb-brand">
+        <img src="icons/logo.png" alt="" />
+        <span>MANUAL DE URGENCIAS</span>
       </div>
-      <nav id="topic-list" aria-label="Temas"></nav>
-      <footer class="side-foot">
-        <span class="foot-links"><a href="#/calc" class="about-link">Calculadoras</a> · <a href="#/about" class="about-link">Acerca de</a></span>
-        <button id="theme-btn" aria-label="Cambiar tema (claro/oscuro)"></button>
-        <span id="count"></span>
-      </footer>
-    </aside>
+      <div class="tb-actions">
+        <button id="tb-fav" class="tb-btn" aria-label="Guardar en favoritos" hidden></button>
+        <button id="tb-search" class="tb-btn" aria-label="Buscar"></button>
+        <button id="tb-theme" class="tb-btn" aria-label="Cambiar tema"></button>
+      </div>
+    </header>
 
-    <main id="main">
-      <article id="topic" hidden></article>
-      <section id="empty" class="empty">
-        <div class="empty-inner">
-          <img class="empty-mark" src="icons/logo.png" alt="" />
-          <h1>Manual de Urgencias <em>in HELL</em></h1>
-          <p>Guía de consulta rápida<br /><span class="author-line">Dr. Antonio J. Arnal Meinhardt</span></p>
-          <div class="home-actions">
-            <button id="home-search" class="home-btn home-search-btn">Buscar tema, fármaco, síntoma…</button>
-            <a href="#/calc" class="home-btn">Calculadoras</a>
-            <a href="#/tema/soporte_vital_avanzado_en_adultos" class="home-btn">Soporte vital (RCP)</a>
+    <main id="view">
+      <!-- INICIO -->
+      <section id="home" class="screen">
+        <div class="hero">
+          <div class="hero-top">
+            <img class="hero-logo" src="icons/logo.png" alt="Manual de Urgencias" />
+            <button id="hero-theme" class="hero-round" aria-label="Cambiar tema"></button>
           </div>
+          <h1 class="hero-title">Manual de Urgencias <em>in HELL</em></h1>
+          <div class="ystripe"></div>
+          <div class="hero-sub">Guía de consulta rápida</div>
+          <div class="hero-author">Dr. Antonio J. Arnal Meinhardt</div>
+          <button id="hero-search" class="hero-search" type="button">
+            <span class="hs-ic"></span>
+            <span class="hs-ph">Buscar tema, fármaco o escala…</span>
+            <span class="hs-kbd">⌘K</span>
+          </button>
+        </div>
+
+        <div class="home-body">
+          <div id="home-continue"></div>
+          <div class="sec-label">Herramientas</div>
+          <div id="home-tools" class="tools"></div>
+          <div class="sec-head">
+            <span class="sec-label">Partes del manual</span>
+            <span class="sec-count" id="parts-count"></span>
+          </div>
+          <div id="home-parts" class="parts"></div>
         </div>
       </section>
+
+      <!-- DETALLE (tema / fármaco / calculadoras / acerca de) -->
+      <article id="topic" class="screen" hidden></article>
     </main>
+
+    <!-- Tab bar inferior -->
+    <nav id="tabbar" aria-label="Secciones"></nav>
+  </div>
+
+  <!-- Buscador a pantalla completa -->
+  <div id="search-panel" hidden>
+    <div class="sp-bar">
+      <span class="sp-ic"></span>
+      <input id="search" type="search" placeholder="Buscar tema, fármaco, síntoma…" autocomplete="off" />
+      <button id="search-cancel" type="button">Cancelar</button>
+    </div>
+    <div id="count" class="sp-count"></div>
+    <nav id="topic-list" aria-label="Resultados"></nav>
   </div>
 
   <div id="modal-root"></div>
