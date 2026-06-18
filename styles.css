@@ -20,7 +20,7 @@
   --teal: #0f766e;        /* tab activo */
   --tab-off: #98a1ad;
 
-  --hell-red: #e4002b;
+  --hell-red: #e60a01;  /* rojo del logo (muestreado) */
 
   /* acentos semánticos */
   --ac-teal: #0d9488;
@@ -124,7 +124,7 @@ body.show-topbar #view { padding-top: calc(var(--topbar-h) + var(--safe-top)); }
   font-size: 27px; font-weight: 800; letter-spacing: -.03em; line-height: 1.05;
   margin-top: 12px; color: #fff;
 }
-.hero-title em { font-style: italic; color: #ff5a6e; }
+.hero-title em { font-style: italic; color: var(--hell-red); }
 .ystripe { height: 5px; width: 54px; border-radius: 3px; background: var(--yellow); margin-top: 9px; }
 .hero-sub { font-size: 13px; color: #aeb4bd; margin-top: 9px; }
 .hero-author { font-size: 11.5px; color: #6b7480; margin-top: 1px; }
