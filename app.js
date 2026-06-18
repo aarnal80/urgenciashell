@@ -135,8 +135,11 @@
     bars: '<svg ' + SVG + '><line x1="6" y1="20" x2="6" y2="15"/><line x1="12" y1="20" x2="12" y2="9"/><line x1="18" y1="20" x2="18" y2="4"/></svg>',
     farmacos: '<svg ' + SVG + '><path d="M10.5 20.5 20.5 10.5a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/></svg>',
     apps: '<svg ' + SVG + '><rect x="3" y="3" width="7" height="7" rx="1.6"/><rect x="14" y="3" width="7" height="7" rx="1.6"/><rect x="3" y="14" width="7" height="7" rx="1.6"/><rect x="14" y="14" width="7" height="7" rx="1.6"/></svg>',
+    droplet: '<svg ' + SVG + '><path d="M12 4.74 7.04 9.7a7 7 0 1 0 9.92 0z"/></svg>',
+    syringe: '<svg ' + SVG + '><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/><path d="m14 4 6 6"/></svg>',
     star: '<svg ' + SVG + '><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
-    starFill: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
+    starFill: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
+    skull: '<svg ' + SVG + '><circle cx="9" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="1.2" fill="currentColor" stroke="none"/><path d="M8 20v1.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V20"/><path d="M16 20a2 2 0 0 0 1.6-3.2A9 9 0 1 0 6.4 16.8 2 2 0 0 0 8 20"/><path d="M10.5 16.5 12 14l1.5 2.5"/></svg>'
   };
 
   /* ---------- DOM ---------- */
@@ -857,7 +860,534 @@
       return '<div class="calc-score"><span class="calc-num">' + esc(o.num) + '</span><span class="calc-unit">' + esc(o.unit) + "</span></div>";
     }).join("") + "</div>";
   }
+  /* --- Interpretación de gasometría (algoritmo de 5 pasos) --- */
+  function gNum(s, k) { var v = parseFloat(s.num[k]); return isNaN(v) ? null : v; }
+  function gasoStep(n, lbl, val, concl, sev) {
+    return '<div class="gaso-step gaso-' + sev + '">' +
+      '<span class="gaso-n">' + n + "</span>" +
+      '<div class="gaso-bd"><div class="gaso-lbl">' + esc(lbl) + "</div>" +
+      (val ? '<div class="gaso-val">' + esc(val) + "</div>" : "") +
+      '<div class="gaso-concl">' + esc(concl) + "</div></div></div>";
+  }
+  function gasoResult(s) {
+    var ph = gNum(s, "ph"), pco2 = gNum(s, "pco2"), hco3 = gNum(s, "hco3"), eb = gNum(s, "eb");
+    var na = gNum(s, "na"), k = gNum(s, "k"), cl = gNum(s, "cl"), alb = gNum(s, "alb"), lact = gNum(s, "lact");
+    if (ph == null || pco2 == null || hco3 == null || eb == null)
+      return appWarn("Introduce al menos pH, pCO₂, HCO₃⁻ y exceso de base (EB).");
+
+    var dx = [], steps = "";
+    var phAbn = (ph < 7.35 || ph > 7.45);
+
+    // Paso 1 — pH
+    var s1, sev1;
+    if (ph < 7.35) { s1 = "Acidemia"; sev1 = "bad"; }
+    else if (ph > 7.45) { s1 = "Alcalemia"; sev1 = "bad"; }
+    else { s1 = "pH normal"; sev1 = "ok"; }
+    steps += gasoStep(1, "pH", "pH " + fmtNum(ph) + "  (normal 7.35–7.45)", s1, sev1);
+
+    // Paso 2 — Exceso de base (componente metabólico)
+    var metab = null, expPco2 = null, s2, sev2;
+    if (eb > 2) { metab = "Alcalosis metabólica"; expPco2 = 0.7 * hco3 + 21; s2 = "Alcalosis metabólica"; sev2 = "bad"; }
+    else if (eb < -2) { metab = "Acidosis metabólica"; expPco2 = 1.5 * hco3 + 8; s2 = "Acidosis metabólica"; sev2 = "bad"; }
+    else { s2 = "Componente metabólico normal"; sev2 = "ok"; }
+    steps += gasoStep(2, "Exceso de base", "EB " + fmtNum(eb) + " mmol/L  (normal ±2)", s2, sev2);
+    if (metab) dx.push(metab);
+
+    // Paso 3 — Compensación / componente respiratorio
+    var s3, sev3, respDx = false;
+    if (metab) {
+      var lo = expPco2 - 2, hi = expPco2 + 2;
+      var det3 = "pCO₂ esperado " + fmtNum(expPco2) + " ±2 mmHg · medido " + fmtNum(pco2);
+      if (pco2 > hi) { s3 = "Acidosis respiratoria asociada"; sev3 = "bad"; dx.push("Acidosis respiratoria"); respDx = true; }
+      else if (pco2 < lo) { s3 = "Alcalosis respiratoria asociada"; sev3 = "bad"; dx.push("Alcalosis respiratoria"); respDx = true; }
+      else { s3 = "Compensación respiratoria adecuada"; sev3 = "ok"; }
+      steps += gasoStep(3, "Compensación", det3, s3, sev3);
+    } else {
+      var det3b = "pCO₂ " + fmtNum(pco2) + " mmHg  (normal 35–45)";
+      if (pco2 > 45) { s3 = "Acidosis respiratoria"; sev3 = "bad"; dx.push("Acidosis respiratoria"); respDx = true; }
+      else if (pco2 < 35) { s3 = "Alcalosis respiratoria"; sev3 = "bad"; dx.push("Alcalosis respiratoria"); respDx = true; }
+      else { s3 = "Componente respiratorio normal"; sev3 = "ok"; }
+      if (pco2 > 45 || pco2 < 35) det3b += " · EB esperado si crónica " + fmtNum((pco2 - 40) * 0.4) + " ±2";
+      steps += gasoStep(3, "Compensación", det3b, s3, sev3);
+    }
+
+    // Paso 4 — Anión gap (rango normal mayor si se incluye K⁺)
+    var ag = null, agUse = null, agElevated = false, agLow = false;
+    if (na != null && cl != null) {
+      var kk = (k != null) ? k : 0;
+      ag = (na + kk) - (cl + hco3); agUse = ag;
+      var det4 = (k != null ? "AG = (Na+K) − (Cl+HCO₃) = " : "AG = Na − (Cl+HCO₃) = ") + fmtNum(ag);
+      if (alb != null) { agUse = ag + (4 - alb) * 2.5; det4 += " · corregido " + fmtNum(agUse); }
+      var agHi = (k != null) ? 16 : 12, agLo = (k != null) ? 12 : 8;
+      det4 += " mEq/L  (normal " + agLo + "–" + agHi + ")";
+      var s4, sev4;
+      if (agUse > agHi) { agElevated = true; s4 = "Anión gap elevado — ácidos no medidos (MUDPILES)"; sev4 = "bad"; }
+      else if (agUse < agLo) { agLow = true; s4 = "Anión gap disminuido — hipoalbuminemia, mieloma, hipertrigliceridemia"; sev4 = "warn"; }
+      else { s4 = "Anión gap normal"; sev4 = "ok"; }
+      steps += gasoStep(4, "Anión gap", det4, s4, sev4);
+      if (agElevated) {
+        var iAcid = dx.indexOf("Acidosis metabólica");
+        if (iAcid >= 0) dx[iAcid] = "Acidosis metabólica de AG elevado";
+        else dx.push("Acidosis metabólica de AG elevado");
+      }
+
+      // Delta ratio (sólo si AG elevado y HCO₃ < 24)
+      if (agElevated && hco3 < 24) {
+        var dr = (agUse - agHi) / (24 - hco3), sdr, sevdr;
+        if (dr < 0.5) { sdr = "Sugiere acidosis hiperclorémica concomitante (AG normal)"; sevdr = "warn"; }
+        else if (dr <= 1.0) { sdr = "Acidosis metabólica de AG elevado pura"; sevdr = "bad"; }
+        else if (dr <= 1.6) { sdr = "Compatible con acidosis láctica"; sevdr = "bad"; }
+        else { sdr = "Sugiere alcalosis metabólica coexistente"; sevdr = "warn"; }
+        steps += gasoStep("Δ", "Delta gap", "Δ ratio = (AG−" + agHi + ")/(24−HCO₃) = " + fmtNum(dr), sdr, sevdr);
+      }
+    }
+
+    var hasDist = phAbn || !!metab || respDx || agElevated || agLow;
+
+    // Paso 5 — Índice Cl/Na (clave de apoyo; sólo se añade a la síntesis si aporta)
+    if (na != null && cl != null) {
+      var idx = cl / na, s5, sev5;
+      if (idx < 0.75) {
+        s5 = "Bajo — sugiere alcalosis metabólica (VPP 88%)"; sev5 = "warn";
+        if (hasDist && !agElevated && dx.indexOf("Alcalosis metabólica") === -1) dx.push("Alcalosis metabólica oculta (Cl/Na)");
+      } else if (idx > 0.79) {
+        s5 = "Alto — acidosis metabólica hiperclorémica (VPP 81%)"; sev5 = "warn";
+        if (hasDist) dx.push("Acidosis hiperclorémica (Cl/Na)");
+      } else { s5 = "Índice Cl/Na normal"; sev5 = "ok"; }
+      steps += gasoStep(5, "Índice Cl/Na", "Cl/Na = " + fmtNum(idx) + "  (normal 0.75–0.79)", s5, sev5);
+    }
+
+    // Síntesis
+    var txt = dx.length ? dx.join("  +  ") : "Equilibrio ácido-base normal";
+    if (lact != null) txt += "  ·  EB aláctico = " + fmtNum(eb + lact) + " mmol/L";
+    var bsev = dx.length ? (dx.length > 1 ? "sev-warn" : "sev-danger") : "sev-ok";
+    var banner = calcBanner(bsev, "Interpretación", null, txt);
+
+    var note = '<div class="gaso-note">' +
+      '<p>El método del exceso de base no distingue por sí solo una compensación crónica ' +
+      '(p. ej. EPOC) de un trastorno metabólico primario añadido. Interpreta siempre con el contexto clínico.</p>' +
+      '<p class="gaso-ref">Fuente: Toquiantzi Arzola MA, et al. ' +
+      '<em>Interpretación gasométrica avanzada en el paciente crítico</em>. ' +
+      'Med Crít. 2022;36(4):235-243.</p></div>';
+
+    return '<div class="gaso">' + banner + '<div class="gaso-steps">' + steps + "</div>" + note + "</div>";
+  }
+
+  /* --- Secuencia Rápida de Intubación (dosis por peso) --- */
+  var RSI_PREMED = [
+    { n: "Fentanilo", conc: 50, cu: "mcg", du: "mcg", min: 1, max: 3 },
+    { n: "Lidocaína", conc: 20, cu: "mg", du: "mg", min: 1.5, max: null }
+  ];
+  var RSI_INDUCT = [
+    { n: "Propofol", conc: 10, cu: "mg", du: "mg", min: 1, max: 2 },
+    { n: "Etomidato", conc: 2, cu: "mg", du: "mg", min: 0.2, max: 0.3 },
+    { n: "Ketamina", conc: 50, cu: "mg", du: "mg", min: 1, max: 2 },
+    { n: "Midazolam", conc: 5, cu: "mg", du: "mg", min: 0.1, max: 0.3 }
+  ];
+  var RSI_PARAL = [
+    { n: "Rocuronio", conc: 10, cu: "mg", du: "mg", min: 1, max: 1.2 },
+    { n: "Succinilcolina", conc: 50, cu: "mg", du: "mg", min: 1, max: 1.5 }
+  ];
+  function rsiDrug(peso, d) {
+    var dmin = peso * d.min, dmax = (d.max != null) ? peso * d.max : null;
+    var dose = (dmax != null) ? fmtNum(dmin) + "–" + fmtNum(dmax) : fmtNum(dmin);
+    var ml = (dmax != null) ? fmtNum(dmin / d.conc) + "–" + fmtNum(dmax / d.conc) : fmtNum(dmin / d.conc);
+    return '<div class="rsi-drug"><div class="rsi-dn">' + esc(d.n) +
+      ' <span>(' + d.conc + " " + esc(d.cu) + "/ml)</span></div>" +
+      '<div class="rsi-dd"><strong>' + dose + " " + esc(d.du) + "</strong> · " + ml + " ml</div></div>";
+  }
+  function rsiP(n, title, text, extra) {
+    return '<div class="rsi-p"><div class="rsi-ph"><span class="rsi-n">' + n + "</span>" +
+      '<span class="rsi-pt">' + esc(title) + "</span></div>" +
+      (text ? '<div class="rsi-tx">' + esc(text) + "</div>" : "") + (extra || "") + "</div>";
+  }
+  function rsiResult(s) {
+    var peso = gNum(s, "peso");
+    if (!(peso > 0)) return appWarn("Introduce el peso del paciente.");
+    var drugs = function (arr) { return arr.map(function (d) { return rsiDrug(peso, d); }).join(""); };
+    var p4 = '<div class="rsi-sub">Inductores</div>' + drugs(RSI_INDUCT) +
+      '<div class="rsi-sub">Paralizantes</div>' + drugs(RSI_PARAL);
+    var html = '<div class="rsi">' +
+      rsiP(1, "Preparación", "Monitorización, material listo (tubos, laringoscopio, aspirador) y fármacos cargados.") +
+      rsiP(2, "Preoxigenación", "FiO₂ 100% durante 3–5 minutos con mascarilla reservorio o VMNI.") +
+      rsiP(3, "Premedicación", "Atenuar la respuesta simpática.", drugs(RSI_PREMED)) +
+      rsiP(4, "Parálisis con inducción", "Administrar el inductor seguido inmediatamente del paralizante.", p4) +
+      rsiP(5, "Posicionamiento", "Alineación de los ejes oral, faríngeo y laríngeo (posición de olfateo).") +
+      rsiP(6, "Progresión del tubo", "Laringoscopia, visualización de cuerdas vocales e inserción del tubo.") +
+      rsiP(7, "Post-intubación", "Comprobación (capnografía, auscultación), fijación del tubo, conexión al ventilador e inicio de sedoanalgesia.") +
+      "</div>";
+    return html;
+  }
+
+  /* --- Bombas de perfusión (dosis → ml/h) --- */
+  var PERF = [
+    { n: "Noradrenalina", mg: 10, vol: 250, dose: 0.1, prep: "10 mg (2 amp de 5 mg/10 ml) en 250 ml de SG 5%" },
+    { n: "Dopamina", mg: 200, vol: 250, dose: 5, prep: "200 mg (1 amp de 200 mg/5 ml) en 250 ml de SG 5%" },
+    { n: "Dobutamina", mg: 250, vol: 250, dose: 5, prep: "250 mg (1 vial de 250 mg/20 ml) en 250 ml de SG 5%" }
+  ];
+  function perfDrug(s) { return PERF[(s.sel.drug == null) ? 0 : s.sel.drug]; }
+  function perfResult(s) {
+    var d = perfDrug(s);
+    var peso = gNum(s, "peso");
+    var mg = gNum(s, "mg"); if (mg == null) mg = d.mg;
+    var vol = gNum(s, "vol"); if (vol == null) vol = d.vol;
+    var dose = gNum(s, "dose"); if (dose == null) dose = d.dose;
+    if (!(peso > 0)) return appWarn("Introduce el peso del paciente.");
+    if (!(mg > 0) || !(vol > 0)) return appWarn("Revisa la preparación (mg y volumen).");
+    var conc = mg * 1000 / vol;            // mcg/ml
+    var rate = dose * peso * 60 / conc;    // ml/h
+    var rows = [
+      ["Mezcla", fmtNum(mg) + " mg en " + fmtNum(vol) + " ml de SG 5%"],
+      ["Concentración", fmtNum(conc) + " mcg/ml"],
+      ["Dosis", fmtNum(dose) + " mcg/kg/min · " + fmtNum(peso) + " kg"]
+    ];
+    return '<div class="perf">' +
+      appResult([{ num: fmtNum(rate), unit: "ml/h" }]) +
+      '<div class="perf-info">' + rows.map(function (r) {
+        return '<div class="perf-row"><span>' + esc(r[0]) + "</span><strong>" + esc(r[1]) + "</strong></div>";
+      }).join("") + "</div>" +
+      '<div class="perf-hint">Preparación habitual: ' + esc(d.prep) + "</div></div>";
+  }
+
+  /* ============================================================
+     Toxicología (multi-herramienta)
+     ============================================================ */
+  function tN(s, k) { var v = parseFloat(s.num[k]); return isNaN(v) ? null : v; }
+  function fmt1(x) { return (Math.round(x * 10) / 10).toString(); }
+  function toxRows(rows) {
+    return '<div class="perf-info">' + rows.map(function (r) {
+      return '<div class="perf-row"><span>' + esc(r[0]) + "</span><strong>" + esc(r[1]) + "</strong></div>";
+    }).join("") + "</div>";
+  }
+  function toxSub(t) { return '<div class="tox-sub">' + esc(t) + "</div>"; }
+  function toxNote(html) { return '<div class="gaso-note"><p>' + html + "</p></div>"; }
+
+  var TOX_TOOLS = [
+    { label: "Nomograma de paracetamol" },
+    { label: "NAC i.v. por peso" },
+    { label: "Antídotos (dosis)" },
+    { label: "Gap osmolar / aniónico" },
+    { label: "Salicilatos · litio · etanol" }
+  ];
+  var TOX_ANTI = [
+    "Naloxona", "Flumazenilo", "Fab antidigoxina", "Fomepizol",
+    "Hidroxocobalamina", "Glucagón", "Emulsión lipídica 20%",
+    "Atropina", "Pralidoxima (2-PAM)"
+  ];
+
+  function toxFields(s) {
+    var tool = s.sel.tool || 0;
+    var f = [{ tipo: "select", grp: "tool", label: "Herramienta", opciones: TOX_TOOLS, def: 0 }];
+    if (tool === 0) {
+      f.push({ tipo: "opt", grp: "punit", label: "Unidades del nivel", opciones: [{ label: "µg/mL (mg/L)" }, { label: "µmol/L" }], def: 0 });
+      f.push({ k: "pt", tipo: "num", label: "Horas desde la ingesta", unidad: "h", ph: "4" });
+      f.push({ k: "plvl", tipo: "num", label: "Paracetamol en sangre", unidad: ((s.sel.punit || 0) === 1 ? "µmol/L" : "µg/mL"), ph: ((s.sel.punit || 0) === 1 ? "1000" : "150") });
+      f.push({ tipo: "opt", grp: "pline", label: "Línea de tratamiento", opciones: [{ label: "150 · estándar" }, { label: "100 · alto riesgo" }], def: 0 });
+    } else if (tool === 1) {
+      f.push({ k: "nacw", tipo: "num", label: "Peso del paciente", unidad: "kg", ph: "70" });
+    } else if (tool === 2) {
+      f.push({ tipo: "select", grp: "anti", label: "Antídoto", opciones: TOX_ANTI.map(function (x) { return { label: x }; }), def: 0 });
+      var a = s.sel.anti || 0;
+      if (a === 2) {
+        f.push({ tipo: "opt", grp: "fabmode", label: "Calcular por", opciones: [{ label: "Digoxinemia" }, { label: "Dosis ingerida" }, { label: "Empírico" }], def: 0 });
+        var m = s.sel.fabmode || 0;
+        if (m === 0) { f.push({ k: "diglvl", tipo: "num", label: "Digoxinemia", unidad: "ng/mL", ph: "4" }); f.push({ k: "digw", tipo: "num", label: "Peso", unidad: "kg", ph: "70" }); }
+        else if (m === 1) { f.push({ k: "digdose", tipo: "num", label: "Dosis ingerida", unidad: "mg", ph: "5" }); }
+      } else if (a === 3 || a === 5 || a === 6 || a === 8) {
+        f.push({ k: "aw", tipo: "num", label: "Peso del paciente", unidad: "kg", ph: "70" });
+      }
+    } else if (tool === 3) {
+      f.push({ k: "na", tipo: "num", label: "Na⁺", unidad: "mEq/L", ph: "140" });
+      f.push({ k: "glu", tipo: "num", label: "Glucosa", unidad: "mg/dL", ph: "90" });
+      f.push({ k: "urea", tipo: "num", label: "Urea", unidad: "mg/dL", ph: "30" });
+      f.push({ k: "osm", tipo: "num", label: "Osmolalidad medida", unidad: "mOsm/kg", ph: "290" });
+      f.push({ k: "etoh", tipo: "num", label: "Etanol (opcional)", unidad: "mg/dL", ph: "0" });
+      f.push({ k: "cl", tipo: "num", label: "Cl⁻ (opcional)", unidad: "mEq/L", ph: "104" });
+      f.push({ k: "hco3", tipo: "num", label: "HCO₃⁻ (opcional)", unidad: "mEq/L", ph: "24" });
+      f.push({ k: "alb", tipo: "num", label: "Albúmina (opcional)", unidad: "g/dL", ph: "4" });
+    } else {
+      f.push({ tipo: "opt", grp: "subs", label: "Tóxico", opciones: [{ label: "Salicilatos" }, { label: "Litio" }, { label: "Etanol" }], def: 0 });
+      var sub = s.sel.subs || 0;
+      f.push({ k: "lvl", tipo: "num", label: "Nivel sérico", unidad: (sub === 1 ? "mEq/L" : "mg/dL"), ph: (sub === 1 ? "1.0" : (sub === 2 ? "100" : "30")) });
+    }
+    return f;
+  }
+
+  function toxResult(s) {
+    var tool = s.sel.tool || 0;
+    if (tool === 0) return paraResult(s);
+    if (tool === 1) return nacResult(s);
+    if (tool === 2) return antiResult(s);
+    if (tool === 3) return gapResult(s);
+    return levelResult(s);
+  }
+
+  /* --- Nomograma de Rumack-Matthew (paracetamol) --- */
+  function paraGraph(t, lvl, base, above) {
+    var L = 40, Rr = 308, T = 12, Bb = 196, pw = Rr - L, ph = Bb - T;
+    var lmax = 3, span = lmax - (Math.log(4) / Math.LN10);
+    function X(tt) { return (L + (tt - 4) / 20 * pw).toFixed(1); }
+    function Yv(v) { var c = Math.max(4, Math.min(1000, v)); return (T + (lmax - Math.log(c) / Math.LN10) / span * ph).toFixed(1); }
+    var g = '<text x="' + (L - 4) + '" y="' + (T - 2) + '" class="txg-lab" text-anchor="end">µg/mL</text>';
+    [10, 30, 100, 300, 1000].forEach(function (v) {
+      var y = Yv(v);
+      g += '<line x1="' + L + '" y1="' + y + '" x2="' + Rr + '" y2="' + y + '" class="txg-grid"/>';
+      g += '<text x="' + (L - 4) + '" y="' + (parseFloat(y) + 3) + '" class="txg-lab" text-anchor="end">' + v + "</text>";
+    });
+    [4, 8, 12, 16, 20, 24].forEach(function (tt) {
+      var x = X(tt);
+      g += '<line x1="' + x + '" y1="' + T + '" x2="' + x + '" y2="' + Bb + '" class="txg-grid"/>';
+      g += '<text x="' + x + '" y="' + (Bb + 13) + '" class="txg-lab" text-anchor="middle">' + tt + "</text>";
+    });
+    g += '<polyline points="' + X(4) + "," + Yv(base) + " " + X(24) + "," + Yv(base / 32) + '" class="txg-line"/>';
+    g += '<text x="' + (parseFloat(X(4)) + 5) + '" y="' + (parseFloat(Yv(base)) - 5) + '" class="txg-line-lab">línea ' + base + "</text>";
+    if (t != null && lvl != null && t >= 4 && t <= 24) {
+      g += '<circle cx="' + X(t) + '" cy="' + Yv(lvl) + '" r="5" class="' + (above ? "txg-pt-hi" : "txg-pt-lo") + '"/>';
+    }
+    g += '<text x="' + (L + pw / 2) + '" y="' + (Bb + 24) + '" class="txg-ax" text-anchor="middle">horas desde la ingesta</text>';
+    return '<div class="tox-graph"><svg viewBox="0 0 320 224" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nomograma de Rumack-Matthew">' + g + "</svg></div>";
+  }
+  function paraResult(s) {
+    var t = tN(s, "pt"), raw = tN(s, "plvl");
+    var unit = s.sel.punit || 0, base = (s.sel.pline || 0) === 1 ? 100 : 150;
+    if (t == null || raw == null)
+      return appWarn("Introduce las horas desde la ingesta y el nivel de paracetamol.");
+    var lvl = unit === 1 ? raw / 6.62 : raw;        // a µg/mL
+    var thr = base * Math.pow(2, -(t - 4) / 4);
+    var above = lvl >= thr, banner, foot = "";
+    if (t < 4) {
+      banner = calcBanner("sev-warn", "Aún no interpretable", null, "El nivel antes de las 4 h no es valorable. Repite la determinación a las 4 h de la ingesta.");
+    } else if (t > 24) {
+      banner = calcBanner("sev-warn", "Fuera del nomograma", null, "Pasadas 24 h el nomograma no es válido. Valora tratamiento empírico según clínica, transaminasas, INR y paracetamol detectable.");
+    } else {
+      banner = above
+        ? calcBanner("sev-danger", "Por encima de la línea — iniciar NAC", null, "El nivel está sobre la línea de tratamiento de " + base + ": indicada N-acetilcisteína.")
+        : calcBanner("sev-ok", "Por debajo de la línea — NAC no indicada", null, "El nivel queda bajo la línea de " + base + ". Reevalúa si la hora de ingesta es incierta o hay clínica/factores de riesgo.");
+    }
+    var rows = [["Nivel", fmt1(lvl) + " µg/mL" + (unit === 1 ? " (" + fmt1(raw) + " µmol/L)" : "")]];
+    if (t >= 4 && t <= 24) {
+      rows.push(["Umbral a " + fmt1(t) + " h (línea " + base + ")", fmt1(thr) + " µg/mL"]);
+      rows.push(["Margen sobre el umbral", (lvl - thr >= 0 ? "+" : "") + fmt1(lvl - thr) + " µg/mL"]);
+    }
+    foot = paraGraph(t, lvl, base, above);
+    return '<div class="tox">' + banner + toxRows(rows) + foot +
+      toxNote("Válido sólo para <strong>ingesta única aguda con hora conocida</strong>, entre las 4 y 24 h. No aplicable a ingesta escalonada/crónica ni a formulaciones de liberación prolongada. Ante duda con &gt;8 h de evolución, inicia NAC sin esperar al nivel. La línea 150 (Rumack-Matthew) es la de tratamiento estándar; la línea 100 la usan algunos protocolos en pacientes de alto riesgo.") +
+      '<div class="tox-src">Rumack BH, Matthew H. Pediatrics 1975 · línea de tratamiento.</div></div>';
+  }
+
+  /* --- N-acetilcisteína i.v. por peso (pauta de 21 h, 3 bolsas) --- */
+  function nacBag(n, name, mg, dil, dur, rate) {
+    return '<div class="tox-bag"><div class="tox-bag-h"><span class="tox-bag-n">' + n + "</span>" +
+      '<span class="tox-bag-t">' + esc(name) + "</span>" +
+      '<span class="tox-bag-r">' + rate + " mL/h</span></div>" +
+      '<div class="tox-bag-d"><strong>' + fmt1(mg) + " mg</strong> de NAC en " + dil + " mL de SG 5% · " + dur + "</div></div>";
+  }
+  function nacResult(s) {
+    var w = tN(s, "nacw");
+    if (!(w > 0)) return appWarn("Introduce el peso del paciente.");
+    var capped = w > 110, wd = Math.min(w, 110);
+    var total = 300 * wd;
+    var html = '<div class="tox">' +
+      calcBanner("sev-ok", "N-acetilcisteína i.v.", null, "Pauta de 21 h · dosis total " + fmt1(total) + " mg (300 mg/kg)." + (capped ? " Dosis topada a 110 kg." : "")) +
+      nacBag(1, "Carga", 150 * wd, 200, "1 h", 200) +
+      nacBag(2, "Segunda", 50 * wd, 500, "4 h", 125) +
+      nacBag(3, "Tercera", 100 * wd, 1000, "16 h", "62.5") +
+      toxNote("Las bolsas van <strong>consecutivas, sin interrupción</strong>. Reduce el volumen de diluyente en pacientes de bajo peso para evitar hiponatremia y sobrecarga. Vial de NAC habitual 200 mg/mL (5 g/25 mL). Mantén la 3.ª bolsa más allá de las 21 h si persisten transaminasas en ascenso, INR alterado o paracetamol detectable.") +
+      '<div class="tox-src">Régimen de Prescott (SNAP/21 h): 150 + 50 + 100 mg/kg.</div></div>';
+    return html;
+  }
+
+  /* --- Dosificador de antídotos --- */
+  function antiResult(s) {
+    var a = s.sel.anti || 0, w = tN(s, "aw");
+    if (a === 2) return fabResult(s);
+    var name = TOX_ANTI[a], rows, hint = "", para = "", warn = "", sev = "sev-ok";
+    if (a === 0) {
+      para = "Depresión por opioides";
+      rows = [["Bolo inicial", "0.04–0.4 mg IV, titular a ventilación"],
+        ["Coma / parada", "0.4–2 mg IV, repetir c/2–3 min"],
+        ["Techo", "hasta ~10 mg (replantear el diagnóstico)"],
+        ["Perfusión", "⅔ de la dosis eficaz por hora"],
+        ["Vías", "IV · IM · SC · intranasal"]];
+      hint = "Vida media corta (30–90 min): vigila la resedación, sobre todo con opioides de acción prolongada (metadona, opioides retard).";
+    } else if (a === 1) {
+      para = "Reversión de benzodiacepinas";
+      rows = [["Bolo", "0.2 mg IV en 15–30 s"],
+        ["Repetir", "0.1–0.2 mg c/1 min hasta respuesta o 1 mg"],
+        ["Perfusión", "0.1–0.4 mg/h si resedación"]];
+      warn = calcBanner("sev-danger", "Precaución", null, "Contraindicado si dependencia a BZD, coingesta de proconvulsivantes (antidepresivos tricíclicos) o epilepsia: riesgo de convulsiones.");
+    } else if (a === 3) {
+      para = "Metanol / etilenglicol";
+      rows = [["Carga", "15 mg/kg IV en 30 min" + (w > 0 ? " = " + fmt1(15 * w) + " mg" : "")],
+        ["Mantenimiento", "10 mg/kg c/12 h ×4 dosis" + (w > 0 ? " = " + fmt1(10 * w) + " mg" : "")],
+        ["Después", "15 mg/kg c/12 h" + (w > 0 ? " = " + fmt1(15 * w) + " mg" : "")],
+        ["En hemodiálisis", "dosificar c/4 h o en perfusión"]];
+      hint = "Diluir en ≥100 mL de SF/SG 5% e infundir en 30 min. Mantén hasta metanol/etilenglicol <20 mg/dL, pH normal y asintomático.";
+    } else if (a === 4) {
+      para = "Cianuro / inhalación de humo";
+      rows = [["Adulto", "5 g IV en 15 min"],
+        ["Repetir", "5 g si precisa (máx 10 g)"]];
+      hint = "Tiñe de rojo piel y orina e interfiere con la cooximetría y varias analíticas. Reconstituir con 200 mL de SF.";
+    } else if (a === 5) {
+      para = "Betabloqueantes / antagonistas del calcio";
+      rows = [["Bolo", "3–10 mg IV (50–150 µg/kg)" + (w > 0 ? " = " + fmt1(0.05 * w) + "–" + fmt1(0.15 * w) + " mg" : "")],
+        ["Perfusión", "2–5 mg/h, titular (hasta 10 mg/h)"]];
+      hint = "Náusea y vómito muy frecuentes: protege la vía aérea. Efecto inotrópico/cronotrópico independiente del receptor β.";
+    } else if (a === 6) {
+      para = "Anestésicos locales y cardiotóxicos lipófilos";
+      rows = [["Bolo", "1.5 mL/kg IV en 2–3 min" + (w > 0 ? " = " + fmt1(1.5 * w) + " mL" : "")],
+        ["Perfusión", "0.25 mL/kg/min ×30–60 min" + (w > 0 ? " = " + fmt1(15 * w) + " mL/h" : "")],
+        ["Si inestable", "repetir bolo ×1–2 y subir a 0.5 mL/kg/min"],
+        ["Máximo", "≈10–12 mL/kg" + (w > 0 ? " = " + fmt1(12 * w) + " mL" : "")]];
+      hint = "Usa el peso magro. En parada por anestésico local, mantén RCP prolongada mientras infundes.";
+    } else if (a === 7) {
+      para = "Síndrome colinérgico (organofosforados/carbamatos)";
+      rows = [["Dosis", "2–3 mg IV"],
+        ["Escalada", "doblar la dosis c/5 min hasta atropinización"],
+        ["Objetivo", "campos pulmonares secos, FC >80, TAS >80"],
+        ["Perfusión", "10–20% de la dosis total de atropinización por hora"]];
+      hint = "El objetivo es secar las secreciones bronquiales (no la FC ni la midriasis). Pueden precisarse dosis muy altas.";
+    } else {
+      para = "Organofosforados (reactivador de la colinesterasa)";
+      rows = [["Carga", "30 mg/kg IV en 15–30 min (1–2 g)" + (w > 0 ? " = " + fmt1(30 * w / 1000) + " g" : "")],
+        ["Perfusión", "8 mg/kg/h" + (w > 0 ? " = " + fmt1(8 * w) + " mg/h" : "")],
+        ["Alternativa", "1 g c/4–6 h"]];
+      hint = "Administra siempre junto con atropina y lo antes posible (antes del «envejecimiento» de la enzima). No sustituye a la atropina.";
+    }
+    return '<div class="tox">' + calcBanner(sev, name, null, para) + warn + toxRows(rows) +
+      (hint ? '<div class="perf-hint">' + hint + "</div>" : "") + "</div>";
+  }
+  function fabResult(s) {
+    var mode = s.sel.fabmode || 0, rows, score, banner;
+    if (mode === 0) {
+      var lvl = tN(s, "diglvl"), w = tN(s, "digw");
+      if (lvl == null || w == null) return appWarn("Introduce la digoxinemia y el peso.");
+      var vials = lvl * w / 100, v = Math.ceil(vials);
+      banner = calcBanner("sev-danger", "Fab antidigoxina", v + " viales", "≈ " + fmt1(vials) + " viales → redondea al alza.");
+      rows = [["Fórmula", "(digoxinemia × peso) / 100"], ["Cálculo", fmt1(lvl) + " × " + fmt1(w) + " / 100 = " + fmt1(vials)]];
+    } else if (mode === 1) {
+      var dose = tN(s, "digdose");
+      if (dose == null) return appWarn("Introduce la dosis ingerida.");
+      var vials2 = dose * 0.8 / 0.5, v2 = Math.ceil(vials2);
+      banner = calcBanner("sev-danger", "Fab antidigoxina", v2 + " viales", "≈ " + fmt1(vials2) + " viales → redondea al alza.");
+      rows = [["Fórmula", "dosis (mg) × 0.8 / 0.5"], ["Cálculo", fmt1(dose) + " × 0.8 / 0.5 = " + fmt1(vials2)]];
+    } else {
+      banner = calcBanner("sev-warn", "Fab antidigoxina — empírico", null, "Cuando no hay nivel ni dosis fiables.");
+      rows = [["Intoxicación aguda", "10–20 viales"], ["Intoxicación crónica", "3–6 viales (adulto)"], ["Parada cardiaca", "empezar por 20 viales"]];
+    }
+    return '<div class="tox">' + banner + toxRows(rows) +
+      '<div class="perf-hint">1 vial (≈40 mg) neutraliza 0.5 mg de digoxina. Indicado ante arritmias graves, K⁺ &gt;5 mEq/L, inestabilidad hemodinámica o ingesta masiva.</div></div>';
+  }
+
+  /* --- Gap osmolar + anión gap corregido + delta-delta --- */
+  function gapResult(s) {
+    var na = tN(s, "na"), glu = tN(s, "glu"), urea = tN(s, "urea"), osm = tN(s, "osm");
+    var etoh = tN(s, "etoh"), cl = tN(s, "cl"), hco3 = tN(s, "hco3"), alb = tN(s, "alb");
+    if (na == null) return appWarn("Introduce al menos el Na⁺.");
+    var body = "", dx = [];
+    if (glu != null && urea != null && osm != null) {
+      var calc = 2 * na + glu / 18 + urea / 6;
+      var gap = osm - calc;
+      var orows = [["Osm calculada", "2·Na + glu/18 + urea/6 = " + fmt1(calc)],
+        ["Gap osmolar", fmt1(gap) + " mOsm/kg (normal <10)"]];
+      var eff = gap;
+      if (etoh != null && etoh > 0) {
+        eff = gap - etoh / 4.6;
+        orows.push(["Etanol", "−" + fmt1(etoh / 4.6) + " mOsm (etanol/4.6)"]);
+        orows.push(["Gap residual", fmt1(eff) + " mOsm/kg"]);
+      }
+      body += toxSub("Gap osmolar") + toxRows(orows);
+      if (eff > 10) {
+        dx.push("Gap osmolar elevado");
+        body += toxRows([["Metanol estimado", "≤ " + fmt1(eff * 3.2) + " mg/dL"], ["Etilenglicol estimado", "≤ " + fmt1(eff * 6.2) + " mg/dL"]]);
+      }
+    }
+    if (cl != null && hco3 != null) {
+      var ag = na - (cl + hco3);
+      var agc = (alb != null) ? ag + 2.5 * (4 - alb) : ag;
+      var arows = [["Anión gap", "Na − (Cl + HCO₃) = " + fmt1(ag)]];
+      if (alb != null) arows.push(["AG corregido", fmt1(agc) + " (por albúmina " + fmt1(alb) + ")"]);
+      arows.push(["Referencia", "normal 8–12 mEq/L"]);
+      body += toxSub("Anión gap") + toxRows(arows);
+      if (agc > 12) {
+        dx.push("Acidosis metabólica de AG elevado");
+        if (hco3 < 24) {
+          var dr = (agc - 12) / (24 - hco3), interp;
+          if (dr < 0.4) interp = "acidosis hiperclorémica añadida (AG normal)";
+          else if (dr <= 2) interp = "acidosis de AG elevado pura";
+          else interp = "alcalosis metabólica o acidosis crónica coexistente";
+          body += toxRows([["Delta-delta", "(AG−12)/(24−HCO₃) = " + fmt1(dr)], ["Interpretación", interp]]);
+        }
+      } else if (agc < 8) {
+        dx.push("Anión gap bajo");
+      }
+    }
+    var bsev = dx.length ? "sev-warn" : "sev-ok";
+    var btxt = dx.length ? dx.join("  ·  ") : "Sin datos suficientes o dentro de la normalidad";
+    if (dx.indexOf("Gap osmolar elevado") !== -1 && dx.indexOf("Acidosis metabólica de AG elevado") !== -1) {
+      bsev = "sev-danger";
+      btxt += "  →  sospecha de metanol/etilenglicol";
+    }
+    return '<div class="tox">' + calcBanner(bsev, "Síntesis", null, btxt) + body +
+      toxNote("Urea en mg/dL (BUN/2.8 ≈ urea/6). Las estimaciones de metanol/etilenglicol son <strong>orientativas y por exceso</strong>; un gap osmolar normal no descarta toxicidad si la ingesta fue precoz o ya metabolizada. Combina gap osmolar elevado + acidosis con AG elevado para sospechar alcoholes tóxicos.") + "</div>";
+  }
+
+  /* --- Salicilatos / litio / etanol --- */
+  function levelBand(lvl, bands) {
+    for (var i = 0; i < bands.length; i++) if (lvl < bands[i].max) return bands[i];
+    return bands[bands.length - 1];
+  }
+  function levelResult(s) {
+    var sub = s.sel.subs || 0, lvl = tN(s, "lvl");
+    if (lvl == null) return appWarn("Introduce el nivel sérico.");
+    var name, unit, bands, rows, note;
+    if (sub === 0) {
+      name = "Salicilatos"; unit = "mg/dL";
+      bands = [{ max: 30, label: "Terapéutico / no tóxico", sev: "sev-ok" },
+        { max: 50, label: "Intoxicación leve", sev: "sev-warn" },
+        { max: 70, label: "Intoxicación moderada", sev: "sev-warn" },
+        { max: 100, label: "Intoxicación grave", sev: "sev-danger" },
+        { max: Infinity, label: "Intoxicación muy grave", sev: "sev-danger" }];
+      rows = [["Terapéutico", "10–30 mg/dL"],
+        ["Alcalinizar orina", "sintomático o nivel >35–40 mg/dL"],
+        ["Hemodiálisis", "≥90 (agudo) o ≥80 con afectación orgánica"],
+        ["HD también si", "acidemia, alteración del SNC, edema pulmonar/cerebral o IRA"]];
+      note = "Sospéchalo ante acidosis metabólica con alcalosis respiratoria. La toxicidad crónica aparece a niveles más bajos. El nomograma de Done ya no se recomienda.";
+    } else if (sub === 1) {
+      name = "Litio"; unit = "mEq/L";
+      bands = [{ max: 1.2, label: "Rango terapéutico", sev: "sev-ok" },
+        { max: 1.5, label: "Límite alto", sev: "sev-warn" },
+        { max: 2.5, label: "Intoxicación leve", sev: "sev-warn" },
+        { max: 3.5, label: "Intoxicación moderada", sev: "sev-danger" },
+        { max: Infinity, label: "Intoxicación grave", sev: "sev-danger" }];
+      rows = [["Terapéutico", "0.6–1.2 mEq/L"],
+        ["Hemodiálisis", "nivel >4 (o >5 en cualquier caso)"],
+        ["HD también si", "deterioro de conciencia, convulsiones o arritmias"],
+        ["Considerar HD", "nivel >2.5 con síntomas graves o insuficiencia renal"]];
+      note = "Criterios EXTRIP. Los niveles precoces tras ingesta aguda pueden infraestimar la carga corporal: repítelos seriados. Suspende el litio, sueroterapia con SF y vigila la función renal.";
+    } else {
+      name = "Etanol"; unit = "mg/dL";
+      bands = [{ max: 50, label: "Mínimo / subclínico", sev: "sev-ok" },
+        { max: 100, label: "Euforia, desinhibición", sev: "sev-warn" },
+        { max: 200, label: "Incoordinación, ataxia", sev: "sev-warn" },
+        { max: 300, label: "Confusión, vómitos", sev: "sev-danger" },
+        { max: 400, label: "Estupor", sev: "sev-danger" },
+        { max: Infinity, label: "Coma · depresión respiratoria", sev: "sev-danger" }];
+      rows = [["Metabolismo", "≈15–20 mg/dL por hora"],
+        ["Riesgo vital", ">400 mg/dL en no tolerantes"],
+        ["Aporte osmolar", "mg/dL ÷ 4.6 ≈ mOsm/kg"]];
+      note = "La tolerancia individual modifica mucho la clínica. Ante discordancia clínica-nivel o gap osmolar inexplicado, descarta alcoholes tóxicos (metanol/etilenglicol).";
+    }
+    var b = levelBand(lvl, bands);
+    return '<div class="tox">' + calcBanner(b.sev, name, fmt1(lvl) + " " + unit, b.label) +
+      toxRows(rows) + toxNote(note) + "</div>";
+  }
+
   var APPS = {
+    tox: {
+      nombre: "Toxicología", sub: "Paracetamol · NAC · antídotos · gaps · niveles",
+      fields: toxFields, result: toxResult
+    },
     goteo: {
       nombre: "Goteo intravenoso", sub: "Ritmo de perfusión: ml/h y gotas/min",
       fields: [
@@ -892,19 +1422,61 @@
         if (c > 0) out.push({ num: fmtNum(total / c), unit: "ml" });
         return appResult(out);
       }
+    },
+    gaso: {
+      nombre: "Interpretación de gasometría", sub: "Análisis ácido-base en 5 pasos",
+      fields: [
+        { k: "ph", tipo: "num", label: "pH", unidad: "", ph: "7.40" },
+        { k: "pco2", tipo: "num", label: "pCO₂", unidad: "mmHg", ph: "40" },
+        { k: "hco3", tipo: "num", label: "HCO₃⁻", unidad: "mEq/L", ph: "24" },
+        { k: "eb", tipo: "num", label: "Exceso de base (EB)", unidad: "mmol/L", ph: "0" },
+        { k: "na", tipo: "num", label: "Na⁺", unidad: "mEq/L", ph: "140" },
+        { k: "k", tipo: "num", label: "K⁺", unidad: "mEq/L", ph: "4" },
+        { k: "cl", tipo: "num", label: "Cl⁻", unidad: "mEq/L", ph: "104" },
+        { k: "alb", tipo: "num", label: "Albúmina (opcional)", unidad: "g/dL", ph: "4" },
+        { k: "lact", tipo: "num", label: "Lactato (opcional)", unidad: "mmol/L", ph: "1" }
+      ],
+      result: gasoResult
+    },
+    rsi: {
+      nombre: "Secuencia rápida de intubación", sub: "Guía de las 7 P · dosis por peso",
+      fields: [
+        { k: "peso", tipo: "num", label: "Peso del paciente", unidad: "kg", ph: "70" }
+      ],
+      result: rsiResult
+    },
+    perf: {
+      nombre: "Bombas de perfusión", sub: "Vasoactivos: dosis → ml/h",
+      fields: [
+        { k: "peso", tipo: "num", label: "Peso del paciente", unidad: "kg", ph: "70" },
+        { tipo: "select", grp: "drug", label: "Fármaco", opciones: [{ label: "Noradrenalina" }, { label: "Dopamina" }, { label: "Dobutamina" }], def: 0 },
+        { k: "dose", tipo: "num", label: "Dosis deseada", unidad: "mcg/kg/min", phStrong: true, ph: function (s) { return String(perfDrug(s).dose); } },
+        { k: "mg", tipo: "num", label: "Fármaco en la mezcla", unidad: "mg", phStrong: true, ph: function (s) { return String(perfDrug(s).mg); } },
+        { k: "vol", tipo: "num", label: "Volumen total", unidad: "ml", phStrong: true, ph: function (s) { return String(perfDrug(s).vol); } }
+      ],
+      onOpt: function (s) { s.num.dose = ""; s.num.mg = ""; s.num.vol = ""; },
+      result: perfResult
     }
   };
   var appState = null;
   function appResultHTML() { return APPS[appState.id].result(appState); }
   function appInnerHTML() {
     var app = APPS[appState.id];
-    var body = app.fields.map(function (f) {
+    var fields = (typeof app.fields === "function") ? app.fields(appState) : app.fields;
+    var body = fields.map(function (f) {
       var inner;
       if (f.tipo === "num") {
         var v = appState.num[f.k];
-        inner = '<div class="num-wrap"><input type="number" inputmode="decimal" class="calc-num-input" data-app-num="' + f.k + '" value="' +
-          (v == null ? "" : esc(v)) + '"' + (f.ph ? ' placeholder="' + esc(f.ph) + '"' : "") + " />" +
+        var ph = (typeof f.ph === "function") ? f.ph(appState) : f.ph;
+        inner = '<div class="num-wrap"><input type="number" inputmode="decimal" class="calc-num-input' + (f.phStrong ? " ph-strong" : "") + '" data-app-num="' + f.k + '" value="' +
+          (v == null ? "" : esc(v)) + '"' + (ph ? ' placeholder="' + esc(ph) + '"' : "") + " />" +
           (f.unidad ? '<span class="num-unit">' + esc(f.unidad) + "</span>" : "") + "</div>";
+      } else if (f.tipo === "select") {
+        var ssel = appState.sel[f.grp]; if (ssel == null) ssel = f.def || 0;
+        inner = '<div class="select-wrap"><select class="calc-select" data-app-sel="' + f.grp + '">' +
+          f.opciones.map(function (o, i) {
+            return '<option value="' + i + '"' + (ssel === i ? " selected" : "") + ">" + esc(o.label) + "</option>";
+          }).join("") + '</select><span class="select-chev">' + ICONS.chev + "</span></div>";
       } else {
         var sel = appState.sel[f.grp]; if (sel == null) sel = f.def || 0;
         inner = '<div class="opts">' + f.opciones.map(function (o, i) {
@@ -930,6 +1502,10 @@
     showDetailView();
     document.title = "Apps — Manual de Urgencias";
     var list = [
+      { id: "tox", nombre: "Toxicología", sub: "Paracetamol · NAC · antídotos · gaps · niveles", color: "#65a30d", icon: ICONS.skull },
+      { id: "rsi", nombre: "Secuencia rápida de intubación", sub: "Guía de las 7 P · dosis por peso", color: "#dc2626", icon: ICONS.syringe },
+      { id: "gaso", nombre: "Interpretación de gasometría", sub: "Análisis ácido-base en 5 pasos", color: "#7c3aed", icon: ICONS.pulse },
+      { id: "perf", nombre: "Bombas de perfusión", sub: "Vasoactivos: dosis → ml/h", color: "#ea580c", icon: ICONS.droplet },
       { id: "goteo", nombre: "Goteo intravenoso", sub: "ml/h y gotas/min", color: "#0d9488", icon: ICONS.droplet },
       { id: "dosis", nombre: "Dosis por peso", sub: "mg/kg → dosis total y volumen", color: "#2563eb", icon: ICONS.tratamiento }
     ];
@@ -1093,7 +1669,11 @@
       var cpanel = ctl.closest(".calc-inline");
       if (appState) {
         if (ctl.hasAttribute("data-reset")) { appState.num = {}; appState.sel = {}; cpanel.innerHTML = appInnerHTML(); return; }
-        if (ctl.hasAttribute("data-app-opt")) { appState.sel[ctl.getAttribute("data-app-grp")] = +ctl.getAttribute("data-app-opt"); cpanel.innerHTML = appInnerHTML(); return; }
+        if (ctl.hasAttribute("data-app-opt")) {
+          appState.sel[ctl.getAttribute("data-app-grp")] = +ctl.getAttribute("data-app-opt");
+          var ap = APPS[appState.id]; if (ap.onOpt) ap.onOpt(appState);
+          cpanel.innerHTML = appInnerHTML(); return;
+        }
         return;
       }
       if (calc) {
@@ -1159,13 +1739,23 @@
     var panel = inp.closest(".calc-inline"); if (!panel) return;
     if (appState) {
       appState.num[inp.getAttribute("data-app-num")] = inp.value;
-      var ar = panel.querySelector(".calc-result"); if (ar) ar.outerHTML = appResultHTML();
+      var foot = panel.querySelector(".ci-foot");
+      if (foot && foot.firstElementChild) foot.firstElementChild.outerHTML = appResultHTML();
       return;
     }
     if (calc && calc.scale.tipo === "formula") {
       calc.num[inp.getAttribute("data-num")] = inp.value;
       var r = panel.querySelector(".calc-result"); if (r) r.outerHTML = formulaFoot(calc.scale);
     }
+  });
+
+  // Desplegable de fármaco / opción en apps
+  $topic.addEventListener("change", function (e) {
+    var sel = e.target.closest(".calc-select"); if (!sel || !appState) return;
+    var panel = sel.closest(".calc-inline"); if (!panel) return;
+    appState.sel[sel.getAttribute("data-app-sel")] = +sel.value;
+    var ap = APPS[appState.id]; if (ap.onOpt) ap.onOpt(appState);
+    panel.innerHTML = appInnerHTML();
   });
 
   // Desplegar partes del manual hacia abajo (acordeón inline, apertura única)
@@ -1240,6 +1830,7 @@
     { id: "inicio", label: "Inicio", icon: ICONS.home, route: "" },
     { id: "escalas", label: "Escalas", icon: ICONS.bars, route: "#/calc" },
     { id: "farmacos", label: "Fármacos", icon: ICONS.farmacos, route: "#/farmacos" },
+    { id: "apps", label: "Apps", icon: ICONS.apps, route: "#/apps" },
     { id: "acerca", label: "Acerca de", icon: ICONS.info, route: "#/about" }
   ];
   $tabbar.innerHTML = TABS.map(function (tb) {
@@ -1276,7 +1867,7 @@
     if (h === "#/about") { renderAbout(); setActiveTab("acerca"); return; }
     if (h === "#/calc" || h === "#/escalas") { renderCalcIndex(); setActiveTab("escalas"); return; }
     if (h === "#/farmacos") { renderDrugIndex(); setActiveTab("farmacos"); return; }
-    if (h === "#/apps") { renderApps(); setActiveTab(""); return; }
+    if (h === "#/apps") { renderApps(); setActiveTab("apps"); return; }
     if (h === "#/favoritos") { renderFavoritos(); setActiveTab(""); return; }
     var dm = h.match(/^#\/farmaco\/(.+)$/);
     if (dm) { renderDrug(decodeURIComponent(dm[1])); setActiveTab("farmacos"); return; }

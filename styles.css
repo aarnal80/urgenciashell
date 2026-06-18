@@ -11,6 +11,7 @@
   --header-fg: #15171c;
   --header-fg2: #8a93a0;
   --header-btn: #eef1f3;
+  --hero-bg: #f5f6f8;
 
   --ink: #15171c;
   --muted: #8a93a0;
@@ -112,7 +113,7 @@ body.show-topbar #view { padding-top: calc(var(--topbar-h) + var(--safe-top)); }
    INICIO — hero negro
    ============================================================ */
 .hero {
-  background: var(--header); color: var(--header-fg);
+  background: var(--hero-bg); color: var(--header-fg);
   padding: calc(var(--safe-top) + 14px) 20px 20px;
   border-bottom: 1px solid var(--card-border);
 }
@@ -130,12 +131,12 @@ body.show-topbar #view { padding-top: calc(var(--topbar-h) + var(--safe-top)); }
 }
 .hero-title em { font-style: italic; color: var(--hell-red); }
 .ystripe { height: 5px; width: 54px; border-radius: 3px; background: var(--yellow); margin-top: 9px; }
-.hero-sub { font-size: 13px; color: var(--header-fg2); margin-top: 9px; }
-.hero-author { font-size: 11.5px; color: var(--header-fg2); margin-top: 1px; }
+.hero-sub { font-size: 13px; color: var(--secondary); margin-top: 9px; }
+.hero-author { font-size: 11.5px; color: var(--secondary); margin-top: 1px; }
 .hero-search {
   width: 100%; text-align: left; cursor: text; border: 1px solid var(--card-border);
   display: flex; align-items: center; gap: 11px;
-  background: var(--bg); border-radius: 13px; padding: 13px 14px; margin-top: 18px;
+  background: var(--panel); border-radius: 13px; padding: 13px 14px; margin-top: 18px;
   box-shadow: var(--shadow);
 }
 .hero-search .hs-ic { width: 18px; height: 18px; color: var(--muted); flex: none; }
@@ -449,6 +450,74 @@ body.show-topbar #view { padding-top: calc(var(--topbar-h) + var(--safe-top)); }
 .sev-danger .cb-title { color: var(--ac-red); }
 .cb-score { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--muted); flex: none; }
 .cb-text { font-size: 12px; line-height: 1.45; color: var(--body); margin-top: 6px; }
+
+/* Interpretación de gasometría — pasos */
+.gaso-steps { margin-top: 12px; border: 1px solid var(--card-border); border-radius: 12px; background: var(--panel); overflow: hidden; }
+.gaso-step { display: flex; gap: 11px; padding: 11px 13px; border-top: 1px solid var(--divider); }
+.gaso-step:first-child { border-top: none; }
+.gaso-n { flex: none; width: 22px; height: 22px; border-radius: 50%; background: var(--bg); color: var(--muted); font-size: 11px; font-weight: 800; display: grid; place-items: center; }
+.gaso-bd { flex: 1; min-width: 0; }
+.gaso-lbl { font-size: 10.5px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); }
+.gaso-val { font-family: var(--mono); font-size: 11.5px; color: var(--secondary); margin-top: 2px; }
+.gaso-concl { font-size: 13.5px; font-weight: 700; line-height: 1.35; margin-top: 3px; color: var(--ink); }
+.gaso-ok .gaso-concl, .gaso-ok .gaso-n { color: #15803d; }
+.gaso-warn .gaso-concl, .gaso-warn .gaso-n { color: var(--ac-orange); }
+.gaso-bad .gaso-concl, .gaso-bad .gaso-n { color: var(--ac-red); }
+.gaso-note { margin-top: 12px; padding: 11px 13px; border-radius: 12px; background: var(--bg); border: 1px solid var(--card-border); }
+.gaso-note p { font-size: 11.5px; line-height: 1.5; color: var(--body); margin: 0; }
+.gaso-note .gaso-ref { margin-top: 7px; padding-top: 7px; border-top: 1px solid var(--divider); color: var(--muted); }
+
+/* Secuencia rápida de intubación */
+.rsi { margin-top: 12px; border: 1px solid var(--card-border); border-radius: 12px; background: var(--panel); padding: 4px 13px; }
+.rsi-p { padding: 12px 0; border-top: 1px solid var(--divider); }
+.rsi-p:first-child { border-top: none; }
+.rsi-ph { display: flex; align-items: center; gap: 9px; }
+.rsi-n { flex: none; width: 22px; height: 22px; border-radius: 50%; background: rgba(220,38,38,.1); color: var(--ac-red); font-size: 11px; font-weight: 800; display: grid; place-items: center; }
+.rsi-pt { font-size: 14px; font-weight: 800; color: var(--ink); }
+.rsi-tx { font-size: 12.5px; line-height: 1.5; color: var(--body); margin: 5px 0 0 31px; }
+.rsi-sub { font-size: 10.5px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin: 11px 0 2px 31px; }
+.rsi-drug { margin: 0 0 0 31px; padding: 7px 0; border-bottom: 1px dashed var(--divider); }
+.rsi-drug:last-child { border-bottom: none; }
+.rsi-dn { font-size: 12.5px; font-weight: 700; color: var(--ink); }
+.rsi-dn span { font-weight: 500; color: var(--muted); font-size: 11px; }
+.rsi-dd { font-family: var(--mono); font-size: 11.5px; color: var(--secondary); margin-top: 2px; }
+.rsi-dd strong { color: var(--ac-red); font-weight: 700; }
+
+/* Bombas de perfusión */
+.perf-info { margin-top: 10px; border: 1px solid var(--card-border); border-radius: 12px; background: var(--panel); overflow: hidden; }
+.perf-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 9px 13px; border-top: 1px solid var(--divider); }
+.perf-row:first-child { border-top: none; }
+.perf-row span { font-size: 12px; color: var(--muted); flex: none; }
+.perf-row strong { font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--secondary); text-align: right; }
+.perf-hint { margin-top: 9px; font-size: 11.5px; line-height: 1.45; color: var(--muted); }
+
+/* Toxicología */
+.tox .perf-info, .tox .gaso-note, .tox .perf-hint, .tox .tox-graph, .tox .tox-bag { margin-top: 10px; }
+.tox-sub { font-size: 10.5px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); margin: 14px 0 0; }
+.tox-src { margin-top: 9px; font-size: 10.5px; line-height: 1.4; color: var(--muted); }
+.tox-bag { border: 1px solid var(--card-border); border-radius: 12px; background: var(--panel); padding: 11px 13px; }
+.tox-bag-h { display: flex; align-items: center; gap: 9px; }
+.tox-bag-n { flex: none; width: 22px; height: 22px; border-radius: 50%; background: rgba(101,163,13,.13); color: #4d7c0f; font-size: 11px; font-weight: 800; display: grid; place-items: center; }
+.tox-bag-t { font-size: 13.5px; font-weight: 800; color: var(--ink); flex: 1; min-width: 0; }
+.tox-bag-r { font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--ac-orange); }
+.tox-bag-d { font-size: 12.5px; line-height: 1.5; color: var(--body); margin: 5px 0 0 31px; }
+.tox-bag-d strong { font-family: var(--mono); font-weight: 700; color: var(--secondary); }
+.tox-graph { border: 1px solid var(--card-border); border-radius: 12px; background: var(--panel); padding: 8px 6px 4px; }
+.tox-graph svg { width: 100%; height: auto; display: block; }
+.txg-grid { stroke: var(--divider); stroke-width: 1; }
+.txg-lab { fill: var(--muted); font-size: 9px; font-family: var(--mono); }
+.txg-ax { fill: var(--muted); font-size: 9.5px; }
+.txg-line { fill: none; stroke: var(--ac-red); stroke-width: 2; }
+.txg-line-lab { fill: var(--ac-red); font-size: 9px; font-weight: 700; }
+.txg-pt-hi { fill: var(--ac-red); stroke: var(--panel); stroke-width: 2; }
+.txg-pt-lo { fill: var(--ac-green); stroke: var(--panel); stroke-width: 2; }
+
+/* Desplegable (select) en apps */
+.select-wrap { position: relative; }
+.calc-select { -webkit-appearance: none; appearance: none; width: 100%; font: inherit; font-size: 15px; color: var(--ink); background: var(--panel); border: 1px solid var(--card-border); border-radius: 9px; padding: 9px 38px 9px 11px; cursor: pointer; }
+.calc-select:focus { outline: none; border-color: var(--ac-blue); box-shadow: 0 0 0 3px rgba(37,99,235,.12); }
+.select-chev { position: absolute; right: 11px; top: 50%; transform: translateY(-50%) rotate(90deg); pointer-events: none; color: var(--muted); display: grid; }
+.select-chev svg { width: 16px; height: 16px; }
 .scale-ic { width: 38px; height: 38px; border-radius: 11px; background: rgba(37,99,235,.11); color: var(--ac-blue); display: grid; place-items: center; flex: none; }
 .scale-ic svg { width: 20px; height: 20px; }
 .scale-tx { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
@@ -625,6 +694,8 @@ mark { background: var(--yellow); color: #1c1206; border-radius: 3px; padding: 0
 .num-wrap { display: flex; align-items: center; gap: 8px; }
 .calc-num-input { flex: 1; min-width: 0; font: inherit; font-size: 15px; border: 1px solid var(--card-border); border-radius: 9px; padding: 9px 11px; background: var(--panel); color: var(--ink); }
 .calc-num-input:focus { outline: none; border-color: var(--ac-blue); box-shadow: 0 0 0 3px rgba(37,99,235,.12); }
+.calc-num-input::placeholder { color: var(--chevron); opacity: 1; }
+.calc-num-input.ph-strong::placeholder { color: var(--ink); opacity: 1; }
 .num-unit { font-size: 13px; color: var(--muted); white-space: nowrap; }
 .opt, .bin-toggle { cursor: pointer; font: inherit; font-size: 13px; color: var(--ink); border: 1px solid var(--card-border); background: var(--panel); border-radius: 9px; padding: 9px 12px; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; }
 .opt small { color: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
@@ -706,6 +777,7 @@ body.dark {
   --header-fg: #ffffff;
   --header-fg2: #8a93a0;
   --header-btn: rgba(255,255,255,.08);
+  --hero-bg: #000000;
   --ink: #eef1f4;
   --muted: #8a93a0;
   --secondary: #aab4c0;
@@ -736,3 +808,4 @@ body.dark .conn:active, body.dark .scale-chip:active, body.dark .drug-item:activ
 body.dark .topic-link:active, body.dark .cat-head:active, body.dark .tl-part:active { background: #1a1f24; }
 body.dark .pref-alternativa, body.dark .tx-alts-count { color: var(--secondary); }
 body.dark mark { background: #ffb400; color: #1c1206; }
+body.dark .tox-bag-n { background: rgba(132,204,22,.16); color: #a3e635; }
