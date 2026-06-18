@@ -319,6 +319,9 @@
   })();
   var catByName = {};
   CATS.forEach(function (c) { catByName[c.name] = c; });
+  // Etiqueta corta para mostrar (sin alterar el nombre real usado para agrupar)
+  var CAT_LABEL = { "Exploraciones Complementarias en Medicina de Urgencias": "Exploraciones Complementarias" };
+  function catDisplay(name) { return CAT_LABEL[name] || name || ""; }
   var topicsByCat = {};
   CATS.forEach(function (c) {
     topicsByCat[c.name] = TOPICS.filter(function (t) { return (t.categoria || "Otros") === c.name; })
@@ -379,7 +382,7 @@
           '<div class="continue-tx">' +
             '<div class="continue-eyebrow">Continuar</div>' +
             '<div class="continue-title">' + esc(t.title) + "</div>" +
-            '<div class="continue-sub">' + esc(t.categoria || "") + "</div>" +
+            '<div class="continue-sub">' + esc(catDisplay(t.categoria)) + "</div>" +
           "</div>" +
           '<span class="continue-go">' + ICONS.chevR + "</span>" +
         "</a>";
@@ -410,7 +413,7 @@
       return '<div class="part-group" data-open="0">' +
         '<div class="part" role="button" tabindex="0">' +
           '<span class="part-chip" style="background:' + rgba(c.color, 0.12) + ";color:" + c.color + '">' + c.icon + "</span>" +
-          '<div class="part-tx"><div class="part-name">' + esc(c.name) + "</div>" +
+          '<div class="part-tx"><div class="part-name">' + esc(catDisplay(c.name)) + "</div>" +
             '<div class="part-count">' + c.count + " temas</div></div>" +
           '<span class="part-go">' + ICONS.chev + "</span></div>" +
         '<div class="part-topics">' + links + "</div></div>";
@@ -431,7 +434,7 @@
       .sort(function (a, b) { return (a.number || 0) - (b.number || 0); });
     var html =
       '<div class="t-head"><span class="t-cat" style="background:' + c.color + '">Partes del manual</span>' +
-      '<h1 class="t-title">' + esc(c.name) + "</h1>" +
+      '<h1 class="t-title">' + esc(catDisplay(c.name)) + "</h1>" +
       '<div class="ystripe"></div>' +
       '<div class="t-sub">' + topics.length + " temas</div></div>" +
       '<nav class="cat-topics-list">' + topics.map(function (t) {
@@ -517,7 +520,7 @@
     order.forEach(function (c) {
       var open = q ? true : false;
       html += '<div class="cat-group" data-open="' + (open ? "1" : "0") + '">' +
-        '<button class="cat-head" type="button"><span class="cat-label">' + esc(c) + "</span>" +
+        '<button class="cat-head" type="button"><span class="cat-label">' + esc(catDisplay(c)) + "</span>" +
         '<span class="cat-count">' + groups[c].length + "</span>" +
         '<span class="cat-chev">' + ICONS.chev + "</span></button><div class=\"cat-topics\">";
       groups[c].forEach(function (t) {
@@ -564,7 +567,7 @@
     var catColor = cat ? cat.color : "#e4002b";
     var html = "";
     html += '<div class="t-head">';
-    html += '<span class="t-cat" style="background:' + catColor + '">' + esc(t.categoria || "") + "</span>";
+    html += '<span class="t-cat" style="background:' + catColor + '">' + esc(catDisplay(t.categoria)) + "</span>";
     html += '<h1 class="t-title">' + esc(t.title) + "</h1>";
     html += '<div class="ystripe"></div>';
     if (t.status === "revisado") html += '<span class="t-status">Revisado</span>';
@@ -839,7 +842,7 @@
       return '<a class="drug-item" href="#/tema/' + esc(t.slug) + '">' +
         '<span class="drug-item-chip" style="background:' + rgba(col, 0.12) + ";color:" + col + '">' + ic + "</span>" +
         '<div class="drug-item-tx"><div class="drug-item-name">' + esc(t.title) + "</div>" +
-        '<div class="drug-item-pres">' + esc(t.categoria || "") + "</div></div>" +
+        '<div class="drug-item-pres">' + esc(catDisplay(t.categoria)) + "</div></div>" +
         '<span class="drug-item-go">' + ICONS.chevR + "</span></a>";
     }).join("") + "</div>";
   }
@@ -1220,7 +1223,7 @@
     if ($tbTheme) $tbTheme.innerHTML = ic;
     if ($heroTheme) $heroTheme.innerHTML = ic;
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute("content", dark ? "#000000" : "#0d0f12");
+    if (meta) meta.setAttribute("content", dark ? "#000000" : "#ffffff");
   }
   applyTheme(localStorage.getItem("tema") || "claro");
   function toggleTheme() {
