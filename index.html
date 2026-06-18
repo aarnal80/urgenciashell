@@ -15,6 +15,7 @@
     <button id="menu-btn" aria-label="Abrir temas"></button>
     <span id="topbar-title">Manual de Urgencias</span>
     <span class="topbar-spacer"></span>
+    <button id="topbar-search" aria-label="Buscar"></button>
   </header>
   <div id="scrim"></div>
 
@@ -45,7 +46,11 @@
           <img class="empty-mark" src="icons/logo.png" alt="" />
           <h1>Manual de Urgencias <em>in HELL</em></h1>
           <p>Guía de consulta rápida<br /><span class="author-line">Dr. Antonio J. Arnal Meinhardt</span></p>
-          <p class="hint">Resumen rápido · tratamiento con dosis · signos de alarma · criterios de ingreso · temas conectados.</p>
+          <div class="home-actions">
+            <button id="home-search" class="home-btn home-search-btn">Buscar tema, fármaco, síntoma…</button>
+            <a href="#/calc" class="home-btn">Calculadoras</a>
+            <a href="#/tema/soporte_vital_avanzado_en_adultos" class="home-btn">Soporte vital (RCP)</a>
+          </div>
         </div>
       </section>
     </main>

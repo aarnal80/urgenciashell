@@ -712,6 +712,16 @@
   }
   if ($scrim) $scrim.addEventListener("click", function () { document.body.classList.remove("nav-open"); });
 
+  // Acceso rápido a la búsqueda (barra superior móvil + página de inicio)
+  function abrirBusqueda() {
+    document.body.classList.add("nav-open");
+    setTimeout(function () { $search.focus(); $search.select(); }, 60);
+  }
+  var $tbSearch = document.getElementById("topbar-search");
+  if ($tbSearch) { $tbSearch.innerHTML = ICONS.search; $tbSearch.addEventListener("click", abrirBusqueda); }
+  var $homeSearch = document.getElementById("home-search");
+  if ($homeSearch) { $homeSearch.innerHTML = ICONS.search + "Buscar tema, fármaco, síntoma…"; $homeSearch.addEventListener("click", abrirBusqueda); }
+
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape") { if (calc) closeScale(); else document.body.classList.remove("nav-open"); }
   });
