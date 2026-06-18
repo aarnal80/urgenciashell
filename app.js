@@ -325,7 +325,7 @@
   CATS.forEach(function (c) { catByName[c.name] = c; });
   // Etiqueta corta para mostrar (sin alterar el nombre real usado para agrupar)
   var CAT_LABEL = { "Exploraciones Complementarias en Medicina de Urgencias": "Exploraciones Complementarias" };
-  function catDisplay(name) { return CAT_LABEL[name] || name || ""; }
+  function catDisplay(name) { return (CAT_LABEL[name] || name || "").replace(/\bUrgenci?as\b/g, "Urg."); }
   var topicsByCat = {};
   CATS.forEach(function (c) {
     topicsByCat[c.name] = TOPICS.filter(function (t) { return (t.categoria || "Otros") === c.name; })
