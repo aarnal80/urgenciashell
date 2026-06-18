@@ -555,6 +555,9 @@ body.dark {
   --bg: #0e1413; --panel: #161e1d; --ink: #e7edec; --muted: #93a3a1; --line: #28312f;
   --brand-soft: #123029; --danger-soft: #2c1714; --amber-soft: #2a2113;
   --indigo-soft: #181b2c; --slate-soft: #1b2322;
+  /* acentos aclarados para contraste sobre fondo oscuro */
+  --brand: #2dd4bf; --brand-d: #5eead4; --slate: #aab6c4;
+  --danger: #f87171; --amber: #fbbf24; --indigo: #a5b4fc;
 }
 body.dark #search { background: var(--panel); color: var(--ink); }
 body.dark .tx-dose { background: #11201d; }
