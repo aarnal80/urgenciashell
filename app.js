@@ -139,7 +139,8 @@
     syringe: '<svg ' + SVG + '><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/><path d="m14 4 6 6"/></svg>',
     star: '<svg ' + SVG + '><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
     starFill: '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>',
-    skull: '<svg ' + SVG + '><circle cx="9" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="1.2" fill="currentColor" stroke="none"/><path d="M8 20v1.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V20"/><path d="M16 20a2 2 0 0 0 1.6-3.2A9 9 0 1 0 6.4 16.8 2 2 0 0 0 8 20"/><path d="M10.5 16.5 12 14l1.5 2.5"/></svg>'
+    skull: '<svg ' + SVG + '><circle cx="9" cy="12" r="1.2" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="1.2" fill="currentColor" stroke="none"/><path d="M8 20v1.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V20"/><path d="M16 20a2 2 0 0 0 1.6-3.2A9 9 0 1 0 6.4 16.8 2 2 0 0 0 8 20"/><path d="M10.5 16.5 12 14l1.5 2.5"/></svg>',
+    textSize: '<svg ' + SVG + '><path d="M2.5 18 7 7l4.5 11"/><path d="M4.2 14.3h5.6"/><path d="M18 8v9"/><polyline points="15.5 10.3 18 8 20.5 10.3"/><polyline points="15.5 14.7 18 17 20.5 14.7"/></svg>'
   };
 
   /* ---------- DOM ---------- */
@@ -1824,6 +1825,25 @@
   if ($tbTheme) $tbTheme.addEventListener("click", toggleTheme);
   if ($heroTheme) $heroTheme.addEventListener("click", toggleTheme);
   document.getElementById("back-btn").innerHTML = ICONS.chevL;
+
+  /* ---------- Tamaño de letra (zoom de la app, para uso como webapp) ---------- */
+  var $tbSize = document.getElementById("tb-size");
+  var $heroSize = document.getElementById("hero-size");
+  var ZOOMS = [1, 1.15, 1.3, 1.45];
+  function applyZoom(z) { document.documentElement.style.zoom = z; }
+  var savedZoom = parseFloat(localStorage.getItem("zoom"));
+  var curZoom = ZOOMS.indexOf(savedZoom) !== -1 ? savedZoom : 1;
+  if ($tbSize) $tbSize.innerHTML = ICONS.textSize;
+  if ($heroSize) $heroSize.innerHTML = ICONS.textSize;
+  applyZoom(curZoom);
+  function cycleZoom() {
+    var i = ZOOMS.indexOf(curZoom);
+    curZoom = ZOOMS[(i + 1) % ZOOMS.length];
+    try { localStorage.setItem("zoom", curZoom); } catch (e) {}
+    applyZoom(curZoom);
+  }
+  if ($tbSize) $tbSize.addEventListener("click", cycleZoom);
+  if ($heroSize) $heroSize.addEventListener("click", cycleZoom);
 
   /* ---------- Tab bar ---------- */
   var TABS = [

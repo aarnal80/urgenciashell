@@ -118,6 +118,7 @@ body.show-topbar #view { padding-top: calc(var(--topbar-h) + var(--safe-top)); }
   border-bottom: 1px solid var(--card-border);
 }
 .hero-top { display: flex; align-items: flex-start; justify-content: space-between; }
+.hero-actions { display: flex; gap: 8px; }
 .hero-logo { width: 34px; height: 34px; object-fit: contain; }
 .hero-round {
   width: 38px; height: 38px; border-radius: 50%; border: none; cursor: pointer;
