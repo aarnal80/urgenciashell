@@ -410,9 +410,41 @@ body.show-topbar #view { padding-top: calc(var(--topbar-h) + var(--safe-top)); }
 .scale-item[data-open="1"] .scale-go svg { transform: rotate(90deg); }
 .calc-inline { padding: 0 14px 14px; border-top: 1px solid var(--divider); }
 .calc-inline[hidden] { display: none; }
-.ci-body { display: grid; gap: 14px; padding-top: 13px; }
+.ci-body { padding-top: 13px; }
+.ci-body > .calc-item { margin-bottom: 14px; }
+.ci-body > .opt-row { margin-bottom: 7px; }
+.ci-body > .calc-item:last-child, .ci-body > .opt-row:last-child { margin-bottom: 0; }
 .ci-foot { margin-top: 14px; }
 .ci-foot .modal-actions { margin-top: 12px; }
+
+/* Filas con checkbox (escalas de suma binaria) — estilo del diseño */
+.opt-row {
+  width: 100%; display: flex; align-items: center; gap: 11px; padding: 10px 12px;
+  border-radius: 12px; background: #f7f9fb; border: 1px solid #e9ecf1; cursor: pointer;
+  font: inherit; text-align: left; transition: background .15s, border-color .15s;
+}
+.opt-box {
+  width: 22px; height: 22px; border-radius: 7px; flex: none; display: grid; place-items: center;
+  border: 2px solid #e9ecf1; background: transparent; transition: background .15s, border-color .15s;
+}
+.opt-box svg { width: 13px; height: 13px; color: #fff; stroke-width: 3.5; }
+.opt-row.on { background: rgba(37,99,235,.10); border-color: rgba(37,99,235,.4); }
+.opt-row.on .opt-box { background: var(--ac-blue); border-color: var(--ac-blue); }
+.opt-row-label { flex: 1; min-width: 0; font-size: 13px; font-weight: 600; color: var(--ink); line-height: 1.25; }
+.opt-row-pts { font-family: var(--mono); font-size: 11px; color: var(--muted); flex: none; }
+
+/* Banner de resultado (limpio, como el diseño) */
+.calc-banner { padding: 13px 14px; border-radius: 14px; background: #eef1f3; border: 1px solid var(--card-border); }
+.calc-banner.sev-ok { background: rgba(21,128,61,.07); border-color: rgba(21,128,61,.22); }
+.calc-banner.sev-warn { background: rgba(234,88,12,.08); border-color: rgba(234,88,12,.22); }
+.calc-banner.sev-danger { background: rgba(220,38,38,.07); border-color: rgba(220,38,38,.22); }
+.cb-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+.cb-title { font-size: 12.5px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; color: var(--secondary); }
+.sev-ok .cb-title { color: #15803d; }
+.sev-warn .cb-title { color: var(--ac-orange); }
+.sev-danger .cb-title { color: var(--ac-red); }
+.cb-score { font-family: var(--mono); font-size: 11.5px; font-weight: 600; color: var(--muted); flex: none; }
+.cb-text { font-size: 12px; line-height: 1.45; color: var(--body); margin-top: 6px; }
 .scale-ic { width: 38px; height: 38px; border-radius: 11px; background: rgba(37,99,235,.11); color: var(--ac-blue); display: grid; place-items: center; flex: none; }
 .scale-ic svg { width: 20px; height: 20px; }
 .scale-tx { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
@@ -683,6 +715,13 @@ body.dark .ddx-chip { background: #1b2127; color: var(--ink); }
 body.dark .ddx-detail { background: #10151a; }
 body.dark .cat-count, body.dark .tx-alts-count { background: #20262c; }
 body.dark .drug-src, body.dark .calc-result { background: #1b2127; }
+body.dark .opt-row { background: #15181e; border-color: #2a2e36; }
+body.dark .opt-box { border-color: #2a2e36; }
+body.dark .calc-banner { background: #1b2127; border-color: #28312f; }
+body.dark .calc-banner.sev-ok { background: rgba(52,211,153,.12); border-color: rgba(52,211,153,.35); }
+body.dark .calc-banner.sev-warn { background: rgba(251,146,60,.12); border-color: rgba(251,146,60,.35); }
+body.dark .calc-banner.sev-danger { background: rgba(248,113,113,.12); border-color: rgba(248,113,113,.35); }
+body.dark .sev-ok .cb-title { color: #34d399; }
 body.dark .modal-close { background: #20262c; color: var(--ink); }
 body.dark .continue-card:active, body.dark .tool:active, body.dark .part:active,
 body.dark .conn:active, body.dark .scale-chip:active, body.dark .drug-item:active { background: #1a1f24; }

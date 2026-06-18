@@ -910,39 +910,49 @@
       '<div class="calc-score"><span class="calc-num">' + disp + '</span><span class="calc-unit">' + esc(s.unidad_resultado || "") + "</span></div>" +
       '<div class="calc-interp">' + (band ? "<strong>" + esc(band.label) + "</strong>" + (band.detalle ? "<span>" + esc(band.detalle) + "</span>" : "") : "") + "</div></div>";
   }
+  function calcBanner(sev, title, score, text) {
+    return '<div class="calc-banner ' + sev + '">' +
+      '<div class="cb-top"><span class="cb-title">' + esc(title) + "</span>" +
+      (score != null && score !== "" ? '<span class="cb-score">' + esc(score) + "</span>" : "") + "</div>" +
+      (text ? '<div class="cb-text">' + esc(text) + "</div>" : "") + "</div>";
+  }
   function calcInnerHTML() {
     if (!calc) return "";
     var s = calc.scale, body = "", foot = "";
     if (s.tipo === "suma") {
       body = s.items.map(function (it) {
-        var inner;
         if (it.tipo === "binario") {
           var on = !!calc.sel[it.id];
-          inner = '<button class="bin-toggle' + (on ? " on" : "") + '" data-bin="' + esc(it.id) + '">' + (on ? "Sí (+" + it.puntos + ")" : "No") + "</button>";
-        } else {
-          var sel = calc.sel[it.id];
-          inner = '<div class="opts">' + it.opciones.map(function (o, i) {
-            return '<button class="opt' + (sel === i ? " on" : "") + '" data-item="' + esc(it.id) + '" data-opt="' + i + '">' +
-              esc(o.label) + "<small>" + (o.puntos >= 0 ? "+" : "") + o.puntos + "</small></button>";
-          }).join("") + "</div>";
+          return '<button class="opt-row' + (on ? " on" : "") + '" type="button" data-bin="' + esc(it.id) + '">' +
+            '<span class="opt-box">' + (on ? ICONS.check : "") + "</span>" +
+            '<span class="opt-row-label">' + esc(it.label) + "</span>" +
+            '<span class="opt-row-pts">+' + it.puntos + "</span></button>";
         }
-        return '<div class="calc-item"><div class="calc-label">' + esc(it.label) + "</div>" + inner + "</div>";
+        var sel = calc.sel[it.id];
+        var opts = '<div class="opts">' + it.opciones.map(function (o, i) {
+          return '<button class="opt' + (sel === i ? " on" : "") + '" data-item="' + esc(it.id) + '" data-opt="' + i + '">' +
+            esc(o.label) + "<small>" + (o.puntos >= 0 ? "+" : "") + o.puntos + "</small></button>";
+        }).join("") + "</div>";
+        return '<div class="calc-item"><div class="calc-label">' + esc(it.label) + "</div>" + opts + "</div>";
       }).join("");
       var r = computeSum(s), band = null, bidx = -1;
       s.interpretacion.forEach(function (b, i) { if (r.total >= b.min && (b.max == null || r.total <= b.max)) { band = b; bidx = i; } });
       var sev = band ? severityClass(bidx, s.interpretacion.length) : "";
-      foot = '<div class="calc-result ' + sev + '">' +
-        '<div class="calc-score"><span class="calc-num">' + r.total + '</span><span class="calc-unit">puntos</span></div>' +
-        '<div class="calc-interp">' + (band ? "<strong>" + esc(band.label) + "</strong>" + (band.detalle ? "<span>" + esc(band.detalle) + "</span>" : "") : "") +
-        (r.faltan ? '<span class="calc-warn">Faltan ' + r.faltan + " campo(s) por seleccionar</span>" : "") + "</div></div>";
+      var allUnit = s.items.every(function (it) { return it.tipo === "binario" && it.puntos === 1; });
+      var score = allUnit
+        ? r.total + " / " + s.items.length + (r.total === 1 ? " positivo" : " positivos")
+        : r.total + " " + (s.unidad_resultado || "puntos");
+      var txt = band && band.detalle ? band.detalle : (band ? band.label : "");
+      if (r.faltan) txt = (txt ? txt + " · " : "") + "Faltan " + r.faltan + " por completar";
+      foot = calcBanner(sev, band ? band.label : "Puntuación", score, txt);
     } else if (s.tipo === "clasificacion") {
       body = '<div class="clases">' + s.clases.map(function (c, i) {
         return '<button class="clase' + (calc.cls === i ? " on" : "") + '" data-class="' + i + '"><strong>' + esc(c.label) + "</strong><span>" + esc(c.descripcion) + "</span></button>";
       }).join("") + "</div>";
       var cc = calc.cls != null ? s.clases[calc.cls] : null;
-      foot = '<div class="calc-result ' + (calc.cls != null ? severityClass(calc.cls, s.clases.length) : "") + '">' +
-        (cc ? '<div class="calc-interp"><strong>' + esc(cc.label) + "</strong><span>" + esc(cc.detalle || cc.descripcion) + "</span></div>"
-            : '<div class="calc-interp"><span class="calc-warn">Selecciona una clase</span></div>') + "</div>";
+      var sevc = calc.cls != null ? severityClass(calc.cls, s.clases.length) : "";
+      foot = cc ? calcBanner(sevc, cc.label, null, cc.detalle || cc.descripcion)
+                : calcBanner("", "Selecciona una clase", null, "");
     } else if (s.tipo === "formula") {
       body = s.items.map(function (it) {
         var inner;
