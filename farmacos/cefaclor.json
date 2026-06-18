@@ -1,0 +1,45 @@
+{
+    "drug_id":  "cefaclor",
+    "presentacion":  "CECLOR 500 mg CAPSULAS DURAS",
+    "nregistro":  "55186",
+    "fuente":  "Ficha tÃ©cnica AEMPS/CIMA",
+    "fecha_consulta":  "2026-06-17",
+    "secciones":  [
+                      {
+                          "id":  "4.2",
+                          "titulo":  "PosologÃ­a y forma de administraciÃ³n",
+                          "html":  "\u003cdiv\u003e\r\n    \u003cp style=\"margin:0pt; line-height:115%; font-size:11pt\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eCefaclor se administra por vía oral.\u003c/span\u003e\u003c/p\u003e\r\n  \u003c/div\u003e",
+                          "vacia":  false
+                      },
+                      {
+                          "id":  "4.3",
+                          "titulo":  "Contraindicaciones",
+                          "html":  "\u003cdiv\u003e\r\n    \u003cp style=\"margin:0pt; line-height:115%; font-size:11pt\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eHipersensibilidad al principio activo (cefaclor) o a alguno de los excipientes incluidos en la sección 6.1.\u003c/span\u003e\u003c/p\u003e\r\n  \u003c/div\u003e",
+                          "vacia":  false
+                      },
+                      {
+                          "id":  "4.5",
+                          "titulo":  "InteracciÃ³n con otros medicamentos y otras formas de interacciÃ³n",
+                          "html":  "\u003cdiv\u003e\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eEn raras ocasiones se ha comunicado aumento del efecto anticoagulante al administrar cefaclor y anticoagulantes orales concomitantemente.\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003e\u0026#xa0;\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eSe han comunicado pruebas de Coombs directo positivas durante el tratamiento con cefaclor.\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003e\u0026#xa0;\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003ePuede producirse una falsa reacción positiva de glucosuria al utilizar las soluciones de Benedict, Fehling´s o con las tabletas de sulfato de cobre.\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003e\u0026#xa0;\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eComo en el caso de otros antibióticos beta-lactámicos, el probenecid inhibe la excreción renal de cefaclor (ver sección 5.2).\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; line-height:115%; font-size:11pt\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003e\u0026#xa0;\u003c/span\u003e\u003c/p\u003e\r\n  \u003c/div\u003e",
+                          "vacia":  false
+                      },
+                      {
+                          "id":  "4.6",
+                          "titulo":  "Fertilidad, embarazo y lactancia",
+                          "html":  "",
+                          "vacia":  true
+                      },
+                      {
+                          "id":  "4.8",
+                          "titulo":  "Reacciones adversas",
+                          "html":  "\u003cdiv\u003e\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eUna pequeña proporción de pacientes puede presentar diarrea y, raramente, náuseas y vómitos.\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003e\u0026#xa0;\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eSe han comunicado reacciones similares a la enfermedad del suero (eritema multiforme, exantemas y otras manifestaciones cutáneas acompañadas de artritis/artralgia, con o sin fiebre). Tales reacciones han ocurrido más frecuentemente en niños que en adultos.\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003e\u0026#xa0;\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eComo con otras cefalosporinas, se han comunicado reacciones alérgicas tales como erupción morbiliforme, urticaria y prurito. Raramente se han comunicado otras reacciones de hipersensibili-dad severas, incluyendo síndrome de Stevens-Johnson, necrolisis epidérmica tóxica y anafilaxia.\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003e\u0026#xa0;\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eComo ocurre con otras penicilinas y cefalosporinas, raramente se han comunicado casos de hepatitis transitoria e ictericia colestásica. En raras ocasiones ha aparecido nefritis intersticial reversible.\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003e\u0026#xa0;\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eDurante el tratamiento con cefaclor se ha comunicado eosinofilia, ligeros aumentos de SGOT (AST) y SGPT (ALT), de fosfatasa alcalina y más raramente trombocitopenia.\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003e\u0026#xa0;\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cu\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt;\"\u003eNotificación de sospechas de reacciones adversas\u003c/span\u003e\u003c/u\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eEs importante notificar sospechas de reacciones adversas al medicamento tras su autorización. Ello permite una supervisión continuada de la relación beneficio/riesgo del medicamento. Se invita a los profesionales sanitarios a notificar las sospechas de reacciones adversas a través del Sistema Español de Farmacovigilancia de Medicamentos de Uso Humano: www.notificaRAM.es\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; line-height:115%; font-size:11pt\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003e\u0026#xa0;\u003c/span\u003e\u003c/p\u003e\r\n  \u003c/div\u003e",
+                          "vacia":  false
+                      },
+                      {
+                          "id":  "4.9",
+                          "titulo":  "Sobredosis",
+                          "html":  "\u003cdiv\u003e\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eLos síntomas pueden incluir náuseas, vómitos, molestias epigástricas, diarrea y crisis epilépticas.\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003e\u0026#xa0;\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; text-align:justify\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003eEn tal caso, además de las medidas generales que puedan ser necesarias, la administración de carbón activado en lugar de o además del vaciado gástrico puede reducir la absorción.\u003c/span\u003e\u003c/p\u003e\r\n\r\n    \u003cp style=\"margin:0pt; line-height:115%; font-size:11pt\"\u003e\u003cspan style=\"font-family:Times New Roman; font-size:11pt\"\u003e\u0026#xa0;\u003c/span\u003e\u003c/p\u003e\r\n  \u003c/div\u003e",
+                          "vacia":  false
+                      }
+                  ]
+}
