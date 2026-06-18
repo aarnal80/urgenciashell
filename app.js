@@ -560,14 +560,7 @@
     var escalas = (t.escalas || []).filter(function (id) { return SCALES[id]; });
     if (escalas.length) {
       html += block("escalas", "Estratificación de riesgo", false,
-        '<div class="scales">' + escalas.map(function (id) {
-          var s = SCALES[id];
-          return '<button class="scale-chip" data-scale="' + esc(id) + '">' +
-            '<span class="scale-ic">' + ICONS.escalas + "</span>" +
-            '<span class="scale-tx"><span class="scale-name">' + esc(s.nombre) + "</span>" +
-            (s.para ? '<span class="scale-for">' + esc(s.para) + "</span>" : "") + "</span>" +
-            '<span class="scale-go">' + ICONS.chevR + "</span></button>";
-        }).join("") + "</div>");
+        '<div class="scales">' + escalas.map(scaleItemHTML).join("") + "</div>");
     }
 
     if ((t.criterios_ingreso || []).length) {
@@ -710,14 +703,7 @@
       return !q || sinAcentos(s.nombre || id).indexOf(q) !== -1 || sinAcentos(s.para || "").indexOf(q) !== -1;
     }).sort(function (a, b) { return (SCALES[a].nombre || a).localeCompare(SCALES[b].nombre || b); });
     if (!ids.length) return '<div class="cat-label" style="padding:18px 10px">Sin resultados</div>';
-    return ids.map(function (id) {
-      var s = SCALES[id];
-      return '<button class="scale-chip" data-scale="' + esc(id) + '">' +
-        '<span class="scale-ic">' + ICONS.escalas + "</span>" +
-        '<span class="scale-tx"><span class="scale-name">' + esc(s.nombre) + "</span>" +
-        (s.para ? '<span class="scale-for">' + esc(s.para) + "</span>" : "") + "</span>" +
-        '<span class="scale-go">' + ICONS.chevR + "</span></button>";
-    }).join("");
+    return ids.map(scaleItemHTML).join("");
   }
   function renderCalcIndex() {
     showDetailView();
@@ -803,9 +789,8 @@
     }
   };
   var appState = null;
-  function openApp(id) { if (!APPS[id]) return; calc = null; appState = { id: id, num: {}, sel: {} }; renderAppModal(); }
-  function renderAppModal() {
-    if (!appState) return;
+  function appResultHTML() { return APPS[appState.id].result(appState); }
+  function appInnerHTML() {
     var app = APPS[appState.id];
     var body = app.fields.map(function (f) {
       var inner;
@@ -822,15 +807,18 @@
       }
       return '<div class="calc-item"><div class="calc-label">' + esc(f.label) + "</div>" + inner + "</div>";
     }).join("");
-    $modal.innerHTML =
-      '<div class="modal-overlay" data-close="1"><div class="modal" role="dialog" aria-modal="true">' +
-        '<header class="modal-head"><div><h3>' + esc(app.nombre) + "</h3>" + (app.sub ? "<p>" + esc(app.sub) + "</p>" : "") + "</div>" +
-        '<button class="modal-close" data-close="1" aria-label="Cerrar">✕</button></header>' +
-        '<div class="modal-body">' + body + "</div>" +
-        '<footer class="modal-foot">' + app.result(appState) +
-          '<div class="modal-actions"><span class="modal-src">Verifica siempre el cálculo antes de administrar.</span>' +
-          '<button class="btn-reset" data-reset="1">Reiniciar</button></div></footer>' +
-      "</div></div>";
+    return '<div class="ci-body">' + body + "</div>" +
+      '<div class="ci-foot">' + app.result(appState) +
+        '<div class="modal-actions"><span class="modal-src">Verifica siempre el cálculo antes de administrar.</span>' +
+        '<button class="btn-reset" data-reset="1">Reiniciar</button></div></div>';
+  }
+  function appItemHTML(a) {
+    return '<div class="scale-item" data-app="' + esc(a.id) + '" data-open="0">' +
+      '<button class="scale-chip"><span class="scale-ic" style="background:' + rgba(a.color, 0.11) + ";color:" + a.color + '">' + a.icon + "</span>" +
+      '<span class="scale-tx"><span class="scale-name">' + esc(a.nombre) + "</span>" +
+      '<span class="scale-for">' + esc(a.sub) + "</span></span>" +
+      '<span class="scale-go">' + ICONS.chevR + "</span></button>" +
+      '<div class="calc-inline" hidden></div></div>';
   }
   function renderApps() {
     showDetailView();
@@ -843,21 +831,42 @@
       '<div class="t-head"><span class="t-cat" style="background:#0d9488">Herramientas</span>' +
       '<h1 class="t-title">Apps</h1><div class="ystripe"></div>' +
       '<div class="t-sub">Micro-aplicaciones de cálculo a pie de cama</div></div>' +
-      '<div class="scales">' + list.map(function (a) {
-        return '<button class="scale-chip" data-app="' + esc(a.id) + '">' +
-          '<span class="scale-ic" style="background:' + rgba(a.color, 0.11) + ";color:" + a.color + '">' + a.icon + "</span>" +
-          '<span class="scale-tx"><span class="scale-name">' + esc(a.nombre) + "</span>" +
-          '<span class="scale-for">' + esc(a.sub) + "</span></span>" +
-          '<span class="scale-go">' + ICONS.chevR + "</span></button>";
-      }).join("") + "</div>";
+      '<div class="scales">' + list.map(appItemHTML).join("") + "</div>";
   }
 
   /* ============================================================
      Calculadora de escalas (modal)
      ============================================================ */
   var calc = null;
-  function openScale(id) { var s = SCALES[id]; if (!s) return; calc = { id: id, scale: s, sel: {}, cls: null, num: {} }; renderCalc(); }
-  function closeScale() { calc = null; appState = null; $modal.innerHTML = ""; }
+  function scaleItemHTML(id) {
+    var s = SCALES[id]; if (!s) return "";
+    return '<div class="scale-item" data-scale="' + esc(id) + '" data-open="0">' +
+      '<button class="scale-chip"><span class="scale-ic">' + ICONS.escalas + "</span>" +
+      '<span class="scale-tx"><span class="scale-name">' + esc(s.nombre) + "</span>" +
+      (s.para ? '<span class="scale-for">' + esc(s.para) + "</span>" : "") + "</span>" +
+      '<span class="scale-go">' + ICONS.chevR + "</span></button>" +
+      '<div class="calc-inline" hidden></div></div>';
+  }
+  function closeInlineCalc() {
+    [].forEach.call($topic.querySelectorAll(".scale-item[data-open='1']"), function (it) {
+      it.setAttribute("data-open", "0");
+      var p = it.querySelector(".calc-inline"); if (p) { p.hidden = true; p.innerHTML = ""; }
+    });
+    calc = null; appState = null;
+  }
+  function toggleScaleItem(item) {
+    var wasOpen = item.getAttribute("data-open") === "1";
+    closeInlineCalc();
+    if (wasOpen) return;
+    var panel = item.querySelector(".calc-inline");
+    var sid = item.getAttribute("data-scale"), aid = item.getAttribute("data-app");
+    item.setAttribute("data-open", "1");
+    panel.hidden = false;
+    if (aid) { appState = { id: aid, num: {}, sel: {} }; panel.innerHTML = appInnerHTML(); }
+    else { calc = { id: sid, scale: SCALES[sid], sel: {}, cls: null, num: {} }; panel.innerHTML = calcInnerHTML(); }
+    var top = item.getBoundingClientRect().top + window.scrollY - 56;
+    window.scrollTo({ top: top, behavior: "smooth" });
+  }
   function severityClass(idx, total) {
     if (total <= 1) return idx === 0 ? "sev-ok" : (idx === total - 1 ? "sev-danger" : "sev-warn");
     if (idx === 0) return "sev-ok";
@@ -901,8 +910,8 @@
       '<div class="calc-score"><span class="calc-num">' + disp + '</span><span class="calc-unit">' + esc(s.unidad_resultado || "") + "</span></div>" +
       '<div class="calc-interp">' + (band ? "<strong>" + esc(band.label) + "</strong>" + (band.detalle ? "<span>" + esc(band.detalle) + "</span>" : "") : "") + "</div></div>";
   }
-  function renderCalc() {
-    if (!calc) return;
+  function calcInnerHTML() {
+    if (!calc) return "";
     var s = calc.scale, body = "", foot = "";
     if (s.tipo === "suma") {
       body = s.items.map(function (it) {
@@ -951,59 +960,37 @@
       }).join("");
       foot = formulaFoot(s);
     }
-    $modal.innerHTML =
-      '<div class="modal-overlay" data-close="1"><div class="modal" role="dialog" aria-modal="true">' +
-        '<header class="modal-head"><div><h3>' + esc(s.nombre_largo || s.nombre) + "</h3>" +
-          (s.para ? "<p>" + esc(s.para) + "</p>" : "") + "</div>" +
-          '<button class="modal-close" data-close="1" aria-label="Cerrar">✕</button></header>' +
-        '<div class="modal-body">' + body + "</div>" +
-        '<footer class="modal-foot">' + foot +
-          '<div class="modal-actions">' + (s.fuente ? '<span class="modal-src">' + esc(s.fuente) + "</span>" : "<span></span>") +
-          '<button class="btn-reset" data-reset="1">Reiniciar</button></div></footer>' +
-      "</div></div>";
+    return '<div class="ci-body">' + body + "</div>" +
+      '<div class="ci-foot">' + foot +
+        '<div class="modal-actions">' + (s.fuente ? '<span class="modal-src">' + esc(s.fuente) + "</span>" : "<span></span>") +
+        '<button class="btn-reset" data-reset="1">Reiniciar</button></div></div>';
   }
 
   /* ============================================================
      Eventos
      ============================================================ */
-  $modal.addEventListener("click", function (e) {
-    var el = e.target.closest("[data-close],[data-reset],[data-bin],[data-item],[data-class],[data-app-opt]");
-    if (!el) return;
-    if (el.hasAttribute("data-close")) { closeScale(); return; }
-    if (appState) {
-      if (el.hasAttribute("data-reset")) { appState.num = {}; appState.sel = {}; renderAppModal(); return; }
-      if (el.hasAttribute("data-app-opt")) { appState.sel[el.getAttribute("data-app-grp")] = +el.getAttribute("data-app-opt"); renderAppModal(); return; }
-      return;
-    }
-    if (!calc) return;
-    if (el.hasAttribute("data-reset")) { calc.sel = {}; calc.cls = null; calc.num = {}; renderCalc(); return; }
-    if (el.hasAttribute("data-bin")) { var b = el.getAttribute("data-bin"); calc.sel[b] = !calc.sel[b]; renderCalc(); return; }
-    if (el.hasAttribute("data-item")) { calc.sel[el.getAttribute("data-item")] = +el.getAttribute("data-opt"); renderCalc(); return; }
-    if (el.hasAttribute("data-class")) { calc.cls = +el.getAttribute("data-class"); renderCalc(); return; }
-  });
-  $modal.addEventListener("input", function (e) {
-    var inp = e.target.closest(".calc-num-input");
-    if (!inp) return;
-    if (appState) {
-      appState.num[inp.getAttribute("data-app-num")] = inp.value;
-      var ar = $modal.querySelector(".calc-result");
-      if (ar) ar.outerHTML = APPS[appState.id].result(appState);
-      return;
-    }
-    if (!calc || calc.scale.tipo !== "formula") return;
-    calc.num[inp.getAttribute("data-num")] = inp.value;
-    var res = $modal.querySelector(".calc-result");
-    if (res) res.outerHTML = formulaFoot(calc.scale);
-  });
-
   // Interacciones dentro del detalle
   $topic.addEventListener("click", function (e) {
-    var chip = e.target.closest(".scale-chip");
-    if (chip) {
-      if (chip.hasAttribute("data-app")) openApp(chip.getAttribute("data-app"));
-      else openScale(chip.getAttribute("data-scale"));
+    // Controles del calculador inline (escalas y apps)
+    var ctl = e.target.closest("[data-reset],[data-bin],[data-item],[data-class],[data-app-opt]");
+    if (ctl && ctl.closest(".calc-inline")) {
+      var cpanel = ctl.closest(".calc-inline");
+      if (appState) {
+        if (ctl.hasAttribute("data-reset")) { appState.num = {}; appState.sel = {}; cpanel.innerHTML = appInnerHTML(); return; }
+        if (ctl.hasAttribute("data-app-opt")) { appState.sel[ctl.getAttribute("data-app-grp")] = +ctl.getAttribute("data-app-opt"); cpanel.innerHTML = appInnerHTML(); return; }
+        return;
+      }
+      if (calc) {
+        if (ctl.hasAttribute("data-reset")) { calc.sel = {}; calc.cls = null; calc.num = {}; cpanel.innerHTML = calcInnerHTML(); return; }
+        if (ctl.hasAttribute("data-bin")) { var b = ctl.getAttribute("data-bin"); calc.sel[b] = !calc.sel[b]; cpanel.innerHTML = calcInnerHTML(); return; }
+        if (ctl.hasAttribute("data-item")) { calc.sel[ctl.getAttribute("data-item")] = +ctl.getAttribute("data-opt"); cpanel.innerHTML = calcInnerHTML(); return; }
+        if (ctl.hasAttribute("data-class")) { calc.cls = +ctl.getAttribute("data-class"); cpanel.innerHTML = calcInnerHTML(); return; }
+      }
       return;
     }
+    // Abrir / plegar escala o app inline
+    var chip = e.target.closest(".scale-chip");
+    if (chip) { var sitem = chip.closest(".scale-item"); if (sitem) toggleScaleItem(sitem); return; }
 
     var gt = e.target.closest(".tx-group-toggle");
     if (gt) { var grp = gt.closest(".tx-group"); grp.setAttribute("data-open", grp.getAttribute("data-open") === "1" ? "0" : "1"); return; }
@@ -1043,12 +1030,25 @@
     }
   });
 
-  // Filtros en índices (fármacos / escalas)
+  // Filtros en índices (fármacos / escalas) y entradas numéricas del calculador inline
   $topic.addEventListener("input", function (e) {
     if (e.target.id === "drug-filter") {
-      var dl = document.getElementById("drug-list"); if (dl) dl.innerHTML = drugListHTML(e.target.value);
-    } else if (e.target.id === "scale-filter") {
-      var sl = document.getElementById("scale-list"); if (sl) sl.innerHTML = scaleListHTML(e.target.value);
+      var dl = document.getElementById("drug-list"); if (dl) dl.innerHTML = drugListHTML(e.target.value); return;
+    }
+    if (e.target.id === "scale-filter") {
+      var sl = document.getElementById("scale-list"); if (sl) sl.innerHTML = scaleListHTML(e.target.value); return;
+    }
+    var inp = e.target.closest(".calc-num-input");
+    if (!inp) return;
+    var panel = inp.closest(".calc-inline"); if (!panel) return;
+    if (appState) {
+      appState.num[inp.getAttribute("data-app-num")] = inp.value;
+      var ar = panel.querySelector(".calc-result"); if (ar) ar.outerHTML = appResultHTML();
+      return;
+    }
+    if (calc && calc.scale.tipo === "formula") {
+      calc.num[inp.getAttribute("data-num")] = inp.value;
+      var r = panel.querySelector(".calc-result"); if (r) r.outerHTML = formulaFoot(calc.scale);
     }
   });
 
@@ -1082,7 +1082,7 @@
 
   document.addEventListener("keydown", function (e) {
     if ((e.metaKey || e.ctrlKey) && (e.key === "k" || e.key === "K")) { e.preventDefault(); openSearch(); return; }
-    if (e.key === "Escape") { if (calc) closeScale(); else if (!$searchPanel.hidden) closeSearch(); }
+    if (e.key === "Escape") { if (calc || appState) closeInlineCalc(); else if (!$searchPanel.hidden) closeSearch(); }
   });
 
   /* ---------- Botón atrás ---------- */
