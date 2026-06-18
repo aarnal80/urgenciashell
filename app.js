@@ -194,8 +194,8 @@
     html += '<div class="t-head">';
     html += '<div class="t-cat">' + esc(t.categoria || "") + "</div>";
     html += '<h1 class="t-title">' + esc(t.title) + "</h1>";
-    html += '<span class="t-status ' + esc(t.status) + '">' +
-      (t.status === "revisado" ? "Revisado" : "Borrador IA") + "</span>";
+    if (t.status === "revisado")
+      html += '<span class="t-status revisado">Revisado</span>';
     html += "</div>";
 
     // Briefing — abierto por defecto si el tema no tiene Plan de trabajo
