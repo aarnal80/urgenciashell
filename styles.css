@@ -743,6 +743,12 @@ mark { background: var(--yellow); color: #1c1206; border-radius: 3px; padding: 0
   .scales, .connections, .crit, .drug-list { grid-template-columns: 1fr 1fr; }
   .about-stats { gap: 12px; }
 
+  /* Índice: la parte/categoría expandida ocupa todo el ancho y reparte sus temas en columnas */
+  .part-group[data-open="1"] { grid-column: 1 / -1; }
+  .part-group[data-open="1"] .part-topics,
+  .cat-group[data-open="1"] .cat-topics { column-count: 2; column-gap: 24px; }
+  .tl-part, .topic-link { break-inside: avoid; }
+
   /* la calculadora / apps pasan a diálogo centrado */
   .modal-overlay { align-items: center; padding: 28px; animation: fade .15s ease; }
   .modal { max-width: 480px; max-height: 86dvh; border-radius: 18px; animation: fade .15s ease; }
@@ -751,10 +757,19 @@ mark { background: var(--yellow); color: #1c1206; border-radius: 3px; padding: 0
 @media (min-width: 1100px) {
   :root { --maxw: 880px; }
   .parts { grid-template-columns: 1fr 1fr 1fr; }
+  .part-group[data-open="1"] .part-topics,
+  .cat-group[data-open="1"] .cat-topics { column-count: 3; }
   .hero-title { font-size: 32px; }
-  /* el contenido de lectura del tema no se estira en exceso */
-  .t-head, .block, .tx, .briefing, .plan, .flags, .bib { max-width: 760px; }
+  /* el contenido de lectura del tema no se estira en exceso y queda centrado */
+  .t-head, .block, .tx, .briefing, .plan, .flags, .bib { max-width: 760px; margin-left: auto; margin-right: auto; }
   .scales, .connections, .crit, .drug-list { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1500px) {
+  :root { --maxw: 1040px; }
+  .parts { grid-template-columns: 1fr 1fr 1fr 1fr; }
+  .part-group[data-open="1"] .part-topics,
+  .cat-group[data-open="1"] .cat-topics { column-count: 4; }
 }
 
 /* puntero fino (ratón): realce sutil al pasar por encima */
