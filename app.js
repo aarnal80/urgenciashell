@@ -574,7 +574,7 @@
     html += '<span class="t-cat" style="background:' + catColor + '">' + esc(catDisplay(t.categoria)) + "</span>";
     html += '<h1 class="t-title">' + esc(t.title) + "</h1>";
     html += '<div class="ystripe"></div>';
-    if (t.status === "revisado") html += '<span class="t-status">Revisado</span>';
+    if (t.status && t.status.indexOf("revisado") === 0) html += '<span class="t-status">Revisado</span>';
     html += "</div>";
 
     if ((t.briefing || []).length) {

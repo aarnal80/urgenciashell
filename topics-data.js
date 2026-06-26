@@ -2422,16 +2422,21 @@ window.TOPICS = [
     "number": 23,
     "title": "Fibrilación y flúter auriculares. Arritmias auriculoventriculares y arritmias ventriculares",
     "categoria": "Urgencias Cardiovasculares",
-    "status": "borrador_ia",
+    "status": "revisado_esc_2024",
+    "biblio_extra": [
+      "Van Gelder IC, Rienstra M, Bunting KV, et al. 2024 ESC Guidelines for the management of atrial fibrillation developed in collaboration with the EACTS (Sociedad Europea de Cardiología, ESC). Eur Heart J. 2024;45(36):3314-3414."
+    ],
     "briefing": [
       "La fibrilación auricular (FA) es la arritmia sostenida más frecuente (1-2% de la población), responsable del 3,6% de las urgencias generales y del 10% de los ingresos médicos; multiplica por cinco el riesgo de ictus.",
       "El flúter auricular (FLA) tiene menor prevalencia pero es inestable y suele progresar a FA; ambas arritmias comparten esquemas terapéuticos urgentes con matices en dosis y respuesta a la cardioversión.",
       "El manejo urgente depende de la frecuencia ventricular (lenta, normal o rápida), la estabilidad hemodinámica, la duración del episodio (<48 h o >48 h/desconocida) y la existencia de cardiopatía estructural significativa o insuficiencia cardíaca.",
+      "La ESC 2024 estructura el manejo de la FA con el esquema AF-CARE: [C] tratar comorbilidades y factores de riesgo (HTA, IC, tiroides, alcohol, sepsis); [A] evitar el ictus y la tromboembolia (anticoagulación por CHA2DS2-VA, ACOD preferido); [R] reducir síntomas con control de frecuencia y de ritmo; [E] evaluación y reevaluación dinámica del riesgo.",
       "Las taquicardias ventriculares sostenidas (incluidas las torsades de pointes) y las arritmias de la unión AV sintomáticas requieren actuación urgente con fármacos específicos o cardioversión eléctrica urgente (CEU).",
-      "La anticoagulación es un pilar fundamental en FA/FLA: se estratifica según riesgo tromboembólico (CHA2DS2-VASc) y hemorrágico (HASBLED), y diferencia entre FA valvular (AVK, INR 2,5-3,5) y no valvular (ACOD o AVK, INR 2-3)."
+      "La anticoagulación es un pilar fundamental en FA/FLA: la ESC 2024 estratifica el riesgo tromboembólico con la escala CHA2DS2-VA (sustituye a CHA2DS2-VASc; se elimina la categoría sexo del cómputo, aunque el sexo sigue modulando el riesgo). Anticoagulación oral si CHA2DS2-VA ≥ 2 (Clase I) y a considerar si = 1 (Clase IIa); no anticoagular si = 0. Los ACOD/DOAC son preferidos sobre los AVK en pacientes elegibles (Clase I). Reserva los AVK (INR 2,5-3,5) para la estenosis mitral moderada-grave o la prótesis valvular mecánica; en el resto, ACOD preferido (AVK INR 2-3 solo si el ACOD no es elegible)."
     ],
     "red_flags": [
-      "Inestabilidad hemodinámica (shock cardiogénico, edema agudo de pulmón, síncope): indicación de cardioversión eléctrica urgente (CEU) inmediata.",
+      "Inestabilidad hemodinámica (shock cardiogénico, edema agudo de pulmón, síncope): indicación de cardioversión eléctrica urgente (CEU) inmediata (Clase I).",
+      "Cardioversión y duración (ESC 2024): en el paciente estable, considerar esperar la conversión espontánea ('wait-and-see') dentro de las 48 h (Clase IIa); si se opta por cardioversión precoz y la FA dura > 24 h, no realizarla sin anticoagulación adecuada o ETE previa que descarte trombo. Si FA > 48 h o de duración incierta: anticoagulación ≥ 3 semanas previa (o ETE). Tras cualquier cardioversión: anticoagulación ≥ 4 semanas.",
       "FA con síndrome de Wolff-Parkinson-White: QRS >0,12 s y frecuencia ventricular >200 lat/min; riesgo de fibrilación ventricular.",
       "Taquicardia ventricular sostenida monomorfa con deterioro hemodinámico: CEU prioritaria.",
       "Torsades de pointes: riesgo de evolución a fibrilación ventricular; requiere corrección inmediata de QTc y sulfato de magnesio IV.",
@@ -2449,7 +2454,7 @@ window.TOPICS = [
         "drug_id": "metoprolol",
         "dosis": "100 mg/12 h VO; o 2,5 mg IV (diluir 1 ampolla de 5 mg en 15 mL de SSF, 1 mg/4 mL, administrar 10 mL en 4 min); repetir cada 10 min hasta control, efectos secundarios o dosis máxima total de 15 mg (3 ampollas)",
         "via": "VO o IV",
-        "notas": "Requiere monitorización ECG continua si IV. No combinar con verapamilo ni diltiazem IV."
+        "notas": "Requiere monitorización ECG continua si IV. No combinar con verapamilo ni diltiazem IV. ESC 2024: objetivo de frecuencia cardiaca en reposo < 110 lpm (control laxo), más estricto solo si persisten síntomas. Betabloqueante, diltiazem, verapamilo o digoxina de primera elección si FEVI > 40% (Clase I); si FEVI ≤ 40%, preferir betabloqueante y/o digoxina y evitar verapamilo/diltiazem."
       },
       {
         "escenario": "Control de frecuencia ventricular",
@@ -2590,7 +2595,7 @@ window.TOPICS = [
       },
       {
         "escenario": "Anticoagulación",
-        "indicacion": "FA/FLA con estenosis mitral moderada/grave o prótesis valvular mecánica; anticoagulación permanente con AVK (INR objetivo 2,5-3,5). Puente inicial con HBPM (enoxaparina 1 mg/kg/12 h SC 48 h) + acenocumarol",
+        "indicacion": "FA/FLA con estenosis mitral moderada/grave o prótesis valvular mecánica; anticoagulación permanente con AVK (INR objetivo 2,5-3,5). Puente inicial con HBPM (enoxaparina 1 mg/kg/12 h SC 48 h) + acenocumarol. ESC 2024: los AVK quedan como segunda línea, solo si el ACOD no es elegible (estenosis mitral moderada-grave o prótesis mecánica); el ACOD es preferido en el resto (Clase I); no usar dosis reducida de ACOD salvo criterios específicos del fármaco (Clase III) ni combinar con antiagregantes sin indicación",
         "farmaco": "Acenocumarol",
         "drug_id": "acenocumarol",
         "dosis": "3 mg/24 h VO inicial (ajustar según INR; objetivo INR 2,5-3,5 en valvular o 2-3 en no valvular)",
@@ -3002,13 +3007,16 @@ window.TOPICS = [
     "number": 26,
     "title": "Síndrome coronario agudo",
     "categoria": "Urgencias Cardiovasculares",
-    "status": "borrador_ia",
+    "status": "revisado_esc_2023",
     "briefing": [
       "El síndrome coronario agudo (SCA) engloba el infarto agudo de miocardio y la angina inestable, causados por una reducción aguda del flujo coronario, habitualmente por rotura de placa aterosclerótica con trombosis.",
       "Se clasifica según el ECG en SCACEST (con elevación persistente del ST > 20 min, que requiere reperfusión urgente) y SCASEST (sin elevación persistente del ST, donde la fibrinólisis está contraindicada).",
-      "El diagnóstico se basa en la triada clínica, ECG de 12 derivaciones en los primeros 10 minutos y troponinas cardíacas de alta sensibilidad (hs-cTn); en el SCACEST no se espera el resultado de los biomarcadores para iniciar la reperfusión.",
+      "El diagnóstico se basa en la triada clínica, ECG de 12 derivaciones en los primeros 10 minutos y troponinas cardíacas de alta sensibilidad (hs-cTn) aplicando el algoritmo rápido 0 h/1 h (alternativa 0 h/2 h) para confirmar o descartar el infarto; en el SCACEST no se espera el resultado de los biomarcadores para iniciar la reperfusión.",
       "La estratificación del riesgo isquémico (escala GRACE) y hemorrágico (escala CRUSADE) determina la urgencia de la revascularización y el régimen antitrombótico.",
-      "El tiempo es músculo: el objetivo en el SCACEST es ICPp en menos de 120 min desde el primer contacto médico (FMC), o fibrinólisis en menos de 10 min si la ICP no está disponible en ese tiempo."
+      "En el SCASEST, el momento de la coronariografía depende del riesgo: muy alto riesgo (inestabilidad hemodinámica o shock, dolor torácico refractario, arritmias ventriculares o parada, complicación mecánica, insuficiencia cardíaca por SCA o cambios dinámicos del ST/T) → angiografía inmediata (< 2 h); alto riesgo (NSTEMI confirmado, cambios dinámicos del ST/T o GRACE > 140) → estrategia invasiva precoz (< 24 h).",
+      "El tiempo es músculo: el objetivo en el SCACEST es ICPp en menos de 120 min desde el primer contacto médico (FMC), o fibrinólisis en menos de 10 min si la ICP no está disponible en ese tiempo.",
+      "No administrar oxígeno de forma rutinaria: solo si SpO₂ < 90% (evitar la hiperoxia).",
+      "El MINOCA (infarto con arterias coronarias no obstructivas) es un diagnóstico de trabajo que obliga a buscar la causa subyacente (vasoespasmo, disección coronaria espontánea, embolia, miocarditis o síndrome de Takotsubo) y no asumir aterotrombosis clásica."
     ],
     "red_flags": [
       "Elevación persistente del segmento ST o BCRI nuevo/presumiblemente nuevo: indica SCACEST y terapia de reperfusión urgente.",
@@ -3018,7 +3026,8 @@ window.TOPICS = [
       "Dolor torácico refractario a 3 dosis de nitroglicerina sublingual y a analgesia opioide: angina refractaria, indicación de ICP urgente (< 2 h).",
       "IAM de ventrículo derecho con hipotensión: contraindicados nitratos, diuréticos e IECA; requiere cargas de volumen.",
       "Complicaciones mecánicas: rotura de pared libre ventricular (taponamiento), rotura del tabique interventricular o rotura del músculo papilar (insuficiencia mitral aguda con edema de pulmón), todas de tratamiento quirúrgico urgente.",
-      "Puntuación GRACE > 140: riesgo isquémico alto; ICP precoz en menos de 24 h obligatoria."
+      "Puntuación GRACE > 140: riesgo isquémico alto; ICP precoz en menos de 24 h obligatoria.",
+      "Criterios de muy alto riesgo en SCASEST (inestabilidad hemodinámica o shock, dolor refractario, arritmias ventriculares o parada, complicación mecánica, insuficiencia cardíaca aguda por SCA, cambios dinámicos del ST/T): angiografía inmediata (< 2 h), igual que un SCACEST."
     ],
     "tratamiento": [
       {
@@ -3029,7 +3038,7 @@ window.TOPICS = [
         "drug_id": "morfina",
         "dosis": "2 mg/min IV hasta cese del dolor o dosis máxima total de 10 mg; si persiste dolor a los 10 min, repetir la dosis. Infusión continua si necesario: 40 µg/min (40 mg diluidos en 250 mL de glucosado 5%, 5 gotas/min = 15 mL/h)",
         "via": "IV",
-        "notas": "Diluir 10 mg en 9 mL de suero salino (1 mL = 1 mg), infundir 2 mL/min. Usar con precaución en IAM inferior/vagotonía/BAV; asociar atropina o sustituir por meperidina. Contraindicada en IAM de ventrículo derecho (usar con extrema precaución)."
+        "notas": "Diluir 10 mg en 9 mL de suero salino (1 mL = 1 mg), infundir 2 mL/min. Usar con precaución en IAM inferior/vagotonía/BAV; asociar atropina o sustituir por meperidina. Contraindicada en IAM de ventrículo derecho (usar con extrema precaución). Los opioides retrasan la absorción de los antiagregantes orales (P2Y12); reservar para dolor intenso persistente."
       },
       {
         "escenario": "Analgesia",
@@ -3151,21 +3160,22 @@ window.TOPICS = [
       {
         "escenario": "Antiagregación",
         "preferencia": "eleccion",
-        "indicacion": "Doble antiagregación en SCASEST de riesgo isquémico intermedio o alto, y en SCACEST (asociado a AAS)",
+        "indicacion": "Segundo antiagregante (con AAS): en SCACEST administrar al diagnóstico; en SCASEST que va a ICP, alternativa al prasugrel",
         "farmaco": "Ticagrelor",
         "drug_id": "ticagrelor",
         "dosis": "Dosis inicial 180 mg (2 comprimidos de 90 mg) VO; mantenimiento 90 mg/12 h VO",
         "via": "VO",
-        "notas": "Contraindicado en pacientes en diálisis. No precisa ajuste en insuficiencia renal. Puede usarse en pacientes ya tratados con clopidogrel."
+        "notas": "ESC 2023: en SCASEST con estrategia invasiva precoz y anatomía coronaria desconocida NO se recomienda el pretratamiento sistemático con inhibidor del P2Y12 (Clase III); se administra en hemodinámica al conocer la anatomía. No desescalar la doble antiagregación en los primeros 30 días. Contraindicado en diálisis; no precisa ajuste en insuficiencia renal; puede usarse en pacientes ya tratados con clopidogrel."
       },
       {
         "escenario": "Antiagregación",
-        "indicacion": "Doble antiagregación en SCASEST de riesgo isquémico intermedio o alto sin gran riesgo hemorrágico, especialmente si se prevé ICP",
+        "preferencia": "eleccion",
+        "indicacion": "Inhibidor P2Y12 preferido (sobre ticagrelor) en SCASEST que va a ICP (ESC 2023, Clase IIa); administrar al conocer la anatomía coronaria",
         "farmaco": "Prasugrel",
         "drug_id": "prasugrel",
         "dosis": "Dosis inicial 60 mg VO; mantenimiento 10 mg/24 h VO (5 mg/24 h en > 75 años o peso < 60 kg)",
         "via": "VO",
-        "notas": "Contraindicado si antecedente de ACV. No usar si riesgo hemorrágico alto o muy alto."
+        "notas": "Contraindicado si antecedente de ictus/AIT. No usar si riesgo hemorrágico alto o muy alto. ESC 2023: no se recomienda el pretratamiento antes de conocer la anatomía coronaria en SCASEST con estrategia invasiva precoz."
       },
       {
         "escenario": "Antiagregación",
@@ -3192,7 +3202,7 @@ window.TOPICS = [
         "indicacion": "Anticoagulación inicial en SCASEST y en SCACEST si se prevé ICPp urgente o precoz",
         "farmaco": "Heparina sódica",
         "drug_id": "heparina_sodica",
-        "dosis": "100 UI/kg IV (máximo 5.000 UI)",
+        "dosis": "70-100 UI/kg IV (máximo 5.000 UI)",
         "via": "IV",
         "notas": "Contraindicado fondaparinux si se realiza ICP urgente. No administrar si ya se realiza ICP urgente."
       },
@@ -3254,7 +3264,7 @@ window.TOPICS = [
         "drug_id": "atorvastatina",
         "dosis": "80 mg/24 h VO",
         "via": "VO",
-        "notas": "Objetivo LDL < 70 mg/dL. Contraindicada en insuficiencia hepática y rabdomiólisis."
+        "notas": "Objetivo LDL < 55 mg/dL y reducción ≥ 50% del basal (ESC 2023). Contraindicada en insuficiencia hepática y rabdomiólisis."
       },
       {
         "escenario": "Estatinas",
@@ -3347,6 +3357,9 @@ window.TOPICS = [
       "grace",
       "crusade",
       "killip"
+    ],
+    "biblio_extra": [
+      "Byrne RA, Rossello X, Coughlan JJ, et al. 2023 ESC Guidelines for the management of acute coronary syndromes (Sociedad Europea de Cardiología, ESC). Eur Heart J. 2023;44(38):3720-3826."
     ],
     "conexiones": [
       {
@@ -5447,12 +5460,15 @@ window.TOPICS = [
     "number": 40,
     "title": "Ataque de asma",
     "categoria": "Urgencas del Aparato Respiratorio",
-    "status": "borrador_ia",
+    "status": "revisado_gina_2025",
+    "biblio_extra": [
+      "Global Initiative for Asthma (GINA). Global Strategy for Asthma Management and Prevention, 2025 update. ginasthma.org"
+    ],
     "briefing": [
       "El ataque de asma (agudizacion, crisis o exacerbacion) es un episodio de empeoramiento de la situacion basal del paciente que requiere modificar el tratamiento, identificado por cambios en los sintomas, en la medicacion de alivio o en la funcion pulmonar.",
       "Existen dos tipos segun el tiempo de instauracion: lenta (dias/semanas, 80% de las consultas a urgencias, mecanismo inflamatorio, respuesta lenta) y rapida (< 3 h, broncoconstriccion, mayor mortalidad inicial pero respuesta mas rapida al tratamiento).",
       "La gravedad se clasifica en cuatro niveles (leve, moderado, grave y riesgo vital) en funcion de sintomas, frecuencia respiratoria, uso de musculos accesorios, PEF/FEV1, SpO2 y estado de conciencia; el escalon mas grave con al menos un criterio marca la categoria.",
-      "El objetivo terapeutico principal es preservar la vida y revertir la agudizacion lo antes posible: corregir la hipoxemia, resolver la obstruccion con broncodilatadores y reducir la inflamacion con corticoides sistemicos.",
+      "El objetivo terapeutico principal es preservar la vida y revertir la agudizacion lo antes posible: corregir la hipoxemia (objetivo SatO2 93-95% en el adulto segun GINA 2025), resolver la obstruccion con broncodilatadores de accion corta repetidos y reducir la inflamacion con corticoides sistemicos administrados en la primera hora.",
       "Tras 2-3 h de tratamiento en urgencias se decide el destino del paciente; la respuesta favorable se define por PEF o FEV1 > 45% del teorico a los 30 min con un incremento minimo de 50 L/min sobre el valor basal."
     ],
     "red_flags": [
@@ -5469,11 +5485,11 @@ window.TOPICS = [
     "tratamiento": [
       {
         "escenario": "Oxigenoterapia",
-        "indicacion": "Crisis grave: mantener SpO2 > 92% (> 95% en embarazadas o enfermedad cardiaca); no superar 31% si se desconoce la SpO2 para evitar hipercapnia",
+        "indicacion": "Crisis moderada-grave: oxigenoterapia controlada con objetivo de SatO2 93-95% en el adulto (GINA 2025); en ninos de 6-11 anos el objetivo es 94-98%. A diferencia de la EPOC, en el asma no se busca un objetivo restrictivo 88-92%",
         "farmaco": "Oxigeno",
         "drug_id": "oxigeno",
-        "dosis": "FiO2 necesaria para SpO2 > 92%; habitualmente 28-32%; no superar 31% si SpO2 desconocida",
-        "via": "Mascarilla Venturi o mascarilla con reservorio"
+        "dosis": "Titular el flujo/FiO2 para mantener SatO2 93-95% (adulto); reevaluar con pulsioximetria y gasometria si fatiga o sospecha de hipercapnia",
+        "via": "Mascarilla Venturi o gafas nasales segun objetivo"
       },
       {
         "escenario": "Fluidoterapia",
@@ -5505,10 +5521,10 @@ window.TOPICS = [
       {
         "escenario": "Corticoterapia sistemica",
         "preferencia": "eleccion",
-        "indicacion": "Crisis leve: pauta corta oral",
+        "indicacion": "Crisis leve-moderada: corticoide sistemico oral precoz (en la primera hora; GINA 2025)",
         "farmaco": "Prednisona",
         "drug_id": "prednisona",
-        "dosis": "0,5-1 mg/kg/24 h (maximo 50 mg), en una sola toma al dia preferiblemente matutina, durante 5-7 dias, sin descenso gradual posterior",
+        "dosis": "40-50 mg/24 h VO (equivalente a 0,5-1 mg/kg, maximo 50 mg) en dosis unica matutina, durante 5-7 dias, sin descenso gradual posterior (GINA 2025)",
         "via": "VO"
       },
       {
@@ -5567,15 +5583,15 @@ window.TOPICS = [
       },
       {
         "escenario": "Broncodilatacion",
-        "indicacion": "Crisis moderada-grave con obstruccion muy grave (FEV1 < 20%): unica indicacion con eficacia demostrada",
+        "indicacion": "Crisis grave con respuesta insuficiente al tratamiento inicial (SABA + corticoide sistemico); mayor beneficio cuanto menor la funcion pulmonar (FEV1 <30-50%) (GINA 2025). No se recomienda el sulfato de magnesio nebulizado",
         "farmaco": "Sulfato de magnesio",
         "drug_id": "sulfato_de_magnesio",
-        "dosis": "2 g (13-14 mL de ampollas de 10 mL con 1.500 mg) en dosis unica, diluidos en 100 mL de solucion glucosada al 5%, infundidos en 15 min",
+        "dosis": "2 g IV en dosis unica, diluidos en 100 mL de solucion glucosada al 5%, infundidos en 20 min (GINA 2025)",
         "via": "IV"
       },
       {
         "escenario": "Broncodilatacion",
-        "indicacion": "Tratamiento domiciliario de rescate: sintomas a demanda, nunca pautado",
+        "indicacion": "Tratamiento domiciliario de rescate: GINA 2025 desaconseja el SABA en monoterapia y prioriza CSI-formoterol como aliviador (MART/AIR). Reservar salbutamol solo a demanda si el paciente no dispone de CSI-formoterol, nunca como unico tratamiento",
         "farmaco": "Salbutamol inhalado",
         "drug_id": "salbutamol",
         "dosis": "2 inhalaciones (100 µg/inhalacion) a demanda",
@@ -5648,7 +5664,7 @@ window.TOPICS = [
     ],
     "criterios_ingreso": [
       "Ingreso en observacion de urgencias: paciente sintomatico a pesar del tratamiento instaurado",
-      "Ingreso en observacion de urgencias: necesidad de oxigeno suplementario para mantener SpO2 > 92% (o > 95% en embarazada o insuficiencia cardiaca)",
+      "Ingreso en observacion de urgencias: necesidad de oxigeno suplementario para mantener el objetivo de SatO2 93-95% (GINA 2025), o SatO2 que no alcanza ese rango pese a oxigenoterapia",
       "Ingreso en observacion de urgencias: disminucion persistente de la funcion pulmonar (PEF o FEV1 < 40%)",
       "Ingreso en UCI: obstruccion muy grave de la via aerea con deterioro clinico",
       "Ingreso en UCI: agotamiento",
@@ -5687,20 +5703,24 @@ window.TOPICS = [
     "number": 41,
     "title": "EPOC agudizada",
     "categoria": "Urgencas del Aparato Respiratorio",
-    "status": "borrador_ia",
+    "status": "revisado_gold_2025",
+    "biblio_extra": [
+      "Global Initiative for Chronic Obstructive Lung Disease (GOLD). Global Strategy for the Prevention, Diagnosis and Management of COPD: 2025 Report. goldcopd.org"
+    ],
     "briefing": [
       "La EPOC agudizada es el empeoramiento de inicio relativamente rápido de la sintomatología habitual del paciente con EPOC, que requiere un cambio adicional en el tratamiento.",
       "Es una causa frecuente de atención urgente e ingreso hospitalario, con alta mortalidad asociada, especialmente en las formas graves y muy graves.",
       "La infección es la causa más frecuente (50-75% de los casos), mayoritariamente vírica, aunque en el 30% de los casos es de origen bacteriano.",
-      "La gravedad se estratifica en leve, moderada, grave y muy grave (amenaza vital) según criterios clínicos y gasométricos, lo que condiciona directamente la decisión de ingreso y el soporte ventilatorio.",
-      "El tratamiento se apoya en oxigenoterapia controlada, broncodilatadores nebulizados, corticoides sistémicos y antibioticoterapia empírica cuando está indicada, junto con soporte ventilatorio no invasivo en los casos que lo requieran."
+      "GOLD 2025 estratifica la agudización según la intervención necesaria: leve (solo broncodilatadores de acción corta), moderada (SABA + antibióticos y/o corticoides orales) y grave (precisa urgencias u hospitalización, a menudo con insuficiencia respiratoria aguda); la categoría muy grave/amenaza vital se reserva para el fallo respiratorio con criterios de UCI.",
+      "El tratamiento se apoya en oxigenoterapia controlada, broncodilatadores nebulizados, corticoides sistémicos y antibioticoterapia empírica cuando está indicada, junto con soporte ventilatorio no invasivo en los casos que lo requieran.",
+      "GOLD 2025: el recuento de eosinófilos en sangre ayuda a guiar la corticoterapia; cifras bajas (aprox. < 100 células/µL [verificar umbral local]) predicen escasa respuesta a corticoides sistémicos y mayor riesgo de neumonía, por lo que apoyan acortar o evitar el ciclo."
     ],
     "red_flags": [
       "Disnea de grado IV (MRC) con fatiga de musculatura accesoria sin respuesta al tratamiento o parada respiratoria.",
       "Inestabilidad hemodinámica con necesidad de fármacos vasopresores.",
       "Disminución del estado de conciencia (estupor o coma).",
       "Empeoramiento de hipoxemia (PaO2 < 40 mmHg) a pesar de oxígeno y VMNI, con acidosis respiratoria grave (pH < 7,25).",
-      "Acidosis respiratoria moderada (pH: 7,30-7,35) como criterio de gravedad.",
+      "Acidosis respiratoria hipercápnica (pH ≤ 7,35 con PaCO2 ≥ 45 mmHg): criterio GOLD 2025 de inicio precoz de VMNI.",
       "Cianosis de nueva aparición o edemas periféricos de nueva aparición.",
       "Encefalopatía hipercápnica: cefalea, irritabilidad, agitación, somnolencia o alteración del nivel de conciencia.",
       "Fracaso de VMNI (ausencia de mejoría de pH < 7,25 tras 1-2 h de ventilación)."
@@ -5822,7 +5842,7 @@ window.TOPICS = [
         "indicacion": "EPOC agudizada que requiere atención urgente — casos menos graves con tolerancia oral",
         "farmaco": "Prednisona",
         "drug_id": "prednisona",
-        "dosis": "40 mg/24 h durante 5 días (máximo 7 días), en dosis única diaria matutina; suspender sin descenso gradual",
+        "dosis": "40 mg/24 h durante 5 días, en dosis única diaria matutina; suspender sin descenso gradual. GOLD 2025 no recomienda prolongar el ciclo: cursos más largos aumentan el riesgo de neumonía y mortalidad sin beneficio adicional",
         "via": "VO"
       },
       {
@@ -5846,7 +5866,7 @@ window.TOPICS = [
       {
         "escenario": "Antibioterapia",
         "preferencia": "eleccion",
-        "indicacion": "Agudización con esputo purulento — EPOC grado I-II (FEV1 > 50%) sin comorbilidad ni riesgo de Pseudomonas",
+        "indicacion": "Antibiótico indicado (criterios de Anthonisen, GOLD 2025): los 3 síntomas cardinales (más disnea + más volumen + purulencia del esputo), o 2 de ellos incluyendo purulencia, o necesidad de ventilación mecánica (invasiva o no invasiva). Pauta para EPOC grado I-II (FEV1 > 50%) sin comorbilidad ni riesgo de Pseudomonas",
         "farmaco": "Amoxicilina-ácido clavulánico",
         "drug_id": "amoxicilina_acido_clavulanico",
         "dosis": "875 + 125 mg/8 h VO, o 1.000 + 62,5 mg/8 h VO, o 2.000 + 200 mg/12 h IV, durante 7 días",
@@ -10571,13 +10591,14 @@ window.TOPICS = [
     "number": 64,
     "title": "Ictus",
     "categoria": "Urgencias Neurológicas",
-    "status": "borrador_ia",
+    "status": "revisado_eso_2021",
     "briefing": [
       "El ictus cerebral engloba el infarto cerebral y la hemorragia intraparenquimatosa no traumática; es la enfermedad neurológica más frecuente (200 casos/100.000 hab/año) y la primera causa de discapacidad grave en el adulto.",
       "Se trata de una emergencia médica dependiente del tiempo: el Código Ictus (prioridad I) permite activar una vía rápida prehospitalaria y hospitalaria orientada a la reperfusión precoz.",
       "El AIT constituye también una urgencia médica por su alto riesgo de ictus en las primeras 48 h (hasta 50% de los eventos en ese período); requiere evaluación y neuroimagen en menos de 24 h.",
       "La distinción entre ictus isquémico y hemorrágico es imprescindible antes de cualquier tratamiento, ya que la TC craneal urgente es la única exploración que permite diferenciarlos con certeza.",
-      "El tiempo puerta-inicio de fibrinólisis debe ser inferior a 60 min; la demora en la reperfusión aumenta directamente la mortalidad y la discapacidad."
+      "El tiempo puerta-inicio de fibrinólisis debe ser inferior a 60 min; la demora en la reperfusión aumenta directamente la mortalidad y la discapacidad.",
+      "La reperfusión tiene dos vías no excluyentes: trombólisis IV (alteplasa 0,9 mg/kg, o tenecteplasa 0,25 mg/kg si el paciente es candidato a trombectomía) en ventana ≤ 4,5 h —ampliable a ictus del despertar o de inicio desconocido con mismatch DWI-FLAIR, o 4,5–9 h con mismatch de perfusión—, y trombectomía mecánica en la oclusión de gran vaso de circulación anterior hasta 6 h (ventana extendida 6–24 h con mismatch DAWN/DEFUSE-3). No se excluye por edad: el beneficio se mantiene en mayores de 80 años."
     ],
     "red_flags": [
       "Cefalea brusca e intensa con vómitos sin vértigo: orienta a ictus hemorrágico o HSA.",
@@ -10738,12 +10759,30 @@ window.TOPICS = [
       },
       {
         "escenario": "Fibrinólisis",
-        "indicacion": "Ictus isquémico agudo con criterios de inclusión para fibrinólisis IV (v. criterios TOAST), ventana < 24 h o < 12 h para basilar",
+        "preferencia": "eleccion",
+        "indicacion": "Ictus isquémico agudo en ventana ≤ 4,5 h desde el inicio (cumpliendo criterios de inclusión/exclusión de fibrinólisis). Ampliable por neuroimagen: ictus del despertar o de inicio desconocido con mismatch DWI-FLAIR, o 4,5–9 h con mismatch de perfusión (no administrar en 4,5–9 h solo con TC simple)",
         "farmaco": "Alteplasa (rtPA)",
         "drug_id": "alteplasa",
         "dosis": "0,9 mg/kg (dosis máxima 90 mg); preparar dilución 100 mg en 100 mL SSF (1 mg = 1 mL); administrar el 10% de la dosis calculada en bolo IV en 1 min y el resto en infusión IV continua durante 60 min (iniciar 3-5 min tras el bolo)",
         "via": "IV",
-        "notas": "No administrar antiagregantes, heparina ni anticoagulantes en las 24 h siguientes. Monitorizar PA cada 15 min las 2 primeras horas. Detener infusión si cefalea intensa, HTA aguda, náuseas o vómitos"
+        "notas": "Objetivo de TA: < 185/110 mmHg antes de iniciar y < 180/105 mmHg durante las primeras 24 h. El beneficio se mantiene en mayores de 80 años (no excluir por edad). No administrar antiagregantes, heparina ni anticoagulantes en las 24 h siguientes. Monitorizar PA cada 15 min las 2 primeras horas. Detener infusión si cefalea intensa, HTA aguda, náuseas o vómitos"
+      },
+      {
+        "escenario": "Fibrinólisis",
+        "preferencia": "alternativa",
+        "indicacion": "Alternativa a la alteplasa en el ictus isquémico agudo, sugerida especialmente en candidatos a trombectomía por oclusión de gran vaso (ESO 2021)",
+        "farmaco": "Tenecteplasa",
+        "drug_id": "tenecteplasa",
+        "dosis": "0,25 mg/kg en bolo IV único (dosis máxima 25 mg)",
+        "via": "IV",
+        "notas": "Dosis específica para el ictus, distinta de la del IAM. Mismos criterios de ventana, TA y contraindicaciones que la alteplasa. No administrar antiagregantes ni anticoagulantes en las 24 h siguientes."
+      },
+      {
+        "escenario": "Reperfusión: trombectomía mecánica",
+        "preferencia": "eleccion",
+        "indicacion": "Oclusión de gran vaso de la circulación anterior: trombectomía mecánica hasta 6 h desde el inicio; ventana extendida 6–24 h si hay mismatch clínico-radiológico (criterios DAWN) o de imagen (DEFUSE-3, 6–16 h)",
+        "farmaco": "Trombectomía mecánica (procedimiento endovascular)",
+        "notas": "No es excluyente con la trombólisis IV: si el paciente es candidato a ambas, administrar la fibrinólisis sin retrasar el traslado a trombectomía. Requiere confirmación de oclusión de gran vaso por angio-TC/angio-RM y activación de la unidad de ictus / neurointervencionismo (centro de referencia)."
       },
       {
         "escenario": "Tratamiento de complicación hemorrágica por fibrinólisis",
@@ -10852,7 +10891,7 @@ window.TOPICS = [
       },
       {
         "escenario": "Neuroprotección",
-        "indicacion": "Ictus isquémico (evidencia limitada); uso empírico según valoración clínica",
+        "indicacion": "Ictus isquémico: uso empírico. No recomendada de rutina por las guías (ESO): evidencia insuficiente",
         "farmaco": "Citicolina",
         "drug_id": "citicolina",
         "dosis": "1 g/12 h; para IV diluir 2 ampollas de 1 g en 500 mL de glucosalino o SSF, infundir a 7 gotas/min (21 mL/h)",
@@ -10861,7 +10900,7 @@ window.TOPICS = [
       },
       {
         "escenario": "Neuroprotección",
-        "indicacion": "Ictus isquémico (evidencia limitada); uso empírico",
+        "indicacion": "Ictus isquémico: uso empírico. No recomendado de rutina por las guías (ESO): evidencia insuficiente",
         "farmaco": "Nimodipino",
         "drug_id": "nimodipino",
         "dosis": "30 mg/6 h",
@@ -10869,7 +10908,7 @@ window.TOPICS = [
       },
       {
         "escenario": "Neuroprotección",
-        "indicacion": "Ictus isquémico agudo (evidencia limitada); uso empírico",
+        "indicacion": "Ictus isquémico agudo: uso empírico. No recomendado de rutina por las guías (ESO): evidencia insuficiente",
         "farmaco": "Piracetam",
         "drug_id": "piracetam",
         "dosis": "3 g/8 h",
@@ -10888,7 +10927,13 @@ window.TOPICS = [
       "PAD > 140 mmHg que requiera nitroprusiato: ingreso en UCI.",
       "No requieren ingreso (seguimiento en consultas externas): AIT sin sospecha cardioembólica con eco-Doppler supraaórtico sin estenosis significativa; ictus isquémico con deficiencias menores sin necesidad de anticoagulación ni cirugía."
     ],
-    "escalas": [],
+    "escalas": [
+      "nihss"
+    ],
+    "biblio_extra": [
+      "Berge E, Whiteley W, Audebert H, et al. European Stroke Organisation (ESO) guidelines on intravenous thrombolysis for acute ischaemic stroke. Eur Stroke J. 2021;6(1):I-LXII.",
+      "Turc G, Bhogal P, Fischer U, et al. ESO-ESMINT guidelines on mechanical thrombectomy in acute ischaemic stroke. 2019."
+    ],
     "conexiones": [
       {
         "slug": "hemorragia_subaracnoidea_espontanea",
@@ -14702,19 +14747,24 @@ window.TOPICS = [
     "number": 87,
     "title": "Hiperpotasemia",
     "categoria": "Urgencias Endocrinometabólicas",
-    "status": "borrador_ia",
+    "status": "revisado_semes_2022",
+    "biblio_extra": [
+      "Álvarez-Rodríguez E, et al. Recomendaciones para el manejo de la hiperpotasemia en los servicios de urgencias (documento de consenso SEMES-SEC-SEN). Emergencias. 2022;34(4):287-297."
+    ],
     "briefing": [
-      "La hiperpotasemia es la concentración plasmática de potasio superior a 5,5 mEq/L; se clasifica en leve (5,5-6,0 mEq/L), moderada (6,1-7,0 mEq/L) y grave (>7,0 mEq/L).",
-      "La causa más frecuente es el consumo de fármacos como IECA, ARA-II y espironolactona, especialmente en pacientes con insuficiencia renal.",
+      "La hiperpotasemia es la concentración plasmática de potasio superior a 5,5 mEq/L; según el consenso SEMES-SEC-SEN (2022) se clasifica en leve (5,5-5,9 mEq/L), moderada (6,0-6,4 mEq/L) y grave (≥6,5 mEq/L); un K >10 mEq/L suele ser letal.",
+      "La rapidez del cambio del potasio importa más que el valor absoluto: las arritmias pueden ser la primera manifestación incluso con ECG normal.",
+      "La causa más frecuente es el uso de inhibidores del sistema renina-angiotensina-aldosterona (iSRAA: IECA, ARA-II, ARNI y antagonistas del receptor de aldosterona como espironolactona/eplerenona), especialmente en pacientes con insuficiencia renal, insuficiencia cardíaca o diabetes; los antagonistas de aldosterona son los que más hiperpotasemia producen.",
       "Las manifestaciones más graves son debilidad muscular o parálisis y arritmias cardíacas potencialmente mortales (taquicardia ventricular, fibrilación ventricular, asistolia).",
       "El ECG es fundamental: ondas T picudas simétricas, prolongación del PR, ensanchamiento del QRS y desaparición de la onda P son signos progresivos de toxicidad cardíaca.",
-      "La hiperpotasemia puede comportar riesgo vital incluso con ECG normal, y en monitores puede simular bigeminismo (signo de Littmann) al detectar las ondas T altas como complejos QRS."
+      "La hiperpotasemia puede comportar riesgo vital incluso con ECG normal, y en monitores puede simular bigeminismo (signo de Littmann) al detectar las ondas T altas como complejos QRS.",
+      "Antes de tratar debe descartarse la pseudohiperpotasemia (muestra hemolizada, torniquete prolongado, leucocitosis o trombocitosis extremas): repetir la analítica si el valor es inesperado y no concuerda con la clínica ni el ECG."
     ],
     "red_flags": [
       "Alteraciones electrocardiográficas: ondas T picudas, ensanchamiento del QRS, PR largo, desaparición de la onda P.",
       "Arritmias graves: bradicardia sinusal, ritmos idioventriculares, taquicardia ventricular, fibrilación ventricular o asistolia.",
       "Debilidad muscular progresiva o parálisis.",
-      "Potasio mayor de 7,0 mEq/L o incremento agudo rápido (rabdomiólisis, síndrome de lisis tumoral, aplastamiento).",
+      "Potasio ≥6,5 mEq/L (umbral de emergencia hiperpotasémica según SEMES 2022, aunque esté asintomático) o incremento agudo rápido (rabdomiólisis, síndrome de lisis tumoral, aplastamiento).",
       "Asociación con hipoxemia o acidosis metabólica significativa.",
       "Signo de Littmann en el monitor: frecuencia cardíaca detectada el doble de la real por confusión de ondas T altas con QRS (falso bigeminismo).",
       "Paciente en tratamiento con digoxina (riesgo de intoxicación digitálica con gluconato cálcico)."
@@ -14750,21 +14800,21 @@ window.TOPICS = [
       },
       {
         "escenario": "Control glucémico / desplazamiento intracelular de potasio",
-        "indicacion": "Hiperpotasemia moderada; no administrar si glucemia >200 mg/dL",
+        "indicacion": "Hiperpotasemia moderada-grave; administrar insulina sola solo si glucemia >250 mg/dL",
         "farmaco": "Insulina rápida + solución glucosada al 10%",
         "drug_id": "insulina_regular",
-        "dosis": "12 UI de insulina rápida añadidas a 500 mL de solución glucosada al 10%, infundidas en 30 min",
+        "dosis": "10 UI de insulina rápida en 500 mL de solución glucosada al 10% IV en 60 min; alternativa en bolo: 10 UI de insulina rápida + 50 mL de glucosado al 50% (25 g) [verificar pauta local, la previa usaba 12 UI]",
         "via": "IV",
-        "notas": "Inicio de efecto a los 15 min; duración 2-6 h."
+        "notas": "Inicio 10-20 min, pico 30-60 min, duración 4-6 h; reduce el K 0,5-1,2 mEq/L. Vigilar glucemia durante 6 h (riesgo de hipoglucemia). La combinación insulina + salbutamol es más eficaz (descenso ~1,2-1,5 mEq/L)."
       },
       {
         "escenario": "Corrección de acidosis metabólica",
-        "indicacion": "Hiperpotasemia moderada solo si hay acidosis metabólica",
+        "indicacion": "Solo si hay acidosis metabólica; no se recomienda como medida de redistribución de rutina (SEMES 2022)",
         "farmaco": "Bicarbonato sódico 1 M",
         "drug_id": "bicarbonato_sodico",
-        "dosis": "1 mEq (1 mL)/kg, infundido en 5 min; puede repetirse a los 60 min si es necesario",
+        "dosis": "1 mEq (1 mL)/kg, infundido en 5 min; puede repetirse a los 60 min si es necesario [verificar pauta local]",
         "via": "IV",
-        "notas": "Inicio de efecto a los 60 min. Aumenta la efectividad de la insulina en pacientes con acidemia."
+        "notas": "Inicio de efecto lento (~60 min). Indicado para corregir la acidosis subyacente, no como hipopotasemiante aislado. Aumenta la efectividad de la insulina en pacientes con acidemia."
       },
       {
         "escenario": "Aumento de excreción renal de potasio",
@@ -14793,13 +14843,23 @@ window.TOPICS = [
         "dosis": "IV: 0,5 mg (1 ampolla) diluidos en 100 mL de solución salina fisiológica, infundidos en 20 min. Nebulizado: 5-10 mg (1-2 mL), que puede incrementarse hasta 20 mg (4 mL), diluidos en 4 mL de solución salina fisiológica, con flujo de oxígeno de 6-8 L/min durante 10 min",
         "via": "IV o inhalada",
         "notas": "Efecto nebulizado: inicio a los 15-30 min, duración 2-3 h. En cardiopatía, usar con precaución y en la dosis más baja recomendada."
+      },
+      {
+        "escenario": "Eliminación extracorpórea de potasio",
+        "preferencia": "eleccion",
+        "indicacion": "Emergencia hiperpotasémica con insuficiencia renal grave/ERC terminal o hiperpotasemia refractaria al tratamiento",
+        "farmaco": "Hemodiálisis",
+        "dosis": "Sesión urgente; elimina 25-50 mEq de potasio por hora",
+        "via": "extracorpórea",
+        "notas": "Siempre a considerar en la emergencia (SEMES 2022); preferible a la diálisis peritoneal. No demorar la estabilización con calcio ni la redistribución (insulina-glucosa, salbutamol) mientras se organiza."
       }
     ],
     "criterios_ingreso": [
       "Hiperpotasemia grave (>7,0 mEq/L): ingreso en área de observación, especialmente si se asocia a hipoxemia.",
       "Hiperpotasemia con alteraciones electrocardiográficas (ondas T picudas, QRS ancho, PR largo, desaparición de onda P): ingreso en observación.",
       "Hiperpotasemia moderada (6,1-7,0 mEq/L): ingreso en área de observación.",
-      "Hiperpotasemia leve (5,5-6,0 mEq/L): la indicación de ingreso hospitalario depende de la causa desencadenante."
+      "Hiperpotasemia leve (5,5-5,9 mEq/L): la indicación de ingreso hospitalario depende de la causa desencadenante.",
+      "Al alta: controles seriados de K, función renal e iones (preferible analítica en 24 h) y cita con primaria o unidad de IC en <1 semana. Evitar suspender de forma definitiva los iSRAA con beneficio pronóstico; valorar un quelante gastrointestinal (patiromer o ciclosilicato de circonio sódico) para poder mantener o titular el tratamiento crónico necesario."
     ],
     "escalas": [],
     "conexiones": [
@@ -17749,16 +17809,23 @@ window.TOPICS = [
     "number": 107,
     "title": "Sepsis",
     "categoria": "Infecciones en Medicina de Urgencias",
-    "status": "borrador_ia",
+    "status": "revisado_semes_2026",
+    "biblio_extra": [
+      "Julián-Jiménez A, García DE, González del Castillo J, et al. Recomendaciones del GT-LATINFURG para la identificación y atención inicial del paciente con infección grave y sepsis en los servicios de urgencias (SEMES/INFURG-SEMES, FLAME). Emergencias. 2026;38:27-63.",
+      "Evans L, Rhodes A, Alhazzani W, et al. Surviving Sepsis Campaign: International Guidelines for Management of Sepsis and Septic Shock 2021. Crit Care Med. 2021;49(11):e1063-e1143."
+    ],
     "briefing": [
       "La sepsis es una disfunción orgánica potencialmente vital causada por una respuesta desregulada del huésped a la infección, con mortalidad de 1 de cada 3-6 pacientes.",
       "El shock séptico se define por la necesidad de vasopresores para mantener PAM ≥ 65 mmHg a pesar de reposición adecuada de volumen y lactato ≥ 2 mmol/L, con mortalidad superior al 40%.",
-      "Es un proceso dependiente del tiempo: el tratamiento antibiótico debe iniciarse siempre dentro de la primera hora tras la sospecha diagnóstica.",
+      "Perfil de sepsis en la evaluación inicial: medir lactato y procalcitonina (PCT). Lactato ≥ 2 mmol/L predice peor pronóstico y estos pacientes no deben ser dados de alta; PCT ≥ 0,25 ng/mL refuerza la sospecha de infección bacteriana y PCT ≥ 0,51 ng/mL la de bacteriemia concomitante.",
+      "Es un proceso dependiente del tiempo: en shock séptico el antibiótico apropiado debe administrarse dentro de la primera hora de llegada a urgencias (cada hora de retraso reduce la supervivencia ~7,6%); en sepsis/infección grave con sospecha de bacteriemia sin shock, lo antes posible y preferiblemente dentro de las primeras 3 horas. La extracción de hemocultivos no debe retrasar el antibiótico (< 45 min).",
       "El abordaje en urgencias integra simultáneamente estabilización respiratoria y hemodinámica, extracción de hemocultivos e inicio de antibioterapia empírica de amplio espectro.",
-      "Entre el 5-10% de los pacientes que acuden a urgencias por enfermedad infecciosa cumple criterios de sepsis, lo que hace imprescindible su identificación precoz con herramientas como el qSOFA y el SOFA."
+      "Entre el 5-25% de los pacientes que acuden a urgencias por infección cumple criterios de sepsis o shock séptico; >60% de las sepsis se diagnostican en urgencias, lo que hace imprescindible su identificación precoz desde el triaje (tiempo cero) con activación del código sepsis.",
+      "El qSOFA no debe emplearse como única herramienta predictiva. En <65 años se activa el código sepsis ante infección sospechada/confirmada con qSOFA ≥ 2 y/o SIRS ≥ 2 y/o NEWS-2 ≥ 5 (o ≥ 3 puntos en una sola variable); en ≥ 65 años, qSOFA ≥ 2 y/o SIRS ≥ 2 y/o NEWS-2 ≥ 4, añadiendo la escala GYM ≥ 1 (Glasgow < 15, FR > 20 rpm, índice de Charlson ≥ 3) como predictor de mortalidad a 30 días."
     ],
     "red_flags": [
       "Lactato sérico > 4 mmol/L: riesgo de fallo multiorgánico",
+      "Sospecha de bacteriemia: score ≥ 5 en los modelos 5MPB-Toledo o MPB-INFURG-SEMES, o PCT > 0,5 ng/mL → extraer hemocultivos de forma inmediata (antes del antibiótico, sin retrasarlo > 45 min) y valorar técnicas moleculares de diagnóstico microbiológico (TMDM)",
       "Necesidad de vasopresores para mantener PAM ≥ 65 mmHg a pesar de reposición de volumen (criterio de shock séptico)",
       "PAS ≤ 100 mmHg + frecuencia respiratoria ≥ 22 rpm + alteración del nivel de conciencia (Glasgow < 15): qSOFA ≥ 2",
       "Leucocitopenia < 500 células/mm3: dato de mal pronóstico",
@@ -17805,7 +17872,7 @@ window.TOPICS = [
         "drug_id": "noradrenalina",
         "dosis": "Inicio: 0,05 µg/kg/min IV. Incrementar progresivamente hasta dosis máxima de 0,5 µg/kg/min. Dilución: 1 ampolla (10 mg) en 250 mL de glucosado al 5%; velocidad inicial: 6 mL/h (70 kg); máximo: 54 mL/h",
         "via": "IV",
-        "notas": "Objetivo: PAM = 65 mmHg, no superior. Requiere vía venosa central preferentemente."
+        "notas": "Vasopresor de primera línea, de inicio precoz: iniciar en la 1.ª hora si persiste hipotensión durante/tras los fluidos. En las primeras horas puede administrarse por vía venosa periférica de gran calibre (proximal a la fosa antecubital) hasta obtener vía central. Objetivo PAM ≥ 65 mmHg, sin perseguir cifras más altas (80-85 mmHg no mejoran la mortalidad)."
       },
       {
         "escenario": "Soporte hemodinámico",
@@ -17990,7 +18057,9 @@ window.TOPICS = [
     ],
     "criterios_ingreso": [
       "Toda sospecha de sepsis debe ingresar",
-      "Los pacientes en shock séptico deben ingresar en una unidad de cuidados intensivos (UCI)"
+      "Los pacientes en shock séptico deben ingresar en una unidad de cuidados intensivos (UCI)",
+      "Control del foco lo antes posible, idealmente dentro de las primeras 6 horas (absceso intraabdominal, perforación, isquemia/vólvulo intestinal, colangitis, colecistitis, pielonefritis obstructiva/absceso, infección necrotizante de partes blandas, empiema, artritis séptica, infección de dispositivos)",
+      "Traslado precoz a UCI: el 17,8% de las sepsis inicialmente estables progresan a shock séptico en 72 h (mortalidad a 30 días del 3,1% al 13,1%); la SSC sugiere ingreso en UCI en < 6 h si precisa cuidados críticos"
     ],
     "escalas": [],
     "conexiones": [
@@ -19909,7 +19978,10 @@ window.TOPICS = [
     "number": 116,
     "title": "Enfermedad por el SARS-CoV-2 (COVID-19) y variantes relacionadas",
     "categoria": "Infecciones en Medicina de Urgencias",
-    "status": "borrador_ia",
+    "status": "revisado_semes_2024",
+    "biblio_extra": [
+      "González del Castillo J, Fernández-Simón Almela A, Jacob J, et al. Posicionamiento de SEMES ante el tratamiento antiviral frente al SARS-CoV-2 en la situación epidemiológica actual. Emergencias. 2024;36:211-221."
+    ],
     "briefing": [
       "La COVID-19 es una infección viral por SARS-CoV-2 de transmisión fundamentalmente aérea, con un período de incubación de 2-5 días y máxima infectividad durante la primera semana de enfermedad.",
       "Los servicios de urgencias son la primera línea de atención y deben disponer de protocolos diagnósticos, terapéuticos y de aislamiento adaptados a la gravedad del caso y a las directrices epidemiológicas vigentes.",
@@ -20120,27 +20192,32 @@ window.TOPICS = [
       {
         "escenario": "Antiviral",
         "preferencia": "eleccion",
-        "indicacion": "COVID-19 leve-moderada ambulatoria con alto riesgo de progresión a grave, en los primeros 5 días de evolución. Eficaz en ómicron. No usar si ClCr < 30 mL/min o Child-Pugh C",
+        "indicacion": "PRIMERA OPCIÓN en COVID-19 leve con alto riesgo de progresión a grave (inmunodeprimidos, ancianos, comorbilidades acumuladas o vacunación incompleta). Único antiviral oral disponible. Iniciar en los primeros 5 días desde el inicio de síntomas, lo más precozmente posible. Contraindicado si ClCr < 30 mL/min o Child-Pugh C (SEMES 2024)",
         "farmaco": "Nirmatrelvir + ritonavir",
         "drug_id": "nirmatrelvir_ritonavir",
-        "dosis": "300 mg de nirmatrelvir + 100 mg de ritonavir/12 h durante 5 días. En insuficiencia renal moderada: 150 mg/100 mg cada 12 h",
-        "via": "VO"
+        "dosis": "300 mg de nirmatrelvir + 100 mg de ritonavir/12 h durante 5 días; en insuficiencia renal moderada (ClCr 30-<60 mL/min) reducir a 150/100 mg cada 12 h [verificar ficha técnica]",
+        "via": "VO",
+        "notas": "OBLIGATORIO revisar las interacciones del ritonavir antes de prescribir (herramienta de Liverpool: covid19-druginteractions.org/checker), idealmente con apoyo de Farmacia Hospitalaria; ajustar, suspender o sustituir temporalmente los fármacos en conflicto. Dispensar el tratamiento completo desde urgencias con instrucciones al paciente."
       },
       {
         "escenario": "Antiviral",
-        "indicacion": "COVID-19 leve-moderada ambulatoria con alto riesgo de progresión a grave, sin otras opciones terapéuticas, en los primeros 5 días de evolución",
+        "preferencia": "alternativa",
+        "indicacion": "NO recomendado como opción preferente (SEMES 2024). Reservar a COVID-19 leve con alto riesgo de progresión, en los primeros 5 días, SOLO cuando no puedan darse nirmatrelvir/ritonavir ni remdesivir",
         "farmaco": "Molnupiravir",
         "drug_id": "molnupiravir",
-        "dosis": "800 mg/12 h por vía oral durante 5 días",
-        "via": "VO"
+        "dosis": "800 mg/12 h por vía oral durante 5 días [verificar ficha técnica]",
+        "via": "VO",
+        "notas": "Los anticuerpos monoclonales (casirivimab/imdevimab, sotrovimab) tampoco se recomiendan como opción preferente; casirivimab/imdevimab carece de actividad frente a ómicron."
       },
       {
         "escenario": "Antiviral",
-        "indicacion": "COVID-19 hospitalizado o ambulatorio con enfermedad leve-moderada y alto riesgo de progresión, en los primeros 7 días de evolución. Eficaz en ómicron. Contraindicado si ClCr < 30 mL/min, hemodiálisis, fracaso multiorgánico, necesidad de vasopresores o ALT > 5 veces el límite superior de normalidad",
+        "preferencia": "alternativa",
+        "indicacion": "ALTERNATIVA en enfermedad leve + alto riesgo cuando no puede darse nirmatrelvir/ritonavir (interacciones no resolubles, contraindicación o fuera de la ventana de 5 días). TRATAMIENTO DE ELECCIÓN en el paciente hospitalizado/grave (único antiviral con ensayos que reducen mortalidad). Ventana: hasta 7 días desde el inicio de síntomas. Según ficha técnica puede usarse en insuficiencia renal grave (incluida diálisis) y en insuficiencia hepática (SEMES 2024)",
         "farmaco": "Remdesivir",
         "drug_id": "remdesivir",
-        "dosis": "Día 1: 200 mg/24 h IV; Días 2 y 3: 100 mg/24 h IV",
-        "via": "IV"
+        "dosis": "Día 1: 200 mg/24 h IV; días siguientes 100 mg/24 h IV. Pauta ambulatoria de 3 días en enfermedad leve; hasta 5 días en hospitalizado [verificar ficha técnica]",
+        "via": "IV",
+        "notas": "Es intravenoso: requiere circuito ambulatorio para administrar 3 días sin ingreso (1.ª dosis en urgencias y las 2 siguientes en hospital de día COVID u hospitalización a domicilio)."
       },
       {
         "escenario": "Antiviral",
@@ -20283,7 +20360,9 @@ window.TOPICS = [
       "Situación de inmunodepresión o presencia de factores de riesgo de progresión grave (edad > 65-75 años, IMC > 35, diabetes, insuficiencia renal/hepática/cardíaca/respiratoria crónica, enfermedad neurológica crónica)",
       "Elevación de biomarcadores inflamatorios de riesgo: PCR elevada, procalcitonina elevada, ferritina > 2.500 ng/mL, dímero D > 2.500 ng/mL, troponinas elevadas, LDH elevada",
       "QCSI ≥ 7 puntos (riesgo de enfermedad crítica a 24 h ≥ 44%)",
-      "Inestabilidad hemodinámica, fracaso multiorgánico o alteración del nivel de conciencia"
+      "Inestabilidad hemodinámica, fracaso multiorgánico o alteración del nivel de conciencia",
+      "FACTORES DE RIESGO DE PROGRESIÓN que indican tratamiento antiviral precoz en enfermedad leve (SEMES 2024): inmunodepresión, edad avanzada, comorbilidades acumuladas o vacunación incompleta; enfermedad renal crónica (FG < 60 ml/min); hepatopatía crónica Child-Pugh B o C; enfermedad neurológica crónica; enfermedad cardiovascular (IAM, insuficiencia cardiaca, angina, revascularización, ictus/AIT)",
+      "Factores de riesgo (cont.): EPOC de alto riesgo (FEV1 < 50%, mMRC 2-4, ≥ 2 exacerbaciones/año o 1 ingreso) o asma con tratamiento diario; otras enfermedades pulmonares (hipertensión pulmonar, fibrosis, EPID, bronquiectasias); diabetes con afectación de órgano diana; obesidad (IMC ≥ 35) o bajo peso (IMC < 18,5)"
     ],
     "escalas": [],
     "conexiones": [
@@ -28709,24 +28788,39 @@ window.TOPICS = [
     "number": 157,
     "title": "Patología inducida por el frío - hipotermia accidental y congelación",
     "categoria": "Urgencias por Agentes Físicos y Químicos",
-    "status": "borrador_ia",
+    "status": "revisado_consenso_2026",
+    "biblio_extra": [
+      "SEDAR, SEMICYUC, SEMES. Documento de consenso sobre el manejo de pacientes con hipotermia accidental (primer consenso nacional). Emergencias. 2026;38."
+    ],
     "briefing": [
       "La hipotermia accidental se define por temperatura central inferior a 35 °C e implica afectación multisistémica progresiva que puede culminar en parada cardíaca.",
       "La clasificación clínica en cuatro grados (leve, moderada, grave, profunda) guía la agresividad del recalentamiento y las decisiones de soporte vital.",
+      "El consenso nacional 2026 estadifica con los estadios suizos correlacionados con la escala AVDN (Alerta/Verbal/Dolor/No respuesta): HT I (consciente, con temblor; Tc ~35-32 °C), HT II (alteración de conciencia, sin temblor; Tc ~32-28 °C), HT III (inconsciente con signos vitales; Tc ~28-24 °C) y HT IV (parada cardiorrespiratoria; Tc <24 °C); útil cuando no se dispone de termómetro de baja lectura.",
       "La congelación produce lesión isquémica-trombótica tisular con riesgo de amputación; su gravedad se estadifica por la extensión de la cianosis según Cauchy.",
       "El principio fundamental es que 'ningún paciente está muerto si no está caliente y muerto': rigor mortis y midriasis arreactiva no contraindican la reanimación en hipotermia.",
-      "La ventana terapéutica para trombolisis (rtPA) e iloprost en congelaciones graves es de 24 h desde el recalentamiento, lo que convierte la derivación precoz en una urgencia tiempo-dependiente."
+      "La ventana terapéutica para trombolisis (rtPA) e iloprost en congelaciones graves es de 24 h desde el recalentamiento, lo que convierte la derivación precoz en una urgencia tiempo-dependiente.",
+      "El consenso nacional 2026 diferencia la 'hipotermia asociada al trauma' (Tc < 36 °C, factor del triángulo letal e ítem de gravedad/triaje) de la 'hipotermia accidental' (Tc < 35 °C), y recomienda alto índice de sospecha con medición de temperatura central en la atención inicial en mayores de 65 años, alteración de conciencia, trastornos endocrinos, signos de intoxicación o aislamiento social."
     ],
     "red_flags": [
       "Temperatura central < 28 °C: riesgo de fibrilación ventricular y parada cardíaca.",
-      "Potasio > 8 mEq/L: umbral para no iniciar recalentamiento con ECMO (indicador de daño celular irreversible).",
+      "Potasio sérico muy elevado como marcador de futilidad: el consenso nacional 2026 sitúa el umbral en K > 12 mmol/L para contraindicar continuar la RCP / la entrada en ECMO, interpretado en contexto y no de forma aislada (cifras menores no excluyen recuperación). [verificar umbral local; ediciones previas usaban K > 8 mEq/L].",
       "Hipotensión grave (PAS < 60 mmHg) refractaria a volumen y recalentamiento: requiere dopamina.",
       "Fibrilación ventricular persistente con temperatura < 30 °C: desfibrilación generalmente ineficaz hasta T > 30 °C.",
       "Glasgow < 9 o abolición de reflejos protectores de vía aérea: indicación de intubación endotraqueal.",
       "Congelación grado Cauchy 3-4 (cianosis hasta articulaciones metacarpofalángicas o proximal a ellas): alto riesgo/certeza de amputación, indicación de iloprost o rtPA.",
-      "Saturación O2 < 90% en zona congelada: infravalora el grado real de Cauchy."
+      "Saturación O2 < 90% en zona congelada: infravalora el grado real de Cauchy.",
+      "No suspender la RCP basándose en signos aislados: midriasis arreactiva, livideces o rigor mortis NO son criterios inequívocos de muerte en hipotermia ('no está muerto hasta estar caliente y muerto'); basar la futilidad en modelos multivariables (HOPE score), no en parámetros clínicos aislados."
     ],
     "tratamiento": [
+      {
+        "escenario": "Recalentamiento extracorpóreo",
+        "indicacion": "Hipotermia grave/profunda (HT III-IV) o PCR por hipotermia; inestabilidad hemodinámica con PAS < 90 mmHg",
+        "preferencia": "eleccion",
+        "farmaco": "ECMO-VA (soporte vital extracorpóreo)",
+        "dosis": "Mantener una tasa de recalentamiento de 2-5 °C/h durante el soporte extracorpóreo (recalentamiento más rápido se asocia a peor pronóstico neurológico). Reservar circulación extracorpórea (CEC) o hemodiafiltración venovenosa continua si la ECMO no está disponible/contraindicada.",
+        "via": "extracorpórea",
+        "notas": "Consenso nacional 2026: ECMO-VA es el tratamiento de elección en la PCR por hipotermia accidental. Trasladar HT III o superior a centro con capacidad ECMO; si el traslado supera ~6 h, iniciar recalentamiento activo en el hospital más cercano. Decidir futilidad/indicación con HOPE score. [verificar disponibilidad y circuito local]."
+      },
       {
         "escenario": "Fluidoterapia",
         "indicacion": "Hipotermia moderada, grave o profunda con hipotensión grave; reposición inicial",
@@ -28734,7 +28828,7 @@ window.TOPICS = [
         "drug_id": "solucion_glucosalina",
         "dosis": "2.000 mL en las primeras 2 h si hipotensión grave; posteriormente 3.000-4.000 mL/24 h",
         "via": "IV",
-        "notas": "Los líquidos deben calentarse a 40-42 °C antes de infundir. El Ringer lactato no es recomendable por disminución de su metabolización hepática en hipotermia."
+        "notas": "Los líquidos deben calentarse a 40-42 °C antes de infundir. El Ringer lactato no es recomendable por disminución de su metabolización hepática en hipotermia. Consenso nacional 2026: usar únicamente fluidos calentados para evitar enfriamiento adicional, pero la fluidoterapia caliente NO debe usarse como estrategia principal de recalentamiento (escasa rentabilidad térmica); priorizar medidas activas externas/extracorpóreas."
       },
       {
         "escenario": "Fluidoterapia",
@@ -28838,6 +28932,14 @@ window.TOPICS = [
         "dosis": "10 mg/12 h",
         "via": "VO",
         "notas": "No se dispone de suficiente evidencia."
+      },
+      {
+        "escenario": "Soporte vital avanzado",
+        "indicacion": "Fibrilación ventricular en PCR por hipotermia accidental (manejo de arritmias y desfibrilación)",
+        "farmaco": "Desfibrilación (estrategia, no fármaco)",
+        "dosis": "Intentar desfibrilación inicial según protocolo; si fracasa con Tc < 30 °C, NO repetir choques hasta alcanzar Tc > 30 °C (escasa eficacia en hipotermia profunda). Evitar la manipulación brusca del paciente por alta susceptibilidad arritmogénica; emplear compresores mecánicos para garantizar compresiones continuas durante la RCP y el traslado a ECMO.",
+        "via": "—",
+        "notas": "Consenso nacional 2026: la actividad eléctrica organizada se asocia a mejor pronóstico que FV/asistolia. La ECMO-VA es el tratamiento de elección en la PCR por hipotermia."
       },
       {
         "escenario": "Soporte vital avanzado",
@@ -33987,12 +34089,18 @@ window.TOPICS = [
     "number": 190,
     "title": "Urticaria y anafilaxia",
     "categoria": "Urgencias Dermatológicas",
-    "status": "borrador_ia",
+    "status": "revisado_eaaci_semes_2021",
+    "biblio_extra": [
+      "Silvestre Salvador JF, et al. Manejo de la urticaria en urgencias: recomendaciones de un grupo multidisciplinar de expertos (AEDV-SEMES). Emergencias. 2021;33(4):299-308.",
+      "Muraro A, Worm M, Alviani C, et al. EAACI guidelines: Anaphylaxis (2021 update). Allergy. 2022;77(2):357-377."
+    ],
     "briefing": [
       "La urticaria es una reacción cutánea mediada por IgE caracterizada por prurito y habones eritematosos de centro pálido que desaparecen rápidamente; puede ser aguda, aguda recidivante o crónica.",
+      "El primer paso en urgencias ante habones/angioedema es DESCARTAR anafilaxia (síntomas sistémicos: hipotensión, síncope, disnea, broncoespasmo, edema laríngeo, vómitos persistentes, dolor abdominal); confirmada su ausencia, se maneja como urticaria. El habón evanescente (<24 h, sin residuo) es la lesión guía y no toda urticaria/angioedema implica alergia (AEDV-SEMES 2021).",
       "La anafilaxia es una reacción alérgica grave de instauración rápida y potencialmente mortal, con liberación generalizada de mediadores de mastocitos y basófilos que afecta piel, mucosas, aparato respiratorio y sistema cardiovascular.",
       "El diagnóstico de anafilaxia es clínico: inicio agudo de síntomas cutáneo-mucosos acompañados de compromiso respiratorio y/o circulatorio, o dos o más sistemas afectados tras exposición a alérgeno.",
-      "La adrenalina intramuscular en la cara anterior del muslo es el fármaco de primera elección en la anafilaxia y debe administrarse sin demora en cualquier situación.",
+      "La adrenalina intramuscular en la cara anterolateral del muslo es el fármaco de primera elección en la anafilaxia (0,01 mg/kg de 1:1000; máx 0,5 mg adulto / 0,3 mg niño) y debe administrarse sin demora; los antihistamínicos y corticoides son de SEGUNDA línea y NO deben sustituir ni retrasar la adrenalina (EAACI 2021).",
+      "Colocar al paciente en decúbito supino con piernas elevadas (lateral si vómitos, sentado si disnea); NO incorporar bruscamente por riesgo de síndrome del ventrículo vacío (EAACI 2021).",
       "Las reacciones bifásicas pueden producirse hasta en el 20% de los casos en las 6-8 horas siguientes, lo que obliga a observación mínima de 6 horas tras la resolución del episodio agudo."
     ],
     "red_flags": [
@@ -34003,15 +34111,16 @@ window.TOPICS = [
       "Pérdida de conciencia, confusión, hipotonía o incontinencia: afectación neurológica grave",
       "Pacientes en tratamiento con beta-bloqueantes o IECA: riesgo de anafilaxia grave y refractariedad a adrenalina",
       "Antecedentes de asma grave o mastocitosis: mayor mortalidad en anafilaxia",
-      "Afectación laríngea o faríngea en urticaria: valorar intubación endotraqueal"
+      "Afectación laríngea o faríngea en urticaria: valorar intubación endotraqueal",
+      "Angioedema aislado SIN habones, progresivo en horas (12-36 h) y en paciente con IECA/ARA-II/gliptinas/estrógenos: sospechar angioedema BRADICINÉRGICO, que NO responde a antihistamínicos, corticoides ni adrenalina; reevaluar a los 30 min y pasar a protocolo específico (icatibant / inhibidor de C1 esterasa) si no mejora (AEDV-SEMES 2021)"
     ],
     "tratamiento": [
       {
         "escenario": "Fluidoterapia",
-        "indicacion": "Reposición de volumen en anafilaxia con hipotensión o shock",
+        "indicacion": "Reposición de volumen en anafilaxia con hipotensión o shock; administrar precozmente junto a la 2.ª dosis de adrenalina en reacciones graves (EAACI 2021)",
         "farmaco": "Ringer lactato o solución salina fisiológica",
         "drug_id": "ringer_lactato_o_cloruro_sodico",
-        "dosis": "Cargas de 300 mL en 20 min, repetibles hasta PVC no superior a 12 cmH2O",
+        "dosis": "Bolo de cristaloides 20 mL/kg (adulto ~1.000 mL), repetible según respuesta hemodinámica",
         "via": "IV"
       },
       {
@@ -34026,10 +34135,10 @@ window.TOPICS = [
       {
         "escenario": "Soporte hemodinámico",
         "preferencia": "eleccion",
-        "indicacion": "Anafilaxia: primera elección, vía intramuscular en cara anterior del muslo",
+        "indicacion": "Anafilaxia: PRIMERA LÍNEA sin demora, vía intramuscular en cara anterolateral del muslo. No debe sustituirse ni retrasarse por antihistamínicos ni corticoides (EAACI 2021)",
         "farmaco": "Adrenalina",
         "drug_id": "adrenalina",
-        "dosis": "0,3-0,5 mg (0,3-0,5 mL) al 1/1.000 IM; puede repetirse a los 5-15 min hasta un máximo de tres dosis",
+        "dosis": "0,01 mg/kg de la solución al 1/1.000 (1 mg/mL) IM; máximo 0,5 mg en adultos y 0,3 mg en niños. Repetir a los 5-15 min si no hay respuesta",
         "via": "IM"
       },
       {
@@ -34052,7 +34161,7 @@ window.TOPICS = [
       },
       {
         "escenario": "Soporte hemodinámico",
-        "indicacion": "Anafilaxia en pacientes con beta-bloqueantes o con adrenalina contraindicada",
+        "indicacion": "Anafilaxia REFRACTARIA (sin respuesta a ≥2 dosis de adrenalina IM) en pacientes en tratamiento con beta-bloqueantes o con adrenalina contraindicada (EAACI 2021)",
         "farmaco": "Glucagón",
         "drug_id": "glucagon",
         "dosis": "Bolo IV inicial de 5-10 mg; continuar con infusión IV de 4 mg/h (diluir 20 mg en 250 mL de glucosado al 5% a 16 gotas/min = 48 mL/h, disminuyendo progresivamente)",
@@ -34071,11 +34180,12 @@ window.TOPICS = [
       {
         "escenario": "Antihistamínicos",
         "preferencia": "eleccion",
-        "indicacion": "Urticaria aguda: antihistamínico H1 de segunda generación de primera línea",
+        "indicacion": "Urticaria aguda/crónica: antihistamínico H1 de segunda generación NO sedante de primera línea. Si es refractaria a la dosis estándar, escalar hasta 4 veces la dosis autorizada antes de añadir otras líneas (AEDV-SEMES 2021)",
         "farmaco": "Cetirizina",
         "drug_id": "cetirizina",
-        "dosis": "10 mg/24 h VO; puede incrementarse hasta 20 mg/24 h",
-        "via": "VO"
+        "dosis": "5-10 mg/24 h VO; en refractarios puede escalarse hasta x4 (hasta 20 mg/24 h [verificar ficha técnica])",
+        "via": "VO",
+        "notas": "El escalado x4 también aplica a levocetirizina, desloratadina, ebastina, loratadina, rupatadina, bilastina y fexofenadina según su dosis autorizada [verificar]."
       },
       {
         "escenario": "Antihistamínicos",
@@ -34089,10 +34199,10 @@ window.TOPICS = [
       {
         "escenario": "Antihistamínicos",
         "preferencia": "alternativa",
-        "indicacion": "Urticaria resistente a anti-H1 de segunda generación o con interferencia en el sueño",
+        "indicacion": "Anti-H1 de PRIMERA generación (sedante): NO recomendados como tratamiento de la urticaria por su perfil sedante (AEDV-SEMES 2021). Priorizar siempre los H1 de 2.ª generación con escalado de dosis; reservar a uso excepcional",
         "farmaco": "Hidroxizina",
         "drug_id": "hidroxizina",
-        "dosis": "25 mg/6 h VO; en asociación con segunda generación: 10 mg/6 h VO",
+        "dosis": "25 mg/6 h VO [verificar]; preferible no asociar de rutina a la 2.ª generación",
         "via": "VO"
       },
       {
@@ -34139,7 +34249,8 @@ window.TOPICS = [
       },
       {
         "escenario": "Antihistamínicos",
-        "indicacion": "Anafilaxia: antihistamínico H1 IV/IM",
+        "preferencia": "alternativa",
+        "indicacion": "Anafilaxia: antihistamínico H1 de SEGUNDA línea, solo para síntomas cutáneos/prurito. NO sustituye ni retrasa la adrenalina (EAACI 2021)",
         "farmaco": "Dexclorfeniramina",
         "drug_id": "dexclorfeniramina",
         "dosis": "5 mg (1 ampolla) IV o IM cada 8 h",
@@ -34155,20 +34266,21 @@ window.TOPICS = [
       },
       {
         "escenario": "Corticoterapia",
-        "indicacion": "Urticaria persistente o recurrente a pesar de antihistamínicos en dosis plenas, casos muy graves, afectación laríngea o faríngea",
+        "indicacion": "Urticaria SOLO en ciclo corto (≈5 días) cuando el cuadro es muy extenso/sintomático o predomina el angioedema; NO de mantenimiento. No se recomiendan añadidos de rutina al antihistamínico en urticaria aguda sin angioedema, ya que no mejoran la evolución (AEDV-SEMES 2021)",
         "farmaco": "Metilprednisolona",
         "drug_id": "metilprednisolona",
-        "dosis": "1 mg/kg/día (máximo 80 mg/24 h) IV",
+        "dosis": "1 mg/kg/día (máximo 80 mg/24 h) IV en casos graves o con afectación laríngea/faríngea; al alta, prednisona en pauta corta de unos 5 días [verificar]",
         "via": "IV"
       },
       {
         "escenario": "Corticoterapia",
-        "indicacion": "Anafilaxia: prevención de reacciones tardías y control de broncoespasmo",
+        "preferencia": "alternativa",
+        "indicacion": "Anafilaxia: SEGUNDA línea, coadyuvante en broncoespasmo. Ya NO se consideran eficaces para prevenir reacciones bifásicas y no deben retrasar la adrenalina (EAACI 2021)",
         "farmaco": "Metilprednisolona",
         "drug_id": "metilprednisolona",
         "dosis": "Dosis inicial de 125 mg en bolo IV; continuar con 40 mg/6 h IV según respuesta clínica",
         "via": "IV",
-        "notas": "Acción tarda 4-6 h en iniciarse"
+        "notas": "Acción tarda 4-6 h en iniciarse; no útil para el evento agudo amenazante"
       },
       {
         "escenario": "Corticoterapia",
@@ -34206,7 +34318,10 @@ window.TOPICS = [
     "criterios_ingreso": [
       "Todo paciente con anafilaxia (afectación laríngea, crisis de broncoespasmo o shock) debe ingresar en observación al menos 6 horas tras la resolución de la reacción",
       "Observación más prolongada en: antecedentes de reacciones bifásicas, acceso dificultoso a urgencias, anafilaxia grave de comienzo lento o idiopática, asma grave previa o broncoespasmo grave, contacto con alérgeno que pueda proseguir, reacciones a horas avanzadas del día o sin garantía de control domiciliario",
-      "Los pacientes con urticaria sin compromiso sistémico no requieren ingreso hospitalario"
+      "Al alta tras anafilaxia: prescribir DOS autoinyectores de adrenalina (0,15 mg para 7,5-25 kg; 0,3 mg para ≥25-30 kg), entregar un plan de acción escrito con educación en su uso, indicar evitación del desencadenante y derivar a alergología (EAACI 2021)",
+      "Los pacientes con urticaria sin compromiso sistémico no requieren ingreso hospitalario",
+      "Derivación a dermatología en ≤2 semanas: urticaria crónica (>6 semanas), urticaria aguda con curso tórpido y riesgo de visitas frecuentes, y angioedema no filiado",
+      "Derivación/valoración URGENTE: habones que persisten >24 h con síntomas sistémicos (fiebre, proteinuria, dolor abdominal) por sospecha de urticaria-vasculitis (requiere biopsia, no se diagnostica en urgencias) (AEDV-SEMES 2021)"
     ],
     "escalas": [],
     "conexiones": [

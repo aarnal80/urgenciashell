@@ -4414,8 +4414,8 @@
     "detalle": "En todo ingreso sin contraindicación: enoxaparina 1,5 mg/kg/24 h SC. Si leucocitosis >12.000 y procalcitonina >1: cubre sobreinfección bacteriana (ceftriaxona 2 g/24 h + amoxicilina-clavulánico 1 g/8 h + azitromicina 500 mg/24 h)."
    },
    {
-    "paso": "Valora antiviral en ambulatorios de alto riesgo",
-    "detalle": "COVID leve-moderada con alto riesgo de progresión y <5 días de evolución: nirmatrelvir/ritonavir 300/100 mg/12 h 5 días (no si ClCr <30 ni Child-Pugh C); alternativa molnupiravir 800 mg/12 h 5 días."
+    "paso": "Trata precozmente con antiviral en alto riesgo (SEMES 2024)",
+    "detalle": "COVID leve + alto riesgo: 1.ª opción nirmatrelvir/ritonavir oral (≤5 días; no si ClCr <30 ni Child-Pugh C; REVISA interacciones del ritonavir con la herramienta de Liverpool/Farmacia y dispensa completo desde urgencias). Si contraindicado o fuera de la ventana de 5 días → remdesivir IV 3 días por circuito ambulatorio (admite IR grave y diálisis), ventana ≤7 días. En el paciente hospitalizado el antiviral de elección es remdesivir. Cuanto antes se trate, mejor pronóstico."
    },
    {
     "paso": "Destino",
@@ -4870,7 +4870,7 @@
    },
    {
     "paso": "Oxigenoterapia controlada",
-    "detalle": "O2 con objetivo SatO2 88-92% (Venturi 24-28%) para evitar hipercapnia. Gasometría arterial si SatO2<90% o sospecha de retención de CO2."
+    "detalle": "O2 con objetivo SatO2 88-92% (Venturi 24-28%) para evitar hipercapnia (GOLD 2025). Gasometría arterial basal y reevaluación a los 30-60 min tras iniciar O2 para detectar hipercapnia/acidosis emergente, no fiarse solo de la pulsioximetría."
    },
    {
     "paso": "Broncodilatadores y corticoide sistémico",
@@ -4878,7 +4878,7 @@
    },
    {
     "paso": "Antibiótico si criterios de Anthonisen",
-    "detalle": "Indicado si aumentan disnea, volumen Y purulencia del esputo (≥2 criterios) o ventilación mecánica. Empírico: amoxicilina-clavulánico o levofloxacino; cubrir Pseudomonas (cipro/cefepima/pipe-tazo) si EPOC grave o factores de riesgo."
+    "detalle": "Indicado (Anthonisen, GOLD 2025) si están los 3 síntomas cardinales (más disnea + más volumen + purulencia), o 2 incluyendo la purulencia del esputo, o necesidad de ventilación mecánica. Empírico: amoxicilina-clavulánico o levofloxacino; cubrir Pseudomonas (cipro/cefepima/pipe-tazo) si EPOC grave o factores de riesgo. Duración 5-7 días."
    },
    {
     "paso": "Soporte ventilatorio según gasometría",
@@ -5040,8 +5040,8 @@
     ]
    },
    {
-    "paso": "Estratifica riesgo y anticoagula",
-    "detalle": "Calcula CHA2DS2-VASc (tromboembólico) y HAS-BLED (hemorrágico). FA no valvular → ACOD (apixabán 5 mg/12 h, rivaroxabán 20 mg/24 h, etc.) o AVK (INR 2-3); FA valvular → acenocumarol (INR 2,5-3,5). En FA aguda <48 h: enoxaparina 100 UI/kg SC."
+    "paso": "Estratifica riesgo y anticoagula (ESC 2024)",
+    "detalle": "Calcula CHA2DS2-VA (sin el ítem sexo) y HAS-BLED. Anticoagula si CHA2DS2-VA ≥2 (Clase I) o considera si =1 (Clase IIa); no si =0. ACOD preferido sobre AVK (apixabán 5 mg/12 h, rivaroxabán 20 mg/24 h, etc.); acenocumarol (INR 2,5-3,5) solo si estenosis mitral moderada-grave o prótesis mecánica. Cardioversión: en estable <48 h valora 'wait-and-see'; si FA >24 h, no cardiovertir sin anticoagulación adecuada o ETE previa; tras cardioversión, anticoagula ≥4 semanas. En FA aguda: enoxaparina 100 UI/kg SC."
    },
    {
     "paso": "Maneja arritmias AV específicas y destino",
@@ -6280,7 +6280,7 @@
     "sub": [
      {
       "nivel": "critico",
-      "t": "Cambios ECG o K >7,0 → gluconato cálcico 10% 10 mL IV en 2-3 min, repetible; precaución si toma digoxina."
+      "t": "Cambios ECG o K ≥6,5 → gluconato cálcico 10% 10 mL IV en 2-3 min, repetible; precaución si toma digoxina."
      }
     ]
    },
@@ -6290,7 +6290,7 @@
    },
    {
     "paso": "Elimina potasio del organismo",
-    "detalle": "Furosemida si diuresis conservada; resinas de intercambio (poliestireno sulfonato, patiromer, ciclosilicato). Diálisis urgente si fracaso renal o refractariedad."
+    "detalle": "Furosemida si diuresis conservada; resina clásica (poliestireno sulfonato, hoy en desuso) o quelantes nuevos: patiromer y ciclosilicato de circonio sódico (este actúa ya en fase aguda, ~4 h). Hemodiálisis urgente si fracaso renal o refractariedad."
    },
    {
     "paso": "Confirma y descarta pseudohiperpotasemia",
@@ -6302,7 +6302,7 @@
    },
    {
     "paso": "Destino",
-    "detalle": "Ingreso si K >6,0, cambios ECG, fracaso renal o causa activa. UCI si grave (>7,0), cambios ECG o refractaria. Telemetría continua en todo ingresado."
+    "detalle": "Ingreso si K ≥6,0, cambios ECG, fracaso renal o causa activa. UCI si grave (K ≥6,5), cambios ECG o refractaria. Telemetría continua en todo ingresado."
    }
   ],
   "wikem_titulo": "Hyperkalemia"
@@ -7233,11 +7233,11 @@
     "sub": [
      {
       "nivel": "critico",
-      "t": "isquémico <4,5 h sin contraindicación → fibrinólisis IV (alteplasa), puerta-aguja <60 min"
+      "t": "isquémico ≤4,5 h sin contraindicación → fibrinólisis IV: alteplasa 0,9 mg/kg (o tenecteplasa 0,25 mg/kg si candidato a trombectomía), puerta-aguja <60 min. Ampliable por neuroimagen (mismatch DWI-FLAIR o de perfusión)"
      },
      {
       "nivel": "critico",
-      "t": "oclusión de gran vaso → activar trombectomía mecánica en centro de referencia"
+      "t": "oclusión de gran vaso → trombectomía mecánica (≤6 h; hasta 6–24 h con mismatch DAWN/DEFUSE-3), activar centro de referencia; no excluyente con la fibrinólisis IV"
      },
      {
       "nivel": "critico",
@@ -12719,7 +12719,7 @@
   "plan": [
    {
     "paso": "Identifica precozmente y monitoriza",
-    "detalle": "qSOFA ≥2 (PAS≤100, FR≥22, Glasgow<15) o SOFA. Monitor, vía venosa (2 vías gruesas), O2 si SatO2<90%."
+    "detalle": "No usar qSOFA en solitario: activa código sepsis si qSOFA≥2 y/o SIRS≥2 y/o NEWS-2≥5 (<65 a) o NEWS-2≥4 + GYM≥1 (≥65 a). Perfil de sepsis: lactato + PCT. Monitor, vía venosa (2 vías gruesas), O2 si SatO2<90%."
    },
    {
     "paso": "Extrae cultivos y lactato YA",

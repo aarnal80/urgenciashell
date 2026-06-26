@@ -74,8 +74,8 @@
     { paso: "Analítica y control del dolor",
       detalle: "Troponina hs (0 h y 1-3 h), hemograma, función renal, iones y coagulación. Nitroglicerina sl si dolor (no si IAM de VD, hipotensión o IPDE-5 reciente); morfina iv si dolor refractario." },
     { paso: "Decide la estrategia según el ECG", sub: [
-        { nivel: "critico", t: "SCACEST → reperfusión URGENTE: ICP primaria si <120 min desde el primer contacto médico; si no es posible, fibrinólisis en <10 min. Añade doble antiagregación + anticoagulación." },
-        { nivel: "emergente", t: "SCASEST → estratifica el riesgo (escala GRACE + troponina), anticoagula y doble antiagrega. Coronariografía: <2 h si riesgo muy alto, <24 h si riesgo alto." } ] },
+        { nivel: "critico", t: "SCACEST → reperfusión URGENTE: ICP primaria si <120 min desde el primer contacto médico; si no es posible, fibrinólisis en <10 min. Doble antiagregación al diagnóstico: AAS 300 mg + ticagrelor 180 mg o prasugrel 60 mg. Anticoagula (HNF 70-100 UI/kg)." },
+        { nivel: "emergente", t: "SCASEST → estratifica el riesgo (escala GRACE + troponina) y anticoagula (fondaparinux 2,5 mg o enoxaparina). Coronariografía: <2 h si riesgo muy alto, <24 h si riesgo alto. Antiagregación: AAS 300 mg de entrada; el 2.º antiagregante —prasugrel 60 mg, preferido sobre ticagrelor 180 mg (ESC 2023)— NO de rutina antes de conocer la anatomía si va a ICP precoz: se administra en hemodinámica." } ] },
     { paso: "Tratamiento coadyuvante (primeras 24 h)",
       detalle: "Betabloqueante VO si no hay IC aguda, shock ni bradicardia; estatina de alta intensidad (atorvastatina 80 mg); IECA/ARA-II si FE ≤40%, HTA o diabetes." },
     { paso: "Destino",
