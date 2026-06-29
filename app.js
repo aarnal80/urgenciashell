@@ -189,8 +189,8 @@
   }
 
   /* ---------- categorías (Partes del manual) ---------- */
-  var CAT_COLORS = ["#dc2626", "#0ea5e9", "#7c3aed", "#ea580c", "#0d9488", "#2563eb",
-    "#16a34a", "#b45309", "#64748b", "#0891b2", "#db2777", "#65a30d", "#9333ea", "#e11d48"];
+  var CAT_COLORS = ["#8a6d3b", "#4f6f86", "#6a4f7a", "#9a6a3b", "#3f6b62", "#4f6f86",
+    "#4f6b4a", "#8a6d3b", "#5f5a52", "#4f6f86", "#8a4f6e", "#4f6b4a", "#6a4f7a", "#944049"];
   var CAT_SKIP = ["urgencias", "urgencas", "de", "del", "la", "el", "los", "en", "y", "por",
     "medicina", "agudas", "no", "uso", "indebido"];
   function catInitial(name) {
@@ -260,33 +260,33 @@
     if (n.indexOf("miscelan") > -1) return CAT_ICONS.misc;
     return CAT_ICONS.def;
   }
-  // Color semántico por especialidad
+  // Color por especialidad — paleta editorial apagada (baja saturación, tono cálido)
   function catColor(name) {
     var n = sinAcentos(name);
-    if (n.indexOf("soporte vital") > -1) return "#eab308"; // amarillo
-    if (n.indexOf("cardio") > -1) return "#dc2626";        // rojo
-    if (n.indexOf("respirat") > -1) return "#2563eb";      // azul
-    if (n.indexOf("digest") > -1) return "#ea580c";        // naranja
-    if (n.indexOf("neurolog") > -1) return "#7c3aed";      // violeta
-    if (n.indexOf("psiquiatr") > -1) return "#6366f1";     // índigo
-    if (n.indexOf("endocrino") > -1 || n.indexOf("metabol") > -1) return "#0d9488"; // teal
-    if (n.indexOf("nefro") > -1) return "#0284c7";         // azul cielo
-    if (n.indexOf("infec") > -1) return "#16a34a";         // verde
-    if (n.indexOf("reumatolog") > -1) return "#b45309";    // ámbar
-    if (n.indexOf("oncolog") > -1) return "#9333ea";       // púrpura
-    if (n.indexOf("hematolog") > -1) return "#be123c";     // carmín
-    if (n.indexOf("intoxica") > -1 || n.indexOf("envenen") > -1) return "#4d7c0f"; // verde tóxico
-    if (n.indexOf("alcohol") > -1) return "#a16207";       // ámbar oscuro
-    if (n.indexOf("agentes") > -1 || n.indexOf("fisicos") > -1 || n.indexOf("quimic") > -1) return "#f97316"; // naranja fuego
-    if (n.indexOf("otorrino") > -1) return "#db2777";      // magenta
-    if (n.indexOf("oftalmolog") > -1) return "#0ea5e9";    // azul claro
-    if (n.indexOf("maxilofacial") > -1) return "#f43f5e";  // rosa
-    if (n.indexOf("traumatolog") > -1) return "#78716c";   // gris piedra
-    if (n.indexOf("dermatolog") > -1) return "#d97706";    // ámbar piel
-    if (n.indexOf("pediatr") > -1) return "#ec4899";       // rosa
-    if (n.indexOf("obstet") > -1 || n.indexOf("ginec") > -1) return "#be185d"; // rosa oscuro
-    if (n.indexOf("exploracion") > -1) return "#334155";   // slate
-    if (n.indexOf("miscelan") > -1) return "#64748b";      // slate claro
+    if (n.indexOf("soporte vital") > -1) return "#8a6d3b";
+    if (n.indexOf("cardio") > -1) return "#9c463c";
+    if (n.indexOf("respirat") > -1) return "#4f6f86";
+    if (n.indexOf("digest") > -1) return "#9a6a3b";
+    if (n.indexOf("neurolog") > -1) return "#6f5f86";
+    if (n.indexOf("psiquiatr") > -1) return "#5f5f86";
+    if (n.indexOf("endocrino") > -1 || n.indexOf("metabol") > -1) return "#3f6b62";
+    if (n.indexOf("nefro") > -1) return "#4f6f86";
+    if (n.indexOf("infec") > -1) return "#4f6b4a";
+    if (n.indexOf("reumatolog") > -1) return "#8a6d3b";
+    if (n.indexOf("oncolog") > -1) return "#6a4f7a";
+    if (n.indexOf("hematolog") > -1) return "#944049";
+    if (n.indexOf("intoxica") > -1 || n.indexOf("envenen") > -1) return "#4f6b4a";
+    if (n.indexOf("alcohol") > -1) return "#8a6d3b";
+    if (n.indexOf("agentes") > -1 || n.indexOf("fisicos") > -1 || n.indexOf("quimic") > -1) return "#9a6a3b";
+    if (n.indexOf("otorrino") > -1) return "#8a4f6e";
+    if (n.indexOf("oftalmolog") > -1) return "#4f6f86";
+    if (n.indexOf("maxilofacial") > -1) return "#944049";
+    if (n.indexOf("traumatolog") > -1) return "#78706a";
+    if (n.indexOf("dermatolog") > -1) return "#9a6a3b";
+    if (n.indexOf("pediatr") > -1) return "#8a4f6e";
+    if (n.indexOf("obstet") > -1 || n.indexOf("ginec") > -1) return "#8a4f6e";
+    if (n.indexOf("exploracion") > -1) return "#5f5a52";
+    if (n.indexOf("miscelan") > -1) return "#5f5a52";
     return CAT_COLORS[0];
   }
   // Orden personalizado de las partes (por palabra clave). Lo no listado va al final.
@@ -395,10 +395,10 @@
 
     // Herramientas
     var tools = [
-      { label: "Escalas", color: "#2563eb", icon: ICONS.bars, href: "#/calc" },
-      { label: "Fármacos", color: "#7c3aed", icon: ICONS.farmacos, href: "#/farmacos" },
-      { label: "Apps", color: "#0d9488", icon: ICONS.apps, href: "#/apps" },
-      { label: "Favoritos", color: "#f59e0b", icon: ICONS.star, href: "#/favoritos" }
+      { label: "Escalas", color: "#4f6f86", icon: ICONS.bars, href: "#/calc" },
+      { label: "Fármacos", color: "#6a4f7a", icon: ICONS.farmacos, href: "#/farmacos" },
+      { label: "Apps", color: "#3f6b62", icon: ICONS.apps, href: "#/apps" },
+      { label: "Favoritos", color: "#9c463c", icon: ICONS.star, href: "#/favoritos" }
     ];
     document.getElementById("home-tools").innerHTML = tools.map(function (o) {
       return '<a class="tool" href="' + o.href + '">' +
@@ -707,12 +707,12 @@
      ============================================================ */
   function renderAbout() {
     showDetailView();
-    document.title = "Acerca de — Manual de Urgencias in HELL";
+    document.title = "Acerca de — Manual de Urgencias";
     var nTemas = TOPICS.length, nFarmacos = Object.keys(DRUGS).length, nEscalas = Object.keys(SCALES).length;
     $topic.innerHTML =
       '<div class="about">' +
-        '<img class="about-mark" src="icons/logo.png" alt="" />' +
-        '<h1>Manual de Urgencias <em>in HELL</em></h1>' +
+        '<div class="hero-eyebrow" style="margin-bottom:14px">Hospital Ernest Lluch · HELL</div>' +
+        '<h1>Manual de Urgencias</h1>' +
         '<p class="about-sub">Guía de consulta rápida · Dr. Antonio J. Arnal Meinhardt</p>' +
         '<div class="about-stats">' +
           '<div class="about-stat"><span class="about-stat-n">' + nTemas + '</span><span class="about-stat-l">temas</span></div>' +
@@ -1503,12 +1503,12 @@
     showDetailView();
     document.title = "Apps — Manual de Urgencias";
     var list = [
-      { id: "tox", nombre: "Toxicología", sub: "Paracetamol · NAC · antídotos · gaps · niveles", color: "#65a30d", icon: ICONS.skull },
-      { id: "rsi", nombre: "Secuencia rápida de intubación", sub: "Guía de las 7 P · dosis por peso", color: "#dc2626", icon: ICONS.syringe },
-      { id: "gaso", nombre: "Interpretación de gasometría", sub: "Análisis ácido-base en 5 pasos", color: "#7c3aed", icon: ICONS.pulse },
-      { id: "perf", nombre: "Bombas de perfusión", sub: "Vasoactivos: dosis → ml/h", color: "#ea580c", icon: ICONS.droplet },
-      { id: "goteo", nombre: "Goteo intravenoso", sub: "ml/h y gotas/min", color: "#0d9488", icon: ICONS.droplet },
-      { id: "dosis", nombre: "Dosis por peso", sub: "mg/kg → dosis total y volumen", color: "#2563eb", icon: ICONS.tratamiento }
+      { id: "tox", nombre: "Toxicología", sub: "Paracetamol · NAC · antídotos · gaps · niveles", color: "#4f6b4a", icon: ICONS.skull },
+      { id: "rsi", nombre: "Secuencia rápida de intubación", sub: "Guía de las 7 P · dosis por peso", color: "#9c463c", icon: ICONS.syringe },
+      { id: "gaso", nombre: "Interpretación de gasometría", sub: "Análisis ácido-base en 5 pasos", color: "#6f5f86", icon: ICONS.pulse },
+      { id: "perf", nombre: "Bombas de perfusión", sub: "Vasoactivos: dosis → ml/h", color: "#9a6a3b", icon: ICONS.droplet },
+      { id: "goteo", nombre: "Goteo intravenoso", sub: "ml/h y gotas/min", color: "#3f6b62", icon: ICONS.droplet },
+      { id: "dosis", nombre: "Dosis por peso", sub: "mg/kg → dosis total y volumen", color: "#4f6f86", icon: ICONS.tratamiento }
     ];
     $topic.innerHTML =
       '<div class="t-head"><span class="t-cat" style="background:#0d9488">Herramientas</span>' +
