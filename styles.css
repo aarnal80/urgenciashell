@@ -135,10 +135,13 @@ body.show-topbar #view { padding-top: calc(var(--topbar-h) + var(--safe-top)); }
 }
 .hero-title {
   font-family: var(--display);
-  font-size: 40px; font-weight: 600; letter-spacing: -.015em; line-height: 1.02;
+  font-size: 34px; font-weight: 600; letter-spacing: -.015em; line-height: 1.04;
   margin-top: 12px; color: var(--ink);
 }
-.hero-title em { font-style: italic; color: var(--accent); }
+.hero-title em {
+  display: block; font-style: italic; color: var(--accent);
+  font-size: .5em; font-weight: 500; letter-spacing: -.01em; margin-top: 2px;
+}
 .ystripe { height: 3px; width: 48px; background: var(--accent); margin-top: 16px; }
 .hero-sub { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--secondary); margin-top: 12px; }
 .hero-author { font-size: 13px; color: var(--secondary); margin-top: 4px; }
@@ -743,7 +746,7 @@ mark { background: rgba(158,43,34,.18); color: var(--accent-ink); border-radius:
   #topic { padding: 34px 28px 48px; }
   .home-body { padding: 18px 28px 16px; }
   .hero { padding-left: 28px; padding-right: 28px; }
-  .hero-title { font-size: 46px; }
+  .hero-title { font-size: 40px; }
   .hero-search { max-width: 560px; }
 
   .tools { gap: 12px; }
@@ -763,7 +766,7 @@ mark { background: rgba(158,43,34,.18); color: var(--accent-ink); border-radius:
 
 @media (min-width: 1100px) {
   :root { --maxw: 920px; }
-  .hero-title { font-size: 52px; }
+  .hero-title { font-size: 46px; }
   .t-title { font-size: 40px; }
   /* medida de lectura cómoda y centrada para el cuerpo del tema */
   .t-head, .block, .briefing, .plan, .flags, .crit, .connections, .bib,
