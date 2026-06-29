@@ -120,7 +120,7 @@ body.show-topbar #view { padding-top: calc(var(--topbar-h) + var(--safe-top)); }
   content: ""; display: block; height: 4px; width: 100%;
   background: var(--accent); margin: -22px -22px 22px; width: calc(100% + 44px);
 }
-.hero-top { display: flex; align-items: flex-start; justify-content: space-between; }
+.hero-top { display: flex; align-items: flex-start; justify-content: flex-end; }
 .hero-actions { display: flex; gap: 8px; }
 .hero-logo { display: none; }   /* portada tipográfica, sin logotipo rojo */
 .hero-round {

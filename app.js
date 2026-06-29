@@ -707,12 +707,11 @@
      ============================================================ */
   function renderAbout() {
     showDetailView();
-    document.title = "Acerca de — Manual de Urgencias";
+    document.title = "Acerca de — Manual de Urgencias in HELL";
     var nTemas = TOPICS.length, nFarmacos = Object.keys(DRUGS).length, nEscalas = Object.keys(SCALES).length;
     $topic.innerHTML =
       '<div class="about">' +
-        '<div class="hero-eyebrow" style="margin-bottom:14px">Hospital Ernest Lluch · HELL</div>' +
-        '<h1>Manual de Urgencias</h1>' +
+        '<h1>Manual de Urgencias <em>in HELL</em></h1>' +
         '<p class="about-sub">Guía de consulta rápida · Dr. Antonio J. Arnal Meinhardt</p>' +
         '<div class="about-stats">' +
           '<div class="about-stat"><span class="about-stat-n">' + nTemas + '</span><span class="about-stat-l">temas</span></div>' +
