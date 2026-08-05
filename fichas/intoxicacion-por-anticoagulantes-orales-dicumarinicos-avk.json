@@ -1,0 +1,59 @@
+{
+  "slug": "intoxicacion-por-anticoagulantes-orales-dicumarinicos-avk",
+  "titulo": "Intoxicación por anticoagulantes orales dicumarínicos (AVK)",
+  "tipo": "patologia",
+  "fecha_redaccion": "2026-08-05",
+  "revision_pendiente": true,
+  "fuentes": [
+    {
+      "archivo": "Servicio Navarro de Salud — Guía de actuación anticoagulación oral v1.2.pdf",
+      "paginas": "33-35; tabla 11 en p. 34",
+      "edicion": "Revisión 26-02-2025"
+    },
+    {
+      "archivo": "AEMPS/CIMA — Ficha técnica Sintrom 4 mg comprimidos",
+      "paginas": "Sección 4.9",
+      "edicion": "Consulta 05-08-2026"
+    },
+    {
+      "archivo": "AEMPS/CIMA — Ficha técnica Prothromplex Total 500 UI",
+      "paginas": "Secciones 4.1-4.4",
+      "edicion": "Consulta 05-08-2026"
+    }
+  ],
+  "secciones": {
+    "definicion": "Sobredosificación o exceso de efecto anticoagulante por antagonistas de la vitamina K (AVK), especialmente acenocumarol (Sintrom), con INR supraterapéutico y/o hemorragia clínica. La hemorragia es la manifestación principal de la intoxicación por acenocumarol.",
+    "presentacion_clinica": "Puede existir INR elevado sin sangrado, sangrado leve o moderado —epistaxis, gingivorragia, hematuria leve/moderada, equimosis o hemorragia digestiva controlable— o hemorragia importante. La fuente navarra identifica como potencialmente vital la sospecha de hemorragia cerebral, el traumatismo craneal, la hemorragia externa incoercible, el sangrado digestivo grave, la hematuria intensa, la metrorragia severa, la disnea brusca, la hemoptisis y el abdomen agudo.",
+    "diagnostico": "Valorar simultáneamente la intensidad y localización del sangrado y determinar el INR. Si el coagulómetro capilar no proporciona resultado, realizar determinación venosa. La decisión de reversión depende de la gravedad clínica, la localización, el INR y el riesgo tromboembólico.",
+    "diagnostico_diferencial": "Las fuentes consultadas no presentan un algoritmo diferencial formal. [nota editorial: ante sangrado con INR terapéutico o desproporción entre INR y clínica, investigar una lesión orgánica o una causa adicional de coagulopatía; la guía navarra recomienda buscar siempre una causa orgánica subyacente del sangrado].",
+    "pruebas_complementarias": "INR de laboratorio o venoso si falla el dispositivo capilar. Repetir INR a las 24 horas en INR >10 sin sangrado y a los 7-10 días en sangrado leve/moderado según la guía navarra. [nota editorial: completar el estudio analítico y de imagen según la localización del sangrado y el protocolo hospitalario; las fuentes consultadas no especifican un panel único].",
+    "criterios_de_gravedad": "El riesgo hemorrágico aumenta sustancialmente con INR ≥5. Son graves el sangrado importante o potencialmente vital, independientemente del INR, y la sospecha de hemorragia intracraneal, traumatismo craneal, sangrado digestivo grave, hematuria intensa, metrorragia severa, hemoptisis, disnea brusca, abdomen agudo o hemorragia externa incoercible. INR >10, aunque no exista sangrado significativo, requiere reversión y control estrecho.",
+    "tratamiento_inicial": "Suspender temporalmente el AVK, confirmar el INR, clasificar el sangrado por intensidad y localización, aplicar medidas locales cuando proceda y derivar urgentemente al hospital cualquier hemorragia importante o potencialmente vital. No administrar vitamina K por vía intramuscular.",
+    "tratamiento_farmacologico": "INR 4,5-10 sin sangrado significativo: interrumpir Sintrom; AEMPS no indica vitamina K de rutina. INR >10 sin sangrado: AEMPS 1-5 mg de vitamina K1 oral; guía navarra 2 mg oral y nuevo INR a las 24 horas [contradicción entre fuentes]. INR >5 con sangrado leve/moderado: suspender 1-2 días y valorar vitamina K 2-5 mg oral. Hemorragia significativa: AEMPS 5-10 mg de vitamina K1 IV muy lentamente, sin superar 1 mg/minuto; la guía navarra contempla 10 mg oral o parenteral diluidos en 100 ml de suero fisiológico en 10-20 minutos [contradicción entre fuentes]. En hemorragia grave o cirugía urgente, Prothromplex Total: 25 UI/kg si INR 2,0-3,9; 35 UI/kg si INR 4,0-6,0; 50 UI/kg si INR >6,0, con supervisión experta y monitorización del INR.",
+    "procedimientos": "Hemostasia local en manifestaciones menores. En hemorragia grave o cirugía urgente, reversión hospitalaria con vitamina K y, si se necesita corrección rápida, complejo protrombínico según ficha técnica y protocolo local. El complejo protrombínico no debe utilizarse de forma rutinaria fuera de hemorragia grave o cirugía urgente.",
+    "criterios_de_ingreso": "Hemorragia potencialmente vital o importante por cantidad o localización; sospecha de hemorragia intracraneal o traumatismo craneal; necesidad de vitamina K intravenosa o complejo protrombínico; o necesidad de monitorización estrecha del INR y control del foco hemorrágico. El nivel asistencial se decide según estabilidad, localización y soporte requerido.",
+    "criterios_de_alta": "Las fuentes consultadas no fijan criterios de alta estandarizados. Como mínimo debe existir control clínico del sangrado, INR con plan de reevaluación y pauta documentada de reinicio o ajuste del AVK por el equipo responsable.",
+    "signos_de_alarma": "Cefalea brusca intensa, pérdida súbita de visión o consciencia, alteración del habla, parálisis, caída o golpe craneal, sangrado externo que no cede, hematemesis o melenas abundantes, hematuria intensa, metrorragia severa, disnea brusca, hemoptisis, dolor abdominal agudo o deterioro hemodinámico.",
+    "seguimiento": "Repetir INR a las 24 horas cuando sea >10 sin sangrado. En sangrado leve/moderado, la guía navarra propone control a los 7-10 días. Si ha habido hemorragia, reiniciar Sintrom cuando el INR esté dentro del rango objetivo, con decisión individualizada por el riesgo tromboembólico. Revisar interacciones farmacológicas y causas orgánicas del sangrado.",
+    "escalas_relacionadas": "Sin escalas específicas en las fuentes consultadas.",
+    "farmacos_relacionados": "acenocumarol, fitomenadiona, complejo-protrombinico.",
+    "temas_relacionados": "estudio-de-la-coagulacion, hemorragia-digestiva-alta, hematuria, traumatismo-craneoencefalico, hemorragia-subaracnoidea-espontanea, antagonistas-y-antidotos.",
+    "fuente_y_paginas": "Servicio Navarro de Salud, Guía de actuación anticoagulación oral v1.2, revisión 26-02-2025, pp. 33-35 y tabla 11 en p. 34: https://portalsalud.navarra.es/documents/11746728/32495871/Guia%2Bde%2Bactuacion%2Banticoagulacion%2Bv1.2.pdf/22e3e0e0-ef6f-e319-e91c-5d08cbfeefba?t=1740564409465. AEMPS/CIMA, ficha técnica Sintrom 4 mg, sección 4.9: https://cima.aemps.es/cima/dochtml/ft/25670/ft_25670.html. AEMPS/CIMA, ficha técnica Prothromplex Total 500 UI, secciones 4.1-4.4: https://cima.aemps.es/cima/dochtml/ft/88851/FT_88851.html."
+  },
+  "relacionados": {
+    "temas": [
+      "estudio-de-la-coagulacion",
+      "hemorragia-digestiva-alta",
+      "hematuria",
+      "traumatismo-craneoencefalico",
+      "hemorragia-subaracnoidea-espontanea",
+      "antagonistas-y-antidotos"
+    ],
+    "escalas": [],
+    "farmacos": [
+      "acenocumarol",
+      "fitomenadiona",
+      "complejo-protrombinico"
+    ]
+  }
+}

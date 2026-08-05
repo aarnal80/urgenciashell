@@ -1,0 +1,88 @@
+{
+  "ddx": [
+    {
+      "nivel": "critico",
+      "grupo": "Sangrado potencialmente vital",
+      "items": [
+        {
+          "dx": "Hemorragia intracraneal o traumatismo craneal",
+          "clave": "Cefalea brusca, pérdida de consciencia o focalidad neurológica; requiere reversión y valoración hospitalaria urgente",
+          "slug": "hemorragia_subaracnoidea_espontanea"
+        },
+        {
+          "dx": "Hemorragia digestiva grave",
+          "clave": "Hematemesis, melenas o sangrado digestivo abundante; priorizar traslado y control del foco",
+          "slug": "hemorragia_digestiva_alta"
+        },
+        {
+          "dx": "Hematuria intensa o sangrado genitourinario grave",
+          "clave": "Hematuria intensa, deterioro hemodinámico o dolor abdominal asociado",
+          "slug": "hematuria"
+        }
+      ]
+    },
+    {
+      "nivel": "no_emergente",
+      "grupo": "Exceso de anticoagulación sin hemorragia mayor",
+      "items": [
+        {
+          "dx": "INR supraterapéutico sin sangrado significativo",
+          "clave": "INR >5 aumenta el riesgo; INR >10 precisa vitamina K oral y control estrecho",
+          "slug": "estudio_de_la_coagulacion"
+        },
+        {
+          "dx": "Sangrado por lesión orgánica con INR terapéutico",
+          "clave": "La guía navarra recomienda investigar siempre una causa orgánica subyacente",
+          "slug": null
+        }
+      ]
+    }
+  ],
+  "plan": [
+    {
+      "paso": "Suspende el AVK y confirma el INR",
+      "detalle": "Interrumpe temporalmente acenocumarol/warfarina, determina el INR y clasifica el sangrado por intensidad y localización. Si el coagulómetro capilar no da resultado, solicita muestra venosa."
+    },
+    {
+      "paso": "Reconoce los criterios de traslado urgente",
+      "detalle": "Deriva al hospital ante sospecha de hemorragia cerebral, traumatismo craneal, hemorragia externa incoercible, sangrado digestivo grave, hematuria intensa, metrorragia severa, disnea brusca, hemoptisis o abdomen agudo.",
+      "sub": [
+        {
+          "nivel": "critico",
+          "t": "La hemorragia importante requiere traslado independientemente del INR. No administrar vitamina K por vía intramuscular."
+        }
+      ]
+    },
+    {
+      "paso": "Maneja el INR alto sin sangrado significativo",
+      "detalle": "INR 4,5-10: suspende Sintrom sin vitamina K de rutina según AEMPS. INR >10: AEMPS indica vitamina K1 1-5 mg oral; la guía navarra indica 2 mg oral y nuevo INR a las 24 h. [contradicción entre fuentes: seguir protocolo local]."
+    },
+    {
+      "paso": "Maneja el sangrado leve o moderado",
+      "detalle": "Con INR >5, suspende el AVK 1-2 días hasta detener el sangrado y valora vitamina K oral 2-5 mg según INR y riesgo tromboembólico. Aplica medidas locales y recontrola el INR según la guía local."
+    },
+    {
+      "paso": "Revierte la hemorragia significativa en el hospital",
+      "detalle": "AEMPS: vitamina K1 5-10 mg IV muy lentamente, sin superar 1 mg/minuto. La guía navarra contempla 10 mg oral o parenteral diluidos en 100 ml de suero fisiológico en 10-20 min. [contradicción entre fuentes: la vía y la dosis deben ajustarse al protocolo hospitalario vigente].",
+      "sub": [
+        {
+          "nivel": "critico",
+          "t": "Si se requiere corrección rápida por hemorragia grave o cirugía urgente, valorar complejo protrombínico de cuatro factores junto con vitamina K y monitorización del INR."
+        }
+      ]
+    },
+    {
+      "paso": "Usa el complejo protrombínico solo cuando esté indicado",
+      "detalle": "Prothromplex Total: 25 UI/kg con INR 2,0-3,9; 35 UI/kg con INR 4,0-6,0; 50 UI/kg con INR >6,0. La ficha técnica limita a 50 UI/kg la dosis necesaria para corregir el INR y exige supervisión experta por el riesgo tromboembólico."
+    },
+    {
+      "paso": "Planifica el control y el reinicio",
+      "detalle": "Repite INR a las 24 h si era >10 sin sangrado y a los 7-10 días en sangrado leve/moderado según la guía navarra. Reinicia Sintrom cuando el INR esté en rango objetivo y el equipo responsable haya reevaluado el riesgo tromboembólico."
+    }
+  ],
+  "biblio": [
+    "Servicio Navarro de Salud. Guía de actuación anticoagulación oral v1.2. Revisión 26-02-2025, pp. 33-35 y tabla 11 en p. 34. https://portalsalud.navarra.es/documents/11746728/32495871/Guia%2Bde%2Bactuacion%2Banticoagulacion%2Bv1.2.pdf/22e3e0e0-ef6f-e319-e91c-5d08cbfeefba?t=1740564409465",
+    "AEMPS/CIMA. Ficha técnica Sintrom 4 mg comprimidos, sección 4.9. https://cima.aemps.es/cima/dochtml/ft/25670/ft_25670.html",
+    "AEMPS/CIMA. Ficha técnica Prothromplex Total 500 UI, secciones 4.1-4.4. https://cima.aemps.es/cima/dochtml/ft/88851/FT_88851.html"
+  ]
+}

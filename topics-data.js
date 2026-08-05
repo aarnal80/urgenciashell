@@ -40454,7 +40454,131 @@ window.TOPICS = [
         "motivo": "La hipotermia en el donante requiere tratamiento activo y puede causar arritmias graves"
       }
     ]
-  }
+  },
+  {
+    "slug": "intoxicacion_por_anticoagulantes_orales_dicumarinicos_avk",
+    "number": 219,
+    "title": "Intoxicación por anticoagulantes orales dicumarínicos (AVK)",
+    "categoria": "Intoxicaciones Agudas y Envenenamientos",
+    "status": "borrador_ia",
+    "briefing": [
+      "La intoxicación por antagonistas de la vitamina K (AVK) se presenta como INR supraterapéutico, con o sin hemorragia; el acenocumarol (Sintrom) es el AVK de uso más habitual en España.",
+      "El riesgo hemorrágico aumenta sustancialmente con INR ≥5, pero la gravedad depende también de la localización y de las características del sangrado.",
+      "La sospecha de hemorragia intracraneal, traumatismo craneal, sangrado digestivo grave, hematuria intensa, hemoptisis o hemorragia externa incoercible exige traslado hospitalario urgente.",
+      "Con INR >10 sin sangrado significativo se suspende el AVK, se administra vitamina K oral según protocolo y se controla el INR a las 24 horas.",
+      "La hemorragia grave puede requerir reversión hospitalaria rápida con vitamina K y concentrado de complejo protrombínico de cuatro factores, bajo monitorización especializada."
+    ],
+    "red_flags": [
+      "Cefalea brusca intensa, pérdida súbita de visión o consciencia, alteración del habla o parálisis.",
+      "Caída o traumatismo craneal durante el tratamiento con AVK.",
+      "Hemorragia externa incoercible, sangrado digestivo grave, hematuria intensa o metrorragia severa.",
+      "Disnea brusca, hemoptisis o abdomen agudo con sospecha hemorrágica.",
+      "INR >10 aunque no exista sangrado significativo.",
+      "Cualquier hemorragia importante por cantidad o localización, independientemente del INR."
+    ],
+    "tratamiento": [
+      {
+        "escenario": "INR 4,5-10 sin sangrado significativo",
+        "indicacion": "Exceso de anticoagulación sin hemorragia significativa",
+        "farmaco": "Acenocumarol",
+        "drug_id": "acenocumarol",
+        "dosis": "Interrumpir el tratamiento con Sintrom",
+        "via": "VO",
+        "notas": "La ficha técnica de AEMPS no indica vitamina K de rutina en este intervalo."
+      },
+      {
+        "escenario": "INR >10 sin sangrado significativo",
+        "preferencia": "eleccion",
+        "indicacion": "Reversión del exceso de anticoagulación",
+        "farmaco": "Fitomenadiona (vitamina K1)",
+        "drug_id": "fitomenadiona",
+        "dosis": "1-5 mg por vía oral",
+        "via": "VO",
+        "notas": "AEMPS/CIMA, ficha técnica de Sintrom, sección 4.9. La guía navarra utiliza 2 mg por vía oral y control del INR a las 24 h; seguir el protocolo local."
+      },
+      {
+        "escenario": "INR >5 sin sangrado",
+        "indicacion": "INR elevado sin sangrado, especialmente INR >6 y >8",
+        "farmaco": "Fitomenadiona (vitamina K1)",
+        "drug_id": "fitomenadiona",
+        "dosis": "2 mg por vía oral",
+        "via": "VO",
+        "notas": "Valorar según riesgo tromboembólico y hemorrágico; la guía navarra indica suspender el AVK durante 1 día y ajustar la dosis posterior."
+      },
+      {
+        "escenario": "INR >5 con sangrado leve o moderado",
+        "preferencia": "eleccion",
+        "indicacion": "Sangrado leve/moderado hasta su detención",
+        "farmaco": "Fitomenadiona (vitamina K1)",
+        "drug_id": "fitomenadiona",
+        "dosis": "2-5 mg por vía oral",
+        "via": "VO",
+        "notas": "Suspender el AVK durante 1-2 días y ajustar según INR y riesgo tromboembólico."
+      },
+      {
+        "escenario": "Hemorragia significativa",
+        "preferencia": "eleccion",
+        "indicacion": "Sangrado significativo por cantidad o localización",
+        "farmaco": "Fitomenadiona (vitamina K1)",
+        "drug_id": "fitomenadiona",
+        "dosis": "5-10 mg por vía intravenosa muy lentamente, sin superar 1 mg/minuto",
+        "via": "IV",
+        "notas": "Ficha técnica AEMPS de Sintrom. No administrar por vía intramuscular."
+      },
+      {
+        "escenario": "Hemorragia importante durante el traslado",
+        "indicacion": "Hemorragia importante por cantidad o localización",
+        "farmaco": "Fitomenadiona (vitamina K1)",
+        "drug_id": "fitomenadiona",
+        "dosis": "10 mg por vía oral o parenteral diluidos en 100 ml de suero fisiológico, a pasar en 10-20 minutos",
+        "via": "IV/VO",
+        "notas": "Pauta descrita por la guía navarra; existe discrepancia con la ficha técnica AEMPS sobre vía y dosis. Seguir protocolo hospitalario vigente."
+      },
+      {
+        "escenario": "Hemorragia grave o cirugía urgente",
+        "preferencia": "eleccion",
+        "indicacion": "Corrección rápida de la deficiencia adquirida por AVK",
+        "farmaco": "Complejo protrombínico de cuatro factores",
+        "drug_id": "complejo_protrombinico",
+        "dosis": "25 UI/kg si INR 2,0-3,9; 35 UI/kg si INR 4,0-6,0; 50 UI/kg si INR >6,0",
+        "via": "IV",
+        "notas": "Prothromplex Total. Dosis máxima necesaria para corregir el INR: 50 UI/kg. Usar bajo supervisión experta junto con vitamina K y monitorización del INR."
+      }
+    ],
+    "criterios_ingreso": [
+      "Hemorragia potencialmente vital o importante por cantidad o localización.",
+      "Sospecha de hemorragia intracraneal o traumatismo craneal.",
+      "Necesidad de vitamina K intravenosa o complejo protrombínico.",
+      "Necesidad de monitorización estrecha del INR y control del foco hemorrágico."
+    ],
+    "escalas": [],
+    "conexiones": [
+      {
+        "slug": "estudio_de_la_coagulacion",
+        "motivo": "El INR es la prueba central para valorar el efecto de los AVK y guiar el seguimiento."
+      },
+      {
+        "slug": "hemorragia_digestiva_alta",
+        "motivo": "El sangrado digestivo grave es una presentación potencialmente vital de la sobredosificación."
+      },
+      {
+        "slug": "hematuria",
+        "motivo": "La hematuria intensa es un criterio de derivación urgente."
+      },
+      {
+        "slug": "traumatismo_craneoencefalico",
+        "motivo": "El traumatismo craneal durante tratamiento con AVK requiere valoración urgente."
+      },
+      {
+        "slug": "hemorragia_subaracnoidea_espontanea",
+        "motivo": "La sospecha de hemorragia intracraneal exige reversión y atención hospitalaria."
+      },
+      {
+        "slug": "antagonistas_y_antidotos",
+        "motivo": "La vitamina K y el complejo protrombínico son los tratamientos de reversión específicos del AVK."
+      }
+    ]
+  },
 ];
 window.TOPIC_INDEX = {
   "soporte_vital_basico_en_adultos": "Soporte vital básico en adultos",
