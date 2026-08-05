@@ -6,6 +6,7 @@
   var SCALES = window.SCALES || {};
   var DRUGS = window.DRUGS || {};
   var DRUG_ALIAS = window.DRUG_ALIAS || {};
+  var APP_VERSION = "1.1";
   var navCount = 0; // navegaciones internas
   var currentTopicSlug = null; // tema en pantalla (para la estrella de favoritos)
   var bySlug = {};
@@ -718,6 +719,9 @@
           '<div class="about-stat"><span class="about-stat-n">' + nFarmacos + '</span><span class="about-stat-l">fármacos</span></div>' +
           '<div class="about-stat"><span class="about-stat-n">' + nEscalas + '</span><span class="about-stat-l">escalas</span></div>' +
         "</div>" +
+        '<div class="about-card about-release"><h2>Manual completo · Versión ' + APP_VERSION + '</h2>' +
+          '<p>Esta es la nueva versión del <strong>Manual de Urgencias in HELL</strong>. Incluye la app <strong>Sorteo de Turno de Guardia</strong> dentro de Apps, para repartir la guardia entre 2 o 3 médicos, configurar las horas e imprimir el resultado.</p>' +
+          '<p>Al abrir la webapp con conexión, se comprueba y actualiza automáticamente todo el contenido del manual y sus recursos.</p></div>' +
         '<div class="about-card"><h2>El autor</h2>' +
           '<p class="about-author">Dr. Antonio J. Arnal Meinhardt</p>' +
           '<p class="about-role">Médico de Urgencias y Emergencias</p>' +
@@ -1513,9 +1517,196 @@
       '<div class="t-head"><span class="t-cat" style="background:#0d9488">Herramientas</span>' +
       '<h1 class="t-title">Apps</h1><div class="ystripe"></div>' +
       '<div class="t-sub">Micro-aplicaciones de cálculo a pie de cama</div></div>' +
-      '<div class="scales">' + list.map(appItemHTML).join("") + "</div>";
+      '<div class="scales">' + list.map(appItemHTML).join("") + turnoAppItemHTML() + "</div>";
   }
 
+  /* ============================================================
+     Sorteo de turno de guardia
+     ============================================================ */
+  function todayISO() {
+    var d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
+  function defaultTurnoDoctor(i) { return ""; }
+  function getTurnoConfig() {
+    try {
+      var saved = JSON.parse(localStorage.getItem("guardiaConfig") || "{}");
+      var doctors = Array.isArray(saved.doctors)
+        ? saved.doctors.slice(0, 3).map(function (name, i) {
+            var value = String(name || "").trim();
+            return value === "Médico " + (i + 1) ? "" : value;
+          })
+        : [saved.doctorA || "", saved.doctorB || ""].map(function (name, i) {
+            var value = String(name || "").trim();
+            return value === "Médico " + (i + 1) ? "" : value;
+          });
+      var count = saved.count === 3 || doctors.length >= 3 ? 3 : 2;
+      while (doctors.length < count) doctors.push(defaultTurnoDoctor(doctors.length));
+      return {
+        count: count,
+        doctors: doctors,
+        date: saved.date || todayISO(),
+        shift: saved.shift || "Guardia",
+        start: saved.start || "00:00",
+        end: saved.end || "08:00"
+      };
+    } catch (e) {
+      return { count: 2, doctors: ["", ""], date: todayISO(), shift: "Guardia", start: "00:00", end: "08:00" };
+    }
+  }
+  function saveTurnoConfig(config) {
+    try { localStorage.setItem("guardiaConfig", JSON.stringify(config)); } catch (e) {}
+  }
+  function readTurnoForm() {
+    var base = getTurnoConfig();
+    var countInput = document.getElementById("turno-doctor-count");
+    var count = countInput && +countInput.value === 3 ? 3 : 2;
+    var doctors = [];
+    for (var i = 0; i < count; i++) {
+      var input = document.getElementById("turno-doctor-" + i);
+      var value = input ? input.value.trim() : (base.doctors[i] || defaultTurnoDoctor(i));
+      doctors.push(value);
+    }
+    return {
+      count: count,
+      doctors: doctors,
+      date: (document.getElementById("turno-date") || {}).value || base.date || todayISO(),
+      shift: ((document.getElementById("turno-shift") || {}).value || base.shift || "Guardia").trim() || "Guardia",
+      start: (document.getElementById("turno-start") || {}).value || base.start || "00:00",
+      end: (document.getElementById("turno-end") || {}).value || base.end || "08:00"
+    };
+  }
+  function timeToMinutes(value) {
+    var parts = String(value || "").split(":");
+    var h = parseInt(parts[0], 10), m = parseInt(parts[1], 10);
+    return (isNaN(h) || isNaN(m)) ? 0 : Math.max(0, Math.min(1439, h * 60 + m));
+  }
+  function formatClock(totalMinutes) {
+    var value = ((totalMinutes % 1440) + 1440) % 1440;
+    return String(Math.floor(value / 60)).padStart(2, "0") + ":" + String(value % 60).padStart(2, "0");
+  }
+  function turnoRandomInt(max) {
+    if (window.crypto && window.crypto.getRandomValues) {
+      var bytes = new Uint32Array(1);
+      window.crypto.getRandomValues(bytes);
+      return Math.floor((bytes[0] / 4294967296) * max);
+    }
+    return Math.floor(Math.random() * max);
+  }
+  function turnoShuffle(items) {
+    var result = items.slice();
+    for (var i = result.length - 1; i > 0; i--) {
+      var j = turnoRandomInt(i + 1), tmp = result[i];
+      result[i] = result[j]; result[j] = tmp;
+    }
+    return result;
+  }
+  function buildTurnoSlots(config) {
+    var start = timeToMinutes(config.start), end = timeToMinutes(config.end);
+    var duration = end - start;
+    if (duration <= 0) duration += 1440;
+    var order = turnoShuffle(config.doctors.slice(0, config.count));
+    var slots = [];
+    for (var i = 0; i < config.count; i++) {
+      var from = start + Math.round(duration * i / config.count);
+      var to = start + Math.round(duration * (i + 1) / config.count);
+      slots.push({ from: formatClock(from), to: formatClock(to), doctor: order[i] });
+    }
+    return slots;
+  }
+  function turnoSlotsHTML(slots) {
+    return '<ol class="turno-slots">' + slots.map(function (slot, i) {
+      return '<li class="turno-slot">' +
+        '<span class="turno-slot-index">' + String(i + 1).padStart(2, "0") + '</span>' +
+        '<div class="turno-slot-time"><strong>' + esc(slot.from) + ' — ' + esc(slot.to) + '</strong><span>' + esc(slot.doctor) + '</span></div>' +
+        '</li>';
+    }).join("") + '</ol>';
+  }
+  function getTurnoHistory() {
+    try { return JSON.parse(localStorage.getItem("guardiaHistory") || "[]"); } catch (e) { return []; }
+  }
+  function formatTurnoDate(value) {
+    if (!value) return "Sin fecha";
+    var parts = String(value).split("-");
+    return parts.length === 3 ? parts[2] + "/" + parts[1] + "/" + parts[0] : value;
+  }
+  function turnoHistoryHTML(history) {
+    if (!history.length) {
+      return '<div class="turno-empty"><span class="turno-empty-mark">—</span><span>Aún no hay sorteos guardados.</span></div>';
+    }
+    return history.map(function (item) {
+      var summary = item.slots && item.slots.length
+        ? item.slots.map(function (slot) { return slot.doctor + " " + slot.from + "–" + slot.to; }).join(" · ")
+        : (item.winner || "Sorteo anterior");
+      return '<li class="turno-history-item">' +
+        '<span class="turno-history-winner">' + esc(summary) + '</span>' +
+        '<span class="turno-history-meta">' + esc(item.shift || "Guardia") + ' · ' + esc(formatTurnoDate(item.date)) + '</span>' +
+        '</li>';
+    }).join("");
+  }
+  function turnoAppItemHTML() {
+    return '<div class="scale-item turno-app-item">' +
+      '<a class="scale-chip turno-app-link" href="#/turno">' +
+        '<span class="scale-ic" style="background:' + rgba("#9e2b22", 0.11) + ';color:#9e2b22">' + ICONS.swap + '</span>' +
+        '<span class="scale-tx"><span class="scale-name">Sorteo de Turno de Guardia</span>' +
+        '<span class="scale-for">Reparto igualado entre 2 o 3 médicos</span></span>' +
+        '<span class="scale-go">' + ICONS.chevR + '</span>' +
+      '</a></div>';
+  }
+  function renderTurno() {
+    showDetailView();
+    document.title = "Sorteo de Turno de Guardia — Manual de Urgencias";
+    var config = getTurnoConfig();
+    var history = getTurnoHistory();
+    var last = null;
+    try { last = JSON.parse(localStorage.getItem("guardiaLastResult") || "null"); } catch (e) {}
+    var doctorFields = config.doctors.slice(0, config.count).map(function (name, i) {
+      return '<label class="turno-field"><span>Médico ' + (i + 1) + '</span>' +
+        '<input id="turno-doctor-' + i + '" type="text" maxlength="60" value="' + escA(name) + '" placeholder="Médico ' + (i + 1) + '" autocomplete="name" data-clear-on-focus="1" /></label>';
+    }).join("");
+    var resultHTML = last && last.slots && last.slots.length
+      ? '<div class="turno-result" aria-live="polite">' +
+          '<div class="turno-print-title">Sorteo de Turno de Guardia</div>' +
+          '<div class="turno-result-kicker">Reparto sorteado</div>' +
+          '<div class="turno-result-title">' + esc(last.shift || "Guardia") + ' · ' + esc(formatTurnoDate(last.date)) + '</div>' +
+          turnoSlotsHTML(last.slots) +
+          '<div class="turno-result-foot">' + esc(last.start) + ' — ' + esc(last.end) + ' · ' + last.count + ' médicos · realizado ' + esc(last.time || "ahora") + '</div>' +
+          '<div class="turno-result-actions"><button class="turno-print" type="button" data-print-turno="1">Imprimir resultado</button></div>' +
+        '</div>'
+      : '<div class="turno-result turno-result-empty" aria-live="polite">' +
+          '<div class="turno-result-kicker">Listos para sortear</div>' +
+          '<div class="turno-result-title">Aquí aparecerá el reparto de la guardia</div>' +
+          '<div class="turno-result-placeholder">Cada médico recibirá una parte igual del intervalo.</div>' +
+        '</div>';
+    $topic.innerHTML =
+      '<div class="t-head turno-head"><span class="t-cat">Herramienta de guardia</span>' +
+      '<h1 class="t-title">Sorteo de Turno de Guardia</h1><div class="ystripe"></div>' +
+      '<div class="t-sub">Reparte el horario y sortea qué médico ocupa cada tramo.</div></div>' +
+      '<div class="turno-layout">' +
+        '<section class="turno-card turno-form-card" aria-labelledby="turno-form-title">' +
+          '<div class="turno-card-head"><div><span class="turno-label">Configuración</span><h2 id="turno-form-title">¿Quiénes estáis de guardia?</h2></div><span class="turno-card-icon">' + ICONS.swap + '</span></div>' +
+          '<div class="turno-fields">' +
+            '<label class="turno-field"><span>Número de médicos</span><select id="turno-doctor-count" class="turno-select">' +
+              '<option value="2"' + (config.count === 2 ? ' selected' : '') + '>2 médicos</option>' +
+              '<option value="3"' + (config.count === 3 ? ' selected' : '') + '>3 médicos</option>' +
+            '</select></label>' +
+            doctorFields +
+            '<div class="turno-field-row"><label class="turno-field"><span>Fecha</span><input id="turno-date" type="date" value="' + escA(config.date) + '" /></label>' +
+            '<label class="turno-field"><span>Nombre del turno</span><input id="turno-shift" type="text" maxlength="40" value="' + escA(config.shift) + '" /></label></div>' +
+            '<div class="turno-field-row"><label class="turno-field"><span>Hora de inicio</span><input id="turno-start" type="time" value="' + escA(config.start) + '" /></label>' +
+            '<label class="turno-field"><span>Hora final</span><input id="turno-end" type="time" value="' + escA(config.end) + '" /></label></div>' +
+          '</div>' +
+          '<button class="turno-draw" type="button" data-draw="1"><span>' + ICONS.swap + '</span> Sortear y repartir guardia</button>' +
+          '<p class="turno-note">Por defecto: 00:00–08:00 repartido a partes iguales. Si la hora final es anterior, se interpreta como el día siguiente.</p>' +
+        '</section>' +
+        resultHTML +
+        '<section class="turno-card turno-history-card" aria-labelledby="turno-history-title">' +
+          '<div class="turno-card-head"><div><span class="turno-label">Registro local</span><h2 id="turno-history-title">Últimos sorteos</h2></div>' +
+          (history.length ? '<button class="turno-clear" type="button" data-clear-history="1">Limpiar</button>' : '') + '</div>' +
+          '<ol class="turno-history">' + turnoHistoryHTML(history) + '</ol>' +
+        '</section>' +
+      '</div>';
+  }
   /* ============================================================
      Calculadora de escalas (modal)
      ============================================================ */
@@ -1663,6 +1854,54 @@
      ============================================================ */
   // Interacciones dentro del detalle
   $topic.addEventListener("click", function (e) {
+    var printTurno = e.target.closest("[data-print-turno]");
+    if (printTurno) {
+      window.print();
+      return;
+    }
+    var draw = e.target.closest("[data-draw]");
+    if (draw) {
+      var config = readTurnoForm();
+      var missingIndex = -1;
+      config.doctors.forEach(function (doctor, i) { if (!doctor && missingIndex < 0) missingIndex = i; });
+      if (missingIndex > -1) {
+        var missing = document.getElementById("turno-doctor-" + missingIndex);
+        if (missing) {
+          missing.focus();
+          missing.classList.add("turno-invalid");
+          setTimeout(function () { missing.classList.remove("turno-invalid"); }, 900);
+        }
+        return;
+      }
+      var slots = buildTurnoSlots(config);
+      var result = {
+        count: config.count,
+        doctors: config.doctors,
+        date: config.date,
+        shift: config.shift,
+        start: config.start,
+        end: config.end,
+        slots: slots,
+        time: new Date().toLocaleTimeString("es-ES", { hour: "2-digit", minute: "2-digit" })
+      };
+      var history = getTurnoHistory();
+      history.unshift(result);
+      saveTurnoConfig(config);
+      try {
+        localStorage.setItem("guardiaLastResult", JSON.stringify(result));
+        localStorage.setItem("guardiaHistory", JSON.stringify(history.slice(0, 8)));
+      } catch (err) {}
+      renderTurno();
+      var resultNode = $topic.querySelector(".turno-result");
+      if (resultNode) resultNode.classList.add("turno-result-reveal");
+      return;
+    }
+    var clearHistory = e.target.closest("[data-clear-history]");
+    if (clearHistory) {
+      try { localStorage.removeItem("guardiaHistory"); localStorage.removeItem("guardiaLastResult"); } catch (err) {}
+      renderTurno();
+      return;
+    }
     // Controles del calculador inline (escalas y apps)
     var ctl = e.target.closest("[data-reset],[data-bin],[data-item],[data-class],[data-app-opt]");
     if (ctl && ctl.closest(".calc-inline")) {
@@ -1686,7 +1925,7 @@
     }
     // Abrir / plegar escala o app inline
     var chip = e.target.closest(".scale-chip");
-    if (chip) { var sitem = chip.closest(".scale-item"); if (sitem) toggleScaleItem(sitem); return; }
+    if (chip) { if (chip.hasAttribute("href")) return; var sitem = chip.closest(".scale-item"); if (sitem) toggleScaleItem(sitem); return; }
 
     var gt = e.target.closest(".tx-group-toggle");
     if (gt) { var grp = gt.closest(".tx-group"); grp.setAttribute("data-open", grp.getAttribute("data-open") === "1" ? "0" : "1"); return; }
@@ -1749,8 +1988,17 @@
     }
   });
 
+  // Limpiar el nombre guardado al empezar a escribir en un campo de médico.
+  $topic.addEventListener("focusin", function (e) {
+    var input = e.target.closest("input[id^=\"turno-doctor-\"]");
+    if (!input || input.getAttribute("data-clear-on-focus") !== "1") return;
+    input.removeAttribute("data-clear-on-focus");
+    if (input.value) input.value = "";
+  });
+
   // Desplegable de fármaco / opción en apps
   $topic.addEventListener("change", function (e) {
+    if (e.target.id === "turno-doctor-count") { saveTurnoConfig(readTurnoForm()); renderTurno(); return; }
     var sel = e.target.closest(".calc-select"); if (!sel || !appState) return;
     var panel = sel.closest(".calc-inline"); if (!panel) return;
     appState.sel[sel.getAttribute("data-app-sel")] = +sel.value;
@@ -1887,6 +2135,7 @@
     if (h === "#/calc" || h === "#/escalas") { renderCalcIndex(); setActiveTab("escalas"); return; }
     if (h === "#/farmacos") { renderDrugIndex(); setActiveTab("farmacos"); return; }
     if (h === "#/apps") { renderApps(); setActiveTab("apps"); return; }
+    if (h === "#/turno") { renderTurno(); setActiveTab("apps"); return; }
     if (h === "#/favoritos") { renderFavoritos(); setActiveTab(""); return; }
     var dm = h.match(/^#\/farmaco\/(.+)$/);
     if (dm) { renderDrug(decodeURIComponent(dm[1])); setActiveTab("farmacos"); return; }
@@ -1901,8 +2150,27 @@
   // arranque
   route();
 
-  // Service worker (PWA)
-  if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
-    navigator.serviceWorker.register("sw.js").catch(function () {});
+  // Service worker (PWA): comprobar la versión en cada apertura de la app instalada.
+  function checkForAppUpdate() {
+    if (!("serviceWorker" in navigator) || location.protocol.indexOf("http") !== 0) return;
+    var refreshing = false;
+    navigator.serviceWorker.addEventListener("controllerchange", function () {
+      if (refreshing) return;
+      refreshing = true;
+      window.location.reload();
+    });
+    navigator.serviceWorker.register("sw.js", { updateViaCache: "none" }).then(function (registration) {
+      registration.addEventListener("updatefound", function () {
+        var newWorker = registration.installing;
+        if (!newWorker) return;
+        newWorker.addEventListener("statechange", function () {
+          if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+            newWorker.postMessage({ type: "SKIP_WAITING" });
+          }
+        });
+      });
+      registration.update().catch(function () {});
+    }).catch(function () {});
   }
+  checkForAppUpdate();
 })();

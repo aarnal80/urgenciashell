@@ -1,9 +1,9 @@
-/* Service worker — cache-first del shell para uso offline. */
-var CACHE = "vital-assist-v66";
+/* Service worker — actualización del Manual de Urgencias completo y uso offline. */
+var CACHE = "manual-urgencias-v1-1";
 var ASSETS = [
   "./", "./index.html", "./styles.css", "./app.js", "./topics-data.js", "./scales-data.js", "./drugs-index.js",
   "./drug-aliases.js", "./scales-extra.js", "./topics-extra.js", "./ddx-demo.js",
-  "./manifest.webmanifest", "./icons/logo.png", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png"
+  "./manifest.webmanifest", "./icons/logo.png", "./icons/icon.svg", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/apple-touch-icon.png"
 ];
 
 self.addEventListener("install", function (e) {
@@ -19,6 +19,10 @@ self.addEventListener("activate", function (e) {
   e.waitUntil(caches.keys().then(function (keys) {
     return Promise.all(keys.filter(function (k) { return k !== CACHE; }).map(function (k) { return caches.delete(k); }));
   }).then(function () { return self.clients.claim(); }));
+});
+
+self.addEventListener("message", function (e) {
+  if (e.data && e.data.type === "SKIP_WAITING") self.skipWaiting();
 });
 
 // Network-first: siempre intenta la red (contenido fresco) y cae a caché si no hay conexión.
