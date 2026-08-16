@@ -9896,7 +9896,7 @@
     "items": [
      {
       "dx": "Síndrome coronario agudo / IAM",
-      "clave": "vómitos con dolor torácico o ECG alterado; sospecha en diabéticos y ancianos",
+      "clave": "vómitos con dolor torácico o electrocardiograma (ECG) alterado; sospecha en diabéticos y ancianos",
       "slug": "sindrome_coronario_agudo"
      },
      {
@@ -9905,7 +9905,7 @@
       "slug": "cetoacidosis_diabetica"
      },
      {
-      "dx": "Hemorragia intracraneal / HTIC",
+      "dx": "Hemorragia intracraneal / hipertensión intracraneal (HTIC)",
       "clave": "vómitos sin náusea previa con cefalea progresiva o focalidad neurológica",
       "slug": "hemorragia_subaracnoidea_espontanea"
      },
@@ -9969,7 +9969,7 @@
     "sub": [
      {
       "nivel": "critico",
-      "t": "Dolor torácico/ECG alterado, focalidad neurológica con cefalea, dolor abdominal desproporcionado o hiperglucemia con acidosis → estudio dirigido urgente (ECG, TC craneal, glucemia/cetonas, lactato)."
+      "t": "Dolor torácico/electrocardiograma (ECG) alterado, focalidad neurológica con cefalea, dolor abdominal desproporcionado o hiperglucemia con acidosis → estudio dirigido urgente (ECG, TC craneal, glucemia/cetonas, lactato)."
      }
     ]
    },
@@ -14888,11 +14888,188 @@
   ]
  }
 };
+  // --- Actualización clínica 2026: intoxicación alimentaria y GEA ---
+  var TABLA_TIEMPOS_ALIMENTARIA = [
+    {inicio:"<1 h", patron:"Vómito/rubor/parestesias bruscos", etiologia:"TOXINA: S. aureus, B. cereus o toxina marina", clave:"marcar SOSPECHA DE TOXINA"},
+    {inicio:"6-24 h", patron:"Diarrea y cólicos, poca fiebre", etiologia:"TOXINA: C. perfringens", clave:"cuadro secretor"},
+    {inicio:"12-48 h", patron:"Vómitos + diarrea", etiologia:"Norovirus", clave:"brote posible"},
+    {inicio:"18-36 h", patron:"Diplopía/disfagia/parálisis descendente", etiologia:"TOXINA: botulismo", clave:"urgencia vital"},
+    {inicio:"2-5 días", patron:"Fiebre y diarrea ± sangre", etiologia:"Campylobacter o STEC/EHEC", clave:"sangre: evitar antibiótico si STEC"},
+    {inicio:"6 h-6 días", patron:"Fiebre, diarrea y cólicos", etiologia:"Salmonella no tifoidea", clave:"valorar invasión"}
+  ];  PATCH["nauseas_vomitos_y_diarrea"] = {
+    "ddx": [
+      {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
+        {"dx":"Síndrome coronario agudo / IAM","clave":"Vómitos con dolor torácico o electrocardiograma (ECG) alterado","slug":"sindrome_coronario_agudo"},
+        {"dx":"Cetoacidosis diabética","clave":"Vómitos, dolor abdominal, hiperglucemia, cetonas y acidosis","slug":"cetoacidosis_diabetica"},
+        {"dx":"Hemorragia intracraneal / hipertensión intracraneal (HTIC)","clave":"Vómitos sin náusea previa con cefalea progresiva o focalidad","slug":"hemorragia_subaracnoidea_espontanea"},
+        {"dx":"Isquemia mesentérica","clave":"Dolor desproporcionado y lactato elevado"}
+      ]},
+      {"grupo":"Emergente","nivel":"emergente","items":[
+        {"dx":"Intoxicación alimentaria grave","clave":"Brote, deshidratación, sangre/fiebre, sepsis o ventana compatible con TOXINA","slug":"intoxicacion_alimentaria"},
+        {"dx":"Obstrucción intestinal","clave":"Vómitos, distensión, dolor cólico y cierre intestinal","slug":"obstruccion_intestinal"},
+        {"dx":"Colitis por C. difficile","clave":"Diarrea grave tras antibióticos; fiebre/dolor; riesgo de megacolon"},
+        {"dx":"Botulismo alimentario","clave":"Diplopía, disfagia o parálisis descendente tras alimento sospechoso","slug":"botulismo"}
+      ]},
+      {"grupo":"No emergente","nivel":"no_emergente","items":[
+        {"dx":"GEA no complicada","clave":"Diarrea acuosa sin fiebre ni sangre; manejo de soporte"},
+        {"dx":"Norovirus u otra infección viral","clave":"Inicio 12-48 h, vómitos y diarrea, posible brote"},
+        {"dx":"Vómitos del embarazo / hiperémesis","clave":"Amenorrea o test de gestación positivo"},
+        {"dx":"Vértigo periférico / laberintitis","clave":"Náuseas con giro de objetos y nistagmo; sin focalidad","slug":"vertigo"}
+      ]}
+    ],
+    "briefing": [
+      "Abreviaturas: GEA = gastroenteritis aguda; STEC = Escherichia coli productora de toxina Shiga; EHEC = Escherichia coli enterohemorrágica; SHU = síndrome hemolítico urémico; ABCDE = vía aérea, respiración, circulación, discapacidad neurológica y exposición; VO = vía oral; IV = vía intravenosa; DGVS = Deutsche Gesellschaft für Gastroenterologie, Verdauungs- und Stoffwechselkrankheiten; ECDC = European Centre for Disease Prevention and Control; RENAVE = Red Nacional de Vigilancia Epidemiológica; ISCIII = Instituto de Salud Carlos III; AESAN = Agencia Española de Seguridad Alimentaria y Nutrición; IAM = infarto agudo de miocardio; HTIC = hipertensión intracraneal.",
+      "El manejo inicial de la intoxicación/toxiinfección alimentaria es de soporte: valorar gravedad, rehidratar y buscar causas específicas.",
+      "El intervalo entre la ingesta y los síntomas orienta el diagnóstico. Inicio en minutos-horas con vómitos o clínica neurológica debe etiquetarse como SOSPECHA DE TOXINA y no como confirmación etiológica.",
+      "No se recomienda antibioterapia ni probióticos de rutina en la GEA no complicada; STEC/EHEC requiere evitar antibióticos por riesgo de SHU.",
+      "Brote (dos o más personas con enfermedad similar tras un alimento común) exige coordinación con Salud Pública y recogida de muestras cuando proceda."
+    ],
+    "red_flags": [
+      "Shock, alteración de conciencia, oliguria, deshidratación grave o incapacidad para beber.",
+      "Diarrea sanguinolenta, fiebre alta, sepsis, dolor abdominal intenso o sospecha de SHU (palidez, oliguria, hematomas, deterioro renal) tras posible STEC.",
+      "Vómitos incoercibles, fracaso de rehidratación oral o comorbilidad que pueda descompensarse.",
+      "Diplopía, disfagia, disartria, ptosis o debilidad/parálisis descendente: SOSPECHA DE TOXINA BOTULÍNICA.",
+      "Inicio muy rápido tras alimento con rubor/prurito, parestesias, broncoespasmo o síntomas neurológicos: SOSPECHA DE TOXINA química o marina.",
+      "Dos o más afectados por un alimento común, manipulador enfermo o exposición colectiva: activar Salud Pública."
+    ],
+    "tratamiento": [
+      {"escenario":"Rehidratación","preferencia":"eleccion","indicacion":"GEA leve sin deshidratación ni intolerancia oral","farmaco":"Solución de rehidratación oral","dosis":"Iniciar inmediatamente; dosis no especificada en la guía DGVS consultada","via":"VO","notas":"Continuar alimentación tolerada y evitar dietas restrictivas."},
+      {"escenario":"Antiemesis","indicacion":"Adulto con vómitos que dificultan la rehidratación","farmaco":"Ondansetrón","drug_id":"ondansetron","dosis":"Dosis no especificada en la guía DGVS consultada","via":"VO/IV","notas":"Uso corto; valorar QT, interacciones y contexto clínico."},
+      {"escenario":"Antiemesis","indicacion":"Adulto con vómitos; alternativa sintomática","farmaco":"Metoclopramida","drug_id":"metoclopramida","dosis":"Dosis no especificada en la guía DGVS consultada","via":"VO/IV","notas":"Uso corto; vigilar reacciones extrapiramidales."},
+      {"escenario":"Antidiarreico","indicacion":"Solo adulto afebril, sin sangre y durante menos de 48 h","farmaco":"Loperamida","drug_id":"loperamida","dosis":"Dosis no especificada en la guía DGVS consultada","via":"VO","notas":"No usar en fiebre, sangre, sospecha de STEC/EHEC, colitis inflamatoria ni en niños."},
+      {"escenario":"Antibiótico empírico","indicacion":"Solo enfermedad grave/invasiva, fiebre alta, heces sanguinolentas-mucosas, sepsis o inmunodeficiencia funcional, tras toma de muestras si es posible","farmaco":"Azitromicina","drug_id":"azitromicina","dosis":"500 mg/día por vía oral durante 3 días o 1000 mg por vía oral en dosis única","via":"VO","notas":"No usar de rutina; fluoroquinolonas no son primera línea empírica. No iniciar si sospecha de STEC/EHEC salvo infección extraintestinal."}
+    ],
+    "tabla_tiempos": TABLA_TIEMPOS_ALIMENTARIA,
+    "plan": [
+      {"paso":"Valora gravedad y exposición","sub":[
+        {"nivel":"critico","t":"ABCDE, constantes, estado mental, perfusión, diuresis y glucemia si hay inestabilidad."},
+        {"t":"Pregunta alimento/agua, hora de ingesta, número de afectados, viaje, antibióticos, embarazo, edad extrema e inmunodeficiencia."}
+      ]},
+      {"paso":"Usa el tiempo desde la ingesta","detalle":"Consulta la tabla: ventanas de minutos-horas con vómitos, rubor/parestesias o clínica neurológica sugieren TOXINA; las ventanas de días orientan más a infección. El tiempo no confirma por sí solo la etiología."},
+      {"paso":"Repón líquidos y electrolitos","sub":[
+        {"t":"Rehidratación oral inmediata si puede beber; alimentación normal tolerada, sin dieta restrictiva."},
+        {"nivel":"emergente","t":"Shock, deshidratación grave, alteración de conciencia, vómitos incontrolables o fracaso de vía oral -> fluidoterapia IV y monitorización."}
+      ]},
+      {"paso":"Solicita pruebas dirigidas","detalle":"Heces si cuadro grave, sanguinolento, prolongado, paciente de riesgo o brote; hemocultivos si sepsis/fiebre entérica/inmunodepresión. En sospecha de TOXINA (botulismo, marina o química), conserva muestras según Salud Pública/Toxicología."},
+      {"paso":"Evita tratamientos innecesarios","sub":[
+        {"t":"GEA no complicada -> no antibiótico de rutina y no probióticos de rutina."},
+        {"t":"STEC/EHEC -> no antibiótico; vigila SHU."},
+        {"t":"Loperamida solo adulto afebril, sin sangre y <48 h; nunca sustituye la rehidratación."}
+      ]},
+      {"paso":"Indica antibiótico solo en excepciones","detalle":"Tras muestras, si enfermedad invasiva/grave, fiebre alta, sangre-moco, sepsis o inmunodeficiencia funcional: azitromicina 500 mg/día VO 3 días o 1000 mg VO dosis única. Salmonella no tifoidea: solo infección sistémica o paciente de alto riesgo. Fluoroquinolonas no son primera línea empírica."},
+      {"paso":"Activa Salud Pública si hay brote o TOXINA","detalle":"Dos o más casos similares tras alimento común, sospecha de botulismo/toxina marina/química o alimento implicado: coordina notificación, muestras y trazabilidad con Salud Pública, RENAVE/AESAN y el protocolo autonómico."},
+      {"paso":"Decide destino","detalle":"Alta solo si estable, sin deshidratación relevante y tolera líquidos, con signos de alarma. Ingresa si deshidratación grave (>9%), shock, alteración de conciencia, vómitos incontrolables, fracaso de rehidratación oral, sepsis, comorbilidad de riesgo o sospecha de TOXINA/botulismo."}
+    ],
+    "criterios_ingreso": [
+      "Deshidratación grave (>9% del peso), shock, alteración de conciencia o deterioro hemodinámico.",
+      "Vómitos incontrolables o fracaso de rehidratación oral.",
+      "Sepsis, diarrea sanguinolenta grave, sospecha de SHU, botulismo o toxina química/marina.",
+      "Comorbilidad relevante, inmunodeficiencia funcional, edad extrema o embarazo con repercusión clínica.",
+      "Necesidad de vigilancia estrecha, fluidoterapia IV, antitoxina o coordinación toxicológica/epidemiológica."
+    ],
+    "conexiones": [
+      {"slug":"intoxicacion_alimentaria","motivo":"Capítulo específico con tabla temporal, toxíndromes y manejo de brotes."},
+      {"slug":"botulismo","motivo":"Toxina alimentaria con parálisis descendente y necesidad de antitoxina/protocolo específico."},
+      {"slug":"intoxicacion_aguda_por_setas","motivo":"Toxinas de setas con ventanas temporales y daño hepatorrenal diferenciado."},
+      {"slug":"gastroenteritis_aguda_en_la_infancia","motivo":"El manejo y las indicaciones etiológicas difieren en pediatría."},
+      {"slug":"sepsis","motivo":"La GEA invasiva puede complicarse con sepsis."}
+    ],
+    "biblio": [
+      "DGVS. S2k-Leitlinie Gastrointestinale Infektionen, versión 2.0 (11/2023): https://www.dgvs.de/leitlinien/gi-infektionen/gastrointestinale-infektionen/?digital=1",
+      "SEIP/AEPap/SEPEAP/SEGHNP/SEUP. Documento de consenso sobre gastroenteritis aguda infecciosa (2025): https://www.analesdepediatria.org/es-documento-consenso-seip-aepap-sepeap-seghnp-seup-sobre-el-articulo-S169540332500219X",
+      "CDC. Confirming an Etiology in Foodborne Outbreaks (30/07/2025), tablas de incubación y toxinas: https://www.cdc.gov/foodborne-outbreaks/php/confirming-cause/index.html",
+      "ECDC. Toolkit for investigation and response to food- and waterborne disease outbreaks in the EU: https://www.ecdc.europa.eu/en/publications-data/toolkit-investigation-and-response-food-and-waterborne-disease-outbreaks-eu",
+      "RENAVE/ISCIII. Brotes de transmisión alimentaria 2024: https://cne.isciii.es/documents/d/cne/informe_brotes_alim_2024_final",
+      "AESAN. Gestión de alertas alimentarias: https://www.aesan.gob.es/AECOSAN/web/operadores_economicos/seccion/red_alerta_alimentaria.htm"
+    ],
+    "wikem_titulo": "Nausea and vomiting"
+  };
+  if (!T.some(function (t) { return t.slug === "intoxicacion_alimentaria"; })) {
+    T.push({
+      slug: "intoxicacion_alimentaria",
+      number: 220,
+      title: "Intoxicación alimentaria",
+      categoria: "Urgencias del Aparato Digestivo",
+      status: "revision_clinica",
+      briefing: [
+        "Abreviaturas: GEA = gastroenteritis aguda; STEC = Escherichia coli productora de toxina Shiga; EHEC = Escherichia coli enterohemorrágica; SHU = síndrome hemolítico urémico; ABCDE = vía aérea, respiración, circulación, discapacidad neurológica y exposición; VO = vía oral; IV = vía intravenosa; DGVS = Deutsche Gesellschaft für Gastroenterologie, Verdauungs- und Stoffwechselkrankheiten; ECDC = European Centre for Disease Prevention and Control; RENAVE = Red Nacional de Vigilancia Epidemiológica; ISCIII = Instituto de Salud Carlos III; AESAN = Agencia Española de Seguridad Alimentaria y Nutrición.",
+        "Síndrome agudo tras ingerir alimento o agua contaminados por microorganismos, toxinas preformadas, biotoxinas o contaminantes químicos.",
+        "La cronología y el patrón clínico orientan: marca SOSPECHA DE TOXINA cuando el inicio es muy rápido o hay un toxíndrome; la confirmación requiere muestras y coordinación de Salud Pública.",
+        "La prioridad es la rehidratación, la búsqueda de gravedad y la identificación de botulismo, STEC/EHEC, brotes y otras etiologías específicas."
+      ],
+      red_flags: [
+        "Shock, deshidratación grave, alteración de conciencia, oliguria o incapacidad para beber.",
+        "Diarrea sanguinolenta, fiebre alta, dolor intenso, sepsis o signos de SHU.",
+        "Diplopía, disfagia, disartria, ptosis o parálisis descendente: SOSPECHA DE TOXINA BOTULÍNICA.",
+        "Rubor/prurito, parestesias, debilidad o dificultad respiratoria tras pescado/marisco: SOSPECHA DE TOXINA MARINA/QUÍMICA.",
+        "Dos o más casos similares tras un alimento común: brote y notificación urgente."
+      ],
+      ddx: [
+        {grupo:"Crítico · amenaza vital", nivel:"critico", items:[
+          {dx:"Sepsis o shock", clave:"hipoperfusión, alteración mental, oliguria o lactato elevado", slug:"sepsis"},
+          {dx:"Abdomen agudo", clave:"dolor focal/progresivo, defensa, distensión o íleo", slug:"dolor_abdominal_agudo"},
+          {dx:"Botulismo alimentario", clave:"diplopía, disfagia, disartria, ptosis o parálisis descendente: SOSPECHA DE TOXINA", slug:"botulismo"}
+        ]},
+        {grupo:"Emergente · requiere estudio dirigido", nivel:"emergente", items:[
+          {dx:"Colitis por STEC/EHEC", clave:"diarrea sanguinolenta, dolor intenso y riesgo de síndrome hemolítico urémico (SHU)"},
+          {dx:"Pancreatitis aguda", clave:"dolor epigástrico intenso irradiado a espalda y lipasa elevada", slug:"pancreatitis_aguda"},
+          {dx:"Toxina marina o química", clave:"inicio en minutos-horas con rubor, parestesias, debilidad o disnea: SOSPECHA DE TOXINA"}
+        ]},
+        {grupo:"No emergente · diagnóstico alternativo", nivel:"no_emergente", items:[
+          {dx:"Gastroenteritis aguda no asociada a alimento común", clave:"casos aislados, contacto comunitario o cuadro viral típico", slug:"nauseas_vomitos_y_diarrea"},
+          {dx:"Intoxicación medicamentosa", clave:"relación temporal con fármaco, polifarmacia o toxíndrome específico", slug:"intoxicaciones_agudas_actitud_diagnostica_y_tratamiento_gene"},
+          {dx:"Cetoacidosis diabética", clave:"poliuria, polidipsia, respiración de Kussmaul y cetosis", slug:"cetoacidosis_diabetica"}
+        ]}
+      ],
+      tabla_tiempos: TABLA_TIEMPOS_ALIMENTARIA,
+      plan: [
+        {"paso":"Estabiliza y define la exposición","detalle":"ABCDE, constantes, perfusión, diuresis, estado mental y tolerancia oral; registra alimento, hora de ingesta y número de afectados."},
+        {"paso":"Clasifica por tiempo y toxíndrome","detalle":"Inicio en minutos-horas con vómitos, rubor/parestesias o clínica neurológica -> escribe explícitamente SOSPECHA DE TOXINA y activa Toxicología/Salud Pública."},
+        {"paso":"Rehidrata","detalle":"Solución de rehidratación oral de inmediato si tolera; alimentación normal tolerada. Fluidoterapia IV si shock, deshidratación grave o fracaso oral."},
+        {"paso":"Pide pruebas dirigidas","detalle":"Heces en cuadros graves, sanguinolentos, prolongados, de riesgo o de brote; hemocultivos si sepsis. Muestras específicas para botulismo/toxinas según protocolo."},
+        {"paso":"Trata sin sobreutilizar antibióticos","detalle":"No antibiótico rutinario ni probióticos rutinarios. Antibiótico empírico solo en excepciones; no antibiótico si sospecha STEC/EHEC."},
+        {"paso":"Coordina el brote","detalle":"Activa Salud Pública, RENAVE/AESAN y trazabilidad del alimento; conserva muestras según instrucciones."},
+        {"paso":"Decide destino","detalle":"Ingreso si criterios de gravedad, fracaso de rehidratación oral, sepsis, botulismo/toxina o alto riesgo; alta solo con estabilidad y tolerancia oral."}
+      ],
+      tratamiento: [
+        {"escenario":"Rehidratación","preferencia":"eleccion","indicacion":"Primera medida en todo paciente que tolere vía oral","farmaco":"Solución de rehidratación oral","dosis":"Dosis no especificada en las guías consultadas","via":"VO","notas":"No sustituir por refrescos; continuar alimentación tolerada."},
+        {"escenario":"Antibiótico empírico","indicacion":"Solo cuadro grave/invasivo, fiebre alta, sangre-moco, sepsis o inmunodeficiencia funcional tras muestras","farmaco":"Azitromicina","drug_id":"azitromicina","dosis":"500 mg/día por vía oral durante 3 días o 1000 mg por vía oral en dosis única","via":"VO","notas":"No usar de rutina; evitar en sospecha STEC/EHEC salvo infección extraintestinal."},
+        {"escenario":"Antidiarreico","indicacion":"Solo adulto afebril, sin sangre y <48 h","farmaco":"Loperamida","drug_id":"loperamida","dosis":"Dosis no especificada en la guía DGVS consultada","via":"VO","notas":"No en niños ni en diarrea inflamatoria/STEC."}
+      ],
+      criterios_ingreso: [
+        "Deshidratación grave (>9%), shock, alteración de conciencia o fracaso de rehidratación oral.",
+        "Vómitos incontrolables, sepsis, diarrea sanguinolenta grave o sospecha de SHU.",
+        "Sospecha de botulismo o toxina marina/química, necesidad de antitoxina o vigilancia respiratoria.",
+        "Comorbilidad, inmunodeficiencia, edad extrema o embarazo con repercusión clínica."
+      ],
+      conexiones: [
+        {slug:"nauseas_vomitos_y_diarrea", motivo:"Síndrome de presentación y capítulo actualizado con la tabla temporal."},
+        {slug:"botulismo", motivo:"Neurotoxina alimentaria con parálisis descendente."},
+        {slug:"intoxicacion_aguda_por_setas", motivo:"Toxinas alimentarias de setas."},
+        {slug:"gastroenteritis_aguda_en_la_infancia", motivo:"Manejo específico pediátrico."},
+        {slug:"sepsis", motivo:"Complicación de infección invasiva."}
+      ],
+      biblio_extra: [
+        "DGVS. S2k-Leitlinie Gastrointestinale Infektionen, versión 2.0 (11/2023): https://www.dgvs.de/leitlinien/gi-infektionen/gastrointestinale-infektionen/?digital=1",
+        "SEIP/AEPap/SEPEAP/SEGHNP/SEUP. Documento de consenso (2025): https://www.analesdepediatria.org/es-documento-consenso-seip-aepap-sepeap-seghnp-seup-sobre-el-articulo-S169540332500219X",
+        "CDC. Confirming an Etiology in Foodborne Outbreaks (30/07/2025): https://www.cdc.gov/foodborne-outbreaks/php/confirming-cause/index.html",
+        "ECDC. Toolkit de brotes transmitidos por alimentos y agua: https://www.ecdc.europa.eu/en/publications-data/toolkit-investigation-and-response-food-and-waterborne-disease-outbreaks-eu",
+        "RENAVE/ISCIII. Brotes de transmisión alimentaria 2024: https://cne.isciii.es/documents/d/cne/informe_brotes_alim_2024_final",
+        "AESAN. Red de alerta alimentaria: https://www.aesan.gob.es/AECOSAN/web/operadores_economicos/seccion/red_alerta_alimentaria.htm"
+      ]
+    });
+  }
   T.forEach(function (t) {
     var p = PATCH[t.slug];
     if (p) {
       if (p.ddx && p.ddx.length) t.ddx = p.ddx;
       if (p.plan && p.plan.length) t.plan = p.plan;
+      if (p.tabla_tiempos && p.tabla_tiempos.length) t.tabla_tiempos = p.tabla_tiempos;
+      if (p.briefing && p.briefing.length) t.briefing = p.briefing;
+      if (p.red_flags && p.red_flags.length) t.red_flags = p.red_flags;
+      if (p.tratamiento && p.tratamiento.length) t.tratamiento = p.tratamiento;
+      if (p.criterios_ingreso && p.criterios_ingreso.length) t.criterios_ingreso = p.criterios_ingreso;
+      if (p.conexiones && p.conexiones.length) t.conexiones = p.conexiones;
       if (p.wikem_titulo) t.wikem_titulo = p.wikem_titulo;
       if (p.biblio && p.biblio.length) t.biblio_extra = p.biblio;
     }

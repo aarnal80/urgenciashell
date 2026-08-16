@@ -598,24 +598,31 @@
     }
 
     if ((t.plan || []).length) {
-      html += block("plan", "Plan de trabajo", true,
-        '<ol class="plan">' + t.plan.map(function (p) {
-          var s = '<li class="plan-step"><div class="plan-act">' + esc(p.paso) + "</div>";
-          if (p.detalle) s += '<div class="plan-det">' + esc(p.detalle) + "</div>";
-          if ((p.sub || []).length)
-            s += '<ul class="plan-sub">' + p.sub.map(function (x) {
-              var txt = typeof x === "string" ? x : (x.t || "");
-              var nivel = (x && typeof x === "object" && x.nivel) ? x.nivel : "";
-              var i = txt.indexOf("→");
-              var inner = i > 0
-                ? "<strong>" + esc(txt.slice(0, i).trim()) + "</strong> → " + esc(txt.slice(i + 1).trim())
-                : esc(txt);
-              return '<li class="' + (nivel ? "plan-lvl-" + esc(nivel) : "") + '">' + inner + "</li>";
-            }).join("") + "</ul>";
-          return s + "</li>";
-        }).join("") + "</ol>");
+      var planInner = '<ol class="plan">' + t.plan.map(function (p) {
+        var s = '<li class="plan-step"><div class="plan-act">' + esc(p.paso) + "</div>";
+        if (p.detalle) s += '<div class="plan-det">' + esc(p.detalle) + "</div>";
+        if ((p.sub || []).length)
+          s += '<ul class="plan-sub">' + p.sub.map(function (x) {
+            var txt = typeof x === "string" ? x : (x.t || "");
+            var nivel = (x && typeof x === "object" && x.nivel) ? x.nivel : "";
+            var i = txt.indexOf("→");
+            var inner = i > 0
+              ? "<strong>" + esc(txt.slice(0, i).trim()) + "</strong> → " + esc(txt.slice(i + 1).trim())
+              : esc(txt);
+            return '<li class="' + (nivel ? "plan-lvl-" + esc(nivel) : "") + '">' + inner + "</li>";
+          }).join("") + "</ul>";
+        return s + "</li>";
+      }).join("") + "</ol>";
+      if ((t.tabla_tiempos || []).length) {
+        planInner += '<div class="plan-timing"><div class="plan-timing-title">Cronología breve desde la ingesta</div>' +
+          '<div class="table-wrap"><table class="timing-table"><thead><tr><th>Inicio</th><th>Patrón</th><th>Etiología / clave</th></tr></thead><tbody>' +
+          t.tabla_tiempos.map(function (x) {
+            var et = [x.etiologia, x.clave].filter(Boolean).join(" · ");
+            return '<tr><td data-label="Inicio">' + esc(x.inicio || "") + '</td><td data-label="Patrón">' + esc(x.patron || "") + '</td><td data-label="Etiología / clave">' + esc(et) + '</td></tr>';
+          }).join("") + '</tbody></table></div></div>';
+      }
+      html += block("plan", "Plan de trabajo", true, planInner);
     }
-
     if ((t.red_flags || []).length) {
       html += block("flags", "Signos de alarma", false,
         '<div class="flags">' + t.red_flags.map(function (f) { return '<div class="flag">' + esc(f) + "</div>"; }).join("") + "</div>");

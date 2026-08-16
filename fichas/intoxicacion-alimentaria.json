@@ -1,0 +1,63 @@
+{
+  "slug": "intoxicacion-alimentaria",
+  "titulo": "Intoxicación alimentaria",
+  "tipo": "sindrome",
+  "fecha_redaccion": "2026-08-16",
+  "revision_pendiente": true,
+  "fuentes": [
+    {
+      "archivo": "DGVS S2k-Leitlinie Gastrointestinale Infektionen",
+      "paginas": "web: apartados de rehidratación, pruebas, antibióticos y STEC (paginación no disponible)",
+      "edicion": "Versión 2.0, noviembre de 2023"
+    },
+    {
+      "archivo": "Documento de consenso SEIP/AEPap/SEPEAP/SEGHNP/SEUP sobre gastroenteritis aguda infecciosa",
+      "paginas": "web: Diagnóstico microbiológico, tratamiento etiológico y criterios de ingreso (paginación no disponible)",
+      "edicion": "2025"
+    },
+    {
+      "archivo": "CDC — Confirming an Etiology in Foodborne Outbreaks",
+      "paginas": "web: tablas bacteriana, química, parasitaria y viral",
+      "edicion": "Actualizado 30-07-2025"
+    },
+    {
+      "archivo": "ECDC — Toolkit for investigation and response to food- and waterborne disease outbreaks in the EU",
+      "paginas": "web: pasos 1-10 del toolkit",
+      "edicion": "2012; herramientas actualizadas 2017"
+    },
+    {
+      "archivo": "RENAVE/ISCIII — Brotes de transmisión alimentaria 2024",
+      "paginas": "2-11",
+      "edicion": "2025"
+    },
+    {
+      "archivo": "AESAN — Gestión de alertas alimentarias",
+      "paginas": "documento web",
+      "edicion": "Actualización 12-06-2024"
+    }
+  ],
+  "secciones": {
+    "definicion": "Síndrome agudo tras ingerir alimento o agua contaminados por microorganismos, toxinas preformadas, biotoxinas o contaminantes químicos. [nota editorial: botulismo, setas y biotoxinas requieren además su protocolo específico]. Abreviaturas: GEA = gastroenteritis aguda; STEC = Escherichia coli productora de toxina Shiga; EHEC = Escherichia coli enterohemorrágica; SHU = síndrome hemolítico urémico; ABCDE = vía aérea, respiración, circulación, discapacidad neurológica y exposición; VO = vía oral; IV = intravenosa; IAM = infarto agudo de miocardio; HTIC = hipertensión intracraneal. En las fuentes: DGVS = Deutsche Gesellschaft für Gastroenterologie, Verdauungs- und Stoffwechselkrankheiten; ECDC = European Centre for Disease Prevention and Control; RENAVE = Red Nacional de Vigilancia Epidemiológica; ISCIII = Instituto de Salud Carlos III; AESAN = Agencia Española de Seguridad Alimentaria y Nutrición.",
+    "presentacion_clinica": "Náuseas, vómitos, diarrea, dolor/cólicos abdominales y fiebre son habituales. Tabla temporal orientativa: 10 min–3 h: toxinas marinas/histamina/tetrodotoxina (**TOXINA**); 30 min–8 h: enterotoxina preformada de S. aureus (**TOXINA**); 1–6 h: toxina emética de B. cereus (**TOXINA**); 6–24 h: enterotoxina de C. perfringens (**TOXINA**); 12–48 h: norovirus; 18–36 h (rango 2 h–8 días): botulismo (**TOXINA**); 2–5 días: Campylobacter; 3–4 días: Escherichia coli productora de toxina Shiga (STEC), también denominada enterohemorrágica (EHEC); 6 h–6 días: Salmonella no tifoidea. La cronología orienta, pero no confirma la etiología (CDC, 30-07-2025).",
+    "diagnostico": "Integrar cronología, alimento/agua y conservación, número de afectados, exposiciones, comorbilidad y gravedad. Dos o más personas con enfermedad similar tras un alimento común orientan a brote y requieren coordinación epidemiológica. Inicio rápido con vómitos o toxíndrome = SOSPECHA DE TOXINA, no confirmación.",
+    "diagnostico_diferencial": "gastroenteritis aguda (GEA) viral/bacteriana, C. difficile, Escherichia coli productora de toxina Shiga (STEC)/enterohemorrágica (EHEC), sepsis, abdomen agudo, pancreatitis, cetoacidosis, intoxicación medicamentosa, botulismo, setas y toxinas marinas/químicas. [nota editorial: priorización por impacto en tratamiento, destino y notificación].",
+    "pruebas_complementarias": "Heces en cuadros graves, prolongados, sanguinolentos, invasivos, de riesgo o de brote; hemocultivos ante sepsis, fiebre entérica o inmunodepresión; hemograma, función renal e iones si deshidratación, sepsis o sospecha de síndrome hemolítico urémico (SHU). Si SOSPECHA DE TOXINA, conservar muestras clínicas y alimentos según Toxicología/Salud Pública. La incubación no es prueba confirmatoria.",
+    "criterios_de_gravedad": "Deshidratación grave (>9%), shock, alteración de conciencia, oliguria, acidosis/hipoperfusión, vómitos incontrolables, sepsis, diarrea sanguinolenta intensa, sospecha de síndrome hemolítico urémico (SHU), deterioro neurológico/respiratorio por botulismo o toxina marina/química. Mayor riesgo con edad extrema, embarazo, inmunodeficiencia y comorbilidad relevante.",
+    "tratamiento_inicial": "ABCDE y constantes; rehidratación oral inmediata si tolera; alimentación normal tolerada sin dieta restrictiva. Fluidoterapia IV y monitorización si shock, deshidratación grave, alteración de conciencia, vómitos incontrolables o fracaso oral. Coordinar Salud Pública/Toxicología en brote o SOSPECHA DE TOXINA.",
+    "tratamiento_farmacologico": "GEA no complicada: no antibiótico ni probiótico de rutina. Antieméticos a corto plazo en adultos; dosis no especificada en DGVS. Loperamida solo adulto sin fiebre ni sangre durante <48 h; no niños ni STEC/EHEC. Antibiótico empírico solo tras muestras si cuadro grave/invasivo, fiebre alta, sangre-moco, sepsis o inmunodeficiencia: azitromicina 500 mg/día VO 3 días o 1000 mg VO dosis única. Fluoroquinolonas no son primera línea; no antibiótico en STEC/EHEC salvo infección extraintestinal. Toxinas/botulismo/setas: protocolo específico.",
+    "procedimientos": "Obtención/transporte de muestras clínicas y del alimento, registro de línea temporal y afectados, notificación y trazabilidad según ECDC, RENAVE y AESAN. No se especifican técnicas de descontaminación ni dosis de antitoxinas en estas fuentes.",
+    "criterios_de_ingreso": "Deshidratación grave (>9%), shock, alteración de conciencia, fracaso de rehidratación oral, vómitos incontrolables, sepsis, diarrea sanguinolenta grave, sospecha de síndrome hemolítico urémico (SHU), botulismo o toxina marina/química; comorbilidad, inmunodeficiencia, edad extrema o embarazo con repercusión; necesidad de fluidoterapia IV, antitoxina o vigilancia respiratoria.",
+    "criterios_de_alta": "Las fuentes no fijan un listado universal. Estabilidad hemodinámica, hidratación/diuresis adecuadas, tolerancia oral, ausencia de abdomen agudo/sepsis/SHU/toxíndrome y plan escrito de reconsulta y seguimiento. [nota editorial: adaptar al protocolo local].",
+    "signos_de_alarma": "Diarrea sanguinolenta, fiebre alta, diarrea >3 días, vómitos que impiden líquidos, oliguria/mareo, dolor intenso, síncope, confusión, diplopía, disfagia, disartria, ptosis, debilidad descendente, dificultad respiratoria, embarazo con fiebre o dos o más afectados por el mismo alimento.",
+    "seguimiento": "Revisar resultados microbiológicos/toxicológicos. En STEC/EHEC vigilar hemograma, plaquetas, función renal y diuresis ante sospecha de síndrome hemolítico urémico (SHU). En brote completar notificación, trazabilidad y medidas de control con Salud Pública; en botulismo/toxina, seguimiento por Toxicología y especialidad.",
+    "escalas_relacionadas": "Sin escalas específicas en las fuentes consultadas.",
+    "farmacos_relacionados": "azitromicina, metoclopramida, ondansetron, loperamida; verificar dosis no especificadas en ficha técnica y protocolo local.",
+    "temas_relacionados": "nauseas-vomitos-y-diarrea (pendiente de ficha formal), botulismo, intoxicacion-aguda-por-setas, gastroenteritis-aguda-en-la-infancia, sepsis y brotes-de-transmision-alimentaria (pendiente).",
+    "fuente_y_paginas": "DGVS S2k-Leitlinie Gastrointestinale Infektionen, versión 2.0 (11/2023), web: rehidratación, pruebas, antibióticos y STEC: https://www.dgvs.de/leitlinien/gi-infektionen/gastrointestinale-infektionen/?digital=1. Documento de consenso SEIP/AEPap/SEPEAP/SEGHNP/SEUP (2025), web: diagnóstico microbiológico, tratamiento etiológico y criterios de ingreso: https://www.analesdepediatria.org/es-documento-consenso-seip-aepap-sepeap-seghnp-seup-sobre-el-articulo-S169540332500219X. CDC Confirming an Etiology in Foodborne Outbreaks, actualizado 30-07-2025: https://www.cdc.gov/foodborne-outbreaks/php/confirming-cause/index.html. ECDC Toolkit, pasos 1-10: https://www.ecdc.europa.eu/en/publications-data/toolkit-investigation-and-response-food-and-waterborne-disease-outbreaks-eu. RENAVE/ISCIII Brotes de transmisión alimentaria 2024, pp. 2-11: https://cne.isciii.es/documents/d/cne/informe_brotes_alim_2024_final. AESAN Gestión de alertas alimentarias, actualización 12-06-2024: https://www.aesan.gob.es/AECOSAN/web/operadores_economicos/seccion/red_alerta_alimentaria.htm."
+  },
+  "relacionados": {
+    "temas": ["nauseas-vomitos-y-diarrea", "botulismo", "intoxicacion-aguda-por-setas", "gastroenteritis-aguda-en-la-infancia", "sepsis", "brotes-de-transmision-alimentaria"],
+    "escalas": [],
+    "farmacos": ["azitromicina", "metoclopramida", "ondansetron", "loperamida"]
+  }
+}
