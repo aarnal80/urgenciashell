@@ -382,6 +382,8 @@ body.show-topbar #view { padding-top: calc(var(--topbar-h) + var(--safe-top)); }
 .tx-group { display: grid; gap: 10px; }
 .tx-group-head { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); line-height: 1.35; }
 .tx-group-head svg { width: 15px; height: 15px; flex: none; color: var(--accent); }
+.plan-timing { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--divider); }
+.plan-timing-title { margin: 0 0 8px; font-family: var(--mono); font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .table-wrap { overflow-x: hidden; margin: 0 0 4px; }
 .timing-table { border-collapse: collapse; width: 100%; min-width: 0; table-layout: fixed; font-size: 12px; }
 .timing-table th, .timing-table td { border: 1px solid var(--rule); padding: 8px 9px; vertical-align: top; text-align: left; overflow-wrap: anywhere; word-break: break-word; }
