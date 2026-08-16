@@ -14890,17 +14890,13 @@
 };
   // --- Actualización clínica 2026: intoxicación alimentaria y GEA ---
   var TABLA_TIEMPOS_ALIMENTARIA = [
-    {inicio:"10 min-3 h", patron:"Parestesias, rubor/prurito o síntomas gastrointestinales bruscos", etiologia:"Toxinas marinas, histamina (escombroide) o tetrodotoxina", clave:"TOXINA: actuar como toxíndrome; consultar toxicología y salud pública"},
-    {inicio:"30 min-8 h (habitual 2-4 h)", patron:"Náuseas, vómitos y diarrea; fiebre ausente o poco frecuente", etiologia:"Enterotoxina preformada de Staphylococcus aureus", clave:"TOXINA preformada"},
-    {inicio:"1-6 h", patron:"Vómitos predominantes; diarrea posible; fiebre poco frecuente", etiologia:"Toxina emética de Bacillus cereus", clave:"TOXINA preformada"},
-    {inicio:"6-24 h", patron:"Diarrea y cólicos; vómitos/fiebre poco frecuentes", etiologia:"Enterotoxina de Clostridium perfringens", clave:"TOXINA producida en el huésped"},
-    {inicio:"12-48 h", patron:"Vómitos, diarrea, náuseas y cólicos; febrícula posible", etiologia:"Norovirus", clave:"Infección viral"},
-    {inicio:"18-36 h (rango descrito 2 h-8 días)", patron:"Diplopía, disfagia, disartria y debilidad/parálisis descendente", etiologia:"Botulismo alimentario por neurotoxina de Clostridium botulinum", clave:"TOXINA: urgencia vital; activar antitoxina/protocolo específico"},
-    {inicio:"2-5 días", patron:"Diarrea, a menudo sanguinolenta, fiebre y dolor abdominal", etiologia:"Campylobacter", clave:"Infección bacteriana"},
-    {inicio:"3-4 días", patron:"Dolor intenso y diarrea sanguinolenta con poca fiebre", etiologia:"Escherichia coli productora de toxina Shiga (STEC), también denominada enterohemorrágica (EHEC)", clave:"Toxina Shiga: riesgo de SHU; evitar antibióticos"},
-    {inicio:"6 h-6 días", patron:"Diarrea con fiebre, cólicos y vómitos posibles", etiologia:"Salmonella no tifoidea", clave:"Infección bacteriana; tratar solo en indicaciones seleccionadas"}
-  ];
-  PATCH["nauseas_vomitos_y_diarrea"] = {
+    {inicio:"<1 h", patron:"Vómito/rubor/parestesias bruscos", etiologia:"TOXINA: S. aureus, B. cereus o toxina marina", clave:"marcar SOSPECHA DE TOXINA"},
+    {inicio:"6-24 h", patron:"Diarrea y cólicos, poca fiebre", etiologia:"TOXINA: C. perfringens", clave:"cuadro secretor"},
+    {inicio:"12-48 h", patron:"Vómitos + diarrea", etiologia:"Norovirus", clave:"brote posible"},
+    {inicio:"18-36 h", patron:"Diplopía/disfagia/parálisis descendente", etiologia:"TOXINA: botulismo", clave:"urgencia vital"},
+    {inicio:"2-5 días", patron:"Fiebre y diarrea ± sangre", etiologia:"Campylobacter o STEC/EHEC", clave:"sangre: evitar antibiótico si STEC"},
+    {inicio:"6 h-6 días", patron:"Fiebre, diarrea y cólicos", etiologia:"Salmonella no tifoidea", clave:"valorar invasión"}
+  ];  PATCH["nauseas_vomitos_y_diarrea"] = {
     "ddx": [
       {"grupo":"Crítico · amenaza vital","nivel":"critico","items":[
         {"dx":"Síndrome coronario agudo / IAM","clave":"Vómitos con dolor torácico o electrocardiograma (ECG) alterado","slug":"sindrome_coronario_agudo"},
@@ -15007,6 +15003,23 @@
         "Diplopía, disfagia, disartria, ptosis o parálisis descendente: SOSPECHA DE TOXINA BOTULÍNICA.",
         "Rubor/prurito, parestesias, debilidad o dificultad respiratoria tras pescado/marisco: SOSPECHA DE TOXINA MARINA/QUÍMICA.",
         "Dos o más casos similares tras un alimento común: brote y notificación urgente."
+      ],
+      ddx: [
+        {grupo:"Crítico · amenaza vital", nivel:"critico", items:[
+          {dx:"Sepsis o shock", clave:"hipoperfusión, alteración mental, oliguria o lactato elevado", slug:"sepsis"},
+          {dx:"Abdomen agudo", clave:"dolor focal/progresivo, defensa, distensión o íleo", slug:"dolor_abdominal_agudo"},
+          {dx:"Botulismo alimentario", clave:"diplopía, disfagia, disartria, ptosis o parálisis descendente: SOSPECHA DE TOXINA", slug:"botulismo"}
+        ]},
+        {grupo:"Emergente · requiere estudio dirigido", nivel:"emergente", items:[
+          {dx:"Colitis por STEC/EHEC", clave:"diarrea sanguinolenta, dolor intenso y riesgo de síndrome hemolítico urémico (SHU)"},
+          {dx:"Pancreatitis aguda", clave:"dolor epigástrico intenso irradiado a espalda y lipasa elevada", slug:"pancreatitis_aguda"},
+          {dx:"Toxina marina o química", clave:"inicio en minutos-horas con rubor, parestesias, debilidad o disnea: SOSPECHA DE TOXINA"}
+        ]},
+        {grupo:"No emergente · diagnóstico alternativo", nivel:"no_emergente", items:[
+          {dx:"Gastroenteritis aguda no asociada a alimento común", clave:"casos aislados, contacto comunitario o cuadro viral típico", slug:"nauseas_vomitos_y_diarrea"},
+          {dx:"Intoxicación medicamentosa", clave:"relación temporal con fármaco, polifarmacia o toxíndrome específico", slug:"intoxicaciones_agudas_actitud_diagnostica_y_tratamiento_gene"},
+          {dx:"Cetoacidosis diabética", clave:"poliuria, polidipsia, respiración de Kussmaul y cetosis", slug:"cetoacidosis_diabetica"}
+        ]}
       ],
       tabla_tiempos: TABLA_TIEMPOS_ALIMENTARIA,
       plan: [
